@@ -9,7 +9,7 @@
 
 * 🎓 IT Student
 * ☕ Backend Developer (Java / Spring Boot Focus)
-* 🌐 Interested in System Design & Networking
+* 🌐 Interested in System Design
 * 🤖 Exploring AI Integration
 * 📚 Passionate about continuous learning
 
@@ -26,8 +26,7 @@ Knowledge-Base
     ├── JavaScript
     ├── TypeScript
     ├── Java
-    ├── Spring Boot
-    └── IoT
+    └── Spring Boot
 ```
 
 ---
@@ -61,22 +60,6 @@ Knowledge-Base
 
 ---
 
-### 🌍 Networking & Infrastructure
-
-* CCNA Labs
-* TCP/IP
-* Network Design
-
----
-
-### 🤖 IoT & AI Exploration
-
-* IoT Concepts
-* Device Communication
-* AI Assistant Development
-
----
-
 ## 🛠 Technologies & Tools
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge\&logo=java\&logoColor=white)
@@ -90,7 +73,7 @@ Knowledge-Base
 
 ## 🎯 Goals
 
-* Become a strong Backend Engineer
+* Become a Backend Engineer
 * Build scalable backend systems
 * Apply AI into real-world projects
 * Master system design fundamentals
@@ -100,9 +83,3 @@ Knowledge-Base
 ## 📈 Learning Philosophy
 
 > Learn → Practice → Document → Improve → Share
-
----
-
-## 📬 Contact
-
-* 💼 GitHub: https://github.com/dpvinh30092005
