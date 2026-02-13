@@ -1,0 +1,37 @@
+Trong Java, một hằng số là một biểu diễn giá trị không đổi. Hằng số có thể được sử dụng 
+ở bất cứ đâu mà kiểu dữ liệu của nó được cho phép
+
+1. Hằng số Số nguyên (Integer Literals)
+• Giá trị mặc định: Bất kỳ giá trị số nguyên nào (ví dụ: 1, 2, 42) đều là hằng số số nguyên. 
+    Theo mặc định, chúng tạo ra một giá trị kiểu int (số nguyên 32-bit).
+• Các hệ cơ số:
+    ◦ Thập phân (Decimal): Là các giá trị cơ số 10 thông thường.
+    ◦ Bát phân (Octal): Được ký hiệu bằng một số 0 đứng đầu (leading zero).
+    ◦ Thập lục phân (Hexadecimal): Được ký hiệu bằng 0x hoặc 0X đứng đầu.
+• Gán cho kiểu khác: Khi một hằng số số nguyên được gán cho biến kiểu byte hoặc short, sẽ không có lỗi 
+    nếu giá trị hằng số nằm trong phạm vi của kiểu đích.
+• Hằng số long: Để chỉ định một hằng số kiểu long (64-bit), bạn phải thêm một chữ cái L (hoa hoặc thường) vào cuối hằng số.
+
+2. Hằng số Số thực (Floating-Point Literals)
+• Giá trị mặc định: Theo mặc định, các hằng số số thực (ví dụ: 2.0, 3.14159) là kiểu double (độ chính xác kép, 64-bit).
+• Ký hiệu: Có thể được biểu diễn dưới dạng tiêu chuẩn (Standard notation) hoặc ký hiệu khoa học (Scientific notation), 
+    sử dụng E hoặc e theo sau là một số mũ.
+• Hằng số float: Để chỉ định một hằng số là kiểu float (độ chính xác đơn), bạn phải thêm một chữ cái F hoặc f vào cuối hằng số. 
+    Có thể thêm D hoặc d cho kiểu double, nhưng điều này là thừa.
+3. Hằng số Boolean (Boolean Literals)
+• Chỉ có hai giá trị là true và false.
+• Các giá trị này không chuyển đổi thành bất kỳ biểu diễn số nào (ví dụ: true không bằng 1). Chúng chỉ có thể được gán cho các 
+    biến được khai báo là boolean hoặc được sử dụng trong các biểu thức với toán tử Boolean.
+4. Hằng số Ký tự (Character Literals)
+• Được biểu thị bên trong một cặp dấu nháy đơn (single quotes), ví dụ: 'a'.
+• Các ký tự trong Java là các chỉ số 16-bit vào tập ký tự Unicode.
+• Ký tự thoát (Escape sequences): Java cung cấp các chuỗi thoát (ví dụ: \n cho ký tự xuống dòng, \' cho dấu nháy đơn) cho 
+    các ký tự không thể nhập trực tiếp.
+• Ký hiệu Octal và Hexadecimal: Có thể nhập giá trị của ký tự trực tiếp bằng ký hiệu bát phân (\ddd) hoặc thập lục phân 
+    (\u theo sau là bốn chữ số hex).
+5. Hằng số Chuỗi (String Literals)
+• Được chỉ định bằng cách bao quanh một chuỗi ký tự bằng một cặp dấu ngoặc kép (double quotes).
+• Các chuỗi thoát và ký hiệu octal/hexadecimal cũng hoạt động bên trong hằng số chuỗi.
+• Một quy tắc quan trọng là hằng số chuỗi phải bắt đầu và kết thúc trên cùng một dòng; không có 
+    chuỗi thoát để nối dòng như trong một số ngôn ngữ khác.
+• Lưu ý: Hằng số chuỗi trong Java không phải là mảng ký tự; chúng là kiểu đối tượng. (object types.)

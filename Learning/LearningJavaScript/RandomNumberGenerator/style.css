@@ -1,0 +1,17 @@
+body{
+    font-family: Verdana;
+    text-align: center;
+    font-size: 1em;
+}
+
+
+#myBtn {
+    font-size: 3em;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+#myLabel {
+    font-size: 3em;
+}

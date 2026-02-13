@@ -1,0 +1,24 @@
+#textContent {
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: 'Franklin Gothic Medium'
+}
+
+#btnContainer {
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(213, 208, 208);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25;
+}
+
+.button:hover {
+    background-color: rgb(13, 44, 44);
+}

@@ -1,0 +1,31 @@
+Java là một ngôn ngữ có kiểu mạnh (strongly typed language)
+
+• Mọi biến và mọi biểu thức đều có kiểu, và mọi kiểu đều được định nghĩa nghiêm ngặt.
+• Tất cả các phép gán (dù rõ ràng hay thông qua truyền tham số) đều được kiểm tra 
+    tính tương thích của kiểu.
+• Trình biên dịch Java sẽ kiểm tra tất cả các biểu thức và tham số để đảm bảo tính tương thích; 
+    bất kỳ sự không khớp nào về kiểu đều là lỗi và phải được sửa trước khi biên dịch hoàn tất.
+
+
+Java định nghĩa tám kiểu dữ liệu nguyên thủy. Các kiểu này, còn được gọi là kiểu đơn giản, 
+    không phải là các đối tượng (object), nhằm mục đích hiệu suất. Java là ngôn ngữ hướng 
+    đối tượng hoàn toàn, nhưng các kiểu nguyên thủy thì không, vì nếu làm cho chúng thành 
+    đối tượng sẽ làm giảm hiệu suất quá nhiều
+
+1. Nhóm Số Nguyên (Integers)
+Nhóm này bao gồm byte, short, int, và long. Tất cả đều là các giá trị số nguyên có dấu (dương và âm); 
+    Java không hỗ trợ số nguyên chỉ dương (unsigned). Kích thước của mỗi kiểu được xác định nghiêm ngặt 
+    để đảm bảo tính di động (portability)
+2. Nhóm Số Thực (Floating-Point Types)
+Nhóm này bao gồm float và double, được sử dụng cho các biểu thức yêu cầu độ chính xác phân số. Java triển 
+    khai tập hợp các kiểu dấu phẩy động và toán tử theo chuẩn IEEE–754
+3. Kiểu Ký Tự (Characters)
+• char là kiểu dữ liệu được sử dụng để lưu trữ các ký tự.
+• Trong Java, char là kiểu 16-bit (phạm vi 0 đến 65,536) và sử dụng Unicode để biểu diễn các ký tự, hỗ trợ 
+    một bộ ký tự quốc tế đầy đủ.
+• Mặc dù được thiết kế để chứa ký tự Unicode, char cũng có thể được coi là một kiểu số nguyên, cho phép 
+    thực hiện các phép toán số học trên nó
+4. Kiểu Boolean
+• boolean là kiểu nguyên thủy cho các giá trị logic.
+• Nó chỉ có thể có một trong hai giá trị có thể: true hoặc false.
+• Kiểu này là kiểu được trả về bởi tất cả các toán tử quan hệ (relational operators)

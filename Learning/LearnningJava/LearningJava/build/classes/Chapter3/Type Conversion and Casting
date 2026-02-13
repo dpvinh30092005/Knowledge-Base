@@ -1,0 +1,49 @@
+************************Chuyển đổi Kiểu (Type Conversion) và Ép kiểu (Casting)******************************
+
+Java là một ngôn ngữ được định kiểu mạnh (strongly typed language). Điều này có nghĩa là:
+• Mọi biến và mọi biểu thức đều có kiểu, và mọi kiểu đều được định nghĩa nghiêm ngặt.
+• Tất cả các phép gán (dù tường minh hay thông qua truyền tham số trong lời gọi phương thức) 
+    đều được kiểm tra tính tương thích của kiểu.
+• Trình biên dịch Java sẽ kiểm tra tất cả các biểu thức và tham số để đảm bảo các kiểu dữ liệu tương thích, 
+    và bất kỳ sự không khớp nào về kiểu sẽ là lỗi phải được sửa chữa trước khi biên dịch hoàn tất.
+Chính vì tính chất (strongly typed language) này, việc chuyển đổi kiểu và ép kiểu trở nên cần thiết để xử lý 
+    các tình huống gán giá trị giữa các kiểu dữ liệu khác nhau.
+
+I. Chuyển đổi Kiểu Dữ liệu Tự động (Automatic Type Conversion)
+Nếu hai điều kiện sau được đáp ứng, Java sẽ thực hiện chuyển đổi kiểu tự động (automatic type conversion):
+1. Hai kiểu dữ liệu phải tương thích
+2. Kiểu dữ liệu đích phải lớn hơn (rộng hơn) kiểu dữ liệu nguồn (destination type is larger than the source type)
+
+Quá trình này được gọi là chuyển đổi mở rộng (widening conversion).
+• Tương thích: Các kiểu số (số nguyên và số thực) đều tương thích với nhau.
+• Không tương thích: Không có chuyển đổi tự động từ kiểu số sang kiểu char hoặc boolean. 
+    Tương tự, char và boolean cũng không tương thích với nhau.
+• Java cũng thực hiện chuyển đổi kiểu tự động khi lưu trữ một hằng số số nguyên (literal integer constant) 
+    vào các biến kiểu byte, short, long, hoặc char
+
+II. Ép kiểu (Casting Incompatible Types)
+Nếu các kiểu dữ liệu không tương thích hoặc nếu kiểu đích nhỏ hơn kiểu nguồn, 
+    Java sẽ không thực hiện chuyển đổi tự động. Trong những trường hợp này, bạn phải sử dụng ép kiểu (cast), 
+    một hình thức chuyển đổi kiểu tường minh (explicit type conversion).
+Dạng tổng quát của ép kiểu: ( kiểu-đích ) giá trị
+
+
+
+Ví dụ về ép kiểu:
+• Thu hẹp (Narrowing Conversion): Nếu cố gắng gán một giá trị int (32-bit) cho một biến byte (8-bit), bạn phải ép kiểu. 
+    Nếu giá trị số nguyên lớn hơn phạm vi của kiểu byte, nó sẽ bị giảm theo modulo (phần dư của phép chia số nguyên cho) 
+    phạm vi của byte.
+• Cắt ngắn (Truncation) Số thực sang Số nguyên: Khi một giá trị dấu phẩy động (floating-point) được gán cho một kiểu số nguyên, 
+    phần thập phân sẽ bị cắt ngắn (lost). Nếu phần số nguyên quá lớn so với kiểu đích, nó sẽ bị giảm theo modulo phạm vi 
+    của kiểu đích.
+
+III. Nâng cấp Kiểu Tự động trong Biểu thức (Automatic Type Promotion in Expressions)
+Việc chuyển đổi kiểu cũng có thể xảy ra trong các biểu thức để tránh mất độ chính xác của giá trị trung gian. 
+Java định nghĩa các quy tắc nâng cấp kiểu (type promotion rules) sau:
+    1. Tất cả các giá trị byte, short, và char sẽ được nâng cấp lên int khi biểu thức được đánh giá.
+    2. Nếu một toán hạng là long, toàn bộ biểu thức được nâng cấp lên long.
+    3. Nếu một toán hạng là float, toàn bộ biểu thức được nâng cấp lên float.
+    4. Nếu bất kỳ toán hạng nào là double, kết quả là double.
+Do sự nâng cấp tự động này, ngay cả khi kết quả của một biểu thức phù hợp với kiểu nhỏ hơn (ví dụ: byte), 
+    kết quả vẫn có thể là kiểu int. Điều này đòi hỏi phải ép kiểu tường minh nếu bạn muốn gán nó trở lại một kiểu nhỏ hơn. 
+    Ví dụ, byte b = 50; b = b * 2; sẽ gây lỗi biên dịch vì b * 2 trả về int

@@ -1,0 +1,25 @@
+body {
+    background-color: firebrick;
+}
+
+p,
+h1 {
+    color: white;
+}
+
+#h1 {
+    background-color: rgb(123, 90, 90);
+}
+
+#p1 {
+    color: pink;
+}
+#p2 {
+    color: yellow;
+}
+#p3 {
+    color: red;
+}
+#p4 {
+    color: black;
+}

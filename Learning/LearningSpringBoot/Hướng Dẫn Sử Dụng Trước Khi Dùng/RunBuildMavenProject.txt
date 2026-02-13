@@ -1,0 +1,10 @@
+mvn package: 
+	will call maven -> after that maven call file pom.xml
+			-> call compiler -> build file class
+			(helps compile and excapse to SNAPSHOT .jar)
+			-> notify successfull
+
+
+mvn clean: help delete folder target
+ ++ mvn clean package: clean and build
+java -cp target\name_jar {path}

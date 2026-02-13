@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+}
+
+.box {
+  font-weight: bold;
+  border: 2px solid;
+  width: 100px;
+  height: 100px;
+  /* margin: 50px; */
+  margin: auto;
+}
+
+#box1 {
+  background-color: red;
+}
+
+#box2 {
+  background-color: yellow;
+}

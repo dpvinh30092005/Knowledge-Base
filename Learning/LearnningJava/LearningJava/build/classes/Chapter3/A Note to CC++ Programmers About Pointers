@@ -1,0 +1,11 @@
+If you are an experienced C/C++ programmer, then you know that these languages provide
+support for pointers. However, no mention of pointers has been made in this chapter. The
+reason for this is simple: Java does not support or allow pointers. (Or more properly, Java
+does not support pointers that can be accessed and/or modified by the programmer.) Java
+cannot allow pointers, because doing so would allow Java programs to breach the firewall
+between the Java execution environment and the host computer. (Remember, a pointer can
+be given any address in memory—even addresses that might be outside the Java run-time
+system.) Since C/C++ make extensive use of pointers, you might be thinking that their loss
+is a significant disadvantage to Java. However, this is not true. Java is designed in such a way
+that as long as you stay within the confines of the execution environment, you will never need
+to use a pointer, nor would there be any benefit in using one

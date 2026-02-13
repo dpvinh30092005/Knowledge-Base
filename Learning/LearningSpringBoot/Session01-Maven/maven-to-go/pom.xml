@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zjtcoder.basis</groupId>
+    <artifactId>maven-to-go</artifactId>
+    <version>62-26</version>
+
+    <properties>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Khai báo các thư viện cần dùng - nay gọi là dependency project này phụ thuộc cậu, cậu ở trên mạng tớ muốn cậu về máy tớ giúp tớ viết code-->
+    <!--Muốn tìm đến cậu, tớ khai báo hồ sơ về cậu - hồ sơ là duy nhất, gồm 3 thông sô
+        groupId - tên cty theo tên miền đảo ngược
+        artifactId - tên cậu - người tớ phụ thuộc
+        version - cậu thuộc phiên bản nào
+     Maven ở máy local tự biết lên kho .jar toàn cầu tên là - mvnrepository.com tải về, do hồ sơ cậu duy nhất trên đó nên cứ lên kho mà tìm
+     Chính project đang làm cũng có hồ sơ y chang
+     -> đây là kĩ thuật quản lý dependency do Maven chế ra
+      -> Add dependency bản chất là tải thư viện về project để dùng code !!!-->
+    <dependencies>
+        <!-- Source: https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>13.2.1.jre11</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Source: https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.5.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- Build an executable JAR - Tạo file jar có thể chạy được!-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>
+                                com.zjtcoder.basis.Main
+                                <!-- tên-package-và-tên-class-chứa-hàm-main -->
+                            </mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

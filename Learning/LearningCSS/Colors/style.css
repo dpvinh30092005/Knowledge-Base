@@ -1,0 +1,12 @@
+body {
+    background-color: hsl(0, 12%, 57%);
+}
+#p1 {
+    color: aqua;
+}
+#p2 {
+    color: rgb(105, 66, 16);
+}
+#p3 {
+    color: hsl(0, 12%, 57%);
+}

@@ -1,0 +1,9 @@
+body {
+    background-image: url(background-small.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* overflow: auto; */
+}
+

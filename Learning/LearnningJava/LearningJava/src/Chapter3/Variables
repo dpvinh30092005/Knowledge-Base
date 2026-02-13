@@ -1,0 +1,17 @@
+Khai báo Biến (Declaring a Variable)
+• Định nghĩa: Biến là đơn vị lưu trữ cơ bản trong chương trình Java. Một biến được xác định bởi sự kết hợp 
+    của một định danh (identifier), một kiểu dữ liệu (type), và một bộ khởi tạo tùy chọn (optional initializer).
+• Quy tắc bắt buộc: Trong Java, tất cả các biến phải được khai báo trước khi sử dụng.
+
+• Cú pháp cơ bản: Dạng chung của khai báo biến là: 
+                    type identifier [ = value][, identifier [= value] ...] ;.
+
+    ◦ type là một trong các kiểu nguyên tử (kiểu nguyên thủy) của Java, hoặc tên của một lớp hoặc giao diện.
+    ◦ identifier là tên của biến.
+    ◦ Có thể khởi tạo biến bằng cách chỉ định dấu bằng (=) và một giá trị. Biểu thức khởi tạo phải dẫn đến một giá trị 
+        có kiểu tương thích với kiểu được chỉ định cho biến.
+    ◦ Có thể khai báo nhiều biến cùng một kiểu bằng cách sử dụng danh sách tên biến cách nhau bằng dấu phẩy.
+
+• Khởi tạo động: Java cho phép các biến được khởi tạo một cách động (dynamically), sử dụng bất kỳ biểu thức nào 
+    hợp lệ tại thời điểm biến được khai báo. 
+    Ví dụ, việc khởi tạo có thể bao gồm các lời gọi phương thức, các biến khác, hoặc các hằng số.

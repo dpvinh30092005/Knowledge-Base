@@ -1,0 +1,20 @@
+@font-face {
+    font-family:BadeenDisplay;
+    src: url(fonts/BadeenDisplay-Regular.ttf);
+}
+@font-face {
+    font-family:RubikGemstones ;
+    src: url(fonts/RubikGemstones-Regular.ttf);
+}
+
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: RubikGemstones, BadeenDisplay;
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic
+}

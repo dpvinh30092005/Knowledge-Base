@@ -1,0 +1,16 @@
+h1 {
+    /* border-style: solid;
+    border-width: 3px;
+    border-color: aqua; */
+    border: 3px solid aqua;
+    border-radius: 100px;
+}
+
+ p {
+    border-bottom: 2px solid black;
+    border-top: 2px dashed pink;
+    border-left: 2px double darkviolet;
+    border-right: 2px dotted yellowgreen;
+
+    border-radius: 10px;
+ }

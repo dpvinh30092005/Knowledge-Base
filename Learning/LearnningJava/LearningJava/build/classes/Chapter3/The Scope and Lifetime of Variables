@@ -1,0 +1,21 @@
+Trong Java, phạm vi (scope) và thời gian tồn tại (lifetime) của biến được xác định nghiêm ngặt theo cấu trúc khối của chương trình.
+1. Phạm vi (Scope)
+• Nguyên tắc chung: Java cho phép khai báo biến trong bất kỳ khối nào (block), được xác định bằng dấu ngoặc nhọn {}. 
+    Mỗi khối này định nghĩa một phạm vi.
+• Chức năng: Phạm vi xác định những đối tượng nào hiển thị (visible) đối với các phần khác của chương trình và cũng xác định thời gian tồn tại của những đối tượng đó.
+• Phạm vi lớn: Trong Java, hai phạm vi chính là phạm vi được định nghĩa bởi một lớp và phạm vi được định nghĩa bởi một phương thức.
+• Quy tắc hiển thị:
+    ◦ Biến được khai báo bên trong một phạm vi không hiển thị (không thể truy cập) đối với mã được định nghĩa bên ngoài phạm vi đó.
+    ◦ Phạm vi có thể lồng nhau (nested). Khi này, phạm vi bên ngoài bao bọc phạm vi bên trong. Các đối tượng được khai báo trong 
+        phạm vi bên ngoài sẽ hiển thị đối với mã trong phạm vi bên trong. Tuy nhiên, điều ngược lại không đúng: các đối tượng 
+        được khai báo trong phạm vi bên trong sẽ không hiển thị bên ngoài nó.
+• Khu vực khai báo: Biến có thể được khai báo tại bất kỳ điểm nào trong một khối, nhưng chúng chỉ hợp lệ sau khi chúng được khai báo.
+
+2. Thời gian tồn tại (Lifetime)
+• Nguyên tắc: Biến được tạo khi phạm vi của chúng được bắt đầu (entered) và bị hủy khi phạm vi của chúng kết thúc (left).
+• Ý nghĩa: Một biến sẽ không giữ được giá trị của nó một khi nó đã ra khỏi phạm vi.
+• Khởi tạo lại: Nếu một khai báo biến bao gồm một bộ khởi tạo, thì biến đó sẽ được khởi tạo lại mỗi khi khối mà nó được 
+    khai báo được bắt đầu.
+
+3. Hạn chế về Phạm vi
+• Bạn không thể khai báo một biến có cùng tên với một biến đã tồn tại trong phạm vi bên ngoài.

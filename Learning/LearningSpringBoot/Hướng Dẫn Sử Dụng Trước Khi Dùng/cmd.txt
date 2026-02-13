@@ -1,0 +1,5 @@
+cd .. dich 1 tang
+
+cd \ dich ve root
+
+dir show directory

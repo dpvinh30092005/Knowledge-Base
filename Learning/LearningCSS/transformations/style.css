@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#box1 {
+    width: 250px;
+    height: 250px;
+    border: 5px solid;
+    text-align: center;
+    font-size: 13em;
+    background-color: rgb(140, 234, 140);
+    transform: translateX(100%) rotateZ(90deg) scaleZ(2);
+}

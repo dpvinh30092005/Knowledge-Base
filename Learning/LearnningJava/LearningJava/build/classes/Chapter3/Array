@@ -1,0 +1,84 @@
+Mảng (Arrays) trong Java
+Mảng là một nhóm các biến có cùng kiểu, được gọi bằng một tên chung
+
+Các đặc điểm chung:
+
+• Mảng có thể được tạo ra với bất kỳ kiểu dữ liệu nào và có thể có một hoặc nhiều chiều.
+• Một phần tử cụ thể trong mảng được truy cập bằng chỉ mục (index) của nó.
+• Mảng cung cấp một phương tiện thuận tiện để nhóm các thông tin liên quan.
+• Trong Java, tất cả các mảng đều được cấp phát động (dynamically allocated).
+• Mảng được triển khai dưới dạng đối tượng (object). Do đó, mảng có một biến thể hiện đặc biệt là length, 
+    luôn giữ kích thước của mảng (số phần tử mà mảng có thể chứa).
+• Hệ thống chạy (run-time system) của Java sẽ kiểm tra nghiêm ngặt để đảm bảo tất cả các chỉ mục (index) truy cập vào mảng đều 
+    nằm trong phạm vi chính xác (từ 0 đến độ dài của mảng trừ 1). Nếu cố gắng truy cập các phần tử ngoài phạm vi, 
+    một lỗi chạy (run-time error) sẽ xảy ra.
+
+
+1. Mảng Một Chiều (One-Dimensional Arrays)
+Mảng một chiều về cơ bản là một danh sách các biến cùng kiểu.
+
+Quy trình tạo mảng một chiều là một quy trình hai bước:
+1. Khai báo biến mảng: Dạng tổng quát là type var-name[];. 
+    type khai báo kiểu cơ sở của mảng (kiểu dữ liệu của mỗi phần tử). 
+    Ví dụ, int month_days[]; khai báo month_days là một mảng kiểu int
+
+2. Cấp phát bộ nhớ: Biến mảng ban đầu chỉ là tham chiếu và có giá trị là null 
+    (không có mảng vật lý nào tồn tại). Để liên kết biến với một mảng vật lý, 
+    phải sử dụng toán tử new để cấp phát bộ nhớ. Dạng tổng quát là array-var = new type[size];
+        ◦ Các phần tử trong mảng được cấp phát bằng new sẽ tự động được khởi tạo về giá trị 0
+                ◦ Ví dụ: month_days = new int[12]; cấp phát một mảng 12 phần tử kiểu integer và gán nó cho month_days.
+                ◦ Có thể kết hợp khai báo và cấp phát: int month_days[] = new int;
+Truy cập và Khởi tạo:
+    • Tất cả các chỉ mục [index] mảng đều bắt đầu từ 0(zero)
+    • Mảng có thể được khởi tạo khi khai báo bằng cách sử dụng bộ khởi tạo mảng (array initializer)     
+        là một danh sách các biểu thức cách nhau bằng dấu phẩy và được bao quanh bởi dấu ngoặc nhọn {}. 
+        Khi sử dụng bộ khởi tạo, không cần dùng new, và mảng sẽ được tạo đủ lớn để chứa số phần tử đã chỉ định
+
+        class AutoArray {
+            public static void main(String args[]) {
+                int month_days[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31,
+                    30, 31 };
+                System.out.println("April has " + month_days[3] + " days.");
+            }
+        }
+
+2. Mảng Đa Chiều (Multidimensional Arrays)
+Trong Java, mảng đa chiều thực chất là mảng của mảng (arrays of arrays)
+Khai báo và Cấp phát:
+    • Để khai báo một biến mảng đa chiều, mỗi chiều bổ sung được chỉ định bằng một cặp dấu ngoặc vuông khác [].
+    • Ví dụ: int twoD[][] = new int[4][5]; 
+        cấp phát một mảng 4x5 và gán nó cho twoD. Mảng này được triển khai bên trong dưới dạng một mảng của các mảng int.
+    • Khi cấp phát bộ nhớ cho mảng đa chiều, chỉ cần chỉ định bộ nhớ cho chiều đầu tiên (chiều ngoài cùng bên trái). 
+        Các chiều còn lại có thể được cấp phát riêng biệt.
+• Mảng không đồng đều (Irregular Arrays): Khi cấp phát các chiều theo cách thủ công, không nhất thiết phải cấp phát cùng 
+    số lượng phần tử cho mỗi chiều. Điều này cho phép tạo ra các mảng đa chiều không đồng đều 
+    (ví dụ: các hàng có độ dài khác nhau)
+Khởi tạo:
+• Có thể khởi tạo mảng đa chiều bằng cách bao quanh bộ khởi tạo của mỗi chiều trong cặp dấu ngoặc nhọn riêng biệt
+
+
+There is a second form that may be used to declare an array:
+                            type[ ]var-name;
+Here, the square brackets follow the type specifier, and not the name of the array variable.
+For example, the following two declarations are equivalent:
+
+                            int al[] = new int[3];
+                            int[] a2 = new int[3];
+
+The following declarations are also equivalent:
+
+                            char twod1[][] = new char[3][4];
+                            char[][] twod2 = new char[3][4];
+
+This alternative declaration form offers convenience when declaring several arrays at the
+same time. 
+For example,
+
+                        int[] nums, nums2, nums3; // create three arrays
+
+creates three array variables of typeint. It is the same as writing
+
+                        int nums[], nums2[], nums3[]; // create three arrays
+
+The alternative declaration form is also useful when specifying an array as a return type for
+a method. Both forms are used in this book.
