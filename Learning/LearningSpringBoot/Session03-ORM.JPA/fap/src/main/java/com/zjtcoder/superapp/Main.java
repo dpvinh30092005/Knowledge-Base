@@ -17,28 +17,29 @@
                 //insertStudent();
                 //getAllStudents();
                 //insertLecturers();
-                getAllLecturers();
+                //getAllLecturers();
+                searchLecturers();
                 emf.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        public static void insertLecturers() {
-            //Lôi ông sếp quản lý các Entity để tạo table
-            Lecturer vinh = new Lecturer("PHƯỚC VINH", 1990, 20_000_000);
-            Lecturer binh = new Lecturer("BÌNH LÊ", 1990, 20_000_000);
+        //QUERY ĐỘNG CÁC THAM SỐ WHERE: TRUYỀN TỪ WEB PAGE/FORM -> ĐẾN ĐÂY CÓ 1 VALUE NÀO ĐÓ
+        //JPQL: SELECT X FROM Lecturer x WHERE x.salary = :pSalary
+
+        public static void searchLecturers() {
             EntityManager em = emf.createEntityManager();
-            //Vì có thay đổi trên CSDL nên ta cần theo dõi chặt chẽ các câu lệnh
-            //HOẶC TẤT CẢ HOẶC KHÔNG GÌ CẢ NGUYÊN LÍ ACID CỦA TRANSACTION
-            //RỚT 1 TRONG 2 -> ROLLBACK
-            em.getTransaction().begin();
-            em.persist(vinh);
-            em.persist(binh);
-            em.getTransaction().commit();
-            em.close();
+            List<Lecturer> result = em.createQuery("SELECT x FROM Lecturer x WHERE x.id = :pId", Lecturer.class).setParameter("pId", 2).getResultList();
+            //nếu hàm trả về object ta có quyền chấm tiếp.
+
+            result.forEach(x -> {
+                System.out.println(x);
+            });
+
         }
 
+        //SHOW ALL Lecturers
         public static void getAllLecturers() {
             EntityManager em = emf.createEntityManager();
             //LUÔN CẦN CÓ NGƯỜI QUẢN LÍ CÁC ENTITIES
@@ -63,6 +64,22 @@
             });
 
             em.close(); // PHẢI NHỚ !!!!!!!!!!!!!!!!!!!!!!!!!
+        }
+
+        //INSERT a Lecturer
+        public static void insertLecturers() {
+            //Lôi ông sếp quản lý các Entity để tạo table
+            Lecturer vinh = new Lecturer("PHƯỚC VINH", 1990, 20_000_000);
+            Lecturer binh = new Lecturer("BÌNH LÊ", 1990, 20_000_000);
+            EntityManager em = emf.createEntityManager();
+            //Vì có thay đổi trên CSDL nên ta cần theo dõi chặt chẽ các câu lệnh
+            //HOẶC TẤT CẢ HOẶC KHÔNG GÌ CẢ NGUYÊN LÍ ACID CỦA TRANSACTION
+            //RỚT 1 TRONG 2 -> ROLLBACK
+            em.getTransaction().begin();
+            em.persist(vinh);
+            em.persist(binh);
+            em.getTransaction().commit();
+            em.close();
         }
 
         //INSERT STUDENT
@@ -90,7 +107,6 @@
         }
 
         //SELECT * STUDENT
-
         public static void getAllStudents() {
             EntityManager em = emf.createEntityManager();
 
