@@ -38,7 +38,6 @@
             });
 
         }
-
         //SHOW ALL Lecturers
         public static void getAllLecturers() {
             EntityManager em = emf.createEntityManager();

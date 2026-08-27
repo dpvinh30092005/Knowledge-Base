@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.vinhdp</groupId>
+    <artifactId>how-oop-work</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javafx.version>21.0.6</javafx.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <executions>
+                    <execution>
+                        <id>encapsulation</id>
+                        <configuration>
+                            <mainClass>com.vinhdp.ui.EncapsulationApp</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>inheritance</id>
+                        <configuration>
+                            <mainClass>com.vinhdp.ui.InheritanceApp</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>polymorphism</id>
+                        <configuration>
+                            <mainClass>com.vinhdp.ui.PolymorphismApp</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>jvm</id>
+                        <configuration>
+                            <mainClass>com.vinhdp.ui.JvmVisualApp</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>jvm-inheritance</id>
+                        <configuration>
+                            <mainClass>com.vinhdp.ui.JvmInheritanceApp</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>encapsulation-map</id>
+                        <configuration>
+                            <mainClass>com.vinhdp.ui.EncapsulationMapApp</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>interface-tree</id>
+                        <configuration>
+                            <mainClass>com.vinhdp.ui.InterfaceTreeApp</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>abstraction</id>
+                        <configuration>
+                            <mainClass>com.vinhdp.ui.AbstractionApp</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

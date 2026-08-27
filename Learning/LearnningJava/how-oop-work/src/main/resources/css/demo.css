@@ -1,0 +1,145 @@
+.root {
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f4f5f7;
+}
+
+.header {
+    -fx-background-color: #1f2430;
+    -fx-padding: 18 24 18 24;
+}
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+.header-subtitle {
+    -fx-text-fill: #a9b1c2;
+    -fx-font-size: 12.5px;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #e2e5ea;
+    -fx-border-radius: 10;
+    -fx-padding: 16;
+}
+.card-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2430;
+}
+
+.muted {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 12px;
+}
+
+.code {
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #334155;
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 5;
+    -fx-padding: 3 7 3 7;
+}
+
+.metric-label {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 11px;
+}
+.metric-value {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2430;
+}
+
+.button {
+    -fx-background-color: #eef1f5;
+    -fx-text-fill: #1f2430;
+    -fx-background-radius: 7;
+    -fx-padding: 7 14 7 14;
+    -fx-cursor: hand;
+    -fx-border-color: #dfe3e9;
+    -fx-border-radius: 7;
+}
+.button:hover { -fx-background-color: #e3e8ef; }
+
+.button.primary {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-border-color: #2563eb;
+}
+.button.primary:hover { -fx-background-color: #1d4ed8; }
+
+.button.danger {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #b91c1c;
+    -fx-border-color: #fecaca;
+}
+.button.danger:hover { -fx-background-color: #fecaca; }
+
+.button:disabled { -fx-opacity: 0.45; }
+
+.text-field, .combo-box, .spinner {
+    -fx-background-radius: 7;
+    -fx-border-radius: 7;
+    -fx-border-color: #dfe3e9;
+    -fx-background-color: white;
+    -fx-padding: 6 9 6 9;
+}
+
+.log-panel { -fx-background-color: #11151d; }
+.log-title { -fx-text-fill: #e5e7eb; -fx-font-weight: bold; -fx-font-size: 13px; }
+.log-list { -fx-background-color: #11151d; -fx-control-inner-background: #11151d; }
+.log-list .list-cell {
+    -fx-background-color: #11151d;
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+    -fx-font-size: 12px;
+    -fx-padding: 3 10 3 10;
+}
+.log-list .list-cell:filled:selected { -fx-background-color: #1b2130; }
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e2e5ea;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+.table-view .column-header-background { -fx-background-color: #f8fafc; }
+.table-view .column-header { -fx-background-color: transparent; -fx-border-color: transparent #e2e5ea transparent transparent; }
+.table-view .column-header .label { -fx-text-fill: #475569; -fx-font-weight: bold; }
+
+.tab-pane .tab { -fx-background-color: #e8ebf0; -fx-background-radius: 8 8 0 0; }
+.tab-pane .tab:selected { -fx-background-color: white; }
+.tab-pane .tab .tab-label { -fx-text-fill: #1f2430; }
+.tab-pane > .tab-header-area > .headers-region > .tab:selected .focus-indicator { -fx-border-color: transparent; }
+
+.badge {
+    -fx-background-color: #e0e7ff;
+    -fx-text-fill: #3730a3;
+    -fx-background-radius: 20;
+    -fx-padding: 3 10 3 10;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+.badge.warn { -fx-background-color: #fef3c7; -fx-text-fill: #92400e; }
+.badge.ok { -fx-background-color: #dcfce7; -fx-text-fill: #166534; }
+
+.toggle-button {
+    -fx-background-color: #eef1f5;
+    -fx-text-fill: #1f2430;
+    -fx-background-radius: 7;
+    -fx-border-color: #dfe3e9;
+    -fx-border-radius: 7;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+.toggle-button:hover { -fx-background-color: #e3e8ef; }
+.toggle-button:focused { -fx-border-color: #bfdbfe; }
+.toggle-button:selected {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-border-color: #2563eb;
+}
