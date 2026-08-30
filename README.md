@@ -1,85 +1,88 @@
-# 📘 Knowledge Base
+<div align="center">
 
-> 🚀 Personal Learning Repository of **Zjt**
-> This repository stores all technologies, labs, and experiments I have learned during my Software Engineering journey.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6DB33F,100:007396&height=180&section=header&text=Knowledge%20Base&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=36" width="100%" />
 
----
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2600&pause=700&color=6DB33F&center=true&vCenter=true&width=560&lines=Backend+Developer+%E2%80%A2+Java+%2F+Spring+Boot;Everything+I+learn%2C+build+and+break;Learn+%E2%86%92+Practice+%E2%86%92+Document+%E2%86%92+Improve" alt="typing" />
 
-## 👨‍💻 About Me
+<br/>
 
-* 🎓 IT Student
-* ☕ Backend Developer (Java / Spring Boot Focus)
-* 🌐 Interested in System Design
-* 🤖 Exploring AI Integration
-* 📚 Passionate about continuous learning
+**Personal learning repository of [Zjt](https://github.com/dpvinh30092005)**
+Labs, notes and projects from my Software Engineering journey.
+
+</div>
 
 ---
 
-## 📂 Learning Structure
+## Tech Stack
+
+<div align="center">
+
+**Backend**
+
+<img src="https://skillicons.dev/icons?i=java,spring,hibernate,maven,py,fastapi&theme=dark" />
+
+**Frontend**
+
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,tailwind&theme=dark" />
+
+**Data &amp; Tools**
+
+<img src="https://skillicons.dev/icons?i=postgres,docker,git,github,idea,postman&theme=dark" />
+
+</div>
+
+---
+
+## Structure
 
 ```
 Knowledge-Base
+├── Learning/          notes and labs
+│   ├── html/          tags, forms, tables, media
+│   ├── css/           layout, flexbox, components
+│   ├── javascript/    core language exercises
+│   ├── javascript-typescript/
+│   ├── java/          java-basics + oop-fundamentals
+│   ├── spring-boot/   maven → jdbc → orm/jpa
+│   ├── html-css-js-starter/
+│   └── iot-cheatsheet/
 │
-└── Learning
-    ├── HTML
-    ├── CSS
-    ├── JavaScript
-    ├── TypeScript
-    ├── Java
-    └── Spring Boot
+├── Project/           things I actually built
+└── Video/             recorded walkthroughs
 ```
 
 ---
 
-## 🧠 Learning Areas
+## Projects
 
-### 🌐 Frontend Basics
-
-* HTML Fundamentals
-* CSS Layout & Styling
-* JavaScript Core
-* TypeScript
-
----
-
-### ☕ Backend Development
-
-* Java Core
-* OOP Principles
-* Design Patterns
-* Spring Boot Framework
-* RESTful API Development
-
----
-
-### 🗄 Database
-
-* SQL & Relational Database Design
-* ORM with JPA / Hibernate
-* PostgreSQL
+| Project | Stack |
+|---|---|
+| **intelli-roadmap** | Spring Boot · React 19 · TypeScript · FastAPI |
+| **tour-vista** | Spring Boot · Thymeleaf |
+| **food4fit** | Spring Boot · Docker |
+| **chat-with-docs** | Spring Boot · Docker |
+| **social-app** | Spring Boot (multi-module) · Node |
+| **team-task-management** | Spring Boot |
+| **english-learning-app** | Spring Boot |
+| **testing-tdd** | Spring Boot · TDD |
+| **homestay-booking-management** | Java · NetBeans |
+| **servlet-mvc2-template** | Servlet · JSP · MVC2 |
+| **itviec-job-scraper** | Python · Selenium |
+| **room-web** | Babylon.js · glTF |
+| **dsa** | Java |
 
 ---
 
-## 🛠 Technologies & Tools
+## Videos
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge\&logo=java\&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge\&logo=spring\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge\&logo=postgresql\&logoColor=white)
+`solid` · `swagger` · `devops` · `request-lifecycle`
 
 ---
 
-## 🎯 Goals
+<div align="center">
 
-* Become a Backend Engineer
-* Build scalable backend systems
-* Apply AI into real-world projects
-* Master system design fundamentals
+*Learn → Practice → Document → Improve → Share*
 
----
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:007396,100:6DB33F&height=110&section=footer" width="100%" />
 
-## 📈 Learning Philosophy
-
-> Learn → Practice → Document → Improve → Share
----
+</div>
