@@ -33,55 +33,7 @@ Labs, notes and projects from my Software Engineering journey.
 
 ---
 
-## Structure
 
-```
-Knowledge-Base
-├── Learning/          notes and labs
-│   ├── html/          tags, forms, tables, media
-│   ├── css/           layout, flexbox, components
-│   ├── javascript/    core language exercises
-│   ├── javascript-typescript/
-│   ├── java/          java-basics + oop-fundamentals
-│   ├── spring-boot/   maven → jdbc → orm/jpa
-│   ├── html-css-js-starter/
-│   └── iot-cheatsheet/
-│
-├── Project/           things I actually built
-└── Video/             recorded walkthroughs
-```
-
----
-
-## Projects
-
-| Project | Stack |
-|---|---|
-| **intelli-roadmap** | Spring Boot · React 19 · TypeScript · FastAPI |
-| **tour-vista** | Spring Boot · Thymeleaf |
-| **food4fit** | Spring Boot · Docker |
-| **chat-with-docs** | Spring Boot · Docker |
-| **social-app** | Spring Boot (multi-module) · Node |
-| **team-task-management** | Spring Boot |
-| **english-learning-app** | Spring Boot |
-| **testing-tdd** | Spring Boot · TDD |
-| **homestay-booking-management** | Java · NetBeans |
-| **servlet-mvc2-template** | Servlet · JSP · MVC2 |
-| **itviec-job-scraper** | Python · Selenium |
-| **room-web** | Babylon.js · glTF |
-| **dsa** | Java |
-
----
-
-## Videos
-
-`solid` · `swagger` · `devops` · `request-lifecycle`
-
----
-
-<div align="center">
-
-*Learn → Practice → Document → Improve → Share*
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:007396,100:6DB33F&height=110&section=footer" width="100%" />
 
