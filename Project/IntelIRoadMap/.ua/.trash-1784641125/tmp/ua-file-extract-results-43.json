@@ -1,0 +1,2015 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 18,
+  "filesSkipped": [
+    ".github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+    ".ua/.understandignore",
+    "BackEnd/docs/project_report.tex",
+    "BackEnd/intelipath-backend/.gitattributes",
+    "BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+    "BackEnd/intelipath-backend/.mvn/wrapper/maven-wrapper.properties",
+    "BackEnd/intelipath-backend/mvnw"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 18,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 11,
+      "failed": 0,
+      "skipped": 7
+    }
+  },
+  "results": [
+    {
+      "path": ".github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 27,
+      "nonEmptyLines": 20,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/.claude/launch.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 16,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "configurations",
+          "level": 1,
+          "line": 3
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 27,
+      "nonEmptyLines": 20,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docker/postgres/init/00_create_scraper_db.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 8,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 761,
+      "nonEmptyLines": 705,
+      "definitions": [
+        {
+          "name": "career_roles",
+          "kind": "table",
+          "fields": [
+            "career_id",
+            "career_name",
+            "prerequisite",
+            "description"
+          ],
+          "startLine": 16,
+          "endLine": 21
+        },
+        {
+          "name": "skills",
+          "kind": "table",
+          "fields": [
+            "skill_id",
+            "category",
+            "careers",
+            "skill_name"
+          ],
+          "startLine": 23,
+          "endLine": 28
+        },
+        {
+          "name": "users",
+          "kind": "table",
+          "fields": [
+            "user_id",
+            "email",
+            "FPT"
+          ],
+          "startLine": 30,
+          "endLine": 33
+        },
+        {
+          "name": "students",
+          "kind": "table",
+          "fields": [
+            "user_id",
+            "career_id",
+            "display",
+            "admission_date",
+            "major",
+            "github_profile",
+            "transcript_url",
+            "portfolio_slug",
+            "fpt_curriculum_id"
+          ],
+          "startLine": 54,
+          "endLine": 69
+        },
+        {
+          "name": "academic_counselor",
+          "kind": "table",
+          "fields": [
+            "user_id",
+            "university_name",
+            "department",
+            "admission_date"
+          ],
+          "startLine": 71,
+          "endLine": 78
+        },
+        {
+          "name": "industry_mentor",
+          "kind": "table",
+          "fields": [
+            "user_id",
+            "company",
+            "industry_focus"
+          ],
+          "startLine": 80,
+          "endLine": 86
+        },
+        {
+          "name": "career_required_skills",
+          "kind": "table",
+          "fields": [
+            "skill_required_id",
+            "career_id",
+            "skill_id",
+            "importance_level"
+          ],
+          "startLine": 92,
+          "endLine": 104
+        },
+        {
+          "name": "node_types",
+          "kind": "table",
+          "fields": [
+            "type_id",
+            "stage",
+            "unlock_key_required",
+            "stage_unlock_key",
+            "weight"
+          ],
+          "startLine": 106,
+          "endLine": 114
+        },
+        {
+          "name": "skill_nodes",
+          "kind": "table",
+          "fields": [
+            "node_id",
+            "career_id",
+            "skill_id",
+            "type_id",
+            "previous_node",
+            "parent_node",
+            "prerequisite",
+            "node_name",
+            "node_level",
+            "description",
+            "resource",
+            "completion_policy",
+            "selection",
+            "choose_count",
+            "node_kind",
+            "axis",
+            "is_optional",
+            "is_checkpoint",
+            "required_proficiency",
+            "evidence_keywords"
+          ],
+          "startLine": 116,
+          "endLine": 155
+        },
+        {
+          "name": "roadmap_node_layouts",
+          "kind": "table",
+          "fields": [
+            "layout_id",
+            "node_id",
+            "position_x",
+            "position_y",
+            "lane",
+            "display_order",
+            "layout_version",
+            "edited_by",
+            "updated_at"
+          ],
+          "startLine": 165,
+          "endLine": 180
+        },
+        {
+          "name": "student_skills",
+          "kind": "table",
+          "fields": [
+            "student_skill_id",
+            "user_id",
+            "skill_id",
+            "custom_description",
+            "tech_stack"
+          ],
+          "startLine": 182,
+          "endLine": 193
+        },
+        {
+          "name": "student_progress",
+          "kind": "table",
+          "fields": [
+            "progress_id",
+            "user_id",
+            "node_id",
+            "status",
+            "created_at",
+            "completed_at"
+          ],
+          "startLine": 195,
+          "endLine": 209
+        },
+        {
+          "name": "student_node_selections",
+          "kind": "table",
+          "fields": [
+            "selection_id",
+            "user_id",
+            "group_node_id",
+            "chosen_node_id",
+            "created_at"
+          ],
+          "startLine": 215,
+          "endLine": 228
+        },
+        {
+          "name": "skill_trends",
+          "kind": "table",
+          "fields": [
+            "trend_id",
+            "skill_id",
+            "jobs_needed",
+            "week_stamp"
+          ],
+          "startLine": 230,
+          "endLine": 237
+        },
+        {
+          "name": "portfolio_configs",
+          "kind": "table",
+          "fields": [
+            "config_id",
+            "user_id",
+            "theme",
+            "theme_colors",
+            "fonts",
+            "hero_section",
+            "skills_section",
+            "created_at",
+            "updated_at"
+          ],
+          "startLine": 243,
+          "endLine": 255
+        },
+        {
+          "name": "student_education",
+          "kind": "table",
+          "fields": [
+            "education_id",
+            "user_id",
+            "university",
+            "degree",
+            "period",
+            "description"
+          ],
+          "startLine": 257,
+          "endLine": 266
+        },
+        {
+          "name": "portfolio_project",
+          "kind": "table",
+          "fields": [
+            "project_id",
+            "user_id",
+            "repo_id",
+            "repo_url",
+            "project_name",
+            "demo_url",
+            "icon",
+            "description",
+            "stars",
+            "tech_stack"
+          ],
+          "startLine": 268,
+          "endLine": 281
+        },
+        {
+          "name": "feedback",
+          "kind": "table",
+          "fields": [
+            "feedback_id",
+            "sender_id",
+            "receiver_id",
+            "sender_name",
+            "content",
+            "type",
+            "READ",
+            "DELETED",
+            "created_at",
+            "updated_at"
+          ],
+          "startLine": 283,
+          "endLine": 303
+        },
+        {
+          "name": "feedback_attachment",
+          "kind": "table",
+          "fields": [
+            "attachment_id",
+            "feedback_id",
+            "file_name",
+            "file_type",
+            "file_size",
+            "data"
+          ],
+          "startLine": 305,
+          "endLine": 312
+        },
+        {
+          "name": "portfolio_review_requests",
+          "kind": "table",
+          "fields": [
+            "request_id",
+            "student_id",
+            "mentor_id",
+            "status",
+            "create_at",
+            "resolved_at"
+          ],
+          "startLine": 314,
+          "endLine": 327
+        },
+        {
+          "name": "student_skill_evidence",
+          "kind": "table",
+          "fields": [
+            "evidence_id",
+            "so",
+            "student_skill_id",
+            "node_id",
+            "skill_name",
+            "source_type",
+            "source_id",
+            "source_url",
+            "evidence_text",
+            "confidence",
+            "detected_by",
+            "detected_at",
+            "status"
+          ],
+          "startLine": 333,
+          "endLine": 360
+        },
+        {
+          "name": "roadmap_recommendations",
+          "kind": "table",
+          "fields": [
+            "recommendation_id",
+            "user_id",
+            "current_career_id",
+            "recommend_career_id",
+            "recommendation_type",
+            "title",
+            "summary",
+            "reason",
+            "confidence",
+            "status",
+            "created_at",
+            "decided_at"
+          ],
+          "startLine": 362,
+          "endLine": 385
+        },
+        {
+          "name": "roadmap_recommendation_items",
+          "kind": "table",
+          "fields": [
+            "rec_item_id",
+            "recommendation_id",
+            "node_id",
+            "action",
+            "reason",
+            "evidence_ids",
+            "confidence"
+          ],
+          "startLine": 387,
+          "endLine": 401
+        },
+        {
+          "name": "rag_documents",
+          "kind": "table",
+          "fields": [
+            "document_id",
+            "owner_user_id",
+            "scope",
+            "source_type",
+            "file_name",
+            "storage_url",
+            "ingestion_status",
+            "ingestion_version",
+            "error_message",
+            "created_at",
+            "updated_at"
+          ],
+          "startLine": 403,
+          "endLine": 424
+        },
+        {
+          "name": "companies",
+          "kind": "table",
+          "fields": [
+            "company_id",
+            "signatures",
+            "infos"
+          ],
+          "startLine": 430,
+          "endLine": 434
+        },
+        {
+          "name": "recruitments",
+          "kind": "table",
+          "fields": [
+            "recruitment_id",
+            "recruitment_infos",
+            "descriptions",
+            "posted_date",
+            "application_deadline"
+          ],
+          "startLine": 436,
+          "endLine": 442
+        },
+        {
+          "name": "recruitment_posts",
+          "kind": "table",
+          "fields": [
+            "post_id",
+            "company_id",
+            "recruitment_id",
+            "expired_at"
+          ],
+          "startLine": 444,
+          "endLine": 453
+        },
+        {
+          "name": "oauth_accounts",
+          "kind": "table",
+          "fields": [
+            "oauth_acc_id",
+            "user_id",
+            "provider_id",
+            "provider_name"
+          ],
+          "startLine": 459,
+          "endLine": 467
+        },
+        {
+          "name": "refresh_tokens",
+          "kind": "table",
+          "fields": [
+            "id",
+            "user_id",
+            "token",
+            "expired_at"
+          ],
+          "startLine": 469,
+          "endLine": 476
+        },
+        {
+          "name": "password_reset_tokens",
+          "kind": "table",
+          "fields": [
+            "id",
+            "user_id",
+            "token_hash",
+            "expires_at",
+            "used_at",
+            "created_at"
+          ],
+          "startLine": 482,
+          "endLine": 491
+        },
+        {
+          "name": "chat_sessions",
+          "kind": "table",
+          "fields": [
+            "session_id",
+            "user_id",
+            "session_name",
+            "created_at"
+          ],
+          "startLine": 493,
+          "endLine": 500
+        },
+        {
+          "name": "chat_messages",
+          "kind": "table",
+          "fields": [
+            "message_id",
+            "session_id",
+            "role",
+            "content",
+            "created_at"
+          ],
+          "startLine": 502,
+          "endLine": 510
+        },
+        {
+          "name": "fpt_subjects",
+          "kind": "table",
+          "fields": [
+            "code",
+            "name",
+            "credits",
+            "prerequisite",
+            "description"
+          ],
+          "startLine": 566,
+          "endLine": 572
+        },
+        {
+          "name": "fpt_curricula",
+          "kind": "table",
+          "fields": [
+            "id",
+            "code",
+            "is_default",
+            "synced_at"
+          ],
+          "startLine": 576,
+          "endLine": 586
+        },
+        {
+          "name": "fpt_curriculum_subjects",
+          "kind": "table",
+          "fields": [
+            "curriculum_id",
+            "subject_code",
+            "semester",
+            "combo_code",
+            "combo_name"
+          ],
+          "startLine": 599,
+          "endLine": 608
+        },
+        {
+          "name": "fpt_subject_skills",
+          "kind": "table",
+          "fields": [
+            "id",
+            "subject_code",
+            "skill_id",
+            "skill_name"
+          ],
+          "startLine": 613,
+          "endLine": 621
+        },
+        {
+          "name": "fpt_subject_clos",
+          "kind": "table",
+          "fields": [
+            "id",
+            "subject_code",
+            "code",
+            "order_index"
+          ],
+          "startLine": 627,
+          "endLine": 635
+        },
+        {
+          "name": "fpt_subject_resources",
+          "kind": "table",
+          "fields": [
+            "id",
+            "subject_code",
+            "kind",
+            "title",
+            "url",
+            "source_url",
+            "storage_path",
+            "size_bytes",
+            "mirrored_at",
+            "topic",
+            "clo_ref",
+            "order_index"
+          ],
+          "startLine": 646,
+          "endLine": 661
+        },
+        {
+          "name": "student_fpt_subjects",
+          "kind": "table",
+          "fields": [
+            "id",
+            "user_id",
+            "subject_code",
+            "curriculum_id",
+            "status",
+            "source",
+            "updated_at"
+          ],
+          "startLine": 664,
+          "endLine": 678
+        },
+        {
+          "name": "above",
+          "kind": "table",
+          "fields": [],
+          "startLine": 684,
+          "endLine": 697
+        },
+        {
+          "name": "idx_students_career_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 516,
+          "endLine": 516
+        },
+        {
+          "name": "idx_students_portfolio_slug",
+          "kind": "index",
+          "fields": [],
+          "startLine": 517,
+          "endLine": 517
+        },
+        {
+          "name": "idx_crs_career_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 518,
+          "endLine": 518
+        },
+        {
+          "name": "idx_crs_skill_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 519,
+          "endLine": 519
+        },
+        {
+          "name": "idx_skill_nodes_career_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 520,
+          "endLine": 520
+        },
+        {
+          "name": "idx_skill_nodes_skill_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 521,
+          "endLine": 521
+        },
+        {
+          "name": "idx_skill_nodes_type_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 522,
+          "endLine": 522
+        },
+        {
+          "name": "idx_skill_nodes_previous_node",
+          "kind": "index",
+          "fields": [],
+          "startLine": 523,
+          "endLine": 523
+        },
+        {
+          "name": "idx_roadmap_node_layouts_node_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 524,
+          "endLine": 524
+        },
+        {
+          "name": "idx_skill_nodes_parent_node",
+          "kind": "index",
+          "fields": [],
+          "startLine": 525,
+          "endLine": 525
+        },
+        {
+          "name": "idx_student_skills_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 526,
+          "endLine": 526
+        },
+        {
+          "name": "idx_student_skills_skill_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 527,
+          "endLine": 527
+        },
+        {
+          "name": "idx_student_progress_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 528,
+          "endLine": 528
+        },
+        {
+          "name": "idx_student_progress_node_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 529,
+          "endLine": 529
+        },
+        {
+          "name": "idx_portfolio_project_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 530,
+          "endLine": 530
+        },
+        {
+          "name": "idx_portfolio_configs_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 531,
+          "endLine": 531
+        },
+        {
+          "name": "idx_student_education_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 532,
+          "endLine": 532
+        },
+        {
+          "name": "idx_feedback_sender_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 533,
+          "endLine": 533
+        },
+        {
+          "name": "idx_feedback_receiver_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 534,
+          "endLine": 534
+        },
+        {
+          "name": "idx_feedback_attachment_feedback_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 535,
+          "endLine": 535
+        },
+        {
+          "name": "idx_feedback_receiver_status",
+          "kind": "index",
+          "fields": [],
+          "startLine": 536,
+          "endLine": 536
+        },
+        {
+          "name": "idx_prr_student_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 537,
+          "endLine": 537
+        },
+        {
+          "name": "idx_skill_trends_skill_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 538,
+          "endLine": 538
+        },
+        {
+          "name": "idx_sse_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 539,
+          "endLine": 539
+        },
+        {
+          "name": "idx_sse_student_skill_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 540,
+          "endLine": 540
+        },
+        {
+          "name": "idx_sse_node_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 541,
+          "endLine": 541
+        },
+        {
+          "name": "idx_rr_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 542,
+          "endLine": 542
+        },
+        {
+          "name": "idx_rr_current_career_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 543,
+          "endLine": 543
+        },
+        {
+          "name": "idx_rr_recommend_career_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 544,
+          "endLine": 544
+        },
+        {
+          "name": "idx_rri_recommendation_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 545,
+          "endLine": 545
+        },
+        {
+          "name": "idx_rri_node_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 546,
+          "endLine": 546
+        },
+        {
+          "name": "idx_rag_documents_owner_source",
+          "kind": "index",
+          "fields": [],
+          "startLine": 547,
+          "endLine": 547
+        },
+        {
+          "name": "idx_recruitment_posts_company_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 548,
+          "endLine": 548
+        },
+        {
+          "name": "idx_recruitment_posts_recruitment_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 549,
+          "endLine": 549
+        },
+        {
+          "name": "idx_oauth_accounts_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 550,
+          "endLine": 550
+        },
+        {
+          "name": "idx_refresh_tokens_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 551,
+          "endLine": 551
+        },
+        {
+          "name": "idx_password_reset_tokens_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 552,
+          "endLine": 552
+        },
+        {
+          "name": "idx_chat_sessions_user_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 553,
+          "endLine": 553
+        },
+        {
+          "name": "idx_chat_messages_session_id",
+          "kind": "index",
+          "fields": [],
+          "startLine": 554,
+          "endLine": 554
+        },
+        {
+          "name": "idx_fc_program_cohort",
+          "kind": "index",
+          "fields": [],
+          "startLine": 587,
+          "endLine": 587
+        },
+        {
+          "name": "idx_fcs_curriculum",
+          "kind": "index",
+          "fields": [],
+          "startLine": 609,
+          "endLine": 609
+        },
+        {
+          "name": "idx_fcs_curriculum_combo",
+          "kind": "index",
+          "fields": [],
+          "startLine": 611,
+          "endLine": 611
+        },
+        {
+          "name": "idx_fss_skill_name",
+          "kind": "index",
+          "fields": [],
+          "startLine": 622,
+          "endLine": 622
+        },
+        {
+          "name": "idx_fsc_subject",
+          "kind": "index",
+          "fields": [],
+          "startLine": 636,
+          "endLine": 636
+        },
+        {
+          "name": "idx_fsr_subject",
+          "kind": "index",
+          "fields": [],
+          "startLine": 662,
+          "endLine": 662
+        },
+        {
+          "name": "idx_sfs_user",
+          "kind": "index",
+          "fields": [],
+          "startLine": 679,
+          "endLine": 679
+        },
+        {
+          "name": "idx_fcs_curriculum_combo",
+          "kind": "index",
+          "fields": [],
+          "startLine": 721,
+          "endLine": 721
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 87
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docs/code-audit.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 197,
+      "nonEmptyLines": 138,
+      "sections": [
+        {
+          "heading": "InteliPath Backend — Full Source Code Audit",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Executive Summary",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "1. Dependency Injection",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "2. Business Logic Correctness (real bugs)",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "3. Logging Convention",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "4. SOLID Principles",
+          "level": 2,
+          "line": 88
+        },
+        {
+          "heading": "5. Logic Clarity",
+          "level": 2,
+          "line": 118
+        },
+        {
+          "heading": "6. Folder / Package Placement",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "7. Imports",
+          "level": 2,
+          "line": 147
+        },
+        {
+          "heading": "8. Swagger / OpenAPI Documentation",
+          "level": 2,
+          "line": 163
+        },
+        {
+          "heading": "Priority Fix List (Remaining)",
+          "level": 2,
+          "line": 185
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docs/security-review.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 154,
+      "nonEmptyLines": 94,
+      "sections": [
+        {
+          "heading": "InteliPath — Source Code Review",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Priority Fixes",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "Part 1 — intelipath-backend (Java / Spring Boot)",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Critical Security Issues",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "Other Security Concerns",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "Code Quality Issues",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "Architecture Observations",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Positive Notes",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "Part 2 — intelipath-service (Python / FastAPI)",
+          "level": 2,
+          "line": 100
+        },
+        {
+          "heading": "Critical Security Issues",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "Other Security Concerns",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "Code Quality Issues",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "Positive Notes",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "Test Coverage",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "Recommended Next Steps (Remaining)",
+          "level": 2,
+          "line": 147
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "args"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "IntelipathBackendApplication",
+          "startLine": 7,
+          "endLine": 16,
+          "methods": [
+            "main"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "IntelipathBackendApplication",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "SpringApplication.run",
+          "lineNumber": 12
+        },
+        {
+          "caller": "main",
+          "callee": "System.out.println",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "aiServiceRestClient",
+          "startLine": 22,
+          "endLine": 25,
+          "params": [
+            "properties"
+          ]
+        },
+        {
+          "name": "aiServiceScraperClient",
+          "startLine": 28,
+          "endLine": 31,
+          "params": [
+            "properties"
+          ]
+        },
+        {
+          "name": "aiServiceHealthClient",
+          "startLine": 34,
+          "endLine": 37,
+          "params": [
+            "properties"
+          ]
+        },
+        {
+          "name": "buildClient",
+          "startLine": 39,
+          "endLine": 50,
+          "params": [
+            "properties",
+            "readTimeout"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiClientConfig",
+          "startLine": 17,
+          "endLine": 51,
+          "methods": [
+            "aiServiceRestClient",
+            "aiServiceScraperClient",
+            "aiServiceHealthClient",
+            "buildClient"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "aiServiceRestClient",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "aiServiceScraperClient",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "aiServiceHealthClient",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "AiClientConfig",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "aiServiceRestClient",
+          "callee": "buildClient",
+          "lineNumber": 24
+        },
+        {
+          "caller": "aiServiceRestClient",
+          "callee": "properties.getReadTimeout",
+          "lineNumber": 24
+        },
+        {
+          "caller": "aiServiceScraperClient",
+          "callee": "buildClient",
+          "lineNumber": 30
+        },
+        {
+          "caller": "aiServiceScraperClient",
+          "callee": "properties.getScrapeTimeout",
+          "lineNumber": 30
+        },
+        {
+          "caller": "aiServiceHealthClient",
+          "callee": "buildClient",
+          "lineNumber": 36
+        },
+        {
+          "caller": "aiServiceHealthClient",
+          "callee": "properties.getHealthTimeout",
+          "lineNumber": 36
+        },
+        {
+          "caller": "buildClient",
+          "callee": "ClientHttpRequestFactorySettings.defaults()\n                .withConnectTimeout(properties.getConnectTimeout()).withReadTimeout",
+          "lineNumber": 40
+        },
+        {
+          "caller": "buildClient",
+          "callee": "ClientHttpRequestFactorySettings.defaults().withConnectTimeout",
+          "lineNumber": 40
+        },
+        {
+          "caller": "buildClient",
+          "callee": "ClientHttpRequestFactorySettings.defaults",
+          "lineNumber": 40
+        },
+        {
+          "caller": "buildClient",
+          "callee": "properties.getConnectTimeout",
+          "lineNumber": 41
+        },
+        {
+          "caller": "buildClient",
+          "callee": "ClientHttpRequestFactoryBuilder.detect().build",
+          "lineNumber": 43
+        },
+        {
+          "caller": "buildClient",
+          "callee": "ClientHttpRequestFactoryBuilder.detect",
+          "lineNumber": 43
+        },
+        {
+          "caller": "buildClient",
+          "callee": "RestClient.builder()\n                .baseUrl(properties.getBaseUrl())\n                .requestFactory(requestFactory)\n                .defaultHeader(\"x-api-key\", properties.getApiKey()).build",
+          "lineNumber": 45
+        },
+        {
+          "caller": "buildClient",
+          "callee": "RestClient.builder()\n                .baseUrl(properties.getBaseUrl())\n                .requestFactory(requestFactory).defaultHeader",
+          "lineNumber": 45
+        },
+        {
+          "caller": "buildClient",
+          "callee": "RestClient.builder()\n                .baseUrl(properties.getBaseUrl()).requestFactory",
+          "lineNumber": 45
+        },
+        {
+          "caller": "buildClient",
+          "callee": "RestClient.builder().baseUrl",
+          "lineNumber": 45
+        },
+        {
+          "caller": "buildClient",
+          "callee": "RestClient.builder",
+          "lineNumber": 45
+        },
+        {
+          "caller": "buildClient",
+          "callee": "properties.getBaseUrl",
+          "lineNumber": 46
+        },
+        {
+          "caller": "buildClient",
+          "callee": "properties.getApiKey",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 69,
+      "functions": [
+        {
+          "name": "getBaseUrl",
+          "startLine": 43,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "setBaseUrl",
+          "startLine": 47,
+          "endLine": 49,
+          "params": [
+            "baseUrl"
+          ]
+        },
+        {
+          "name": "getApiKey",
+          "startLine": 51,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "setApiKey",
+          "startLine": 55,
+          "endLine": 57,
+          "params": [
+            "apiKey"
+          ]
+        },
+        {
+          "name": "getConnectTimeout",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "setConnectTimeout",
+          "startLine": 63,
+          "endLine": 65,
+          "params": [
+            "connectTimeout"
+          ]
+        },
+        {
+          "name": "getReadTimeout",
+          "startLine": 67,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "setReadTimeout",
+          "startLine": 71,
+          "endLine": 73,
+          "params": [
+            "readTimeout"
+          ]
+        },
+        {
+          "name": "getScrapeTimeout",
+          "startLine": 75,
+          "endLine": 77,
+          "params": []
+        },
+        {
+          "name": "setScrapeTimeout",
+          "startLine": 79,
+          "endLine": 81,
+          "params": [
+            "scrapeTimeout"
+          ]
+        },
+        {
+          "name": "getHealthTimeout",
+          "startLine": 83,
+          "endLine": 85,
+          "params": []
+        },
+        {
+          "name": "setHealthTimeout",
+          "startLine": 87,
+          "endLine": 89,
+          "params": [
+            "healthTimeout"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiServiceProperties",
+          "startLine": 13,
+          "endLine": 90,
+          "methods": [
+            "getBaseUrl",
+            "setBaseUrl",
+            "getApiKey",
+            "setApiKey",
+            "getConnectTimeout",
+            "setConnectTimeout",
+            "getReadTimeout",
+            "setReadTimeout",
+            "getScrapeTimeout",
+            "setScrapeTimeout",
+            "getHealthTimeout",
+            "setHealthTimeout"
+          ],
+          "properties": [
+            "baseUrl",
+            "apiKey",
+            "connectTimeout",
+            "readTimeout",
+            "scrapeTimeout",
+            "healthTimeout"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getBaseUrl",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "setBaseUrl",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "getApiKey",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "setApiKey",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "getConnectTimeout",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "setConnectTimeout",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "getReadTimeout",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "setReadTimeout",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getScrapeTimeout",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "setScrapeTimeout",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "getHealthTimeout",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "setHealthTimeout",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "AiServiceProperties",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "chatClient",
+          "startLine": 15,
+          "endLine": 18,
+          "params": [
+            "builder"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ChatClientConfig",
+          "startLine": 12,
+          "endLine": 19,
+          "methods": [
+            "chatClient"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "chatClient",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "ChatClientConfig",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "chatClient",
+          "callee": "builder.build",
+          "lineNumber": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "corsConfigurationSource",
+          "startLine": 14,
+          "endLine": 33,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CorsConfig",
+          "startLine": 11,
+          "endLine": 34,
+          "methods": [
+            "corsConfigurationSource"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "corsConfigurationSource",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "CorsConfig",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "new CorsConfiguration",
+          "lineNumber": 17
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "configuration.setAllowedOrigins",
+          "lineNumber": 19
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "List.of",
+          "lineNumber": 19
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "configuration.setAllowedMethods",
+          "lineNumber": 23
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "List.of",
+          "lineNumber": 23
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "configuration.setAllowedHeaders",
+          "lineNumber": 26
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "List.of",
+          "lineNumber": 26
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "configuration.setAllowCredentials",
+          "lineNumber": 27
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "new UrlBasedCorsConfigurationSource",
+          "lineNumber": 28
+        },
+        {
+          "caller": "corsConfigurationSource",
+          "callee": "source.registerCorsConfiguration",
+          "lineNumber": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "externalApiRestTemplate",
+          "startLine": 22,
+          "endLine": 29,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HttpClientConfig",
+          "startLine": 19,
+          "endLine": 30,
+          "methods": [
+            "externalApiRestTemplate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "externalApiRestTemplate",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "HttpClientConfig",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "externalApiRestTemplate",
+          "callee": "ClientHttpRequestFactorySettings.defaults()\n                .withConnectTimeout(Duration.ofSeconds(5)).withReadTimeout",
+          "lineNumber": 24
+        },
+        {
+          "caller": "externalApiRestTemplate",
+          "callee": "ClientHttpRequestFactorySettings.defaults().withConnectTimeout",
+          "lineNumber": 24
+        },
+        {
+          "caller": "externalApiRestTemplate",
+          "callee": "ClientHttpRequestFactorySettings.defaults",
+          "lineNumber": 24
+        },
+        {
+          "caller": "externalApiRestTemplate",
+          "callee": "Duration.ofSeconds",
+          "lineNumber": 25
+        },
+        {
+          "caller": "externalApiRestTemplate",
+          "callee": "Duration.ofSeconds",
+          "lineNumber": 26
+        },
+        {
+          "caller": "externalApiRestTemplate",
+          "callee": "ClientHttpRequestFactoryBuilder.detect().build",
+          "lineNumber": 27
+        },
+        {
+          "caller": "externalApiRestTemplate",
+          "callee": "ClientHttpRequestFactoryBuilder.detect",
+          "lineNumber": 27
+        },
+        {
+          "caller": "externalApiRestTemplate",
+          "callee": "new RestTemplate",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 30,
+      "classes": [
+        {
+          "name": "SeedAccountsProperties",
+          "startLine": 14,
+          "endLine": 34,
+          "methods": [],
+          "properties": [
+            "admin",
+            "counselor",
+            "student",
+            "mentor"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SeedAccountsProperties",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "isUsable",
+          "callee": "username.isBlank",
+          "lineNumber": 30
+        },
+        {
+          "caller": "isUsable",
+          "callee": "password.isBlank",
+          "lineNumber": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 35,
+      "classes": [
+        {
+          "name": "SwaggerConfig",
+          "startLine": 17,
+          "endLine": 37,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SwaggerConfig",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "UpdateUserProgressRequest",
+          "startLine": 12,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "nodeId",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateUserProgressRequest",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "SkillGapResponse",
+          "startLine": 10,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "currentSkills",
+            "missingSkills"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SkillGapResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "StudentRoadmapResourceResponse",
+          "startLine": 8,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "title",
+            "url",
+            "type"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentRoadmapResourceResponse",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+===== p313 =====
+Emerging Technologies/Frameworks… 
+ 
+ 
+312 
+Q. What is the hot trend in Enterprise apps these days?  
+ 
+This section covers some of the recent and popular design paradigms such as Plain Old Java Objects (POJOs) and Plain Old Java 
+Interfaces (POJI) based services and interceptors, Aspect Oriented Programming (AOP), Dependency Injection (aka IoC), attributes or 
+annotations oriented programming,  etc and tools and  frameworks which apply these new paradigms such as Spring (IoC and AOP), 
+Hibernate (O/R mapping), EJB 3.0 (POJO, POJI, and annotations), XDoclet (attributes oriented programming) , JSF (component based 
+Web framework), Tapestry (component based Web framework) etc. All these have emerged over the past 2-4 years.  
+ 
+ 
+Q. Why should you seriously consider these technologies?  
+These new paradigms and frameworks can offer great benefits such as  ease of maintenance, reduction in code size, elimination of 
+duplication of code, ease of unit testing, loose coupling among components, light weight and fine grained objects, and developer 
+productivity.   
+ 
+Q. How would you convince a development team to use these new paradigms/frameworks? 
+Build a vertical slice with some code for a business use case to demonstrate the above mentioned benefits.  
+ 
+ 
+Q 01: What is Test Driven Development (TDD)? FAQ 
+A 01: TDD is an iterative software development process where you first write the test with the idea that it must fail. 
+This is a different approach to the traditional development where you write the application functionality first and 
+then write test cases. The major benefit of this approach is that the code becomes thoroughly unit tested (you can 
+use JUnit or other unit testing frameworks). For JUnit refer Q14 on “How would you go about…” section. TDD is 
+based on two important principles preached by its originator Kent Beck: 
+ 
+ Write new business code only if an automated unit test has failed: Business application requirements 
+drive the tests and tests drive the actual functional code. Each test should test only one business concept, 
+which means avoid writing a single test which tests withdrawing money from an account and depositing money 
+into an account. Any change in the business requirements will impact pre and post conditions of the test. 
+Talking about pre and post conditions, following design by contract methodology (Refer Q11 in Java section) 
+helps achieving TDD. In design by contract, you specify the pre and post conditions that act as contracts of a 
+method, which provides a specification to write your tests against. 
+ 
+ Eliminate duplication from the code: A particular business concept should be implemented only once within 
+the application code. Code for checking an account balance should be centralized to only one place within the 
+application code. This makes your code decoupled, more maintainable and reusable. 
+ 
+I can hear some of you all saying how can we write the unit test code without the actual application code. Let’s 
+look at how it works in steps. The following steps are applied iteratively for business requirements.  
+ 
+STEP: 1 write some tests for a specific business requirement. 
+ 
+STEP: 2 write some basic structural code so that your test compiles but the test should fail (failures are the 
+pillars of success). For example just create the necessary classes and corresponding methods with skeletal code. 
+ 
+STEP: 3 write the required business code to pass the tests which you wrote in step 1. 
+ 
+STEP: 4 finally refactor the code you just wrote to make it is as simple as it can be. You can refactor your code 
+with confidence that if it breaks the business logic then you have unit test cases that can quickly detect it.   
+ 
+STEP: 5 run your tests to make sure that your refactored code still passes the tests. 
+ 
+STEP: 6 Repeat steps 1-5 for another business requirement. 
+ 
+To write tests efficiently some basic guidelines need to be followed: 
+ 
+ 
+You should be able to run each test in isolation and in any order. 
+ 
+The test code should not have any duplicate business logic. 
+ 
+You should test for all the pre and post conditions as well as exceptions. 
+ 
+Each test should concentrate on one business requirement as mentioned earlier. 
+ 
+There are many ways to write test conditions so proper care and attention should be taken. In some cases 
+pair programming can help by allowing two brains to work in collaboration. You should have strategies to 
+overcome issues around state of data in RDBMS (Should you persist sample test data, which is a snapshot 
+of your actual data prior to running your tests? Or should you hard code data? Or Should you combine both 
+strategies? Etc).  
+
+===== p314 =====
+Emerging Technologies/Frameworks… 
+ 
+ 
+313
+ 
+Q 02: What is the point of Test Driven Development (TDD)? What do you think of TDD?  
+A 02: TDD process improves your confidence in the delivered code for the following reasons.   
+ 
+ 
+TDD can eliminate duplication of code and also disciplines the developer to focus his mind on delivering 
+what is absolutely necessary. This means the system you develop only does what it is supposed to do 
+because you first write test cases for the business requirements and then write the required functionality to 
+satisfy the test cases and no more.  
+ 
+ 
+These unit tests can be repeatedly run to alert the development team immediately if someone breaks any 
+existing functionality. All the unit tests can be run overnight as part of the deployment process and test 
+results can be emailed to the development team. 
+ 
+ 
+TDD ensures that code becomes thoroughly unit tested. It is not possible to write thorough unit tests if you 
+leave it to the end due to deadline pressures, lack of motivation etc. 
+ 
+ 
+TDD complements design by contract methodology and gets the developer thinking in terms of pre and 
+post conditions as well as exceptions. 
+ 
+ 
+When using TDD, tests drive your code and to some extent they assist you in validating your design at an 
+earlier stage. 
+ 
+ 
+TDD also helps you refactor your code with confidence that if it breaks the business logic it gets picked up 
+when you run your unit tests next time. 
+ 
+ 
+TDD promotes design to interface not implementation design concept. For example: when your code 
+has to take input from an external source or device which is not present at the time of writing your unit 
+tests,  you need to create an interface, which takes input from another source in order for your tests to 
+work. 
+ 
+ 
+Q. What in your own view is the worst part of Java development ? How would you go about fixing it? [Hint] 
+ 
+• 
+Excessive use of checked exceptions and try {} catch {} and finally {} blocks. How to fix: Make use of frameworks like Spring, which 
+makes use of unchecked exceptions and  templates (e.g. JdbcTemplate, JndiTemplate, JmsTemplate) etc to solve the above issue 
+in a non-intrusive and consistent manner.  
+ 
+• 
+Repetition of code for example singleton factories, Data Transfer Objects (DTOs), resource management code like opening and 
+closing resources etc. How to fix: Make use of Hibernate detached objects to avoid or minimize DTOs,  Spring DAO support and 
+templates to minimize resource management code, Spring dependency injection to avoid or minimize the number of singleton 
+factories and use Aspect Oriented Programming (AOP – e.g. Spring AOP) to implement secondary requirements like auditing, 
+logging, transaction management, security etc to improve productivity. 
+ 
+• 
+Too many XML based configuration files. How to fix: Use Java annotations (i.e. From JDK 1.5 onwards) where applicable to have a 
+right balance between XML configuration files and annotations. 
+ 
+Let us look at some of these in a bit more detail in this section.  
+ 
+ 
+Q 03: What is aspect oriented programming (AOP)? Do you have any experience with AOP?  
+A 03: Aspect-Oriented Programming (AOP) complements OOP (Object Oriented Programming) by allowing the 
+developer to dynamically modify the static OO model to create a system that can grow to meet new requirements.  
+ 
+AOP allows you to dynamically modify your static model consisting mainly of business logic to include the code 
+required to fulfill the secondary requirements or in AOP terminology called cross-cutting concerns (i.e. 
+secondary requirements) like auditing, logging, security, exception handling etc without having to modify the 
+original static model (in fact, we don't even need to have the original code). Better still, we can often keep this 
+additional code in a single location rather than having to scatter it across the existing model, as we would have to 
+if we were using OOP on its own. 
+ 
+For example; A typical Web application will require a servlet to bind the HTTP request to an object and then pass 
+it to the business handler object to be processed and finally return the response back to the user. So only a 
+minimum amount of code is initially required. But once you start adding all the other additional secondary 
+requirements or cross-cutting concerns like logging, auditing, security, exception-handling, transaction 
+demarcation, etc the code will inflate to 2-4 times its original size. This is where AOP can assist by separately 
+modularizing these cross-cutting concerns and integrating theses concerns at runtime or compile time through 
+
+===== p315 =====
+Emerging Technologies/Frameworks… 
+ 
+ 
+314 
+aspect weaving. AOP allows rapid development of an evolutionary prototype using OOP by focusing only on the 
+business logic by omitting concerns such as security, auditing, logging etc. Once the prototype is accepted, 
+additional concerns like security, logging, auditing etc can be weaved into the prototype code to transfer it into a 
+production standard application. 
+ 
+AOP nomenclature is different from OOP and can be described as shown below: 
+ 
+Join points: represents the point at which a cross-cutting concern like logging, auditing etc intersects with a main 
+concern like the core business logic. Join points are locations in programs’ execution path like method & 
+constructor call, method & constructor execution, field access, class & object initialization, exception handling 
+execution etc.   
+ 
+pointcut: is a language construct that identifies specific join points within the program. A pointcut defines a 
+collection of join points and also provides a context for the join point. 
+ 
+Advice: is an implementation of a cross-cutting concern which is a piece of code that is executed upon reaching a 
+pointcut within a program.  
+ 
+Aspect: encapsulates join points, pointcuts and advice into a reusable module for the cross-cutting concerns 
+which is equivalent to Java classes for the core concerns in OOP. Classes and aspects are independent of one 
+another. Classes are unaware of the presence of aspects, which is an important AOP concept. Only pointcut 
+declaration binds classes and aspects.  
+ 
+Weaving is the process for interleaving separate cross-cutting concerns such as logging into core concerns such 
+as business logic code to complete the system. AOP weaving composes different implementations of aspects into 
+a cohesive system based on weaving rules. The weaving process (aka injection of aspects into Java classes) can 
+happen at:  
+ 
+ 
+Compile-time: Weaving occurs during compilation process. 
+ 
+Load-time: Weaving occurs at the byte-code level at class loading time. 
+ 
+Runtime:  Similar to load-time where weaving occurs at byte-code level during runtime as join points are 
+reached in the executing application. 
+ 
+So which approach to use?  Load-time and runtime weaving have the advantages of being highly dynamic and 
+enabling changes on the fly without having to rebuild and redeploy. But Load-time and runtime weaving adversely 
+affect system performance. Compile time weaving offers better performance but requires rebuilding and 
+redeployment to effect changes. 
+ 
+Q. Do you have any experience with AOP?  
+ 
+Two of the most interesting modules of the Spring framework are AOP (Aspect Oriented Programming) and 
+Inversion Of Control (IoC) container (aka Dependency Injection). Let us look at a simple AOP example. 
+ 
+STEP 1: Define the interface and the implementation classes. Spring promotes the code to interface design 
+concept.  
+ 
+public interface Hello { 
+     public void hello(); 
+} 
+ 
+public class HelloImpl implements Hello{ 
+      public void hello() { 
+          System.out.println("Printing hello. "); 
+      } 
+} 
+ 
+STEP 2: Configure the Spring runtime via the SpringConfig.xml file. Beans can be configured and subsequently 
+injected into the calling Test class.  
+ 
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-
+beans.dtd"> 
+ 
+<beans>  
+    <!-- bean configuration which enables dependency injection --> 
+    <bean id="helloBean" class="org.springframework.aop.framework.ProxyFactoryBean"> 
+         <property name="target"> 

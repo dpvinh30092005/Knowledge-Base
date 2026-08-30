@@ -1,0 +1,311 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/components/RoadmapSelectionResolverTest.java",
+      "type": "file",
+      "name": "RoadmapSelectionResolverTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/components/RoadmapSelectionResolverTest.java",
+      "summary": "Unit tests for RoadmapSelectionResolver covering greying out and exclusion behavior for decided and undecided choose-one node groups.",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/StudentControllerValidationTest.java",
+      "type": "file",
+      "name": "StudentControllerValidationTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/StudentControllerValidationTest.java",
+      "summary": "Unit tests validating request rejection rules (missing, empty, null skill IDs) for student skill-related controller endpoints.",
+      "tags": [
+        "test",
+        "unit-test",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/mappers/SkillMapperTest.java",
+      "type": "file",
+      "name": "SkillMapperTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/mappers/SkillMapperTest.java",
+      "summary": "Unit test verifying that SkillMapper correctly maps a StudentSkill entity to a stable SkillDto/SkillResponse representation.",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "type": "file",
+      "name": "RoadmapSelectionServiceTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "summary": "Unit tests for RoadmapSelectionServiceImpl covering selection creation, re-picking, and rejection of invalid group/career/node combinations.",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "type": "file",
+      "name": "SkillServiceTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "summary": "Unit tests for SkillServiceImpl covering skill import (unique/existing/missing), skill retrieval, and skill search behaviors.",
+      "tags": [
+        "test",
+        "unit-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/utils/FileValidationUtilTest.java",
+      "type": "file",
+      "name": "FileValidationUtilTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/utils/FileValidationUtilTest.java",
+      "summary": "Unit tests for FileValidationUtil covering accepted/rejected file types, sizes, content-type spoofing, and blank content-type tolerance for image, PDF, and generic attachment validation.",
+      "tags": [
+        "test",
+        "unit-test",
+        "validation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/components/RoadmapSelectionResolverTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/components/RoadmapSelectionResolverTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentNodeSelectionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/StudentControllerValidationTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/StudentControllerValidationTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/mappers/SkillMapperTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/mappers/SkillMapperTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/mappers/SkillMapperTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/mappers/SkillMapperTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SelectAlternativeRequest.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/NodeSelectionResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentNodeSelectionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapSelectionServiceImpl.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportSkillsRequest.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/utils/FileValidationUtilTest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

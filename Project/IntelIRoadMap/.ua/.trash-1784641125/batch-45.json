@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/demo/oauth-login.html",
+      "type": "file",
+      "name": "oauth-login.html",
+      "filePath": "FrontEnd/demo/oauth-login.html",
+      "summary": "Minimal standalone HTML demo page for exercising the OAuth login flow outside the main frontend app.",
+      "tags": ["demo", "oauth", "html", "markup"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/AGENTS.md",
+      "summary": "Very short project-rules pointer file for AI coding agents working in the frontend repo.",
+      "tags": ["documentation", "agent-rules", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/brandkit/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (brandkit)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/brandkit/SKILL.md",
+      "summary": "Detailed AI agent skill guide for brand-kit image generation, covering logo concepts, panel-board composition systems, visual modes, and color/text/mockup discipline for consistent brand asset generation.",
+      "tags": ["documentation", "agent-skill", "design-system", "branding"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend-v1/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (design-taste-frontend-v1)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend-v1/SKILL.md",
+      "summary": "Legacy version of the high-agency frontend design skill, defining baseline architecture conventions, anti-slop directives, and design variance/motion/density dial definitions for AI-generated UI.",
+      "tags": ["documentation", "agent-skill", "design-system", "frontend"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (design-taste-frontend)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend/SKILL.md",
+      "summary": "Extensive anti-slop frontend design skill covering brief inference, design system selection, engineering directives, animation skeletons, accessibility guardrails, dark mode protocol, and a redesign protocol with appendices of canonical design-system sources.",
+      "tags": ["documentation", "agent-skill", "design-system", "frontend"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/LICENSE.txt",
+      "type": "document",
+      "name": "LICENSE.txt",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/LICENSE.txt",
+      "summary": "License text bundled with the frontend-design-anthropic AI skill package.",
+      "tags": ["license", "documentation", "third-party"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (frontend-design-anthropic)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/SKILL.md",
+      "summary": "Compact Anthropic-authored frontend design skill outlining grounding principles, design principles, an iterative brainstorm-build-critique process, and restraint guidance.",
+      "tags": ["documentation", "agent-skill", "design-system", "frontend"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/full-output-enforcement/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (full-output-enforcement)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/full-output-enforcement/SKILL.md",
+      "summary": "AI agent skill that bans truncated/lazy code output and defines an execution process and quick-check for ensuring complete file output.",
+      "tags": ["documentation", "agent-skill", "code-quality"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/gpt-taste/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (gpt-taste)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/gpt-taste/SKILL.md",
+      "summary": "AI design skill directive for Awwwards-level design engineering covering randomization, AIDA structure, hero architecture, bento grids, and GSAP motion physics.",
+      "tags": ["documentation", "agent-skill", "design-system", "frontend"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (hallmark)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/SKILL.md",
+      "summary": "Core Hallmark design skill defining the full design flow (pre-flight scan, macrostructure selection, theme routing, visual ruleset loading, preview, build, slop test) plus the audit/redesign/study verb pipeline and component-scope handling.",
+      "tags": ["documentation", "agent-skill", "design-system", "workflow"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/21-component-playground.md",
+      "type": "document",
+      "name": "21-component-playground.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/21-component-playground.md",
+      "summary": "Reference macrostructure definition describing the 'Component Playground' layout pattern for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/audit.md",
+      "type": "document",
+      "name": "audit.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/audit.md",
+      "summary": "Reference definition of the `hallmark audit` verb used by the Hallmark design skill pipeline.",
+      "tags": ["documentation", "design-reference", "audit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/redesign.md",
+      "type": "document",
+      "name": "redesign.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/redesign.md",
+      "summary": "Reference protocol for the `hallmark redesign` verb, detailing non-destructive redesign rules, scope detection, design.md generation for multi-page flows, and per-page redesign steps.",
+      "tags": ["documentation", "design-reference", "redesign", "workflow"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/high-end-visual-design/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (high-end-visual-design)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/high-end-visual-design/SKILL.md",
+      "summary": "AI skill persona as an Awwwards-tier UI/UX architect and motion choreographer, defining anti-pattern directives, creative variance engine, haptic micro-aesthetics, and motion choreography rules.",
+      "tags": ["documentation", "agent-skill", "design-system", "motion"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/image-to-code/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (image-to-code)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/image-to-code/SKILL.md",
+      "summary": "Very large image-first website design-to-code skill defining strict rules for image generation, cropping, hero minimalism, responsiveness, text/color/spacing extraction, and anti-AI-slop discipline across 38 numbered rules.",
+      "tags": ["documentation", "agent-skill", "design-system", "image-generation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-mobile/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (imagegen-frontend-mobile)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-mobile/SKILL.md",
+      "summary": "Extensive mobile app image-direction skill covering platform-mode rules (iOS/Android/cross-platform), screen generation rules, device mockup frames, navigation, and category-specific bias for fintech, health, productivity and other app types.",
+      "tags": ["documentation", "agent-skill", "design-system", "mobile"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-web/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (imagegen-frontend-web)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-web/SKILL.md",
+      "summary": "Large web image-art-direction skill defining hero composition bias, combinatorial variation engine, image count/page slicing rules, anti-AI-slop rules, and default site section packs for AI-generated marketing pages.",
+      "tags": ["documentation", "agent-skill", "design-system", "image-generation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/industrial-brutalist-ui/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (industrial-brutalist-ui)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/industrial-brutalist-ui/SKILL.md",
+      "summary": "AI design skill for an industrial-brutalist / tactical-telemetry UI aesthetic, defining visual archetypes, typographic architecture, color systems, and post-processing texture effects.",
+      "tags": ["documentation", "agent-skill", "design-system", "visual-style"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/minimalist-ui/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (minimalist-ui)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/minimalist-ui/SKILL.md",
+      "summary": "AI design skill protocol for premium utilitarian minimalism, defining banned elements, typographic architecture, warm monochrome palette, and subtle micro-animation guidance.",
+      "tags": ["documentation", "agent-skill", "design-system", "visual-style"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/redesign-existing-projects/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (redesign-existing-projects)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/redesign-existing-projects/SKILL.md",
+      "summary": "AI skill for auditing and redesigning existing frontend projects, covering typography/color/layout/interactivity audits, upgrade techniques, and a prioritized fix list.",
+      "tags": ["documentation", "agent-skill", "redesign", "audit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/DESIGN.md",
+      "type": "document",
+      "name": "DESIGN.md (stitch-design-taste)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/DESIGN.md",
+      "summary": "Example/template output of a project design system document (Taste Standard) covering theme configuration, color palette, typography rules, component stylings, and anti-pattern bans.",
+      "tags": ["documentation", "design-system", "template"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md (stitch-design-taste)",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/SKILL.md",
+      "summary": "AI skill for extracting and synthesizing a semantic design system from source material, defining analysis instructions for atmosphere, palette, typography, layout, and motion, and the DESIGN.md output format.",
+      "tags": ["documentation", "agent-skill", "design-system", "extraction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/eslint.config.js",
+      "type": "file",
+      "name": "eslint.config.js",
+      "filePath": "FrontEnd/intelipath-frontend/eslint.config.js",
+      "summary": "ESLint flat-config file defining linting rules and plugin configuration for the intelipath-frontend project.",
+      "tags": ["configuration", "linting", "code-quality", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/portfolio-html/css/style.css",
+      "type": "file",
+      "name": "style.css",
+      "filePath": "FrontEnd/intelipath-frontend/portfolio-html/css/style.css",
+      "summary": "Main stylesheet for the static portfolio-html demo, defining layout, typography, and component styling for the portfolio page.",
+      "tags": ["stylesheet", "css", "markup", "portfolio"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/portfolio-html/css/utilities.css",
+      "type": "file",
+      "name": "utilities.css",
+      "filePath": "FrontEnd/intelipath-frontend/portfolio-html/css/utilities.css",
+      "summary": "Utility-class stylesheet providing reusable spacing, layout, and helper classes for the portfolio-html demo.",
+      "tags": ["stylesheet", "css", "utility", "markup"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/21-component-playground.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/audit.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/redesign.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/DESIGN.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend-v1/SKILL.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-web/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/image-to-code/SKILL.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-mobile/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-web/SKILL.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/redesign-existing-projects/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/redesign.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/SKILL.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/LICENSE.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/portfolio-html/css/style.css",
+      "target": "file:FrontEnd/intelipath-frontend/portfolio-html/css/utilities.css",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

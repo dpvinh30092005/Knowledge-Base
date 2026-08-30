@@ -1,0 +1,17 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 4,
+  "edgesRestored": 21,
+  "crossBatchEdgesAdded": 9,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "The merge script report did not include explicit 'Fixed' pattern counts (only the tested-by linker summary and the 21 could-not-fix issues), so no ratio-based flag was possible; input/output node counts (1720 -> 1724) look sane.",
+    "app/config/config.py in intelipath-service was extracted with type 'config' (id config:BackEnd/intelipath-service/app/config/config.py) rather than 'file', so the merge script's dangling-edge check (which only compares against file: ids) incorrectly dropped 9 'imports' edges. Repointed all 9 edges to the config: node and restored them; this is a real gap in the merge script's node-type awareness worth fixing upstream.",
+    "context/index.ts is a barrel/re-export file with no useAuth node of its own; the actual hook lives at function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:useAuth. Repointed 6 dangling 'calls' edges (GuestRoute, ProtectedRoute, Header, NotificationBell, AvatarUpload, CounselorDashboardTemplate) to the AuthContext.tsx node.",
+    "AuthenticationCookieService.java genuinely defines addRefreshTokenCookie and clearRefreshTokenCookie (verified in source at lines 43 and 47), but no batch ever extracted them as function nodes (only addCookie was captured). Created both function nodes with default summary/tags/complexity and restored the 3 dropped 'calls' edges from AuthController (login, refreshAccount, logout).",
+    "RoadmapPersonalizationServiceImpl and the entity class StudentSkillEvidence were never emitted as class: nodes by their batches (batch-20 and batch-16 respectively only produced file/function nodes, no class node), even though other classes in the same files pattern normally get one. Recreated both class nodes with default summary/tags and restored the 3 associated edges (StudentCurriculumServiceImpl -> StudentSkillEvidence calls; RoadmapRecommendationController -> RoadmapPersonalizationServiceImpl calls; RoadmapPersonalizationServiceImpl -> RoadmapPersonalizationService implements).",
+    "Did not attempt Step 3 cross-batch import-map edge verification against scan-result.json importMap beyond the config.py case above; the merge script's own 'Imports edge recovery' pass already scanned 783 importMap entries and recovered 0 new edges (9 entries skipped for having no file: node, all traced to the config.py type mismatch above), so no further additions were made.",
+    "All 21 'Could not fix' issues from the report were resolved: 9 python import edges repointed, 6 useAuth edges repointed, 3 Java calls edges restored via 2 newly created function nodes, 3 Java edges restored via 2 newly created class nodes."
+  ]
+}

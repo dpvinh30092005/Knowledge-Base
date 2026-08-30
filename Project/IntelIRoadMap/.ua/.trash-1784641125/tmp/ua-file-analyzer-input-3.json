@@ -1,0 +1,381 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java",
+      "language": "java",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java",
+      "language": "java",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java",
+      "language": "java",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtService.java",
+      "language": "java",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationFailureHandler.java",
+      "language": "java",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationSuccessHandler.java",
+      "language": "java",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+      "language": "java",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenHashUtil.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminService.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthService.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/UserService.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminServiceImpl.java",
+      "language": "java",
+      "sizeLines": 301,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthServiceImpl.java",
+      "language": "java",
+      "sizeLines": 328,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthenticatedStudentServiceImpl.java",
+      "language": "java",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/OAuth2UserServiceImpl.java",
+      "language": "java",
+      "sizeLines": 297,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioSlugServiceImpl.java",
+      "language": "java",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/UserServiceImpl.java",
+      "language": "java",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java",
+      "language": "java",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/SlugUtils.java",
+      "language": "java",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/AuthControllerTest.java",
+      "language": "java",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java",
+      "language": "java",
+      "sizeLines": 242,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/impl/VirtualMentorRetrievalFilterTest.java",
+      "language": "java",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtService.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationFailureHandler.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationSuccessHandler.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenHashUtil.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminService.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserRoleRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserStatusRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminSystemHealthResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthService.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/UserService.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupUserProfileRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UserRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminServiceImpl.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserRoleRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserStatusRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminSystemHealthResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthServiceImpl.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenHashUtil.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/EmailService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthenticatedStudentServiceImpl.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/OAuth2UserServiceImpl.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/OAuth2UserInfoInternal.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GitHubOauth2UserInfo.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GoogleOAuth2UserInfo.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioSlugServiceImpl.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/SlugUtils.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/UserServiceImpl.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupUserProfileRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UserRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/UserService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/SlugUtils.java": [],
+    "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/AuthControllerTest.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthService.java"
+    ],
+    "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenHashUtil.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthServiceImpl.java"
+    ],
+    "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/impl/VirtualMentorRetrievalFilterTest.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ]
+  }
+}

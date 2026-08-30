@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "service:BackEnd/intelipath-service/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "BackEnd/intelipath-service/Dockerfile",
+      "summary": "Single-stage Docker build for the intelipath-service Python component, installing dependencies from requirements.txt and launching the FastAPI app via uvicorn on port 8000.",
+      "tags": ["containerization", "infrastructure", "python", "deployment"],
+      "complexity": "simple",
+      "languageNotes": "Uses python:3.11-slim base image, installs curl for health checks, and runs the app.main:app ASGI entry point with uvicorn."
+    },
+    {
+      "id": "config:BackEnd/intelipath-service/.dockerignore",
+      "type": "config",
+      "name": ".dockerignore",
+      "filePath": "BackEnd/intelipath-service/.dockerignore",
+      "summary": "Excludes virtual environments, bytecode caches, environment files, and IDE/agent directories from the Docker build context for intelipath-service.",
+      "tags": ["configuration", "infrastructure", "build-system"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:BackEnd/intelipath-service/Dockerfile",
+      "target": "config:BackEnd/intelipath-service/.dockerignore",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

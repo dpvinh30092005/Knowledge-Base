@@ -1,0 +1,286 @@
+{
+ "projectRoot": "D:/Project/IntelIRoadMap/BackEnd",
+ "batchFiles": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+   "language": "java",
+   "sizeLines": 165,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+   "language": "java",
+   "sizeLines": 21,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java",
+   "language": "java",
+   "sizeLines": 18,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java",
+   "language": "java",
+   "sizeLines": 16,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java",
+   "language": "java",
+   "sizeLines": 21,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java",
+   "language": "java",
+   "sizeLines": 20,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+   "language": "java",
+   "sizeLines": 55,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+   "language": "java",
+   "sizeLines": 52,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+   "language": "java",
+   "sizeLines": 96,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+   "language": "java",
+   "sizeLines": 6,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+   "language": "java",
+   "sizeLines": 6,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java",
+   "language": "java",
+   "sizeLines": 7,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+   "language": "java",
+   "sizeLines": 13,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+   "language": "java",
+   "sizeLines": 17,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+   "language": "java",
+   "sizeLines": 13,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java",
+   "language": "java",
+   "sizeLines": 18,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+   "language": "java",
+   "sizeLines": 17,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java",
+   "language": "java",
+   "sizeLines": 15,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+   "language": "java",
+   "sizeLines": 18,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java",
+   "language": "java",
+   "sizeLines": 14,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+   "language": "java",
+   "sizeLines": 38,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+   "language": "java",
+   "sizeLines": 24,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/DocumentIngestionServiceImpl.java",
+   "language": "java",
+   "sizeLines": 106,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PdfToMarkdownServiceImpl.java",
+   "language": "java",
+   "sizeLines": 267,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java",
+   "language": "java",
+   "sizeLines": 99,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagVectorStoreServiceImpl.java",
+   "language": "java",
+   "sizeLines": 50,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SupabaseStorageServiceImpl.java",
+   "language": "java",
+   "sizeLines": 240,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+   "language": "java",
+   "sizeLines": 370,
+   "fileCategory": "code"
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java",
+   "language": "java",
+   "sizeLines": 92,
+   "fileCategory": "code"
+  }
+ ],
+ "batchImportData": {
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java": [],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/DocumentIngestionServiceImpl.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PdfToMarkdownServiceImpl.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagVectorStoreServiceImpl.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SupabaseStorageServiceImpl.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java"
+  ],
+  "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java": [
+   "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java"
+  ]
+ }
+}

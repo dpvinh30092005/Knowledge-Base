@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* Bind `dark:` to an explicit opt-in instead of the visitor's operating system.
+ *
+ * Tailwind v4 resolves `dark:` through `@media (prefers-color-scheme: dark)` by
+ * default. This app has no dark theme — every screen is styled light — yet a few
+ * components carry `dark:` classes. On the default binding those classes were not
+ * waiting for a theme that might arrive one day; they applied immediately to
+ * anyone whose machine was set to dark, painting near-white text and slate-950
+ * chart tooltips onto pages that stay white. The evidence nudge's heading was
+ * effectively invisible, and the chart tooltip a black box on a light dashboard.
+ *
+ * `data-theme` is the attribute this codebase already uses for theming (the
+ * portfolio editor writes it), so `dark:` now means what everyone writing it
+ * assumed: dormant unless something deliberately turns it on. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ===================== */
+/* BRAND DESIGN TOKENS   */
+/* ===================== */
+@theme {
+  --color-brand-dark: #0f172a;
+  --color-brand-deep: #020617;
+  --color-brand-blue: #3b82f6;
+  --color-brand-electric: #2563eb;
+  --color-brand-indigo: #4f46e5;
+  --color-brand-cyan: #06b6d4;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-manrope: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Taste Skill Shadows */
+  --shadow-taste-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.03);
+  --shadow-taste-2: 0px 3px 10px -2px rgba(0, 0, 0, 0.06);
+  --shadow-taste-3: 0px 6px 18px -6px rgba(15, 15, 15, 0.18), 0px 1px 2px 0px rgba(0, 0, 0, 0.04);
+  --shadow-taste-4: 0px 0px 0px 1px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.08);
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-12deg);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ===================== */
+/* GLOBAL RESET          */
+/* ===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg, #f7fbff00);
+  color: var(--color-text-dark, #1a1f36);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes ai-mentor-wiggle {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(3deg);
+  }
+}
+
+.ai-mentor-float {
+  animation: ai-mentor-wiggle 2.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* ===================== */
+/* GLASS UTILITIES       */
+/* ===================== */
+.glass-card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card-bright {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 12px 40px 0 rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #0f172a !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-input::placeholder {
+  color: rgba(71, 85, 105, 0.6);
+}
+
+.glass-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+.glass-input:-webkit-autofill,
+.glass-input:-webkit-autofill:hover,
+.glass-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #0f172a;
+  caret-color: #0f172a;
+  box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.9) inset;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 9999s ease-out;
+}
+
+/* Auth separator background matches page bg */
+.auth-separator-bg {
+  background-color: transparent;
+}
+
+/* ===================== */
+/* SCROLLBAR             */
+/* ===================== */
+/* One scrollbar for the whole app. The rail stays transparent because the surfaces it
+   sits on are translucent — an opaque track would cut a visible stripe through them.
+   Firefox only: `scrollbar-width`/`scrollbar-color` are the standard properties, but in
+   Chrome setting either one makes it discard every ::-webkit-scrollbar rule below and
+   fall back to the OS bar — square ends and all. Firefox doesn't parse the webkit
+   selector, so @supports splits the two engines cleanly and neither cancels the other. */
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(203 213 225) transparent;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(203 213 225); /* slate-300 */
+  border-radius: 999px;
+  /* The transparent border is inset by the content-box clip, which is what keeps the
+     thumb a floating pill: 4px of visible bar, round at both ends, never touching the
+     panel edge. Padding does not apply to a scrollbar thumb, so this is the way. */
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(148 163 184); /* slate-400 */
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ===================== */
+/* LEGACY BOOTSTRAP      */
+/* OVERRIDES (kept for   */
+/* non-auth pages)       */
+/* ===================== */
+.text-primary-custom {
+  color: var(--color-primary, #0f6ea8) !important;
+}
+
+.btn-primary-custom {
+  background-color: var(--color-primary, #0f6ea8) !important;
+  border-color: var(--color-primary, #0f6ea8) !important;
+  color: white !important;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-lg, 0.75rem);
+  transition: all var(--transition-normal, 300ms ease);
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--color-primary-dark, #0a5a8a) !important;
+  border-color: var(--color-primary-dark, #0a5a8a) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 110, 168, 0.3);
+}
+
+.btn-primary-custom:active {
+  transform: translateY(0);
+}
+
+.btn-outline-custom {
+  background-color: transparent;
+  border: 1px solid var(--color-border, #e5e7eb00);
+  color: var(--color-text-dark, #1a1f36);
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-lg, 0.75rem);
+  transition: all var(--transition-normal, 300ms ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-outline-custom:hover {
+  background-color: var(--color-border-light, #f3f4f600);
+  border-color: var(--color-border, #e5e7eb);
+}
+
+.form-control-custom {
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: var(--radius-lg, 0.75rem);
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  transition: all var(--transition-normal, 300ms ease);
+  background-color: var(--color-white, #ffffff);
+}
+
+.form-control-custom:focus {
+  border-color: var(--color-primary, #0f6ea8);
+  box-shadow: 0 0 0 3px rgba(15, 110, 168, 0.15);
+  outline: none;
+}
+
+.form-control-custom::placeholder {
+  color: var(--color-text-light, #9ca3af);
+}
+
+/* ===================== */
+/* ANIMATION UTILITIES   */
+/* ===================== */
+.animate-fade-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.1s;
+}
+.animate-delay-2 {
+  animation-delay: 0.2s;
+}
+.animate-delay-3 {
+  animation-delay: 0.3s;
+}
+
+/* ============================================================ */
+/* ROADMAP — "just marked by the AI"                            */
+/* ============================================================ */
+/* Played once, on the nodes the server marked from the skills a */
+/* student just supplied. Three parts, deliberately separate:    */
+/*   · node-mark-settle  the card itself reacts (lift, then rest)*/
+/*   · node-mark-halo    an emerald ring expands out and fades   */
+/*   · node-mark-stamp   the tick lands, overshooting slightly   */
+/* Each is driven by an inline animation-delay so the marks       */
+/* arrive in sequence rather than all at once: a wave reads as    */
+/* "these were worked out one by one", a flash reads as a redraw. */
+
+@keyframes node-mark-settle {
+  0%   { transform: scale(1);    }
+  35%  { transform: scale(1.055); }
+  70%  { transform: scale(0.988); }
+  100% { transform: scale(1);    }
+}
+
+@keyframes node-mark-halo {
+  0%   { opacity: 0;    transform: scale(0.9); }
+  25%  { opacity: 0.85; }
+  100% { opacity: 0;    transform: scale(1.28); }
+}
+
+@keyframes node-mark-stamp {
+  0%   { opacity: 0; transform: scale(0.2) rotate(-25deg); }
+  55%  { opacity: 1; transform: scale(1.35) rotate(6deg);  }
+  75%  {             transform: scale(0.92) rotate(-2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg);     }
+}
+
+.node-mark-settle { animation: node-mark-settle 620ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.node-mark-halo   { animation: node-mark-halo   900ms ease-out both; }
+.node-mark-stamp  { animation: node-mark-stamp  520ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+
+/* Vestibular safety: the information is the tick, not the motion, so a reduced- */
+/* motion reader still gets the mark — it simply appears instead of arriving.    */
+@media (prefers-reduced-motion: reduce) {
+  .node-mark-settle,
+  .node-mark-halo,
+  .node-mark-stamp {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+  }
+}

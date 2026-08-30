@@ -1,0 +1,177 @@
+{
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminFlmSyncServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "start",
+        "poll",
+        "AdminFlmSyncServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminServiceImpl.java",
+      "batchIndex": 3,
+      "symbols": [
+        "getUserMetrics",
+        "getCourseMetrics",
+        "getSystemHealth",
+        "getUsers",
+        "updateUserRole",
+        "updateUserStatus",
+        "deleteUser",
+        "AdminServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorServiceImpl",
+        "createSession",
+        "getUserSessions",
+        "getSessionMessages",
+        "renameSession",
+        "deleteSession",
+        "streamChat",
+        "VirtualMentorServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/VirtualMentorServiceSecurityContextTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getRoadmapProgress",
+        "getRoadmapProgress",
+        "getSkillGaps",
+        "getSkillGaps",
+        "getMentorFeedback",
+        "markFeedbackRead",
+        "dismissFeedback",
+        "getAiHistory",
+        "getMarketDemand",
+        "getRecommendations",
+        "StudentDashboardServiceImpl"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getRoadmapProgress",
+        "getRoadmapProgress",
+        "getSkillGaps",
+        "getSkillGaps",
+        "getMentorFeedback",
+        "markFeedbackRead",
+        "dismissFeedback",
+        "getAiHistory",
+        "getMarketDemand",
+        "getRecommendations",
+        "StudentDashboardServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "setupStudentProfile",
+        "getStudentProfile",
+        "updateTargetCareer",
+        "compareCurrentStudentSkills",
+        "findMissingRequiredSkills",
+        "calculateSkillProgress",
+        "uploadTranscript",
+        "StudentServiceImpl"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminController.java",
+      "batchIndex": 2,
+      "symbols": [
+        "triggerSkillExtraction",
+        "triggerJobScraper",
+        "getUserMetric",
+        "getCourseMetric",
+        "getSystemHealth",
+        "getUsers",
+        "updateUserRole",
+        "updateUserStatus",
+        "deleteUser",
+        "AdminController"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminController.java",
+      "batchIndex": 2,
+      "symbols": [
+        "triggerSkillExtraction",
+        "triggerJobScraper",
+        "getUserMetric",
+        "getCourseMetric",
+        "getSystemHealth",
+        "getUsers",
+        "updateUserRole",
+        "updateUserStatus",
+        "deleteUser",
+        "AdminController"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "batchIndex": 11,
+      "symbols": [
+        "Skill"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "batchIndex": 13,
+      "symbols": [
+        "SkillRepository"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "batchIndex": 17,
+      "symbols": [
+        "ResourceNotFoundException",
+        "ResourceNotFoundException",
+        "ResourceNotFoundException"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "batchIndex": 11,
+      "symbols": [
+        "Skill"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "batchIndex": 13,
+      "symbols": [
+        "SkillRepository"
+      ]
+    }
+  ]
+}

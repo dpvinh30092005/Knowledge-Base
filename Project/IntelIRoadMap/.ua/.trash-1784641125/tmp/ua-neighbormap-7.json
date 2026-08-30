@@ -1,0 +1,242 @@
+{
+  "FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "batchIndex": 5,
+      "symbols": [
+        "ForgotPasswordForm"
+      ]
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/index.ts",
+      "batchIndex": 5,
+      "symbols": []
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapVectorGraph.tsx": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "batchIndex": 4,
+      "symbols": [
+        "Logo",
+        "Header",
+        "AbstractIllustration",
+        "UserHeaderActions",
+        "DiagonalGridBackground",
+        "SharedAppBackground",
+        "NotificationBell",
+        "GlobalProgressBar",
+        "RouteProgressBar",
+        "ProtectedRoute",
+        "DatePicker",
+        "Spinner",
+        "MobileNavMenu",
+        "MobileNavItem"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorRoadmapEditorView.tsx",
+      "batchIndex": 6,
+      "symbols": []
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentProfileSetupModal.tsx": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/context/index.ts",
+      "batchIndex": 5,
+      "symbols": [
+        "AuthProvider",
+        "useAuth"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentDashboardView.tsx",
+      "batchIndex": 6,
+      "symbols": [
+        "StudentDashboardView"
+      ]
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentRoadmapPageView.tsx": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "batchIndex": 4,
+      "symbols": [
+        "ConfirmModal"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "batchIndex": 4,
+      "symbols": [
+        "Logo",
+        "Header",
+        "AbstractIllustration",
+        "UserHeaderActions",
+        "DiagonalGridBackground",
+        "SharedAppBackground",
+        "NotificationBell",
+        "GlobalProgressBar",
+        "RouteProgressBar",
+        "ProtectedRoute",
+        "DatePicker",
+        "Spinner",
+        "MobileNavMenu",
+        "MobileNavItem"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/context/index.ts",
+      "batchIndex": 5,
+      "symbols": [
+        "AuthProvider",
+        "useAuth"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/FptCurriculumPanel.tsx",
+      "batchIndex": 6,
+      "symbols": []
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapRecommendationsPanel.tsx",
+      "batchIndex": 6,
+      "symbols": []
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentHeader.tsx",
+      "batchIndex": 6,
+      "symbols": [
+        "StudentHeader"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/index.ts",
+      "batchIndex": 6,
+      "symbols": []
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "batchIndex": 8,
+      "symbols": []
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentSkillSelectionModal.tsx": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "batchIndex": 4,
+      "symbols": [
+        "Logo",
+        "Header",
+        "AbstractIllustration",
+        "UserHeaderActions",
+        "DiagonalGridBackground",
+        "SharedAppBackground",
+        "NotificationBell",
+        "GlobalProgressBar",
+        "RouteProgressBar",
+        "ProtectedRoute",
+        "DatePicker",
+        "Spinner",
+        "MobileNavMenu",
+        "MobileNavItem"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentDashboardView.tsx",
+      "batchIndex": 6,
+      "symbols": [
+        "StudentDashboardView"
+      ]
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentDashboardWidgets.tsx",
+      "batchIndex": 6,
+      "symbols": [
+        "StudentWelcomeHeader",
+        "CurrentProgressBanner",
+        "ActionableListWidget",
+        "QuickStatsWidget",
+        "MarketDemandChartWidget",
+        "SkillMatchWidget"
+      ]
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/studentDashboardService.ts": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/index.ts",
+      "batchIndex": 4,
+      "symbols": [
+        "authApi",
+        "adminApi",
+        "counselorApi",
+        "mentorApi",
+        "careerApi",
+        "marketPulseApi",
+        "dashboardApi",
+        "roadmapApi",
+        "userApi",
+        "skillApi",
+        "profileApi"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentPortfolioPage.tsx",
+      "batchIndex": 8,
+      "symbols": [
+        "StudentPortfolioPage"
+      ]
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapRecommendationsPanel.tsx",
+      "batchIndex": 6,
+      "symbols": []
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentDashboardWidgets.tsx",
+      "batchIndex": 6,
+      "symbols": [
+        "StudentWelcomeHeader",
+        "CurrentProgressBanner",
+        "ActionableListWidget",
+        "QuickStatsWidget",
+        "MarketDemandChartWidget",
+        "SkillMatchWidget"
+      ]
+    }
+  ],
+  "FrontEnd/intelipath-frontend/src/lib/utils.ts": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "batchIndex": 4,
+      "symbols": [
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "batchIndex": 5,
+      "symbols": [
+        "useLogin"
+      ]
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/hooks/useStudentOnboarding.ts",
+      "batchIndex": 6,
+      "symbols": [
+        "useStudentOnboarding"
+      ]
+    }
+  ]
+}

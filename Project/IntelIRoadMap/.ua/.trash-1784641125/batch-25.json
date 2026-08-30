@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts",
+      "summary": "Barrel file for the student-dashboard feature module, re-exporting its public components for use by page-level routes.",
+      "tags": ["barrel", "entry-point", "feature-module"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/pages/StudentDashboardPage.tsx",
+      "type": "file",
+      "name": "StudentDashboardPage.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/StudentDashboardPage.tsx",
+      "summary": "Page-level wrapper component that renders the StudentDashboard feature at the dashboard route.",
+      "tags": ["component", "page", "routing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/pages/StudentRoadmapPage.tsx",
+      "type": "file",
+      "name": "StudentRoadmapPage.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/StudentRoadmapPage.tsx",
+      "summary": "Page-level wrapper component that renders the StudentRoadmap feature at the roadmap route.",
+      "tags": ["component", "page", "routing"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/StudentDashboardPage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/StudentRoadmapPage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/analyzer/PortfolioAiAnalyzer.java",
+      "language": "java",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/clients/GithubApiClient.java",
+      "language": "java",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/GithubPortfolioController.java",
+      "language": "java",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PortfolioController.java",
+      "language": "java",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PublicPortfolioController.java",
+      "language": "java",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "language": "java",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateSlugRequest.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "language": "java",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "language": "java",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "language": "java",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java",
+      "language": "java",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/PortfolioMapper.java",
+      "language": "java",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioConfigRepository.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioProjectRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentEducationRepository.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java",
+      "language": "java",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/GithubPortfolioServiceImpl.java",
+      "language": "java",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioServiceImpl.java",
+      "language": "java",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/analyzer/PortfolioAiAnalyzer.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/clients/GithubApiClient.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/GithubPortfolioController.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PortfolioController.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateSlugRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PublicPortfolioController.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateSlugRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/PortfolioMapper.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioConfigRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioProjectRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentEducationRepository.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/GithubPortfolioServiceImpl.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/analyzer/PortfolioAiAnalyzer.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/clients/GithubApiClient.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillEvidenceService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioServiceImpl.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ReviewStatus.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/PortfolioMapper.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioConfigRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioProjectRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioReviewRequestRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentEducationRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java"
+    ]
+  }
+}

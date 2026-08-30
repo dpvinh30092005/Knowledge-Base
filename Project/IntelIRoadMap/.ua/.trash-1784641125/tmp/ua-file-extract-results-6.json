@@ -1,0 +1,6712 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 31,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 31,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 31,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorProgressReportsView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 175,
+      "nonEmptyLines": 164,
+      "functions": [
+        {
+          "name": "MentorProgressReportsView",
+          "startLine": 6,
+          "endLine": 175,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MentorProgressReportsView",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "useState",
+          "lineNumber": 7
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "useState",
+          "lineNumber": 8
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "useRef",
+          "lineNumber": 9
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "useEffect",
+          "lineNumber": 11
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "mentorApi.getProgressReports().then((res: any) => {\r\n      setData(res);\r\n      setIsLoading(false);\r\n    }).catch",
+          "lineNumber": 12
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "mentorApi.getProgressReports().then",
+          "lineNumber": 12
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "mentorApi.getProgressReports",
+          "lineNumber": 12
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "setData",
+          "lineNumber": 13
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "setIsLoading",
+          "lineNumber": 14
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "console.error",
+          "lineNumber": 16
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "setIsLoading",
+          "lineNumber": 17
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "useGSAP",
+          "lineNumber": 21
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "gsap.from",
+          "lineNumber": 23
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "gsap.from",
+          "lineNumber": 31
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "Array.from({length: 4}).map",
+          "lineNumber": 62
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "Array.from",
+          "lineNumber": 62
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "metrics.map",
+          "lineNumber": 77
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "studentsProgress.map",
+          "lineNumber": 97
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "needsAttention.map",
+          "lineNumber": 129
+        },
+        {
+          "caller": "MentorProgressReportsView",
+          "callee": "skillGaps.map",
+          "lineNumber": 155
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorRoadmapEditorView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 488,
+      "nonEmptyLines": 446,
+      "functions": [
+        {
+          "name": "parseResources",
+          "startLine": 55,
+          "endLine": 64,
+          "params": [
+            "resource"
+          ]
+        },
+        {
+          "name": "nodeVisual",
+          "startLine": 66,
+          "endLine": 79,
+          "params": [
+            "node"
+          ]
+        },
+        {
+          "name": "fallbackPosition",
+          "startLine": 82,
+          "endLine": 85,
+          "params": [
+            "index"
+          ]
+        },
+        {
+          "name": "MentorRoadmapEditorView",
+          "startLine": 87,
+          "endLine": 486,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parseResources",
+          "callee": "JSON.parse",
+          "lineNumber": 58
+        },
+        {
+          "caller": "parseResources",
+          "callee": "Array.isArray",
+          "lineNumber": 60
+        },
+        {
+          "caller": "parseResources",
+          "callee": "parsed\n    .map((item: any) => (typeof item === \"string\" ? item : item?.url || item?.link || \"\"))\n    .filter",
+          "lineNumber": 61
+        },
+        {
+          "caller": "parseResources",
+          "callee": "parsed\n    .map",
+          "lineNumber": 61
+        },
+        {
+          "caller": "fallbackPosition",
+          "callee": "Math.floor",
+          "lineNumber": 84
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useNavigate",
+          "lineNumber": 88
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useAuth",
+          "lineNumber": 89
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useState",
+          "lineNumber": 91
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useState",
+          "lineNumber": 92
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useState",
+          "lineNumber": 93
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useNodesState",
+          "lineNumber": 94
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useEdgesState",
+          "lineNumber": 95
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useState",
+          "lineNumber": 96
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useState",
+          "lineNumber": 97
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useState",
+          "lineNumber": 98
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useState",
+          "lineNumber": 99
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useState",
+          "lineNumber": 100
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useMemo",
+          "lineNumber": 102
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "editorNodes.find",
+          "lineNumber": 103
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useCallback",
+          "lineNumber": 107
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "nodes.map",
+          "lineNumber": 117
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "nodes.forEach",
+          "lineNumber": 126
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "rawEdges.push",
+          "lineNumber": 130
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "rawEdges.push",
+          "lineNumber": 136
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "getDynamicLayoutedElements",
+          "lineNumber": 138
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "laid.map",
+          "lineNumber": 139
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "nodes.map",
+          "lineNumber": 141
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "posById.get",
+          "lineNumber": 143
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "fallbackPosition",
+          "lineNumber": 143
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "nodeVisual",
+          "lineNumber": 145
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "nodes.forEach",
+          "lineNumber": 149
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "flowEdges.push",
+          "lineNumber": 151
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "flowEdges.push",
+          "lineNumber": 161
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setRfNodes",
+          "lineNumber": 171
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setRfEdges",
+          "lineNumber": 172
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useCallback",
+          "lineNumber": 175
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setIsLoading",
+          "lineNumber": 177
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setSelectedId",
+          "lineNumber": 178
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "roadmapEditorApi.getCareerNodes",
+          "lineNumber": 180
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setEditorNodes",
+          "lineNumber": 181
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "rebuildGraph",
+          "lineNumber": 182
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "console.error",
+          "lineNumber": 184
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setIsLoading",
+          "lineNumber": 186
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useEffect",
+          "lineNumber": 190
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "careerApi.getCareerRoles()\n      .then(res => {\n        const list = Array.isArray(res.data) ? res.data : res.data?.careers || []\n        setCareers(list)\n        if (list.length > 0) {\n          setCareerId(list[0].careerId)\n        }\n      })\n      .catch",
+          "lineNumber": 191
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "careerApi.getCareerRoles()\n      .then",
+          "lineNumber": 191
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "careerApi.getCareerRoles",
+          "lineNumber": 191
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "Array.isArray",
+          "lineNumber": 193
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setCareers",
+          "lineNumber": 194
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setCareerId",
+          "lineNumber": 196
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "console.error",
+          "lineNumber": 199
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "useEffect",
+          "lineNumber": 202
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "loadNodes",
+          "lineNumber": 202
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "editorNodes.find",
+          "lineNumber": 205
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "setSelectedId",
+          "lineNumber": 207
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "setForm",
+          "lineNumber": 208
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "String",
+          "lineNumber": 213
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "String",
+          "lineNumber": 214
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "parseResources(data.resource).join",
+          "lineNumber": 217
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "parseResources",
+          "lineNumber": 217
+        },
+        {
+          "caller": "startCreate",
+          "callee": "setSelectedId",
+          "lineNumber": 222
+        },
+        {
+          "caller": "startCreate",
+          "callee": "setForm",
+          "lineNumber": 223
+        },
+        {
+          "caller": "buildPayload",
+          "callee": "form.nodeName.trim",
+          "lineNumber": 227
+        },
+        {
+          "caller": "buildPayload",
+          "callee": "form.description.trim",
+          "lineNumber": 228
+        },
+        {
+          "caller": "buildPayload",
+          "callee": "Number",
+          "lineNumber": 231
+        },
+        {
+          "caller": "buildPayload",
+          "callee": "Number",
+          "lineNumber": 232
+        },
+        {
+          "caller": "buildPayload",
+          "callee": "form.resourcesText.split(\"\\n\").map(s => s.trim()).filter",
+          "lineNumber": 235
+        },
+        {
+          "caller": "buildPayload",
+          "callee": "form.resourcesText.split(\"\\n\").map",
+          "lineNumber": 235
+        },
+        {
+          "caller": "buildPayload",
+          "callee": "form.resourcesText.split",
+          "lineNumber": 235
+        },
+        {
+          "caller": "buildPayload",
+          "callee": "s.trim",
+          "lineNumber": 235
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "form.nodeName.trim",
+          "lineNumber": 242
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "toast.error",
+          "lineNumber": 243
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "setIsSaving",
+          "lineNumber": 246
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "roadmapEditorApi.updateNode",
+          "lineNumber": 249
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "buildPayload",
+          "lineNumber": 249
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "toast.success",
+          "lineNumber": 250
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "roadmapEditorApi.createNode",
+          "lineNumber": 253
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "buildPayload",
+          "lineNumber": 253
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "toast.success",
+          "lineNumber": 254
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "loadNodes",
+          "lineNumber": 256
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "console.error",
+          "lineNumber": 258
+        },
+        {
+          "caller": "handleSaveNode",
+          "callee": "setIsSaving",
+          "lineNumber": 260
+        },
+        {
+          "caller": "handleDeleteNode",
+          "callee": "setIsSaving",
+          "lineNumber": 266
+        },
+        {
+          "caller": "handleDeleteNode",
+          "callee": "roadmapEditorApi.deleteNode",
+          "lineNumber": 268
+        },
+        {
+          "caller": "handleDeleteNode",
+          "callee": "toast.success",
+          "lineNumber": 269
+        },
+        {
+          "caller": "handleDeleteNode",
+          "callee": "setConfirmDeleteOpen",
+          "lineNumber": 270
+        },
+        {
+          "caller": "handleDeleteNode",
+          "callee": "loadNodes",
+          "lineNumber": 271
+        },
+        {
+          "caller": "handleDeleteNode",
+          "callee": "console.error",
+          "lineNumber": 273
+        },
+        {
+          "caller": "handleDeleteNode",
+          "callee": "setIsSaving",
+          "lineNumber": 275
+        },
+        {
+          "caller": "handleTabChange",
+          "callee": "navigate",
+          "lineNumber": 280
+        },
+        {
+          "caller": "handleTabChange",
+          "callee": "navigate",
+          "lineNumber": 281
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 285
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 286
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "editorNodes.filter",
+          "lineNumber": 289
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setCareerId",
+          "lineNumber": 311
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "careers.map",
+          "lineNumber": 315
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "loadNodes",
+          "lineNumber": 328
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 380
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 388
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 396
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "STAGES.map",
+          "lineNumber": 397
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 403
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "POLICIES.map",
+          "lineNumber": 404
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 413
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 418
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 425
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "nodeOptions.map",
+          "lineNumber": 427
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 434
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "nodeOptions.map",
+          "lineNumber": 436
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setForm",
+          "lineNumber": 446
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setConfirmDeleteOpen",
+          "lineNumber": 462
+        },
+        {
+          "caller": "MentorRoadmapEditorView",
+          "callee": "setConfirmDeleteOpen",
+          "lineNumber": 482
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 0,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorStudentsView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 276,
+      "nonEmptyLines": 253,
+      "functions": [
+        {
+          "name": "MentorStudentsView",
+          "startLine": 33,
+          "endLine": 276,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MentorStudentsView",
+          "line": 33,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useAuth",
+          "lineNumber": 34
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useNavigate",
+          "lineNumber": 35
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useState",
+          "lineNumber": 37
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useState",
+          "lineNumber": 38
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useState",
+          "lineNumber": 39
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useState",
+          "lineNumber": 40
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useState",
+          "lineNumber": 41
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useState",
+          "lineNumber": 42
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useEffect",
+          "lineNumber": 44
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "mentorApi.getStudentsList()\n      .then(res => setStudents(Array.isArray(res) ? res : []))\n      .catch(() => setStudents([]))\n      .finally",
+          "lineNumber": 45
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "mentorApi.getStudentsList()\n      .then(res => setStudents(Array.isArray(res) ? res : []))\n      .catch",
+          "lineNumber": 45
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "mentorApi.getStudentsList()\n      .then",
+          "lineNumber": 45
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "mentorApi.getStudentsList",
+          "lineNumber": 45
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setStudents",
+          "lineNumber": 46
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Array.isArray",
+          "lineNumber": 46
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setStudents",
+          "lineNumber": 47
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setIsLoading",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 53
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useMemo",
+          "lineNumber": 57
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "students.filter",
+          "lineNumber": 58
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "searchQuery.trim().toLowerCase",
+          "lineNumber": 59
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "searchQuery.trim",
+          "lineNumber": 59
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.fullName.toLowerCase().includes",
+          "lineNumber": 61
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.fullName.toLowerCase",
+          "lineNumber": 61
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.email.toLowerCase().includes",
+          "lineNumber": 62
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.email.toLowerCase",
+          "lineNumber": 62
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Array.from",
+          "lineNumber": 69
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "students.map",
+          "lineNumber": 69
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Array.from",
+          "lineNumber": 70
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "students.map",
+          "lineNumber": 70
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Math.max",
+          "lineNumber": 73
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Math.ceil",
+          "lineNumber": 73
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Math.min",
+          "lineNumber": 74
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "filteredStudents.slice",
+          "lineNumber": 76
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Math.min",
+          "lineNumber": 78
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useRef",
+          "lineNumber": 80
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "useGSAP",
+          "lineNumber": 82
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "gsap.from",
+          "lineNumber": 83
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "navigate",
+          "lineNumber": 126
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setCareerFilter",
+          "lineNumber": 149
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setCurrentPage",
+          "lineNumber": 149
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "uniqueCareers.map",
+          "lineNumber": 151
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setUniFilter",
+          "lineNumber": 158
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setCurrentPage",
+          "lineNumber": 158
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "uniqueUnis.map",
+          "lineNumber": 160
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setCurrentPage",
+          "lineNumber": 166
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Math.max",
+          "lineNumber": 166
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setCurrentPage",
+          "lineNumber": 172
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Math.min",
+          "lineNumber": 172
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setSearchQuery",
+          "lineNumber": 183
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "setCurrentPage",
+          "lineNumber": 184
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Array.from({ length: 5 }).map",
+          "lineNumber": 212
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "Array.from",
+          "lineNumber": 212
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "paginatedStudents.map",
+          "lineNumber": 221
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.fullName.split(\" \").map((part: string) => part[0]).join(\"\").slice(0, 2).toUpperCase",
+          "lineNumber": 226
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.fullName.split(\" \").map((part: string) => part[0]).join(\"\").slice",
+          "lineNumber": 226
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.fullName.split(\" \").map((part: string) => part[0]).join",
+          "lineNumber": 226
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.fullName.split(\" \").map",
+          "lineNumber": 226
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "student.fullName.split",
+          "lineNumber": 226
+        },
+        {
+          "caller": "MentorStudentsView",
+          "callee": "navigate",
+          "lineNumber": 245
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/api/portfolioApi.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 309,
+      "nonEmptyLines": 286,
+      "functions": [
+        {
+          "name": "mapToFrontendData",
+          "startLine": 92,
+          "endLine": 193,
+          "params": [
+            "backendData"
+          ]
+        },
+        {
+          "name": "mapToBackendRequest",
+          "startLine": 196,
+          "endLine": 244,
+          "params": [
+            "uiData"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "mapToFrontendData",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "portfolioApi",
+          "line": 246,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "mapToFrontendData",
+          "callee": "JSON.parse",
+          "lineNumber": 95
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "JSON.stringify",
+          "lineNumber": 95
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Array.isArray",
+          "lineNumber": 129
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "backendData.projects.map",
+          "lineNumber": 130
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Date.now",
+          "lineNumber": 131
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Math.random",
+          "lineNumber": 131
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "(() => {\r\n        if (!p.techStack) return 'Tech Stack';\r\n        \r\n        // Helper to recursively parse JSON if it's a string\r\n        const deepParse = (val: any): any => {\r\n          if (typeof val === 'string') {\r\n            try {\r\n              const parsed = JSON.parse(val);\r\n              // Only return parsed if it's an object or array to avoid infinite loops on primitive strings\r\n              if (parsed && typeof parsed === 'object') {\r\n                return deepParse(parsed);\r\n              }\r\n            } catch (e) {\r\n              return val;\r\n            }\r\n          }\r\n          if (val && typeof val === 'object' && val.text) {\r\n             return deepParse(val.text);\r\n          }\r\n          return val;\r\n        };\r\n\r\n        const cleaned = deepParse(p.techStack);\r\n        \r\n        if (typeof cleaned === 'string') return cleaned;\r\n        if (typeof cleaned === 'object' && cleaned !== null) {\r\n          return Object.values(cleaned).flat().join(', ');\r\n        }\r\n        \r\n        return 'Tech Stack';\r\n      })",
+          "lineNumber": 133
+        },
+        {
+          "caller": "deepParse",
+          "callee": "JSON.parse",
+          "lineNumber": 140
+        },
+        {
+          "caller": "deepParse",
+          "callee": "deepParse",
+          "lineNumber": 143
+        },
+        {
+          "caller": "deepParse",
+          "callee": "deepParse",
+          "lineNumber": 150
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "deepParse",
+          "lineNumber": 155
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Object.values(cleaned).flat().join",
+          "lineNumber": 159
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Object.values(cleaned).flat",
+          "lineNumber": 159
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Object.values",
+          "lineNumber": 159
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Array.isArray",
+          "lineNumber": 172
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "backendData.education.map",
+          "lineNumber": 173
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Date.now",
+          "lineNumber": 174
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Math.random",
+          "lineNumber": 174
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "Array.isArray",
+          "lineNumber": 183
+        },
+        {
+          "caller": "mapToFrontendData",
+          "callee": "backendData.skills.map",
+          "lineNumber": 184
+        },
+        {
+          "caller": "mapToBackendRequest",
+          "callee": "uiData.skills.map",
+          "lineNumber": 207
+        },
+        {
+          "caller": "mapToBackendRequest",
+          "callee": "uiData.projects.map",
+          "lineNumber": 213
+        },
+        {
+          "caller": "mapToBackendRequest",
+          "callee": "p.id.startsWith",
+          "lineNumber": 224
+        },
+        {
+          "caller": "mapToBackendRequest",
+          "callee": "uiData.education.map",
+          "lineNumber": 230
+        },
+        {
+          "caller": "mapToBackendRequest",
+          "callee": "e.id.startsWith",
+          "lineNumber": 238
+        },
+        {
+          "caller": "mapToBackendRequest",
+          "callee": "e.id.startsWith",
+          "lineNumber": 238
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/EPortfolioEditor.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 768,
+      "nonEmptyLines": 708,
+      "functions": [
+        {
+          "name": "EPortfolioEditor",
+          "startLine": 29,
+          "endLine": 768,
+          "params": [
+            "{ initialData, isPublicView = false }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "EPortfolioEditor",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useNavigate",
+          "lineNumber": 30
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useAuth",
+          "lineNumber": 31
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 34
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 35
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 36
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 37
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useRef",
+          "lineNumber": 38
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 41
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 42
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useEffect",
+          "lineNumber": 44
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIsEditMode",
+          "lineNumber": 46
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 51
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 52
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 55
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 56
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 57
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useState",
+          "lineNumber": 60
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useRef",
+          "lineNumber": 61
+        },
+        {
+          "caller": "showToast",
+          "callee": "toast.error",
+          "lineNumber": 66
+        },
+        {
+          "caller": "showToast",
+          "callee": "toast.success",
+          "lineNumber": 67
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "file.type.startsWith",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "showToast",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "showToast",
+          "lineNumber": 79
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "setIsUploadingAvatar",
+          "lineNumber": 83
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "profileApi.updateAvatar",
+          "lineNumber": 86
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "newAvatarUrl.startsWith",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "newAvatarUrl.includes",
+          "lineNumber": 91
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "Date.now",
+          "lineNumber": 91
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "updateHero",
+          "lineNumber": 93
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "updateUser",
+          "lineNumber": 94
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "showToast",
+          "lineNumber": 95
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "console.error",
+          "lineNumber": 97
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "showToast",
+          "lineNumber": 98
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "setIsUploadingAvatar",
+          "lineNumber": 100
+        },
+        {
+          "caller": "handleImport",
+          "callee": "setIsImporting",
+          "lineNumber": 106
+        },
+        {
+          "caller": "handleImport",
+          "callee": "portfolioApi.importGithubProject",
+          "lineNumber": 108
+        },
+        {
+          "caller": "handleImport",
+          "callee": "Date.now",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleImport",
+          "callee": "Object.values(aiData.techStack).flat().join",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handleImport",
+          "callee": "Object.values(aiData.techStack).flat",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handleImport",
+          "callee": "Object.values",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handleImport",
+          "callee": "setData",
+          "lineNumber": 120
+        },
+        {
+          "caller": "handleImport",
+          "callee": "setIsImportModalOpen",
+          "lineNumber": 125
+        },
+        {
+          "caller": "handleImport",
+          "callee": "setGithubUrl",
+          "lineNumber": 126
+        },
+        {
+          "caller": "handleImport",
+          "callee": "showToast",
+          "lineNumber": 127
+        },
+        {
+          "caller": "handleImport",
+          "callee": "console.error",
+          "lineNumber": 129
+        },
+        {
+          "caller": "handleImport",
+          "callee": "showToast",
+          "lineNumber": 140
+        },
+        {
+          "caller": "handleImport",
+          "callee": "setIsImporting",
+          "lineNumber": 142
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useDebounce",
+          "lineNumber": 148
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useRef",
+          "lineNumber": 151
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useEffect",
+          "lineNumber": 153
+        },
+        {
+          "caller": "saveData",
+          "callee": "setIsSaving",
+          "lineNumber": 162
+        },
+        {
+          "caller": "saveData",
+          "callee": "portfolioApi.updatePortfolio",
+          "lineNumber": 164
+        },
+        {
+          "caller": "saveData",
+          "callee": "console.error",
+          "lineNumber": 166
+        },
+        {
+          "caller": "saveData",
+          "callee": "setIsSaving",
+          "lineNumber": 168
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "saveData",
+          "lineNumber": 172
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useEffect",
+          "lineNumber": 178
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.setAttribute",
+          "lineNumber": 179
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 180
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 181
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 182
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 183
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 184
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 185
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 186
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 187
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.documentElement.style.setProperty",
+          "lineNumber": 188
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "useGSAP",
+          "lineNumber": 192
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "document.querySelectorAll",
+          "lineNumber": 194
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "reveals.forEach",
+          "lineNumber": 195
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "gsap.fromTo",
+          "lineNumber": 196
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "gsap.timeline",
+          "lineNumber": 213
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "heroTimeline\n      .fromTo(\".hero-title-pill\", { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 1 }, 0)\n      .fromTo(\".hero-img-wrapper\", { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 1 }, 0.2)\n      .fromTo(\".hero-text p\", { y: 20, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1 }, 0.4)\n      .fromTo(\".contact-title\", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 0.6)\n      .fromTo",
+          "lineNumber": 214
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "heroTimeline\n      .fromTo(\".hero-title-pill\", { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 1 }, 0)\n      .fromTo(\".hero-img-wrapper\", { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 1 }, 0.2)\n      .fromTo(\".hero-text p\", { y: 20, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.1 }, 0.4)\n      .fromTo",
+          "lineNumber": 214
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "heroTimeline\n      .fromTo(\".hero-title-pill\", { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 1 }, 0)\n      .fromTo(\".hero-img-wrapper\", { x: 100, opacity: 0 }, { x: 0, opacity: 1, duration: 1 }, 0.2)\n      .fromTo",
+          "lineNumber": 214
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "heroTimeline\n      .fromTo(\".hero-title-pill\", { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 1 }, 0)\n      .fromTo",
+          "lineNumber": 214
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "heroTimeline\n      .fromTo",
+          "lineNumber": 214
+        },
+        {
+          "caller": "updateHero",
+          "callee": "setData",
+          "lineNumber": 225
+        },
+        {
+          "caller": "updateTheme",
+          "callee": "setData",
+          "lineNumber": 232
+        },
+        {
+          "caller": "updateThemePreset",
+          "callee": "setData",
+          "lineNumber": 239
+        },
+        {
+          "caller": "updateThemeRadius",
+          "callee": "setData",
+          "lineNumber": 246
+        },
+        {
+          "caller": "updateFont",
+          "callee": "setData",
+          "lineNumber": 253
+        },
+        {
+          "caller": "toggleTheme",
+          "callee": "setData",
+          "lineNumber": 260
+        },
+        {
+          "caller": "handleCopyLink",
+          "callee": "navigator.clipboard.writeText",
+          "lineNumber": 279
+        },
+        {
+          "caller": "handleCopyLink",
+          "callee": "ROUTES.PUBLIC_PORTFOLIO.replace",
+          "lineNumber": 280
+        },
+        {
+          "caller": "handleCopyLink",
+          "callee": "setIsCopied",
+          "lineNumber": 282
+        },
+        {
+          "caller": "handleCopyLink",
+          "callee": "setTimeout",
+          "lineNumber": 283
+        },
+        {
+          "caller": "handleCopyLink",
+          "callee": "setIsCopied",
+          "lineNumber": 283
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIsEditMode",
+          "lineNumber": 354
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIsRequestReviewOpen",
+          "lineNumber": 363
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIsFeedbackOpen",
+          "lineNumber": 375
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "navigate",
+          "lineNumber": 389
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIsFeedbackOpen",
+          "lineNumber": 402
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIsRequestReviewOpen",
+          "lineNumber": 417
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "updateHero",
+          "lineNumber": 424
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "updateHero",
+          "lineNumber": 431
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "updateHero",
+          "lineNumber": 432
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "updateHero",
+          "lineNumber": 433
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "updateHero",
+          "lineNumber": 433
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "updateHero",
+          "lineNumber": 436
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "data.hero.contact.map",
+          "lineNumber": 441
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "prompt",
+          "lineNumber": 445
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 449
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 458
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 462
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "data.hero.contact.filter",
+          "lineNumber": 462
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 469
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "Date.now",
+          "lineNumber": 473
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "(() => {\n              const displayAvatar = data.hero.avatarUrl === 'https://via.placeholder.com/150' && user?.avatarUrl ? user.avatarUrl : data.hero.avatarUrl;\n              return (\n                <>\n                  <img src={displayAvatar} alt=\"Profile\" className=\"hero-img-pill w-[360px] h-[480px] object-cover rounded-[200px] relative z-10 border-4 border-[var(--bg-secondary)] shadow-2xl\" />\n                  {isEditMode && (\n                    <>\n                      <input\n                        type=\"file\"\n                        accept=\"image/*\"\n                        className=\"hidden\"\n                        ref={avatarInputRef}\n                        onChange={handleAvatarUpload}\n                        disabled={isUploadingAvatar}\n                      />\n                      <div className={`absolute inset-0 z-20 flex items-center justify-center transition-opacity bg-black/40 rounded-[200px] ${isUploadingAvatar ? 'opacity-100' : 'opacity-0 hover:opacity-100'}`}>\n                        <button\n                          type=\"button\"\n                          disabled={isUploadingAvatar}\n                          className=\"bg-white text-slate-900 px-4 py-2 rounded-full font-semibold text-sm cursor-pointer disabled:opacity-70 flex items-center gap-2\"\n                          onClick={() => avatarInputRef.current?.click()}\n                        >\n                          {isUploadingAvatar ? (\n                            <><i className=\"fas fa-spinner fa-spin\"></i> Uploading...</>\n                          ) : (\n                            <><i className=\"fas fa-camera\"></i> Change Photo</>\n                          )}\n                        </button>\n                      </div>\n                    </>\n                  )}\n                </>\n              );\n            })",
+          "lineNumber": 485
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "avatarInputRef.current?.click",
+          "lineNumber": 505
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "data.education.map",
+          "lineNumber": 528
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 536
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 540
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "data.education.filter",
+          "lineNumber": 540
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 548
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 552
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 559
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 568
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "Date.now",
+          "lineNumber": 568
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "data.skills.map",
+          "lineNumber": 581
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 586
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 590
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "data.skills.filter",
+          "lineNumber": 590
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 597
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "Date.now",
+          "lineNumber": 597
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "data.projects.map",
+          "lineNumber": 611
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 615
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "data.projects.filter",
+          "lineNumber": 615
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIconPickerProjectIdx",
+          "lineNumber": 621
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 628
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 634
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 641
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "e.preventDefault",
+          "lineNumber": 653
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "prompt",
+          "lineNumber": 654
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 658
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "e.preventDefault",
+          "lineNumber": 668
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "prompt",
+          "lineNumber": 669
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 673
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setGithubUrl",
+          "lineNumber": 705
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 724
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "Date.now",
+          "lineNumber": 726
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIsImportModalOpen",
+          "lineNumber": 728
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setData",
+          "lineNumber": 760
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIconPickerProjectIdx",
+          "lineNumber": 761
+        },
+        {
+          "caller": "EPortfolioEditor",
+          "callee": "setIconPickerProjectIdx",
+          "lineNumber": 763
+        }
+      ],
+      "metrics": {
+        "importCount": 14,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/EditableText.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 82,
+      "functions": [
+        {
+          "name": "EditableText",
+          "startLine": 12,
+          "endLine": 93,
+          "params": [
+            "{ \r\n  value, onChange, as: Component = 'span', className = '', multiline = false, isEditable = true\r\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "EditableText",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "EditableText",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "EditableText",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "EditableText",
+          "callee": "useRef",
+          "lineNumber": 17
+        },
+        {
+          "caller": "EditableText",
+          "callee": "useEffect",
+          "lineNumber": 19
+        },
+        {
+          "caller": "EditableText",
+          "callee": "setDraft",
+          "lineNumber": 20
+        },
+        {
+          "caller": "EditableText",
+          "callee": "useEffect",
+          "lineNumber": 23
+        },
+        {
+          "caller": "EditableText",
+          "callee": "inputRef.current.focus",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleBlur",
+          "callee": "setIsEditing",
+          "lineNumber": 34
+        },
+        {
+          "caller": "handleBlur",
+          "callee": "onChange",
+          "lineNumber": 36
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 42
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "inputRef.current?.blur",
+          "lineNumber": 43
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "setDraft",
+          "lineNumber": 46
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "setIsEditing",
+          "lineNumber": 47
+        },
+        {
+          "caller": "EditableText",
+          "callee": "useEffect",
+          "lineNumber": 51
+        },
+        {
+          "caller": "EditableText",
+          "callee": "setDraft",
+          "lineNumber": 62
+        },
+        {
+          "caller": "EditableText",
+          "callee": "setIsEditing",
+          "lineNumber": 83
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/FeedbackModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 242,
+      "nonEmptyLines": 221,
+      "functions": [
+        {
+          "name": "FeedbackModal",
+          "startLine": 24,
+          "endLine": 242,
+          "params": [
+            "{ isOpen, onClose, studentData }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeedbackModal",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FeedbackModal",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "useState",
+          "lineNumber": 28
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "useState",
+          "lineNumber": 31
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "useState",
+          "lineNumber": 33
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "useState",
+          "lineNumber": 35
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "useEffect",
+          "lineNumber": 38
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "localStorage.getItem",
+          "lineNumber": 40
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "JSON.parse",
+          "lineNumber": 42
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "setCategory",
+          "lineNumber": 43
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "setStrengths",
+          "lineNumber": 44
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "setImprovements",
+          "lineNumber": 45
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "setRecommendations",
+          "lineNumber": 46
+        },
+        {
+          "caller": "handleSaveDraft",
+          "callee": "setIsSavingDraft",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleSaveDraft",
+          "callee": "localStorage.setItem",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleSaveDraft",
+          "callee": "JSON.stringify",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleSaveDraft",
+          "callee": "setTimeout",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleSaveDraft",
+          "callee": "setIsSavingDraft",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "strengths.trim",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "improvements.trim",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setIsSubmitting",
+          "lineNumber": 66
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "mentorApi.submitFeedback",
+          "lineNumber": 71
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "localStorage.removeItem",
+          "lineNumber": 72
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "localStorage.setItem",
+          "lineNumber": 75
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "JSON.stringify",
+          "lineNumber": 75
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "Date.now",
+          "lineNumber": 78
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setSubmitSuccess",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 83
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setIsSubmitting",
+          "lineNumber": 85
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "onClose",
+          "lineNumber": 90
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "setTimeout",
+          "lineNumber": 91
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "setSubmitSuccess",
+          "lineNumber": 92
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "setError",
+          "lineNumber": 93
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "resetAndClose",
+          "lineNumber": 98
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "encodeURIComponent",
+          "lineNumber": 135
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "encodeURIComponent",
+          "lineNumber": 139
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "CATEGORIES.map",
+          "lineNumber": 152
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "setCategory",
+          "lineNumber": 155
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "setStrengths",
+          "lineNumber": 174
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "setImprovements",
+          "lineNumber": 184
+        },
+        {
+          "caller": "FeedbackModal",
+          "callee": "setRecommendations",
+          "lineNumber": 197
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/IconPicker.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "IconPicker",
+          "startLine": 21,
+          "endLine": 74,
+          "params": [
+            "{ currentIcon, onSelect, onClose }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "IconPicker",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "IconPicker",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "IconPicker",
+          "callee": "COMMON_ICONS.filter",
+          "lineNumber": 24
+        },
+        {
+          "caller": "IconPicker",
+          "callee": "icon.toLowerCase().includes",
+          "lineNumber": 24
+        },
+        {
+          "caller": "IconPicker",
+          "callee": "icon.toLowerCase",
+          "lineNumber": 24
+        },
+        {
+          "caller": "IconPicker",
+          "callee": "search.toLowerCase",
+          "lineNumber": 24
+        },
+        {
+          "caller": "IconPicker",
+          "callee": "setSearch",
+          "lineNumber": 38
+        },
+        {
+          "caller": "IconPicker",
+          "callee": "filteredIcons.map",
+          "lineNumber": 43
+        },
+        {
+          "caller": "IconPicker",
+          "callee": "onSelect",
+          "lineNumber": 46
+        },
+        {
+          "caller": "IconPicker",
+          "callee": "onSelect",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/RequestReviewModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 129,
+      "nonEmptyLines": 119,
+      "functions": [
+        {
+          "name": "RequestReviewModal",
+          "startLine": 11,
+          "endLine": 129,
+          "params": [
+            "{ isOpen, onClose }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RequestReviewModal",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RequestReviewModal",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "RequestReviewModal",
+          "callee": "useState",
+          "lineNumber": 13
+        },
+        {
+          "caller": "RequestReviewModal",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "RequestReviewModal",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "e.preventDefault",
+          "lineNumber": 18
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "email.trim",
+          "lineNumber": 19
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "email.includes",
+          "lineNumber": 19
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 20
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 24
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setIsSubmitting",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "studentApi.requestPortfolioReview",
+          "lineNumber": 28
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setSubmitSuccess",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setTimeout",
+          "lineNumber": 30
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "resetAndClose",
+          "lineNumber": 31
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 34
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setIsSubmitting",
+          "lineNumber": 36
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "onClose",
+          "lineNumber": 41
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "setTimeout",
+          "lineNumber": 42
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "setSubmitSuccess",
+          "lineNumber": 43
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "setError",
+          "lineNumber": 44
+        },
+        {
+          "caller": "resetAndClose",
+          "callee": "setEmail",
+          "lineNumber": 45
+        },
+        {
+          "caller": "RequestReviewModal",
+          "callee": "resetAndClose",
+          "lineNumber": 50
+        },
+        {
+          "caller": "RequestReviewModal",
+          "callee": "setEmail",
+          "lineNumber": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/ThemeEditor.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 134,
+      "nonEmptyLines": 122,
+      "functions": [
+        {
+          "name": "ThemeEditor",
+          "startLine": 37,
+          "endLine": 134,
+          "params": [
+            "{ \n  primaryColor, titleColor, textColor, radius, headingFont, bodyFont, onChangeColor, onChangeRadius, onApplyPreset, onChangeFont \n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ThemeEditor",
+          "line": 37,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ColorControl",
+          "callee": "onChangeColor",
+          "lineNumber": 50
+        },
+        {
+          "caller": "ColorControl",
+          "callee": "onChangeColor",
+          "lineNumber": 57
+        },
+        {
+          "caller": "FontControl",
+          "callee": "onChangeFont",
+          "lineNumber": 69
+        },
+        {
+          "caller": "FontControl",
+          "callee": "FONTS.map",
+          "lineNumber": 72
+        },
+        {
+          "caller": "ThemeEditor",
+          "callee": "THEME_PRESETS.map",
+          "lineNumber": 86
+        },
+        {
+          "caller": "ThemeEditor",
+          "callee": "onApplyPreset",
+          "lineNumber": 89
+        },
+        {
+          "caller": "ThemeEditor",
+          "callee": "[preset.colors.primaryColor, preset.colors.titleColor, preset.colors.textColor].map",
+          "lineNumber": 94
+        },
+        {
+          "caller": "ThemeEditor",
+          "callee": "RADIUS_OPTIONS.map",
+          "lineNumber": 115
+        },
+        {
+          "caller": "ThemeEditor",
+          "callee": "onChangeRadius",
+          "lineNumber": 118
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/profile-settings/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "exports": [
+        {
+          "name": "useProfileSettings",
+          "line": 1,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/profile-settings/model/useProfileSettings.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 290,
+      "nonEmptyLines": 270,
+      "functions": [
+        {
+          "name": "useProfileSettings",
+          "startLine": 47,
+          "endLine": 290,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useProfileSettings",
+          "line": 47,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useProfileSettings",
+          "callee": "useAuth",
+          "lineNumber": 48
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "useState",
+          "lineNumber": 49
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "useState",
+          "lineNumber": 50
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "useState",
+          "lineNumber": 51
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "useState",
+          "lineNumber": 52
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "setLoading",
+          "lineNumber": 55
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "setError",
+          "lineNumber": 56
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "setTimeout",
+          "lineNumber": 59
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "reject",
+          "lineNumber": 59
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "user?.role?.toUpperCase",
+          "lineNumber": 64
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "Promise.race",
+          "lineNumber": 65
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "profileApi.getStudentProfile",
+          "lineNumber": 66
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "user?.role?.toUpperCase",
+          "lineNumber": 70
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "Promise.race",
+          "lineNumber": 71
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "profileApi.getMentorProfile",
+          "lineNumber": 71
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "user?.role?.toUpperCase",
+          "lineNumber": 73
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "Promise.race",
+          "lineNumber": 74
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "profileApi.getCounselorProfile",
+          "lineNumber": 75
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "setProfileData",
+          "lineNumber": 81
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "String(\r\n          data?.admissionDate ?? data?.student?.admissionDate ?? \"\"\r\n        ).split",
+          "lineNumber": 101
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "String",
+          "lineNumber": 101
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "(\r\n            data?.yob ||\r\n            data?.user?.yob ||\r\n            data?.userInfo?.yob ||\r\n            (user as any)?.yob ||\r\n            \"\"\r\n          )\r\n            ?.toString()\r\n            .split",
+          "lineNumber": 130
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "(\r\n            data?.yob ||\r\n            data?.user?.yob ||\r\n            data?.userInfo?.yob ||\r\n            (user as any)?.yob ||\r\n            \"\"\r\n          )\r\n            ?.toString",
+          "lineNumber": 130
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "console.warn",
+          "lineNumber": 141
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "setProfileData",
+          "lineNumber": 146
+        },
+        {
+          "caller": "loadProfile",
+          "callee": "setLoading",
+          "lineNumber": 153
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "useEffect",
+          "lineNumber": 157
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "loadProfile",
+          "lineNumber": 158
+        },
+        {
+          "caller": "handleChange",
+          "callee": "setProfileData",
+          "lineNumber": 162
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setSaving",
+          "lineNumber": 166
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 167
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 173
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setSaving",
+          "lineNumber": 174
+        },
+        {
+          "caller": "handleSave",
+          "callee": "today.getFullYear",
+          "lineNumber": 176
+        },
+        {
+          "caller": "handleSave",
+          "callee": "birthDate.getFullYear",
+          "lineNumber": 176
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 177
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setSaving",
+          "lineNumber": 178
+        },
+        {
+          "caller": "handleSave",
+          "callee": "user?.role?.toUpperCase",
+          "lineNumber": 184
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 191
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setSaving",
+          "lineNumber": 192
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 195
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setSaving",
+          "lineNumber": 196
+        },
+        {
+          "caller": "handleSave",
+          "callee": "admissionDate.getFullYear",
+          "lineNumber": 198
+        },
+        {
+          "caller": "handleSave",
+          "callee": "birthDate.getFullYear",
+          "lineNumber": 198
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 199
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setSaving",
+          "lineNumber": 200
+        },
+        {
+          "caller": "handleSave",
+          "callee": "profileApi.updateUserProfile",
+          "lineNumber": 207
+        },
+        {
+          "caller": "handleSave",
+          "callee": "user?.role?.toUpperCase",
+          "lineNumber": 214
+        },
+        {
+          "caller": "handleSave",
+          "callee": "tasks.push",
+          "lineNumber": 215
+        },
+        {
+          "caller": "handleSave",
+          "callee": "profileApi.updateStudentProfile",
+          "lineNumber": 216
+        },
+        {
+          "caller": "handleSave",
+          "callee": "user?.role?.toUpperCase",
+          "lineNumber": 224
+        },
+        {
+          "caller": "handleSave",
+          "callee": "tasks.push",
+          "lineNumber": 225
+        },
+        {
+          "caller": "handleSave",
+          "callee": "profileApi.updateMentorProfile",
+          "lineNumber": 226
+        },
+        {
+          "caller": "handleSave",
+          "callee": "user?.role?.toUpperCase",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleSave",
+          "callee": "tasks.push",
+          "lineNumber": 232
+        },
+        {
+          "caller": "handleSave",
+          "callee": "profileApi.updateCounselorProfile",
+          "lineNumber": 233
+        },
+        {
+          "caller": "handleSave",
+          "callee": "Promise.all",
+          "lineNumber": 239
+        },
+        {
+          "caller": "handleSave",
+          "callee": "toast.success",
+          "lineNumber": 241
+        },
+        {
+          "caller": "handleSave",
+          "callee": "console.error",
+          "lineNumber": 243
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 244
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setSaving",
+          "lineNumber": 246
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "setSaving",
+          "lineNumber": 251
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "setError",
+          "lineNumber": 252
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "profileApi.updateAvatar",
+          "lineNumber": 254
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "setProfileData",
+          "lineNumber": 259
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "updateUser",
+          "lineNumber": 260
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "toast.success",
+          "lineNumber": 261
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "console.error",
+          "lineNumber": 263
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "setError",
+          "lineNumber": 264
+        },
+        {
+          "caller": "handleAvatarUpload",
+          "callee": "setSaving",
+          "lineNumber": 266
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "profileData.full_name?.[0]?.toUpperCase",
+          "lineNumber": 270
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "profileData.github_profile?.split(\"/\").filter(Boolean).pop",
+          "lineNumber": 273
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "profileData.github_profile?.split(\"/\").filter",
+          "lineNumber": 273
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "profileData.github_profile?.split",
+          "lineNumber": 273
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "profileData.full_name.split(\" \").join(\"\").toLowerCase",
+          "lineNumber": 274
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "profileData.full_name.split(\" \").join",
+          "lineNumber": 274
+        },
+        {
+          "caller": "useProfileSettings",
+          "callee": "profileData.full_name.split",
+          "lineNumber": 274
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/api/fptCoursesApi.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 69,
+      "nonEmptyLines": 61,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/api/marketPulseApi.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 12,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/FptCoursesView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 418,
+      "nonEmptyLines": 394,
+      "functions": [
+        {
+          "name": "formatSize",
+          "startLine": 29,
+          "endLine": 32,
+          "params": [
+            "bytes"
+          ]
+        },
+        {
+          "name": "FptCoursesView",
+          "startLine": 46,
+          "endLine": 418,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptCoursesView",
+          "line": 46,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "formatSize",
+          "callee": "(bytes / 1024 ** 2).toFixed",
+          "lineNumber": 31
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useAuth",
+          "lineNumber": 47
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useNavigate",
+          "lineNumber": 48
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useState",
+          "lineNumber": 49
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useState",
+          "lineNumber": 50
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useState",
+          "lineNumber": 52
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useState",
+          "lineNumber": 53
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useState",
+          "lineNumber": 54
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useState",
+          "lineNumber": 55
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useState",
+          "lineNumber": 57
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useState",
+          "lineNumber": 58
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useEffect",
+          "lineNumber": 65
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "fptCoursesApi\n      .list()\n      .then((rows) => alive && setCourses(rows))\n      .catch(() => alive && toast.error(\"Could not load your subjects.\"))\n      .finally",
+          "lineNumber": 67
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "fptCoursesApi\n      .list()\n      .then((rows) => alive && setCourses(rows))\n      .catch",
+          "lineNumber": 67
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "fptCoursesApi\n      .list()\n      .then",
+          "lineNumber": 67
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "fptCoursesApi\n      .list",
+          "lineNumber": 67
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "setCourses",
+          "lineNumber": 69
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "toast.error",
+          "lineNumber": 70
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "setLoadingList",
+          "lineNumber": 71
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useEffect",
+          "lineNumber": 77
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "fptCoursesApi\n      .detail(selected)\n      .then((d) => {\n        if (!alive) return\n        setDetail(d)\n      })\n      .catch",
+          "lineNumber": 80
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "fptCoursesApi\n      .detail(selected)\n      .then",
+          "lineNumber": 80
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "fptCoursesApi\n      .detail",
+          "lineNumber": 80
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "setDetail",
+          "lineNumber": 84
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "setFailed",
+          "lineNumber": 88
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "toast.error",
+          "lineNumber": 89
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useMemo",
+          "lineNumber": 96
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "[...new Set(courses.map((c) => c.semester).filter((s): s is number => s !== null))].sort",
+          "lineNumber": 98
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "courses.map((c) => c.semester).filter",
+          "lineNumber": 98
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "courses.map",
+          "lineNumber": 98
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useMemo",
+          "lineNumber": 104
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "query.trim().toLowerCase",
+          "lineNumber": 105
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "query.trim",
+          "lineNumber": 105
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "courses.filter",
+          "lineNumber": 106
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "c.code.toLowerCase().includes",
+          "lineNumber": 110
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "c.code.toLowerCase",
+          "lineNumber": 110
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "c.name.toLowerCase().includes",
+          "lineNumber": 111
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "c.name.toLowerCase",
+          "lineNumber": 111
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "c.skills.some",
+          "lineNumber": 112
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "s.toLowerCase().includes",
+          "lineNumber": 112
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "s.toLowerCase",
+          "lineNumber": 112
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "useMemo",
+          "lineNumber": 117
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "courses.filter",
+          "lineNumber": 117
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "detail?.sessions.filter",
+          "lineNumber": 118
+        },
+        {
+          "caller": "download",
+          "callee": "setDownloading",
+          "lineNumber": 121
+        },
+        {
+          "caller": "download",
+          "callee": "fptCoursesApi.downloadLink",
+          "lineNumber": 124
+        },
+        {
+          "caller": "download",
+          "callee": "window.open",
+          "lineNumber": 125
+        },
+        {
+          "caller": "download",
+          "callee": "toast.error",
+          "lineNumber": 127
+        },
+        {
+          "caller": "download",
+          "callee": "setDownloading",
+          "lineNumber": 129
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 134
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 135
+        },
+        {
+          "caller": "back",
+          "callee": "setSelected",
+          "lineNumber": 139
+        },
+        {
+          "caller": "back",
+          "callee": "setDetail",
+          "lineNumber": 140
+        },
+        {
+          "caller": "back",
+          "callee": "setFailed",
+          "lineNumber": 141
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "navigate",
+          "lineNumber": 150
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "setQuery",
+          "lineNumber": 177
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "setTerm",
+          "lineNumber": 187
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "terms.map",
+          "lineNumber": 196
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "setTerm",
+          "lineNumber": 199
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "Array.from({ length: 6 }).map",
+          "lineNumber": 225
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "Array.from",
+          "lineNumber": 225
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "filtered.map",
+          "lineNumber": 242
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "setSelected",
+          "lineNumber": 245
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "detail.skills.map",
+          "lineNumber": 311
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "detail.clos.map",
+          "lineNumber": 334
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "files.map",
+          "lineNumber": 358
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "formatSize",
+          "lineNumber": 366
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "download",
+          "lineNumber": 370
+        },
+        {
+          "caller": "FptCoursesView",
+          "callee": "detail.materials.map",
+          "lineNumber": 392
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/FptCurriculumPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 371,
+      "nonEmptyLines": 340,
+      "functions": [
+        {
+          "name": "enName",
+          "startLine": 8,
+          "endLine": 8,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "FptCurriculumPanel",
+          "startLine": 46,
+          "endLine": 369,
+          "params": [
+            "{ open, onClose, onApplied }"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "enName",
+          "callee": "(name || \"\").split(\"_\")[0].trim",
+          "lineNumber": 8
+        },
+        {
+          "caller": "enName",
+          "callee": "(name || \"\").split",
+          "lineNumber": 8
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 47
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 48
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 49
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 50
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 51
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 52
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 53
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 54
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 55
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 56
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 57
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "Array.isArray",
+          "lineNumber": 65
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "setSubjects",
+          "lineNumber": 66
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "list.filter(s => s.status === \"PASSED\").map",
+          "lineNumber": 67
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "list.filter",
+          "lineNumber": 67
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "setPassed",
+          "lineNumber": 68
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "setInitialPassed",
+          "lineNumber": 69
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "setCurriculumId",
+          "lineNumber": 70
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "setCurriculumLabel",
+          "lineNumber": 71
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "setCurricula",
+          "lineNumber": 72
+        },
+        {
+          "caller": "applyResponse",
+          "callee": "Array.isArray",
+          "lineNumber": 72
+        },
+        {
+          "caller": "load",
+          "callee": "setLoading",
+          "lineNumber": 76
+        },
+        {
+          "caller": "load",
+          "callee": "roadmapApi.getFptSubjects",
+          "lineNumber": 78
+        },
+        {
+          "caller": "load",
+          "callee": "applyResponse",
+          "lineNumber": 79
+        },
+        {
+          "caller": "load",
+          "callee": "console.error",
+          "lineNumber": 81
+        },
+        {
+          "caller": "load",
+          "callee": "toast.error",
+          "lineNumber": 82
+        },
+        {
+          "caller": "load",
+          "callee": "setLoading",
+          "lineNumber": 84
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useEffect",
+          "lineNumber": 88
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "load",
+          "lineNumber": 89
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useEffect",
+          "lineNumber": 93
+        },
+        {
+          "caller": "onKey",
+          "callee": "onClose",
+          "lineNumber": 95
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "window.addEventListener",
+          "lineNumber": 96
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "window.removeEventListener",
+          "lineNumber": 97
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useMemo",
+          "lineNumber": 100
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "subjects.some",
+          "lineNumber": 100
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useMemo",
+          "lineNumber": 101
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "subjects.reduce",
+          "lineNumber": 102
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useMemo",
+          "lineNumber": 105
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "subjects.forEach",
+          "lineNumber": 107
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "passed.has",
+          "lineNumber": 107
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "initialPassed.has",
+          "lineNumber": 107
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useMemo",
+          "lineNumber": 111
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "search.trim().toLowerCase",
+          "lineNumber": 112
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "search.trim",
+          "lineNumber": 112
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "subjects.filter",
+          "lineNumber": 113
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "s.code.toLowerCase().includes",
+          "lineNumber": 116
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "s.code.toLowerCase",
+          "lineNumber": 116
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "s.name.toLowerCase().includes",
+          "lineNumber": 116
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "s.name.toLowerCase",
+          "lineNumber": 116
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useMemo",
+          "lineNumber": 120
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "subjects.filter",
+          "lineNumber": 120
+        },
+        {
+          "caller": "toggle",
+          "callee": "setPassed",
+          "lineNumber": 123
+        },
+        {
+          "caller": "toggle",
+          "callee": "next.has",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toggle",
+          "callee": "next.delete",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toggle",
+          "callee": "next.add",
+          "lineNumber": 125
+        },
+        {
+          "caller": "selectAllVisible",
+          "callee": "setPassed",
+          "lineNumber": 130
+        },
+        {
+          "caller": "selectAllVisible",
+          "callee": "visible.forEach",
+          "lineNumber": 132
+        },
+        {
+          "caller": "selectAllVisible",
+          "callee": "next.add",
+          "lineNumber": 132
+        },
+        {
+          "caller": "clearVisible",
+          "callee": "setPassed",
+          "lineNumber": 136
+        },
+        {
+          "caller": "clearVisible",
+          "callee": "visible.forEach",
+          "lineNumber": 138
+        },
+        {
+          "caller": "clearVisible",
+          "callee": "next.delete",
+          "lineNumber": 138
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "useState",
+          "lineNumber": 142
+        },
+        {
+          "caller": "applyTerm",
+          "callee": "setSelectedTerm",
+          "lineNumber": 145
+        },
+        {
+          "caller": "applyTerm",
+          "callee": "setPassed",
+          "lineNumber": 146
+        },
+        {
+          "caller": "applyTerm",
+          "callee": "subjects.forEach",
+          "lineNumber": 148
+        },
+        {
+          "caller": "applyTerm",
+          "callee": "next.add",
+          "lineNumber": 148
+        },
+        {
+          "caller": "save",
+          "callee": "setSaving",
+          "lineNumber": 155
+        },
+        {
+          "caller": "save",
+          "callee": "subjects\r\n        .filter(s => passed.has(s.code) !== initialPassed.has(s.code))\r\n        .map",
+          "lineNumber": 157
+        },
+        {
+          "caller": "save",
+          "callee": "subjects\r\n        .filter",
+          "lineNumber": 157
+        },
+        {
+          "caller": "save",
+          "callee": "passed.has",
+          "lineNumber": 158
+        },
+        {
+          "caller": "save",
+          "callee": "initialPassed.has",
+          "lineNumber": 158
+        },
+        {
+          "caller": "save",
+          "callee": "passed.has",
+          "lineNumber": 159
+        },
+        {
+          "caller": "save",
+          "callee": "roadmapApi.updateFptSubjects",
+          "lineNumber": 160
+        },
+        {
+          "caller": "save",
+          "callee": "applyResponse",
+          "lineNumber": 161
+        },
+        {
+          "caller": "save",
+          "callee": "Array.isArray",
+          "lineNumber": 162
+        },
+        {
+          "caller": "save",
+          "callee": "toast.success",
+          "lineNumber": 163
+        },
+        {
+          "caller": "save",
+          "callee": "onApplied",
+          "lineNumber": 166
+        },
+        {
+          "caller": "save",
+          "callee": "console.error",
+          "lineNumber": 168
+        },
+        {
+          "caller": "save",
+          "callee": "toast.error",
+          "lineNumber": 169
+        },
+        {
+          "caller": "save",
+          "callee": "setSaving",
+          "lineNumber": 171
+        },
+        {
+          "caller": "changeCurriculum",
+          "callee": "setSwitching",
+          "lineNumber": 177
+        },
+        {
+          "caller": "changeCurriculum",
+          "callee": "roadmapApi.setCurriculum",
+          "lineNumber": 179
+        },
+        {
+          "caller": "changeCurriculum",
+          "callee": "applyResponse",
+          "lineNumber": 180
+        },
+        {
+          "caller": "changeCurriculum",
+          "callee": "toast.success",
+          "lineNumber": 181
+        },
+        {
+          "caller": "changeCurriculum",
+          "callee": "onApplied",
+          "lineNumber": 182
+        },
+        {
+          "caller": "changeCurriculum",
+          "callee": "console.error",
+          "lineNumber": 184
+        },
+        {
+          "caller": "changeCurriculum",
+          "callee": "toast.error",
+          "lineNumber": 185
+        },
+        {
+          "caller": "changeCurriculum",
+          "callee": "setSwitching",
+          "lineNumber": 187
+        },
+        {
+          "caller": "optionLabel",
+          "callee": "[c.program, cohort].filter(Boolean).join",
+          "lineNumber": 193
+        },
+        {
+          "caller": "optionLabel",
+          "callee": "[c.program, cohort].filter",
+          "lineNumber": 193
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "changeCurriculum",
+          "lineNumber": 230
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "curricula.map",
+          "lineNumber": 234
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "optionLabel",
+          "lineNumber": 235
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "Array.from({ length: maxTerm }, (_, i) => i + 1).map",
+          "lineNumber": 251
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "Array.from",
+          "lineNumber": 251
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "applyTerm",
+          "lineNumber": 257
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "setSearch",
+          "lineNumber": 280
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "setFilter",
+          "lineNumber": 288
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "setFilter",
+          "lineNumber": 294
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "Array.from({ length: 6 }).map",
+          "lineNumber": 312
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "Array.from",
+          "lineNumber": 312
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "visible.map",
+          "lineNumber": 320
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "passed.has",
+          "lineNumber": 321
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "toggle",
+          "lineNumber": 325
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "enName",
+          "lineNumber": 336
+        },
+        {
+          "caller": "FptCurriculumPanel",
+          "callee": "s.skills.map",
+          "lineNumber": 339
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/GradeReportUI.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 181,
+      "nonEmptyLines": 164,
+      "functions": [
+        {
+          "name": "GradeReportUI",
+          "startLine": 62,
+          "endLine": 181,
+          "params": [
+            "{ data }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GradeReportUI",
+          "line": 62,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GradeReportUI",
+          "callee": "data.highlights.map",
+          "lineNumber": 116
+        },
+        {
+          "caller": "GradeReportUI",
+          "callee": "data.improvements.map",
+          "lineNumber": 153
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/MarketPulsePageView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 355,
+      "nonEmptyLines": 329,
+      "functions": [
+        {
+          "name": "MarketPulsePageView",
+          "startLine": 22,
+          "endLine": 355,
+          "params": [
+            "{ hideLayout = false }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MarketPulsePageView",
+          "line": 22,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useAuth",
+          "lineNumber": 27
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useNavigate",
+          "lineNumber": 28
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 30
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 31
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 33
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useState",
+          "lineNumber": 34
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "React.useEffect",
+          "lineNumber": 36
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "Promise.allSettled",
+          "lineNumber": 39
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "marketPulseApi.getTopHiringCompanies",
+          "lineNumber": 40
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "marketPulseApi.getTrendingSkills",
+          "lineNumber": 41
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "marketPulseApi.getSalaryOverview",
+          "lineNumber": 42
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "marketPulseApi.getRecruitmentPosts",
+          "lineNumber": 43
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "setTopCompanies",
+          "lineNumber": 51
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "setTrendingSkills",
+          "lineNumber": 52
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "setSalaryOverview",
+          "lineNumber": 53
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "(Array.isArray(postsData) ? postsData : []).map",
+          "lineNumber": 59
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "Array.isArray",
+          "lineNumber": 59
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "normalizeTags",
+          "lineNumber": 62
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "setRecruitmentPosts",
+          "lineNumber": 65
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "console.error",
+          "lineNumber": 67
+        },
+        {
+          "caller": "fetchDashboardData",
+          "callee": "setLoading",
+          "lineNumber": 69
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "fetchDashboardData",
+          "lineNumber": 72
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useMemo",
+          "lineNumber": 75
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "recruitmentPosts.forEach",
+          "lineNumber": 83
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.recruitment?.tags?.forEach",
+          "lineNumber": 84
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "tag.toLowerCase",
+          "lineNumber": 85
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 86
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 86
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 86
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 86
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "groups['Experience'].add",
+          "lineNumber": 87
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 88
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 88
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 88
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 88
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 88
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 88
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "groups['Education'].add",
+          "lineNumber": 89
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "lowerTag.includes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "groups['Perks & Benefits'].add",
+          "lineNumber": 91
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "groups['Roles & Skills'].add",
+          "lineNumber": 93
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "Object.entries(groups)\r\n      .map(([category, tagsSet]) => ({\r\n        category,\r\n        tags: Array.from(tagsSet).sort()\r\n      }))\r\n      .filter",
+          "lineNumber": 98
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "Object.entries(groups)\r\n      .map",
+          "lineNumber": 98
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "Object.entries",
+          "lineNumber": 98
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "Array.from(tagsSet).sort",
+          "lineNumber": 101
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "Array.from",
+          "lineNumber": 101
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "useMemo",
+          "lineNumber": 106
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "recruitmentPosts.filter",
+          "lineNumber": 107
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.recruitment?.title?.toLowerCase().includes",
+          "lineNumber": 108
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.recruitment?.title?.toLowerCase",
+          "lineNumber": 108
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "searchTerm.toLowerCase",
+          "lineNumber": 108
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.company?.name?.toLowerCase().includes",
+          "lineNumber": 109
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.company?.name?.toLowerCase",
+          "lineNumber": 109
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "searchTerm.toLowerCase",
+          "lineNumber": 109
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.recruitment?.tags?.some",
+          "lineNumber": 110
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "tag.toLowerCase().includes",
+          "lineNumber": 110
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "tag.toLowerCase",
+          "lineNumber": 110
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "searchTerm.toLowerCase",
+          "lineNumber": 110
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.recruitment?.tags?.includes",
+          "lineNumber": 111
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "result.sort",
+          "lineNumber": 115
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "new Date(a.recruitment?.application_deadline || 0).getTime",
+          "lineNumber": 116
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "new Date(b.recruitment?.application_deadline || 0).getTime",
+          "lineNumber": 117
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "navigate",
+          "lineNumber": 132
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "[1,2,3,4,5].map",
+          "lineNumber": 168
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "setTrendingTimeRange",
+          "lineNumber": 187
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "setSearchTerm",
+          "lineNumber": 231
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "setSelectedTag",
+          "lineNumber": 239
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "tagGroups.map",
+          "lineNumber": 242
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "group.tags.map",
+          "lineNumber": 244
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "setSortOrder",
+          "lineNumber": 251
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "[1, 2, 3, 4, 5].map",
+          "lineNumber": 262
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "filteredData.map",
+          "lineNumber": 272
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.recruitment.tags.slice(0, 3).map",
+          "lineNumber": 312
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "post.recruitment.tags.slice",
+          "lineNumber": 312
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "new Date(post.recruitment.application_deadline).toLocaleDateString",
+          "lineNumber": 326
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "e.preventDefault",
+          "lineNumber": 335
+        },
+        {
+          "caller": "MarketPulsePageView",
+          "callee": "window.open",
+          "lineNumber": 337
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapRecommendationsPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 212,
+      "nonEmptyLines": 194,
+      "functions": [
+        {
+          "name": "formatConfidence",
+          "startLine": 16,
+          "endLine": 17,
+          "params": [
+            "confidence"
+          ]
+        },
+        {
+          "name": "RoadmapRecommendationsPanel",
+          "startLine": 24,
+          "endLine": 210,
+          "params": [
+            "{ hasCareer, onApplied, refreshSignal }"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "formatConfidence",
+          "callee": "Math.round",
+          "lineNumber": 17
+        },
+        {
+          "caller": "formatConfidence",
+          "callee": "Number",
+          "lineNumber": 17
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "useState",
+          "lineNumber": 28
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "useCallback",
+          "lineNumber": 31
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "setIsLoading",
+          "lineNumber": 32
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "roadmapApi.getPendingRecommendations",
+          "lineNumber": 34
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "setRecommendations",
+          "lineNumber": 35
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "Array.isArray",
+          "lineNumber": 35
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "console.error",
+          "lineNumber": 37
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "setIsLoading",
+          "lineNumber": 39
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "useEffect",
+          "lineNumber": 43
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "loadPending",
+          "lineNumber": 45
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "setRecommendations",
+          "lineNumber": 47
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setIsGenerating",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "roadmapApi.generateRecommendations",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "Array.isArray",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "toast.info",
+          "lineNumber": 58
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "toast.success",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setIsCollapsed",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "loadPending",
+          "lineNumber": 63
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "console.error",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setIsGenerating",
+          "lineNumber": 67
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "setDecidingId",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "roadmapApi.acceptRecommendation",
+          "lineNumber": 76
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "roadmapApi.rejectRecommendation",
+          "lineNumber": 77
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "setRecommendations",
+          "lineNumber": 80
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "prev.filter",
+          "lineNumber": 80
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "toast.success",
+          "lineNumber": 83
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "onApplied",
+          "lineNumber": 88
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "toast.info",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "console.error",
+          "lineNumber": 93
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "setDecidingId",
+          "lineNumber": 95
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "setIsCollapsed",
+          "lineNumber": 108
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "setIsCollapsed",
+          "lineNumber": 142
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "formatConfidence",
+          "lineNumber": 155
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "formatConfidence",
+          "lineNumber": 157
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "current.items.map",
+          "lineNumber": 167
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "handleDecision",
+          "lineNumber": 190
+        },
+        {
+          "caller": "RoadmapRecommendationsPanel",
+          "callee": "handleDecision",
+          "lineNumber": 200
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentDashboardView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 119,
+      "nonEmptyLines": 106,
+      "functions": [
+        {
+          "name": "StudentDashboardView",
+          "startLine": 24,
+          "endLine": 119,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentDashboardView",
+          "line": 24,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StudentDashboardView",
+          "callee": "useAuth",
+          "lineNumber": 25
+        },
+        {
+          "caller": "StudentDashboardView",
+          "callee": "useNavigate",
+          "lineNumber": 26
+        },
+        {
+          "caller": "StudentDashboardView",
+          "callee": "useRef",
+          "lineNumber": 27
+        },
+        {
+          "caller": "StudentDashboardView",
+          "callee": "useStudentSetup",
+          "lineNumber": 28
+        },
+        {
+          "caller": "StudentDashboardView",
+          "callee": "useGSAP",
+          "lineNumber": 30
+        },
+        {
+          "caller": "StudentDashboardView",
+          "callee": "gsap.from",
+          "lineNumber": 33
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 44
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StudentDashboardView",
+          "callee": "navigate",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentDashboardWidgets.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 708,
+      "nonEmptyLines": 649,
+      "functions": [
+        {
+          "name": "LoadingState",
+          "startLine": 41,
+          "endLine": 51,
+          "params": [
+            "{ rows = 3 }"
+          ]
+        },
+        {
+          "name": "EmptyState",
+          "startLine": 53,
+          "endLine": 61,
+          "params": [
+            "{ title, description }"
+          ]
+        },
+        {
+          "name": "StudentWelcomeHeader",
+          "startLine": 64,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "CurrentProgressBanner",
+          "startLine": 124,
+          "endLine": 185,
+          "params": []
+        },
+        {
+          "name": "buildPageList",
+          "startLine": 188,
+          "endLine": 201,
+          "params": [
+            "current",
+            "total"
+          ]
+        },
+        {
+          "name": "ShortcutSuggestions",
+          "startLine": 206,
+          "endLine": 344,
+          "params": []
+        },
+        {
+          "name": "ActionableListWidget",
+          "startLine": 348,
+          "endLine": 474,
+          "params": []
+        },
+        {
+          "name": "QuickStatsWidget",
+          "startLine": 477,
+          "endLine": 499,
+          "params": []
+        },
+        {
+          "name": "MarketDemandChartWidget",
+          "startLine": 502,
+          "endLine": 566,
+          "params": []
+        },
+        {
+          "name": "barColor",
+          "startLine": 582,
+          "endLine": 583,
+          "params": [
+            "pct"
+          ]
+        },
+        {
+          "name": "SkillProgressRow",
+          "startLine": 585,
+          "endLine": 608,
+          "params": [
+            "{ row }"
+          ]
+        },
+        {
+          "name": "SkillMatchWidget",
+          "startLine": 610,
+          "endLine": 707,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentWelcomeHeader",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "CurrentProgressBanner",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "ActionableListWidget",
+          "line": 348,
+          "isDefault": false
+        },
+        {
+          "name": "QuickStatsWidget",
+          "line": 477,
+          "isDefault": false
+        },
+        {
+          "name": "MarketDemandChartWidget",
+          "line": 502,
+          "isDefault": false
+        },
+        {
+          "name": "SkillMatchWidget",
+          "line": 610,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LoadingState",
+          "callee": "Array.from({ length: rows }).map",
+          "lineNumber": 43
+        },
+        {
+          "caller": "LoadingState",
+          "callee": "Array.from",
+          "lineNumber": 43
+        },
+        {
+          "caller": "StudentWelcomeHeader",
+          "callee": "useAuth",
+          "lineNumber": 65
+        },
+        {
+          "caller": "StudentWelcomeHeader",
+          "callee": "useDashboardData",
+          "lineNumber": 67
+        },
+        {
+          "caller": "StudentWelcomeHeader",
+          "callee": "studentDashboardService.getStudentRoadmap",
+          "lineNumber": 68
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "useNavigate",
+          "lineNumber": 125
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "useRoadmapProgress",
+          "lineNumber": 126
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "Math.max",
+          "lineNumber": 129
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "steps.findIndex",
+          "lineNumber": 129
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "useState",
+          "lineNumber": 131
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "navigate",
+          "lineNumber": 158
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "setBrowseIdx",
+          "lineNumber": 166
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "Math.max",
+          "lineNumber": 166
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "setBrowseIdx",
+          "lineNumber": 174
+        },
+        {
+          "caller": "CurrentProgressBanner",
+          "callee": "Math.min",
+          "lineNumber": 174
+        },
+        {
+          "caller": "buildPageList",
+          "callee": "Array.from",
+          "lineNumber": 189
+        },
+        {
+          "caller": "buildPageList",
+          "callee": "[1, total, current, current - 1, current + 1]\n    .filter",
+          "lineNumber": 190
+        },
+        {
+          "caller": "buildPageList",
+          "callee": "Array.from(new Set(wanted)).sort",
+          "lineNumber": 192
+        },
+        {
+          "caller": "buildPageList",
+          "callee": "Array.from",
+          "lineNumber": 192
+        },
+        {
+          "caller": "buildPageList",
+          "callee": "out.push",
+          "lineNumber": 196
+        },
+        {
+          "caller": "buildPageList",
+          "callee": "out.push",
+          "lineNumber": 197
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "useRoadmapProgress",
+          "lineNumber": 207
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "useState",
+          "lineNumber": 208
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "useState",
+          "lineNumber": 209
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "useState",
+          "lineNumber": 210
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "useState",
+          "lineNumber": 211
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "useCallback",
+          "lineNumber": 213
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "setLoading",
+          "lineNumber": 214
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "roadmapApi.getPendingRecommendations",
+          "lineNumber": 216
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "setRecs",
+          "lineNumber": 217
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "Array.isArray",
+          "lineNumber": 217
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "console.error",
+          "lineNumber": 219
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "setLoading",
+          "lineNumber": 221
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "useEffect",
+          "lineNumber": 225
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "loadPending",
+          "lineNumber": 225
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setGenerating",
+          "lineNumber": 229
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "roadmapApi.generateRecommendations",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "Array.isArray",
+          "lineNumber": 232
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "toast[created.length === 0 ? \"info\" : \"success\"]",
+          "lineNumber": 233
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "loadPending",
+          "lineNumber": 238
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "console.error",
+          "lineNumber": 240
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setGenerating",
+          "lineNumber": 242
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "setDecidingId",
+          "lineNumber": 248
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "roadmapApi.acceptRecommendation",
+          "lineNumber": 251
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "roadmapApi.rejectRecommendation",
+          "lineNumber": 252
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "setRecs",
+          "lineNumber": 254
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "prev.filter",
+          "lineNumber": 254
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "toast.success",
+          "lineNumber": 256
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "reload",
+          "lineNumber": 259
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "toast.info",
+          "lineNumber": 261
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "console.error",
+          "lineNumber": 264
+        },
+        {
+          "caller": "handleDecision",
+          "callee": "setDecidingId",
+          "lineNumber": 266
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "recs.map",
+          "lineNumber": 293
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "Math.round",
+          "lineNumber": 295
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "Number",
+          "lineNumber": 295
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "rec.items.map",
+          "lineNumber": 312
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "handleDecision",
+          "lineNumber": 325
+        },
+        {
+          "caller": "ShortcutSuggestions",
+          "callee": "handleDecision",
+          "lineNumber": 332
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "useNavigate",
+          "lineNumber": 349
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "useState",
+          "lineNumber": 350
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "useState",
+          "lineNumber": 351
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "useRoadmapProgress",
+          "lineNumber": 354
+        },
+        {
+          "caller": "handleTabSwitch",
+          "callee": "setActiveTab",
+          "lineNumber": 357
+        },
+        {
+          "caller": "handleTabSwitch",
+          "callee": "setPage",
+          "lineNumber": 358
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "(roadmap?.steps ?? []).filter",
+          "lineNumber": 364
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "pending.slice",
+          "lineNumber": 365
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "Math.ceil",
+          "lineNumber": 368
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "upNext.slice",
+          "lineNumber": 369
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "handleTabSwitch",
+          "lineNumber": 378
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "handleTabSwitch",
+          "lineNumber": 383
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "currentData.map",
+          "lineNumber": 402
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "navigate",
+          "lineNumber": 422
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "setPage",
+          "lineNumber": 435
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "Math.max",
+          "lineNumber": 435
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "buildPageList(page, totalPages).map",
+          "lineNumber": 444
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "buildPageList",
+          "lineNumber": 444
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "setPage",
+          "lineNumber": 450
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "setPage",
+          "lineNumber": 460
+        },
+        {
+          "caller": "ActionableListWidget",
+          "callee": "Math.min",
+          "lineNumber": 460
+        },
+        {
+          "caller": "QuickStatsWidget",
+          "callee": "useRoadmapProgress",
+          "lineNumber": 478
+        },
+        {
+          "caller": "QuickStatsWidget",
+          "callee": "data?.steps?.filter",
+          "lineNumber": 480
+        },
+        {
+          "caller": "QuickStatsWidget",
+          "callee": "data?.steps?.filter",
+          "lineNumber": 481
+        },
+        {
+          "caller": "MarketDemandChartWidget",
+          "callee": "useDashboardData",
+          "lineNumber": 503
+        },
+        {
+          "caller": "MarketDemandChartWidget",
+          "callee": "studentDashboardService.getMarketDemand",
+          "lineNumber": 504
+        },
+        {
+          "caller": "MarketDemandChartWidget",
+          "callee": "Array(7 - rawChart.length).fill",
+          "lineNumber": 510
+        },
+        {
+          "caller": "MarketDemandChartWidget",
+          "callee": "Array",
+          "lineNumber": 510
+        },
+        {
+          "caller": "MarketDemandChartWidget",
+          "callee": "rawChart.map",
+          "lineNumber": 513
+        },
+        {
+          "caller": "SkillProgressRow",
+          "callee": "barColor",
+          "lineNumber": 594
+        },
+        {
+          "caller": "SkillProgressRow",
+          "callee": "Math.round",
+          "lineNumber": 595
+        },
+        {
+          "caller": "SkillProgressRow",
+          "callee": "Math.max",
+          "lineNumber": 601
+        },
+        {
+          "caller": "SkillProgressRow",
+          "callee": "barColor",
+          "lineNumber": 601
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "useDashboardData",
+          "lineNumber": 611
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "studentDashboardService.compareRoadmapSkills",
+          "lineNumber": 612
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "useState",
+          "lineNumber": 614
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "data?.selectedSkills.map",
+          "lineNumber": 616
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "(data?.requiredSkills ?? []).map",
+          "lineNumber": 618
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "selectedIds.has",
+          "lineNumber": 621
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "String(importanceLevel || \"AVG\").toUpperCase",
+          "lineNumber": 622
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "String",
+          "lineNumber": 622
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "rows.filter",
+          "lineNumber": 632
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "Math.round",
+          "lineNumber": 633
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "rows.reduce",
+          "lineNumber": 633
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "rows.filter",
+          "lineNumber": 635
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "setGapsOnly",
+          "lineNumber": 643
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "IMPORTANCE_GROUPS.map",
+          "lineNumber": 679
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "visible\n                  .filter((r) => r.importance === group.key)\n                  .sort",
+          "lineNumber": 680
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "visible\n                  .filter",
+          "lineNumber": 680
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "groupRows.filter",
+          "lineNumber": 692
+        },
+        {
+          "caller": "SkillMatchWidget",
+          "callee": "groupRows.map",
+          "lineNumber": 696
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 6,
+        "functionCount": 12,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentFeedbackPageView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 154,
+      "nonEmptyLines": 143,
+      "functions": [
+        {
+          "name": "StudentFeedbackPageView",
+          "startLine": 11,
+          "endLine": 154,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentFeedbackPageView",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "useAuth",
+          "lineNumber": 12
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "useNavigate",
+          "lineNumber": 13
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "useEffect",
+          "lineNumber": 22
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "studentApi.getFeedback()\r\n      .then(res => setFeedbackList(res))\r\n      .catch(() => setFeedbackList([]))\r\n      .finally",
+          "lineNumber": 23
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "studentApi.getFeedback()\r\n      .then(res => setFeedbackList(res))\r\n      .catch",
+          "lineNumber": 23
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "studentApi.getFeedback()\r\n      .then",
+          "lineNumber": 23
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "studentApi.getFeedback",
+          "lineNumber": 23
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "setFeedbackList",
+          "lineNumber": 24
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "setFeedbackList",
+          "lineNumber": 25
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "setIsLoading",
+          "lineNumber": 26
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 30
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 31
+        },
+        {
+          "caller": "handleSendReply",
+          "callee": "replyContent.trim",
+          "lineNumber": 35
+        },
+        {
+          "caller": "handleSendReply",
+          "callee": "setIsReplying",
+          "lineNumber": 36
+        },
+        {
+          "caller": "handleSendReply",
+          "callee": "studentApi.replyFeedback",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleSendReply",
+          "callee": "setReplySuccess",
+          "lineNumber": 39
+        },
+        {
+          "caller": "handleSendReply",
+          "callee": "setReplyContent",
+          "lineNumber": 40
+        },
+        {
+          "caller": "handleSendReply",
+          "callee": "console.error",
+          "lineNumber": 42
+        },
+        {
+          "caller": "handleSendReply",
+          "callee": "setIsReplying",
+          "lineNumber": 44
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "feedbackList.map",
+          "lineNumber": 81
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "new Date(item.submittedAt).toLocaleDateString",
+          "lineNumber": 95
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "setReplyContent",
+          "lineNumber": 128
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "handleSendReply",
+          "lineNumber": 133
+        },
+        {
+          "caller": "StudentFeedbackPageView",
+          "callee": "replyContent.trim",
+          "lineNumber": 134
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentHeader.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 122,
+      "nonEmptyLines": 114,
+      "functions": [
+        {
+          "name": "StudentHeader",
+          "startLine": 14,
+          "endLine": 122,
+          "params": [
+            "{ user, onLogout, onOpenAiMentor }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentHeader",
+          "line": 14,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StudentHeader",
+          "callee": "useLocation",
+          "lineNumber": 15
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "useNavigate",
+          "lineNumber": 21
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "navigate",
+          "lineNumber": 24
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "location.pathname.startsWith",
+          "lineNumber": 25
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "navigate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "location.pathname.startsWith",
+          "lineNumber": 26
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "navigate",
+          "lineNumber": 26
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "location.pathname.startsWith",
+          "lineNumber": 27
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "navigate",
+          "lineNumber": 27
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "location.pathname.startsWith",
+          "lineNumber": 29
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "navigate",
+          "lineNumber": 29
+        },
+        {
+          "caller": "StudentHeader",
+          "callee": "navigate",
+          "lineNumber": 115
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/market-pulse/SalaryOverviewChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 95,
+      "functions": [
+        {
+          "name": "renderActiveShape",
+          "startLine": 12,
+          "endLine": 44,
+          "params": [
+            "props"
+          ]
+        },
+        {
+          "name": "SalaryOverviewChart",
+          "startLine": 46,
+          "endLine": 104,
+          "params": [
+            "{ data }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SalaryOverviewChart",
+          "line": 46,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "renderActiveShape",
+          "callee": "(percent * 100).toFixed",
+          "lineNumber": 21
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "useState",
+          "lineNumber": 47
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "brackets.some",
+          "lineNumber": 51
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "Number",
+          "lineNumber": 51
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "React.useMemo",
+          "lineNumber": 53
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "brackets.forEach",
+          "lineNumber": 55
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "String",
+          "lineNumber": 56
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "labelStr.replace",
+          "lineNumber": 57
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "setActiveIndex",
+          "lineNumber": 89
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "brackets.map",
+          "lineNumber": 91
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "String",
+          "lineNumber": 92
+        },
+        {
+          "caller": "SalaryOverviewChart",
+          "callee": "labelStr.replace",
+          "lineNumber": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/market-pulse/TopHiringCompaniesChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "TopHiringCompaniesChart",
+          "startLine": 9,
+          "endLine": 55,
+          "params": [
+            "{ data }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TopHiringCompaniesChart",
+          "line": 9,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TopHiringCompaniesChart",
+          "callee": "Math.max",
+          "lineNumber": 13
+        },
+        {
+          "caller": "TopHiringCompaniesChart",
+          "callee": "data.map",
+          "lineNumber": 13
+        },
+        {
+          "caller": "TopHiringCompaniesChart",
+          "callee": "data.map",
+          "lineNumber": 17
+        },
+        {
+          "caller": "TopHiringCompaniesChart",
+          "callee": "window.open",
+          "lineNumber": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/market-pulse/TrendingSkillsChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 102,
+      "nonEmptyLines": 92,
+      "functions": [
+        {
+          "name": "TrendingSkillsChart",
+          "startLine": 12,
+          "endLine": 102,
+          "params": [
+            "{ data }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "TrendingSkillsChart",
+          "line": 12,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "useMemo",
+          "lineNumber": 15
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "displayData.forEach",
+          "lineNumber": 18
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "skill.dataPoints.forEach",
+          "lineNumber": 19
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "dateMap.get",
+          "lineNumber": 20
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "Number",
+          "lineNumber": 23
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "dateMap.set",
+          "lineNumber": 24
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "Array.from(dateMap.values()).sort",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "Array.from",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "dateMap.values",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "new Date(a.date).getTime",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "new Date(b.date).getTime",
+          "lineNumber": 28
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "useMemo",
+          "lineNumber": 31
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "displayData.map",
+          "lineNumber": 31
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "useMemo",
+          "lineNumber": 33
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "skillNames.forEach",
+          "lineNumber": 35
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "String",
+          "lineNumber": 36
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "labelStr.replace",
+          "lineNumber": 37
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "d.getMonth",
+          "lineNumber": 68
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "d.getDate",
+          "lineNumber": 68
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "skillNames.map",
+          "lineNumber": 82
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "String",
+          "lineNumber": 83
+        },
+        {
+          "caller": "TrendingSkillsChart",
+          "callee": "labelStr.replace",
+          "lineNumber": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/marketPulse.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 48,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/hooks/useDebounce.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "useDebounce",
+          "startLine": 3,
+          "endLine": 17,
+          "params": [
+            "value",
+            "delay"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useDebounce",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useDebounce",
+          "callee": "useState",
+          "lineNumber": 4
+        },
+        {
+          "caller": "useDebounce",
+          "callee": "useEffect",
+          "lineNumber": 6
+        },
+        {
+          "caller": "useDebounce",
+          "callee": "setTimeout",
+          "lineNumber": 7
+        },
+        {
+          "caller": "useDebounce",
+          "callee": "setDebouncedValue",
+          "lineNumber": 8
+        },
+        {
+          "caller": "useDebounce",
+          "callee": "clearTimeout",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/hooks/useSkillAssessment.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 131,
+      "nonEmptyLines": 114,
+      "functions": [
+        {
+          "name": "normalizeSkills",
+          "startLine": 11,
+          "endLine": 22,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "useSkillAssessment",
+          "startLine": 24,
+          "endLine": 131,
+          "params": [
+            "isOpen",
+            "onClose"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useSkillAssessment",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normalizeSkills",
+          "callee": "Array.isArray",
+          "lineNumber": 12
+        },
+        {
+          "caller": "normalizeSkills",
+          "callee": "Array.isArray",
+          "lineNumber": 17
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "useAuth",
+          "lineNumber": 25
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "useState",
+          "lineNumber": 28
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "useState",
+          "lineNumber": 30
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "useEffect",
+          "lineNumber": 32
+        },
+        {
+          "caller": "fetchSkills",
+          "callee": "setIsLoading",
+          "lineNumber": 38
+        },
+        {
+          "caller": "fetchSkills",
+          "callee": "skillApi.getSkills",
+          "lineNumber": 40
+        },
+        {
+          "caller": "fetchSkills",
+          "callee": "setSkills",
+          "lineNumber": 44
+        },
+        {
+          "caller": "fetchSkills",
+          "callee": "console.error",
+          "lineNumber": 47
+        },
+        {
+          "caller": "fetchSkills",
+          "callee": "setIsLoading",
+          "lineNumber": 50
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "fetchSkills",
+          "lineNumber": 55
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "useEffect",
+          "lineNumber": 62
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "searchQuery.trim",
+          "lineNumber": 65
+        },
+        {
+          "caller": "filterSkills",
+          "callee": "setIsLoading",
+          "lineNumber": 70
+        },
+        {
+          "caller": "filterSkills",
+          "callee": "skillApi.searchSkills",
+          "lineNumber": 72
+        },
+        {
+          "caller": "filterSkills",
+          "callee": "setSkills",
+          "lineNumber": 76
+        },
+        {
+          "caller": "filterSkills",
+          "callee": "console.error",
+          "lineNumber": 79
+        },
+        {
+          "caller": "filterSkills",
+          "callee": "setIsLoading",
+          "lineNumber": 82
+        },
+        {
+          "caller": "useSkillAssessment",
+          "callee": "filterSkills",
+          "lineNumber": 87
+        },
+        {
+          "caller": "toggleSkill",
+          "callee": "setSelectedSkillIds",
+          "lineNumber": 95
+        },
+        {
+          "caller": "toggleSkill",
+          "callee": "prev.includes",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toggleSkill",
+          "callee": "prev.filter",
+          "lineNumber": 97
+        },
+        {
+          "caller": "handleSave",
+          "callee": "onClose",
+          "lineNumber": 104
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 108
+        },
+        {
+          "caller": "handleSave",
+          "callee": "skillApi.selectSkills",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleSave",
+          "callee": "onClose",
+          "lineNumber": 112
+        },
+        {
+          "caller": "handleSave",
+          "callee": "console.error",
+          "lineNumber": 114
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 116
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/hooks/useStudentOnboarding.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 155,
+      "nonEmptyLines": 138,
+      "functions": [
+        {
+          "name": "useStudentOnboarding",
+          "startLine": 16,
+          "endLine": 155,
+          "params": [
+            "isOpen",
+            "onClose"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useStudentOnboarding",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useAuth",
+          "lineNumber": 17
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "useStudentOnboarding",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleNext",
+          "callee": "fullName.trim",
+          "lineNumber": 32
+        },
+        {
+          "caller": "handleNext",
+          "callee": "today.getFullYear",
+          "lineNumber": 43
+        },
+        {
+          "caller": "handleNext",
+          "callee": "birthDate.getFullYear",
+          "lineNumber": 43
+        },
+        {
+          "caller": "handleNext",
+          "callee": "Object.keys",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleNext",
+          "callee": "setErrors",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handleNext",
+          "callee": "setErrors",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleNext",
+          "callee": "setStep",
+          "lineNumber": 54
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setFullName",
+          "lineNumber": 58
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setyob",
+          "lineNumber": 59
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setBio",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setUniversity",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setAdmissionDate",
+          "lineNumber": 62
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setMajor",
+          "lineNumber": 63
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setErrors",
+          "lineNumber": 64
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setStep",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleClose",
+          "callee": "setIsSaving",
+          "lineNumber": 66
+        },
+        {
+          "caller": "handleClose",
+          "callee": "onClose",
+          "lineNumber": 67
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setErrors",
+          "lineNumber": 71
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 72
+        },
+        {
+          "caller": "handleSave",
+          "callee": "parsed.getFullYear",
+          "lineNumber": 85
+        },
+        {
+          "caller": "handleSave",
+          "callee": "birthDate.getFullYear",
+          "lineNumber": 85
+        },
+        {
+          "caller": "handleSave",
+          "callee": "Object.keys",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setErrors",
+          "lineNumber": 91
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 92
+        },
+        {
+          "caller": "handleSave",
+          "callee": "profileApi.updateUserProfile",
+          "lineNumber": 97
+        },
+        {
+          "caller": "handleSave",
+          "callee": "profileApi.updateStudentProfile",
+          "lineNumber": 104
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setStep",
+          "lineNumber": 112
+        },
+        {
+          "caller": "handleSave",
+          "callee": "handleClose",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handleSave",
+          "callee": "isAxiosError",
+          "lineNumber": 115
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setErrors",
+          "lineNumber": 116
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setErrors",
+          "lineNumber": 120
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setErrors",
+          "lineNumber": 124
+        },
+        {
+          "caller": "handleSave",
+          "callee": "getErrorMessage",
+          "lineNumber": 125
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 129
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

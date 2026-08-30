@@ -1,0 +1,171 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "language": "java",
+      "sizeLines": 226,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "language": "java",
+      "sizeLines": 181,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "language": "java",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CurriculumOptionResponse.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectResponse.java",
+      "language": "java",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java",
+      "language": "java",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java",
+      "language": "java",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java",
+      "language": "java",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "language": "java",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "language": "java",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "language": "java",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java",
+      "language": "java",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "language": "java",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "language": "java",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentFptSubjectRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentCurriculumService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CurriculumOptionResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FptResourceKind.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectSource.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java": []
+  }
+}

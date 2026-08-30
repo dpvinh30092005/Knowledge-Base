@@ -1,0 +1,1203 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "type": "file",
+      "name": "SkillTrendRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "summary": "Spring Data JPA repository for SkillTrend entities, providing lookup by a set of skill IDs ordered by week.",
+      "tags": [
+        "repository",
+        "data-access",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java:SkillTrendRepository",
+      "type": "class",
+      "name": "SkillTrendRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "lineRange": [
+        10,
+        13
+      ],
+      "summary": "Spring Data JPA repository interface for SkillTrend entities.",
+      "tags": [
+        "repository",
+        "data-access"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "type": "file",
+      "name": "JobScrapingScheduler.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "summary": "Scheduled job that triggers TopCV/ITviec scraping via the AI service, then persists the returned companies, recruitments, and recruitment posts transactionally.",
+      "tags": [
+        "scheduler",
+        "background-job",
+        "data-pipeline"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:JobScrapingScheduler",
+      "type": "class",
+      "name": "JobScrapingScheduler",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "lineRange": [
+        26,
+        141
+      ],
+      "summary": "Spring scheduled component orchestrating job scraping and persisting results across multiple repositories.",
+      "tags": [
+        "scheduler",
+        "background-job"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:fetchJobsFromPython",
+      "type": "function",
+      "name": "fetchJobsFromPython",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "lineRange": [
+        44,
+        52
+      ],
+      "summary": "Scheduled entry point that triggers scraping from all configured sources and logs failures.",
+      "tags": [
+        "scheduler",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:fetchJobs",
+      "type": "function",
+      "name": "fetchJobs",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "lineRange": [
+        64,
+        86
+      ],
+      "summary": "Triggers the AI service scrape for a given source and persists the returned scraper response within a transaction.",
+      "tags": [
+        "scheduler",
+        "data-pipeline"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:persistScrapedData",
+      "type": "function",
+      "name": "persistScrapedData",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "lineRange": [
+        88,
+        140
+      ],
+      "summary": "Upserts scraped companies, recruitments, and recruitment posts into their respective repositories, parsing dates and deduplicating existing posts.",
+      "tags": [
+        "data-pipeline",
+        "persistence"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "type": "file",
+      "name": "RemoveOverdueJobScheduler.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "summary": "Scheduled job that periodically deletes recruitment posts whose expiry date has passed.",
+      "tags": [
+        "scheduler",
+        "background-job",
+        "cleanup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java:RemoveOverdueJobScheduler",
+      "type": "class",
+      "name": "RemoveOverdueJobScheduler",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "lineRange": [
+        12,
+        27
+      ],
+      "summary": "Spring scheduled component that cleans up expired recruitment posts.",
+      "tags": [
+        "scheduler",
+        "background-job"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java:removeOverdueRecruitmentPosts",
+      "type": "function",
+      "name": "removeOverdueRecruitmentPosts",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "lineRange": [
+        20,
+        26
+      ],
+      "summary": "Scheduled task that deletes all recruitment posts whose expiry date is before today.",
+      "tags": [
+        "scheduler",
+        "cleanup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "type": "file",
+      "name": "SkillExtractionScheduler.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "summary": "Scheduled job that triggers skill extraction and rebuilding of skill-trend aggregates from current recruitment postings.",
+      "tags": [
+        "scheduler",
+        "background-job",
+        "ai-integration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java:SkillExtractionScheduler",
+      "type": "class",
+      "name": "SkillExtractionScheduler",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "lineRange": [
+        9,
+        27
+      ],
+      "summary": "Spring scheduled component that triggers periodic skill extraction and trend rebuilding.",
+      "tags": [
+        "scheduler",
+        "background-job"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java:runSkillExtractionJob",
+      "type": "function",
+      "name": "runSkillExtractionJob",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "lineRange": [
+        17,
+        26
+      ],
+      "summary": "Scheduled task that invokes SkillExtractionService to extract skills and rebuild skill-trend aggregates, logging success or failure.",
+      "tags": [
+        "scheduler",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "type": "file",
+      "name": "MarketTrendService.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "summary": "Service interface defining market-trend analytics operations (top hiring companies, skill trends, salary distribution).",
+      "tags": [
+        "service-interface",
+        "market-trends"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java:MarketTrendService",
+      "type": "class",
+      "name": "MarketTrendService",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "lineRange": [
+        7,
+        14
+      ],
+      "summary": "Service interface contract for market-trend analytics operations.",
+      "tags": [
+        "service-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "type": "file",
+      "name": "ScraperService.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "summary": "Service interface defining read operations over scraped recruitment posts, company info, and recruitment info.",
+      "tags": [
+        "service-interface",
+        "recruitment"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java:ScraperService",
+      "type": "class",
+      "name": "ScraperService",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "lineRange": [
+        9,
+        16
+      ],
+      "summary": "Service interface contract for recruitment/company/recruitment-post read operations.",
+      "tags": [
+        "service-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java",
+      "type": "file",
+      "name": "SkillExtractionService.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java",
+      "summary": "Service interface exposing a single operation to extract skills from recruitment postings and rebuild skill-trend aggregates.",
+      "tags": [
+        "service-interface",
+        "ai-integration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java:SkillExtractionService",
+      "type": "class",
+      "name": "SkillExtractionService",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java",
+      "lineRange": [
+        3,
+        6
+      ],
+      "summary": "Service interface contract for the skill extraction and trend-rebuilding operation.",
+      "tags": [
+        "service-interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "type": "file",
+      "name": "MarketTrendServiceImpl.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "summary": "Implements market-trend analytics: top hiring companies via a repository aggregate query, skill trend grouping, and regex-based salary bucket distribution.",
+      "tags": [
+        "service",
+        "market-trends",
+        "analytics"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:MarketTrendServiceImpl",
+      "type": "class",
+      "name": "MarketTrendServiceImpl",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "lineRange": [
+        31,
+        157
+      ],
+      "summary": "Implementation of MarketTrendService providing top-hiring-company, skill-trend, and salary-distribution analytics.",
+      "tags": [
+        "service",
+        "market-trends"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getTopHiringCompanies",
+      "type": "function",
+      "name": "getTopHiringCompanies",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "lineRange": [
+        48,
+        58
+      ],
+      "summary": "Queries the top hiring companies with recruitment counts and maps each row to a CompanyTrendResponse via the mapper.",
+      "tags": [
+        "analytics",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getSkillTrends",
+      "type": "function",
+      "name": "getSkillTrends",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "lineRange": [
+        65,
+        90
+      ],
+      "summary": "Groups all skill trends by skill, resolves skill names, maps each group to a SkillTrendResponse, and returns the top 10 by total demand.",
+      "tags": [
+        "analytics",
+        "data-transformation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getSalaryDistribution",
+      "type": "function",
+      "name": "getSalaryDistribution",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "lineRange": [
+        98,
+        156
+      ],
+      "summary": "Parses free-text salary strings with regex to bucket recruitment postings into salary ranges (under 10M up to over 50M VND).",
+      "tags": [
+        "analytics",
+        "text-parsing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "type": "file",
+      "name": "ScraperServiceImpl.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "summary": "Implements recruitment browsing: joins recruitment posts with company and recruitment entities, flattens tag data, and maps to response DTOs with not-found handling.",
+      "tags": [
+        "service",
+        "recruitment",
+        "data-transformation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:ScraperServiceImpl",
+      "type": "class",
+      "name": "ScraperServiceImpl",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "lineRange": [
+        27,
+        155
+      ],
+      "summary": "Implementation of ScraperService providing recruitment post listing and detail lookups with DTO mapping and not-found handling.",
+      "tags": [
+        "service",
+        "recruitment"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getRecruitmentPosts",
+      "type": "function",
+      "name": "getRecruitmentPosts",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "lineRange": [
+        42,
+        96
+      ],
+      "summary": "Loads all recruitment posts and joins each with its company and recruitment records, flattening tag data into RecruitmentPostResponse DTOs.",
+      "tags": [
+        "data-transformation",
+        "aggregation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getCompanyInfos",
+      "type": "function",
+      "name": "getCompanyInfos",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "lineRange": [
+        105,
+        123
+      ],
+      "summary": "Looks up a company by external ID and maps it to a CompanyResponse, throwing ResourceNotFoundException when absent.",
+      "tags": [
+        "data-access",
+        "error-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getRecruitmentInfos",
+      "type": "function",
+      "name": "getRecruitmentInfos",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "lineRange": [
+        132,
+        154
+      ],
+      "summary": "Looks up a recruitment by external ID and maps it to a RecruitmentResponse, throwing ResourceNotFoundException when absent.",
+      "tags": [
+        "data-access",
+        "error-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "type": "file",
+      "name": "SkillExtractionServiceImpl.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "summary": "Implements skill extraction by building descriptions from all recruitments, calling the AI service to extract skills per posting, then rebuilding weekly SkillTrend aggregates.",
+      "tags": [
+        "service",
+        "ai-integration",
+        "data-pipeline"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:SkillExtractionServiceImpl",
+      "type": "class",
+      "name": "SkillExtractionServiceImpl",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "lineRange": [
+        27,
+        152
+      ],
+      "summary": "Implementation of SkillExtractionService that calls the AI service to extract skills and rebuilds SkillTrend aggregates.",
+      "tags": [
+        "service",
+        "ai-integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:extractAndRebuildSkillTrends",
+      "type": "function",
+      "name": "extractAndRebuildSkillTrends",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "lineRange": [
+        42,
+        151
+      ],
+      "summary": "Builds text descriptions from all recruitment postings, calls the AI service to extract skills per posting, then replaces all SkillTrend rows with freshly aggregated weekly demand counts.",
+      "tags": [
+        "ai-integration",
+        "data-pipeline"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java:SkillTrendRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java:SkillTrendRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:JobScrapingScheduler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:JobScrapingScheduler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:fetchJobsFromPython",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:fetchJobsFromPython",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:fetchJobs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:fetchJobs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:persistScrapedData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:persistScrapedData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java:RemoveOverdueJobScheduler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java:RemoveOverdueJobScheduler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java:removeOverdueRecruitmentPosts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java:removeOverdueRecruitmentPosts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java:SkillExtractionScheduler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java:SkillExtractionScheduler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java:runSkillExtractionJob",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java:runSkillExtractionJob",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java:MarketTrendService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java:MarketTrendService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java:ScraperService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java:ScraperService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java:SkillExtractionService",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java:SkillExtractionService",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:MarketTrendServiceImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:MarketTrendServiceImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getTopHiringCompanies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getTopHiringCompanies",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getSkillTrends",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getSkillTrends",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getSalaryDistribution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getSalaryDistribution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:ScraperServiceImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:ScraperServiceImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getRecruitmentPosts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getRecruitmentPosts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getCompanyInfos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getCompanyInfos",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getRecruitmentInfos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getRecruitmentInfos",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:SkillExtractionServiceImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:SkillExtractionServiceImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:extractAndRebuildSkillTrends",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:extractAndRebuildSkillTrends",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getTopHiringCompanies",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toCompanyTrendResponse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:getSkillTrends",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toSkillTrendResponse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:fetchJobs",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:triggerTopCvScrape",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java:fetchJobs",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:triggerItviecScrape",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:extractAndRebuildSkillTrends",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:extractSkills",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getRecruitmentPosts",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getCompanyInfos",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:getRecruitmentInfos",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:extractAndRebuildSkillTrends",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java:MarketTrendServiceImpl",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java:MarketTrendService",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java:ScraperServiceImpl",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java:ScraperService",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java:SkillExtractionServiceImpl",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java:SkillExtractionService",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    }
+  ]
+}

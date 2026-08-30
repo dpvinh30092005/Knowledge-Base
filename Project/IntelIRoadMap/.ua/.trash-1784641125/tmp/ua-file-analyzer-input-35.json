@@ -1,0 +1,147 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c1-outlined-chip.md",
+      "language": "markdown",
+      "sizeLines": 12,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c2-inline-form-as-cta.md",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c3-typographic-link.md",
+      "language": "markdown",
+      "sizeLines": 8,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c4-sticky-bottom-bar.md",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f1-bento-grid.md",
+      "language": "markdown",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f2-sticky-scroll-stack.md",
+      "language": "markdown",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f3-tabular-spec-sheet.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f4-step-sequence.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f5-annotated-screenshot.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f6-product-card-grid.md",
+      "language": "markdown",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft1-mast-headed.md",
+      "language": "markdown",
+      "sizeLines": 13,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft2-inline-rule-single-line.md",
+      "language": "markdown",
+      "sizeLines": 10,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft3-index-style-category-list.md",
+      "language": "markdown",
+      "sizeLines": 12,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft4-dense-typographic.md",
+      "language": "markdown",
+      "sizeLines": 10,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft5-statement.md",
+      "language": "markdown",
+      "sizeLines": 21,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft6-letter-close.md",
+      "language": "markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft7-newsletter-first.md",
+      "language": "markdown",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft8-marquee-scroll.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h1-marquee.md",
+      "language": "markdown",
+      "sizeLines": 15,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h2-split-diptych.md",
+      "language": "markdown",
+      "sizeLines": 15,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c1-outlined-chip.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c2-inline-form-as-cta.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c3-typographic-link.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c4-sticky-bottom-bar.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f1-bento-grid.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f2-sticky-scroll-stack.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f3-tabular-spec-sheet.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f4-step-sequence.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f5-annotated-screenshot.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f6-product-card-grid.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft1-mast-headed.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft2-inline-rule-single-line.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft3-index-style-category-list.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft4-dense-typographic.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft5-statement.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft6-letter-close.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft7-newsletter-first.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft8-marquee-scroll.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h1-marquee.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h2-split-diptych.md": []
+  }
+}

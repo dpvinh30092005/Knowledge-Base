@@ -1,0 +1,319 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java",
+      "type": "file",
+      "name": "AdminMapper.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java",
+      "summary": "Static mapper that converts admin domain data (user counts, course metrics, User entities) into admin-facing DTOs such as AdminUserMetricResponse and AdminUserListItemResponse.",
+      "tags": ["mapper", "admin", "dto-conversion", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java",
+      "type": "file",
+      "name": "UserMapper.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java",
+      "summary": "Maps a User entity into the public-facing UserResponse DTO used by profile and auth endpoints.",
+      "tags": ["mapper", "utility", "dto-conversion", "user"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java",
+      "type": "file",
+      "name": "OauthAccountRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java",
+      "summary": "Spring Data JPA repository for OauthAccount entities, providing lookup by OAuth provider id and provider name to support account linking.",
+      "tags": ["repository", "data-access", "oauth", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java",
+      "type": "file",
+      "name": "PasswordResetTokenRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java",
+      "summary": "Spring Data JPA repository for PasswordResetToken entities, supporting a locked lookup by token hash and bulk deletion of a user's reset tokens.",
+      "tags": ["repository", "data-access", "password-reset", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "type": "file",
+      "name": "RefreshTokenRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "summary": "Spring Data JPA repository managing RefreshToken persistence, including token lookup, a locked lookup for rotation, and cleanup by user or expiry.",
+      "tags": ["repository", "data-access", "jwt", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "type": "file",
+      "name": "StudentRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "summary": "Spring Data JPA repository for Student entities exposing lookups by user id, career role, portfolio slug availability, and a lightweight info projection.",
+      "tags": ["repository", "data-access", "student", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "type": "file",
+      "name": "UserRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "summary": "Spring Data JPA repository for User entities providing lookups by email, username, role/status filters, a locked lookup for updates, and registration-count queries used by admin metrics.",
+      "tags": ["repository", "data-access", "user", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java",
+      "type": "file",
+      "name": "AuthenticationCookieService.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java",
+      "summary": "Encapsulates creation, reading, and clearing of HTTP-only access/refresh token cookies used for authentication, centralizing cookie naming and expiry logic.",
+      "tags": ["security", "cookie", "authentication", "jwt"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java",
+      "type": "file",
+      "name": "CustomOAuth2User.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java",
+      "summary": "Wraps Spring Security's OAuth2User to attach the application's internal email and role, used as the authenticated principal after OAuth2 login.",
+      "tags": ["security", "oauth2", "principal", "wrapper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java",
+      "type": "file",
+      "name": "HttpCookieOAuth2AuthorizationRequestRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java",
+      "summary": "Custom OAuth2AuthorizationRequestRepository that persists the pending OAuth2 authorization request and post-login redirect URI in signed cookies instead of the HTTP session.",
+      "tags": ["security", "oauth2", "cookie", "stateless"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java",
+      "type": "file",
+      "name": "JwtAuthenticationFilter.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java",
+      "summary": "Servlet filter that extracts and validates the JWT bearer token on each request, loads the corresponding user, and populates the Spring Security context with granted authorities.",
+      "tags": ["security", "jwt", "filter", "middleware"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java:AdminMapper",
+      "type": "class",
+      "name": "AdminMapper",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java",
+      "lineRange": [12, 41],
+      "summary": "Utility class with static methods that build admin DTOs (user metrics, course metrics, user list items) from raw counts and User entities.",
+      "tags": ["mapper", "admin", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java:UserMapper",
+      "type": "class",
+      "name": "UserMapper",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java",
+      "lineRange": [7, 20],
+      "summary": "Utility class exposing a single static method that converts a User entity into a UserResponse DTO.",
+      "tags": ["mapper", "user", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java:OauthAccountRepository",
+      "type": "class",
+      "name": "OauthAccountRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java",
+      "lineRange": [10, 15],
+      "summary": "JPA repository interface for OauthAccount records keyed by provider id and provider name.",
+      "tags": ["repository", "jpa", "oauth"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java:PasswordResetTokenRepository",
+      "type": "class",
+      "name": "PasswordResetTokenRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java",
+      "lineRange": [14, 27],
+      "summary": "JPA repository interface for PasswordResetToken records with a pessimistic-lock lookup and per-user deletion.",
+      "tags": ["repository", "jpa", "password-reset"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java:RefreshTokenRepository",
+      "type": "class",
+      "name": "RefreshTokenRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "lineRange": [15, 37],
+      "summary": "JPA repository interface for RefreshToken records supporting deletion, lookup, and a locked lookup used during token rotation.",
+      "tags": ["repository", "jpa", "jwt"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java:StudentRepository",
+      "type": "class",
+      "name": "StudentRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "lineRange": [20, 55],
+      "summary": "JPA repository interface for Student records with queries for career role, portfolio slug uniqueness, and a lightweight info projection.",
+      "tags": ["repository", "jpa", "student"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java:UserRepository",
+      "type": "class",
+      "name": "UserRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "lineRange": [19, 43],
+      "summary": "JPA repository interface for User records with lookups by email/username, role+status filtering, and registration metrics used by the admin dashboard.",
+      "tags": ["repository", "jpa", "user"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java:AuthenticationCookieService",
+      "type": "class",
+      "name": "AuthenticationCookieService",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java",
+      "lineRange": [16, 79],
+      "summary": "Spring service that builds, reads, and clears the access-token and refresh-token HTTP cookies with configurable secure/SameSite settings.",
+      "tags": ["security", "cookie", "service"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java:CustomOAuth2User",
+      "type": "class",
+      "name": "CustomOAuth2User",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java",
+      "lineRange": [17, 43],
+      "summary": "OAuth2User implementation that delegates to the underlying provider user while exposing the application's email and role.",
+      "tags": ["security", "oauth2", "principal"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java:HttpCookieOAuth2AuthorizationRequestRepository",
+      "type": "class",
+      "name": "HttpCookieOAuth2AuthorizationRequestRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java",
+      "lineRange": [11, 54],
+      "summary": "Stores and retrieves the in-flight OAuth2AuthorizationRequest and post-login redirect target using encoded cookies for stateless OAuth2 flows.",
+      "tags": ["security", "oauth2", "cookie"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java:JwtAuthenticationFilter",
+      "type": "class",
+      "name": "JwtAuthenticationFilter",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java",
+      "lineRange": [25, 138],
+      "summary": "OncePerRequestFilter that parses the Authorization header, validates the JWT, checks account status, and sets the SecurityContext authentication.",
+      "tags": ["security", "jwt", "filter"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java:toUserResponse",
+      "type": "function",
+      "name": "toUserResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java",
+      "lineRange": [10, 19],
+      "summary": "Builds a UserResponse DTO from a User entity's id, email, full name, role, avatar URL, and account type.",
+      "tags": ["mapper", "dto-conversion"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java:addCookie",
+      "type": "function",
+      "name": "addCookie",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java",
+      "lineRange": [63, 78],
+      "summary": "Low-level helper that constructs a ResponseCookie with HttpOnly, secure, SameSite, path, and max-age settings and appends it to the response.",
+      "tags": ["cookie", "security", "helper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java:saveAuthorizationRequest",
+      "type": "function",
+      "name": "saveAuthorizationRequest",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java",
+      "lineRange": [30, 43],
+      "summary": "Persists the OAuth2 authorization request and optional post-login redirect URI into cookies, clearing any prior request cookies first.",
+      "tags": ["oauth2", "cookie", "security"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java:doFilterInternal",
+      "type": "function",
+      "name": "doFilterInternal",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java",
+      "lineRange": [57, 137],
+      "summary": "Core filter logic: extracts the bearer token, validates it, extracts email/role claims, verifies the user's account status, and sets Spring Security authentication with FPT/role authorities before continuing the chain.",
+      "tags": ["jwt", "security", "filter", "authentication"],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java:AdminMapper", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java:UserMapper", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java:toUserResponse", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java:OauthAccountRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java:PasswordResetTokenRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java:RefreshTokenRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java:StudentRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java:UserRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java:AuthenticationCookieService", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java:addCookie", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java:CustomOAuth2User", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java:HttpCookieOAuth2AuthorizationRequestRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java:saveAuthorizationRequest", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java:JwtAuthenticationFilter", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java:doFilterInternal", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java:AdminMapper", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java:UserMapper", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java:OauthAccountRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java:PasswordResetTokenRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java:RefreshTokenRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java:StudentRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java:UserRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java:AuthenticationCookieService", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java:CustomOAuth2User", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java:HttpCookieOAuth2AuthorizationRequestRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java:JwtAuthenticationFilter", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java:saveAuthorizationRequest", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java:deleteCookie", "type": "calls", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/AuthControllerTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 }
+  ]
+}

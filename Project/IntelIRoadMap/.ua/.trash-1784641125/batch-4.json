@@ -1,0 +1,1450 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/App.tsx",
+      "type": "file",
+      "name": "App.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/App.tsx",
+      "summary": "Root React application component that renders the app's route tree and shared UI chrome.",
+      "tags": [
+        "entry-point",
+        "component",
+        "react"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/App.tsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "FrontEnd/intelipath-frontend/src/App.tsx",
+      "lineRange": [
+        4,
+        12
+      ],
+      "summary": "Root component that mounts the router and global UI chrome for the entire application.",
+      "tags": [
+        "entry-point",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/api/careerApi.ts",
+      "type": "file",
+      "name": "careerApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/api/careerApi.ts",
+      "summary": "Thin API client module exposing career-related endpoints via the shared HTTP client.",
+      "tags": [
+        "api-handler",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/api/dashboardApi.ts",
+      "type": "file",
+      "name": "dashboardApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/api/dashboardApi.ts",
+      "summary": "API client module for fetching dashboard data (including mentor feedback) via the shared HTTP client.",
+      "tags": [
+        "api-handler",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/api/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/api/index.ts",
+      "summary": "Barrel file re-exporting all domain-specific API client modules (auth, admin, career, roadmap, student, etc.) for consumption elsewhere in the app.",
+      "tags": [
+        "barrel",
+        "api-handler",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/api/profileApi.ts",
+      "type": "file",
+      "name": "profileApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/api/profileApi.ts",
+      "summary": "API client module handling user profile operations such as avatar updates and profile data retrieval.",
+      "tags": [
+        "api-handler",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/api/roadmapApi.ts",
+      "type": "file",
+      "name": "roadmapApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/api/roadmapApi.ts",
+      "summary": "API client module for fetching and managing learning roadmap data and recommendations.",
+      "tags": [
+        "api-handler",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/api/skillApi.ts",
+      "type": "file",
+      "name": "skillApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/api/skillApi.ts",
+      "summary": "API client module for skill assessment endpoints used by the student skill evaluation flow.",
+      "tags": [
+        "api-handler",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/api/studentApi.ts",
+      "type": "file",
+      "name": "studentApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/api/studentApi.ts",
+      "summary": "API client module covering student-specific operations such as feedback requests and review submissions.",
+      "tags": [
+        "api-handler",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/api/userApi.ts",
+      "type": "file",
+      "name": "userApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/api/userApi.ts",
+      "summary": "Minimal API client module for general user account endpoints via the shared HTTP client.",
+      "tags": [
+        "api-handler",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/app/config/appConfig.ts",
+      "type": "file",
+      "name": "appConfig.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/app/config/appConfig.ts",
+      "summary": "Application configuration constants defining the API base URL, host, and OAuth provider authorization URL builder.",
+      "tags": [
+        "config",
+        "utility",
+        "constants"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "type": "file",
+      "name": "AppRoutes.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "summary": "Central route table declaring all application routes (public, guest-only, and role-protected) and wiring pages to their paths.",
+      "tags": [
+        "routing",
+        "entry-point",
+        "component"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx:AppRoutes",
+      "type": "function",
+      "name": "AppRoutes",
+      "filePath": "FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "lineRange": [
+        14,
+        217
+      ],
+      "summary": "Declares the full application route tree, mapping URL paths to page components with guest and role-protected wrappers.",
+      "tags": [
+        "routing",
+        "entry-point"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "type": "file",
+      "name": "GuestRoute.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "summary": "Route guard component that redirects authenticated users away from guest-only pages such as login and registration.",
+      "tags": [
+        "routing",
+        "middleware",
+        "component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx:GuestRoute",
+      "type": "function",
+      "name": "GuestRoute",
+      "filePath": "FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "lineRange": [
+        11,
+        29
+      ],
+      "summary": "Guards a route so only unauthenticated users can access it, redirecting logged-in users elsewhere.",
+      "tags": [
+        "routing",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "type": "file",
+      "name": "ProtectedRoute.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "summary": "Route guard component that restricts access to authenticated users and enforces role-based access control.",
+      "tags": [
+        "routing",
+        "middleware",
+        "component",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx:ProtectedRoute",
+      "type": "function",
+      "name": "ProtectedRoute",
+      "filePath": "FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "lineRange": [
+        12,
+        39
+      ],
+      "summary": "Guards a route so only authenticated users with an allowed role can access it.",
+      "tags": [
+        "routing",
+        "middleware",
+        "security"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/app/router/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/app/router/index.ts",
+      "summary": "Barrel file re-exporting the router's AppRoutes, ProtectedRoute, and GuestRoute components.",
+      "tags": [
+        "barrel",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/index.ts",
+      "summary": "Top-level barrel file re-exporting shared feature and page components consumed throughout the frontend.",
+      "tags": [
+        "barrel",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx",
+      "type": "file",
+      "name": "AuthCardLayout.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx",
+      "summary": "Layout component providing a centered card container used to wrap authentication-related forms.",
+      "tags": [
+        "component",
+        "layout"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx:AuthCardLayout",
+      "type": "function",
+      "name": "AuthCardLayout",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx",
+      "lineRange": [
+        17,
+        46
+      ],
+      "summary": "Renders a centered card wrapper for authentication form content.",
+      "tags": [
+        "component",
+        "layout"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "type": "file",
+      "name": "AuthLayout.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "summary": "Layout component composing the split-screen authentication page shell, pairing a form area with an illustration panel.",
+      "tags": [
+        "component",
+        "layout"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx:AuthLayout",
+      "type": "function",
+      "name": "AuthLayout",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "lineRange": [
+        16,
+        86
+      ],
+      "summary": "Composes the two-panel authentication page layout, pairing form content with the AbstractIllustration panel.",
+      "tags": [
+        "component",
+        "layout"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx",
+      "type": "file",
+      "name": "AvatarUploadModal.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx",
+      "summary": "Modal component providing drag-and-drop and file-picker avatar upload with client-side validation and error feedback.",
+      "tags": [
+        "component",
+        "modal",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx:AvatarUploadModal",
+      "type": "function",
+      "name": "AvatarUploadModal",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx",
+      "lineRange": [
+        12,
+        133
+      ],
+      "summary": "Modal UI for uploading an avatar image via drag-and-drop or file picker, with type/size validation before upload.",
+      "tags": [
+        "component",
+        "modal",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx",
+      "type": "file",
+      "name": "BaseModal.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx",
+      "summary": "Generic reusable modal shell handling overlay, close behavior, and escape-key dismissal for other modal components.",
+      "tags": [
+        "component",
+        "modal",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx:BaseModal",
+      "type": "function",
+      "name": "BaseModal",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx",
+      "lineRange": [
+        12,
+        50
+      ],
+      "summary": "Generic modal shell rendering an overlay and content container, handling close-on-escape behavior.",
+      "tags": [
+        "component",
+        "modal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "type": "file",
+      "name": "ConfirmModal.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "summary": "Reusable confirmation dialog component supporting configurable labels and a danger/default visual variant, built on BaseModal.",
+      "tags": [
+        "component",
+        "modal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx:ConfirmModal",
+      "type": "function",
+      "name": "ConfirmModal",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "lineRange": [
+        23,
+        75
+      ],
+      "summary": "Renders a confirm/cancel dialog with configurable labels and a danger variant, built atop BaseModal.",
+      "tags": [
+        "component",
+        "modal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/modals/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/modals/index.ts",
+      "summary": "Barrel file re-exporting the BaseModal and AvatarUploadModal components.",
+      "tags": [
+        "barrel",
+        "modal"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx",
+      "type": "file",
+      "name": "AvatarUpload.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx",
+      "summary": "Profile avatar upload widget handling file selection, upload progress, GSAP-driven animation, and syncing the new avatar into the auth context.",
+      "tags": [
+        "component",
+        "profile",
+        "animation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx:AvatarUpload",
+      "type": "function",
+      "name": "AvatarUpload",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx",
+      "lineRange": [
+        13,
+        142
+      ],
+      "summary": "Handles avatar image upload, progress state, GSAP hover/entry animations, and updates the authenticated user's avatar via context.",
+      "tags": [
+        "component",
+        "profile",
+        "animation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx",
+      "type": "file",
+      "name": "AbstractIllustration.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx",
+      "summary": "Decorative SVG-based illustration component rendering an animated node-and-line graphic used on authentication and marketing views.",
+      "tags": [
+        "component",
+        "ui",
+        "illustration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx:AbstractIllustration",
+      "type": "function",
+      "name": "AbstractIllustration",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx",
+      "lineRange": [
+        73,
+        385
+      ],
+      "summary": "Renders an animated SVG network illustration with hoverable nodes, varying by the current auth view (login/register/etc.).",
+      "tags": [
+        "component",
+        "illustration",
+        "ui"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "type": "file",
+      "name": "Header.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "summary": "Top navigation header component showing branding and user session controls, using the auth context for login state.",
+      "tags": [
+        "component",
+        "layout",
+        "navigation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx:Header",
+      "type": "function",
+      "name": "Header",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "lineRange": [
+        7,
+        70
+      ],
+      "summary": "Renders the top navigation bar including the logo and session-aware user actions.",
+      "tags": [
+        "component",
+        "navigation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx",
+      "type": "file",
+      "name": "Logo.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx",
+      "summary": "Presentational logo component supporting icon-only and full variants for use across headers and layouts.",
+      "tags": [
+        "component",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx:Logo",
+      "type": "function",
+      "name": "Logo",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx",
+      "lineRange": [
+        10,
+        32
+      ],
+      "summary": "Renders the application logo, optionally hiding the icon or text portion.",
+      "tags": [
+        "component",
+        "ui"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "type": "file",
+      "name": "NotificationBell.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "summary": "Notification bell dropdown and full-page notification center, including read/unread state, markdown stripping, and mentor feedback notifications.",
+      "tags": [
+        "component",
+        "notifications",
+        "state-management"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Composes several private sub-components (NotifItem, NotifRow, NotifFullPage, NotifDetail) alongside the main NotificationBell within a single file."
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifIcon",
+      "type": "function",
+      "name": "NotifIcon",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "lineRange": [
+        107,
+        117
+      ],
+      "summary": "Renders the icon associated with a notification type.",
+      "tags": [
+        "component",
+        "notifications"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifItem",
+      "type": "function",
+      "name": "NotifItem",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "lineRange": [
+        120,
+        166
+      ],
+      "summary": "Renders a single compact notification row within the dropdown preview list.",
+      "tags": [
+        "component",
+        "notifications"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifEmpty",
+      "type": "function",
+      "name": "NotifEmpty",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "lineRange": [
+        168,
+        180
+      ],
+      "summary": "Renders an empty-state placeholder shown when there are no notifications.",
+      "tags": [
+        "component",
+        "notifications",
+        "empty-state"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifRow",
+      "type": "function",
+      "name": "NotifRow",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "lineRange": [
+        183,
+        240
+      ],
+      "summary": "Renders a full notification row with read/unread toggle and delete actions for the full-page notification view.",
+      "tags": [
+        "component",
+        "notifications"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifFullPage",
+      "type": "function",
+      "name": "NotifFullPage",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "lineRange": [
+        243,
+        356
+      ],
+      "summary": "Renders the full-page notification center with all/unread filtering, mark-all-read, and clear-all actions, portalled to the document body.",
+      "tags": [
+        "component",
+        "notifications",
+        "state-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:stripMarkdown",
+      "type": "function",
+      "name": "stripMarkdown",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "lineRange": [
+        361,
+        375
+      ],
+      "summary": "Strips common Markdown syntax (code fences, links, headings, emphasis) from notification text for plain-text preview display.",
+      "tags": [
+        "utility",
+        "text-processing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifDetail",
+      "type": "function",
+      "name": "NotifDetail",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "lineRange": [
+        390,
+        430
+      ],
+      "summary": "Renders a modal-like detail view (via portal) for a single selected notification.",
+      "tags": [
+        "component",
+        "notifications",
+        "modal"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotificationBell",
+      "type": "function",
+      "name": "NotificationBell",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "lineRange": [
+        433,
+        690
+      ],
+      "summary": "Top-level notification bell component managing fetch, read/unread state, dropdown/full-page toggling, and mentor feedback notification loading.",
+      "tags": [
+        "component",
+        "notifications",
+        "state-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "type": "file",
+      "name": "ProgressBar.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "summary": "Global top-of-page loading progress bar plus a route-change variant that animates based on active request counts.",
+      "tags": [
+        "component",
+        "ui",
+        "loading-state"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx:GlobalProgressBar",
+      "type": "function",
+      "name": "GlobalProgressBar",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "lineRange": [
+        21,
+        65
+      ],
+      "summary": "Renders a top-of-page loading bar that animates based on the count of globally tracked active HTTP requests.",
+      "tags": [
+        "component",
+        "loading-state"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx:RouteProgressBar",
+      "type": "function",
+      "name": "RouteProgressBar",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "lineRange": [
+        72,
+        85
+      ],
+      "summary": "Route-change variant of the progress bar shown during page navigation transitions.",
+      "tags": [
+        "component",
+        "loading-state",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/ProtectedRoute.tsx",
+      "type": "file",
+      "name": "ProtectedRoute.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/ProtectedRoute.tsx",
+      "summary": "Thin wrapper re-exporting the app router's ProtectedRoute component for use within the ui components namespace.",
+      "tags": [
+        "routing",
+        "component",
+        "re-export"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "type": "file",
+      "name": "UserHeaderActions.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "summary": "Header dropdown component exposing user avatar, role badge, settings navigation, and logout action.",
+      "tags": [
+        "component",
+        "navigation",
+        "user-menu"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx:UserHeaderActions",
+      "type": "function",
+      "name": "UserHeaderActions",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "lineRange": [
+        14,
+        113
+      ],
+      "summary": "Renders the user avatar/role dropdown in the header with links to role-specific settings pages and a logout action.",
+      "tags": [
+        "component",
+        "navigation",
+        "user-menu"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "type": "file",
+      "name": "chart.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "summary": "Recharts wrapper providing themeable chart container, tooltip, and legend components driven by a shared chart config context.",
+      "tags": [
+        "component",
+        "chart",
+        "data-viz"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Uses a React context (ChartContext) plus a useChart hook to propagate per-series color/theme config to Recharts primitives."
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx:useChart",
+      "type": "function",
+      "name": "useChart",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "lineRange": [
+        25,
+        33
+      ],
+      "summary": "Custom hook that retrieves the current ChartContext, throwing if used outside a ChartContainer.",
+      "tags": [
+        "hook",
+        "chart"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx:ChartStyle",
+      "type": "function",
+      "name": "ChartStyle",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "lineRange": [
+        68,
+        99
+      ],
+      "summary": "Injects a scoped <style> tag defining CSS custom properties for each series' theme-aware color based on chart config.",
+      "tags": [
+        "component",
+        "chart",
+        "theming"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx:getPayloadConfigFromPayload",
+      "type": "function",
+      "name": "getPayloadConfigFromPayload",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "lineRange": [
+        322,
+        358
+      ],
+      "summary": "Resolves the chart config entry matching a Recharts tooltip/legend payload item by key.",
+      "tags": [
+        "utility",
+        "chart"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "summary": "Barrel file re-exporting the shared UI component library (Logo, Header, NotificationBell, ProgressBar variants, DatePicker, Spinner, etc.).",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "ui"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/App.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/app/router/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/App.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/App.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/App.tsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/api/careerApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/api/dashboardApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/api/profileApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/api/roadmapApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/api/skillApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/api/studentApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/api/userApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/app/router/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/pages/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx:AppRoutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx:AppRoutes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx:GuestRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx:GuestRoute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx:ProtectedRoute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx:ProtectedRoute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx:AuthCardLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx:AuthCardLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx:AuthLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx:AuthLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx:AvatarUploadModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx:AvatarUploadModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx:BaseModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx:BaseModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx:ConfirmModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx:ConfirmModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/api/profileApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx:AvatarUpload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx:AvatarUpload",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx:AbstractIllustration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx:AbstractIllustration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx:Header",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx:Header",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx:Logo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx:Logo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/api/dashboardApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifItem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifEmpty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifFullPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifFullPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:stripMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotifDetail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotificationBell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotificationBell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx:GlobalProgressBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx:GlobalProgressBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx:RouteProgressBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx:RouteProgressBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/ProtectedRoute.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx:UserHeaderActions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx:UserHeaderActions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx:useChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx:ChartStyle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx:ChartStyle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/chart.tsx:getPayloadConfigFromPayload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx:GuestRoute",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/index.ts:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx:ProtectedRoute",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/index.ts:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/components/ui/Header.tsx:Header",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/index.ts:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx:NotificationBell",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/index.ts:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx:AvatarUpload",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/index.ts:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

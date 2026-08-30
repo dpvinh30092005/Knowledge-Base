@@ -1,0 +1,1249 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "type": "file",
+      "name": "DatePicker.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "summary": "A custom calendar date-picker input component with month/year navigation and a portal-rendered dropdown panel, supporting a past-only date restriction mode.",
+      "tags": [
+        "component",
+        "date-picker",
+        "form"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx:DatePicker",
+      "type": "function",
+      "name": "DatePicker",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "lineRange": [
+        29,
+        346
+      ],
+      "summary": "Renders a date input field and popover calendar with day/month/year selection views, positioning the panel via a portal and closing on outside click or Escape.",
+      "tags": [
+        "component",
+        "date-picker"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "type": "file",
+      "name": "Spinner.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "summary": "Small reusable loading spinner component with configurable size and accessible label.",
+      "tags": [
+        "component",
+        "loading-indicator",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx:Spinner",
+      "type": "function",
+      "name": "Spinner",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "lineRange": [
+        18,
+        41
+      ],
+      "summary": "Renders an animated SVG/CSS spinner sized and labeled for accessibility.",
+      "tags": [
+        "component",
+        "loading-indicator"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "type": "file",
+      "name": "badge.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "summary": "Styled badge/chip component with variant-based class composition via class-variance-authority style helper.",
+      "tags": [
+        "component",
+        "badge",
+        "ui-primitive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/badge.tsx:Badge",
+      "type": "function",
+      "name": "Badge",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "Renders a span styled per variant using the badgeVariants class helper merged with cn().",
+      "tags": [
+        "component",
+        "badge"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "type": "file",
+      "name": "button.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "summary": "Reusable Button UI primitive supporting variant/size styling and optional Slot-based polymorphic rendering (asChild).",
+      "tags": [
+        "component",
+        "button",
+        "ui-primitive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/button.tsx:Button",
+      "type": "function",
+      "name": "Button",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "lineRange": [
+        36,
+        39
+      ],
+      "summary": "Renders a button (or Slot child) with class variants for style/size, merged via cn().",
+      "tags": [
+        "component",
+        "button"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "type": "file",
+      "name": "card.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "summary": "Composable Card UI primitives (Card, CardHeader, CardTitle, CardDescription, CardContent) used to build consistent panel layouts.",
+      "tags": [
+        "component",
+        "card",
+        "ui-primitive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:Card",
+      "type": "function",
+      "name": "Card",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "lineRange": [
+        4,
+        6
+      ],
+      "summary": "Card sub-component of the Card composition, applying styled div/heading markup via cn().",
+      "tags": [
+        "component",
+        "card"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardHeader",
+      "type": "function",
+      "name": "CardHeader",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "lineRange": [
+        8,
+        10
+      ],
+      "summary": "CardHeader sub-component of the Card composition, applying styled div/heading markup via cn().",
+      "tags": [
+        "component",
+        "card"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardTitle",
+      "type": "function",
+      "name": "CardTitle",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "lineRange": [
+        12,
+        14
+      ],
+      "summary": "CardTitle sub-component of the Card composition, applying styled div/heading markup via cn().",
+      "tags": [
+        "component",
+        "card"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardDescription",
+      "type": "function",
+      "name": "CardDescription",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "lineRange": [
+        16,
+        18
+      ],
+      "summary": "CardDescription sub-component of the Card composition, applying styled div/heading markup via cn().",
+      "tags": [
+        "component",
+        "card"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardContent",
+      "type": "function",
+      "name": "CardContent",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "lineRange": [
+        20,
+        22
+      ],
+      "summary": "CardContent sub-component of the Card composition, applying styled div/heading markup via cn().",
+      "tags": [
+        "component",
+        "card"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "type": "file",
+      "name": "dialog.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "summary": "Dialog/modal UI primitives wrapping a base dialog library (Trigger, Close, Content, Header, Title, Description, Footer) with consistent styling.",
+      "tags": [
+        "component",
+        "dialog",
+        "modal",
+        "ui-primitive"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogContent",
+      "type": "function",
+      "name": "DialogContent",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "lineRange": [
+        10,
+        27
+      ],
+      "summary": "DialogContent sub-component of the Dialog composition providing styled modal markup.",
+      "tags": [
+        "component",
+        "dialog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogHeader",
+      "type": "function",
+      "name": "DialogHeader",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "DialogHeader sub-component of the Dialog composition providing styled modal markup.",
+      "tags": [
+        "component",
+        "dialog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogTitle",
+      "type": "function",
+      "name": "DialogTitle",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "DialogTitle sub-component of the Dialog composition providing styled modal markup.",
+      "tags": [
+        "component",
+        "dialog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogDescription",
+      "type": "function",
+      "name": "DialogDescription",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "lineRange": [
+        37,
+        39
+      ],
+      "summary": "DialogDescription sub-component of the Dialog composition providing styled modal markup.",
+      "tags": [
+        "component",
+        "dialog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogFooter",
+      "type": "function",
+      "name": "DialogFooter",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "DialogFooter sub-component of the Dialog composition providing styled modal markup.",
+      "tags": [
+        "component",
+        "dialog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "type": "file",
+      "name": "field.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "summary": "Form field layout primitives (FieldGroup, Field, FieldLabel, FieldDescription) for consistent label/description/error styling across forms.",
+      "tags": [
+        "component",
+        "form",
+        "ui-primitive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldGroup",
+      "type": "function",
+      "name": "FieldGroup",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "lineRange": [
+        4,
+        6
+      ],
+      "summary": "FieldGroup sub-component providing styled markup for form field composition.",
+      "tags": [
+        "component",
+        "form"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:Field",
+      "type": "function",
+      "name": "Field",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "lineRange": [
+        8,
+        10
+      ],
+      "summary": "Field sub-component providing styled markup for form field composition.",
+      "tags": [
+        "component",
+        "form"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldLabel",
+      "type": "function",
+      "name": "FieldLabel",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "lineRange": [
+        12,
+        17
+      ],
+      "summary": "FieldLabel sub-component providing styled markup for form field composition.",
+      "tags": [
+        "component",
+        "form"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldDescription",
+      "type": "function",
+      "name": "FieldDescription",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "FieldDescription sub-component providing styled markup for form field composition.",
+      "tags": [
+        "component",
+        "form"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "type": "file",
+      "name": "input.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "summary": "Styled text input UI primitive used across forms in the application.",
+      "tags": [
+        "component",
+        "input",
+        "ui-primitive"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/input.tsx:Input",
+      "type": "function",
+      "name": "Input",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "lineRange": [
+        4,
+        12
+      ],
+      "summary": "Renders a styled <input> element merging passed className via cn().",
+      "tags": [
+        "component",
+        "input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "type": "file",
+      "name": "select.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "summary": "Custom dropdown Select component that collects <option>-like children into a list and renders a styled, keyboard/click-dismissable dropdown.",
+      "tags": [
+        "component",
+        "select",
+        "form",
+        "ui-primitive"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/select.tsx:collectOptions",
+      "type": "function",
+      "name": "collectOptions",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "lineRange": [
+        8,
+        25
+      ],
+      "summary": "Recursively walks React children to extract option value/label pairs for the custom select.",
+      "tags": [
+        "utility",
+        "react-children"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/select.tsx:Select",
+      "type": "function",
+      "name": "Select",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "lineRange": [
+        43,
+        108
+      ],
+      "summary": "Renders a custom styled select trigger and dropdown list, managing open state and outside-click/escape dismissal.",
+      "tags": [
+        "component",
+        "select"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "type": "file",
+      "name": "skeleton.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "summary": "Skeleton loading placeholder UI primitive used to indicate content is loading.",
+      "tags": [
+        "component",
+        "skeleton",
+        "loading-indicator"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx:Skeleton",
+      "type": "function",
+      "name": "Skeleton",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "lineRange": [
+        14,
+        28
+      ],
+      "summary": "Renders a pulsing placeholder div styled via cn() for loading states.",
+      "tags": [
+        "component",
+        "skeleton"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "type": "file",
+      "name": "LoginDialog.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "summary": "Modal dialog that switches between login and forgot-password views, wrapping LoginForm and ForgotPasswordForm inside the shared Dialog primitive.",
+      "tags": [
+        "component",
+        "auth",
+        "dialog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx:LoginDialog",
+      "type": "function",
+      "name": "LoginDialog",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "lineRange": [
+        25,
+        60
+      ],
+      "summary": "Manages which auth view (login vs forgot-password) is shown inside the dialog and renders the corresponding form.",
+      "tags": [
+        "component",
+        "auth"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "type": "file",
+      "name": "LoginForm.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "summary": "Login form component with username/password fields, Google/Github icon buttons, and submit handling via the useLogin hook.",
+      "tags": [
+        "component",
+        "auth",
+        "form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx:GoogleIcon",
+      "type": "function",
+      "name": "GoogleIcon",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "lineRange": [
+        6,
+        13
+      ],
+      "summary": "Renders an inline SVG Google logo icon.",
+      "tags": [
+        "component",
+        "icon"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx:GithubIcon",
+      "type": "function",
+      "name": "GithubIcon",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "lineRange": [
+        15,
+        22
+      ],
+      "summary": "Renders an inline SVG GitHub logo icon.",
+      "tags": [
+        "component",
+        "icon"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx:LoginForm",
+      "type": "function",
+      "name": "LoginForm",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "lineRange": [
+        33,
+        128
+      ],
+      "summary": "Renders the credential login form, wiring input state to the useLogin hook and handling submit/forgot-password navigation.",
+      "tags": [
+        "component",
+        "auth",
+        "form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "type": "file",
+      "name": "CustomRoadmapNode.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "summary": "Custom React Flow node renderer for roadmap topic nodes, showing stage color, status, and a formatted completion date.",
+      "tags": [
+        "component",
+        "roadmap",
+        "react-flow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx:formatDoneDate",
+      "type": "function",
+      "name": "formatDoneDate",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "lineRange": [
+        7,
+        12
+      ],
+      "summary": "Formats a raw date value into a locale date string, returning null for invalid input.",
+      "tags": [
+        "utility",
+        "date-formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx:CustomRoadmapNode",
+      "type": "function",
+      "name": "CustomRoadmapNode",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "lineRange": [
+        35,
+        245
+      ],
+      "summary": "Renders an individual roadmap graph node's visual card including stage coloring, selection state, and completion info.",
+      "tags": [
+        "component",
+        "roadmap",
+        "react-flow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "type": "file",
+      "name": "OnboardingShell.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "summary": "Shared layout shell for multi-step student onboarding flows, rendering a progress indicator, title/subtitle, and back/next navigation buttons.",
+      "tags": [
+        "component",
+        "onboarding",
+        "layout"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx:OnboardingShell",
+      "type": "function",
+      "name": "OnboardingShell",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "lineRange": [
+        26,
+        112
+      ],
+      "summary": "Renders a step progress bar with labels plus back/next controls wrapping arbitrary step content.",
+      "tags": [
+        "component",
+        "onboarding"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "type": "file",
+      "name": "ResourceViewerModal.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "summary": "Modal that embeds/plays a learning resource (e.g., YouTube video or external link) with host detection and Escape-to-close handling.",
+      "tags": [
+        "component",
+        "modal",
+        "resource-viewer"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx:getYouTubeId",
+      "type": "function",
+      "name": "getYouTubeId",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "lineRange": [
+        7,
+        21
+      ],
+      "summary": "Extracts a YouTube video ID from various YouTube URL formats.",
+      "tags": [
+        "utility",
+        "url-parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx:hostOf",
+      "type": "function",
+      "name": "hostOf",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "lineRange": [
+        23,
+        29
+      ],
+      "summary": "Returns the normalized hostname of a URL for display purposes.",
+      "tags": [
+        "utility",
+        "url-parsing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx:ResourceViewerModal",
+      "type": "function",
+      "name": "ResourceViewerModal",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "lineRange": [
+        37,
+        127
+      ],
+      "summary": "Renders the resource viewer modal, embedding a YouTube player or linking out to the external resource, closing on Escape or backdrop click.",
+      "tags": [
+        "component",
+        "modal"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx:DatePicker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx:DatePicker",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx:Spinner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx:Spinner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/badge.tsx:Badge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/badge.tsx:Badge",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/button.tsx:Button",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/button.tsx:Button",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:Card",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:Card",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardTitle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardDescription",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/card.tsx:CardContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogContent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogContent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogTitle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogTitle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogDescription",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogFooter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx:DialogFooter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldGroup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldGroup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:Field",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:Field",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldLabel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/field.tsx:FieldDescription",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/input.tsx:Input",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/input.tsx:Input",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/select.tsx:collectOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/select.tsx:Select",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/select.tsx:Select",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx:Skeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx:Skeleton",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx:LoginDialog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx:LoginDialog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx:GoogleIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx:GithubIcon",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx:LoginForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx:LoginForm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx:formatDoneDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx:CustomRoadmapNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx:CustomRoadmapNode",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts:getStageColor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx:OnboardingShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx:OnboardingShell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx:getYouTubeId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx:hostOf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx:ResourceViewerModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx:getYouTubeId",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx:ResourceViewerModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

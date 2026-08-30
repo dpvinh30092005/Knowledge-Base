@@ -1,0 +1,124 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx",
+      "language": "typescript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx",
+      "language": "typescript",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx",
+      "language": "typescript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx",
+      "language": "typescript",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx",
+      "language": "typescript",
+      "sizeLines": 200,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx",
+      "language": "typescript",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx",
+      "language": "typescript",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/types/dashboard.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx": [],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx": [],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx": [],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx": [
+      "FrontEnd/intelipath-frontend/src/types/dashboard.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx",
+      "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx",
+      "FrontEnd/intelipath-frontend/src/types/dashboard.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx",
+      "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx",
+      "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/index.ts",
+      "FrontEnd/intelipath-frontend/src/context/index.ts",
+      "FrontEnd/intelipath-frontend/src/shared/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx",
+      "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx",
+      "FrontEnd/intelipath-frontend/src/types/dashboard.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/types/dashboard.ts": []
+  }
+}

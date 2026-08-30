@@ -1,0 +1,207 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "language": "java",
+      "sizeLines": 344,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "language": "java",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "language": "java",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java",
+      "language": "java",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java",
+      "language": "java",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "language": "java",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "language": "java",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "language": "java",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "language": "java",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "language": "java",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java",
+      "language": "java",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "language": "java",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CounselorService.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FeedbackService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java"
+    ],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java": [],
+    "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java": [
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/AcademicCounselor.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/IndustryMentor.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ]
+  }
+}

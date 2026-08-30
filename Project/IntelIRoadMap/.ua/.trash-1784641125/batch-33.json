@@ -1,0 +1,291 @@
+{
+  "nodes": [
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/anti-patterns.md",
+      "type": "document",
+      "name": "anti-patterns.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/anti-patterns.md",
+      "summary": "Reference catalog of named AI-slop design tells (purple-gradient heroes, bounce easing, aurora blobs, etc.) organized by severity, used by the Hallmark design skill to flag generic-looking output during audits.",
+      "tags": ["documentation", "design-system", "anti-patterns", "skill-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/assets.md",
+      "type": "document",
+      "name": "assets.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/assets.md",
+      "summary": "Sourcing canon for icons, logos, illustrations, photography, and video assets, defining tiered placeholder and generation strategies for the Hallmark design skill.",
+      "tags": ["documentation", "design-system", "assets", "skill-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/color.md",
+      "type": "document",
+      "name": "color.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/color.md",
+      "summary": "Color palette construction rules, contrast requirements, dark-mode recipe, and banned color patterns for the Hallmark design skill.",
+      "tags": ["documentation", "design-system", "color", "skill-reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/component-cookbook.md",
+      "type": "document",
+      "name": "component-cookbook.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/component-cookbook.md",
+      "summary": "Archetype index and routing guide for heroes, section heads, feature blocks, CTAs, testimonials, footers, and navigation components used when composing Hallmark-designed pages.",
+      "tags": ["documentation", "design-system", "components", "skill-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/contract.md",
+      "type": "document",
+      "name": "contract.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/contract.md",
+      "summary": "Defines the output contract and scope/limits for the Hallmark design skill's deliverables.",
+      "tags": ["documentation", "design-system", "contract", "skill-reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/copy.md",
+      "type": "document",
+      "name": "copy.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/copy.md",
+      "summary": "UX copywriting principles for buttons, error messages, empty states, and loading text, with voice samples per tone and a list of banned opening lines.",
+      "tags": ["documentation", "design-system", "copywriting", "skill-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-craft.md",
+      "type": "document",
+      "name": "custom-craft.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-craft.md",
+      "summary": "Tiered guide (CSS art, hand-built SVG, declarative animation, WebGL, generated stills, library illustrations) for hand-building custom hero artwork, including a worked recipe library.",
+      "tags": ["documentation", "design-system", "illustration", "skill-reference"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-theme.md",
+      "type": "document",
+      "name": "custom-theme.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-theme.md",
+      "summary": "Protocol for constructing a bespoke custom theme, covering palette construction, font pairing, custom-axis computation, and worked brand examples for the Hallmark design skill.",
+      "tags": ["documentation", "design-system", "theming", "skill-reference"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/design-md.md",
+      "type": "document",
+      "name": "design-md.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/design-md.md",
+      "summary": "Specifies the opt-in portable design.md system emission format, triggers, and scope for capturing a project's design system as a file.",
+      "tags": ["documentation", "design-system", "design-tokens", "skill-reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/export-formats.md",
+      "type": "document",
+      "name": "export-formats.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/export-formats.md",
+      "summary": "Defines the design token taxonomy and four export formats (tokens.css, Tailwind v4 @theme, DTCG tokens.json, shadcn/ui CSS variables) produced by the Hallmark design skill.",
+      "tags": ["documentation", "design-system", "design-tokens", "skill-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/floating-nav.md",
+      "type": "document",
+      "name": "floating-nav.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/floating-nav.md",
+      "summary": "Recipe for the floating-nav-on-scroll cross-fade morph pattern, specifying the property morph, scroll handler, and non-negotiable implementation rules.",
+      "tags": ["documentation", "design-system", "navigation", "skill-reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md",
+      "type": "document",
+      "name": "hero-enrichment.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md",
+      "summary": "Guide for deciding when and how much hero imagery a page needs, defining eight enrichment archetypes and hero shape-polish patterns with a pre-flight quality checklist.",
+      "tags": ["documentation", "design-system", "hero-section", "skill-reference"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/imagery-kit.md",
+      "type": "document",
+      "name": "imagery-kit.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/imagery-kit.md",
+      "summary": "Catalog of curated, hosted abstract imagery assets with usage patterns for layered hero composition, section backgrounds, decoration, and texture overlays.",
+      "tags": ["documentation", "design-system", "assets", "skill-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/interaction-and-states.md",
+      "type": "document",
+      "name": "interaction-and-states.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/interaction-and-states.md",
+      "summary": "Defines the eight interaction states, focus rings, hit targets, form/input state recipes, modal and dropdown behavior, and contrast discipline for the Hallmark design skill.",
+      "tags": ["documentation", "design-system", "interaction-states", "skill-reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/layout-and-space.md",
+      "type": "document",
+      "name": "layout-and-space.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/layout-and-space.md",
+      "summary": "Layout and spacing principles including the spacing scale, grid usage, asymmetry techniques, depth cues, and page-edge clipping rules.",
+      "tags": ["documentation", "design-system", "layout", "skill-reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures.md",
+      "type": "document",
+      "name": "macrostructures.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures.md",
+      "summary": "Index of 21 page macrostructures with a diversification rule, hero polish patterns, and guidance for picking a SaaS page sequence.",
+      "tags": ["documentation", "design-system", "page-structure", "skill-reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md",
+      "type": "document",
+      "name": "microinteractions.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md",
+      "summary": "Timing and easing canon plus a recipe library for buttons, inputs, toasts, modals, dropdowns, drag handles, and optimistic updates, including accessibility ground truth for motion.",
+      "tags": ["documentation", "design-system", "microinteractions", "skill-reference"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/motion.md",
+      "type": "document",
+      "name": "motion.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/motion.md",
+      "summary": "Motion principles covering easings, durations, page-load orchestration, scroll-linked motion, state transitions, reduced-motion support, and banned animation patterns.",
+      "tags": ["documentation", "design-system", "motion", "skill-reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/preview-examples.md",
+      "type": "document",
+      "name": "preview-examples.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/preview-examples.md",
+      "summary": "Worked examples of preview-block markup used to demonstrate the Hallmark design skill's output format.",
+      "tags": ["documentation", "design-system", "examples", "skill-reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/responsive.md",
+      "type": "document",
+      "name": "responsive.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/responsive.md",
+      "summary": "Responsive design rules covering mobile non-negotiables, breakpoints, fluid scaling, pointer/hover queries, viewport units, safe areas, and internationalisation.",
+      "tags": ["documentation", "design-system", "responsive", "skill-reference"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/anti-patterns.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/anti-patterns.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/motion.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/assets.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-craft.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/imagery-kit.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-theme.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/color.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-theme.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/export-formats.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/component-cookbook.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/component-cookbook.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/floating-nav.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/interaction-and-states.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/motion.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/layout-and-space.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/responsive.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/copy.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/interaction-and-states.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/design-md.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/export-formats.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/contract.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/design-md.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

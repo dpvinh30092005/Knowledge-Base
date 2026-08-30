@@ -1,0 +1,200 @@
+{
+  "nodes": [
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h3-quote-led.md",
+      "type": "document",
+      "name": "h3-quote-led.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h3-quote-led.md",
+      "summary": "Hallmark design skill reference describing the H3 Quote-Led hero pattern, a pull-quote with attribution as the page's hero element, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "hero-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h4-stat-led.md",
+      "type": "document",
+      "name": "h4-stat-led.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h4-stat-led.md",
+      "summary": "Hallmark design skill reference describing the H4 Stat-Led hero pattern, leading with a large statistic, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "hero-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h5-letter-hero.md",
+      "type": "document",
+      "name": "h5-letter-hero.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h5-letter-hero.md",
+      "summary": "Hallmark design skill reference describing the H5 Letter Hero pattern, a letter-styled hero layout, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "hero-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h6-photographic-fold.md",
+      "type": "document",
+      "name": "h6-photographic-fold.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h6-photographic-fold.md",
+      "summary": "Hallmark design skill reference describing the H6 Photographic Fold hero pattern, a full-bleed photographic hero section, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "hero-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h7-demo-video-clipped-by-viewport-edge.md",
+      "type": "document",
+      "name": "h7-demo-video-clipped-by-viewport-edge.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h7-demo-video-clipped-by-viewport-edge.md",
+      "summary": "Hallmark design skill reference describing the H7 Demo Video hero pattern where a product demo video is clipped at the viewport edge, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "hero-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h8-mockup-split-browser-framed.md",
+      "type": "document",
+      "name": "h8-mockup-split-browser-framed.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h8-mockup-split-browser-framed.md",
+      "summary": "Hallmark design skill reference describing the H8 Mockup Split hero pattern, a browser-framed product mockup split-layout, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "hero-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h9-custom-illustration-centerpiece.md",
+      "type": "document",
+      "name": "h9-custom-illustration-centerpiece.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h9-custom-illustration-centerpiece.md",
+      "summary": "Hallmark design skill reference describing the H9 Custom Illustration Centerpiece hero pattern, featuring a bespoke illustration as the visual anchor, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "hero-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1-wordmark-2-links.md",
+      "type": "document",
+      "name": "n1-wordmark-2-links.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1-wordmark-2-links.md",
+      "summary": "Hallmark design skill reference describing the N1 minimal navbar pattern consisting of a wordmark plus two links, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n10-floating-on-scroll-morph.md",
+      "type": "document",
+      "name": "n10-floating-on-scroll-morph.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n10-floating-on-scroll-morph.md",
+      "summary": "Hallmark design skill reference describing the N10 navbar pattern that morphs into a floating pill on scroll, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n11-mega-menu.md",
+      "type": "document",
+      "name": "n11-mega-menu.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n11-mega-menu.md",
+      "summary": "Hallmark design skill reference describing the N11 mega-menu navbar panel pattern for exposing large link hierarchies, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n12-banner-retract.md",
+      "type": "document",
+      "name": "n12-banner-retract.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n12-banner-retract.md",
+      "summary": "Hallmark design skill reference describing the N12 pattern combining an announcement banner with a nav bar that retracts on scroll, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n13-inline-cmdk-pill.md",
+      "type": "document",
+      "name": "n13-inline-cmdk-pill.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n13-inline-cmdk-pill.md",
+      "summary": "Hallmark design skill reference describing the N13 navbar pattern with an inline command-K style search pill, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1b-saas-three-section.md",
+      "type": "document",
+      "name": "n1b-saas-three-section.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1b-saas-three-section.md",
+      "summary": "Hallmark design skill reference describing the N1b canonical SaaS three-section navbar pattern, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n2-floating-chip.md",
+      "type": "document",
+      "name": "n2-floating-chip.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n2-floating-chip.md",
+      "summary": "Hallmark design skill reference describing the N2 floating chip navbar pattern, a compact pill-shaped nav detached from the page edge, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n3-side-rail.md",
+      "type": "document",
+      "name": "n3-side-rail.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n3-side-rail.md",
+      "summary": "Hallmark design skill reference describing the N3 side-rail navigation pattern, a vertical nav rail along the page edge, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n4-hidden-behind-k.md",
+      "type": "document",
+      "name": "n4-hidden-behind-k.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n4-hidden-behind-k.md",
+      "summary": "Hallmark design skill reference describing the N4 navbar pattern that hides all navigation behind a command-K trigger, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n5-floating-pill.md",
+      "type": "document",
+      "name": "n5-floating-pill.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n5-floating-pill.md",
+      "summary": "Hallmark design skill reference describing the N5 floating pill navbar pattern, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n6-newspaper-masthead.md",
+      "type": "document",
+      "name": "n6-newspaper-masthead.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n6-newspaper-masthead.md",
+      "summary": "Hallmark design skill reference describing the N6 newspaper masthead navbar pattern, an editorial-style header treatment, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n7-brutal-slab.md",
+      "type": "document",
+      "name": "n7-brutal-slab.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n7-brutal-slab.md",
+      "summary": "Hallmark design skill reference describing the N7 brutal slab navbar pattern, a heavy, high-contrast brutalist nav treatment, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n8-terminal-command.md",
+      "type": "document",
+      "name": "n8-terminal-command.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n8-terminal-command.md",
+      "summary": "Hallmark design skill reference describing the N8 terminal command navbar pattern, styled like a command-line prompt, with usage guidance and an HTML snippet.",
+      "tags": ["documentation", "design-system", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h3-quote-led.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h4-stat-led.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h5-letter-hero.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h4-stat-led.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h6-photographic-fold.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h5-letter-hero.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h7-demo-video-clipped-by-viewport-edge.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h8-mockup-split-browser-framed.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h9-custom-illustration-centerpiece.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h7-demo-video-clipped-by-viewport-edge.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1-wordmark-2-links.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1b-saas-three-section.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n2-floating-chip.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n5-floating-pill.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n3-side-rail.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1-wordmark-2-links.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n4-hidden-behind-k.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n13-inline-cmdk-pill.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n6-newspaper-masthead.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n7-brutal-slab.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n8-terminal-command.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n7-brutal-slab.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n10-floating-on-scroll-morph.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n2-floating-chip.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n11-mega-menu.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1b-saas-three-section.md", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n12-banner-retract.md", "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1b-saas-three-section.md", "type": "related", "direction": "forward", "weight": 0.5 }
+  ]
+}

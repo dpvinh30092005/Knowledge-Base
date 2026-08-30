@@ -1,0 +1,2954 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 21,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 21,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 21,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/analyzer/PortfolioAiAnalyzer.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "PortfolioAiAnalyzer",
+          "startLine": 27,
+          "endLine": 35,
+          "params": [
+            "chatClient",
+            "analyzePrompt"
+          ]
+        },
+        {
+          "name": "analyzeGithubProject",
+          "startLine": 37,
+          "endLine": 54,
+          "params": [
+            "repoName",
+            "description",
+            "readmeContent",
+            "extraContext",
+            "skillCatalog"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PortfolioAiAnalyzer",
+          "startLine": 20,
+          "endLine": 59,
+          "methods": [
+            "PortfolioAiAnalyzer",
+            "analyzeGithubProject"
+          ],
+          "properties": [
+            "chatClient",
+            "analyzePromptTemplate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortfolioAiAnalyzer",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "analyzeGithubProject",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "PortfolioAiAnalyzer",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PortfolioAiAnalyzer",
+          "callee": "analyzePrompt.getContentAsString",
+          "lineNumber": 31
+        },
+        {
+          "caller": "PortfolioAiAnalyzer",
+          "callee": "new UncheckedIOException",
+          "lineNumber": 33
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "log.info",
+          "lineNumber": 40
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "skillCatalog.size",
+          "lineNumber": 41
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "skillCatalog.isEmpty",
+          "lineNumber": 42
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "String.join",
+          "lineNumber": 44
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "skillCatalog.stream().map(s -> \"- \" + s).toList",
+          "lineNumber": 44
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "skillCatalog.stream().map",
+          "lineNumber": 44
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "skillCatalog.stream",
+          "lineNumber": 44
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "chatClient.prompt()\n                    .user(String.format(analyzePromptTemplate, catalogText, repoName, description, readmeContent, extraContext))\n                    .call().entity",
+          "lineNumber": 46
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "chatClient.prompt()\n                    .user(String.format(analyzePromptTemplate, catalogText, repoName, description, readmeContent, extraContext)).call",
+          "lineNumber": 46
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "chatClient.prompt().user",
+          "lineNumber": 46
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "chatClient.prompt",
+          "lineNumber": 46
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "String.format",
+          "lineNumber": 47
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "log.error",
+          "lineNumber": 51
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "new AiGithubSummary",
+          "lineNumber": 52
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "new HashMap<>",
+          "lineNumber": 52
+        },
+        {
+          "caller": "analyzeGithubProject",
+          "callee": "List.of",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/clients/GithubApiClient.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "GithubApiClient",
+          "startLine": 30,
+          "endLine": 33,
+          "params": [
+            "objectMapper",
+            "externalApiRestTemplate"
+          ]
+        },
+        {
+          "name": "getRepoMetadata",
+          "startLine": 35,
+          "endLine": 65,
+          "params": [
+            "owner",
+            "repo"
+          ]
+        },
+        {
+          "name": "fetchFileContent",
+          "startLine": 67,
+          "endLine": 81,
+          "params": [
+            "rawUrl",
+            "maxLength"
+          ]
+        },
+        {
+          "name": "createHeaders",
+          "startLine": 83,
+          "endLine": 90,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "GithubApiClient",
+          "startLine": 20,
+          "endLine": 93,
+          "methods": [
+            "GithubApiClient",
+            "getRepoMetadata",
+            "fetchFileContent",
+            "createHeaders"
+          ],
+          "properties": [
+            "objectMapper",
+            "restTemplate",
+            "githubToken"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GithubApiClient",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "getRepoMetadata",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "fetchFileContent",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "GithubApiClient",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getRepoMetadata",
+          "callee": "createHeaders",
+          "lineNumber": 36
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "new HttpEntity<>",
+          "lineNumber": 37
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "restTemplate.exchange",
+          "lineNumber": 43
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "log.error",
+          "lineNumber": 47
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "objectMapper.readTree",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoResponse.getBody",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoJson.path(\"description\").asText",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoJson.path",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoJson.path(\"default_branch\").asText",
+          "lineNumber": 54
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoJson.path",
+          "lineNumber": 54
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoJson.path(\"stargazers_count\").asInt",
+          "lineNumber": 55
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoJson.path",
+          "lineNumber": 55
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoJson.path(\"homepage\").asText",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "repoJson.path",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "hp.isBlank",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "hp.equals",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "new GithubRepoMetadata",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "log.error",
+          "lineNumber": 62
+        },
+        {
+          "caller": "getRepoMetadata",
+          "callee": "new GithubRepoMetadata",
+          "lineNumber": 63
+        },
+        {
+          "caller": "fetchFileContent",
+          "callee": "createHeaders",
+          "lineNumber": 68
+        },
+        {
+          "caller": "fetchFileContent",
+          "callee": "new HttpEntity<>",
+          "lineNumber": 69
+        },
+        {
+          "caller": "fetchFileContent",
+          "callee": "restTemplate.exchange",
+          "lineNumber": 72
+        },
+        {
+          "caller": "fetchFileContent",
+          "callee": "response.getBody",
+          "lineNumber": 73
+        },
+        {
+          "caller": "fetchFileContent",
+          "callee": "content.length",
+          "lineNumber": 74
+        },
+        {
+          "caller": "fetchFileContent",
+          "callee": "content.substring",
+          "lineNumber": 75
+        },
+        {
+          "caller": "createHeaders",
+          "callee": "new HttpHeaders",
+          "lineNumber": 84
+        },
+        {
+          "caller": "createHeaders",
+          "callee": "githubToken.isBlank",
+          "lineNumber": 85
+        },
+        {
+          "caller": "createHeaders",
+          "callee": "headers.setBearerAuth",
+          "lineNumber": 86
+        },
+        {
+          "caller": "createHeaders",
+          "callee": "headers.set",
+          "lineNumber": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/GithubPortfolioController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "importFromGithub",
+          "startLine": 30,
+          "endLine": 35,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "GithubPortfolioController",
+          "startLine": 19,
+          "endLine": 36,
+          "methods": [
+            "importFromGithub"
+          ],
+          "properties": [
+            "githubPortfolioService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "importFromGithub",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "GithubPortfolioController",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "importFromGithub",
+          "callee": "log.info",
+          "lineNumber": 33
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "request.getRepoUrl",
+          "lineNumber": 33
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 34
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "githubPortfolioService.importFromGithub",
+          "lineNumber": 34
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PortfolioController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "getPortfolio",
+          "startLine": 40,
+          "endLine": 51,
+          "params": []
+        },
+        {
+          "name": "upsertPortfolio",
+          "startLine": 53,
+          "endLine": 65,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "requestReview",
+          "startLine": 67,
+          "endLine": 82,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PortfolioController",
+          "startLine": 29,
+          "endLine": 83,
+          "methods": [
+            "getPortfolio",
+            "upsertPortfolio",
+            "requestReview"
+          ],
+          "properties": [
+            "portfolioService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getPortfolio",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "upsertPortfolio",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "requestReview",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "PortfolioController",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getPortfolio",
+          "callee": "log.info",
+          "lineNumber": 49
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 50
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "portfolioService.getPortfolio",
+          "lineNumber": 50
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "log.info",
+          "lineNumber": 63
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 64
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "portfolioService.upsertPortfolio",
+          "lineNumber": 64
+        },
+        {
+          "caller": "requestReview",
+          "callee": "log.info",
+          "lineNumber": 76
+        },
+        {
+          "caller": "requestReview",
+          "callee": "request.getEmail",
+          "lineNumber": 76
+        },
+        {
+          "caller": "requestReview",
+          "callee": "portfolioService.requestReview",
+          "lineNumber": 77
+        },
+        {
+          "caller": "requestReview",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 78
+        },
+        {
+          "caller": "requestReview",
+          "callee": "Map.of",
+          "lineNumber": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PublicPortfolioController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 47,
+      "functions": [
+        {
+          "name": "getPortfolioBySlug",
+          "startLine": 30,
+          "endLine": 40,
+          "params": [
+            "slug"
+          ]
+        },
+        {
+          "name": "getPortfolioByStudentId",
+          "startLine": 42,
+          "endLine": 52,
+          "params": [
+            "studentId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PublicPortfolioController",
+          "startLine": 21,
+          "endLine": 53,
+          "methods": [
+            "getPortfolioBySlug",
+            "getPortfolioByStudentId"
+          ],
+          "properties": [
+            "portfolioService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getPortfolioBySlug",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "getPortfolioByStudentId",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "PublicPortfolioController",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "log.info",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 39
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "portfolioService.getPortfolioBySlug",
+          "lineNumber": 39
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "log.info",
+          "lineNumber": 50
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "portfolioService.getPortfolioByStudentId",
+          "lineNumber": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "GithubImportRequest",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [],
+          "properties": [
+            "repoUrl"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GithubImportRequest",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 80,
+      "nonEmptyLines": 61,
+      "classes": [
+        {
+          "name": "PortfolioUpsertRequest",
+          "startLine": 15,
+          "endLine": 80,
+          "methods": [],
+          "properties": [
+            "config",
+            "projects",
+            "education"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortfolioUpsertRequest",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "RequestReviewRequest",
+          "startLine": 11,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "email"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RequestReviewRequest",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateSlugRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "UpdateSlugRequest",
+          "startLine": 10,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "slug"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateSlugRequest",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 64,
+      "classes": [
+        {
+          "name": "PortfolioResponse",
+          "startLine": 12,
+          "endLine": 72,
+          "methods": [],
+          "properties": [
+            "userInfo",
+            "config",
+            "skills",
+            "projects",
+            "education"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortfolioResponse",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 80,
+      "nonEmptyLines": 65,
+      "functions": [
+        {
+          "name": "prePersist",
+          "startLine": 69,
+          "endLine": 73,
+          "params": []
+        },
+        {
+          "name": "preUpdate",
+          "startLine": 75,
+          "endLine": 78,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "PortfolioConfig",
+          "startLine": 26,
+          "endLine": 79,
+          "methods": [
+            "prePersist",
+            "preUpdate"
+          ],
+          "properties": [
+            "configId",
+            "user",
+            "theme",
+            "themeColors",
+            "fonts",
+            "heroSection",
+            "skillsSection",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "prePersist",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "preUpdate",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "PortfolioConfig",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 71
+        },
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 72
+        },
+        {
+          "caller": "preUpdate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 52,
+      "classes": [
+        {
+          "name": "PortfolioProject",
+          "startLine": 22,
+          "endLine": 65,
+          "methods": [],
+          "properties": [
+            "projectId",
+            "user",
+            "repoId",
+            "repoUrl",
+            "projectName",
+            "demoUrl",
+            "icon",
+            "description",
+            "stars",
+            "techStack"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortfolioProject",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 39,
+      "classes": [
+        {
+          "name": "StudentEducation",
+          "startLine": 20,
+          "endLine": 48,
+          "methods": [],
+          "properties": [
+            "educationId",
+            "user",
+            "university",
+            "degree",
+            "period",
+            "description"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentEducation",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/PortfolioMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 134,
+      "nonEmptyLines": 121,
+      "functions": [
+        {
+          "name": "toPortfolioResponse",
+          "startLine": 27,
+          "endLine": 100,
+          "params": [
+            "user",
+            "student",
+            "config",
+            "skills",
+            "projects",
+            "education"
+          ]
+        },
+        {
+          "name": "toPortfolioProjects",
+          "startLine": 102,
+          "endLine": 118,
+          "params": [
+            "projectRequests",
+            "user"
+          ]
+        },
+        {
+          "name": "toStudentEducationList",
+          "startLine": 120,
+          "endLine": 133,
+          "params": [
+            "educationRequests",
+            "student"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PortfolioMapper",
+          "startLine": 21,
+          "endLine": 134,
+          "methods": [
+            "toPortfolioResponse",
+            "toPortfolioProjects",
+            "toStudentEducationList"
+          ],
+          "properties": [
+            "skillRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "toPortfolioResponse",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "toPortfolioProjects",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "toStudentEducationList",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "PortfolioMapper",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder()\n                .userId(user.getUserId())\n                .fullName(user.getFullName())\n                .bio(user.getBio())\n                .email(user.getEmail())\n                .portfolioSlug(student.getPortfolioSlug())\n                .university(student.getUniversityName())\n                .avatarUrl(user.getAvatarUrl()).build",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder()\n                .userId(user.getUserId())\n                .fullName(user.getFullName())\n                .bio(user.getBio())\n                .email(user.getEmail())\n                .portfolioSlug(student.getPortfolioSlug())\n                .university(student.getUniversityName()).avatarUrl",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder()\n                .userId(user.getUserId())\n                .fullName(user.getFullName())\n                .bio(user.getBio())\n                .email(user.getEmail())\n                .portfolioSlug(student.getPortfolioSlug()).university",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder()\n                .userId(user.getUserId())\n                .fullName(user.getFullName())\n                .bio(user.getBio())\n                .email(user.getEmail()).portfolioSlug",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder()\n                .userId(user.getUserId())\n                .fullName(user.getFullName())\n                .bio(user.getBio()).email",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder()\n                .userId(user.getUserId())\n                .fullName(user.getFullName()).bio",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder()\n                .userId(user.getUserId()).fullName",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder().userId",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.UserInfoResponse.builder",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "user.getUserId",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "user.getFullName",
+          "lineNumber": 34
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "user.getBio",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "user.getEmail",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "student.getPortfolioSlug",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "student.getUniversityName",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "user.getAvatarUrl",
+          "lineNumber": 39
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioConfigResponse.builder()\n                    .theme(config.getTheme())\n                    .themeColors(config.getThemeColors())\n                    .fonts(config.getFonts())\n                    .heroSection(config.getHeroSection())\n                    .skillsSection(config.getSkillsSection()).build",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioConfigResponse.builder()\n                    .theme(config.getTheme())\n                    .themeColors(config.getThemeColors())\n                    .fonts(config.getFonts())\n                    .heroSection(config.getHeroSection()).skillsSection",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioConfigResponse.builder()\n                    .theme(config.getTheme())\n                    .themeColors(config.getThemeColors())\n                    .fonts(config.getFonts()).heroSection",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioConfigResponse.builder()\n                    .theme(config.getTheme())\n                    .themeColors(config.getThemeColors()).fonts",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioConfigResponse.builder()\n                    .theme(config.getTheme()).themeColors",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioConfigResponse.builder().theme",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioConfigResponse.builder",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "config.getTheme",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "config.getThemeColors",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "config.getFonts",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "config.getHeroSection",
+          "lineNumber": 48
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "config.getSkillsSection",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "skills.stream()\n                .map(s -> {\n                    String skillName = \"Unknown Skill\";\n                    if (s.getSkill().getSkillId() != null) {\n                        Optional<Skill> opt = skillRepository.findById(s.getSkill().getSkillId());\n                        if (opt.isPresent()) {\n                            skillName = opt.get().getSkillName();\n                        }\n                    }\n                    return PortfolioResponse.StudentSkillResponse.builder()\n                            .skillName(skillName)\n                            .customDescription(s.getCustomDescription())\n                            .techStack(s.getTechStack())\n                            .build();\n                }).collect",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "skills.stream().map",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "skills.stream",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "s.getSkill().getSkillId",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "s.getSkill",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "skillRepository.findById",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "s.getSkill().getSkillId",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "s.getSkill",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "opt.isPresent",
+          "lineNumber": 58
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "opt.get().getSkillName",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "opt.get",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentSkillResponse.builder()\n                            .skillName(skillName)\n                            .customDescription(s.getCustomDescription())\n                            .techStack(s.getTechStack()).build",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentSkillResponse.builder()\n                            .skillName(skillName)\n                            .customDescription(s.getCustomDescription()).techStack",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentSkillResponse.builder()\n                            .skillName(skillName).customDescription",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentSkillResponse.builder().skillName",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentSkillResponse.builder",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "s.getCustomDescription",
+          "lineNumber": 64
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "s.getTechStack",
+          "lineNumber": 65
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "Collectors.toList",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "projects.stream()\n                .map(p -> PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription())\n                        .techStack(p.getTechStack())\n                        .icon(p.getIcon())\n                        .stars(p.getStars())\n                        .build()).collect",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "projects.stream().map",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "projects.stream",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription())\n                        .techStack(p.getTechStack())\n                        .icon(p.getIcon())\n                        .stars(p.getStars()).build",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription())\n                        .techStack(p.getTechStack())\n                        .icon(p.getIcon()).stars",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription())\n                        .techStack(p.getTechStack()).icon",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription()).techStack",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl()).description",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl()).demoUrl",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId())\n                        .projectName(p.getProjectName()).repoUrl",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                        .projectId(p.getProjectId()).projectName",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder().projectId",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "p.getProjectId",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "p.getProjectName",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "p.getRepoUrl",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "p.getDemoUrl",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "p.getDescription",
+          "lineNumber": 76
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "p.getTechStack",
+          "lineNumber": 77
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "p.getIcon",
+          "lineNumber": 78
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "p.getStars",
+          "lineNumber": 79
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "Collectors.toList",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "education.stream()\n                .map(e -> PortfolioResponse.StudentEducationResponse.builder()\n                        .educationId(e.getEducationId())\n                        .university(e.getUniversity())\n                        .degree(e.getDegree())\n                        .period(e.getPeriod())\n                        .description(e.getDescription())\n                        .build()).collect",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "education.stream().map",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "education.stream",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentEducationResponse.builder()\n                        .educationId(e.getEducationId())\n                        .university(e.getUniversity())\n                        .degree(e.getDegree())\n                        .period(e.getPeriod())\n                        .description(e.getDescription()).build",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentEducationResponse.builder()\n                        .educationId(e.getEducationId())\n                        .university(e.getUniversity())\n                        .degree(e.getDegree())\n                        .period(e.getPeriod()).description",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentEducationResponse.builder()\n                        .educationId(e.getEducationId())\n                        .university(e.getUniversity())\n                        .degree(e.getDegree()).period",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentEducationResponse.builder()\n                        .educationId(e.getEducationId())\n                        .university(e.getUniversity()).degree",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentEducationResponse.builder()\n                        .educationId(e.getEducationId()).university",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentEducationResponse.builder().educationId",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.StudentEducationResponse.builder",
+          "lineNumber": 84
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "e.getEducationId",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "e.getUniversity",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "e.getDegree",
+          "lineNumber": 87
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "e.getPeriod",
+          "lineNumber": 88
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "e.getDescription",
+          "lineNumber": 89
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "Collectors.toList",
+          "lineNumber": 91
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.builder()\n                .userInfo(userInfo)\n                .config(configResponse)\n                .skills(skillResponses)\n                .projects(projectResponses)\n                .education(educationResponses).build",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.builder()\n                .userInfo(userInfo)\n                .config(configResponse)\n                .skills(skillResponses)\n                .projects(projectResponses).education",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.builder()\n                .userInfo(userInfo)\n                .config(configResponse)\n                .skills(skillResponses).projects",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.builder()\n                .userInfo(userInfo)\n                .config(configResponse).skills",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.builder()\n                .userInfo(userInfo).config",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.builder().userInfo",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPortfolioResponse",
+          "callee": "PortfolioResponse.builder",
+          "lineNumber": 93
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "Collections.emptyList",
+          "lineNumber": 104
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "projectRequests.stream().map(p ->\n                PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription())\n                        .techStack(p.getTechStack())\n                        .icon(p.getIcon())\n                        .stars(p.getStars())\n                        .build()\n        ).collect",
+          "lineNumber": 106
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "projectRequests.stream().map",
+          "lineNumber": 106
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "projectRequests.stream",
+          "lineNumber": 106
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription())\n                        .techStack(p.getTechStack())\n                        .icon(p.getIcon())\n                        .stars(p.getStars()).build",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription())\n                        .techStack(p.getTechStack())\n                        .icon(p.getIcon()).stars",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription())\n                        .techStack(p.getTechStack()).icon",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl())\n                        .description(p.getDescription()).techStack",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl())\n                        .demoUrl(p.getDemoUrl()).description",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build())\n                        .projectName(p.getProjectName())\n                        .repoUrl(p.getRepoUrl()).demoUrl",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build())\n                        .projectName(p.getProjectName()).repoUrl",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder()\n                        .user(User.builder().userId(user.getUserId()).build()).projectName",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder().user",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "PortfolioProject.builder",
+          "lineNumber": 107
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "User.builder().userId(user.getUserId()).build",
+          "lineNumber": 108
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "User.builder().userId",
+          "lineNumber": 108
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "User.builder",
+          "lineNumber": 108
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "user.getUserId",
+          "lineNumber": 108
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "p.getProjectName",
+          "lineNumber": 109
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "p.getRepoUrl",
+          "lineNumber": 110
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "p.getDemoUrl",
+          "lineNumber": 111
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "p.getDescription",
+          "lineNumber": 112
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "p.getTechStack",
+          "lineNumber": 113
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "p.getIcon",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "p.getStars",
+          "lineNumber": 115
+        },
+        {
+          "caller": "toPortfolioProjects",
+          "callee": "Collectors.toList",
+          "lineNumber": 117
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "Collections.emptyList",
+          "lineNumber": 122
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "educationRequests.stream().map(e ->\n                StudentEducation.builder()\n                        .user(Student.builder().userId(student.getUserId()).build())\n                        .university(e.getUniversity())\n                        .degree(e.getDegree())\n                        .period(e.getPeriod())\n                        .description(e.getDescription())\n                        .build()\n        ).collect",
+          "lineNumber": 124
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "educationRequests.stream().map",
+          "lineNumber": 124
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "educationRequests.stream",
+          "lineNumber": 124
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "StudentEducation.builder()\n                        .user(Student.builder().userId(student.getUserId()).build())\n                        .university(e.getUniversity())\n                        .degree(e.getDegree())\n                        .period(e.getPeriod())\n                        .description(e.getDescription()).build",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "StudentEducation.builder()\n                        .user(Student.builder().userId(student.getUserId()).build())\n                        .university(e.getUniversity())\n                        .degree(e.getDegree())\n                        .period(e.getPeriod()).description",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "StudentEducation.builder()\n                        .user(Student.builder().userId(student.getUserId()).build())\n                        .university(e.getUniversity())\n                        .degree(e.getDegree()).period",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "StudentEducation.builder()\n                        .user(Student.builder().userId(student.getUserId()).build())\n                        .university(e.getUniversity()).degree",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "StudentEducation.builder()\n                        .user(Student.builder().userId(student.getUserId()).build()).university",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "StudentEducation.builder().user",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "StudentEducation.builder",
+          "lineNumber": 125
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "Student.builder().userId(student.getUserId()).build",
+          "lineNumber": 126
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "Student.builder().userId",
+          "lineNumber": 126
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "Student.builder",
+          "lineNumber": 126
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "student.getUserId",
+          "lineNumber": 126
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "e.getUniversity",
+          "lineNumber": 127
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "e.getDegree",
+          "lineNumber": 128
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "e.getPeriod",
+          "lineNumber": 129
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "e.getDescription",
+          "lineNumber": 130
+        },
+        {
+          "caller": "toStudentEducationList",
+          "callee": "Collectors.toList",
+          "lineNumber": 132
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioConfigRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "PortfolioConfigRepository",
+          "startLine": 10,
+          "endLine": 13,
+          "methods": [
+            "findByUser_UserId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortfolioConfigRepository",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioProjectRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "PortfolioProjectRepository",
+          "startLine": 11,
+          "endLine": 15,
+          "methods": [
+            "findByUser_UserId",
+            "deleteByUser_UserId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortfolioProjectRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentEducationRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "StudentEducationRepository",
+          "startLine": 11,
+          "endLine": 15,
+          "methods": [
+            "findByUser_UserId",
+            "deleteByUser_UserId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentEducationRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 6,
+      "classes": [
+        {
+          "name": "GithubPortfolioService",
+          "startLine": 6,
+          "endLine": 9,
+          "methods": [
+            "importFromGithub"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GithubPortfolioService",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "PortfolioService",
+          "startLine": 9,
+          "endLine": 20,
+          "methods": [
+            "getPortfolio",
+            "getPortfolioBySlug",
+            "getPortfolioByStudentId",
+            "upsertPortfolio",
+            "requestReview"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PortfolioService",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/GithubPortfolioServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 100,
+      "functions": [
+        {
+          "name": "importFromGithub",
+          "startLine": 47,
+          "endLine": 113,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "GithubPortfolioServiceImpl",
+          "startLine": 29,
+          "endLine": 114,
+          "methods": [
+            "importFromGithub"
+          ],
+          "properties": [
+            "githubApiClient",
+            "portfolioAiAnalyzer",
+            "authenticatedStudentService",
+            "skillEvidenceService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "importFromGithub",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "GithubPortfolioServiceImpl",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "importFromGithub",
+          "callee": "request.getRepoUrl",
+          "lineNumber": 50
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "Pattern.compile",
+          "lineNumber": 54
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "pattern.matcher",
+          "lineNumber": 55
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "matcher.find",
+          "lineNumber": 57
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 58
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "matcher.group",
+          "lineNumber": 60
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "matcher.group(2).replace",
+          "lineNumber": 62
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "matcher.group",
+          "lineNumber": 62
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "githubApiClient.getRepoMetadata",
+          "lineNumber": 66
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "metadata.defaultBranch",
+          "lineNumber": 70
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "githubApiClient.fetchFileContent",
+          "lineNumber": 72
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "githubApiClient.fetchFileContent",
+          "lineNumber": 75
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "extraContext.isBlank",
+          "lineNumber": 77
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "githubApiClient.fetchFileContent",
+          "lineNumber": 78
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "extraContext.isBlank",
+          "lineNumber": 81
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "githubApiClient.fetchFileContent",
+          "lineNumber": 82
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "authenticatedStudentService.getRequiredStudent",
+          "lineNumber": 87
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "student.getCareerRole",
+          "lineNumber": 88
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 88
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "student.getCareerRole",
+          "lineNumber": 88
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "skillEvidenceService.careerSkillCatalog",
+          "lineNumber": 89
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "portfolioAiAnalyzer.analyzeGithubProject",
+          "lineNumber": 91
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "metadata.description",
+          "lineNumber": 92
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "skillEvidenceService.recordEvidence",
+          "lineNumber": 97
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "student.getUserId",
+          "lineNumber": 98
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "aiSummary.matchedSkills",
+          "lineNumber": 98
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                .projectId(UUID.randomUUID()) // FE will replace or use this as temporary ID\n                .projectName(repo)\n                .repoUrl(repoUrl)\n                .demoUrl(metadata.homepage())\n                // Use the AI summary if available; otherwise, fallback to the GitHub repo description\n                .description(aiSummary.summary() != null && !aiSummary.summary().isBlank() ? aiSummary.summary() : metadata.description())\n                .stars(metadata.stars())\n                .techStack(aiSummary.techStack())\n                .icon(\"fab fa-github\").build",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                .projectId(UUID.randomUUID()) // FE will replace or use this as temporary ID\n                .projectName(repo)\n                .repoUrl(repoUrl)\n                .demoUrl(metadata.homepage())\n                // Use the AI summary if available; otherwise, fallback to the GitHub repo description\n                .description(aiSummary.summary() != null && !aiSummary.summary().isBlank() ? aiSummary.summary() : metadata.description())\n                .stars(metadata.stars())\n                .techStack(aiSummary.techStack()).icon",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                .projectId(UUID.randomUUID()) // FE will replace or use this as temporary ID\n                .projectName(repo)\n                .repoUrl(repoUrl)\n                .demoUrl(metadata.homepage())\n                // Use the AI summary if available; otherwise, fallback to the GitHub repo description\n                .description(aiSummary.summary() != null && !aiSummary.summary().isBlank() ? aiSummary.summary() : metadata.description())\n                .stars(metadata.stars()).techStack",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                .projectId(UUID.randomUUID()) // FE will replace or use this as temporary ID\n                .projectName(repo)\n                .repoUrl(repoUrl)\n                .demoUrl(metadata.homepage())\n                // Use the AI summary if available; otherwise, fallback to the GitHub repo description\n                .description(aiSummary.summary() != null && !aiSummary.summary().isBlank() ? aiSummary.summary() : metadata.description()).stars",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                .projectId(UUID.randomUUID()) // FE will replace or use this as temporary ID\n                .projectName(repo)\n                .repoUrl(repoUrl)\n                .demoUrl(metadata.homepage()).description",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                .projectId(UUID.randomUUID()) // FE will replace or use this as temporary ID\n                .projectName(repo)\n                .repoUrl(repoUrl).demoUrl",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                .projectId(UUID.randomUUID()) // FE will replace or use this as temporary ID\n                .projectName(repo).repoUrl",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder()\n                .projectId(UUID.randomUUID()).projectName",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder().projectId",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "PortfolioResponse.PortfolioProjectResponse.builder",
+          "lineNumber": 102
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 103
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "metadata.homepage",
+          "lineNumber": 106
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "aiSummary.summary",
+          "lineNumber": 108
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "aiSummary.summary().isBlank",
+          "lineNumber": 108
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "aiSummary.summary",
+          "lineNumber": 108
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "aiSummary.summary",
+          "lineNumber": 108
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "metadata.description",
+          "lineNumber": 108
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "metadata.stars",
+          "lineNumber": 109
+        },
+        {
+          "caller": "importFromGithub",
+          "callee": "aiSummary.techStack",
+          "lineNumber": 110
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 238,
+      "nonEmptyLines": 212,
+      "functions": [
+        {
+          "name": "getPortfolio",
+          "startLine": 61,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "getPortfolioBySlug",
+          "startLine": 91,
+          "endLine": 114,
+          "params": [
+            "slug"
+          ]
+        },
+        {
+          "name": "getPortfolioByStudentId",
+          "startLine": 116,
+          "endLine": 130,
+          "params": [
+            "studentId"
+          ]
+        },
+        {
+          "name": "upsertPortfolio",
+          "startLine": 139,
+          "endLine": 159,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "requestReview",
+          "startLine": 161,
+          "endLine": 187,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "syncPortfolioConfig",
+          "startLine": 195,
+          "endLine": 207,
+          "params": [
+            "configRequest",
+            "student"
+          ]
+        },
+        {
+          "name": "syncPortfolioProjects",
+          "startLine": 216,
+          "endLine": 221,
+          "params": [
+            "projectRequests",
+            "user"
+          ]
+        },
+        {
+          "name": "syncPortfolioEducation",
+          "startLine": 230,
+          "endLine": 235,
+          "params": [
+            "educationRequests",
+            "student"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PortfolioServiceImpl",
+          "startLine": 40,
+          "endLine": 238,
+          "methods": [
+            "getPortfolio",
+            "getPortfolioBySlug",
+            "getPortfolioByStudentId",
+            "upsertPortfolio",
+            "requestReview",
+            "syncPortfolioConfig",
+            "syncPortfolioProjects",
+            "syncPortfolioEducation"
+          ],
+          "properties": [
+            "authenticatedStudentService",
+            "portfolioMapper",
+            "portfolioConfigRepository",
+            "portfolioProjectRepository",
+            "studentEducationRepository",
+            "studentSkillRepository",
+            "portfolioReviewRequestRepository",
+            "studentRepository",
+            "userRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getPortfolio",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "getPortfolioBySlug",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "getPortfolioByStudentId",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "upsertPortfolio",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "requestReview",
+          "line": 161,
+          "isDefault": false
+        },
+        {
+          "name": "PortfolioServiceImpl",
+          "line": 40,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getPortfolio",
+          "callee": "authenticatedStudentService.getRequiredStudent",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "userRepository.findById",
+          "lineNumber": 67
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "student.getUserId",
+          "lineNumber": 67
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "userOpt.isEmpty",
+          "lineNumber": 68
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "log.error",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "student.getUserId",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "userOpt.get",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "portfolioConfigRepository.findByUser_UserId",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "student.getUserId",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "studentSkillRepository.findByStudent_UserId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "student.getUserId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "portfolioProjectRepository.findByUser_UserId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "user.getUserId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "studentEducationRepository.findByUser_UserId",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "student.getUserId",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getPortfolio",
+          "callee": "portfolioMapper.toPortfolioResponse",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "studentRepository.findByPortfolioSlug",
+          "lineNumber": 94
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "studentOpt.isEmpty",
+          "lineNumber": 95
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "log.error",
+          "lineNumber": 96
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 97
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "studentOpt.get",
+          "lineNumber": 99
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "userRepository.findById",
+          "lineNumber": 101
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "student.getUserId",
+          "lineNumber": 101
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "userOpt.isEmpty",
+          "lineNumber": 102
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "log.error",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "student.getUserId",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 104
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "userOpt.get",
+          "lineNumber": 106
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "portfolioConfigRepository.findByUser_UserId",
+          "lineNumber": 108
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "student.getUserId",
+          "lineNumber": 108
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "studentSkillRepository.findByStudent_UserId",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "student.getUserId",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "portfolioProjectRepository.findByUser_UserId",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "user.getUserId",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "studentEducationRepository.findByUser_UserId",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "student.getUserId",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getPortfolioBySlug",
+          "callee": "portfolioMapper.toPortfolioResponse",
+          "lineNumber": 113
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "studentRepository.findById(studentId).orElseThrow",
+          "lineNumber": 119
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "studentRepository.findById",
+          "lineNumber": 119
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 120
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "userRepository.findById(student.getUserId()).orElseThrow",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "userRepository.findById",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "student.getUserId",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 122
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "portfolioConfigRepository.findByUser_UserId",
+          "lineNumber": 124
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "student.getUserId",
+          "lineNumber": 124
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "studentSkillRepository.findByStudent_UserId",
+          "lineNumber": 125
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "student.getUserId",
+          "lineNumber": 125
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "portfolioProjectRepository.findByUser_UserId",
+          "lineNumber": 126
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "user.getUserId",
+          "lineNumber": 126
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "studentEducationRepository.findByUser_UserId",
+          "lineNumber": 127
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "student.getUserId",
+          "lineNumber": 127
+        },
+        {
+          "caller": "getPortfolioByStudentId",
+          "callee": "portfolioMapper.toPortfolioResponse",
+          "lineNumber": 129
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "authenticatedStudentService.getOrCreateStudentForUpdate",
+          "lineNumber": 143
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "userRepository.findById",
+          "lineNumber": 145
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "student.getUserId",
+          "lineNumber": 145
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "userOpt.isEmpty",
+          "lineNumber": 146
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "log.error",
+          "lineNumber": 147
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "student.getUserId",
+          "lineNumber": 147
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 148
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "userOpt.get",
+          "lineNumber": 150
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "syncPortfolioConfig",
+          "lineNumber": 153
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "request.getConfig",
+          "lineNumber": 153
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "syncPortfolioProjects",
+          "lineNumber": 154
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "request.getProjects",
+          "lineNumber": 154
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "syncPortfolioEducation",
+          "lineNumber": 155
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "request.getEducation",
+          "lineNumber": 155
+        },
+        {
+          "caller": "upsertPortfolio",
+          "callee": "getPortfolio",
+          "lineNumber": 158
+        },
+        {
+          "caller": "requestReview",
+          "callee": "authenticatedStudentService.getRequiredStudent",
+          "lineNumber": 164
+        },
+        {
+          "caller": "requestReview",
+          "callee": "userRepository.findByEmail",
+          "lineNumber": 165
+        },
+        {
+          "caller": "requestReview",
+          "callee": "request.getEmail",
+          "lineNumber": 165
+        },
+        {
+          "caller": "requestReview",
+          "callee": "mentor.getRole",
+          "lineNumber": 166
+        },
+        {
+          "caller": "requestReview",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 167
+        },
+        {
+          "caller": "requestReview",
+          "callee": "portfolioReviewRequestRepository.existsByStudent_UserIdAndMentor_UserIdAndStatus",
+          "lineNumber": 170
+        },
+        {
+          "caller": "requestReview",
+          "callee": "student.getUserId",
+          "lineNumber": 171
+        },
+        {
+          "caller": "requestReview",
+          "callee": "mentor.getUserId",
+          "lineNumber": 172
+        },
+        {
+          "caller": "requestReview",
+          "callee": "new BadRequestException",
+          "lineNumber": 176
+        },
+        {
+          "caller": "requestReview",
+          "callee": "userRepository.findById(student.getUserId()).orElseThrow",
+          "lineNumber": 179
+        },
+        {
+          "caller": "requestReview",
+          "callee": "userRepository.findById",
+          "lineNumber": 179
+        },
+        {
+          "caller": "requestReview",
+          "callee": "student.getUserId",
+          "lineNumber": 179
+        },
+        {
+          "caller": "requestReview",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 180
+        },
+        {
+          "caller": "requestReview",
+          "callee": "portfolioReviewRequestRepository.save",
+          "lineNumber": 182
+        },
+        {
+          "caller": "requestReview",
+          "callee": "PortfolioReviewRequest.builder()\n                .student(studentUser)\n                .mentor(mentor)\n                .status(ReviewStatus.PENDING).build",
+          "lineNumber": 182
+        },
+        {
+          "caller": "requestReview",
+          "callee": "PortfolioReviewRequest.builder()\n                .student(studentUser)\n                .mentor(mentor).status",
+          "lineNumber": 182
+        },
+        {
+          "caller": "requestReview",
+          "callee": "PortfolioReviewRequest.builder()\n                .student(studentUser).mentor",
+          "lineNumber": 182
+        },
+        {
+          "caller": "requestReview",
+          "callee": "PortfolioReviewRequest.builder().student",
+          "lineNumber": 182
+        },
+        {
+          "caller": "requestReview",
+          "callee": "PortfolioReviewRequest.builder",
+          "lineNumber": 182
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "portfolioConfigRepository.findByUser_UserId",
+          "lineNumber": 197
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "student.getUserId",
+          "lineNumber": 197
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "PortfolioConfig.builder().user(student).build",
+          "lineNumber": 199
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "PortfolioConfig.builder().user",
+          "lineNumber": 199
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "PortfolioConfig.builder",
+          "lineNumber": 199
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "config.setTheme",
+          "lineNumber": 201
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "configRequest.getTheme",
+          "lineNumber": 201
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "config.setThemeColors",
+          "lineNumber": 202
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "configRequest.getThemeColors",
+          "lineNumber": 202
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "config.setFonts",
+          "lineNumber": 203
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "configRequest.getFonts",
+          "lineNumber": 203
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "config.setHeroSection",
+          "lineNumber": 204
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "configRequest.getHeroSection",
+          "lineNumber": 204
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "config.setSkillsSection",
+          "lineNumber": 205
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "configRequest.getSkillsSection",
+          "lineNumber": 205
+        },
+        {
+          "caller": "syncPortfolioConfig",
+          "callee": "portfolioConfigRepository.save",
+          "lineNumber": 206
+        },
+        {
+          "caller": "syncPortfolioProjects",
+          "callee": "portfolioProjectRepository.deleteByUser_UserId",
+          "lineNumber": 218
+        },
+        {
+          "caller": "syncPortfolioProjects",
+          "callee": "user.getUserId",
+          "lineNumber": 218
+        },
+        {
+          "caller": "syncPortfolioProjects",
+          "callee": "portfolioMapper.toPortfolioProjects",
+          "lineNumber": 219
+        },
+        {
+          "caller": "syncPortfolioProjects",
+          "callee": "portfolioProjectRepository.saveAll",
+          "lineNumber": 220
+        },
+        {
+          "caller": "syncPortfolioEducation",
+          "callee": "studentEducationRepository.deleteByUser_UserId",
+          "lineNumber": 232
+        },
+        {
+          "caller": "syncPortfolioEducation",
+          "callee": "student.getUserId",
+          "lineNumber": 232
+        },
+        {
+          "caller": "syncPortfolioEducation",
+          "callee": "portfolioMapper.toStudentEducationList",
+          "lineNumber": 233
+        },
+        {
+          "caller": "syncPortfolioEducation",
+          "callee": "studentEducationRepository.saveAll",
+          "lineNumber": 234
+        }
+      ],
+      "metrics": {
+        "importCount": 24,
+        "exportCount": 6,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    }
+  ]
+}

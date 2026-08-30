@@ -1,0 +1,35 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md",
+      "language": "markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md",
+      "language": "markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md",
+      "language": "markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md": []
+  }
+}

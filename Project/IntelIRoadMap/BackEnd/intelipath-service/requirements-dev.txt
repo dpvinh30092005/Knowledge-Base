@@ -1,0 +1,5 @@
+# Test-only dependencies. Kept out of requirements.txt so the Docker image
+# (which installs that file) doesn't ship a test runner.
+#   pip install -r requirements-dev.txt && pytest
+-r requirements.txt
+pytest>=8.0

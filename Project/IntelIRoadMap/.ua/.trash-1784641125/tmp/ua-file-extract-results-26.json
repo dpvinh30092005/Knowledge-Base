@@ -1,0 +1,134 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 2,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 2,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 2
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-backend/Dockerfile",
+      "language": "dockerfile",
+      "fileCategory": "infra",
+      "totalLines": 30,
+      "nonEmptyLines": 21,
+      "services": [
+        {
+          "name": "builder",
+          "image": "maven:3.9-eclipse-temurin-21",
+          "ports": [],
+          "startLine": 2,
+          "endLine": 17
+        },
+        {
+          "name": "eclipse-temurin",
+          "image": "eclipse-temurin:21-jre-alpine",
+          "ports": [
+            8080
+          ],
+          "startLine": 18,
+          "endLine": 31
+        }
+      ],
+      "steps": [
+        {
+          "name": "FROM maven:3.9-eclipse-temurin-21 AS builder",
+          "startLine": 2,
+          "endLine": 2
+        },
+        {
+          "name": "WORKDIR /app",
+          "startLine": 5,
+          "endLine": 5
+        },
+        {
+          "name": "COPY pom.xml .",
+          "startLine": 8,
+          "endLine": 8
+        },
+        {
+          "name": "RUN mvn -B -q dependency:go-offline",
+          "startLine": 9,
+          "endLine": 9
+        },
+        {
+          "name": "COPY src ./src",
+          "startLine": 12,
+          "endLine": 12
+        },
+        {
+          "name": "RUN mvn -B -q clean package -Dmaven.test.skip=true",
+          "startLine": 15,
+          "endLine": 15
+        },
+        {
+          "name": "FROM eclipse-temurin:21-jre-alpine",
+          "startLine": 18,
+          "endLine": 18
+        },
+        {
+          "name": "WORKDIR /app",
+          "startLine": 21,
+          "endLine": 21
+        },
+        {
+          "name": "COPY --from=builder /app/target/*.jar app.jar",
+          "startLine": 24,
+          "endLine": 24
+        },
+        {
+          "name": "EXPOSE 8080",
+          "startLine": 27,
+          "endLine": 27
+        },
+        {
+          "name": "ENTRYPOINT [\"java\", \"-jar\", \"app.jar\"]",
+          "startLine": 30,
+          "endLine": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "serviceCount": 2,
+        "stepCount": 11
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docker-compose.yml",
+      "language": "yaml",
+      "fileCategory": "infra",
+      "totalLines": 91,
+      "nonEmptyLines": 84,
+      "sections": [
+        {
+          "heading": "services",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "volumes",
+          "level": 1,
+          "line": 90
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    }
+  ]
+}

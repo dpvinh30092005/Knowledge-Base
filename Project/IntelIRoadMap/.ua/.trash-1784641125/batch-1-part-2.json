@@ -1,0 +1,734 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "type": "file",
+      "name": "ScrapedRecruitmentResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "summary": "Response DTO representing a raw scraped recruitment record (info, descriptions, posted/deadline dates) from the scraper service.",
+      "tags": [
+        "data-model",
+        "dto",
+        "scraping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java:ScrapedRecruitmentResponse",
+      "type": "class",
+      "name": "ScrapedRecruitmentResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "lineRange": [
+        8,
+        25
+      ],
+      "summary": "DTO modeling a scraped recruitment payload received from the AI/scraper microservice.",
+      "tags": [
+        "data-model",
+        "dto"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "type": "file",
+      "name": "ScraperResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "summary": "Top-level response DTO aggregating scraped recruitment posts, companies, and recruitments returned by a single scraper run.",
+      "tags": [
+        "data-model",
+        "dto",
+        "scraping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java:ScraperResponse",
+      "type": "class",
+      "name": "ScraperResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "lineRange": [
+        7,
+        17
+      ],
+      "summary": "DTO aggregating the full set of scraped recruitment posts, companies, and recruitments from one scraper run.",
+      "tags": [
+        "data-model",
+        "dto"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "type": "file",
+      "name": "Company.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "summary": "JPA entity persisting scraped company records, storing raw signature and info JSON alongside the external TopCV company ID.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java:Company",
+      "type": "class",
+      "name": "Company",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "lineRange": [
+        22,
+        42
+      ],
+      "summary": "JPA entity mapped to the companies table, storing the external TopCV company ID and raw scraped JSON.",
+      "tags": [
+        "data-model",
+        "entity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "type": "file",
+      "name": "Recruitment.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "summary": "JPA entity persisting scraped recruitment postings, including raw info/description JSON and posted/application-deadline dates.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java:Recruitment",
+      "type": "class",
+      "name": "Recruitment",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "lineRange": [
+        23,
+        49
+      ],
+      "summary": "JPA entity mapped to the recruitments table, storing the external recruitment ID and raw scraped JSON with dates.",
+      "tags": [
+        "data-model",
+        "entity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "type": "file",
+      "name": "RecruitmentPost.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "summary": "JPA entity linking a Company and a Recruitment into a single recruitment post record with an expiry timestamp.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java:RecruitmentPost",
+      "type": "class",
+      "name": "RecruitmentPost",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "lineRange": [
+        23,
+        47
+      ],
+      "summary": "JPA entity mapped to the recruitment_posts join table linking Company and Recruitment with an expiry timestamp.",
+      "tags": [
+        "data-model",
+        "entity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "type": "file",
+      "name": "SkillTrend.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "summary": "JPA entity storing weekly aggregated demand counts for a given skill, used to compute market skill-trend charts.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java:SkillTrend",
+      "type": "class",
+      "name": "SkillTrend",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "lineRange": [
+        21,
+        43
+      ],
+      "summary": "JPA entity mapped to the skill_trends table, recording weekly job-demand counts per skill.",
+      "tags": [
+        "data-model",
+        "entity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "type": "file",
+      "name": "MarketTrendMapper.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "summary": "Mapper utility converting entity data (Company, SkillTrend) into MarketTrendResponse DTOs for the market-trend API.",
+      "tags": [
+        "mapper",
+        "utility",
+        "data-transformation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:MarketTrendMapper",
+      "type": "class",
+      "name": "MarketTrendMapper",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "lineRange": [
+        12,
+        57
+      ],
+      "summary": "Static mapper class converting domain entities into MarketTrendResponse nested DTOs.",
+      "tags": [
+        "mapper",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toCompanyTrendResponse",
+      "type": "function",
+      "name": "toCompanyTrendResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "lineRange": [
+        15,
+        27
+      ],
+      "summary": "Maps a Company entity and its recruitment count into a CompanyTrendResponse, extracting name/logo/link via ScraperMapper.str.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toSkillTrendResponse",
+      "type": "function",
+      "name": "toSkillTrendResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "lineRange": [
+        39,
+        56
+      ],
+      "summary": "Aggregates a skill's trend list into a sorted SkillTrendResponse with per-week data points.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "type": "file",
+      "name": "ScraperMapper.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "summary": "Mapper utility converting scraped Company/Recruitment entities and raw JSON maps into their corresponding response DTOs.",
+      "tags": [
+        "mapper",
+        "utility",
+        "data-transformation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:ScraperMapper",
+      "type": "class",
+      "name": "ScraperMapper",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "lineRange": [
+        14,
+        54
+      ],
+      "summary": "Static mapper class converting scraped domain entities and raw JSON into scraper response DTOs.",
+      "tags": [
+        "mapper",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "function",
+      "name": "str",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "lineRange": [
+        18,
+        21
+      ],
+      "summary": "Safely extracts a string value for a key from a raw JSON-like map, returning null when absent.",
+      "tags": [
+        "utility",
+        "null-safety"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:toCompanyResponse",
+      "type": "function",
+      "name": "toCompanyResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "lineRange": [
+        23,
+        35
+      ],
+      "summary": "Converts a Company entity's raw signature/info JSON into a CompanyResponse DTO.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:toRecruitmentResponse",
+      "type": "function",
+      "name": "toRecruitmentResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "lineRange": [
+        37,
+        53
+      ],
+      "summary": "Converts a Recruitment entity's raw info/description JSON into a RecruitmentResponse DTO, including tags and related-tag fields.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "type": "file",
+      "name": "CompanyRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "summary": "Spring Data JPA repository for Company entities, including a native query for the top hiring companies by recruitment count.",
+      "tags": [
+        "repository",
+        "data-access",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java:CompanyRepository",
+      "type": "class",
+      "name": "CompanyRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "lineRange": [
+        10,
+        20
+      ],
+      "summary": "Spring Data JPA repository interface for Company entities.",
+      "tags": [
+        "repository",
+        "data-access"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "type": "file",
+      "name": "RecruitmentPostRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "summary": "Spring Data JPA repository for RecruitmentPost entities, supporting duplicate-post lookup and bulk deletion of expired posts.",
+      "tags": [
+        "repository",
+        "data-access",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java:RecruitmentPostRepository",
+      "type": "class",
+      "name": "RecruitmentPostRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "lineRange": [
+        12,
+        18
+      ],
+      "summary": "Spring Data JPA repository interface for RecruitmentPost entities.",
+      "tags": [
+        "repository",
+        "data-access"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "type": "file",
+      "name": "RecruitmentRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "summary": "Spring Data JPA repository for Recruitment entities, with keyword title search and salary-field aggregation queries.",
+      "tags": [
+        "repository",
+        "data-access",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java:RecruitmentRepository",
+      "type": "class",
+      "name": "RecruitmentRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "lineRange": [
+        11,
+        21
+      ],
+      "summary": "Spring Data JPA repository interface for Recruitment entities.",
+      "tags": [
+        "repository",
+        "data-access"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java:ScrapedRecruitmentResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java:ScrapedRecruitmentResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java:ScraperResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java:ScraperResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java:Company",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java:Company",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java:Recruitment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java:Recruitment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java:RecruitmentPost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java:RecruitmentPost",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java:SkillTrend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java:SkillTrend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:MarketTrendMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:MarketTrendMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toCompanyTrendResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toCompanyTrendResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toSkillTrendResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toSkillTrendResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:ScraperMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:ScraperMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:toCompanyResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:toCompanyResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:toRecruitmentResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:toRecruitmentResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java:CompanyRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java:CompanyRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java:RecruitmentPostRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java:RecruitmentPostRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java:RecruitmentRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java:RecruitmentRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java:toCompanyTrendResponse",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

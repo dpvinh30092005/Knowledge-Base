@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/slop-test.md",
+      "type": "document",
+      "name": "slop-test.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/slop-test.md",
+      "summary": "Reference checklist for the Hallmark design skill listing a 58-gate slop test plus a six-axis pre-emit self-critique, used to catch generic or AI-slop-looking UI output before it ships.",
+      "tags": ["documentation", "design-guidelines", "checklist", "hallmark-skill", "reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/structure.md",
+      "type": "document",
+      "name": "structure.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/structure.md",
+      "summary": "Reference guide for the Hallmark design skill defining six structural axes (heading placement, body composition, dividers, button voice, image treatment, reveal pattern) and how to pick a page's structural fingerprint.",
+      "tags": ["documentation", "design-guidelines", "layout", "hallmark-skill", "reference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/study.md",
+      "type": "document",
+      "name": "study.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/study.md",
+      "summary": "Reference guide for the Hallmark design skill's 'study' mode, describing the five-step protocol for extracting design DNA from a screenshot or URL, including refusal rules, structured field templates, and diagnosis report formats.",
+      "tags": ["documentation", "design-guidelines", "design-extraction", "hallmark-skill", "reference"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/typography.md",
+      "type": "document",
+      "name": "typography.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/typography.md",
+      "summary": "Reference guide for the Hallmark design skill covering typography principles, a curated font catalog, pairing patterns, type scale, and rules banning default/generic web fonts.",
+      "tags": ["documentation", "design-guidelines", "typography", "hallmark-skill", "reference"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/slop-test.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/structure.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/slop-test.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/typography.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/study.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/structure.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/study.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/typography.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

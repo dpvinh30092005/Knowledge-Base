@@ -1,0 +1,64 @@
+/* Hallmark · pre-emit critique: P5 H4 E4 S5 R5 V4 · macrostructure: progress-rail-to-constellation · theme: portfolio-runtime · contrast: token-dependent · nav: existing · footer: existing · honest: pass · chrome: pass · tokens: pass · responsive: pass */
+.portfolio-journey {
+  --journey-space-xs: 0.5rem;
+  --journey-space-sm: 0.75rem;
+  --journey-space-md: 1rem;
+  --journey-space-lg: 1.5rem;
+  --journey-space-xl: 2rem;
+  --journey-space-2xl: 3rem;
+  --journey-line: color-mix(in srgb, var(--text-color) 18%, transparent);
+  --journey-accent-soft: color-mix(in srgb, var(--primary-color) 12%, var(--bg-secondary));
+  --journey-surface-soft: color-mix(in srgb, var(--bg-primary) 72%, var(--bg-secondary));
+  padding: 6rem 2rem;
+  background: var(--bg-secondary);
+  color: var(--text-color);
+  overflow-x: clip;
+}
+
+.portfolio-journey__inner { max-width: 72rem; margin: 0 auto; }
+.portfolio-journey__header { max-width: 65ch; }
+.portfolio-journey__kicker { margin: 0 0 var(--journey-space-sm); color: var(--primary-color); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.portfolio-journey__header h2 { margin: 0; color: var(--title-color); font: 700 clamp(2rem, 5vw, 3.5rem)/1.08 var(--heading-font); overflow-wrap: anywhere; min-width: 0; }
+.portfolio-journey__header > p:last-child { margin: var(--journey-space-md) 0 0; }
+
+.portfolio-journey__progress { margin-top: var(--journey-space-2xl); }
+.portfolio-journey__progress-copy { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--journey-space-md); }
+.portfolio-journey__progress-copy span { font-weight: 700; color: var(--title-color); }
+.portfolio-journey__progress-copy strong { color: var(--primary-color); font: 700 clamp(2.5rem, 7vw, 5rem)/0.9 var(--heading-font); }
+.portfolio-journey__track { height: 0.5rem; margin-top: var(--journey-space-md); overflow: hidden; border-radius: 999px; background: var(--journey-line); }
+.portfolio-journey__track span { display: block; width: 100%; height: 100%; transform-origin: left; background: var(--primary-color); }
+.portfolio-journey__progress > p { margin: var(--journey-space-sm) 0 0; font-size: 0.875rem; }
+
+.portfolio-journey__stages { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: var(--journey-space-lg); margin: var(--journey-space-2xl) 0 0; padding: 0; list-style: none; }
+.portfolio-journey__stages li { display: flex; align-items: center; gap: var(--journey-space-sm); min-width: 0; border-top: 1px solid var(--journey-line); padding-top: var(--journey-space-md); }
+.portfolio-journey__stage-marker { display: grid; flex: 0 0 2rem; width: 2rem; height: 2rem; place-items: center; border: 1px solid var(--journey-line); border-radius: 50%; color: var(--text-color); }
+.portfolio-journey__stage-marker svg { width: 1rem; height: 1rem; }
+.portfolio-journey__stages .is-current .portfolio-journey__stage-marker { border-color: var(--primary-color); background: var(--journey-accent-soft); color: var(--primary-color); }
+.portfolio-journey__stages strong, .portfolio-journey__stages span { display: block; }
+.portfolio-journey__stages strong { color: var(--title-color); overflow-wrap: anywhere; }
+.portfolio-journey__stages div > span { margin-top: 0.25rem; font-size: 0.8125rem; }
+
+.portfolio-journey__skill-map { margin-top: 4rem; padding: var(--journey-space-xl); border: 1px solid var(--journey-line); border-radius: var(--card-radius); background: var(--journey-surface-soft); }
+.portfolio-journey__map-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--journey-space-lg); }
+.portfolio-journey__map-heading h3 { margin: 0; color: var(--title-color); font: 700 1.5rem/1.1 var(--heading-font); }
+.portfolio-journey__legend { display: flex; align-items: center; flex-wrap: wrap; gap: var(--journey-space-md); font-size: 0.75rem; }
+.portfolio-journey__legend span { display: flex; align-items: center; gap: 0.375rem; white-space: nowrap; }
+.portfolio-journey__legend i { width: 0.75rem; height: 0.75rem; border: 1px solid var(--journey-line); border-radius: 50%; }
+.portfolio-journey__legend i.is-held { background: var(--journey-accent-soft); border-color: var(--primary-color); }
+.portfolio-journey__legend i.is-verified { border: 3px double var(--primary-color); }
+.portfolio-journey__skill-map ul { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--journey-space-md); margin: var(--journey-space-xl) 0 0; padding: 0; list-style: none; }
+.portfolio-journey__skill-map li { position: relative; display: grid; width: var(--skill-size); height: var(--skill-size); place-items: center; padding: var(--journey-space-sm); border: 1px dashed var(--journey-line); border-radius: 50%; text-align: center; font-size: 0.75rem; line-height: 1.2; overflow-wrap: anywhere; }
+.portfolio-journey__skill-map li.is-held { border-style: solid; border-color: var(--primary-color); background: var(--journey-accent-soft); color: var(--title-color); font-weight: 700; }
+.portfolio-journey__skill-map li.is-verified { box-shadow: inset 0 0 0 3px var(--bg-secondary), inset 0 0 0 4px var(--primary-color); }
+.portfolio-journey__skill-map li svg { position: absolute; top: var(--journey-space-xs); right: var(--journey-space-xs); width: 0.875rem; height: 0.875rem; color: var(--primary-color); }
+
+@media (max-width: 40rem) {
+  .portfolio-journey { padding: 4rem 1.25rem; }
+  .portfolio-journey__map-heading { align-items: flex-start; flex-direction: column; }
+  .portfolio-journey__skill-map { padding: var(--journey-space-lg); }
+  .portfolio-journey__skill-map ul { gap: var(--journey-space-sm); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-journey *, .portfolio-journey *::before, .portfolio-journey *::after { scroll-behavior: auto; transition-duration: 0.01ms; animation-duration: 0.01ms; }
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "date": "2026-08-12",
+    "scope": "app",
+    "macrostructure": "Map/Diagram (home) · Narrative Workflow (project) · Photographic (art)",
+    "theme": "custom",
+    "theme_axes": "light / grotesk-sans / warm-32",
+    "vibe": "quadrille paper, drawn pixel, engineering sheet",
+    "nav": "N3 side-rail",
+    "footer": "Ft5 statement",
+    "enrichment": "none",
+    "brief": "portfolio-vinh — full redesign from atmospheric ink-wash to Ô li grid system, GSAP-driven"
+  },
+  {
+    "date": "2026-08-11",
+    "scope": "app",
+    "macrostructure": "Split Studio (home) · Long Document (project) · Catalogue (art)",
+    "theme": "studied-DNA",
+    "theme_axes": "dark / classical-serif / warm-32",
+    "nav": "fixed HUD",
+    "footer": "Ft2 inline",
+    "enrichment": "Tier B hand-built SVG + WebGL relief",
+    "brief": "portfolio-vinh — original build, DNA studied from Vinh's own ink drawings (retired)"
+  }
+]

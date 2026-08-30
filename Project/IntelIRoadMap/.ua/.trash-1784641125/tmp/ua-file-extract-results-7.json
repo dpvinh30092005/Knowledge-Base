@@ -1,0 +1,5570 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 30,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 30,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 30,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 346,
+      "nonEmptyLines": 312,
+      "functions": [
+        {
+          "name": "DatePicker",
+          "startLine": 29,
+          "endLine": 346,
+          "params": [
+            "{\r\n  value,\r\n  onChange,\r\n  placeholder = 'Select date',\r\n  className = '',\r\n  pastOnly = false,\r\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DatePicker",
+          "line": 29,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DatePicker",
+          "callee": "useState",
+          "lineNumber": 39
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useState",
+          "lineNumber": 40
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useState",
+          "lineNumber": 41
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed?.getFullYear",
+          "lineNumber": 41
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getFullYear",
+          "lineNumber": 41
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useState",
+          "lineNumber": 42
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed?.getMonth",
+          "lineNumber": 42
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getMonth",
+          "lineNumber": 42
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useState",
+          "lineNumber": 43
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useState",
+          "lineNumber": 44
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useRef",
+          "lineNumber": 45
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useRef",
+          "lineNumber": 46
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useRef",
+          "lineNumber": 47
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useEffect",
+          "lineNumber": 50
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setViewYear",
+          "lineNumber": 52
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed.getFullYear",
+          "lineNumber": 52
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setViewMonth",
+          "lineNumber": 53
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed.getMonth",
+          "lineNumber": 53
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useLayoutEffect",
+          "lineNumber": 59
+        },
+        {
+          "caller": "place",
+          "callee": "triggerRef.current!.getBoundingClientRect",
+          "lineNumber": 62
+        },
+        {
+          "caller": "place",
+          "callee": "Math.max",
+          "lineNumber": 65
+        },
+        {
+          "caller": "place",
+          "callee": "Math.min",
+          "lineNumber": 66
+        },
+        {
+          "caller": "place",
+          "callee": "Math.max",
+          "lineNumber": 67
+        },
+        {
+          "caller": "place",
+          "callee": "setCoords",
+          "lineNumber": 70
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "place",
+          "lineNumber": 72
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "window.addEventListener",
+          "lineNumber": 73
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "window.addEventListener",
+          "lineNumber": 74
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "window.removeEventListener",
+          "lineNumber": 76
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "window.removeEventListener",
+          "lineNumber": 77
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "useEffect",
+          "lineNumber": 82
+        },
+        {
+          "caller": "h",
+          "callee": "ref.current?.contains",
+          "lineNumber": 85
+        },
+        {
+          "caller": "h",
+          "callee": "panelRef.current?.contains",
+          "lineNumber": 85
+        },
+        {
+          "caller": "h",
+          "callee": "setOpen",
+          "lineNumber": 86
+        },
+        {
+          "caller": "h",
+          "callee": "setView",
+          "lineNumber": 87
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "document.addEventListener",
+          "lineNumber": 89
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "document.removeEventListener",
+          "lineNumber": 90
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "new Date(viewYear, viewMonth, 1).getDay",
+          "lineNumber": 94
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "new Date(viewYear, viewMonth + 1, 0).getDate",
+          "lineNumber": 95
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "Array.from",
+          "lineNumber": 96
+        },
+        {
+          "caller": "selectDay",
+          "callee": "String(viewMonth + 1).padStart",
+          "lineNumber": 102
+        },
+        {
+          "caller": "selectDay",
+          "callee": "String",
+          "lineNumber": 102
+        },
+        {
+          "caller": "selectDay",
+          "callee": "String(day).padStart",
+          "lineNumber": 103
+        },
+        {
+          "caller": "selectDay",
+          "callee": "String",
+          "lineNumber": 103
+        },
+        {
+          "caller": "selectDay",
+          "callee": "onChange",
+          "lineNumber": 104
+        },
+        {
+          "caller": "selectDay",
+          "callee": "setOpen",
+          "lineNumber": 105
+        },
+        {
+          "caller": "selectDay",
+          "callee": "setView",
+          "lineNumber": 106
+        },
+        {
+          "caller": "prevMonth",
+          "callee": "setViewMonth",
+          "lineNumber": 116
+        },
+        {
+          "caller": "prevMonth",
+          "callee": "setViewYear",
+          "lineNumber": 116
+        },
+        {
+          "caller": "prevMonth",
+          "callee": "setViewMonth",
+          "lineNumber": 117
+        },
+        {
+          "caller": "nextMonth",
+          "callee": "setViewMonth",
+          "lineNumber": 120
+        },
+        {
+          "caller": "nextMonth",
+          "callee": "setViewYear",
+          "lineNumber": 120
+        },
+        {
+          "caller": "nextMonth",
+          "callee": "setViewMonth",
+          "lineNumber": 121
+        },
+        {
+          "caller": "isSelected",
+          "callee": "parsed.getFullYear",
+          "lineNumber": 126
+        },
+        {
+          "caller": "isSelected",
+          "callee": "parsed.getMonth",
+          "lineNumber": 127
+        },
+        {
+          "caller": "isSelected",
+          "callee": "parsed.getDate",
+          "lineNumber": 128
+        },
+        {
+          "caller": "isToday",
+          "callee": "today.getFullYear",
+          "lineNumber": 131
+        },
+        {
+          "caller": "isToday",
+          "callee": "today.getMonth",
+          "lineNumber": 132
+        },
+        {
+          "caller": "isToday",
+          "callee": "today.getDate",
+          "lineNumber": 133
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getFullYear",
+          "lineNumber": 136
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "Array.from",
+          "lineNumber": 137
+        },
+        {
+          "caller": "selectYear",
+          "callee": "setViewYear",
+          "lineNumber": 140
+        },
+        {
+          "caller": "selectYear",
+          "callee": "setView",
+          "lineNumber": 141
+        },
+        {
+          "caller": "selectMonth",
+          "callee": "setViewMonth",
+          "lineNumber": 146
+        },
+        {
+          "caller": "selectMonth",
+          "callee": "setView",
+          "lineNumber": 147
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed.getMonth",
+          "lineNumber": 152
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed.getDate",
+          "lineNumber": 152
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed.getFullYear",
+          "lineNumber": 152
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setOpen",
+          "lineNumber": 162
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setView",
+          "lineNumber": 162
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "createPortal",
+          "lineNumber": 177
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setView",
+          "lineNumber": 193
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setView",
+          "lineNumber": 197
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "DAYS_ABBR.map",
+          "lineNumber": 211
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "dayCells.map",
+          "lineNumber": 218
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "isFutureDay",
+          "lineNumber": 223
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "selectDay",
+          "lineNumber": 224
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "isFutureDay",
+          "lineNumber": 226
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "isSelected",
+          "lineNumber": 228
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "isToday",
+          "lineNumber": 230
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "onChange",
+          "lineNumber": 245
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setOpen",
+          "lineNumber": 245
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "selectDay",
+          "lineNumber": 250
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getDate",
+          "lineNumber": 250
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setViewYear",
+          "lineNumber": 250
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getFullYear",
+          "lineNumber": 250
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setViewMonth",
+          "lineNumber": 250
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getMonth",
+          "lineNumber": 250
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setViewYear",
+          "lineNumber": 262
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setView",
+          "lineNumber": 266
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setViewYear",
+          "lineNumber": 270
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "MONTHS_SHORT.map",
+          "lineNumber": 277
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "selectMonth",
+          "lineNumber": 278
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed.getFullYear",
+          "lineNumber": 280
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parsed.getMonth",
+          "lineNumber": 280
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getMonth",
+          "lineNumber": 282
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getFullYear",
+          "lineNumber": 282
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setView",
+          "lineNumber": 292
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setYearOffset",
+          "lineNumber": 304
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setYearOffset",
+          "lineNumber": 311
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "Math.max",
+          "lineNumber": 311
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "yearList.map",
+          "lineNumber": 318
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "selectYear",
+          "lineNumber": 319
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "today.getFullYear",
+          "lineNumber": 323
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setView",
+          "lineNumber": 333
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "Spinner",
+          "startLine": 18,
+          "endLine": 41,
+          "params": [
+            "{ size = 16, className, label = \"Loading\" }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Spinner",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Spinner",
+          "callee": "cn",
+          "lineNumber": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 22,
+      "functions": [
+        {
+          "name": "Badge",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "{ className, variant, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Badge",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Badge",
+          "callee": "cn",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Badge",
+          "callee": "badgeVariants",
+          "lineNumber": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "Button",
+          "startLine": 36,
+          "endLine": 39,
+          "params": [
+            "{ className, variant, size, asChild = false, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Button",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "buttonVariants",
+          "line": 41,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Button",
+          "callee": "cn",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Button",
+          "callee": "buttonVariants",
+          "lineNumber": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "Card",
+          "startLine": 4,
+          "endLine": 6,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "CardHeader",
+          "startLine": 8,
+          "endLine": 10,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "CardTitle",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "CardDescription",
+          "startLine": 16,
+          "endLine": 18,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "CardContent",
+          "startLine": 20,
+          "endLine": 22,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Card",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "CardHeader",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "CardTitle",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "CardDescription",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "CardContent",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Card",
+          "callee": "cn",
+          "lineNumber": 5
+        },
+        {
+          "caller": "CardHeader",
+          "callee": "cn",
+          "lineNumber": 9
+        },
+        {
+          "caller": "CardTitle",
+          "callee": "cn",
+          "lineNumber": 13
+        },
+        {
+          "caller": "CardDescription",
+          "callee": "cn",
+          "lineNumber": 17
+        },
+        {
+          "caller": "CardContent",
+          "callee": "cn",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "DialogContent",
+          "startLine": 10,
+          "endLine": 27,
+          "params": [
+            "{ className, children, ...props }"
+          ]
+        },
+        {
+          "name": "DialogHeader",
+          "startLine": 29,
+          "endLine": 31,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "DialogTitle",
+          "startLine": 33,
+          "endLine": 35,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "DialogDescription",
+          "startLine": 37,
+          "endLine": 39,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "DialogFooter",
+          "startLine": 41,
+          "endLine": 43,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Dialog",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "DialogTrigger",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "DialogClose",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "DialogContent",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "DialogHeader",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "DialogTitle",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "DialogDescription",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "DialogFooter",
+          "line": 41,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DialogContent",
+          "callee": "cn",
+          "lineNumber": 14
+        },
+        {
+          "caller": "DialogHeader",
+          "callee": "cn",
+          "lineNumber": 30
+        },
+        {
+          "caller": "DialogTitle",
+          "callee": "cn",
+          "lineNumber": 34
+        },
+        {
+          "caller": "DialogDescription",
+          "callee": "cn",
+          "lineNumber": 38
+        },
+        {
+          "caller": "DialogFooter",
+          "callee": "cn",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 8,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "FieldGroup",
+          "startLine": 4,
+          "endLine": 6,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "Field",
+          "startLine": 8,
+          "endLine": 10,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "FieldLabel",
+          "startLine": 12,
+          "endLine": 17,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "FieldDescription",
+          "startLine": 19,
+          "endLine": 21,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FieldGroup",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "Field",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "FieldLabel",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "FieldDescription",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FieldGroup",
+          "callee": "cn",
+          "lineNumber": 5
+        },
+        {
+          "caller": "Field",
+          "callee": "cn",
+          "lineNumber": 9
+        },
+        {
+          "caller": "FieldLabel",
+          "callee": "cn",
+          "lineNumber": 14
+        },
+        {
+          "caller": "FieldDescription",
+          "callee": "cn",
+          "lineNumber": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "Input",
+          "startLine": 4,
+          "endLine": 12,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Input",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Input",
+          "callee": "cn",
+          "lineNumber": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 108,
+      "nonEmptyLines": 100,
+      "functions": [
+        {
+          "name": "collectOptions",
+          "startLine": 8,
+          "endLine": 25,
+          "params": [
+            "children"
+          ]
+        },
+        {
+          "name": "Select",
+          "startLine": 43,
+          "endLine": 108,
+          "params": [
+            "{ value, onChange, className, wrapperClassName, disabled, children }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Select",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "collectOptions",
+          "callee": "Children.forEach",
+          "lineNumber": 10
+        },
+        {
+          "caller": "collectOptions",
+          "callee": "isValidElement",
+          "lineNumber": 11
+        },
+        {
+          "caller": "collectOptions",
+          "callee": "Children.forEach",
+          "lineNumber": 14
+        },
+        {
+          "caller": "collectOptions",
+          "callee": "isValidElement",
+          "lineNumber": 15
+        },
+        {
+          "caller": "collectOptions",
+          "callee": "out.push",
+          "lineNumber": 17
+        },
+        {
+          "caller": "collectOptions",
+          "callee": "String",
+          "lineNumber": 17
+        },
+        {
+          "caller": "collectOptions",
+          "callee": "out.push",
+          "lineNumber": 21
+        },
+        {
+          "caller": "collectOptions",
+          "callee": "String",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Select",
+          "callee": "useState",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Select",
+          "callee": "useRef",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Select",
+          "callee": "useMemo",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Select",
+          "callee": "collectOptions",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Select",
+          "callee": "options.find",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Select",
+          "callee": "options.find",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Select",
+          "callee": "useEffect",
+          "lineNumber": 51
+        },
+        {
+          "caller": "onDoc",
+          "callee": "ref.current.contains",
+          "lineNumber": 53
+        },
+        {
+          "caller": "onDoc",
+          "callee": "setOpen",
+          "lineNumber": 53
+        },
+        {
+          "caller": "onKey",
+          "callee": "setOpen",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Select",
+          "callee": "document.addEventListener",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Select",
+          "callee": "document.addEventListener",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Select",
+          "callee": "document.removeEventListener",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Select",
+          "callee": "document.removeEventListener",
+          "lineNumber": 57
+        },
+        {
+          "caller": "pick",
+          "callee": "onChange",
+          "lineNumber": 60
+        },
+        {
+          "caller": "pick",
+          "callee": "setOpen",
+          "lineNumber": 60
+        },
+        {
+          "caller": "Select",
+          "callee": "cn",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Select",
+          "callee": "setOpen",
+          "lineNumber": 67
+        },
+        {
+          "caller": "Select",
+          "callee": "cn",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Select",
+          "callee": "cn",
+          "lineNumber": 74
+        },
+        {
+          "caller": "Select",
+          "callee": "cn",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Select",
+          "callee": "options.map",
+          "lineNumber": 82
+        },
+        {
+          "caller": "Select",
+          "callee": "pick",
+          "lineNumber": 92
+        },
+        {
+          "caller": "Select",
+          "callee": "cn",
+          "lineNumber": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 28,
+      "functions": [
+        {
+          "name": "Skeleton",
+          "startLine": 14,
+          "endLine": 28,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Skeleton",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Skeleton",
+          "callee": "cn",
+          "lineNumber": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 56,
+      "functions": [
+        {
+          "name": "LoginDialog",
+          "startLine": 25,
+          "endLine": 60,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoginDialog",
+          "line": 25,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LoginDialog",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "LoginDialog",
+          "callee": "setView",
+          "lineNumber": 32
+        },
+        {
+          "caller": "LoginDialog",
+          "callee": "setView",
+          "lineNumber": 43
+        },
+        {
+          "caller": "LoginDialog",
+          "callee": "setView",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 128,
+      "nonEmptyLines": 117,
+      "functions": [
+        {
+          "name": "GoogleIcon",
+          "startLine": 6,
+          "endLine": 13,
+          "params": []
+        },
+        {
+          "name": "GithubIcon",
+          "startLine": 15,
+          "endLine": 22,
+          "params": []
+        },
+        {
+          "name": "LoginForm",
+          "startLine": 33,
+          "endLine": 128,
+          "params": [
+            "{ onForgotPassword }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoginForm",
+          "line": 33,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LoginForm",
+          "callee": "useLogin",
+          "lineNumber": 45
+        },
+        {
+          "caller": "LoginForm",
+          "callee": "event.preventDefault",
+          "lineNumber": 56
+        },
+        {
+          "caller": "LoginForm",
+          "callee": "handleCredentialsLogin",
+          "lineNumber": 57
+        },
+        {
+          "caller": "LoginForm",
+          "callee": "setUsername",
+          "lineNumber": 91
+        },
+        {
+          "caller": "LoginForm",
+          "callee": "setPassword",
+          "lineNumber": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 247,
+      "nonEmptyLines": 224,
+      "functions": [
+        {
+          "name": "formatDoneDate",
+          "startLine": 7,
+          "endLine": 12,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "CustomRoadmapNode",
+          "startLine": 35,
+          "endLine": 245,
+          "params": [
+            "{ data, selected }"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "formatDoneDate",
+          "callee": "Number.isNaN",
+          "lineNumber": 10
+        },
+        {
+          "caller": "formatDoneDate",
+          "callee": "d.getTime",
+          "lineNumber": 10
+        },
+        {
+          "caller": "formatDoneDate",
+          "callee": "d.toLocaleDateString",
+          "lineNumber": 11
+        },
+        {
+          "caller": "CustomRoadmapNode",
+          "callee": "getStageColor",
+          "lineNumber": 58
+        },
+        {
+          "caller": "CustomRoadmapNode",
+          "callee": "formatDoneDate",
+          "lineNumber": 83
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 112,
+      "nonEmptyLines": 104,
+      "functions": [
+        {
+          "name": "OnboardingShell",
+          "startLine": 26,
+          "endLine": 112,
+          "params": [
+            "{\n  step,\n  totalSteps,\n  stepLabels,\n  title,\n  subtitle,\n  error,\n  children,\n  onBack,\n  backLabel = 'Back',\n  onNext,\n  nextLabel,\n  nextLoading = false,\n  nextDisabled = false,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OnboardingShell",
+          "line": 26,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OnboardingShell",
+          "callee": "Array.from({ length: totalSteps }).map",
+          "lineNumber": 61
+        },
+        {
+          "caller": "OnboardingShell",
+          "callee": "Array.from",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 127,
+      "nonEmptyLines": 119,
+      "functions": [
+        {
+          "name": "getYouTubeId",
+          "startLine": 7,
+          "endLine": 21,
+          "params": [
+            "url"
+          ]
+        },
+        {
+          "name": "hostOf",
+          "startLine": 23,
+          "endLine": 29,
+          "params": [
+            "url"
+          ]
+        },
+        {
+          "name": "ResourceViewerModal",
+          "startLine": 37,
+          "endLine": 127,
+          "params": [
+            "{\n  resource,\n  onClose,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getYouTubeId",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "ResourceViewerModal",
+          "line": 37,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getYouTubeId",
+          "callee": "u.hostname.replace",
+          "lineNumber": 10
+        },
+        {
+          "caller": "getYouTubeId",
+          "callee": "u.pathname.slice",
+          "lineNumber": 11
+        },
+        {
+          "caller": "getYouTubeId",
+          "callee": "host.endsWith",
+          "lineNumber": 12
+        },
+        {
+          "caller": "getYouTubeId",
+          "callee": "u.searchParams.get",
+          "lineNumber": 13
+        },
+        {
+          "caller": "getYouTubeId",
+          "callee": "u.pathname.split",
+          "lineNumber": 14
+        },
+        {
+          "caller": "hostOf",
+          "callee": "new URL(url).hostname.replace",
+          "lineNumber": 25
+        },
+        {
+          "caller": "ResourceViewerModal",
+          "callee": "useEffect",
+          "lineNumber": 44
+        },
+        {
+          "caller": "onKey",
+          "callee": "onClose",
+          "lineNumber": 47
+        },
+        {
+          "caller": "ResourceViewerModal",
+          "callee": "window.addEventListener",
+          "lineNumber": 49
+        },
+        {
+          "caller": "ResourceViewerModal",
+          "callee": "window.removeEventListener",
+          "lineNumber": 50
+        },
+        {
+          "caller": "ResourceViewerModal",
+          "callee": "getYouTubeId",
+          "lineNumber": 56
+        },
+        {
+          "caller": "ResourceViewerModal",
+          "callee": "hostOf",
+          "lineNumber": 57
+        },
+        {
+          "caller": "ResourceViewerModal",
+          "callee": "e.stopPropagation",
+          "lineNumber": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapContainers.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 75,
+      "nonEmptyLines": 68,
+      "exports": [
+        {
+          "name": "ClusterBoxNode",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "StageBandNode",
+          "line": 60,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapVectorGraph.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 575,
+      "nonEmptyLines": 528,
+      "functions": [
+        {
+          "name": "ZoomSlider",
+          "startLine": 30,
+          "endLine": 69,
+          "params": []
+        },
+        {
+          "name": "StageStickyHeader",
+          "startLine": 77,
+          "endLine": 119,
+          "params": [
+            "{ bands }"
+          ]
+        },
+        {
+          "name": "getDynamicLayoutedElements",
+          "startLine": 154,
+          "endLine": 422,
+          "params": [
+            "rawNodes",
+            "rawEdges",
+            "themeColor",
+            "optimisticStatusMap",
+            "chosenNodeIds"
+          ]
+        },
+        {
+          "name": "RoadmapVectorGraph",
+          "startLine": 424,
+          "endLine": 575,
+          "params": [
+            "{ onNodeClick, themeColor, roadmapData, optimisticStatusMap = {}, chosenNodeIds }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getDynamicLayoutedElements",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "RoadmapVectorGraph",
+          "line": 424,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ZoomSlider",
+          "callee": "useReactFlow",
+          "lineNumber": 31
+        },
+        {
+          "caller": "ZoomSlider",
+          "callee": "useViewport",
+          "lineNumber": 32
+        },
+        {
+          "caller": "ZoomSlider",
+          "callee": "zoomTo",
+          "lineNumber": 40
+        },
+        {
+          "caller": "ZoomSlider",
+          "callee": "Math.max",
+          "lineNumber": 40
+        },
+        {
+          "caller": "ZoomSlider",
+          "callee": "zoomTo",
+          "lineNumber": 51
+        },
+        {
+          "caller": "ZoomSlider",
+          "callee": "Number",
+          "lineNumber": 51
+        },
+        {
+          "caller": "ZoomSlider",
+          "callee": "zoomTo",
+          "lineNumber": 58
+        },
+        {
+          "caller": "ZoomSlider",
+          "callee": "Math.min",
+          "lineNumber": 58
+        },
+        {
+          "caller": "StageStickyHeader",
+          "callee": "useViewport",
+          "lineNumber": 78
+        },
+        {
+          "caller": "StageStickyHeader",
+          "callee": "Math.min",
+          "lineNumber": 98
+        },
+        {
+          "caller": "StageStickyHeader",
+          "callee": "getStageColor",
+          "lineNumber": 100
+        },
+        {
+          "caller": "StageStickyHeader",
+          "callee": "getStageLabel",
+          "lineNumber": 101
+        },
+        {
+          "caller": "StageStickyHeader",
+          "callee": "Math.max",
+          "lineNumber": 105
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "rawNodes.map",
+          "lineNumber": 163
+        },
+        {
+          "caller": "isMain",
+          "callee": "byId.get",
+          "lineNumber": 164
+        },
+        {
+          "caller": "stageOf",
+          "callee": "String(byId.get(id)?.data?.stage || '').toUpperCase",
+          "lineNumber": 165
+        },
+        {
+          "caller": "stageOf",
+          "callee": "String",
+          "lineNumber": 165
+        },
+        {
+          "caller": "stageOf",
+          "callee": "byId.get",
+          "lineNumber": 165
+        },
+        {
+          "caller": "stageIndex",
+          "callee": "STAGE_ORDER.indexOf",
+          "lineNumber": 167
+        },
+        {
+          "caller": "stageIndex",
+          "callee": "stageOf",
+          "lineNumber": 167
+        },
+        {
+          "caller": "childrenOf",
+          "callee": "rawNodes.filter((n) => n.data?.parentNodeId === id).map",
+          "lineNumber": 175
+        },
+        {
+          "caller": "childrenOf",
+          "callee": "rawNodes.filter",
+          "lineNumber": 175
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "rawEdges.forEach",
+          "lineNumber": 179
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "isMain",
+          "lineNumber": 181
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "isMain",
+          "lineNumber": 181
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "rawNodes.filter((n) => isMain(n.id)).map",
+          "lineNumber": 187
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "rawNodes.filter",
+          "lineNumber": 187
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "isMain",
+          "lineNumber": 187
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "mainNodes\n    .filter((id) => !spinePrev[id])\n    .forEach",
+          "lineNumber": 191
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "mainNodes\n    .filter",
+          "lineNumber": 191
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "seen.has",
+          "lineNumber": 195
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "chainOrder.push",
+          "lineNumber": 196
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "seen.add",
+          "lineNumber": 197
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "mainNodes.forEach",
+          "lineNumber": 201
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "seen.has",
+          "lineNumber": 202
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "chainOrder.push",
+          "lineNumber": 203
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "seen.add",
+          "lineNumber": 204
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "chainOrder\n    .map((id, i) => ({ id, i }))\n    .sort((a, b) => stageIndex(a.id) - stageIndex(b.id) || a.i - b.i)\n    .map",
+          "lineNumber": 208
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "chainOrder\n    .map((id, i) => ({ id, i }))\n    .sort",
+          "lineNumber": 208
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "chainOrder\n    .map",
+          "lineNumber": 208
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "stageIndex",
+          "lineNumber": 210
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "stageIndex",
+          "lineNumber": 210
+        },
+        {
+          "caller": "rec",
+          "callee": "placedSet.has",
+          "lineNumber": 223
+        },
+        {
+          "caller": "rec",
+          "callee": "placed.push",
+          "lineNumber": 224
+        },
+        {
+          "caller": "rec",
+          "callee": "placedSet.add",
+          "lineNumber": 225
+        },
+        {
+          "caller": "rec",
+          "callee": "Math.max",
+          "lineNumber": 226
+        },
+        {
+          "caller": "rec",
+          "callee": "childrenOf(id).forEach",
+          "lineNumber": 228
+        },
+        {
+          "caller": "rec",
+          "callee": "childrenOf",
+          "lineNumber": 228
+        },
+        {
+          "caller": "rec",
+          "callee": "rec",
+          "lineNumber": 228
+        },
+        {
+          "caller": "layoutColumn",
+          "callee": "rootIds.forEach",
+          "lineNumber": 230
+        },
+        {
+          "caller": "layoutColumn",
+          "callee": "rec",
+          "lineNumber": 230
+        },
+        {
+          "caller": "noteStage",
+          "callee": "Math.min",
+          "lineNumber": 241
+        },
+        {
+          "caller": "noteStage",
+          "callee": "Math.max",
+          "lineNumber": 242
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "orderedTopics.forEach",
+          "lineNumber": 263
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "byId.get",
+          "lineNumber": 264
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "childrenOf",
+          "lineNumber": 266
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "layoutColumn",
+          "lineNumber": 269
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "kids.filter",
+          "lineNumber": 269
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "layoutColumn",
+          "lineNumber": 270
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "kids.filter",
+          "lineNumber": 270
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "Math.max",
+          "lineNumber": 272
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedNodes.push",
+          "lineNumber": 276
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedSet.add",
+          "lineNumber": 277
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "clusterBoxes.push",
+          "lineNumber": 283
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "mkBox",
+          "lineNumber": 283
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "R.placed.forEach",
+          "lineNumber": 284
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedNodes.push",
+          "lineNumber": 285
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "byId.get",
+          "lineNumber": 285
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "hierarchyEdges.push",
+          "lineNumber": 286
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "clusterBoxes.push",
+          "lineNumber": 294
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "mkBox",
+          "lineNumber": 294
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "L.placed.forEach",
+          "lineNumber": 295
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedNodes.push",
+          "lineNumber": 296
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "byId.get",
+          "lineNumber": 296
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "hierarchyEdges.push",
+          "lineNumber": 297
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "noteStage",
+          "lineNumber": 301
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "stageOf",
+          "lineNumber": 301
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "stageOf",
+          "lineNumber": 305
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "stageOf",
+          "lineNumber": 305
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "rawNodes.forEach",
+          "lineNumber": 310
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedSet.has",
+          "lineNumber": 311
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "isMain",
+          "lineNumber": 311
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedNodes.push",
+          "lineNumber": 312
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedSet.add",
+          "lineNumber": 313
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedNodes.map",
+          "lineNumber": 319
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedNodes.map",
+          "lineNumber": 320
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "Math.min",
+          "lineNumber": 323
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "Math.max",
+          "lineNumber": 324
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "STAGE_ORDER.filter",
+          "lineNumber": 331
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "presentStages.map",
+          "lineNumber": 332
+        },
+        {
+          "caller": "pushEdge",
+          "callee": "edges.some",
+          "lineNumber": 359
+        },
+        {
+          "caller": "pushEdge",
+          "callee": "edges.push",
+          "lineNumber": 360
+        },
+        {
+          "caller": "statusOf",
+          "callee": "byId.get",
+          "lineNumber": 362
+        },
+        {
+          "caller": "isActive",
+          "callee": "statusOf",
+          "lineNumber": 364
+        },
+        {
+          "caller": "isActive",
+          "callee": "statusOf",
+          "lineNumber": 364
+        },
+        {
+          "caller": "isActive",
+          "callee": "s.has",
+          "lineNumber": 365
+        },
+        {
+          "caller": "isActive",
+          "callee": "s.has",
+          "lineNumber": 365
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "pushEdge",
+          "lineNumber": 372
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "hierarchyEdges.forEach",
+          "lineNumber": 386
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedSet.has",
+          "lineNumber": 387
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedSet.has",
+          "lineNumber": 387
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "pushEdge",
+          "lineNumber": 390
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "placedNodes.map",
+          "lineNumber": 402
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "Number",
+          "lineNumber": 408
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "Number",
+          "lineNumber": 408
+        },
+        {
+          "caller": "getDynamicLayoutedElements",
+          "callee": "chosenNodeIds.has",
+          "lineNumber": 414
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "useNodesState",
+          "lineNumber": 425
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "useEdgesState",
+          "lineNumber": 426
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "useState",
+          "lineNumber": 427
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "useRef",
+          "lineNumber": 428
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "useRef",
+          "lineNumber": 429
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "useEffect",
+          "lineNumber": 433
+        },
+        {
+          "caller": "dim",
+          "callee": "Number",
+          "lineNumber": 447
+        },
+        {
+          "caller": "dim",
+          "callee": "Number",
+          "lineNumber": 447
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "Math.min",
+          "lineNumber": 449
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "layoutedNodes.map",
+          "lineNumber": 449
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "Math.min",
+          "lineNumber": 450
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "layoutedNodes.map",
+          "lineNumber": 450
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "Math.max",
+          "lineNumber": 451
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "layoutedNodes.map",
+          "lineNumber": 451
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "dim",
+          "lineNumber": 451
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "Math.max",
+          "lineNumber": 452
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "layoutedNodes.map",
+          "lineNumber": 452
+        },
+        {
+          "caller": "computeExtent",
+          "callee": "dim",
+          "lineNumber": 452
+        },
+        {
+          "caller": "centerRoadmap",
+          "callee": "layoutedNodes.filter",
+          "lineNumber": 462
+        },
+        {
+          "caller": "centerRoadmap",
+          "callee": "document.querySelector",
+          "lineNumber": 464
+        },
+        {
+          "caller": "centerRoadmap",
+          "callee": "Math.min",
+          "lineNumber": 467
+        },
+        {
+          "caller": "centerRoadmap",
+          "callee": "real.map",
+          "lineNumber": 467
+        },
+        {
+          "caller": "centerRoadmap",
+          "callee": "Math.max",
+          "lineNumber": 468
+        },
+        {
+          "caller": "centerRoadmap",
+          "callee": "real.map",
+          "lineNumber": 468
+        },
+        {
+          "caller": "centerRoadmap",
+          "callee": "rfRef.current.setViewport",
+          "lineNumber": 470
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "useEffect",
+          "lineNumber": 473
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "setNodes",
+          "lineNumber": 475
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "setEdges",
+          "lineNumber": 476
+        },
+        {
+          "caller": "processData",
+          "callee": "studentDashboardService.getRoadmapGraphData",
+          "lineNumber": 481
+        },
+        {
+          "caller": "processData",
+          "callee": "getDynamicLayoutedElements",
+          "lineNumber": 482
+        },
+        {
+          "caller": "processData",
+          "callee": "setNodes",
+          "lineNumber": 483
+        },
+        {
+          "caller": "processData",
+          "callee": "setEdges",
+          "lineNumber": 484
+        },
+        {
+          "caller": "processData",
+          "callee": "setTranslateExtent",
+          "lineNumber": 485
+        },
+        {
+          "caller": "processData",
+          "callee": "computeExtent",
+          "lineNumber": 485
+        },
+        {
+          "caller": "processData",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 489
+        },
+        {
+          "caller": "processData",
+          "callee": "centerRoadmap",
+          "lineNumber": 489
+        },
+        {
+          "caller": "processData",
+          "callee": "console.error",
+          "lineNumber": 492
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "processData",
+          "lineNumber": 495
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "onNodeClick",
+          "lineNumber": 500
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "useMemo",
+          "lineNumber": 504
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "nodes\n        .filter((n) => n.type === 'stageBand')\n        .map((n) => ({\n          stage: n.data.stage as string,\n          minY: n.position.y,\n          x: n.position.x,\n          width: Number(n.style?.width) || 0,\n        }))\n        .sort",
+          "lineNumber": 506
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "nodes\n        .filter((n) => n.type === 'stageBand')\n        .map",
+          "lineNumber": 506
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "nodes\n        .filter",
+          "lineNumber": 506
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "Number",
+          "lineNumber": 512
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "JSON.stringify",
+          "lineNumber": 536
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 556
+        },
+        {
+          "caller": "RoadmapVectorGraph",
+          "callee": "centerRoadmap",
+          "lineNumber": 556
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StageLegend.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "StageLegend",
+          "startLine": 7,
+          "endLine": 45,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StageLegend",
+          "callee": "STAGE_LEGEND.map",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentProfileSetupModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 442,
+      "nonEmptyLines": 401,
+      "functions": [
+        {
+          "name": "StudentProfileSetupModal",
+          "startLine": 27,
+          "endLine": 399,
+          "params": [
+            "{\n  isOpen,\n  onComplete,\n}"
+          ]
+        },
+        {
+          "name": "getCareerCategory",
+          "startLine": 404,
+          "endLine": 415,
+          "params": [
+            "career"
+          ]
+        },
+        {
+          "name": "Field",
+          "startLine": 417,
+          "endLine": 442,
+          "params": [
+            "{\n  label,\n  required,\n  hint,\n  error,\n  children,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentProfileSetupModal",
+          "line": 27,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useAuth",
+          "lineNumber": 31
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 33
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 34
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 35
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 36
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 37
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 38
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 39
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 40
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 41
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 42
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 43
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 44
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useState",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useMemo",
+          "lineNumber": 47
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "careers.forEach",
+          "lineNumber": 49
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "getCareerCategory",
+          "lineNumber": 50
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "groups.set",
+          "lineNumber": 51
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "groups.get",
+          "lineNumber": 51
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "[...groups.entries()]\n      .sort(([first], [second]) => first.localeCompare(second))\n      .map",
+          "lineNumber": 54
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "[...groups.entries()]\n      .sort",
+          "lineNumber": 54
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "groups.entries",
+          "lineNumber": 54
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "first.localeCompare",
+          "lineNumber": 55
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useMemo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "careerGroups.map",
+          "lineNumber": 60
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useMemo",
+          "lineNumber": 64
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "careerSearch.trim().toLowerCase",
+          "lineNumber": 65
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "careerSearch.trim",
+          "lineNumber": 65
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "careerGroups\n      .filter((group) => careerCategory === 'All' || group.category === careerCategory)\n      .map((group) => ({\n        ...group,\n        items: group.items.filter((career) => {\n          const searchable = [\n            career.careerName,\n            career.prerequisite,\n            career.description,\n            group.category,\n          ]\n            .filter(Boolean)\n            .join(' ')\n            .toLowerCase()\n\n          return !query || searchable.includes(query)\n        }),\n      }))\n      .filter",
+          "lineNumber": 67
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "careerGroups\n      .filter((group) => careerCategory === 'All' || group.category === careerCategory)\n      .map",
+          "lineNumber": 67
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "careerGroups\n      .filter",
+          "lineNumber": 67
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "group.items.filter",
+          "lineNumber": 71
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "[\n            career.careerName,\n            career.prerequisite,\n            career.description,\n            group.category,\n          ]\n            .filter(Boolean)\n            .join(' ')\n            .toLowerCase",
+          "lineNumber": 72
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "[\n            career.careerName,\n            career.prerequisite,\n            career.description,\n            group.category,\n          ]\n            .filter(Boolean)\n            .join",
+          "lineNumber": 72
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "[\n            career.careerName,\n            career.prerequisite,\n            career.description,\n            group.category,\n          ]\n            .filter",
+          "lineNumber": 72
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "searchable.includes",
+          "lineNumber": 82
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "useEffect",
+          "lineNumber": 88
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setIsLoadingCareers",
+          "lineNumber": 92
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "studentDashboardService.getCareerRoles()\n      .then((nextCareers) => {\n        if (!active) return\n        setCareers(nextCareers)\n        setErrors((current) => ({ ...current, general: undefined }))\n      })\n      .catch((requestError) => {\n        if (!active) return\n        setCareers([])\n        setErrors((current) => ({\n          ...current,\n          general: getErrorMessage(requestError)\n        }))\n      })\n      .finally",
+          "lineNumber": 93
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "studentDashboardService.getCareerRoles()\n      .then((nextCareers) => {\n        if (!active) return\n        setCareers(nextCareers)\n        setErrors((current) => ({ ...current, general: undefined }))\n      })\n      .catch",
+          "lineNumber": 93
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "studentDashboardService.getCareerRoles()\n      .then",
+          "lineNumber": 93
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "studentDashboardService.getCareerRoles",
+          "lineNumber": 93
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setCareers",
+          "lineNumber": 96
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setErrors",
+          "lineNumber": 97
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setCareers",
+          "lineNumber": 101
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setErrors",
+          "lineNumber": 102
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "getErrorMessage",
+          "lineNumber": 104
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setIsLoadingCareers",
+          "lineNumber": 108
+        },
+        {
+          "caller": "goToAcademicStep",
+          "callee": "fullName.trim",
+          "lineNumber": 119
+        },
+        {
+          "caller": "goToAcademicStep",
+          "callee": "today.getFullYear",
+          "lineNumber": 130
+        },
+        {
+          "caller": "goToAcademicStep",
+          "callee": "birthDate.getFullYear",
+          "lineNumber": 130
+        },
+        {
+          "caller": "goToAcademicStep",
+          "callee": "Object.keys",
+          "lineNumber": 135
+        },
+        {
+          "caller": "goToAcademicStep",
+          "callee": "setErrors",
+          "lineNumber": 136
+        },
+        {
+          "caller": "goToAcademicStep",
+          "callee": "setErrors",
+          "lineNumber": 140
+        },
+        {
+          "caller": "goToAcademicStep",
+          "callee": "setStep",
+          "lineNumber": 141
+        },
+        {
+          "caller": "goToProfileStep",
+          "callee": "setErrors",
+          "lineNumber": 145
+        },
+        {
+          "caller": "goToProfileStep",
+          "callee": "setStep",
+          "lineNumber": 146
+        },
+        {
+          "caller": "handleSave",
+          "callee": "university.trim",
+          "lineNumber": 151
+        },
+        {
+          "caller": "handleSave",
+          "callee": "parsed.getFullYear",
+          "lineNumber": 163
+        },
+        {
+          "caller": "handleSave",
+          "callee": "birthDate.getFullYear",
+          "lineNumber": 163
+        },
+        {
+          "caller": "handleSave",
+          "callee": "major.trim",
+          "lineNumber": 168
+        },
+        {
+          "caller": "handleSave",
+          "callee": "isUuid",
+          "lineNumber": 169
+        },
+        {
+          "caller": "handleSave",
+          "callee": "Object.keys",
+          "lineNumber": 171
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setErrors",
+          "lineNumber": 172
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setErrors",
+          "lineNumber": 176
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 177
+        },
+        {
+          "caller": "handleSave",
+          "callee": "Promise.all",
+          "lineNumber": 179
+        },
+        {
+          "caller": "handleSave",
+          "callee": "studentDashboardService.updateUserProfile",
+          "lineNumber": 180
+        },
+        {
+          "caller": "handleSave",
+          "callee": "fullName.trim",
+          "lineNumber": 181
+        },
+        {
+          "caller": "handleSave",
+          "callee": "bio.trim",
+          "lineNumber": 183
+        },
+        {
+          "caller": "handleSave",
+          "callee": "studentDashboardService.updateStudentProfile",
+          "lineNumber": 185
+        },
+        {
+          "caller": "handleSave",
+          "callee": "university.trim",
+          "lineNumber": 186
+        },
+        {
+          "caller": "handleSave",
+          "callee": "major.trim",
+          "lineNumber": 188
+        },
+        {
+          "caller": "handleSave",
+          "callee": "onComplete",
+          "lineNumber": 192
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setErrors",
+          "lineNumber": 194
+        },
+        {
+          "caller": "handleSave",
+          "callee": "getErrorMessage",
+          "lineNumber": 194
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 196
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setFullName",
+          "lineNumber": 228
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setErrors",
+          "lineNumber": 229
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setYob",
+          "lineNumber": 249
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setErrors",
+          "lineNumber": 250
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setBio",
+          "lineNumber": 261
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "event.target.value.slice",
+          "lineNumber": 261
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setUniversity",
+          "lineNumber": 278
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setErrors",
+          "lineNumber": 279
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setAdmissionDate",
+          "lineNumber": 290
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setErrors",
+          "lineNumber": 291
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setMajor",
+          "lineNumber": 300
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setErrors",
+          "lineNumber": 301
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setCareerSearch",
+          "lineNumber": 315
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "careerCategories.map",
+          "lineNumber": 322
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setCareerCategory",
+          "lineNumber": 326
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "filteredCareerGroups.map",
+          "lineNumber": 340
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "group.items.map",
+          "lineNumber": 346
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setCareerId",
+          "lineNumber": 354
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "setErrors",
+          "lineNumber": 355
+        },
+        {
+          "caller": "StudentProfileSetupModal",
+          "callee": "formatPrerequisite",
+          "lineNumber": 374
+        },
+        {
+          "caller": "getCareerCategory",
+          "callee": "`${career.careerName} ${career.prerequisite ?? ''} ${career.description ?? ''}`.toLowerCase",
+          "lineNumber": 405
+        },
+        {
+          "caller": "getCareerCategory",
+          "callee": "/(ai|machine learning|data|analyst|analytics|scientist)/.test",
+          "lineNumber": 407
+        },
+        {
+          "caller": "getCareerCategory",
+          "callee": "/(security|cyber|devops|cloud|network|system)/.test",
+          "lineNumber": 408
+        },
+        {
+          "caller": "getCareerCategory",
+          "callee": "/(ui|ux|design|product|business|manager|marketing)/.test",
+          "lineNumber": 409
+        },
+        {
+          "caller": "getCareerCategory",
+          "callee": "/(mobile|android|ios|flutter|react native)/.test",
+          "lineNumber": 410
+        },
+        {
+          "caller": "getCareerCategory",
+          "callee": "/(backend|java|spring|node|api|database)/.test",
+          "lineNumber": 411
+        },
+        {
+          "caller": "getCareerCategory",
+          "callee": "/(frontend|front-end|react|css|html|javascript|typescript|web)/.test",
+          "lineNumber": 412
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentRoadmapPageView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 884,
+      "nonEmptyLines": 819,
+      "functions": [
+        {
+          "name": "unwrapProfile",
+          "startLine": 62,
+          "endLine": 66,
+          "params": [
+            "responseData"
+          ]
+        },
+        {
+          "name": "getProfileCareerId",
+          "startLine": 68,
+          "endLine": 75,
+          "params": [
+            "profile"
+          ]
+        },
+        {
+          "name": "getProfileCareerName",
+          "startLine": 77,
+          "endLine": 82,
+          "params": [
+            "profile"
+          ]
+        },
+        {
+          "name": "CareerSelector",
+          "startLine": 84,
+          "endLine": 204,
+          "params": [
+            "{\r\n  careers,\r\n  selectedCareerId,\r\n  currentCareerId,\r\n  searchValue,\r\n  isSaving,\r\n  errorMessage,\r\n  onSearchChange,\r\n  onSelectCareer,\r\n  onSave,\r\n  onCancel\r\n}"
+          ]
+        },
+        {
+          "name": "getLinkMeta",
+          "startLine": 225,
+          "endLine": 233,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "StudentRoadmapPageView",
+          "startLine": 235,
+          "endLine": 884,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentRoadmapPageView",
+          "line": 235,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "unwrapProfile",
+          "callee": "unwrapProfile",
+          "lineNumber": 64
+        },
+        {
+          "caller": "getProfileCareerId",
+          "callee": "[\r\n    profile?.careerId,\r\n    profile?.career_id,\r\n    profile?.career?.careerId,\r\n    profile?.career?.career_id,\r\n    profile?.career?.id\r\n  ].find",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getProfileCareerId",
+          "callee": "Boolean",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getProfileCareerId",
+          "callee": "isUuid",
+          "lineNumber": 75
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "careers.filter",
+          "lineNumber": 107
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "career.careerName.toLowerCase().includes",
+          "lineNumber": 108
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "career.careerName.toLowerCase",
+          "lineNumber": 108
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "searchValue.trim().toLowerCase",
+          "lineNumber": 108
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "searchValue.trim",
+          "lineNumber": 108
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "onSearchChange",
+          "lineNumber": 128
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "filteredCareers.map",
+          "lineNumber": 142
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "onSelectCareer",
+          "lineNumber": 149
+        },
+        {
+          "caller": "CareerSelector",
+          "callee": "formatPrerequisite",
+          "lineNumber": 170
+        },
+        {
+          "caller": "getLinkMeta",
+          "callee": "u.hostname.replace",
+          "lineNumber": 228
+        },
+        {
+          "caller": "getLinkMeta",
+          "callee": "(host + u.pathname).replace",
+          "lineNumber": 229
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useAuth",
+          "lineNumber": 236
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useNavigate",
+          "lineNumber": 237
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useRef",
+          "lineNumber": 238
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 239
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 240
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 241
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 242
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 243
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 244
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 245
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 246
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 247
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 248
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 249
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 250
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 252
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 254
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 258
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 260
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 262
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 263
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 264
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 267
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 268
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 269
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useState",
+          "lineNumber": 271
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useMemo",
+          "lineNumber": 272
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "selections.map",
+          "lineNumber": 273
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "Math.max",
+          "lineNumber": 276
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "Math.min",
+          "lineNumber": 276
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "Math.round",
+          "lineNumber": 276
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useStudentSetup",
+          "lineNumber": 278
+        },
+        {
+          "caller": "loadSelections",
+          "callee": "setSelections",
+          "lineNumber": 282
+        },
+        {
+          "caller": "loadSelections",
+          "callee": "studentDashboardService.getRoadmapSelections",
+          "lineNumber": 282
+        },
+        {
+          "caller": "loadSelections",
+          "callee": "console.error",
+          "lineNumber": 284
+        },
+        {
+          "caller": "loadSelections",
+          "callee": "setSelections",
+          "lineNumber": 285
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "setIsRoadmapLoading",
+          "lineNumber": 290
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "setErrorMessage",
+          "lineNumber": 291
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "Promise.all",
+          "lineNumber": 293
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "studentDashboardService.getStudentRoadmap",
+          "lineNumber": 294
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "loadSelections",
+          "lineNumber": 295
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "setRoadmapData",
+          "lineNumber": 297
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "console.error",
+          "lineNumber": 299
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "setRoadmapData",
+          "lineNumber": 300
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "setErrorMessage",
+          "lineNumber": 301
+        },
+        {
+          "caller": "loadRoadmap",
+          "callee": "setIsRoadmapLoading",
+          "lineNumber": 303
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "setPendingChoice",
+          "lineNumber": 312
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "setIsSelecting",
+          "lineNumber": 313
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "studentDashboardService.selectAlternative",
+          "lineNumber": 315
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "loadRoadmap",
+          "lineNumber": 316
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "setOptimisticStatusMap",
+          "lineNumber": 317
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "setSelectedNodeData",
+          "lineNumber": 319
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "setPendingChoice",
+          "lineNumber": 320
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "console.error",
+          "lineNumber": 322
+        },
+        {
+          "caller": "confirmChoice",
+          "callee": "setIsSelecting",
+          "lineNumber": 324
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setIsUpdatingNode",
+          "lineNumber": 331
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "studentDashboardService.updateNodeProgress",
+          "lineNumber": 334
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setSelectedNodeData",
+          "lineNumber": 337
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "roadmapData.nodes.map",
+          "lineNumber": 339
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setRoadmapData",
+          "lineNumber": 342
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setOptimisticStatusMap",
+          "lineNumber": 344
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "console.log",
+          "lineNumber": 346
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "studentDashboardService.getStudentRoadmap().then(freshData => {\r\n        if (freshData) {\r\n          setRoadmapData(freshData);\r\n          // Xóa map lạc quan vì data thật đã về\r\n          setOptimisticStatusMap({});\r\n        }\r\n      }).catch",
+          "lineNumber": 353
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "studentDashboardService.getStudentRoadmap().then",
+          "lineNumber": 353
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "studentDashboardService.getStudentRoadmap",
+          "lineNumber": 353
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setRoadmapData",
+          "lineNumber": 355
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setOptimisticStatusMap",
+          "lineNumber": 357
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "console.error",
+          "lineNumber": 359
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "console.error",
+          "lineNumber": 362
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setSelectedNodeData",
+          "lineNumber": 363
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setOptimisticStatusMap",
+          "lineNumber": 364
+        },
+        {
+          "caller": "handleUpdateNodeStatus",
+          "callee": "setIsUpdatingNode",
+          "lineNumber": 370
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useEffect",
+          "lineNumber": 374
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setIsInitialLoading",
+          "lineNumber": 378
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setErrorMessage",
+          "lineNumber": 379
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "Promise.allSettled",
+          "lineNumber": 382
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "studentDashboardService.getStudentProfile",
+          "lineNumber": 383
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "studentDashboardService.getCareerRoles",
+          "lineNumber": 384
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setCareers",
+          "lineNumber": 390
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "unwrapProfile",
+          "lineNumber": 393
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "getProfileCareerId",
+          "lineNumber": 395
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "getProfileCareerName",
+          "lineNumber": 396
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setIsFptAccount",
+          "lineNumber": 397
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setCurrentCareerId",
+          "lineNumber": 400
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setSelectedCareerId",
+          "lineNumber": 401
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setCurrentCareerName",
+          "lineNumber": 402
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "nextCareers.find",
+          "lineNumber": 404
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "loadRoadmap",
+          "lineNumber": 406
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setCurrentCareerId",
+          "lineNumber": 408
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setSelectedCareerId",
+          "lineNumber": 409
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setRoadmapData",
+          "lineNumber": 410
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "console.error",
+          "lineNumber": 414
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setErrorMessage",
+          "lineNumber": 415
+        },
+        {
+          "caller": "loadInitialData",
+          "callee": "setIsInitialLoading",
+          "lineNumber": 417
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "loadInitialData",
+          "lineNumber": 421
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "careers.find",
+          "lineNumber": 429
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setErrorMessage",
+          "lineNumber": 431
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "isUuid",
+          "lineNumber": 434
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setErrorMessage",
+          "lineNumber": 435
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setIsSavingCareer",
+          "lineNumber": 439
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setErrorMessage",
+          "lineNumber": 440
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "studentDashboardService.updateTargetCareer",
+          "lineNumber": 442
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setCurrentCareerId",
+          "lineNumber": 443
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setCurrentCareerName",
+          "lineNumber": 444
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setIsChangingCareer",
+          "lineNumber": 445
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "loadRoadmap",
+          "lineNumber": 446
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "console.error",
+          "lineNumber": 448
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setErrorMessage",
+          "lineNumber": 449
+        },
+        {
+          "caller": "handleSaveCareer",
+          "callee": "setIsSavingCareer",
+          "lineNumber": 451
+        },
+        {
+          "caller": "closePopover",
+          "callee": "setSelectedNodeData",
+          "lineNumber": 456
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "setShowFptPanel",
+          "lineNumber": 460
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "setSelectedNodeData",
+          "lineNumber": 461
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "studentDashboardService.getNodeDetail",
+          "lineNumber": 464
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "JSON.parse",
+          "lineNumber": 472
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "Array.isArray",
+          "lineNumber": 474
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "rawResources\r\n              .map((item: any, idx: number) => {\r\n                const url = typeof item === 'string' ? item : (item?.url || item?.link || '');\r\n                const title = (item && typeof item === 'object' && item.title) ? item.title : `Learning Resource ${idx + 1}`;\r\n                return url ? { title, url } : null;\r\n              })\r\n              .filter",
+          "lineNumber": 475
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "rawResources\r\n              .map",
+          "lineNumber": 475
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "Array.isArray",
+          "lineNumber": 485
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "resources.push",
+          "lineNumber": 486
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "resources.push",
+          "lineNumber": 488
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "resources.push",
+          "lineNumber": 489
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "resources.push",
+          "lineNumber": 490
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "setSelectedNodeData",
+          "lineNumber": 495
+        },
+        {
+          "caller": "handleNodeClick",
+          "callee": "console.error",
+          "lineNumber": 499
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 507
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 508
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "useGSAP",
+          "lineNumber": 511
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "gsap.from",
+          "lineNumber": 512
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "navigate",
+          "lineNumber": 528
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setSelectedCareerId",
+          "lineNumber": 565
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setCareerSearch",
+          "lineNumber": 566
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setIsChangingCareer",
+          "lineNumber": 567
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "Boolean",
+          "lineNumber": 589
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setSelectedNodeData",
+          "lineNumber": 596
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setShowFptPanel",
+          "lineNumber": 596
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setShowFptPanel",
+          "lineNumber": 616
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "loadRoadmap",
+          "lineNumber": 617
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setRecsRefresh",
+          "lineNumber": 617
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "getStageStyle",
+          "lineNumber": 628
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "getStageStyle",
+          "lineNumber": 631
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "new Date(selectedNodeData.completedAt).toLocaleDateString",
+          "lineNumber": 660
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "(selectedNodeData.fptCoverage.subjects || []).map",
+          "lineNumber": 681
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "(s.name || '').split('_')[0].trim",
+          "lineNumber": 684
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "(s.name || '').split",
+          "lineNumber": 684
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "(selectedNodeData.fptResources || []).map",
+          "lineNumber": 696
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "(r?.url || '').trim",
+          "lineNumber": 697
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "getYouTubeId",
+          "lineNumber": 699
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setActiveResource",
+          "lineNumber": 708
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "window.open",
+          "lineNumber": 709
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "selectedNodeData.links.map",
+          "lineNumber": 737
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "rawUrl.trim",
+          "lineNumber": 739
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "getLinkMeta",
+          "lineNumber": 741
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "getYouTubeId",
+          "lineNumber": 743
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setActiveResource",
+          "lineNumber": 749
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "window.open",
+          "lineNumber": 750
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "chosenNodeIds.has",
+          "lineNumber": 766
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setPendingChoice",
+          "lineNumber": 768
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "(() => {\r\n                const total = selectedNodeData.childTotal || 0;\r\n                const done = selectedNodeData.childCompleted || 0;\r\n                const pct = total > 0 ? Math.round((done / total) * 100) : 0;\r\n                const complete = selectedNodeData.status === 'completed';\r\n                return (\r\n                  <div className=\"flex flex-col gap-1.5\">\r\n                    <div className=\"flex items-center justify-between text-[11px] font-semibold text-slate-500\">\r\n                      <span>{complete ? 'Topic complete' : 'Auto-completes from sub-skills'}</span>\r\n                      <span className=\"tabular-nums\">{done}/{total}</span>\r\n                    </div>\r\n                    <div className=\"h-1.5 w-full overflow-hidden rounded-full bg-slate-200\">\r\n                      <div className={`h-full rounded-full ${complete ? 'bg-emerald-500' : 'bg-slate-900'}`} style={{ width: `${pct}%` }} />\r\n                    </div>\r\n                  </div>\r\n                );\r\n              })",
+          "lineNumber": 779
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "Math.round",
+          "lineNumber": 782
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "handleUpdateNodeStatus",
+          "lineNumber": 802
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setPendingComplete",
+          "lineNumber": 814
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setSelectedCareerId",
+          "lineNumber": 840
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setIsChangingCareer",
+          "lineNumber": 841
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setErrorMessage",
+          "lineNumber": 842
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setPendingChoice",
+          "lineNumber": 863
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "handleUpdateNodeStatus",
+          "lineNumber": 875
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setPendingComplete",
+          "lineNumber": 876
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setPendingComplete",
+          "lineNumber": 878
+        },
+        {
+          "caller": "StudentRoadmapPageView",
+          "callee": "setActiveResource",
+          "lineNumber": 881
+        }
+      ],
+      "metrics": {
+        "importCount": 17,
+        "exportCount": 1,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentSkillSelectionModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 197,
+      "nonEmptyLines": 179,
+      "functions": [
+        {
+          "name": "StudentSkillSelectionModal",
+          "startLine": 17,
+          "endLine": 197,
+          "params": [
+            "{\n  isOpen,\n  onComplete,\n  onBack,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentSkillSelectionModal",
+          "line": 17,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 28
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useState",
+          "lineNumber": 30
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useEffect",
+          "lineNumber": 32
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "studentDashboardService.getSkills()\n      .then(({ selectedSkills, skills: availableSkills }) => {\n        setError('')\n        setQuery('')\n        setSelectedIds(selectedSkills.map((skill) => skill.skillId))\n        setSkills(availableSkills)\n        setHasSkillCatalog(availableSkills.length > 0)\n      })\n      .catch((requestError) => {\n        setSkills([])\n        setError(getSkillErrorMessage(requestError))\n      })\n      .finally",
+          "lineNumber": 35
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "studentDashboardService.getSkills()\n      .then(({ selectedSkills, skills: availableSkills }) => {\n        setError('')\n        setQuery('')\n        setSelectedIds(selectedSkills.map((skill) => skill.skillId))\n        setSkills(availableSkills)\n        setHasSkillCatalog(availableSkills.length > 0)\n      })\n      .catch",
+          "lineNumber": 35
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "studentDashboardService.getSkills()\n      .then",
+          "lineNumber": 35
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "studentDashboardService.getSkills",
+          "lineNumber": 35
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setError",
+          "lineNumber": 37
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setQuery",
+          "lineNumber": 38
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setSelectedIds",
+          "lineNumber": 39
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "selectedSkills.map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setSkills",
+          "lineNumber": 40
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setHasSkillCatalog",
+          "lineNumber": 41
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setSkills",
+          "lineNumber": 44
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setError",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "getSkillErrorMessage",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setIsLoading",
+          "lineNumber": 47
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useEffect",
+          "lineNumber": 50
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "query.trim",
+          "lineNumber": 51
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "window.setTimeout",
+          "lineNumber": 55
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setIsSearching",
+          "lineNumber": 56
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "studentDashboardService.searchSkills",
+          "lineNumber": 58
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setSearchResults",
+          "lineNumber": 60
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setError",
+          "lineNumber": 61
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setSearchResults",
+          "lineNumber": 64
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setError",
+          "lineNumber": 65
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "getSkillErrorMessage",
+          "lineNumber": 65
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setIsSearching",
+          "lineNumber": 67
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "window.clearTimeout",
+          "lineNumber": 73
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "useMemo",
+          "lineNumber": 77
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "query.trim().toLocaleLowerCase",
+          "lineNumber": 78
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "query.trim",
+          "lineNumber": 78
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "sourceSkills.filter",
+          "lineNumber": 82
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "skill.skillName.toLocaleLowerCase().includes",
+          "lineNumber": 83
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "skill.skillName.toLocaleLowerCase",
+          "lineNumber": 83
+        },
+        {
+          "caller": "toggleSkill",
+          "callee": "selectedIds.includes",
+          "lineNumber": 88
+        },
+        {
+          "caller": "toggleSkill",
+          "callee": "setSelectedIds",
+          "lineNumber": 89
+        },
+        {
+          "caller": "toggleSkill",
+          "callee": "current.filter",
+          "lineNumber": 91
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleSave",
+          "callee": "uniqueSkillIds.some",
+          "lineNumber": 102
+        },
+        {
+          "caller": "handleSave",
+          "callee": "isUuid",
+          "lineNumber": 102
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 103
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 107
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 108
+        },
+        {
+          "caller": "handleSave",
+          "callee": "studentDashboardService.selectSkills",
+          "lineNumber": 110
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setSelectedIds",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleSave",
+          "callee": "selectedSkills.map",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleSave",
+          "callee": "onComplete",
+          "lineNumber": 112
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setError",
+          "lineNumber": 114
+        },
+        {
+          "caller": "handleSave",
+          "callee": "getSkillErrorMessage",
+          "lineNumber": 114
+        },
+        {
+          "caller": "handleSave",
+          "callee": "setIsSaving",
+          "lineNumber": 116
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setQuery",
+          "lineNumber": 145
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "nextQuery.trim",
+          "lineNumber": 146
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "setIsSearching",
+          "lineNumber": 146
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "query.trim",
+          "lineNumber": 170
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "query.trim",
+          "lineNumber": 170
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "visibleSkills.map",
+          "lineNumber": 174
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "selectedIds.includes",
+          "lineNumber": 175
+        },
+        {
+          "caller": "StudentSkillSelectionModal",
+          "callee": "toggleSkill",
+          "lineNumber": 180
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/RoadmapProgressContext.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "RoadmapProgressProvider",
+          "startLine": 19,
+          "endLine": 43,
+          "params": [
+            "{ children }"
+          ]
+        },
+        {
+          "name": "useRoadmapProgress",
+          "startLine": 45,
+          "endLine": 51,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapProgressProvider",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "useRoadmapProgress",
+          "line": 45,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "useCallback",
+          "lineNumber": 23
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "studentDashboardService.getRoadmapProgress",
+          "lineNumber": 25
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "setData",
+          "lineNumber": 26
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "setStatus",
+          "lineNumber": 27
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "console.error",
+          "lineNumber": 29
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "setStatus",
+          "lineNumber": 30
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "useEffect",
+          "lineNumber": 34
+        },
+        {
+          "caller": "RoadmapProgressProvider",
+          "callee": "reload",
+          "lineNumber": 35
+        },
+        {
+          "caller": "useRoadmapProgress",
+          "callee": "useContext",
+          "lineNumber": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/useDashboardData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "useDashboardData",
+          "startLine": 4,
+          "endLine": 30,
+          "params": [
+            "loader"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useDashboardData",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useDashboardData",
+          "callee": "useRef",
+          "lineNumber": 5
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "useState",
+          "lineNumber": 6
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "useState",
+          "lineNumber": 7
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "useEffect",
+          "lineNumber": 9
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "loaderRef.current()\n      .then((response) => {\n        if (!active) return\n        setData(response)\n        setStatus(\"success\")\n      })\n      .catch",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "loaderRef.current()\n      .then",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "loaderRef.current",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "setData",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "setStatus",
+          "lineNumber": 16
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "console.error",
+          "lineNumber": 20
+        },
+        {
+          "caller": "useDashboardData",
+          "callee": "setStatus",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/useStudentSetup.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 111,
+      "nonEmptyLines": 95,
+      "functions": [
+        {
+          "name": "getProfileCareerId",
+          "startLine": 22,
+          "endLine": 28,
+          "params": [
+            "profile"
+          ]
+        },
+        {
+          "name": "useStudentSetup",
+          "startLine": 30,
+          "endLine": 111,
+          "params": [
+            "userId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useStudentSetup",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useStudentSetup",
+          "callee": "useState",
+          "lineNumber": 31
+        },
+        {
+          "caller": "useStudentSetup",
+          "callee": "useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "useStudentSetup",
+          "callee": "useEffect",
+          "lineNumber": 34
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "studentDashboardService.getStudentProfile",
+          "lineNumber": 45
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "console.warn",
+          "lineNumber": 47
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "getProfileCareerId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "isUuid",
+          "lineNumber": 60
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "setActiveSetupStep",
+          "lineNumber": 64
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "studentDashboardService.getSelectedSkills",
+          "lineNumber": 72
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "console.warn",
+          "lineNumber": 74
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "Array.isArray",
+          "lineNumber": 82
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "setActiveSetupStep",
+          "lineNumber": 86
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "setActiveSetupStep",
+          "lineNumber": 88
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "console.error",
+          "lineNumber": 91
+        },
+        {
+          "caller": "loadSetupStatus",
+          "callee": "setIsInitializing",
+          "lineNumber": 93
+        },
+        {
+          "caller": "useStudentSetup",
+          "callee": "loadSetupStatus",
+          "lineNumber": 97
+        },
+        {
+          "caller": "useStudentSetup",
+          "callee": "setActiveSetupStep",
+          "lineNumber": 107
+        },
+        {
+          "caller": "useStudentSetup",
+          "callee": "setActiveSetupStep",
+          "lineNumber": 108
+        },
+        {
+          "caller": "useStudentSetup",
+          "callee": "setActiveSetupStep",
+          "lineNumber": 109
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "getStageStyle",
+          "startLine": 32,
+          "endLine": 35,
+          "params": [
+            "stage"
+          ]
+        },
+        {
+          "name": "getStageColor",
+          "startLine": 37,
+          "endLine": 38,
+          "params": [
+            "stage"
+          ]
+        },
+        {
+          "name": "getStageLabel",
+          "startLine": 40,
+          "endLine": 41,
+          "params": [
+            "stage"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "STAGE_ORDER",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "getStageStyle",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "getStageColor",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "getStageLabel",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "STAGE_LEGEND",
+          "line": 44,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getStageStyle",
+          "callee": "stage.toUpperCase",
+          "lineNumber": 34
+        },
+        {
+          "caller": "getStageColor",
+          "callee": "getStageStyle",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getStageLabel",
+          "callee": "getStageStyle",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/studentDashboardService.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 633,
+      "nonEmptyLines": 546,
+      "functions": [
+        {
+          "name": "unwrapResponse",
+          "startLine": 68,
+          "endLine": 74,
+          "params": [
+            "responseData"
+          ]
+        },
+        {
+          "name": "normalizeCareerRole",
+          "startLine": 76,
+          "endLine": 88,
+          "params": [
+            "career"
+          ]
+        },
+        {
+          "name": "emptySkillResponse",
+          "startLine": 90,
+          "endLine": 95,
+          "params": []
+        },
+        {
+          "name": "isValidSkillItem",
+          "startLine": 97,
+          "endLine": 100,
+          "params": [
+            "skill"
+          ]
+        },
+        {
+          "name": "normalizeSkillResponse",
+          "startLine": 102,
+          "endLine": 115,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "normalizeStatus",
+          "startLine": 117,
+          "endLine": 121,
+          "params": [
+            "status"
+          ]
+        },
+        {
+          "name": "parseResourceField",
+          "startLine": 123,
+          "endLine": 133,
+          "params": [
+            "resource"
+          ]
+        },
+        {
+          "name": "normalizeResource",
+          "startLine": 135,
+          "endLine": 150,
+          "params": [
+            "resource",
+            "index"
+          ]
+        },
+        {
+          "name": "normalizeNode",
+          "startLine": 152,
+          "endLine": 173,
+          "params": [
+            "node"
+          ]
+        },
+        {
+          "name": "normalizeStudentRoadmap",
+          "startLine": 175,
+          "endLine": 236,
+          "params": [
+            "responseData"
+          ]
+        },
+        {
+          "name": "normalizeRoadmapProgress",
+          "startLine": 238,
+          "endLine": 249,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "getSkillErrorMessage",
+          "startLine": 251,
+          "endLine": 269,
+          "params": [
+            "error"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getSkillErrorMessage",
+          "line": 251,
+          "isDefault": false
+        },
+        {
+          "name": "studentDashboardService",
+          "line": 271,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "isValidSkillItem",
+          "callee": "Boolean",
+          "lineNumber": 99
+        },
+        {
+          "caller": "isValidSkillItem",
+          "callee": "isUuid",
+          "lineNumber": 99
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "emptySkillResponse",
+          "lineNumber": 103
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "unwrapResponse",
+          "lineNumber": 105
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "Array.isArray",
+          "lineNumber": 108
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "dto.selectedSkills.filter",
+          "lineNumber": 108
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "Array.isArray",
+          "lineNumber": 109
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "dto.skills.filter",
+          "lineNumber": 109
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "Array.isArray",
+          "lineNumber": 110
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "dto.requiredSkills.filter",
+          "lineNumber": 111
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "isValidSkillItem",
+          "lineNumber": 111
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "Array.isArray",
+          "lineNumber": 113
+        },
+        {
+          "caller": "normalizeSkillResponse",
+          "callee": "dto.missingSkills.filter",
+          "lineNumber": 113
+        },
+        {
+          "caller": "normalizeStatus",
+          "callee": "String(status || \"locked\").toLowerCase",
+          "lineNumber": 118
+        },
+        {
+          "caller": "normalizeStatus",
+          "callee": "String",
+          "lineNumber": 118
+        },
+        {
+          "caller": "parseResourceField",
+          "callee": "Array.isArray",
+          "lineNumber": 125
+        },
+        {
+          "caller": "parseResourceField",
+          "callee": "JSON.parse",
+          "lineNumber": 128
+        },
+        {
+          "caller": "parseResourceField",
+          "callee": "Array.isArray",
+          "lineNumber": 129
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "parseResourceField",
+          "lineNumber": 156
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "normalizeStatus",
+          "lineNumber": 161
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "rawResources\r\n      .map((resource: any, index: number) => normalizeResource(resource, index))\r\n      .filter",
+          "lineNumber": 164
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "rawResources\r\n      .map",
+          "lineNumber": 164
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "normalizeResource",
+          "lineNumber": 165
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "Boolean",
+          "lineNumber": 166
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "Array.isArray",
+          "lineNumber": 167
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "node.children\r\n          .map(normalizeNode)\r\n          .filter",
+          "lineNumber": 168
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "node.children\r\n          .map",
+          "lineNumber": 168
+        },
+        {
+          "caller": "normalizeNode",
+          "callee": "Boolean",
+          "lineNumber": 170
+        },
+        {
+          "caller": "normalizeStudentRoadmap",
+          "callee": "unwrapResponse",
+          "lineNumber": 176
+        },
+        {
+          "caller": "findRoadmapData",
+          "callee": "Array.isArray",
+          "lineNumber": 185
+        },
+        {
+          "caller": "findRoadmapData",
+          "callee": "findRoadmapData",
+          "lineNumber": 190
+        },
+        {
+          "caller": "findRoadmapData",
+          "callee": "Object.keys",
+          "lineNumber": 200
+        },
+        {
+          "caller": "findRoadmapData",
+          "callee": "findRoadmapData",
+          "lineNumber": 201
+        },
+        {
+          "caller": "normalizeStudentRoadmap",
+          "callee": "findRoadmapData",
+          "lineNumber": 208
+        },
+        {
+          "caller": "normalizeStudentRoadmap",
+          "callee": "Array.isArray",
+          "lineNumber": 209
+        },
+        {
+          "caller": "flattenNode",
+          "callee": "flattenedNodes.push",
+          "lineNumber": 221
+        },
+        {
+          "caller": "flattenNode",
+          "callee": "Array.isArray",
+          "lineNumber": 222
+        },
+        {
+          "caller": "flattenNode",
+          "callee": "node.children.forEach",
+          "lineNumber": 223
+        },
+        {
+          "caller": "normalizeStudentRoadmap",
+          "callee": "rawNodes.forEach",
+          "lineNumber": 226
+        },
+        {
+          "caller": "normalizeStudentRoadmap",
+          "callee": "flattenedNodes\r\n      .map(normalizeNode)\r\n      .filter",
+          "lineNumber": 232
+        },
+        {
+          "caller": "normalizeStudentRoadmap",
+          "callee": "flattenedNodes\r\n      .map",
+          "lineNumber": 232
+        },
+        {
+          "caller": "normalizeStudentRoadmap",
+          "callee": "Boolean",
+          "lineNumber": 234
+        },
+        {
+          "caller": "normalizeRoadmapProgress",
+          "callee": "unwrapResponse",
+          "lineNumber": 239
+        },
+        {
+          "caller": "normalizeRoadmapProgress",
+          "callee": "Array.isArray",
+          "lineNumber": 242
+        },
+        {
+          "caller": "normalizeRoadmapProgress",
+          "callee": "roadmap.steps.map",
+          "lineNumber": 243
+        },
+        {
+          "caller": "normalizeRoadmapProgress",
+          "callee": "normalizeStatus",
+          "lineNumber": 245
+        },
+        {
+          "caller": "getSkillErrorMessage",
+          "callee": "isAxiosError",
+          "lineNumber": 252
+        },
+        {
+          "caller": "registerNameId",
+          "callee": "String(node.title || node.name || node.NodeName || node.nodeName || node.node_name || \"\").trim",
+          "lineNumber": 419
+        },
+        {
+          "caller": "registerNameId",
+          "callee": "String",
+          "lineNumber": 419
+        },
+        {
+          "caller": "registerNameId",
+          "callee": "String(node.nodeId || node.id || node.node_id || name).trim",
+          "lineNumber": 420
+        },
+        {
+          "caller": "registerNameId",
+          "callee": "String",
+          "lineNumber": 420
+        },
+        {
+          "caller": "registerNameId",
+          "callee": "Array.isArray",
+          "lineNumber": 422
+        },
+        {
+          "caller": "registerNameId",
+          "callee": "node.children.forEach",
+          "lineNumber": 423
+        },
+        {
+          "caller": "flattenNode",
+          "callee": "rows.push",
+          "lineNumber": 433
+        },
+        {
+          "caller": "flattenNode",
+          "callee": "Array.isArray",
+          "lineNumber": 434
+        },
+        {
+          "caller": "flattenNode",
+          "callee": "node.children.forEach",
+          "lineNumber": 436
+        },
+        {
+          "caller": "flattenNode",
+          "callee": "flattenNode",
+          "lineNumber": 436
+        },
+        {
+          "caller": "findRoadmapData",
+          "callee": "Array.isArray",
+          "lineNumber": 442
+        },
+        {
+          "caller": "findRoadmapData",
+          "callee": "findRoadmapData",
+          "lineNumber": 447
+        },
+        {
+          "caller": "findRoadmapData",
+          "callee": "Object.keys",
+          "lineNumber": 455
+        },
+        {
+          "caller": "findRoadmapData",
+          "callee": "findRoadmapData",
+          "lineNumber": 456
+        },
+        {
+          "caller": "readLevel",
+          "callee": "parseInt",
+          "lineNumber": 473
+        },
+        {
+          "caller": "readLevel",
+          "callee": "String",
+          "lineNumber": 473
+        },
+        {
+          "caller": "parseResourceField",
+          "callee": "JSON.parse",
+          "lineNumber": 504
+        },
+        {
+          "caller": "parseResourceField",
+          "callee": "Array.isArray",
+          "lineNumber": 506
+        },
+        {
+          "caller": "parseResourceField",
+          "callee": "parsed\r\n                    .map((r: any, i: number) => ({\r\n                        title: (r && typeof r === 'object' && r.title) ? r.title : `Resource ${i + 1}`,\r\n                        url: typeof r === 'string' ? r : (r?.url || r?.link || \"\")\r\n                    }))\r\n                    .filter",
+          "lineNumber": 506
+        },
+        {
+          "caller": "parseResourceField",
+          "callee": "parsed\r\n                    .map",
+          "lineNumber": 506
+        },
+        {
+          "caller": "parseResourceField",
+          "callee": "[{ title: parsed.title || \"Resource\", url: parsed.url || parsed.link || \"\" }].filter",
+          "lineNumber": 512
+        },
+        {
+          "caller": "resolveRef",
+          "callee": "String(raw.nodeId || raw.id || raw.node_id || raw.title || raw.name || raw.nodeName || raw.node_name || raw.NodeName || '').trim",
+          "lineNumber": 567
+        },
+        {
+          "caller": "resolveRef",
+          "callee": "String",
+          "lineNumber": 567
+        },
+        {
+          "caller": "resolveRef",
+          "callee": "String(raw).trim",
+          "lineNumber": 568
+        },
+        {
+          "caller": "resolveRef",
+          "callee": "String",
+          "lineNumber": 568
+        },
+        {
+          "caller": "pushEdge",
+          "callee": "edges.some",
+          "lineNumber": 575
+        },
+        {
+          "caller": "pushEdge",
+          "callee": "normalizeStatus",
+          "lineNumber": 576
+        },
+        {
+          "caller": "pushEdge",
+          "callee": "edges.push",
+          "lineNumber": 577
+        },
+        {
+          "caller": "pushEdge",
+          "callee": "adjacencyList[sourceId].push",
+          "lineNumber": 589
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 2,
+        "functionCount": 12,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/studentDashboard.types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 150,
+      "nonEmptyLines": 128,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "cn",
+          "startLine": 5,
+          "endLine": 7,
+          "params": [
+            "...inputs"
+          ]
+        },
+        {
+          "name": "isValidEmail",
+          "startLine": 9,
+          "endLine": 12,
+          "params": [
+            "email"
+          ]
+        },
+        {
+          "name": "isValidPassword",
+          "startLine": 14,
+          "endLine": 17,
+          "params": [
+            "password"
+          ]
+        },
+        {
+          "name": "isUuid",
+          "startLine": 19,
+          "endLine": 21,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "toIsoDateOnly",
+          "startLine": 23,
+          "endLine": 28,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "getErrorMessage",
+          "startLine": 30,
+          "endLine": 47,
+          "params": [
+            "error"
+          ]
+        },
+        {
+          "name": "formatPrerequisite",
+          "startLine": 49,
+          "endLine": 61,
+          "params": [
+            "prerequisite"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "cn",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "isValidEmail",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "isValidPassword",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "isUuid",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "toIsoDateOnly",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "getErrorMessage",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "formatPrerequisite",
+          "line": 49,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "cn",
+          "callee": "twMerge",
+          "lineNumber": 6
+        },
+        {
+          "caller": "cn",
+          "callee": "clsx",
+          "lineNumber": 6
+        },
+        {
+          "caller": "isValidEmail",
+          "callee": "emailRegex.test",
+          "lineNumber": 11
+        },
+        {
+          "caller": "isValidPassword",
+          "callee": "passwordRegex.test",
+          "lineNumber": 16
+        },
+        {
+          "caller": "isUuid",
+          "callee": "/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toIsoDateOnly",
+          "callee": "value.trim",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toIsoDateOnly",
+          "callee": "/^\\d{4}$/.test",
+          "lineNumber": 25
+        },
+        {
+          "caller": "toIsoDateOnly",
+          "callee": "/^\\d{4}-\\d{2}-\\d{2}$/.test",
+          "lineNumber": 26
+        },
+        {
+          "caller": "getErrorMessage",
+          "callee": "isAxiosError",
+          "lineNumber": 31
+        },
+        {
+          "caller": "formatPrerequisite",
+          "callee": "Array.isArray",
+          "lineNumber": 51
+        },
+        {
+          "caller": "formatPrerequisite",
+          "callee": "prerequisite\r\n      .map((p) => (p && typeof p === \"object\" ? p.careerName || p.name : String(p)))\r\n      .filter(Boolean)\r\n      .join",
+          "lineNumber": 52
+        },
+        {
+          "caller": "formatPrerequisite",
+          "callee": "prerequisite\r\n      .map((p) => (p && typeof p === \"object\" ? p.careerName || p.name : String(p)))\r\n      .filter",
+          "lineNumber": 52
+        },
+        {
+          "caller": "formatPrerequisite",
+          "callee": "prerequisite\r\n      .map",
+          "lineNumber": 52
+        },
+        {
+          "caller": "formatPrerequisite",
+          "callee": "String",
+          "lineNumber": 53
+        },
+        {
+          "caller": "formatPrerequisite",
+          "callee": "String",
+          "lineNumber": 60
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    }
+  ]
+}

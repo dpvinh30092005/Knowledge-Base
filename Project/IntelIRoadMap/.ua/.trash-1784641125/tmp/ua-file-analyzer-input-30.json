@@ -1,0 +1,28 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-backend/data/v2/careers.csv",
+      "language": "csv",
+      "sizeLines": 6,
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/v2/roadmap_nodes.csv",
+      "language": "csv",
+      "sizeLines": 190,
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/v2/skills.csv",
+      "language": "csv",
+      "sizeLines": 88,
+      "fileCategory": "data"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/data/v2/careers.csv": [],
+    "BackEnd/intelipath-backend/data/v2/roadmap_nodes.csv": [],
+    "BackEnd/intelipath-backend/data/v2/skills.csv": []
+  }
+}

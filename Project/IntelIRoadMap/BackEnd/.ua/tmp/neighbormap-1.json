@@ -1,0 +1,768 @@
+{
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java",
+   "batchIndex": 5,
+   "symbols": [
+    "getCareerStatistics",
+    "getStudentsMissingSkills",
+    "getAllFeedbacksSentByMe",
+    "getStudentInfos",
+    "getStudentStatisticAndFeedback",
+    "getProfile",
+    "updateProfile",
+    "exportStudentList",
+    "getCurriculums",
+    "checkStudentEmail",
+    "importStudentAccounts",
+    "CounselorServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+   "batchIndex": 15,
+   "symbols": [
+    "generateRecommendationsForCurrentStudent",
+    "getPendingRecommendationsForCurrentStudent",
+    "acceptRecommendation",
+    "rejectRecommendation",
+    "RoadmapPersonalizationServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+   "batchIndex": 9,
+   "symbols": [
+    "setupStudentProfile",
+    "getStudentProfile",
+    "updateTargetCareer",
+    "compareCurrentStudentSkills",
+    "findMissingRequiredSkills",
+    "calculateSkillProgress",
+    "uploadTranscript",
+    "StudentServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapSelectionResolver.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+   "batchIndex": 15,
+   "symbols": [
+    "generateRecommendationsForCurrentStudent",
+    "getPendingRecommendationsForCurrentStudent",
+    "acceptRecommendation",
+    "rejectRecommendation",
+    "RoadmapPersonalizationServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/SelectionView.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+   "batchIndex": 15,
+   "symbols": [
+    "generateRecommendationsForCurrentStudent",
+    "getPendingRecommendationsForCurrentStudent",
+    "acceptRecommendation",
+    "rejectRecommendation",
+    "RoadmapPersonalizationServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+   "batchIndex": 10,
+   "symbols": [
+    "FptCurriculumTool",
+    "apply",
+    "FptCurriculumTool"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CareerResponse.java",
+   "batchIndex": 12,
+   "symbols": [
+    "CareerResponse"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+   "batchIndex": 13,
+   "symbols": [
+    "toRoadmapProgressResponse",
+    "toRoadmapStepResponse",
+    "toSkillGapItemResponse",
+    "toMentorFeedbackItemResponse",
+    "toAiHistoryItemResponse",
+    "toMarketDemandResponse",
+    "toEmptyMarketDemandResponse",
+    "toRecommendationItemResponse",
+    "importanceRank",
+    "StudentDashboardMapper"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CareerServiceImpl.java",
+   "batchIndex": 13,
+   "symbols": [
+    "getAllCareers",
+    "getCareerRequirements",
+    "CareerServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+   "batchIndex": 15,
+   "symbols": [
+    "generateRecommendationsForCurrentStudent",
+    "getPendingRecommendationsForCurrentStudent",
+    "acceptRecommendation",
+    "rejectRecommendation",
+    "RoadmapPersonalizationServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+   "batchIndex": 13,
+   "symbols": [
+    "getRoadmapProgress",
+    "getRoadmapProgress",
+    "getSkillGaps",
+    "getSkillGaps",
+    "getMentorFeedback",
+    "markFeedbackRead",
+    "dismissFeedback",
+    "getAiHistory",
+    "getMarketDemand",
+    "getRecommendations",
+    "StudentDashboardServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+   "batchIndex": 9,
+   "symbols": [
+    "setupStudentProfile",
+    "getStudentProfile",
+    "updateTargetCareer",
+    "compareCurrentStudentSkills",
+    "findMissingRequiredSkills",
+    "calculateSkillProgress",
+    "uploadTranscript",
+    "StudentServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java",
+   "batchIndex": 14,
+   "symbols": [
+    "getDashboardMetrics",
+    "getWelcomeAlert",
+    "getInsight",
+    "getPendingReviews",
+    "getStudentInfos",
+    "getMentorDirectory",
+    "getCareerDistribution",
+    "getMentorProfile",
+    "updateMentorProfile",
+    "getFeedbackHistory",
+    "getProgressReports",
+    "submitFeedback",
+    "MentorServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+   "batchIndex": 15,
+   "symbols": [
+    "generateRecommendationsForCurrentStudent",
+    "getPendingRecommendationsForCurrentStudent",
+    "acceptRecommendation",
+    "rejectRecommendation",
+    "RoadmapPersonalizationServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+   "batchIndex": 13,
+   "symbols": [
+    "getRoadmapProgress",
+    "getRoadmapProgress",
+    "getSkillGaps",
+    "getSkillGaps",
+    "getMentorFeedback",
+    "markFeedbackRead",
+    "dismissFeedback",
+    "getAiHistory",
+    "getMarketDemand",
+    "getRecommendations",
+    "StudentDashboardServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+   "batchIndex": 9,
+   "symbols": [
+    "setupStudentProfile",
+    "getStudentProfile",
+    "updateTargetCareer",
+    "compareCurrentStudentSkills",
+    "findMissingRequiredSkills",
+    "calculateSkillProgress",
+    "uploadTranscript",
+    "StudentServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RoadmapStepResponse.java",
+   "batchIndex": 13,
+   "symbols": [
+    "RoadmapStepResponse"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+   "batchIndex": 13,
+   "symbols": [
+    "toRoadmapProgressResponse",
+    "toRoadmapStepResponse",
+    "toSkillGapItemResponse",
+    "toMentorFeedbackItemResponse",
+    "toAiHistoryItemResponse",
+    "toMarketDemandResponse",
+    "toEmptyMarketDemandResponse",
+    "toRecommendationItemResponse",
+    "importanceRank",
+    "StudentDashboardMapper"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java",
+   "batchIndex": 14,
+   "symbols": [
+    "getDashboardMetrics",
+    "getWelcomeAlert",
+    "getInsight",
+    "getPendingReviews",
+    "getStudentInfos",
+    "getMentorDirectory",
+    "getCareerDistribution",
+    "getMentorProfile",
+    "updateMentorProfile",
+    "getFeedbackHistory",
+    "getProgressReports",
+    "submitFeedback",
+    "MentorServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+   "batchIndex": 15,
+   "symbols": [
+    "generateRecommendationsForCurrentStudent",
+    "getPendingRecommendationsForCurrentStudent",
+    "acceptRecommendation",
+    "rejectRecommendation",
+    "RoadmapPersonalizationServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+   "batchIndex": 13,
+   "symbols": [
+    "getRoadmapProgress",
+    "getRoadmapProgress",
+    "getSkillGaps",
+    "getSkillGaps",
+    "getMentorFeedback",
+    "markFeedbackRead",
+    "dismissFeedback",
+    "getAiHistory",
+    "getMarketDemand",
+    "getRecommendations",
+    "StudentDashboardServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/NodeTypeRepository.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/DatabaseSeeder.java",
+   "batchIndex": 8,
+   "symbols": [
+    "run",
+    "importMockUsersData",
+    "DatabaseSeeder"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+   "batchIndex": 10,
+   "symbols": [
+    "FptCurriculumTool",
+    "apply",
+    "FptCurriculumTool"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/DatabaseSeeder.java",
+   "batchIndex": 8,
+   "symbols": [
+    "run",
+    "importMockUsersData",
+    "DatabaseSeeder"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminServiceImpl.java",
+   "batchIndex": 16,
+   "symbols": [
+    "getUserMetrics",
+    "getCourseMetrics",
+    "getSystemHealth",
+    "getUsers",
+    "updateUserRole",
+    "updateUserStatus",
+    "deleteUser",
+    "AdminServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CareerServiceImpl.java",
+   "batchIndex": 13,
+   "symbols": [
+    "getAllCareers",
+    "getCareerRequirements",
+    "CareerServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java",
+   "batchIndex": 14,
+   "symbols": [
+    "getDashboardMetrics",
+    "getWelcomeAlert",
+    "getInsight",
+    "getPendingReviews",
+    "getStudentInfos",
+    "getMentorDirectory",
+    "getCareerDistribution",
+    "getMentorProfile",
+    "updateMentorProfile",
+    "getFeedbackHistory",
+    "getProgressReports",
+    "submitFeedback",
+    "MentorServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+   "batchIndex": 15,
+   "symbols": [
+    "generateRecommendationsForCurrentStudent",
+    "getPendingRecommendationsForCurrentStudent",
+    "acceptRecommendation",
+    "rejectRecommendation",
+    "RoadmapPersonalizationServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+   "batchIndex": 13,
+   "symbols": [
+    "getRoadmapProgress",
+    "getRoadmapProgress",
+    "getSkillGaps",
+    "getSkillGaps",
+    "getMentorFeedback",
+    "markFeedbackRead",
+    "dismissFeedback",
+    "getAiHistory",
+    "getMarketDemand",
+    "getRecommendations",
+    "StudentDashboardServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+   "batchIndex": 9,
+   "symbols": [
+    "setupStudentProfile",
+    "getStudentProfile",
+    "updateTargetCareer",
+    "compareCurrentStudentSkills",
+    "findMissingRequiredSkills",
+    "calculateSkillProgress",
+    "uploadTranscript",
+    "StudentServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+   "batchIndex": 8,
+   "symbols": [
+    "Student"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/DatabaseSeeder.java",
+   "batchIndex": 8,
+   "symbols": [
+    "run",
+    "importMockUsersData",
+    "DatabaseSeeder"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java",
+   "batchIndex": 14,
+   "symbols": [
+    "getDashboardMetrics",
+    "getWelcomeAlert",
+    "getInsight",
+    "getPendingReviews",
+    "getStudentInfos",
+    "getMentorDirectory",
+    "getCareerDistribution",
+    "getMentorProfile",
+    "updateMentorProfile",
+    "getFeedbackHistory",
+    "getProgressReports",
+    "submitFeedback",
+    "MentorServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+   "batchIndex": 15,
+   "symbols": [
+    "generateRecommendationsForCurrentStudent",
+    "getPendingRecommendationsForCurrentStudent",
+    "acceptRecommendation",
+    "rejectRecommendation",
+    "RoadmapPersonalizationServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+   "batchIndex": 13,
+   "symbols": [
+    "getRoadmapProgress",
+    "getRoadmapProgress",
+    "getSkillGaps",
+    "getSkillGaps",
+    "getMentorFeedback",
+    "markFeedbackRead",
+    "dismissFeedback",
+    "getAiHistory",
+    "getMarketDemand",
+    "getRecommendations",
+    "StudentDashboardServiceImpl"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+   "batchIndex": 9,
+   "symbols": [
+    "setupStudentProfile",
+    "getStudentProfile",
+    "updateTargetCareer",
+    "compareCurrentStudentSkills",
+    "findMissingRequiredSkills",
+    "calculateSkillProgress",
+    "uploadTranscript",
+    "StudentServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapService.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java",
+   "batchIndex": 14,
+   "symbols": [
+    "getDashboardMetrics",
+    "getWelcomeAlert",
+    "getInsight",
+    "getPendingReviews",
+    "getStudentInfos",
+    "getMentorDirectory",
+    "getCareerDistribution",
+    "getMentorProfile",
+    "updateMentorProfile",
+    "getFeedbackHistory",
+    "getProgressReports",
+    "submitFeedback",
+    "MentorServiceImpl"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapEditorServiceImpl.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+   "batchIndex": 13,
+   "symbols": [
+    "CareerRole"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+   "batchIndex": 8,
+   "symbols": [
+    "prePersist",
+    "preUpdate",
+    "User"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+   "batchIndex": 4,
+   "symbols": [
+    "ResourceNotFoundException",
+    "ResourceNotFoundException",
+    "ResourceNotFoundException"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+   "batchIndex": 13,
+   "symbols": [
+    "CareerRoleRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+   "batchIndex": 9,
+   "symbols": [
+    "UserRepository"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapSelectionServiceImpl.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+   "batchIndex": 8,
+   "symbols": [
+    "Student"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+   "batchIndex": 8,
+   "symbols": [
+    "StudentSkill"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+   "batchIndex": 8,
+   "symbols": [
+    "BadRequestException",
+    "BadRequestException",
+    "BadRequestException"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+   "batchIndex": 4,
+   "symbols": [
+    "ResourceNotFoundException",
+    "ResourceNotFoundException",
+    "ResourceNotFoundException"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+   "batchIndex": 9,
+   "symbols": [
+    "StudentSkillRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+   "batchIndex": 9,
+   "symbols": [
+    "AuthenticatedStudentService"
+   ]
+  }
+ ],
+ "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapServiceImpl.java": [
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+   "batchIndex": 13,
+   "symbols": [
+    "CareerRequiredSkill"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+   "batchIndex": 13,
+   "symbols": [
+    "CareerRole"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+   "batchIndex": 10,
+   "symbols": [
+    "FptSubject"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+   "batchIndex": 10,
+   "symbols": [
+    "FptSubjectResource"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+   "batchIndex": 10,
+   "symbols": [
+    "FptSubjectSkill"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+   "batchIndex": 13,
+   "symbols": [
+    "Skill"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+   "batchIndex": 8,
+   "symbols": [
+    "Student"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+   "batchIndex": 8,
+   "symbols": [
+    "StudentSkill"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+   "batchIndex": 8,
+   "symbols": [
+    "prePersist",
+    "preUpdate",
+    "User"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+   "batchIndex": 8,
+   "symbols": [
+    "fromString",
+    "AccountType"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+   "batchIndex": 3,
+   "symbols": [
+    "ForbiddenException",
+    "ForbiddenException",
+    "ForbiddenException"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+   "batchIndex": 4,
+   "symbols": [
+    "ResourceNotFoundException",
+    "ResourceNotFoundException",
+    "ResourceNotFoundException"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+   "batchIndex": 13,
+   "symbols": [
+    "CareerRequiredSkillRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+   "batchIndex": 13,
+   "symbols": [
+    "CareerRoleRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java",
+   "batchIndex": 11,
+   "symbols": [
+    "FptSubjectRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java",
+   "batchIndex": 11,
+   "symbols": [
+    "FptSubjectResourceRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java",
+   "batchIndex": 11,
+   "symbols": [
+    "FptSubjectSkillRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+   "batchIndex": 13,
+   "symbols": [
+    "SkillRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+   "batchIndex": 9,
+   "symbols": [
+    "StudentRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+   "batchIndex": 9,
+   "symbols": [
+    "StudentSkillRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+   "batchIndex": 9,
+   "symbols": [
+    "UserRepository"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+   "batchIndex": 5,
+   "symbols": [
+    "getCurrentUserEmail",
+    "SecurityUtils"
+   ]
+  },
+  {
+   "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+   "batchIndex": 9,
+   "symbols": [
+    "AuthenticatedStudentService"
+   ]
+  }
+ ]
+}

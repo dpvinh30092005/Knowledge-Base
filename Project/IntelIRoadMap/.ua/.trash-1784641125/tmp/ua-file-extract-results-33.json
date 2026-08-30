@@ -1,0 +1,2078 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 20,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 20,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 20
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/anti-patterns.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 418,
+      "nonEmptyLines": 213,
+      "sections": [
+        {
+          "heading": "Anti-patterns — the named tells",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Critical (ships as slop)",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "The purple-gradient hero",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "Inter-everywhere",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "The 3-column feature grid",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "Card-in-card",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "The gradient headline",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "The side-stripe card",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "Full-viewport centred hero",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Pure black, pure white",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Default-attractor sameness",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "Specimen fall-through",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "The AI nav",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "The AI footer",
+          "level": 3,
+          "line": 83
+        },
+        {
+          "heading": "Aurora-blob background",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "Floating-orb decoration",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "Sound-on autoplay",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "Lazy-loaded LCP",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "Major (looks AI-generated)",
+          "level": 2,
+          "line": 125
+        },
+        {
+          "heading": "Bounce and elastic easing",
+          "level": 3,
+          "line": 127
+        },
+        {
+          "heading": "Centred everything",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "Italic headers",
+          "level": 3,
+          "line": 139
+        },
+        {
+          "heading": "Eyebrow on every section",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "Shadow-glow on dark",
+          "level": 3,
+          "line": 157
+        },
+        {
+          "heading": "Icon-tile feature card",
+          "level": 3,
+          "line": 163
+        },
+        {
+          "heading": "Glassmorphism without purpose",
+          "level": 3,
+          "line": 169
+        },
+        {
+          "heading": "Hover-only affordances",
+          "level": 3,
+          "line": 175
+        },
+        {
+          "heading": "Tabular data without tabular-nums",
+          "level": 3,
+          "line": 181
+        },
+        {
+          "heading": "Animate-on-scroll on everything",
+          "level": 3,
+          "line": 187
+        },
+        {
+          "heading": "Mismatched icon sets",
+          "level": 3,
+          "line": 193
+        },
+        {
+          "heading": "AI-illustration look",
+          "level": 3,
+          "line": 201
+        },
+        {
+          "heading": "Invented metrics",
+          "level": 3,
+          "line": 209
+        },
+        {
+          "heading": "Generic emoji as feature icon",
+          "level": 3,
+          "line": 217
+        },
+        {
+          "heading": "Re-drawn UI chrome",
+          "level": 3,
+          "line": 225
+        },
+        {
+          "heading": "Mid-render token improvisation",
+          "level": 3,
+          "line": 233
+        },
+        {
+          "heading": "Wrap-to-two-lines clickable text",
+          "level": 3,
+          "line": 241
+        },
+        {
+          "heading": "Lottie shortcut",
+          "level": 3,
+          "line": 249
+        },
+        {
+          "heading": "Three.js for a still object",
+          "level": 3,
+          "line": 257
+        },
+        {
+          "heading": "Microinteraction tells",
+          "level": 2,
+          "line": 267
+        },
+        {
+          "heading": "`transition-all`",
+          "level": 3,
+          "line": 271
+        },
+        {
+          "heading": "Universal `hover:scale-105`",
+          "level": 3,
+          "line": 277
+        },
+        {
+          "heading": "Bouncy overshoot easings on UI",
+          "level": 3,
+          "line": 283
+        },
+        {
+          "heading": "Animated hover gradients",
+          "level": 3,
+          "line": 289
+        },
+        {
+          "heading": "Cursor follower dots",
+          "level": 3,
+          "line": 295
+        },
+        {
+          "heading": "Auto-rotating carousels with no pause",
+          "level": 3,
+          "line": 301
+        },
+        {
+          "heading": "Celebratory success toasts",
+          "level": 3,
+          "line": 307
+        },
+        {
+          "heading": "Confirmation dialogs for reversible actions",
+          "level": 3,
+          "line": 313
+        },
+        {
+          "heading": "Tooltips with the same delay on hover and focus",
+          "level": 3,
+          "line": 319
+        },
+        {
+          "heading": "Focus rings that animate in",
+          "level": 3,
+          "line": 325
+        },
+        {
+          "heading": "Toasts that shift layout",
+          "level": 3,
+          "line": 331
+        },
+        {
+          "heading": "Universal scroll-triggered fade-up",
+          "level": 3,
+          "line": 337
+        },
+        {
+          "heading": "Spinners that flash",
+          "level": 3,
+          "line": 343
+        },
+        {
+          "heading": "Minor (small taste issues)",
+          "level": 2,
+          "line": 351
+        },
+        {
+          "heading": "Straight quotes",
+          "level": 3,
+          "line": 353
+        },
+        {
+          "heading": "Double-hyphen dashes",
+          "level": 3,
+          "line": 359
+        },
+        {
+          "heading": "Three periods instead of ellipsis",
+          "level": 3,
+          "line": 365
+        },
+        {
+          "heading": "Placeholder names",
+          "level": 3,
+          "line": 371
+        },
+        {
+          "heading": "Startup-cliché product names",
+          "level": 3,
+          "line": 377
+        },
+        {
+          "heading": "`z-index: 9999`",
+          "level": 3,
+          "line": 383
+        },
+        {
+          "heading": "Every section padded the same",
+          "level": 3,
+          "line": 389
+        },
+        {
+          "heading": "100vw widths",
+          "level": 3,
+          "line": 395
+        },
+        {
+          "heading": "How `hallmark audit` should report",
+          "level": 2,
+          "line": 403
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 62
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/assets.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 406,
+      "nonEmptyLines": 299,
+      "sections": [
+        {
+          "heading": "Assets — sourcing canon for icons, logos, illustrations, photography, video",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Placeholder strategy",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Icons",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "Canon",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "Import patterns",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 81
+        },
+        {
+          "heading": "Brand / company logos",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "Canon",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "Import patterns",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "Generated illustration (Tier C in the enrichment hierarchy)",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "Canon",
+          "level": 3,
+          "line": 138
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 147
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "Prompting recipe (Nanobanana 2)",
+          "level": 3,
+          "line": 163
+        },
+        {
+          "heading": "Library illustrations (Tier D — not first choice)",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "Canon",
+          "level": 3,
+          "line": 184
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 194
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 202
+        },
+        {
+          "heading": "App mockups / device frames",
+          "level": 2,
+          "line": 211
+        },
+        {
+          "heading": "Canon",
+          "level": 3,
+          "line": 213
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 223
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 231
+        },
+        {
+          "heading": "Hero / demo video",
+          "level": 2,
+          "line": 240
+        },
+        {
+          "heading": "Canon (when you don't have your own footage)",
+          "level": 3,
+          "line": 242
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 251
+        },
+        {
+          "heading": "Compression",
+          "level": 3,
+          "line": 268
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 276
+        },
+        {
+          "heading": "Photography",
+          "level": 2,
+          "line": 285
+        },
+        {
+          "heading": "Canon",
+          "level": 3,
+          "line": 287
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 297
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 304
+        },
+        {
+          "heading": "Abstract backgrounds",
+          "level": 2,
+          "line": 313
+        },
+        {
+          "heading": "Canon",
+          "level": 3,
+          "line": 315
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 324
+        },
+        {
+          "heading": "Recipe (CSS gradient + SVG grain)",
+          "level": 3,
+          "line": 332
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 353
+        },
+        {
+          "heading": "Lottie / Rive (Tier F — last resort)",
+          "level": 2,
+          "line": 363
+        },
+        {
+          "heading": "Canon",
+          "level": 3,
+          "line": 365
+        },
+        {
+          "heading": "The rules",
+          "level": 3,
+          "line": 372
+        },
+        {
+          "heading": "Avoid",
+          "level": 3,
+          "line": 381
+        },
+        {
+          "heading": "Quick-reference: which source for which job",
+          "level": 2,
+          "line": 390
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 44
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/color.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 95,
+      "nonEmptyLines": 73,
+      "sections": [
+        {
+          "heading": "Colour",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Principles",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Palette construction",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "Contrast",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "Dark mode recipe",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "Bans",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "Use of the accent",
+          "level": 2,
+          "line": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/component-cookbook.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 265,
+      "nonEmptyLines": 207,
+      "sections": [
+        {
+          "heading": "Component cookbook",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Archetype index — load ONLY the picks you need",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Heroes",
+          "level": 3,
+          "line": 18
+        },
+        {
+          "heading": "Section heads",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "Feature blocks",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "CTAs / signups",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Testimonials / proof",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "Footers",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "Navigation",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "Within-archetype variation knobs",
+          "level": 2,
+          "line": 91
+        },
+        {
+          "heading": "Routing — which footer fits which genre",
+          "level": 2,
+          "line": 153
+        },
+        {
+          "heading": "Routing — which nav fits which genre / theme",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "Picking from this file",
+          "level": 2,
+          "line": 190
+        },
+        {
+          "heading": "Mobile collapse — per archetype",
+          "level": 2,
+          "line": 205
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/contract.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 17,
+      "sections": [
+        {
+          "heading": "Output contract & scope",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Output contract",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Scope and limits",
+          "level": 2,
+          "line": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/copy.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 182,
+      "nonEmptyLines": 133,
+      "sections": [
+        {
+          "heading": "Copy",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Principles",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Buttons",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Error messages",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "Empty states",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Loading",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "Microcopy bans",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Proper typography",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Voice samples per tone",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "Editorial",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "Brutalist",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "Soft",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "Technical",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "Luxury",
+          "level": 3,
+          "line": 124
+        },
+        {
+          "heading": "Playful",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "Austere",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "Banned opening lines (anti-patterns)",
+          "level": 2,
+          "line": 165
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 17
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-craft.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 626,
+      "nonEmptyLines": 472,
+      "sections": [
+        {
+          "heading": "Custom craft — how to hand-build hero artwork",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Tier A · Pure CSS art",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "The CSS-art toolkit (2026)",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "A worked example — the bakery loaf as a single div",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "Anti-patterns of CSS art",
+          "level": 3,
+          "line": 74
+        },
+        {
+          "heading": "Tier B · Hand-built SVG illustration",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "Pipeline",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "A hand-built SVG with declarative animation",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "Animation choices for SVG in 2026",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "Anti-patterns of hand-built SVG",
+          "level": 3,
+          "line": 153
+        },
+        {
+          "heading": "Tier C · Declarative animation (CSS-first, JS-when-needed)",
+          "level": 2,
+          "line": 163
+        },
+        {
+          "heading": "CSS keyframes + `@property`",
+          "level": 3,
+          "line": 167
+        },
+        {
+          "heading": "Scroll-driven animations",
+          "level": 3,
+          "line": 191
+        },
+        {
+          "heading": "View Transitions API",
+          "level": 3,
+          "line": 212
+        },
+        {
+          "heading": "Motion / GSAP / friends — when each earns its bundle",
+          "level": 3,
+          "line": 229
+        },
+        {
+          "heading": "Anti-patterns of declarative animation",
+          "level": 3,
+          "line": 252
+        },
+        {
+          "heading": "Tier D · Three.js / WebGL / shaders",
+          "level": 2,
+          "line": 263
+        },
+        {
+          "heading": "Anti-patterns of Three.js / WebGL",
+          "level": 3,
+          "line": 283
+        },
+        {
+          "heading": "Tier E · Generated stills (Nanobanana / Recraft V4 / Midjourney)",
+          "level": 2,
+          "line": 293
+        },
+        {
+          "heading": "Discipline when generating",
+          "level": 3,
+          "line": 304
+        },
+        {
+          "heading": "Anti-patterns of generated stills",
+          "level": 3,
+          "line": 312
+        },
+        {
+          "heading": "Tier F · Library illustrations + Lottie (last resort)",
+          "level": 2,
+          "line": 321
+        },
+        {
+          "heading": "Lottie specifically — last resort",
+          "level": 3,
+          "line": 328
+        },
+        {
+          "heading": "The bakery worked example, end-to-end",
+          "level": 2,
+          "line": 348
+        },
+        {
+          "heading": "Recipe library",
+          "level": 2,
+          "line": 373
+        },
+        {
+          "heading": "Recipe 1 · Workflow / process diagram",
+          "level": 3,
+          "line": 379
+        },
+        {
+          "heading": "Recipe 2 · Minimal-line mascot",
+          "level": 3,
+          "line": 443
+        },
+        {
+          "heading": "Recipe 3 · Three-tier architectural diagram",
+          "level": 3,
+          "line": 489
+        },
+        {
+          "heading": "Recipe 4 · Botanical leaf flourish",
+          "level": 3,
+          "line": 563
+        },
+        {
+          "heading": "Cross-recipe techniques",
+          "level": 3,
+          "line": 609
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 30
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-theme.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 367,
+      "nonEmptyLines": 253,
+      "sections": [
+        {
+          "heading": "Custom theme — protocol",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Two routes, plain English",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "When to surface this fork — Step 1 trigger signals",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "§ A · The one follow-up question",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "§ Bespoke depth — custom that designs the whole page",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "§ B · Palette construction",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "B.1 · Anchor accent first",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "B.2 · Paper",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "B.3 · Ink",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "B.4 · Supporting greys",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "B.5 · Focus",
+          "level": 3,
+          "line": 122
+        },
+        {
+          "heading": "B.6 · Accent-ink (overlay text colour on accent)",
+          "level": 3,
+          "line": 128
+        },
+        {
+          "heading": "B.7 · Verification",
+          "level": 3,
+          "line": 134
+        },
+        {
+          "heading": "§ C · Font pairing",
+          "level": 2,
+          "line": 142
+        },
+        {
+          "heading": "C.1 · The freedom",
+          "level": 3,
+          "line": 146
+        },
+        {
+          "heading": "C.2 · The discipline",
+          "level": 3,
+          "line": 157
+        },
+        {
+          "heading": "C.3 · The pair must read",
+          "level": 3,
+          "line": 163
+        },
+        {
+          "heading": "§ D · Custom-axis computation",
+          "level": 2,
+          "line": 175
+        },
+        {
+          "heading": "D.1 · Paper band",
+          "level": 3,
+          "line": 179
+        },
+        {
+          "heading": "D.2 · Display style",
+          "level": 3,
+          "line": 185
+        },
+        {
+          "heading": "D.3 · Accent hue band",
+          "level": 3,
+          "line": 201
+        },
+        {
+          "heading": "D.4 · Where these go",
+          "level": 3,
+          "line": 208
+        },
+        {
+          "heading": "§ E · Stamp format",
+          "level": 2,
+          "line": 214
+        },
+        {
+          "heading": "§ F · `.hallmark/log.json` entry shape",
+          "level": 2,
+          "line": 240
+        },
+        {
+          "heading": "§ G · Three worked examples",
+          "level": 2,
+          "line": 260
+        },
+        {
+          "heading": "G.1 · Archival café — \"Coffeebox\"",
+          "level": 3,
+          "line": 264
+        },
+        {
+          "heading": "G.2 · Industrial fintech — \"Loop\"",
+          "level": 3,
+          "line": 294
+        },
+        {
+          "heading": "G.3 · Botanical apothecary — \"Mossroot\"",
+          "level": 3,
+          "line": 326
+        },
+        {
+          "heading": "What custom does **not** do (worth restating)",
+          "level": 2,
+          "line": 359
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 29
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/design-md.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 116,
+      "nonEmptyLines": 81,
+      "sections": [
+        {
+          "heading": "design.md — opt-in portable design system",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Triggers (phrase-only — no new verb)",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Two emission paths (default vs study)",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Scope",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "CTA — surface the offer in the Step 5 preview",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "Format (the tight version)",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "After the file is written",
+          "level": 2,
+          "line": 106
+        },
+        {
+          "heading": "Why opt-in (not auto-emit)",
+          "level": 2,
+          "line": 114
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/export-formats.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 329,
+      "nonEmptyLines": 266,
+      "sections": [
+        {
+          "heading": "Export formats",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Token taxonomy — Hallmark's source of truth",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "Format 1 — `tokens.css`",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "Format 2 — Tailwind v4 `@theme`",
+          "level": 2,
+          "line": 152
+        },
+        {
+          "heading": "Format 3 — DTCG `tokens.json`",
+          "level": 2,
+          "line": 214
+        },
+        {
+          "heading": "Format 4 — shadcn/ui CSS variables",
+          "level": 2,
+          "line": 274
+        },
+        {
+          "heading": "Output rule",
+          "level": 2,
+          "line": 320
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/floating-nav.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 89,
+      "nonEmptyLines": 71,
+      "sections": [
+        {
+          "heading": "Floating nav on scroll — the cross-fade morph",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "The structure",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "The four laws — non-negotiable",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "The property morph (10 properties, one curve)",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "The scroll handler",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "Anti-patterns Hallmark refuses",
+          "level": 2,
+          "line": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 475,
+      "nonEmptyLines": 352,
+      "sections": [
+        {
+          "heading": "Hero enrichment — when, what, and how much",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Image-need detection — does this brief need imagery at all?",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "The enrichment hierarchy",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "Eyeball or ask — the decision protocol",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "Eight enrichment archetypes",
+          "level": 2,
+          "line": 86
+        },
+        {
+          "heading": "E1 · Demo Video — Clipped-by-viewport-edge",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "E2 · Demo Video — Full-bleed muted loop with ghost overlay",
+          "level": 3,
+          "line": 153
+        },
+        {
+          "heading": "E3 · Mock App Screenshot — Browser-framed split",
+          "level": 3,
+          "line": 167
+        },
+        {
+          "heading": "E4 · Mock App Screenshot — Floating no-frame",
+          "level": 3,
+          "line": 181
+        },
+        {
+          "heading": "E5 · Custom Illustration Centerpiece",
+          "level": 3,
+          "line": 195
+        },
+        {
+          "heading": "E6 · Animated Loop — pure CSS / SVG / Motion",
+          "level": 3,
+          "line": 211
+        },
+        {
+          "heading": "E7 · Abstract Background — subtle gradient + grain",
+          "level": 3,
+          "line": 225
+        },
+        {
+          "heading": "E8 · Hero Photography — single tightly-cropped image",
+          "level": 3,
+          "line": 267
+        },
+        {
+          "heading": "Hero shape polish — patterns beyond enrichment",
+          "level": 2,
+          "line": 275
+        },
+        {
+          "heading": "HP1 · Vertical-rail title",
+          "level": 3,
+          "line": 281
+        },
+        {
+          "heading": "HP2 · Marquee-overflow",
+          "level": 3,
+          "line": 305
+        },
+        {
+          "heading": "HP3 · Cursor-spotlight",
+          "level": 3,
+          "line": 326
+        },
+        {
+          "heading": "HP4 · Decorative-numeral",
+          "level": 3,
+          "line": 359
+        },
+        {
+          "heading": "Hero space discipline",
+          "level": 2,
+          "line": 384
+        },
+        {
+          "heading": "Animation discipline (hero specifically)",
+          "level": 2,
+          "line": 406
+        },
+        {
+          "heading": "Quality bar — eight pre-flight questions",
+          "level": 2,
+          "line": 431
+        },
+        {
+          "heading": "Output stamp",
+          "level": 2,
+          "line": 448
+        },
+        {
+          "heading": "Common mistakes — and the fixes",
+          "level": 2,
+          "line": 468
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 23
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/imagery-kit.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 170,
+      "nonEmptyLines": 124,
+      "sections": [
+        {
+          "heading": "Imagery kit — curated abstract assets, hosted, ready",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Categories",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Manifest (placeholder until generation pass ships)",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Usage patterns — how a senior engineer would compose these",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "Layered hero composition (the masterclass move)",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "Section background wash",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Decoration",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "Texture overlay",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "Empty state",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "Anti-patterns",
+          "level": 2,
+          "line": 139
+        },
+        {
+          "heading": "Generation pipeline (out-of-band, one-time)",
+          "level": 2,
+          "line": 150
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/interaction-and-states.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 208,
+      "nonEmptyLines": 154,
+      "sections": [
+        {
+          "heading": "Interaction and states",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "The eight states",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Focus rings",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Hit targets",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "Forms",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Input field states — the exhaustive checklist",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "The no-layout-shift rule",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "State-by-state recipe",
+          "level": 3,
+          "line": 84
+        },
+        {
+          "heading": "Heights and rhythm",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "Labels, helper, error",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "Don't, list",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "Specific control overrides",
+          "level": 3,
+          "line": 120
+        },
+        {
+          "heading": "Modals and overlays",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "Dropdowns, tooltips, popovers",
+          "level": 2,
+          "line": 138
+        },
+        {
+          "heading": "Undo over confirm",
+          "level": 2,
+          "line": 145
+        },
+        {
+          "heading": "Loading and empty states",
+          "level": 2,
+          "line": 150
+        },
+        {
+          "heading": "Bans",
+          "level": 2,
+          "line": 157
+        },
+        {
+          "heading": "Contrast discipline",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "Computation",
+          "level": 3,
+          "line": 180
+        },
+        {
+          "heading": "Token contract",
+          "level": 3,
+          "line": 189
+        },
+        {
+          "heading": "When the surface flips",
+          "level": 3,
+          "line": 193
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 21
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/layout-and-space.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 112,
+      "nonEmptyLines": 84,
+      "sections": [
+        {
+          "heading": "Layout and space",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Principles",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "The spacing scale",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Grids",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Asymmetry techniques",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "Depth",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "Bans",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "Page-edge clipping",
+          "level": 2,
+          "line": 82
+        },
+        {
+          "heading": "When in doubt",
+          "level": 2,
+          "line": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 89,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "Macrostructures",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Diversification rule (mandatory)",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Hero polish patterns",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Nav and footer voice",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "The 21 macrostructures — index",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "SaaS page sequence",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "How to pick",
+          "level": 2,
+          "line": 81
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 258,
+      "nonEmptyLines": 181,
+      "sections": [
+        {
+          "heading": "Microinteractions",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Principles",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "When to ship motion by default",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Hard rules for default-on motion",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "What never gets default motion",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "The timing canon",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "The easing canon",
+          "level": 2,
+          "line": 69
+        },
+        {
+          "heading": "Recipes",
+          "level": 2,
+          "line": 100
+        },
+        {
+          "heading": "Button press",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "Input focus + label float",
+          "level": 3,
+          "line": 118
+        },
+        {
+          "heading": "Form validation",
+          "level": 3,
+          "line": 122
+        },
+        {
+          "heading": "Toast notification",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "Modal open / close",
+          "level": 3,
+          "line": 130
+        },
+        {
+          "heading": "Dropdown / menu",
+          "level": 3,
+          "line": 134
+        },
+        {
+          "heading": "Tooltip",
+          "level": 3,
+          "line": 138
+        },
+        {
+          "heading": "Tab change",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "Number tick",
+          "level": 3,
+          "line": 146
+        },
+        {
+          "heading": "Copy-to-clipboard",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "Drag handle",
+          "level": 3,
+          "line": 167
+        },
+        {
+          "heading": "Optimistic update with rollback",
+          "level": 3,
+          "line": 171
+        },
+        {
+          "heading": "Search-as-you-type",
+          "level": 3,
+          "line": 186
+        },
+        {
+          "heading": "Command palette navigation",
+          "level": 3,
+          "line": 190
+        },
+        {
+          "heading": "Page-load reveals",
+          "level": 3,
+          "line": 194
+        },
+        {
+          "heading": "The named tells (what AI defaults produce)",
+          "level": 2,
+          "line": 198
+        },
+        {
+          "heading": "Theme-aware microinteractions",
+          "level": 2,
+          "line": 223
+        },
+        {
+          "heading": "Accessibility ground truth",
+          "level": 2,
+          "line": 242
+        },
+        {
+          "heading": "When in doubt, cut",
+          "level": 2,
+          "line": 254
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 27
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/motion.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 109,
+      "nonEmptyLines": 83,
+      "sections": [
+        {
+          "heading": "Motion",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Principles",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Easings",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Durations",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "Page-load orchestration",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "Scroll-linked motion",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "State transitions",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "Reduced motion",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "Bans",
+          "level": 2,
+          "line": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/preview-examples.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 49,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "Preview-block worked examples",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/responsive.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 138,
+      "nonEmptyLines": 99,
+      "sections": [
+        {
+          "heading": "Responsive",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Mobile — non-negotiable",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Principles",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Breakpoints",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Fluid scaling",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "Pointer and hover queries",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "Clickable text — never wraps",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "Viewport units",
+          "level": 2,
+          "line": 92
+        },
+        {
+          "heading": "Safe areas",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "Tables on small screens",
+          "level": 2,
+          "line": 112
+        },
+        {
+          "heading": "Images",
+          "level": 2,
+          "line": 116
+        },
+        {
+          "heading": "Internationalisation",
+          "level": 2,
+          "line": 123
+        },
+        {
+          "heading": "Bans",
+          "level": 2,
+          "line": 129
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    }
+  ]
+}

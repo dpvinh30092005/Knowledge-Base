@@ -1,0 +1,4528 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 344,
+      "nonEmptyLines": 324,
+      "functions": [
+        {
+          "name": "getCareerStatistics",
+          "startLine": 53,
+          "endLine": 62,
+          "params": []
+        },
+        {
+          "name": "getStudentsMissingSkills",
+          "startLine": 71,
+          "endLine": 82,
+          "params": [
+            "careerName"
+          ]
+        },
+        {
+          "name": "getFeedbackSentByMe",
+          "startLine": 89,
+          "endLine": 99,
+          "params": []
+        },
+        {
+          "name": "getStudentInfos",
+          "startLine": 110,
+          "endLine": 122,
+          "params": [
+            "search",
+            "page",
+            "size"
+          ]
+        },
+        {
+          "name": "getStudentStatisticAndFeedback",
+          "startLine": 130,
+          "endLine": 139,
+          "params": [
+            "studentId"
+          ]
+        },
+        {
+          "name": "getProfile",
+          "startLine": 146,
+          "endLine": 155,
+          "params": []
+        },
+        {
+          "name": "updateProfile",
+          "startLine": 163,
+          "endLine": 181,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "createFeedback",
+          "startLine": 189,
+          "endLine": 207,
+          "params": [
+            "request",
+            "files"
+          ]
+        },
+        {
+          "name": "modifyFeedback",
+          "startLine": 215,
+          "endLine": 234,
+          "params": [
+            "request",
+            "files"
+          ]
+        },
+        {
+          "name": "markReadFeedback",
+          "startLine": 242,
+          "endLine": 252,
+          "params": [
+            "feedbackId"
+          ]
+        },
+        {
+          "name": "deleteFeedback",
+          "startLine": 260,
+          "endLine": 272,
+          "params": [
+            "feedbackId"
+          ]
+        },
+        {
+          "name": "exportStudentList",
+          "startLine": 274,
+          "endLine": 296,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "getCurriculums",
+          "startLine": 298,
+          "endLine": 307,
+          "params": []
+        },
+        {
+          "name": "checkStudentEmail",
+          "startLine": 309,
+          "endLine": 319,
+          "params": [
+            "email"
+          ]
+        },
+        {
+          "name": "importStudentAccounts",
+          "startLine": 321,
+          "endLine": 343,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CounselorController",
+          "startLine": 36,
+          "endLine": 344,
+          "methods": [
+            "getCareerStatistics",
+            "getStudentsMissingSkills",
+            "getFeedbackSentByMe",
+            "getStudentInfos",
+            "getStudentStatisticAndFeedback",
+            "getProfile",
+            "updateProfile",
+            "createFeedback",
+            "modifyFeedback",
+            "markReadFeedback",
+            "deleteFeedback",
+            "exportStudentList",
+            "getCurriculums",
+            "checkStudentEmail",
+            "importStudentAccounts"
+          ],
+          "properties": [
+            "counselorService",
+            "feedbackService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getCareerStatistics",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "getStudentsMissingSkills",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getFeedbackSentByMe",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "getStudentInfos",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "getStudentStatisticAndFeedback",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "getProfile",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "updateProfile",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "createFeedback",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "modifyFeedback",
+          "line": 215,
+          "isDefault": false
+        },
+        {
+          "name": "markReadFeedback",
+          "line": 242,
+          "isDefault": false
+        },
+        {
+          "name": "deleteFeedback",
+          "line": 260,
+          "isDefault": false
+        },
+        {
+          "name": "exportStudentList",
+          "line": 274,
+          "isDefault": false
+        },
+        {
+          "name": "getCurriculums",
+          "line": 298,
+          "isDefault": false
+        },
+        {
+          "name": "checkStudentEmail",
+          "line": 309,
+          "isDefault": false
+        },
+        {
+          "name": "importStudentAccounts",
+          "line": 321,
+          "isDefault": false
+        },
+        {
+          "name": "CounselorController",
+          "line": 36,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getCareerStatistics",
+          "callee": "log.info",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 61
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "counselorService.getCareerStatistics",
+          "lineNumber": 61
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "log.info",
+          "lineNumber": 80
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "counselorService.getStudentsMissingSkills",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getFeedbackSentByMe",
+          "callee": "log.info",
+          "lineNumber": 97
+        },
+        {
+          "caller": "getFeedbackSentByMe",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 98
+        },
+        {
+          "caller": "getFeedbackSentByMe",
+          "callee": "counselorService.getAllFeedbacksSentByMe",
+          "lineNumber": 98
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "log.info",
+          "lineNumber": 120
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "counselorService.getStudentInfos",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "log.info",
+          "lineNumber": 137
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 138
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "counselorService.getStudentStatisticAndFeedback",
+          "lineNumber": 138
+        },
+        {
+          "caller": "getProfile",
+          "callee": "log.info",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getProfile",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 154
+        },
+        {
+          "caller": "getProfile",
+          "callee": "counselorService.getProfile",
+          "lineNumber": 154
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "log.info",
+          "lineNumber": 179
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 180
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "counselorService.updateProfile",
+          "lineNumber": 180
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "log.info",
+          "lineNumber": 205
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 206
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "feedbackService.createFeedback",
+          "lineNumber": 206
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "log.info",
+          "lineNumber": 232
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 233
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedbackService.modifyFeedback",
+          "lineNumber": 233
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "log.info",
+          "lineNumber": 250
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 251
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "feedbackService.markReadFeedback",
+          "lineNumber": 251
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "log.info",
+          "lineNumber": 268
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "feedbackService.deleteFeedback",
+          "lineNumber": 270
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 271
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "log.info",
+          "lineNumber": 290
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "counselorService.exportStudentList",
+          "lineNumber": 291
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "ResponseEntity.ok()\r\n                .header(HttpHeaders.CONTENT_DISPOSITION, \"attachment; filename=StudentList.xlsx\")\r\n                .contentType(MediaType.parseMediaType(\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\")).body",
+          "lineNumber": 292
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "ResponseEntity.ok()\r\n                .header(HttpHeaders.CONTENT_DISPOSITION, \"attachment; filename=StudentList.xlsx\").contentType",
+          "lineNumber": 292
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "ResponseEntity.ok().header",
+          "lineNumber": 292
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 292
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "MediaType.parseMediaType",
+          "lineNumber": 294
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "log.info",
+          "lineNumber": 305
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 306
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "counselorService.getCurriculums",
+          "lineNumber": 306
+        },
+        {
+          "caller": "checkStudentEmail",
+          "callee": "log.info",
+          "lineNumber": 316
+        },
+        {
+          "caller": "checkStudentEmail",
+          "callee": "counselorService.checkStudentEmail",
+          "lineNumber": 317
+        },
+        {
+          "caller": "checkStudentEmail",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 318
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "log.info",
+          "lineNumber": 337
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "counselorService.importStudentAccounts",
+          "lineNumber": 338
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "ResponseEntity.ok()\r\n                .header(HttpHeaders.CONTENT_DISPOSITION, \"attachment; filename=StudentAccountList.xlsx\")\r\n                .contentType(MediaType.parseMediaType(\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\")).body",
+          "lineNumber": 339
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "ResponseEntity.ok()\r\n                .header(HttpHeaders.CONTENT_DISPOSITION, \"attachment; filename=StudentAccountList.xlsx\").contentType",
+          "lineNumber": 339
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "ResponseEntity.ok().header",
+          "lineNumber": 339
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 339
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "MediaType.parseMediaType",
+          "lineNumber": 341
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 16,
+        "functionCount": 15,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "CreateFeedbackRequest",
+          "startLine": 11,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "receiverId",
+            "content",
+            "type"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateFeedbackRequest",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "ExportStudentListRequest",
+          "startLine": 9,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "studentIds"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExportStudentListRequest",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "ImportStudentAccountsRequest",
+          "startLine": 13,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "accounts"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ImportStudentAccountsRequest",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "ModifyFeedbackRequest",
+          "startLine": 11,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "feedbackId",
+            "content",
+            "type"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ModifyFeedbackRequest",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "UpdateProfileRequest",
+          "startLine": 8,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "fullName",
+            "admissionDate",
+            "yob",
+            "bio",
+            "department"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateProfileRequest",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "FeedbackAttachmentResponse",
+          "startLine": 10,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "attachmentId",
+            "fileName",
+            "fileType",
+            "fileSize"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeedbackAttachmentResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "CounselorDashboardResponse",
+          "startLine": 11,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "total",
+            "totalCareerStatistics",
+            "totalMissingSkills",
+            "careerName",
+            "feedbacks"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CounselorDashboardResponse",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 39,
+      "classes": [
+        {
+          "name": "CounselorFeedbackResponse",
+          "startLine": 15,
+          "endLine": 43,
+          "methods": [],
+          "properties": [
+            "students",
+            "studentInfo",
+            "missingSkills",
+            "feedbacks",
+            "roadmapProgress",
+            "totalPages",
+            "currentPage"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CounselorFeedbackResponse",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "CurriculumResponse",
+          "startLine": 10,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "curriculums"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CurriculumResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "UpdateProfileResponse",
+          "startLine": 12,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "user",
+            "academicCounselor",
+            "industryMentor",
+            "student"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateProfileResponse",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/AcademicCounselor.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 28,
+      "classes": [
+        {
+          "name": "AcademicCounselor",
+          "startLine": 15,
+          "endLine": 35,
+          "methods": [],
+          "properties": [
+            "userId",
+            "universityName",
+            "department",
+            "admissionDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AcademicCounselor",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 61,
+      "functions": [
+        {
+          "name": "prePersist",
+          "startLine": 62,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "preUpdate",
+          "startLine": 72,
+          "endLine": 75,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Feedback",
+          "startLine": 16,
+          "endLine": 76,
+          "methods": [
+            "prePersist",
+            "preUpdate"
+          ],
+          "properties": [
+            "feedbackId",
+            "sender",
+            "receiver",
+            "senderName",
+            "content",
+            "type",
+            "status",
+            "attachments",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "prePersist",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "preUpdate",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "Feedback",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 65
+        },
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 68
+        },
+        {
+          "caller": "preUpdate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FeedbackAttachment.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 30,
+      "classes": [
+        {
+          "name": "FeedbackAttachment",
+          "startLine": 11,
+          "endLine": 39,
+          "methods": [],
+          "properties": [
+            "attachmentId",
+            "feedback",
+            "fileName",
+            "fileType",
+            "fileSize",
+            "data"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeedbackAttachment",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 10,
+          "endLine": 13,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FeedbackStatus",
+          "startLine": 5,
+          "endLine": 14,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "FeedbackStatus",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "FeedbackStatus.valueOf",
+          "lineNumber": 12
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FeedbackType",
+          "startLine": 5,
+          "endLine": 15,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "FeedbackType",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "FeedbackType.valueOf",
+          "lineNumber": 13
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "StudentInfoProjection",
+          "startLine": 5,
+          "endLine": 11,
+          "methods": [
+            "getStudentId",
+            "getFullName",
+            "getEmail",
+            "getUniversity",
+            "getCareerName"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentInfoProjection",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "functions": [
+        {
+          "name": "UnauthorizedException",
+          "startLine": 6,
+          "endLine": 8,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "UnauthorizedException",
+          "startLine": 10,
+          "endLine": 12,
+          "params": [
+            "message",
+            "cause"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UnauthorizedException",
+          "startLine": 4,
+          "endLine": 13,
+          "methods": [
+            "UnauthorizedException",
+            "UnauthorizedException"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UnauthorizedException",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "UnauthorizedException",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "UnauthorizedException",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/CounselorMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 101,
+      "nonEmptyLines": 91,
+      "functions": [
+        {
+          "name": "toRoadmapStatisticResponse",
+          "startLine": 20,
+          "endLine": 25,
+          "params": [
+            "total",
+            "careerStatistics"
+          ]
+        },
+        {
+          "name": "toMissingSkillsResponse",
+          "startLine": 27,
+          "endLine": 33,
+          "params": [
+            "total",
+            "missingSkills",
+            "careerName"
+          ]
+        },
+        {
+          "name": "toGetStudentInfos",
+          "startLine": 35,
+          "endLine": 41,
+          "params": [
+            "stInfos",
+            "totalPages",
+            "currentPage"
+          ]
+        },
+        {
+          "name": "toGetFeedbacksResponse",
+          "startLine": 43,
+          "endLine": 51,
+          "params": [
+            "feedbacks",
+            "total"
+          ]
+        },
+        {
+          "name": "toGetStudentStatisticAndFeedback",
+          "startLine": 53,
+          "endLine": 62,
+          "params": [
+            "progress",
+            "missingSkills",
+            "feedbacks"
+          ]
+        },
+        {
+          "name": "mapFeedbackToResponse",
+          "startLine": 64,
+          "endLine": 87,
+          "params": [
+            "f"
+          ]
+        },
+        {
+          "name": "toCrudProfileResponse",
+          "startLine": 89,
+          "endLine": 94,
+          "params": [
+            "user",
+            "academicCounselor"
+          ]
+        },
+        {
+          "name": "toCurriculumResponse",
+          "startLine": 96,
+          "endLine": 100,
+          "params": [
+            "curriculums"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CounselorMapper",
+          "startLine": 18,
+          "endLine": 101,
+          "methods": [
+            "toRoadmapStatisticResponse",
+            "toMissingSkillsResponse",
+            "toGetStudentInfos",
+            "toGetFeedbacksResponse",
+            "toGetStudentStatisticAndFeedback",
+            "mapFeedbackToResponse",
+            "toCrudProfileResponse",
+            "toCurriculumResponse"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "toRoadmapStatisticResponse",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "toMissingSkillsResponse",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "toGetStudentInfos",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "toGetFeedbacksResponse",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "toGetStudentStatisticAndFeedback",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "toCrudProfileResponse",
+          "line": 89,
+          "isDefault": false
+        },
+        {
+          "name": "toCurriculumResponse",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "CounselorMapper",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toRoadmapStatisticResponse",
+          "callee": "CounselorDashboardResponse.builder()\r\n                .total(total)\r\n                .totalCareerStatistics(careerStatistics).build",
+          "lineNumber": 21
+        },
+        {
+          "caller": "toRoadmapStatisticResponse",
+          "callee": "CounselorDashboardResponse.builder()\r\n                .total(total).totalCareerStatistics",
+          "lineNumber": 21
+        },
+        {
+          "caller": "toRoadmapStatisticResponse",
+          "callee": "CounselorDashboardResponse.builder().total",
+          "lineNumber": 21
+        },
+        {
+          "caller": "toRoadmapStatisticResponse",
+          "callee": "CounselorDashboardResponse.builder",
+          "lineNumber": 21
+        },
+        {
+          "caller": "toMissingSkillsResponse",
+          "callee": "CounselorDashboardResponse.builder()\r\n                .total(total)\r\n                .totalMissingSkills(missingSkills)\r\n                .careerName(careerName).build",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toMissingSkillsResponse",
+          "callee": "CounselorDashboardResponse.builder()\r\n                .total(total)\r\n                .totalMissingSkills(missingSkills).careerName",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toMissingSkillsResponse",
+          "callee": "CounselorDashboardResponse.builder()\r\n                .total(total).totalMissingSkills",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toMissingSkillsResponse",
+          "callee": "CounselorDashboardResponse.builder().total",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toMissingSkillsResponse",
+          "callee": "CounselorDashboardResponse.builder",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toGetStudentInfos",
+          "callee": "CounselorFeedbackResponse.builder()\r\n                .students(stInfos)\r\n                .totalPages(totalPages)\r\n                .currentPage(currentPage).build",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toGetStudentInfos",
+          "callee": "CounselorFeedbackResponse.builder()\r\n                .students(stInfos)\r\n                .totalPages(totalPages).currentPage",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toGetStudentInfos",
+          "callee": "CounselorFeedbackResponse.builder()\r\n                .students(stInfos).totalPages",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toGetStudentInfos",
+          "callee": "CounselorFeedbackResponse.builder().students",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toGetStudentInfos",
+          "callee": "CounselorFeedbackResponse.builder",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toGetFeedbacksResponse",
+          "callee": "feedbacks.stream()\r\n                .map(this::mapFeedbackToResponse).toList",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toGetFeedbacksResponse",
+          "callee": "feedbacks.stream().map",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toGetFeedbacksResponse",
+          "callee": "feedbacks.stream",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toGetFeedbacksResponse",
+          "callee": "CounselorDashboardResponse.builder()\r\n                .feedbacks(dtos)\r\n                .total(total).build",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toGetFeedbacksResponse",
+          "callee": "CounselorDashboardResponse.builder()\r\n                .feedbacks(dtos).total",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toGetFeedbacksResponse",
+          "callee": "CounselorDashboardResponse.builder().feedbacks",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toGetFeedbacksResponse",
+          "callee": "CounselorDashboardResponse.builder",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toGetStudentStatisticAndFeedback",
+          "callee": "feedbacks.stream()\r\n                .map(this::mapFeedbackToResponse).toList",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toGetStudentStatisticAndFeedback",
+          "callee": "feedbacks.stream().map",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toGetStudentStatisticAndFeedback",
+          "callee": "feedbacks.stream",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toGetStudentStatisticAndFeedback",
+          "callee": "CounselorFeedbackResponse.builder()\r\n                .roadmapProgress(progress)\r\n                .missingSkills(missingSkills)\r\n                .feedbacks(dtos).build",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toGetStudentStatisticAndFeedback",
+          "callee": "CounselorFeedbackResponse.builder()\r\n                .roadmapProgress(progress)\r\n                .missingSkills(missingSkills).feedbacks",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toGetStudentStatisticAndFeedback",
+          "callee": "CounselorFeedbackResponse.builder()\r\n                .roadmapProgress(progress).missingSkills",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toGetStudentStatisticAndFeedback",
+          "callee": "CounselorFeedbackResponse.builder().roadmapProgress",
+          "lineNumber": 57
+        },
+        {
+          "caller": "toGetStudentStatisticAndFeedback",
+          "callee": "CounselorFeedbackResponse.builder",
+          "lineNumber": 57
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId())\r\n                .senderName(f.getSenderName())\r\n                .receiverName(f.getReceiver().getFullName())\r\n                .content(f.getContent())\r\n                .type(f.getType())\r\n                .status(f.getStatus())\r\n                .attachments(\r\n                        f.getAttachments() != null ? f.getAttachments().stream()\r\n                                .map(att -> FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize())\r\n                                        .build())\r\n                                .collect(Collectors.toList()) : new ArrayList<>()\r\n                )\r\n                .createdAt(f.getCreatedAt())\r\n                .updatedAt(f.getUpdatedAt()).build",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId())\r\n                .senderName(f.getSenderName())\r\n                .receiverName(f.getReceiver().getFullName())\r\n                .content(f.getContent())\r\n                .type(f.getType())\r\n                .status(f.getStatus())\r\n                .attachments(\r\n                        f.getAttachments() != null ? f.getAttachments().stream()\r\n                                .map(att -> FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize())\r\n                                        .build())\r\n                                .collect(Collectors.toList()) : new ArrayList<>()\r\n                )\r\n                .createdAt(f.getCreatedAt()).updatedAt",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId())\r\n                .senderName(f.getSenderName())\r\n                .receiverName(f.getReceiver().getFullName())\r\n                .content(f.getContent())\r\n                .type(f.getType())\r\n                .status(f.getStatus())\r\n                .attachments(\r\n                        f.getAttachments() != null ? f.getAttachments().stream()\r\n                                .map(att -> FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize())\r\n                                        .build())\r\n                                .collect(Collectors.toList()) : new ArrayList<>()\r\n                ).createdAt",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId())\r\n                .senderName(f.getSenderName())\r\n                .receiverName(f.getReceiver().getFullName())\r\n                .content(f.getContent())\r\n                .type(f.getType())\r\n                .status(f.getStatus()).attachments",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId())\r\n                .senderName(f.getSenderName())\r\n                .receiverName(f.getReceiver().getFullName())\r\n                .content(f.getContent())\r\n                .type(f.getType()).status",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId())\r\n                .senderName(f.getSenderName())\r\n                .receiverName(f.getReceiver().getFullName())\r\n                .content(f.getContent()).type",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId())\r\n                .senderName(f.getSenderName())\r\n                .receiverName(f.getReceiver().getFullName()).content",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId())\r\n                .senderName(f.getSenderName()).receiverName",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId())\r\n                .receiverId(f.getReceiver().getUserId()).senderName",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId())\r\n                .senderId(f.getSender().getUserId()).receiverId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(f.getFeedbackId()).senderId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder().feedbackId",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder",
+          "lineNumber": 65
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getFeedbackId",
+          "lineNumber": 66
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getSender().getUserId",
+          "lineNumber": 67
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getSender",
+          "lineNumber": 67
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getReceiver().getUserId",
+          "lineNumber": 68
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getReceiver",
+          "lineNumber": 68
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getSenderName",
+          "lineNumber": 69
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getReceiver().getFullName",
+          "lineNumber": 70
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getReceiver",
+          "lineNumber": 70
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getContent",
+          "lineNumber": 71
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getType",
+          "lineNumber": 72
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getStatus",
+          "lineNumber": 73
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getAttachments",
+          "lineNumber": 75
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getAttachments().stream()\r\n                                .map(att -> FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize())\r\n                                        .build()).collect",
+          "lineNumber": 75
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getAttachments().stream().map",
+          "lineNumber": 75
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getAttachments().stream",
+          "lineNumber": 75
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getAttachments",
+          "lineNumber": 75
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize()).build",
+          "lineNumber": 76
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType()).fileSize",
+          "lineNumber": 76
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName()).fileType",
+          "lineNumber": 76
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId()).fileName",
+          "lineNumber": 76
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "FeedbackAttachmentResponse.builder().attachmentId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "FeedbackAttachmentResponse.builder",
+          "lineNumber": 76
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "att.getAttachmentId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "att.getFileName",
+          "lineNumber": 78
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "att.getFileType",
+          "lineNumber": 79
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "att.getFileSize",
+          "lineNumber": 80
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "Collectors.toList",
+          "lineNumber": 82
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "new ArrayList<>",
+          "lineNumber": 82
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getCreatedAt",
+          "lineNumber": 84
+        },
+        {
+          "caller": "mapFeedbackToResponse",
+          "callee": "f.getUpdatedAt",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toCrudProfileResponse",
+          "callee": "UpdateProfileResponse.builder()\r\n                .user(user)\r\n                .academicCounselor(academicCounselor).build",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toCrudProfileResponse",
+          "callee": "UpdateProfileResponse.builder()\r\n                .user(user).academicCounselor",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toCrudProfileResponse",
+          "callee": "UpdateProfileResponse.builder().user",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toCrudProfileResponse",
+          "callee": "UpdateProfileResponse.builder",
+          "lineNumber": 90
+        },
+        {
+          "caller": "toCurriculumResponse",
+          "callee": "CurriculumResponse.builder()\r\n                .curriculums(curriculums).build",
+          "lineNumber": 97
+        },
+        {
+          "caller": "toCurriculumResponse",
+          "callee": "CurriculumResponse.builder().curriculums",
+          "lineNumber": 97
+        },
+        {
+          "caller": "toCurriculumResponse",
+          "callee": "CurriculumResponse.builder",
+          "lineNumber": 97
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 26,
+      "classes": [
+        {
+          "name": "FeedbackRepository",
+          "startLine": 14,
+          "endLine": 34,
+          "methods": [
+            "findByFeedbackId",
+            "findTop5ByReceiver_UserIdOrderByCreatedAtDesc",
+            "findTop5ByReceiver_UserIdAndStatusNotOrderByCreatedAtDesc",
+            "findBySender",
+            "findByReceiver",
+            "countFeedbacksBySenderIdSince",
+            "findBySenderOrReceiverOrderByCreatedAtDesc",
+            "findBySender_UserIdOrderByCreatedAtDesc"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeedbackRepository",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "SecurityUtils",
+          "startLine": 15,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "getCurrentUserEmail",
+          "startLine": 19,
+          "endLine": 28,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SecurityUtils",
+          "startLine": 13,
+          "endLine": 29,
+          "methods": [
+            "SecurityUtils",
+            "getCurrentUserEmail"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "getCurrentUserEmail",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "SecurityUtils",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getCurrentUserEmail",
+          "callee": "SecurityContextHolder.getContext().getAuthentication",
+          "lineNumber": 20
+        },
+        {
+          "caller": "getCurrentUserEmail",
+          "callee": "SecurityContextHolder.getContext",
+          "lineNumber": 20
+        },
+        {
+          "caller": "getCurrentUserEmail",
+          "callee": "authentication.isAuthenticated",
+          "lineNumber": 22
+        },
+        {
+          "caller": "getCurrentUserEmail",
+          "callee": "authentication.getName",
+          "lineNumber": 23
+        },
+        {
+          "caller": "getCurrentUserEmail",
+          "callee": "authentication.getName().isBlank",
+          "lineNumber": 24
+        },
+        {
+          "caller": "getCurrentUserEmail",
+          "callee": "authentication.getName",
+          "lineNumber": 24
+        },
+        {
+          "caller": "getCurrentUserEmail",
+          "callee": "new UnauthorizedException",
+          "lineNumber": 25
+        },
+        {
+          "caller": "getCurrentUserEmail",
+          "callee": "authentication.getName",
+          "lineNumber": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CounselorService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "CounselorService",
+          "startLine": 13,
+          "endLine": 36,
+          "methods": [
+            "getCareerStatistics",
+            "getStudentsMissingSkills",
+            "getAllFeedbacksSentByMe",
+            "getStudentInfos",
+            "getStudentStatisticAndFeedback",
+            "getProfile",
+            "updateProfile",
+            "exportStudentList",
+            "getCurriculums",
+            "checkStudentEmail",
+            "importStudentAccounts"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CounselorService",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FeedbackService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "FeedbackService",
+          "startLine": 11,
+          "endLine": 20,
+          "methods": [
+            "createFeedback",
+            "modifyFeedback",
+            "markReadFeedback",
+            "deleteFeedback"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeedbackService",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 520,
+      "nonEmptyLines": 440,
+      "functions": [
+        {
+          "name": "getAuthenticatedUser",
+          "startLine": 72,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "getAuthenticatedCounselor",
+          "startLine": 88,
+          "endLine": 100,
+          "params": []
+        },
+        {
+          "name": "getCareerStatistics",
+          "startLine": 107,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "getStudentsMissingSkills",
+          "startLine": 142,
+          "endLine": 178,
+          "params": [
+            "searchName"
+          ]
+        },
+        {
+          "name": "getAllFeedbacksSentByMe",
+          "startLine": 185,
+          "endLine": 197,
+          "params": []
+        },
+        {
+          "name": "getStudentInfos",
+          "startLine": 207,
+          "endLine": 241,
+          "params": [
+            "search",
+            "page",
+            "size"
+          ]
+        },
+        {
+          "name": "getStudentStatisticAndFeedback",
+          "startLine": 249,
+          "endLine": 282,
+          "params": [
+            "studentId"
+          ]
+        },
+        {
+          "name": "getProfile",
+          "startLine": 289,
+          "endLine": 299,
+          "params": []
+        },
+        {
+          "name": "updateProfile",
+          "startLine": 307,
+          "endLine": 326,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "exportStudentList",
+          "startLine": 328,
+          "endLine": 401,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "getCurriculums",
+          "startLine": 403,
+          "endLine": 418,
+          "params": []
+        },
+        {
+          "name": "checkStudentEmail",
+          "startLine": 420,
+          "endLine": 427,
+          "params": [
+            "email"
+          ]
+        },
+        {
+          "name": "importStudentAccounts",
+          "startLine": 429,
+          "endLine": 519,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CounselorServiceImpl",
+          "startLine": 47,
+          "endLine": 520,
+          "methods": [
+            "getAuthenticatedUser",
+            "getAuthenticatedCounselor",
+            "getCareerStatistics",
+            "getStudentsMissingSkills",
+            "getAllFeedbacksSentByMe",
+            "getStudentInfos",
+            "getStudentStatisticAndFeedback",
+            "getProfile",
+            "updateProfile",
+            "exportStudentList",
+            "getCurriculums",
+            "checkStudentEmail",
+            "importStudentAccounts"
+          ],
+          "properties": [
+            "counselorMapper",
+            "roadmapProgressCalculator",
+            "careerRoleRepository",
+            "feedbackRepository",
+            "skillNodeRepository",
+            "studentProgressRepository",
+            "userRepository",
+            "studentRepository",
+            "academicCounselorRepository",
+            "studentSkillRepository",
+            "fptCurriculumRepository",
+            "passwordEncoder"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getCareerStatistics",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "getStudentsMissingSkills",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "getAllFeedbacksSentByMe",
+          "line": 185,
+          "isDefault": false
+        },
+        {
+          "name": "getStudentInfos",
+          "line": 207,
+          "isDefault": false
+        },
+        {
+          "name": "getStudentStatisticAndFeedback",
+          "line": 249,
+          "isDefault": false
+        },
+        {
+          "name": "getProfile",
+          "line": 289,
+          "isDefault": false
+        },
+        {
+          "name": "updateProfile",
+          "line": 307,
+          "isDefault": false
+        },
+        {
+          "name": "exportStudentList",
+          "line": 328,
+          "isDefault": false
+        },
+        {
+          "name": "getCurriculums",
+          "line": 403,
+          "isDefault": false
+        },
+        {
+          "name": "checkStudentEmail",
+          "line": 420,
+          "isDefault": false
+        },
+        {
+          "name": "importStudentAccounts",
+          "line": 429,
+          "isDefault": false
+        },
+        {
+          "name": "CounselorServiceImpl",
+          "line": 47,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "SecurityContextHolder.getContext().getAuthentication().getName",
+          "lineNumber": 74
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "SecurityContextHolder.getContext().getAuthentication",
+          "lineNumber": 74
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "SecurityContextHolder.getContext",
+          "lineNumber": 74
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "userRepository.findByEmail",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "new UnauthorizedException",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 90
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "academicCounselorRepository.findById(user.getUserId()).orElse",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "academicCounselorRepository.findById",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "user.getUserId",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "log.info",
+          "lineNumber": 95
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "user.getEmail",
+          "lineNumber": 95
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "AcademicCounselor.builder().userId(user.getUserId()).build",
+          "lineNumber": 96
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "AcademicCounselor.builder().userId",
+          "lineNumber": 96
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "AcademicCounselor.builder",
+          "lineNumber": 96
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "user.getUserId",
+          "lineNumber": 96
+        },
+        {
+          "caller": "getAuthenticatedCounselor",
+          "callee": "academicCounselorRepository.save",
+          "lineNumber": 97
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "log.info",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "getAuthenticatedCounselor",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "new HashMap<>",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "careerRoleRepository.findAll",
+          "lineNumber": 118
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "studentRepository.findByCareerRole",
+          "lineNumber": 122
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "students.size",
+          "lineNumber": 123
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "careerStatistics.put",
+          "lineNumber": 125
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "career.getCareerName",
+          "lineNumber": 125
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "log.info",
+          "lineNumber": 130
+        },
+        {
+          "caller": "getCareerStatistics",
+          "callee": "counselorMapper.toRoadmapStatisticResponse",
+          "lineNumber": 131
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "log.info",
+          "lineNumber": 145
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "getAuthenticatedCounselor",
+          "lineNumber": 146
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "careerRoleRepository.findByCareerNameContainingIgnoreCase",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "matchingCareers.isEmpty",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 154
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "matchingCareers.size",
+          "lineNumber": 155
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 156
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "matchingCareers.getFirst",
+          "lineNumber": 158
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "studentSkillRepository.findMissingSkillsByCareerId",
+          "lineNumber": 161
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "matchedCareer.getCareerId",
+          "lineNumber": 162
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "new HashMap<>",
+          "lineNumber": 165
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "((Number) row[1]).intValue",
+          "lineNumber": 168
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "totalMissingSkills.put",
+          "lineNumber": 170
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "studentRepository.findByCareerRole(matchedCareer).size",
+          "lineNumber": 173
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "studentRepository.findByCareerRole",
+          "lineNumber": 173
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "log.info",
+          "lineNumber": 175
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "counselorMapper.toMissingSkillsResponse",
+          "lineNumber": 176
+        },
+        {
+          "caller": "getStudentsMissingSkills",
+          "callee": "matchedCareer.getCareerName",
+          "lineNumber": 177
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "log.info",
+          "lineNumber": 188
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "getAuthenticatedCounselor",
+          "lineNumber": 190
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "userRepository.findByUserId",
+          "lineNumber": 191
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "counselor.getUserId",
+          "lineNumber": 191
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "feedbackRepository.findBySender_UserIdOrderByCreatedAtDesc",
+          "lineNumber": 193
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "me.getUserId",
+          "lineNumber": 193
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "log.info",
+          "lineNumber": 195
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "counselorMapper.toGetFeedbacksResponse",
+          "lineNumber": 196
+        },
+        {
+          "caller": "getAllFeedbacksSentByMe",
+          "callee": "feedbacks.size",
+          "lineNumber": 196
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "log.info",
+          "lineNumber": 210
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "getAuthenticatedUser().getAccountType",
+          "lineNumber": 215
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 215
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "PageRequest.of",
+          "lineNumber": 220
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "studentRepository.findStudentInfos",
+          "lineNumber": 222
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "new ArrayList<>",
+          "lineNumber": 224
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "studentPage.getContent",
+          "lineNumber": 227
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "new HashMap<>",
+          "lineNumber": 228
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "stInfo.put",
+          "lineNumber": 229
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "projection.getStudentId",
+          "lineNumber": 229
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "stInfo.put",
+          "lineNumber": 230
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "projection.getFullName",
+          "lineNumber": 230
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "stInfo.put",
+          "lineNumber": 231
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "projection.getEmail",
+          "lineNumber": 231
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "stInfo.put",
+          "lineNumber": 232
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "projection.getUniversity",
+          "lineNumber": 232
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "stInfo.put",
+          "lineNumber": 233
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "projection.getCareerName",
+          "lineNumber": 233
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "stInfos.add",
+          "lineNumber": 235
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "log.info",
+          "lineNumber": 236
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "stInfo.toString",
+          "lineNumber": 236
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "log.info",
+          "lineNumber": 239
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "counselorMapper.toGetStudentInfos",
+          "lineNumber": 240
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "studentPage.getTotalPages",
+          "lineNumber": 240
+        },
+        {
+          "caller": "getStudentInfos",
+          "callee": "studentPage.getNumber",
+          "lineNumber": 240
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "log.info",
+          "lineNumber": 252
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "getAuthenticatedCounselor",
+          "lineNumber": 254
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "userRepository.findByUserId",
+          "lineNumber": 255
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "counselor.getUserId",
+          "lineNumber": 255
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "userRepository.findByUserId",
+          "lineNumber": 256
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "studentRepository.findByUserId",
+          "lineNumber": 257
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 259
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "student.getCareerRole",
+          "lineNumber": 263
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 263
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "student.getCareerRole",
+          "lineNumber": 263
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "roadmapProgressCalculator.calculateProgress",
+          "lineNumber": 266
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "skillNodeRepository.findByCareerRole_CareerId",
+          "lineNumber": 267
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "studentProgressRepository.findByStudent_UserId",
+          "lineNumber": 268
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "student.getUserId",
+          "lineNumber": 268
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "List.of",
+          "lineNumber": 271
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "studentSkillRepository.findMissingSkillsByStudentIdAndCareerId",
+          "lineNumber": 271
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "student.getUserId",
+          "lineNumber": 273
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "feedbackRepository.findBySenderOrReceiverOrderByCreatedAtDesc",
+          "lineNumber": 277
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "me.getUserId",
+          "lineNumber": 278
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "st.getUserId",
+          "lineNumber": 278
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "log.info",
+          "lineNumber": 280
+        },
+        {
+          "caller": "getStudentStatisticAndFeedback",
+          "callee": "counselorMapper.toGetStudentStatisticAndFeedback",
+          "lineNumber": 281
+        },
+        {
+          "caller": "getProfile",
+          "callee": "log.info",
+          "lineNumber": 292
+        },
+        {
+          "caller": "getProfile",
+          "callee": "getAuthenticatedCounselor",
+          "lineNumber": 294
+        },
+        {
+          "caller": "getProfile",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 295
+        },
+        {
+          "caller": "getProfile",
+          "callee": "log.info",
+          "lineNumber": 297
+        },
+        {
+          "caller": "getProfile",
+          "callee": "counselorMapper.toCrudProfileResponse",
+          "lineNumber": 298
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "log.info",
+          "lineNumber": 310
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "getAuthenticatedCounselor",
+          "lineNumber": 311
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 312
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getFullName",
+          "lineNumber": 315
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "user.setFullName",
+          "lineNumber": 315
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getFullName",
+          "lineNumber": 315
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getYob",
+          "lineNumber": 316
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "user.setYob",
+          "lineNumber": 316
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getYob",
+          "lineNumber": 316
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getBio",
+          "lineNumber": 317
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "user.setBio",
+          "lineNumber": 317
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getBio",
+          "lineNumber": 317
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getDepartment",
+          "lineNumber": 318
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "counselor.setDepartment",
+          "lineNumber": 318
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getDepartment",
+          "lineNumber": 318
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getAdmissionDate",
+          "lineNumber": 319
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "counselor.setAdmissionDate",
+          "lineNumber": 319
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request.getAdmissionDate",
+          "lineNumber": 319
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "userRepository.save",
+          "lineNumber": 321
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "academicCounselorRepository.save",
+          "lineNumber": 322
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "log.info",
+          "lineNumber": 324
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "counselorMapper.toCrudProfileResponse",
+          "lineNumber": 325
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "log.info",
+          "lineNumber": 331
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "getAuthenticatedCounselor",
+          "lineNumber": 332
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "request.getStudentIds",
+          "lineNumber": 334
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "new XSSFWorkbook",
+          "lineNumber": 336
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "workbook.createSheet",
+          "lineNumber": 337
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "sheet.createRow",
+          "lineNumber": 340
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell(0).setCellValue",
+          "lineNumber": 341
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell",
+          "lineNumber": 341
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell(1).setCellValue",
+          "lineNumber": 342
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell",
+          "lineNumber": 342
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell(2).setCellValue",
+          "lineNumber": 343
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell",
+          "lineNumber": 343
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell(3).setCellValue",
+          "lineNumber": 344
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell",
+          "lineNumber": 344
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell(4).setCellValue",
+          "lineNumber": 345
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell",
+          "lineNumber": 345
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell(5).setCellValue",
+          "lineNumber": 346
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell",
+          "lineNumber": 346
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell(6).setCellValue",
+          "lineNumber": 347
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell",
+          "lineNumber": 347
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell(7).setCellValue",
+          "lineNumber": 348
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "header.createCell",
+          "lineNumber": 348
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "userRepository.findAllById(studentIds)\r\n                    .stream().collect",
+          "lineNumber": 351
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "userRepository.findAllById(studentIds).stream",
+          "lineNumber": 351
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "userRepository.findAllById",
+          "lineNumber": 351
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "toMap",
+          "lineNumber": 352
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "studentRepository.findAllById(studentIds)\r\n                    .stream().collect",
+          "lineNumber": 353
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "studentRepository.findAllById(studentIds).stream",
+          "lineNumber": 353
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "studentRepository.findAllById",
+          "lineNumber": 353
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "toMap",
+          "lineNumber": 354
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "studentSkillRepository.findSkillNamesByStudentIds",
+          "lineNumber": 357
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "new HashMap<>",
+          "lineNumber": 358
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "skillMap.computeIfAbsent(stId, k -> new ArrayList<>()).add",
+          "lineNumber": 362
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "skillMap.computeIfAbsent",
+          "lineNumber": 362
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "new ArrayList<>",
+          "lineNumber": 362
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "userMap.get",
+          "lineNumber": 368
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "studentMap.get",
+          "lineNumber": 369
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "skillMap.getOrDefault",
+          "lineNumber": 370
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "emptyList",
+          "lineNumber": 370
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "roadmapProgressCalculator.calculateProgress",
+          "lineNumber": 374
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "skillNodeRepository.findByCareerRole_CareerId",
+          "lineNumber": 375
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 375
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getCareerRole",
+          "lineNumber": 375
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "studentProgressRepository.findByStudent_UserId",
+          "lineNumber": 376
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getUserId",
+          "lineNumber": 376
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "sheet.createRow",
+          "lineNumber": 378
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell(0).setCellValue",
+          "lineNumber": 379
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell",
+          "lineNumber": 379
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "user.getFullName",
+          "lineNumber": 379
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell(1).setCellValue",
+          "lineNumber": 380
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell",
+          "lineNumber": 380
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "user.getEmail",
+          "lineNumber": 380
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell(2).setCellValue",
+          "lineNumber": 381
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell",
+          "lineNumber": 381
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getUniversityName",
+          "lineNumber": 381
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getUniversityName",
+          "lineNumber": 381
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell(3).setCellValue",
+          "lineNumber": 382
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell",
+          "lineNumber": 382
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getMajor",
+          "lineNumber": 382
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell(4).setCellValue",
+          "lineNumber": 383
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell",
+          "lineNumber": 383
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getCareerRole().getCareerName",
+          "lineNumber": 383
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getCareerRole",
+          "lineNumber": 383
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell(5).setCellValue",
+          "lineNumber": 384
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell",
+          "lineNumber": 384
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell(6).setCellValue",
+          "lineNumber": 385
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell",
+          "lineNumber": 385
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "skillNames.toString",
+          "lineNumber": 385
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell(7).setCellValue",
+          "lineNumber": 386
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "row.createCell",
+          "lineNumber": 386
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "student.getGithubProfile",
+          "lineNumber": 386
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "sheet.autoSizeColumn",
+          "lineNumber": 390
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "new ByteArrayOutputStream",
+          "lineNumber": 392
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "workbook.write",
+          "lineNumber": 393
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "output.toByteArray",
+          "lineNumber": 395
+        },
+        {
+          "caller": "exportStudentList",
+          "callee": "log.error",
+          "lineNumber": 398
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "log.info",
+          "lineNumber": 406
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "new ArrayList<>",
+          "lineNumber": 408
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "fptCurriculumRepository.findAll",
+          "lineNumber": 409
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "FptCurriculums.isEmpty",
+          "lineNumber": 410
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 410
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "curriculums.add",
+          "lineNumber": 413
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "fptCurriculum.getCode",
+          "lineNumber": 413
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "log.info",
+          "lineNumber": 416
+        },
+        {
+          "caller": "getCurriculums",
+          "callee": "counselorMapper.toCurriculumResponse",
+          "lineNumber": 417
+        },
+        {
+          "caller": "checkStudentEmail",
+          "callee": "log.info",
+          "lineNumber": 423
+        },
+        {
+          "caller": "checkStudentEmail",
+          "callee": "userRepository.findByEmail",
+          "lineNumber": 424
+        },
+        {
+          "caller": "checkStudentEmail",
+          "callee": "new BadRequestException",
+          "lineNumber": 425
+        },
+        {
+          "caller": "checkStudentEmail",
+          "callee": "log.info",
+          "lineNumber": 426
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "log.info",
+          "lineNumber": 432
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "getAuthenticatedCounselor",
+          "lineNumber": 433
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "userRepository.findByUserId",
+          "lineNumber": 434
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "counselor.getUserId",
+          "lineNumber": 434
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "new ArrayList<>",
+          "lineNumber": 436
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "request.getAccounts",
+          "lineNumber": 437
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "userRepository.findByEmail",
+          "lineNumber": 439
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getEmail",
+          "lineNumber": 439
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "fptCurriculumRepository.findByCode(account.getCurriculum()).orElse",
+          "lineNumber": 441
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "fptCurriculumRepository.findByCode",
+          "lineNumber": 441
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getCurriculum",
+          "lineNumber": 441
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 442
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "log.info",
+          "lineNumber": 447
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getEmail",
+          "lineNumber": 447
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "stUser.getUsername",
+          "lineNumber": 448
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "curriculum.getProgram",
+          "lineNumber": 451
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getEmail().replaceAll",
+          "lineNumber": 451
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getEmail",
+          "lineNumber": 451
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "UUID.randomUUID().toString().split",
+          "lineNumber": 454
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "UUID.randomUUID().toString",
+          "lineNumber": 454
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 454
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "createdAccounts.add",
+          "lineNumber": 456
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getFullName",
+          "lineNumber": 456
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getEmail",
+          "lineNumber": 456
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "User.builder()\r\n                        .username(username)\r\n                        .passwordHash(passwordEncoder.encode(randomPassword))\r\n                        .email(account.getEmail())\r\n                        .fullName(account.getFullName())\r\n                        .accountType(userC.getAccountType()).build",
+          "lineNumber": 458
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "User.builder()\r\n                        .username(username)\r\n                        .passwordHash(passwordEncoder.encode(randomPassword))\r\n                        .email(account.getEmail())\r\n                        .fullName(account.getFullName()).accountType",
+          "lineNumber": 458
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "User.builder()\r\n                        .username(username)\r\n                        .passwordHash(passwordEncoder.encode(randomPassword))\r\n                        .email(account.getEmail()).fullName",
+          "lineNumber": 458
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "User.builder()\r\n                        .username(username)\r\n                        .passwordHash(passwordEncoder.encode(randomPassword)).email",
+          "lineNumber": 458
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "User.builder()\r\n                        .username(username).passwordHash",
+          "lineNumber": 458
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "User.builder().username",
+          "lineNumber": 458
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "User.builder",
+          "lineNumber": 458
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "passwordEncoder.encode",
+          "lineNumber": 460
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getEmail",
+          "lineNumber": 461
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getFullName",
+          "lineNumber": 462
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "userC.getAccountType",
+          "lineNumber": 463
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "userRepository.save",
+          "lineNumber": 465
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "studentRepository.findByUserId",
+          "lineNumber": 468
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "stUser.getUserId",
+          "lineNumber": 468
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "log.info",
+          "lineNumber": 469
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "counselor.getUniversityName",
+          "lineNumber": 471
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "Student.builder()\r\n                        .userId(stUser.getUserId())\r\n                        .universityName(uniName)\r\n                        .admissionDate(account.getAdmissionDate())\r\n                        .major(account.getMajor())\r\n                        .fptCurriculumId(curriculum.getId()).build",
+          "lineNumber": 473
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "Student.builder()\r\n                        .userId(stUser.getUserId())\r\n                        .universityName(uniName)\r\n                        .admissionDate(account.getAdmissionDate())\r\n                        .major(account.getMajor()).fptCurriculumId",
+          "lineNumber": 473
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "Student.builder()\r\n                        .userId(stUser.getUserId())\r\n                        .universityName(uniName)\r\n                        .admissionDate(account.getAdmissionDate()).major",
+          "lineNumber": 473
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "Student.builder()\r\n                        .userId(stUser.getUserId())\r\n                        .universityName(uniName).admissionDate",
+          "lineNumber": 473
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "Student.builder()\r\n                        .userId(stUser.getUserId()).universityName",
+          "lineNumber": 473
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "Student.builder().userId",
+          "lineNumber": 473
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "Student.builder",
+          "lineNumber": 473
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "stUser.getUserId",
+          "lineNumber": 474
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getAdmissionDate",
+          "lineNumber": 476
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "account.getMajor",
+          "lineNumber": 477
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "curriculum.getId",
+          "lineNumber": 478
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "studentRepository.save",
+          "lineNumber": 480
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "log.info",
+          "lineNumber": 483
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "createdAccounts.size",
+          "lineNumber": 483
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "log.info",
+          "lineNumber": 485
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "new XSSFWorkbook",
+          "lineNumber": 486
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "workbook.createSheet",
+          "lineNumber": 487
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "sheet.createRow",
+          "lineNumber": 490
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "header.createCell(0).setCellValue",
+          "lineNumber": 491
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "header.createCell",
+          "lineNumber": 491
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "header.createCell(1).setCellValue",
+          "lineNumber": 492
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "header.createCell",
+          "lineNumber": 492
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "header.createCell(2).setCellValue",
+          "lineNumber": 493
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "header.createCell",
+          "lineNumber": 493
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "header.createCell(3).setCellValue",
+          "lineNumber": 494
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "header.createCell",
+          "lineNumber": 494
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "sheet.createRow",
+          "lineNumber": 499
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "row.createCell(0).setCellValue",
+          "lineNumber": 500
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "row.createCell",
+          "lineNumber": 500
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "row.createCell(1).setCellValue",
+          "lineNumber": 501
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "row.createCell",
+          "lineNumber": 501
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "row.createCell(2).setCellValue",
+          "lineNumber": 502
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "row.createCell",
+          "lineNumber": 502
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "row.createCell(3).setCellValue",
+          "lineNumber": 503
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "row.createCell",
+          "lineNumber": 503
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "sheet.autoSizeColumn",
+          "lineNumber": 507
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "new ByteArrayOutputStream",
+          "lineNumber": 509
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "workbook.write",
+          "lineNumber": 510
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "log.info",
+          "lineNumber": 512
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "output.toByteArray",
+          "lineNumber": 513
+        },
+        {
+          "caller": "importStudentAccounts",
+          "callee": "log.error",
+          "lineNumber": 516
+        }
+      ],
+      "metrics": {
+        "importCount": 15,
+        "exportCount": 12,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FeedbackServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 251,
+      "nonEmptyLines": 223,
+      "functions": [
+        {
+          "name": "getAuthenticatedUser",
+          "startLine": 46,
+          "endLine": 54,
+          "params": []
+        },
+        {
+          "name": "createFeedback",
+          "startLine": 62,
+          "endLine": 117,
+          "params": [
+            "request",
+            "files"
+          ]
+        },
+        {
+          "name": "modifyFeedback",
+          "startLine": 126,
+          "endLine": 172,
+          "params": [
+            "request",
+            "files"
+          ]
+        },
+        {
+          "name": "markReadFeedback",
+          "startLine": 180,
+          "endLine": 199,
+          "params": [
+            "feedbackId"
+          ]
+        },
+        {
+          "name": "deleteFeedback",
+          "startLine": 207,
+          "endLine": 225,
+          "params": [
+            "feedbackId"
+          ]
+        },
+        {
+          "name": "toCrudFeedbackResponse",
+          "startLine": 227,
+          "endLine": 250,
+          "params": [
+            "feedback"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FeedbackServiceImpl",
+          "startLine": 30,
+          "endLine": 251,
+          "methods": [
+            "getAuthenticatedUser",
+            "createFeedback",
+            "modifyFeedback",
+            "markReadFeedback",
+            "deleteFeedback",
+            "toCrudFeedbackResponse"
+          ],
+          "properties": [
+            "userRepository",
+            "feedbackRepository",
+            "emailService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createFeedback",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "modifyFeedback",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "markReadFeedback",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "deleteFeedback",
+          "line": 207,
+          "isDefault": false
+        },
+        {
+          "name": "FeedbackServiceImpl",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "SecurityContextHolder.getContext().getAuthentication().getName",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "SecurityContextHolder.getContext().getAuthentication",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "SecurityContextHolder.getContext",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "userRepository.findByEmail",
+          "lineNumber": 49
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "new UnauthorizedException",
+          "lineNumber": 51
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "log.info",
+          "lineNumber": 65
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 67
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "userRepository.findByUserId",
+          "lineNumber": 69
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "request.getReceiverId",
+          "lineNumber": 69
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder()\r\n                .sender(User.builder().userId(sender.getUserId()).build())\r\n                .receiver(User.builder().userId(receiver.getUserId()).build())\r\n                .senderName(sender.getFullName())\r\n                .content(request.getContent())\r\n                .type(request.getType())\r\n                .status(FeedbackStatus.NEW)\r\n                .attachments(new ArrayList<>()).build",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder()\r\n                .sender(User.builder().userId(sender.getUserId()).build())\r\n                .receiver(User.builder().userId(receiver.getUserId()).build())\r\n                .senderName(sender.getFullName())\r\n                .content(request.getContent())\r\n                .type(request.getType())\r\n                .status(FeedbackStatus.NEW).attachments",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder()\r\n                .sender(User.builder().userId(sender.getUserId()).build())\r\n                .receiver(User.builder().userId(receiver.getUserId()).build())\r\n                .senderName(sender.getFullName())\r\n                .content(request.getContent())\r\n                .type(request.getType()).status",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder()\r\n                .sender(User.builder().userId(sender.getUserId()).build())\r\n                .receiver(User.builder().userId(receiver.getUserId()).build())\r\n                .senderName(sender.getFullName())\r\n                .content(request.getContent()).type",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder()\r\n                .sender(User.builder().userId(sender.getUserId()).build())\r\n                .receiver(User.builder().userId(receiver.getUserId()).build())\r\n                .senderName(sender.getFullName()).content",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder()\r\n                .sender(User.builder().userId(sender.getUserId()).build())\r\n                .receiver(User.builder().userId(receiver.getUserId()).build()).senderName",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder()\r\n                .sender(User.builder().userId(sender.getUserId()).build()).receiver",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder().sender",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "Feedback.builder",
+          "lineNumber": 72
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "User.builder().userId(sender.getUserId()).build",
+          "lineNumber": 73
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "User.builder().userId",
+          "lineNumber": 73
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "User.builder",
+          "lineNumber": 73
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "sender.getUserId",
+          "lineNumber": 73
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "User.builder().userId(receiver.getUserId()).build",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "User.builder().userId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "User.builder",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "receiver.getUserId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "sender.getFullName",
+          "lineNumber": 75
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "request.getContent",
+          "lineNumber": 76
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "request.getType",
+          "lineNumber": 77
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "new ArrayList<>",
+          "lineNumber": 79
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "files.isEmpty",
+          "lineNumber": 82
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "file.isEmpty",
+          "lineNumber": 84
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "FileValidationUtil.validateAttachment",
+          "lineNumber": 85
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback)\r\n                                .fileName(file.getOriginalFilename())\r\n                                .fileType(file.getContentType())\r\n                                .fileSize(file.getSize())\r\n                                .data(file.getBytes()).build",
+          "lineNumber": 87
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback)\r\n                                .fileName(file.getOriginalFilename())\r\n                                .fileType(file.getContentType())\r\n                                .fileSize(file.getSize()).data",
+          "lineNumber": 87
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback)\r\n                                .fileName(file.getOriginalFilename())\r\n                                .fileType(file.getContentType()).fileSize",
+          "lineNumber": 87
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback)\r\n                                .fileName(file.getOriginalFilename()).fileType",
+          "lineNumber": 87
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback).fileName",
+          "lineNumber": 87
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "FeedbackAttachment.builder().feedback",
+          "lineNumber": 87
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "FeedbackAttachment.builder",
+          "lineNumber": 87
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 89
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "file.getContentType",
+          "lineNumber": 90
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "file.getSize",
+          "lineNumber": 91
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "file.getBytes",
+          "lineNumber": 92
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "feedback.getAttachments().add",
+          "lineNumber": 94
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "feedback.getAttachments",
+          "lineNumber": 94
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "log.error",
+          "lineNumber": 96
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 96
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "new RuntimeException",
+          "lineNumber": 97
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "feedbackRepository.save",
+          "lineNumber": 104
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "emailService.sendFeedbackNotificationEmail",
+          "lineNumber": 107
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "receiver.getEmail",
+          "lineNumber": 108
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "receiver.getFullName",
+          "lineNumber": 109
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "sender.getFullName",
+          "lineNumber": 110
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "request.getContent",
+          "lineNumber": 111
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "log.info",
+          "lineNumber": 115
+        },
+        {
+          "caller": "createFeedback",
+          "callee": "toCrudFeedbackResponse",
+          "lineNumber": 116
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "log.info",
+          "lineNumber": 129
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 131
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedbackRepository.findByFeedbackId",
+          "lineNumber": 134
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "request.getFeedbackId",
+          "lineNumber": 134
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 136
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedback.setContent",
+          "lineNumber": 141
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "request.getContent",
+          "lineNumber": 141
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedback.setType",
+          "lineNumber": 142
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "request.getType",
+          "lineNumber": 142
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "files.isEmpty",
+          "lineNumber": 144
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedback.getAttachments",
+          "lineNumber": 145
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedback.setAttachments",
+          "lineNumber": 146
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "new ArrayList<>",
+          "lineNumber": 146
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "file.isEmpty",
+          "lineNumber": 149
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "FileValidationUtil.validateAttachment",
+          "lineNumber": 150
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback)\r\n                                .fileName(file.getOriginalFilename())\r\n                                .fileType(file.getContentType())\r\n                                .fileSize(file.getSize())\r\n                                .data(file.getBytes()).build",
+          "lineNumber": 152
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback)\r\n                                .fileName(file.getOriginalFilename())\r\n                                .fileType(file.getContentType())\r\n                                .fileSize(file.getSize()).data",
+          "lineNumber": 152
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback)\r\n                                .fileName(file.getOriginalFilename())\r\n                                .fileType(file.getContentType()).fileSize",
+          "lineNumber": 152
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback)\r\n                                .fileName(file.getOriginalFilename()).fileType",
+          "lineNumber": 152
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "FeedbackAttachment.builder()\r\n                                .feedback(feedback).fileName",
+          "lineNumber": 152
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "FeedbackAttachment.builder().feedback",
+          "lineNumber": 152
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "FeedbackAttachment.builder",
+          "lineNumber": 152
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 154
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "file.getContentType",
+          "lineNumber": 155
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "file.getSize",
+          "lineNumber": 156
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "file.getBytes",
+          "lineNumber": 157
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedback.getAttachments().add",
+          "lineNumber": 159
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedback.getAttachments",
+          "lineNumber": 159
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "log.error",
+          "lineNumber": 161
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 161
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "new RuntimeException",
+          "lineNumber": 162
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "log.info",
+          "lineNumber": 168
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "feedbackRepository.save",
+          "lineNumber": 170
+        },
+        {
+          "caller": "modifyFeedback",
+          "callee": "toCrudFeedbackResponse",
+          "lineNumber": 171
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "log.info",
+          "lineNumber": 183
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 185
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "feedbackRepository.findByFeedbackId",
+          "lineNumber": 188
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 190
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "feedback.setStatus",
+          "lineNumber": 194
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "feedbackRepository.save",
+          "lineNumber": 195
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "log.info",
+          "lineNumber": 197
+        },
+        {
+          "caller": "markReadFeedback",
+          "callee": "toCrudFeedbackResponse",
+          "lineNumber": 198
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "log.info",
+          "lineNumber": 210
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 212
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "feedbackRepository.findByFeedbackId",
+          "lineNumber": 215
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 217
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "feedback.setStatus",
+          "lineNumber": 221
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "feedbackRepository.save",
+          "lineNumber": 222
+        },
+        {
+          "caller": "deleteFeedback",
+          "callee": "log.info",
+          "lineNumber": 224
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId())\r\n                .senderName(feedback.getSenderName())\r\n                .receiverName(feedback.getReceiver().getFullName())\r\n                .content(feedback.getContent())\r\n                .type(feedback.getType())\r\n                .status(feedback.getStatus())\r\n                .attachments(\r\n                        feedback.getAttachments() != null ? feedback.getAttachments().stream()\r\n                                .map(att -> FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize())\r\n                                        .build())\r\n                                .collect(java.util.stream.Collectors.toList()) : new java.util.ArrayList<>()\r\n                )\r\n                .createdAt(feedback.getCreatedAt())\r\n                .updatedAt(feedback.getUpdatedAt()).build",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId())\r\n                .senderName(feedback.getSenderName())\r\n                .receiverName(feedback.getReceiver().getFullName())\r\n                .content(feedback.getContent())\r\n                .type(feedback.getType())\r\n                .status(feedback.getStatus())\r\n                .attachments(\r\n                        feedback.getAttachments() != null ? feedback.getAttachments().stream()\r\n                                .map(att -> FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize())\r\n                                        .build())\r\n                                .collect(java.util.stream.Collectors.toList()) : new java.util.ArrayList<>()\r\n                )\r\n                .createdAt(feedback.getCreatedAt()).updatedAt",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId())\r\n                .senderName(feedback.getSenderName())\r\n                .receiverName(feedback.getReceiver().getFullName())\r\n                .content(feedback.getContent())\r\n                .type(feedback.getType())\r\n                .status(feedback.getStatus())\r\n                .attachments(\r\n                        feedback.getAttachments() != null ? feedback.getAttachments().stream()\r\n                                .map(att -> FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize())\r\n                                        .build())\r\n                                .collect(java.util.stream.Collectors.toList()) : new java.util.ArrayList<>()\r\n                ).createdAt",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId())\r\n                .senderName(feedback.getSenderName())\r\n                .receiverName(feedback.getReceiver().getFullName())\r\n                .content(feedback.getContent())\r\n                .type(feedback.getType())\r\n                .status(feedback.getStatus()).attachments",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId())\r\n                .senderName(feedback.getSenderName())\r\n                .receiverName(feedback.getReceiver().getFullName())\r\n                .content(feedback.getContent())\r\n                .type(feedback.getType()).status",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId())\r\n                .senderName(feedback.getSenderName())\r\n                .receiverName(feedback.getReceiver().getFullName())\r\n                .content(feedback.getContent()).type",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId())\r\n                .senderName(feedback.getSenderName())\r\n                .receiverName(feedback.getReceiver().getFullName()).content",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId())\r\n                .senderName(feedback.getSenderName()).receiverName",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId())\r\n                .receiverId(feedback.getReceiver().getUserId()).senderName",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId())\r\n                .senderId(feedback.getSender().getUserId()).receiverId",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder()\r\n                .feedbackId(feedback.getFeedbackId()).senderId",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder().feedbackId",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "CounselorFeedbackResponse.FeedbackResponse.builder",
+          "lineNumber": 228
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getFeedbackId",
+          "lineNumber": 229
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getSender().getUserId",
+          "lineNumber": 230
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getSender",
+          "lineNumber": 230
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getReceiver().getUserId",
+          "lineNumber": 231
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getReceiver",
+          "lineNumber": 231
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getSenderName",
+          "lineNumber": 232
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getReceiver().getFullName",
+          "lineNumber": 233
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getReceiver",
+          "lineNumber": 233
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getContent",
+          "lineNumber": 234
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getType",
+          "lineNumber": 235
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getStatus",
+          "lineNumber": 236
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getAttachments",
+          "lineNumber": 238
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getAttachments().stream()\r\n                                .map(att -> FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize())\r\n                                        .build()).collect",
+          "lineNumber": 238
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getAttachments().stream().map",
+          "lineNumber": 238
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getAttachments().stream",
+          "lineNumber": 238
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getAttachments",
+          "lineNumber": 238
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType())\r\n                                        .fileSize(att.getFileSize()).build",
+          "lineNumber": 239
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName())\r\n                                        .fileType(att.getFileType()).fileSize",
+          "lineNumber": 239
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId())\r\n                                        .fileName(att.getFileName()).fileType",
+          "lineNumber": 239
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "FeedbackAttachmentResponse.builder()\r\n                                        .attachmentId(att.getAttachmentId()).fileName",
+          "lineNumber": 239
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "FeedbackAttachmentResponse.builder().attachmentId",
+          "lineNumber": 239
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "FeedbackAttachmentResponse.builder",
+          "lineNumber": 239
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "att.getAttachmentId",
+          "lineNumber": 240
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "att.getFileName",
+          "lineNumber": 241
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "att.getFileType",
+          "lineNumber": 242
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "att.getFileSize",
+          "lineNumber": 243
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "java.util.stream.Collectors.toList",
+          "lineNumber": 245
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "new java.util.ArrayList<>",
+          "lineNumber": 245
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getCreatedAt",
+          "lineNumber": 247
+        },
+        {
+          "caller": "toCrudFeedbackResponse",
+          "callee": "feedback.getUpdatedAt",
+          "lineNumber": 248
+        }
+      ],
+      "metrics": {
+        "importCount": 15,
+        "exportCount": 5,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

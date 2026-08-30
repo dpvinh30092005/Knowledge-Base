@@ -1,0 +1,1256 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "type": "file",
+      "name": "AuthContext.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "summary": "React context provider that manages the authenticated user's session state, including login/logout, JWT-based access-token refresh scheduling, and restoring sessions from localStorage on load.",
+      "tags": [
+        "authentication",
+        "context-provider",
+        "state-management",
+        "react",
+        "session"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Uses a useReducer state machine combined with a ref-tracked setTimeout to proactively refresh the JWT before it expires."
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/context/index.ts",
+      "summary": "Barrel file re-exporting the AuthProvider component and useAuth hook from AuthContext.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "type": "file",
+      "name": "AdminDashboardView.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "summary": "Top-level admin dashboard page composing metrics cards, system health, a user management table, role distribution, recent signups, and tabbed sections for content/curriculum/market/system administration.",
+      "tags": [
+        "admin",
+        "dashboard",
+        "component",
+        "data-table"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/admin/admin.types.ts",
+      "type": "file",
+      "name": "admin.types.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/admin.types.ts",
+      "summary": "TypeScript type definitions for admin dashboard data shapes: user roles/status, metrics, system health, and user list items.",
+      "tags": [
+        "type-definition",
+        "admin",
+        "data-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/admin/api/adminApi.ts",
+      "type": "file",
+      "name": "adminApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/api/adminApi.ts",
+      "summary": "API client for the admin dashboard, wrapping endpoints for platform metrics, system health, user management (role/status updates, deletion), and FLM curriculum sync/material mirroring jobs.",
+      "tags": [
+        "api-handler",
+        "admin",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "type": "file",
+      "name": "AdminExtraTabs.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "summary": "Admin dashboard tab panels for content moderation, system resource monitoring (CPU/memory/DB pool), and market/job-scraper controls, sharing a small local useFetch data hook.",
+      "tags": [
+        "admin",
+        "component",
+        "dashboard",
+        "data-fetching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "type": "file",
+      "name": "AdminFlmSyncTab.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "summary": "Admin tab UI for syncing FPT's FLM curriculum data (via pasted session cookie) and mirroring course materials into local storage, with background job status polling.",
+      "tags": [
+        "admin",
+        "component",
+        "data-pipeline",
+        "polling"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/api/chatApi.ts",
+      "type": "file",
+      "name": "chatApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/ai-mentor/api/chatApi.ts",
+      "summary": "API client for the AI mentor chat feature: session/message CRUD, file upload, and a hand-rolled SSE stream reader that incrementally parses text/event-stream chunks into a running message.",
+      "tags": [
+        "api-handler",
+        "streaming",
+        "ai-mentor",
+        "service"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Implements manual Server-Sent Events framing (buffering on double-newline) instead of the EventSource API, since it needs incremental callback delivery over a POST request."
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "type": "file",
+      "name": "AIMentorView.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "summary": "Main AI mentor chat page: renders the conversation UI, manages chat sessions, streams assistant responses via chatApi, and renders lightweight markdown formatting for messages.",
+      "tags": [
+        "ai-mentor",
+        "component",
+        "chat",
+        "streaming"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "type": "file",
+      "name": "authApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "summary": "API client for authentication endpoints: username/password login, registration, forgot/reset password, refresh-token exchange, and logout.",
+      "tags": [
+        "api-handler",
+        "authentication",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "type": "file",
+      "name": "ForgotPasswordForm.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "summary": "Form component that submits a user's email to request a password-reset link via authApi.",
+      "tags": [
+        "component",
+        "authentication",
+        "form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "type": "file",
+      "name": "RegisterForm.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "summary": "Registration form component collecting email, password, and full name, with client-side validation and submission to authApi.register.",
+      "tags": [
+        "component",
+        "authentication",
+        "form",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "type": "file",
+      "name": "ResetPasswordForm.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "summary": "Form component that accepts a reset token and new password, validates it, and submits it to authApi.resetPassword.",
+      "tags": [
+        "component",
+        "authentication",
+        "form",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "type": "file",
+      "name": "useLogin.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "summary": "Custom hook encapsulating the login form's state and submission logic, including username/password sign-in, Google/GitHub OAuth redirect handling, and role-based post-login navigation.",
+      "tags": [
+        "hook",
+        "authentication",
+        "oauth"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/index.ts",
+      "summary": "Barrel file re-exporting the auth feature's components, types, and hooks.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/types/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/types/index.ts",
+      "summary": "Barrel file re-exporting auth-related TypeScript types from auth.types.",
+      "tags": [
+        "barrel",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:authReducer",
+      "type": "function",
+      "name": "authReducer",
+      "filePath": "FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "lineRange": [
+        47,
+        86
+      ],
+      "summary": "Reducer handling auth state transitions (login start/success/error, restore, logout, user update) for the AuthProvider.",
+      "tags": [
+        "reducer",
+        "state-management",
+        "authentication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "function",
+      "name": "AuthProvider",
+      "filePath": "FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "lineRange": [
+        88,
+        351
+      ],
+      "summary": "Context provider component that owns auth state, restores sessions on mount, schedules proactive JWT refresh, and exposes login/logout/updateUser to the app.",
+      "tags": [
+        "context-provider",
+        "authentication",
+        "session",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "function",
+      "name": "useAuth",
+      "filePath": "FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "lineRange": [
+        353,
+        359
+      ],
+      "summary": "Hook that reads the AuthContext, throwing if used outside an AuthProvider.",
+      "tags": [
+        "hook",
+        "authentication",
+        "exported"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:MetricCard",
+      "type": "function",
+      "name": "MetricCard",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "lineRange": [
+        81,
+        130
+      ],
+      "summary": "Presentational card displaying a single admin metric with loading/unavailable states and an optional progress bar.",
+      "tags": [
+        "component",
+        "admin",
+        "presentational"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:SystemHealthCard",
+      "type": "function",
+      "name": "SystemHealthCard",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "lineRange": [
+        132,
+        174
+      ],
+      "summary": "Card summarizing backend system health (services up/total, status) for the admin overview.",
+      "tags": [
+        "component",
+        "admin",
+        "monitoring"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminMetrics",
+      "type": "function",
+      "name": "AdminMetrics",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "lineRange": [
+        176,
+        215
+      ],
+      "summary": "Fetches and renders total users/courses and system health metric cards.",
+      "tags": [
+        "component",
+        "admin",
+        "data-fetching"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:UserManagement",
+      "type": "function",
+      "name": "UserManagement",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "lineRange": [
+        217,
+        500
+      ],
+      "summary": "Admin user management table: search/filter users, change roles/status, and delete accounts.",
+      "tags": [
+        "component",
+        "admin",
+        "data-table",
+        "crud"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:RoleDistribution",
+      "type": "function",
+      "name": "RoleDistribution",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "lineRange": [
+        509,
+        538
+      ],
+      "summary": "Renders a breakdown of users by role for the admin overview.",
+      "tags": [
+        "component",
+        "admin",
+        "analytics"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:RecentSignups",
+      "type": "function",
+      "name": "RecentSignups",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "lineRange": [
+        540,
+        581
+      ],
+      "summary": "Renders the most recently registered users list.",
+      "tags": [
+        "component",
+        "admin",
+        "analytics"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "type": "function",
+      "name": "AdminDashboardView",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "lineRange": [
+        593,
+        751
+      ],
+      "summary": "Top-level admin dashboard page composing the metrics overview, user management, and content/curriculum/market/system tabs.",
+      "tags": [
+        "component",
+        "admin",
+        "dashboard",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:useFetch",
+      "type": "function",
+      "name": "useFetch",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "lineRange": [
+        9,
+        20
+      ],
+      "summary": "Small local data-fetching hook that GETs a URL via mainClient and tracks loading state, reused by the content and market tabs.",
+      "tags": [
+        "hook",
+        "data-fetching",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminContentTab",
+      "type": "function",
+      "name": "AdminContentTab",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "lineRange": [
+        43,
+        91
+      ],
+      "summary": "Admin tab listing careers/content for moderation, backed by useFetch.",
+      "tags": [
+        "component",
+        "admin",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminSystemTab",
+      "type": "function",
+      "name": "AdminSystemTab",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "lineRange": [
+        127,
+        233
+      ],
+      "summary": "Admin tab showing live system resource usage (uptime, DB pool, memory) polled from the backend.",
+      "tags": [
+        "component",
+        "admin",
+        "monitoring",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminMarketTab",
+      "type": "function",
+      "name": "AdminMarketTab",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "lineRange": [
+        236,
+        299
+      ],
+      "summary": "Admin tab for triggering and monitoring the job-market scraper and viewing recruitment posts.",
+      "tags": [
+        "component",
+        "admin",
+        "data-pipeline",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx:MirrorMaterialsCard",
+      "type": "function",
+      "name": "MirrorMaterialsCard",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "lineRange": [
+        39,
+        175
+      ],
+      "summary": "Card controlling the material-mirroring job (copying FLM syllabus files into the platform's own storage) with progress polling.",
+      "tags": [
+        "component",
+        "admin",
+        "polling",
+        "data-pipeline"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx:AdminFlmSyncTab",
+      "type": "function",
+      "name": "AdminFlmSyncTab",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "lineRange": [
+        186,
+        421
+      ],
+      "summary": "Admin tab for pasting an FLM session cookie, starting a curriculum sync job, and tracking its status, plus the material mirror card.",
+      "tags": [
+        "component",
+        "admin",
+        "data-pipeline",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx:AIMentorPage",
+      "type": "function",
+      "name": "AIMentorPage",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "lineRange": [
+        47,
+        870
+      ],
+      "summary": "Main AI mentor chat page managing session list, message history, streaming responses, and file uploads for the virtual mentor feature.",
+      "tags": [
+        "component",
+        "ai-mentor",
+        "chat",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx:ForgotPasswordForm",
+      "type": "function",
+      "name": "ForgotPasswordForm",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "lineRange": [
+        16,
+        121
+      ],
+      "summary": "Form that collects an email address and calls authApi.forgotPassword to trigger a reset-link email.",
+      "tags": [
+        "component",
+        "authentication",
+        "form",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx:RegisterForm",
+      "type": "function",
+      "name": "RegisterForm",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "lineRange": [
+        22,
+        259
+      ],
+      "summary": "Registration form with client-side validation for email/password/full name, submitting to authApi.register.",
+      "tags": [
+        "component",
+        "authentication",
+        "form",
+        "validation",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx:ResetPasswordForm",
+      "type": "function",
+      "name": "ResetPasswordForm",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "lineRange": [
+        21,
+        237
+      ],
+      "summary": "Form that validates and submits a new password against a reset token via authApi.resetPassword.",
+      "tags": [
+        "component",
+        "authentication",
+        "form",
+        "validation",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts:dashboardForRole",
+      "type": "function",
+      "name": "dashboardForRole",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "lineRange": [
+        11,
+        22
+      ],
+      "summary": "Maps a decoded JWT role claim to its role-specific dashboard route, shared with the OAuth callback flow.",
+      "tags": [
+        "utility",
+        "authentication",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts:useLogin",
+      "type": "function",
+      "name": "useLogin",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "lineRange": [
+        24,
+        82
+      ],
+      "summary": "Hook managing the login form: credential sign-in, Google/GitHub OAuth redirects, and post-login role-based navigation.",
+      "tags": [
+        "hook",
+        "authentication",
+        "oauth",
+        "exported"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/admin/admin.types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/admin/api/adminApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/utils/toast.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/api/adminApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/admin/admin.types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/api/adminApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/admin/admin.types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/admin/api/adminApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/utils/tags.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/admin/api/adminApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/utils/toast.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/api/chatApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/app/config/appConfig.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/api/chatApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/api/chatApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/GradeReportUI.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentHeader.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/app/config/appConfig.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:authReducer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:MetricCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:SystemHealthCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:UserManagement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:RoleDistribution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:RecentSignups",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:useFetch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminContentTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminSystemTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminMarketTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx:MirrorMaterialsCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx:AdminFlmSyncTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx:AIMentorPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx:ForgotPasswordForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx:RegisterForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx:ResetPasswordForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts:dashboardForRole",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts:useLogin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminContentTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminSystemTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminMarketTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx:AdminFlmSyncTab",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx:AIMentorPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx:ForgotPasswordForm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx:RegisterForm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx:ResetPasswordForm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts:useLogin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminContentTab",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:useFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminMarketTab",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:useFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminMetrics",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:MetricCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminMetrics",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:SystemHealthCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:RoleDistribution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:RecentSignups",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:UserManagement",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminContentTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx:AdminFlmSyncTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminMarketTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx:AdminDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx:AdminSystemTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

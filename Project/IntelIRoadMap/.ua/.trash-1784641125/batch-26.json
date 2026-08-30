@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "id": "service:BackEnd/intelipath-backend/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "BackEnd/intelipath-backend/Dockerfile",
+      "summary": "Multi-stage Docker build for the Spring Boot backend: a Maven builder stage compiles the JAR, then a slim Eclipse Temurin JRE Alpine image runs it, exposing port 8080.",
+      "tags": ["containerization", "infrastructure", "deployment", "java", "docker"],
+      "complexity": "simple",
+      "languageNotes": "Two-stage build separates Maven build tooling from the runtime image to minimize final image size."
+    },
+    {
+      "id": "service:BackEnd/intelipath-backend/Dockerfile:builder",
+      "type": "service",
+      "name": "builder",
+      "filePath": "BackEnd/intelipath-backend/Dockerfile",
+      "summary": "Build stage based on maven:3.9-eclipse-temurin-21 that resolves dependencies and compiles the backend into an executable JAR via `mvn clean package`.",
+      "tags": ["docker", "build-stage", "maven", "java"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:BackEnd/intelipath-backend/Dockerfile:eclipse-temurin",
+      "type": "service",
+      "name": "eclipse-temurin",
+      "filePath": "BackEnd/intelipath-backend/Dockerfile",
+      "summary": "Runtime stage based on eclipse-temurin:21-jre-alpine that copies the built app.jar from the builder stage and runs it, exposing port 8080.",
+      "tags": ["docker", "runtime-stage", "java", "deployment"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:BackEnd/intelipath-backend/docker-compose.yml",
+      "type": "service",
+      "name": "docker-compose.yml",
+      "filePath": "BackEnd/intelipath-backend/docker-compose.yml",
+      "summary": "Docker Compose orchestration wiring together the pgvector-backed Postgres database, the Python AI/scraper service, and the Spring Boot backend, with health checks and startup dependency ordering.",
+      "tags": ["orchestration", "infrastructure", "docker-compose", "deployment"],
+      "complexity": "moderate",
+      "languageNotes": "Uses depends_on with service_healthy conditions to sequence Postgres readiness before dependent services start; env_file plus environment overrides let the ai-service and backend reach Postgres over the compose network instead of localhost."
+    },
+    {
+      "id": "service:BackEnd/intelipath-backend/docker-compose.yml:postgres",
+      "type": "service",
+      "name": "postgres",
+      "filePath": "BackEnd/intelipath-backend/docker-compose.yml",
+      "summary": "pgvector/pgvector:pg16 database service providing the shared Postgres instance for both the backend and the AI service, with a health check and persistent volume.",
+      "tags": ["database", "postgres", "docker-compose", "infrastructure"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:BackEnd/intelipath-backend/docker-compose.yml:ai-service",
+      "type": "service",
+      "name": "ai-service",
+      "filePath": "BackEnd/intelipath-backend/docker-compose.yml",
+      "summary": "Python AI/scraper service built from ../intelipath-service, using its own database on the shared Postgres server and an optional proxy for scraping, gated on Postgres health.",
+      "tags": ["docker-compose", "python-service", "infrastructure", "microservice"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:BackEnd/intelipath-backend/docker-compose.yml:backend",
+      "type": "service",
+      "name": "backend",
+      "filePath": "BackEnd/intelipath-backend/docker-compose.yml",
+      "summary": "Spring Boot backend service built from the local Dockerfile, exposing port 8080 and configured to reach Postgres and the AI service over the compose network, starting only after both are healthy.",
+      "tags": ["docker-compose", "java", "backend", "infrastructure"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:BackEnd/intelipath-backend/Dockerfile",
+      "target": "service:BackEnd/intelipath-backend/Dockerfile:builder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/Dockerfile",
+      "target": "service:BackEnd/intelipath-backend/Dockerfile:eclipse-temurin",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/Dockerfile:eclipse-temurin",
+      "target": "service:BackEnd/intelipath-backend/Dockerfile:builder",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/docker-compose.yml",
+      "target": "service:BackEnd/intelipath-backend/docker-compose.yml:postgres",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/docker-compose.yml",
+      "target": "service:BackEnd/intelipath-backend/docker-compose.yml:ai-service",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/docker-compose.yml",
+      "target": "service:BackEnd/intelipath-backend/docker-compose.yml:backend",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/docker-compose.yml:backend",
+      "target": "service:BackEnd/intelipath-backend/Dockerfile",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/docker-compose.yml:backend",
+      "target": "service:BackEnd/intelipath-backend/docker-compose.yml:postgres",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/docker-compose.yml:backend",
+      "target": "service:BackEnd/intelipath-backend/docker-compose.yml:ai-service",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/docker-compose.yml:ai-service",
+      "target": "service:BackEnd/intelipath-backend/docker-compose.yml:postgres",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:BackEnd/intelipath-backend/Dockerfile:eclipse-temurin",
+      "target": "service:BackEnd/intelipath-backend/docker-compose.yml:backend",
+      "type": "deploys",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

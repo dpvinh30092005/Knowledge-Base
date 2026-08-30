@@ -1,0 +1,96 @@
+===== p214
+C h a p t e r 8 :
+I n h e r i t a n c e
+181
+Using final to Prevent Inheritance
+Sometimes you will want to prevent a class from being inherited. To do this, precede the
+class declaration with final. Declaring a class as final implicitly declares all of its methods
+as final, too. As you might expect, it is illegal to declare a class as both abstract and final
+since an abstract class is incomplete by itself and relies upon its subclasses to provide
+complete implementations.
+Here is an example of a final class:
+final class A {
+// ...
+}
+// The following class is illegal.
+class B extends A { // ERROR! Can't subclass A
+// ...
+}
+As the comments imply, it is illegal for B to inherit A since A is declared as final.
+The Object Class
+There is one special class, Object, defined by Java. All other classes are subclasses of Object.
+That is, Object is a superclass of all other classes. This means that a reference variable of type
+Object can refer to an object of any other class. Also, since arrays are implemented as classes,
+a variable of type Object can also refer to any array.
+Object defines the following methods, which means that they are available in every object.
+Method
+Purpose
+Object clone( )
+Creates a new object that is the same as the object being cloned.
+boolean equals(Object object)
+Determines whether one object is equal to another.
+void finalize( )
+Called before an unused object is recycled.
+Class getClass( )
+Obtains the class of an object at run time.
+int hashCode( )
+Returns the hash code associated with the invoking object.
+void notify( )
+Resumes execution of a thread waiting on the invoking object.
+void notifyAll( )
+Resumes execution of all threads waiting on the invoking object.
+String toString( )
+Returns a string that describes the object.
+void wait( )
+void wait(long milliseconds)
+void wait(long milliseconds,
+int nanoseconds)
+Waits on another thread of execution.
+The methods getClass( ), notify( ), notifyAll( ), and wait( ) are declared as final. You
+may override the others. These methods are described elsewhere in this book. However,
+notice two methods now: equals( ) and toString( ). The equals( ) method compares the
+contents of two objects. It returns true if the objects are equivalent, and false otherwise.
+
+===== p215
+The precise definition of equality can vary, depending on the type of objects being
+compared. The toString( ) method returns a string that contains a description of the object
+on which it is called. Also, this method is automatically called when an object is output
+using println( ). Many classes override this method. Doing so allows them to tailor a
+description specifically for the types of objects that they create.
+182
+P a r t I :
+T h e J a v a L a n g u a g e
+
+===== p216
+9
+Packages and Interfaces
+T
+his chapter examines two of Java’s most innovative features: packages and interfaces.
+Packages are containers for classes that are used to keep the class name space
+compartmentalized. For example, a package allows you to create a class named List,
+which you can store in your own package without concern that it will collide with some
+other class named List stored elsewhere. Packages are stored in a hierarchical manner and
+are explicitly imported into new class definitions.
+In previous chapters, you have seen how methods define the interface to the data in
+a class. Through the use of the interface keyword, Java allows you to fully abstract the
+interface from its implementation. Using interface, you can specify a set of methods that
+can be implemented by one or more classes. The interface, itself, does not actually define
+any implementation. Although they are similar to abstract classes, interfaces have an
+additional capability: A class can implement more than one interface. By contrast, a class
+can only inherit a single superclass (abstract or otherwise).
+Packages
+In the preceding chapters, the name of each example class was taken from the same
+name space. This means that a unique name had to be used for each class to avoid name
+collisions. After a while, without some way to manage the name space, you could run out
+of convenient, descriptive names for individual classes. You also need some way to be
+assured that the name you choose for a class will be reasonably unique and not collide
+with class names chosen by other programmers. (Imagine a small group of programmers
+fighting over who gets to use the name “Foobar” as a class name. Or, imagine the entire
+Internet community arguing over who first named a class “Espresso.”) Thankfully, Java
+provides a mechanism for partitioning the class name space into more manageable
+chunks. This mechanism is the package. The package is both a naming and a visibility
+control mechanism. You can define classes inside a package that are not accessible by
+code outside that package. You can also define class members that are only exposed
+to other members of the same package. This allows your classes to have intimate
+knowledge of each other, but not expose that knowledge to the rest of the world.
+183

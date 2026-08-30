@@ -1,0 +1,644 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 12,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 12,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 12,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "ChartTooltip",
+          "startLine": 10,
+          "endLine": 22,
+          "params": [
+            "{ active, payload, labelKey, valueColorClass }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChartTooltip",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "functions": [
+        {
+          "name": "EmptyState",
+          "startLine": 3,
+          "endLine": 10,
+          "params": [
+            "{ icon: Icon, label }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "EmptyState",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "functions": [
+        {
+          "name": "ErrorBanner",
+          "startLine": 4,
+          "endLine": 11,
+          "params": [
+            "{ message }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ErrorBanner",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "FeedbackItem",
+          "startLine": 13,
+          "endLine": 67,
+          "params": [
+            "{ feedback: fb }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeedbackItem",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FeedbackItem",
+          "callee": "name\r\n      .split(\" \")\r\n      .filter(Boolean)\r\n      .map((n) => n[0])\r\n      .join(\"\")\r\n      .slice(0, 2)\r\n      .toUpperCase",
+          "lineNumber": 17
+        },
+        {
+          "caller": "FeedbackItem",
+          "callee": "name\r\n      .split(\" \")\r\n      .filter(Boolean)\r\n      .map((n) => n[0])\r\n      .join(\"\")\r\n      .slice",
+          "lineNumber": 17
+        },
+        {
+          "caller": "FeedbackItem",
+          "callee": "name\r\n      .split(\" \")\r\n      .filter(Boolean)\r\n      .map((n) => n[0])\r\n      .join",
+          "lineNumber": 17
+        },
+        {
+          "caller": "FeedbackItem",
+          "callee": "name\r\n      .split(\" \")\r\n      .filter(Boolean)\r\n      .map",
+          "lineNumber": 17
+        },
+        {
+          "caller": "FeedbackItem",
+          "callee": "name\r\n      .split(\" \")\r\n      .filter",
+          "lineNumber": 17
+        },
+        {
+          "caller": "FeedbackItem",
+          "callee": "name\r\n      .split",
+          "lineNumber": 17
+        },
+        {
+          "caller": "FeedbackItem",
+          "callee": "new Date(fb.createdAt).toLocaleDateString",
+          "lineNumber": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "StatPill",
+          "startLine": 4,
+          "endLine": 18,
+          "params": [
+            "{ icon: Icon, label, value }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StatPill",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 161,
+      "nonEmptyLines": 152,
+      "functions": [
+        {
+          "name": "renderCustomizedLabel",
+          "startLine": 21,
+          "endLine": 48,
+          "params": [
+            "{\n  cx,\n  cy,\n  midAngle,\n  innerRadius,\n  outerRadius,\n  percent\n}"
+          ]
+        },
+        {
+          "name": "CareerDistributionChart",
+          "startLine": 50,
+          "endLine": 161,
+          "params": [
+            "{\n  onSelectCareer,\n  onTotalLoaded\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CareerDistributionChart",
+          "line": 50,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "renderCustomizedLabel",
+          "callee": "Math.cos",
+          "lineNumber": 30
+        },
+        {
+          "caller": "renderCustomizedLabel",
+          "callee": "Math.sin",
+          "lineNumber": 31
+        },
+        {
+          "caller": "renderCustomizedLabel",
+          "callee": "(percent * 100).toFixed",
+          "lineNumber": 45
+        },
+        {
+          "caller": "CareerDistributionChart",
+          "callee": "useCareerDistribution",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getDistributionColor",
+          "callee": "Math.round",
+          "lineNumber": 61
+        },
+        {
+          "caller": "getDistributionColor",
+          "callee": "Math.min",
+          "lineNumber": 64
+        },
+        {
+          "caller": "CareerDistributionChart",
+          "callee": "data.map",
+          "lineNumber": 108
+        },
+        {
+          "caller": "CareerDistributionChart",
+          "callee": "getDistributionColor",
+          "lineNumber": 111
+        },
+        {
+          "caller": "CareerDistributionChart",
+          "callee": "onSelectCareer",
+          "lineNumber": 113
+        },
+        {
+          "caller": "CareerDistributionChart",
+          "callee": "data.map",
+          "lineNumber": 136
+        },
+        {
+          "caller": "CareerDistributionChart",
+          "callee": "onSelectCareer",
+          "lineNumber": 140
+        },
+        {
+          "caller": "CareerDistributionChart",
+          "callee": "getDistributionColor",
+          "lineNumber": 145
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 62,
+      "exports": [
+        {
+          "name": "CounselorHero",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "FeedbackListWidget",
+          "startLine": 8,
+          "endLine": 46,
+          "params": [
+            "{\r\n  onTotalLoaded\r\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeedbackListWidget",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FeedbackListWidget",
+          "callee": "useFeedbackList",
+          "lineNumber": 13
+        },
+        {
+          "caller": "FeedbackListWidget",
+          "callee": "feedbacks.map",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 200,
+      "nonEmptyLines": 194,
+      "functions": [
+        {
+          "name": "MissingSkillsChart",
+          "startLine": 18,
+          "endLine": 200,
+          "params": [
+            "{\n  careerFilter,\n  onTotalLoaded\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MissingSkillsChart",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MissingSkillsChart",
+          "callee": "useMissingSkills",
+          "lineNumber": 35
+        },
+        {
+          "caller": "MissingSkillsChart",
+          "callee": "setSearchInput",
+          "lineNumber": 74
+        },
+        {
+          "caller": "MissingSkillsChart",
+          "callee": "data.slice",
+          "lineNumber": 103
+        },
+        {
+          "caller": "MissingSkillsChart",
+          "callee": "value.substring",
+          "lineNumber": 127
+        },
+        {
+          "caller": "MissingSkillsChart",
+          "callee": "data.map",
+          "lineNumber": 147
+        },
+        {
+          "caller": "MissingSkillsChart",
+          "callee": "getSkillColor",
+          "lineNumber": 148
+        },
+        {
+          "caller": "MissingSkillsChart",
+          "callee": "data.map",
+          "lineNumber": 170
+        },
+        {
+          "caller": "MissingSkillsChart",
+          "callee": "getSkillColor",
+          "lineNumber": 177
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 175,
+      "nonEmptyLines": 158,
+      "functions": [
+        {
+          "name": "CounselorDashboardTemplate",
+          "startLine": 19,
+          "endLine": 175,
+          "params": [
+            "{\r\n  hero,\r\n  careerChart,\r\n  missingSkillsChart,\r\n  feedbackList,\r\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CounselorDashboardTemplate",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "useAuth",
+          "lineNumber": 25
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "useNavigate",
+          "lineNumber": 26
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "useRef",
+          "lineNumber": 27
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "useGSAP",
+          "lineNumber": 29
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "gsap.from",
+          "lineNumber": 32
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "gsap.from",
+          "lineNumber": 40
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "gsap.from",
+          "lineNumber": 49
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "gsap.from",
+          "lineNumber": 58
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "gsap.from",
+          "lineNumber": 67
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "gsap.from",
+          "lineNumber": 76
+        },
+        {
+          "caller": "CounselorDashboardTemplate",
+          "callee": "gsap.from",
+          "lineNumber": 85
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 98
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 88,
+      "nonEmptyLines": 81,
+      "functions": [
+        {
+          "name": "CounselorDashboardPage",
+          "startLine": 11,
+          "endLine": 86,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CounselorDashboardPage",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "useRef",
+          "lineNumber": 13
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "useEffect",
+          "lineNumber": 20
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "gsap.timeline",
+          "lineNumber": 23
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "tl.to(sparkleRef.current, {\r\n        scale: 1.3,\r\n        opacity: 0.4,\r\n        rotate: 20,\r\n        duration: 0.35,\r\n        ease: \"power2.in\"\r\n      })\r\n        .to(sparkleRef.current, {\r\n          scale: 1.15,\r\n          opacity: 1,\r\n          rotate: -15,\r\n          duration: 0.25,\r\n          ease: \"power2.out\"\r\n        })\r\n        .to(sparkleRef.current, {\r\n          scale: 1.4,\r\n          opacity: 0.6,\r\n          rotate: 10,\r\n          duration: 0.3,\r\n          ease: \"power2.inOut\"\r\n        })\r\n        .to(sparkleRef.current, {\r\n          scale: 1,\r\n          opacity: 1,\r\n          rotate: 0,\r\n          duration: 0.5,\r\n          ease: \"elastic.out(1, 0.5)\"\r\n        })\r\n        .to",
+          "lineNumber": 24
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "tl.to(sparkleRef.current, {\r\n        scale: 1.3,\r\n        opacity: 0.4,\r\n        rotate: 20,\r\n        duration: 0.35,\r\n        ease: \"power2.in\"\r\n      })\r\n        .to(sparkleRef.current, {\r\n          scale: 1.15,\r\n          opacity: 1,\r\n          rotate: -15,\r\n          duration: 0.25,\r\n          ease: \"power2.out\"\r\n        })\r\n        .to(sparkleRef.current, {\r\n          scale: 1.4,\r\n          opacity: 0.6,\r\n          rotate: 10,\r\n          duration: 0.3,\r\n          ease: \"power2.inOut\"\r\n        })\r\n        .to",
+          "lineNumber": 24
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "tl.to(sparkleRef.current, {\r\n        scale: 1.3,\r\n        opacity: 0.4,\r\n        rotate: 20,\r\n        duration: 0.35,\r\n        ease: \"power2.in\"\r\n      })\r\n        .to(sparkleRef.current, {\r\n          scale: 1.15,\r\n          opacity: 1,\r\n          rotate: -15,\r\n          duration: 0.25,\r\n          ease: \"power2.out\"\r\n        })\r\n        .to",
+          "lineNumber": 24
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "tl.to(sparkleRef.current, {\r\n        scale: 1.3,\r\n        opacity: 0.4,\r\n        rotate: 20,\r\n        duration: 0.35,\r\n        ease: \"power2.in\"\r\n      })\r\n        .to",
+          "lineNumber": 24
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "tl.to",
+          "lineNumber": 24
+        },
+        {
+          "caller": "CounselorDashboardPage",
+          "callee": "tl.kill",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/types/dashboard.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

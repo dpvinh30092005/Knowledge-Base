@@ -1,0 +1,82 @@
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom, #f7f9fc, #e9eef5);
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2937;
+}
+
+.section-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #334155;
+}
+
+.input-row {
+    -fx-padding: 4 0 4 0;
+}
+
+.input-block {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius: 10;
+    -fx-border-color: #d8dee9;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.panel {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius: 10;
+    -fx-border-color: #d8dee9;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8;
+    -fx-padding: 8 10;
+    -fx-font-size: 12.5px;
+}
+
+.text-area {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 8;
+    -fx-padding: 8 10;
+    -fx-font-size: 12.5px;
+}
+
+.button {
+    -fx-background-radius: 8;
+    -fx-padding: 8 14;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: 600;
+}
+
+.button.primary {
+    -fx-background-color: #2d6cdf;
+    -fx-text-fill: #ffffff;
+}
+
+.button.secondary {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #1e293b;
+}
+
+.list-view {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 8;
+}
+
+.list-cell {
+    -fx-padding: 6 8;
+}

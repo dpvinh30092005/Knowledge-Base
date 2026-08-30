@@ -1,0 +1,457 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/slop-test.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 192,
+      "nonEmptyLines": 119,
+      "sections": [
+        {
+          "heading": "Slop test — 58 gates + pre-emit self-critique",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Pre-emit self-critique (six axes)",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Visual",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "Structural",
+          "level": 2,
+          "line": 38
+        },
+        {
+          "heading": "Microinteractions",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "Variety",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Implementation gates",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "Hero enrichment gates",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "Diversification gates",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "Layout-safety gates",
+          "level": 2,
+          "line": 86
+        },
+        {
+          "heading": "Typography discipline gates",
+          "level": 2,
+          "line": 94
+        },
+        {
+          "heading": "Input-state gate",
+          "level": 2,
+          "line": 102
+        },
+        {
+          "heading": "Contrast & readability",
+          "level": 2,
+          "line": 113
+        },
+        {
+          "heading": "Nav · footer · hero structural slop",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "Honest copy · no fabricated content",
+          "level": 2,
+          "line": 142
+        },
+        {
+          "heading": "Re-drawn UI chrome",
+          "level": 2,
+          "line": 148
+        },
+        {
+          "heading": "Token discipline",
+          "level": 2,
+          "line": 154
+        },
+        {
+          "heading": "Responsive — clickable affordances",
+          "level": 2,
+          "line": 160
+        },
+        {
+          "heading": "Mobile-responsiveness — the non-negotiables",
+          "level": 2,
+          "line": 168
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/structure.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 160,
+      "nonEmptyLines": 116,
+      "sections": [
+        {
+          "heading": "Structure",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "The six axes",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "1. Section-heading placement",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "2. Body composition",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "3. Divider language",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "4. Button voice",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "5. Image treatment",
+          "level": 3,
+          "line": 62
+        },
+        {
+          "heading": "6. Reveal pattern",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "Picking a fingerprint",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "Theme-suggested fingerprints",
+          "level": 2,
+          "line": 92
+        },
+        {
+          "heading": "Anti-patterns of structural sameness",
+          "level": 2,
+          "line": 117
+        },
+        {
+          "heading": "When you don't know",
+          "level": 2,
+          "line": 127
+        },
+        {
+          "heading": "Domain → trio (offer these three; never default)",
+          "level": 3,
+          "line": 133
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/study.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 509,
+      "nonEmptyLines": 367,
+      "sections": [
+        {
+          "heading": "Study — extracting design DNA from a screenshot or URL",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Source mode — image or URL",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "URL mode — fetch pipeline",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "Remote URL safety",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "Junk-or-blocked detection",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "Refusal — when not to study",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "URL refuse list (auto-refuse on domain match)",
+          "level": 3,
+          "line": 90
+        },
+        {
+          "heading": "The five-step protocol",
+          "level": 2,
+          "line": 106
+        },
+        {
+          "heading": "Step 1 — Surface",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "Step 2 — Type",
+          "level": 3,
+          "line": 122
+        },
+        {
+          "heading": "Step 3 — Structure",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "Step 4 — Motion",
+          "level": 3,
+          "line": 160
+        },
+        {
+          "heading": "Step 5 — Rhythm",
+          "level": 3,
+          "line": 178
+        },
+        {
+          "heading": "The structured fields",
+          "level": 2,
+          "line": 191
+        },
+        {
+          "heading": "Theme mapping",
+          "level": 2,
+          "line": 245
+        },
+        {
+          "heading": "The diagnosis report",
+          "level": 2,
+          "line": 268
+        },
+        {
+          "heading": "Image-mode template",
+          "level": 3,
+          "line": 272
+        },
+        {
+          "heading": "URL-mode template",
+          "level": 3,
+          "line": 306
+        },
+        {
+          "heading": "Worked example",
+          "level": 2,
+          "line": 346
+        },
+        {
+          "heading": "Limits and disclaimers",
+          "level": 2,
+          "line": 418
+        },
+        {
+          "heading": "Emitting a `design.md` from `study`",
+          "level": 2,
+          "line": 433
+        },
+        {
+          "heading": "Trigger phrases",
+          "level": 3,
+          "line": 437
+        },
+        {
+          "heading": "The emission-refusal layer (tighter than diagnosis refusal)",
+          "level": 3,
+          "line": 447
+        },
+        {
+          "heading": "What gets written",
+          "level": 3,
+          "line": 479
+        },
+        {
+          "heading": "After the file is written",
+          "level": 3,
+          "line": 490
+        },
+        {
+          "heading": "When `study` should hand off",
+          "level": 2,
+          "line": 500
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/typography.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 243,
+      "nonEmptyLines": 187,
+      "sections": [
+        {
+          "heading": "Typography",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Principles",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "The 2+1 rule — three faces is the ceiling",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Banned defaults",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "The font catalog",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "Free display faces",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "Free body faces",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "Free mono / outlier faces",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "Tone-based pairing patterns",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "Wordmark / logo typography",
+          "level": 2,
+          "line": 138
+        },
+        {
+          "heading": "Scale",
+          "level": 2,
+          "line": 171
+        },
+        {
+          "heading": "Hero headline sizing — match size to copy length",
+          "level": 3,
+          "line": 192
+        },
+        {
+          "heading": "Weights",
+          "level": 2,
+          "line": 207
+        },
+        {
+          "heading": "Required features",
+          "level": 2,
+          "line": 213
+        },
+        {
+          "heading": "Body text rules",
+          "level": 2,
+          "line": 221
+        },
+        {
+          "heading": "Headings rules",
+          "level": 2,
+          "line": 228
+        },
+        {
+          "heading": "Bans",
+          "level": 2,
+          "line": 234
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 17
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md",
+      "language": "markdown",
+      "sizeLines": 301,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md",
+      "language": "markdown",
+      "sizeLines": 403,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md",
+      "language": "markdown",
+      "sizeLines": 478,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md": []
+  }
+}

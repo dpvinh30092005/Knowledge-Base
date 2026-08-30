@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "id": "config:BackEnd/intelipath-backend/.env",
+      "type": "config",
+      "name": ".env",
+      "filePath": "BackEnd/intelipath-backend/.env",
+      "summary": "Local environment configuration for the Spring Boot backend, holding real values for database, Supabase, JWT, OAuth (Google/GitHub), OpenAI, scraper, CORS, AI service, MCP document service, Postgres, and seed-user credentials.",
+      "tags": ["configuration", "secrets", "environment-variables", "backend"],
+      "complexity": "moderate",
+      "languageNotes": "Defines 41 environment variables consumed by Spring Boot's application properties via placeholder substitution; contains live secrets and must never be committed with real values."
+    },
+    {
+      "id": "config:BackEnd/intelipath-backend/.env.example",
+      "type": "config",
+      "name": ".env.example",
+      "filePath": "BackEnd/intelipath-backend/.env.example",
+      "summary": "Template listing the same 41 environment variable names as .env (database, JWT, OAuth, OpenAI, scraper, CORS, AI service, MCP, Postgres, seed users) without real values, for onboarding new developers.",
+      "tags": ["configuration", "environment-variables", "documentation", "backend"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:BackEnd/intelipath-backend/CONTRIBUTING.md",
+      "type": "document",
+      "name": "CONTRIBUTING.md",
+      "filePath": "BackEnd/intelipath-backend/CONTRIBUTING.md",
+      "summary": "Contribution guide defining the project's commit message convention, including commit types, scopes, and examples.",
+      "tags": ["documentation", "development", "commit-convention"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:BackEnd/intelipath-backend/HELP.md",
+      "type": "document",
+      "name": "HELP.md",
+      "filePath": "BackEnd/intelipath-backend/HELP.md",
+      "summary": "Auto-generated Spring Boot help file linking to reference documentation and noting Maven parent override guidance.",
+      "tags": ["documentation", "spring-boot", "reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:BackEnd/intelipath-backend/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "BackEnd/intelipath-backend/README.md",
+      "summary": "Top-level backend README with a quick-start guide covering prerequisites and running the service via Docker Compose.",
+      "tags": ["documentation", "entry-point", "quick-start", "docker"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/mvnw.cmd",
+      "type": "file",
+      "name": "mvnw.cmd",
+      "filePath": "BackEnd/intelipath-backend/mvnw.cmd",
+      "summary": "Windows Maven Wrapper batch script that downloads (if needed) and invokes the correct Maven version to build the backend without requiring a system-wide Maven install.",
+      "tags": ["build-system", "maven", "script", "windows"],
+      "complexity": "moderate",
+      "languageNotes": "Standard Maven Wrapper (mvnw) batch script; uses :labels as jump targets for error handling and wrapper-jar download logic rather than user-defined functions."
+    },
+    {
+      "id": "config:BackEnd/intelipath-backend/pom.xml",
+      "type": "config",
+      "name": "pom.xml",
+      "filePath": "BackEnd/intelipath-backend/pom.xml",
+      "summary": "Maven Project Object Model for the intelipath-backend Spring Boot application, declaring Java 21, spring-boot-starter-parent 3.5.15, and dependencies for web, security, JPA, validation, JWT (jjwt), OpenAPI (springdoc), OpenCSV, Spring AI, and PDFBox.",
+      "tags": ["build-system", "maven", "dependency-management", "configuration"],
+      "complexity": "moderate",
+      "languageNotes": "Centralizes version properties (java.version, jjwt.version, springdoc.version, spring-ai.version, pdfbox.version, spring-cloud-function.version) for consistent dependency versioning across the module."
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:BackEnd/intelipath-backend/.env.example",
+      "target": "config:BackEnd/intelipath-backend/.env",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:BackEnd/intelipath-backend/README.md",
+      "target": "config:BackEnd/intelipath-backend/.env.example",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:BackEnd/intelipath-backend/HELP.md",
+      "target": "config:BackEnd/intelipath-backend/pom.xml",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/mvnw.cmd",
+      "target": "config:BackEnd/intelipath-backend/pom.xml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

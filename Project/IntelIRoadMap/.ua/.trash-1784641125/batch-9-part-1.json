@@ -1,0 +1,383 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-service/app/api/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/api/__init__.py",
+      "summary": "Empty package marker file for the FastAPI `api` package of the intelipath-service.",
+      "tags": ["package-init", "python", "empty"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/api/endpoints/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/api/endpoints/__init__.py",
+      "summary": "Empty package marker file for the `api.endpoints` sub-package.",
+      "tags": ["package-init", "python", "empty"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py",
+      "type": "file",
+      "name": "extraction.py",
+      "filePath": "BackEnd/intelipath-service/app/api/endpoints/extraction.py",
+      "summary": "FastAPI router exposing document content extraction and skill-extraction endpoints, delegating to the markitdown and LLM services.",
+      "tags": ["api-handler", "fastapi", "extraction", "skills"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/api/endpoints/extraction.py:extract_content",
+      "type": "function",
+      "name": "extract_content",
+      "filePath": "BackEnd/intelipath-service/app/api/endpoints/extraction.py",
+      "lineRange": [18, 28],
+      "summary": "API handler that converts a document at a given URL to markdown content, wrapping errors as HTTP exceptions.",
+      "tags": ["api-handler", "extraction", "error-handling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/api/flm_routes.py",
+      "type": "file",
+      "name": "flm_routes.py",
+      "filePath": "BackEnd/intelipath-service/app/api/flm_routes.py",
+      "summary": "FastAPI router exposing endpoints to start and poll the background FLM curriculum sync job.",
+      "tags": ["api-handler", "fastapi", "flm", "background-job"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/api/flm_routes.py:start_flm_sync",
+      "type": "function",
+      "name": "start_flm_sync",
+      "filePath": "BackEnd/intelipath-service/app/api/flm_routes.py",
+      "lineRange": [30, 36],
+      "summary": "API handler that validates the FLM sync request and starts a background sync job via sync_job.start_job.",
+      "tags": ["api-handler", "flm", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/api/flm_routes.py:get_flm_sync",
+      "type": "function",
+      "name": "get_flm_sync",
+      "filePath": "BackEnd/intelipath-service/app/api/flm_routes.py",
+      "lineRange": [40, 54],
+      "summary": "API handler that returns the current status of a running FLM sync job by job id, or 404 if not found.",
+      "tags": ["api-handler", "flm", "status"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-service/app/api/flm_routes.py:FlmSyncRequest",
+      "type": "class",
+      "name": "FlmSyncRequest",
+      "filePath": "BackEnd/intelipath-service/app/api/flm_routes.py",
+      "lineRange": [20, 26],
+      "summary": "Pydantic request model carrying the FLM session cookie, curriculum id, subject prefixes, catalog, and target career for a sync job.",
+      "tags": ["data-model", "pydantic", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "type": "file",
+      "name": "recruitment_routes.py",
+      "filePath": "BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "summary": "FastAPI router that triggers TopCV and ITviec recruitment scraping, then processes and collects the resulting records for the response.",
+      "tags": ["api-handler", "fastapi", "scraping", "recruitment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:_process_and_collect",
+      "type": "function",
+      "name": "_process_and_collect",
+      "filePath": "BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "lineRange": [25, 54],
+      "summary": "Runs the unprocessed-data pipeline then serializes newly created companies, processed recruitments, and recruitment posts to plain dicts.",
+      "tags": ["utility", "serialization", "database"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:start_topcv_scrape",
+      "type": "function",
+      "name": "start_topcv_scrape",
+      "filePath": "BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "lineRange": [70, 81],
+      "summary": "API handler that runs the TopCV scraper up to a validated limit and returns collected/processed results, mapping blocked-IP errors to HTTP 503.",
+      "tags": ["api-handler", "scraping", "topcv"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:start_itviec_scrape",
+      "type": "function",
+      "name": "start_itviec_scrape",
+      "filePath": "BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "lineRange": [90, 98],
+      "summary": "API handler that runs the ITviec scraper up to a validated limit and returns collected/processed results, mapping blocked-IP errors to HTTP 503.",
+      "tags": ["api-handler", "scraping", "itviec"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/api/security.py",
+      "type": "file",
+      "name": "security.py",
+      "filePath": "BackEnd/intelipath-service/app/api/security.py",
+      "summary": "Simple API-key verification dependency used to protect FastAPI endpoints.",
+      "tags": ["security", "middleware", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/api/security.py:verify_api_key",
+      "type": "function",
+      "name": "verify_api_key",
+      "filePath": "BackEnd/intelipath-service/app/api/security.py",
+      "lineRange": [6, 10],
+      "summary": "FastAPI dependency that validates the x-api-key header against the configured service API key, raising 401 on mismatch.",
+      "tags": ["security", "authentication", "dependency"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:BackEnd/intelipath-service/app/config/config.py",
+      "type": "config",
+      "name": "config.py",
+      "filePath": "BackEnd/intelipath-service/app/config/config.py",
+      "summary": "Pydantic settings class defining environment-driven configuration for scraping targets, LLM credentials, database URL, and FLM sync parameters.",
+      "tags": ["configuration", "environment", "settings"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-service/app/config/config.py:Settings",
+      "type": "class",
+      "name": "Settings",
+      "filePath": "BackEnd/intelipath-service/app/config/config.py",
+      "lineRange": [4, 29],
+      "summary": "Central application settings model holding scrape targets, API keys, LLM configuration, database URL, and FLM credentials, loaded from environment variables.",
+      "tags": ["configuration", "data-model", "environment"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/db/database.py",
+      "type": "file",
+      "name": "database.py",
+      "filePath": "BackEnd/intelipath-service/app/db/database.py",
+      "summary": "SQLAlchemy engine/session setup and a FastAPI dependency for obtaining a scoped database session.",
+      "tags": ["database", "sqlalchemy", "dependency"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/db/database.py:get_db",
+      "type": "function",
+      "name": "get_db",
+      "filePath": "BackEnd/intelipath-service/app/db/database.py",
+      "lineRange": [11, 16],
+      "summary": "FastAPI dependency generator that yields a SQLAlchemy session and ensures it is closed after the request.",
+      "tags": ["database", "dependency", "sqlalchemy"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/db/models.py",
+      "type": "file",
+      "name": "models.py",
+      "filePath": "BackEnd/intelipath-service/app/db/models.py",
+      "summary": "SQLAlchemy ORM models for scraped companies, recruitments, their processed/LLM-enriched counterparts, and normalized recruitment posts.",
+      "tags": ["data-model", "sqlalchemy", "database"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-service/app/db/models.py:Company",
+      "type": "class",
+      "name": "Company",
+      "filePath": "BackEnd/intelipath-service/app/db/models.py",
+      "lineRange": [8, 16],
+      "summary": "ORM model representing a raw scraped company record.",
+      "tags": ["data-model", "sqlalchemy"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-service/app/db/models.py:ProcessedCompany",
+      "type": "class",
+      "name": "ProcessedCompany",
+      "filePath": "BackEnd/intelipath-service/app/db/models.py",
+      "lineRange": [18, 23],
+      "summary": "ORM model representing an LLM-processed/enriched company record derived from a raw Company.",
+      "tags": ["data-model", "sqlalchemy"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-service/app/db/models.py:Recruitment",
+      "type": "class",
+      "name": "Recruitment",
+      "filePath": "BackEnd/intelipath-service/app/db/models.py",
+      "lineRange": [25, 39],
+      "summary": "ORM model representing a raw scraped job/recruitment posting.",
+      "tags": ["data-model", "sqlalchemy"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-service/app/db/models.py:ProcessedRecruitment",
+      "type": "class",
+      "name": "ProcessedRecruitment",
+      "filePath": "BackEnd/intelipath-service/app/db/models.py",
+      "lineRange": [41, 48],
+      "summary": "ORM model representing an LLM-processed/enriched recruitment record derived from a raw Recruitment.",
+      "tags": ["data-model", "sqlalchemy"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-service/app/db/models.py:RecruitmentPost",
+      "type": "class",
+      "name": "RecruitmentPost",
+      "filePath": "BackEnd/intelipath-service/app/db/models.py",
+      "lineRange": [50, 56],
+      "summary": "ORM model representing a normalized recruitment post linking a company and recruitment with posting-specific fields.",
+      "tags": ["data-model", "sqlalchemy"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/main.py",
+      "type": "file",
+      "name": "main.py",
+      "filePath": "BackEnd/intelipath-service/app/main.py",
+      "summary": "FastAPI application entry point that wires up the extraction, FLM, and recruitment routers plus the MCP server, with a lifespan hook and root health endpoint.",
+      "tags": ["entry-point", "fastapi", "bootstrap"],
+      "complexity": "moderate",
+      "languageNotes": "Uses FastAPI's async context-manager lifespan pattern for startup/shutdown logging."
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/mcp_server.py",
+      "type": "file",
+      "name": "mcp_server.py",
+      "filePath": "BackEnd/intelipath-service/app/mcp_server.py",
+      "summary": "Defines an MCP (Model Context Protocol) tool that extracts markdown content from a public document URL for use by LLM agents.",
+      "tags": ["mcp", "tool-definition", "extraction"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/mcp_server.py:extract_document",
+      "type": "function",
+      "name": "extract_document",
+      "filePath": "BackEnd/intelipath-service/app/mcp_server.py",
+      "lineRange": [18, 35],
+      "summary": "MCP tool function that validates a document URL, extracts its markdown content via markitdown_service, and truncates overly long output.",
+      "tags": ["mcp", "tool-definition", "extraction"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/schemas/extraction.py",
+      "type": "file",
+      "name": "extraction.py",
+      "filePath": "BackEnd/intelipath-service/app/schemas/extraction.py",
+      "summary": "Pydantic request/response schemas for the document extraction and skill-extraction API endpoints.",
+      "tags": ["data-model", "pydantic", "type-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py",
+      "type": "file",
+      "name": "curl_engine.py",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py",
+      "summary": "HTTP fetch engine using curl_cffi to impersonate a browser, retrying with proxy rotation and detecting IP-blocked responses.",
+      "tags": ["scraping", "http-client", "retry-logic"],
+      "complexity": "moderate",
+      "languageNotes": "Uses curl_cffi's browser-impersonation feature to reduce bot-detection blocking, with exponential backoff-style sleep and proxy fallback."
+    },
+    {
+      "id": "class:BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py:CurlEngine",
+      "type": "class",
+      "name": "CurlEngine",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py",
+      "lineRange": [16, 96],
+      "summary": "Fetch engine that retrieves a BeautifulSoup-parsed document via curl_cffi with retries, proxy support, and blocked-IP detection.",
+      "tags": ["scraping", "http-client", "retry-logic"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "summary": "Package marker file for the `scrapers.flm` sub-package covering FPT FLM curriculum scraping.",
+      "tags": ["package-init", "python"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {"source": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py", "target": "file:BackEnd/intelipath-service/app/api/security.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py", "target": "file:BackEnd/intelipath-service/app/schemas/extraction.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py", "target": "file:BackEnd/intelipath-service/app/services/__init__.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py", "target": "file:BackEnd/intelipath-service/app/services/llm_service.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py", "target": "file:BackEnd/intelipath-service/app/services/markitdown_service.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "file:BackEnd/intelipath-service/app/api/security.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "file:BackEnd/intelipath-service/app/scrapers/flm/__init__.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "file:BackEnd/intelipath-service/app/scrapers/flm/sync_job.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "file:BackEnd/intelipath-service/app/api/security.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "file:BackEnd/intelipath-service/app/config/config.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "file:BackEnd/intelipath-service/app/db/database.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "file:BackEnd/intelipath-service/app/db/models.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "file:BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "file:BackEnd/intelipath-service/app/scrapers/parsers/itviec_parser.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "file:BackEnd/intelipath-service/app/scrapers/parsers/topcv_parser.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "file:BackEnd/intelipath-service/app/scrapers/processor.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/api/security.py", "target": "file:BackEnd/intelipath-service/app/config/config.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/db/database.py", "target": "file:BackEnd/intelipath-service/app/config/config.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/main.py", "target": "file:BackEnd/intelipath-service/app/api/__init__.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/main.py", "target": "file:BackEnd/intelipath-service/app/api/endpoints/__init__.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/main.py", "target": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/main.py", "target": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/main.py", "target": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/main.py", "target": "file:BackEnd/intelipath-service/app/mcp_server.py", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-service/app/mcp_server.py", "target": "file:BackEnd/intelipath-service/app/services/markitdown_service.py", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py", "target": "function:BackEnd/intelipath-service/app/api/endpoints/extraction.py:extract_content", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/api/endpoints/extraction.py", "target": "function:BackEnd/intelipath-service/app/api/endpoints/extraction.py:extract_content", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-service/app/api/endpoints/extraction.py:extract_content", "target": "file:BackEnd/intelipath-service/app/services/markitdown_service.py", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "function:BackEnd/intelipath-service/app/api/flm_routes.py:start_flm_sync", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "function:BackEnd/intelipath-service/app/api/flm_routes.py:get_flm_sync", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "class:BackEnd/intelipath-service/app/api/flm_routes.py:FlmSyncRequest", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "function:BackEnd/intelipath-service/app/api/flm_routes.py:start_flm_sync", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "function:BackEnd/intelipath-service/app/api/flm_routes.py:get_flm_sync", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-service/app/api/flm_routes.py", "target": "class:BackEnd/intelipath-service/app/api/flm_routes.py:FlmSyncRequest", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-service/app/api/flm_routes.py:start_flm_sync", "target": "file:BackEnd/intelipath-service/app/scrapers/flm/sync_job.py", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-service/app/api/flm_routes.py:get_flm_sync", "target": "file:BackEnd/intelipath-service/app/scrapers/flm/sync_job.py", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:_process_and_collect", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:start_topcv_scrape", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:start_itviec_scrape", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:_process_and_collect", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:start_topcv_scrape", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-service/app/api/recruitment_routes.py", "target": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:start_itviec_scrape", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:_process_and_collect", "target": "file:BackEnd/intelipath-service/app/scrapers/processor.py", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:start_topcv_scrape", "target": "file:BackEnd/intelipath-service/app/scrapers/parsers/topcv_parser.py", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-service/app/api/recruitment_routes.py:start_itviec_scrape", "target": "file:BackEnd/intelipath-service/app/scrapers/parsers/itviec_parser.py", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-service/app/api/security.py", "target": "function:BackEnd/intelipath-service/app/api/security.py:verify_api_key", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/api/security.py", "target": "function:BackEnd/intelipath-service/app/api/security.py:verify_api_key", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "config:BackEnd/intelipath-service/app/config/config.py", "target": "class:BackEnd/intelipath-service/app/config/config.py:Settings", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "config:BackEnd/intelipath-service/app/config/config.py", "target": "class:BackEnd/intelipath-service/app/config/config.py:Settings", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "config:BackEnd/intelipath-service/app/config/config.py", "target": "file:BackEnd/intelipath-service/app/api/security.py", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:BackEnd/intelipath-service/app/config/config.py", "target": "file:BackEnd/intelipath-service/app/db/database.py", "type": "configures", "direction": "forward", "weight": 0.6},
+
+    {"source": "file:BackEnd/intelipath-service/app/db/database.py", "target": "function:BackEnd/intelipath-service/app/db/database.py:get_db", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/db/database.py", "target": "function:BackEnd/intelipath-service/app/db/database.py:get_db", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:Company", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:ProcessedCompany", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:Recruitment", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:ProcessedRecruitment", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:RecruitmentPost", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:Company", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:ProcessedCompany", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:Recruitment", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:ProcessedRecruitment", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-service/app/db/models.py", "target": "class:BackEnd/intelipath-service/app/db/models.py:RecruitmentPost", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-service/app/mcp_server.py", "target": "function:BackEnd/intelipath-service/app/mcp_server.py:extract_document", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/mcp_server.py", "target": "function:BackEnd/intelipath-service/app/mcp_server.py:extract_document", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-service/app/mcp_server.py:extract_document", "target": "file:BackEnd/intelipath-service/app/services/markitdown_service.py", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py", "target": "class:BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py:CurlEngine", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py", "target": "class:BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py:CurlEngine", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-service/app/main.py", "target": "file:BackEnd/intelipath-service/app/db/models.py", "type": "depends_on", "direction": "forward", "weight": 0.6}
+  ]
+}

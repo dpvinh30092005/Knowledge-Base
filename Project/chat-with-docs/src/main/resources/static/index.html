@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Docs</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Markdown render + sanitize (model-generated content, so XSS must be stripped) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+    <!-- defer preserves order: marked and dompurify load before app.js, and the DOM is parsed first -->
+    <script defer src="js/app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Chat with Docs</h1>
+        <span>Ask questions about your documents</span>
+    </header>
+
+    <main>
+        <aside>
+            <div>
+                <h2>Upload</h2>
+                <label class="upload-box" for="fileInput">
+                    <strong>Choose a file</strong> to upload
+                    <p>PDF, DOCX, TXT — up to 20 MB</p>
+                </label>
+                <input type="file" id="fileInput" accept=".pdf,.docx,.txt,.md">
+            </div>
+            <div>
+                <h2>Documents</h2>
+                <ul class="doc-list" id="docList">
+                    <li class="empty" id="docEmpty">No documents yet.</li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="chat">
+            <div id="messages">
+                <div class="welcome" id="welcome">
+                    <h3>Start a conversation</h3>
+                    <p>Upload a document in the left panel, then ask questions about its content. Answers stream in and include source citations.</p>
+                </div>
+            </div>
+            <footer>
+                <textarea id="question" rows="1" placeholder="Ask a question…"></textarea>
+                <button class="send" id="sendBtn">Send</button>
+            </footer>
+        </section>
+    </main>
+
+    <div class="toast" id="toast"></div>
+</body>
+</html>

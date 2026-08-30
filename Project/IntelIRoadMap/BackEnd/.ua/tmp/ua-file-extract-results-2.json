@@ -1,0 +1,4289 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 30,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 30,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 30,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 127,
+      "nonEmptyLines": 112,
+      "functions": [
+        {
+          "name": "AiServiceClient",
+          "startLine": 27,
+          "endLine": 31,
+          "params": [
+            "aiServiceRestClient",
+            "aiServiceScraperClient",
+            "aiServiceHealthClient"
+          ]
+        },
+        {
+          "name": "extractSkills",
+          "startLine": 41,
+          "endLine": 51,
+          "params": [
+            "descriptions"
+          ]
+        },
+        {
+          "name": "extractMarkdown",
+          "startLine": 58,
+          "endLine": 66,
+          "params": [
+            "fileUrl"
+          ]
+        },
+        {
+          "name": "triggerTopCvScrape",
+          "startLine": 72,
+          "endLine": 77,
+          "params": [
+            "limit"
+          ]
+        },
+        {
+          "name": "triggerItviecScrape",
+          "startLine": 84,
+          "endLine": 89,
+          "params": [
+            "limit"
+          ]
+        },
+        {
+          "name": "startFlmSync",
+          "startLine": 100,
+          "endLine": 107,
+          "params": [
+            "body"
+          ]
+        },
+        {
+          "name": "getFlmSyncStatus",
+          "startLine": 110,
+          "endLine": 115,
+          "params": [
+            "jobId"
+          ]
+        },
+        {
+          "name": "isHealthy",
+          "startLine": 118,
+          "endLine": 126,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "AiServiceClient",
+          "startLine": 19,
+          "endLine": 127,
+          "methods": [
+            "AiServiceClient",
+            "extractSkills",
+            "extractMarkdown",
+            "triggerTopCvScrape",
+            "triggerItviecScrape",
+            "startFlmSync",
+            "getFlmSyncStatus",
+            "isHealthy"
+          ],
+          "properties": [
+            "restClient",
+            "scraperClient",
+            "healthClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AiServiceClient",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "extractSkills",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "extractMarkdown",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "triggerTopCvScrape",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "triggerItviecScrape",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "startFlmSync",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getFlmSyncStatus",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "isHealthy",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "AiServiceClient",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "extractSkills",
+          "callee": "scraperClient.post()\n                .uri(\"/api/extract-skills\")\n                .body(new SkillExtractionRequest(descriptions))\n                .retrieve().body",
+          "lineNumber": 45
+        },
+        {
+          "caller": "extractSkills",
+          "callee": "scraperClient.post()\n                .uri(\"/api/extract-skills\")\n                .body(new SkillExtractionRequest(descriptions)).retrieve",
+          "lineNumber": 45
+        },
+        {
+          "caller": "extractSkills",
+          "callee": "scraperClient.post()\n                .uri(\"/api/extract-skills\").body",
+          "lineNumber": 45
+        },
+        {
+          "caller": "extractSkills",
+          "callee": "scraperClient.post().uri",
+          "lineNumber": 45
+        },
+        {
+          "caller": "extractSkills",
+          "callee": "scraperClient.post",
+          "lineNumber": 45
+        },
+        {
+          "caller": "extractSkills",
+          "callee": "new SkillExtractionRequest",
+          "lineNumber": 47
+        },
+        {
+          "caller": "extractSkills",
+          "callee": "response.skillsPerDoc",
+          "lineNumber": 50
+        },
+        {
+          "caller": "extractSkills",
+          "callee": "response.skillsPerDoc",
+          "lineNumber": 50
+        },
+        {
+          "caller": "extractSkills",
+          "callee": "List.of",
+          "lineNumber": 50
+        },
+        {
+          "caller": "extractMarkdown",
+          "callee": "restClient.post()\n                .uri(\"/api/extract\")\n                .body(Map.of(\"url\", fileUrl))\n                .retrieve().body",
+          "lineNumber": 59
+        },
+        {
+          "caller": "extractMarkdown",
+          "callee": "restClient.post()\n                .uri(\"/api/extract\")\n                .body(Map.of(\"url\", fileUrl)).retrieve",
+          "lineNumber": 59
+        },
+        {
+          "caller": "extractMarkdown",
+          "callee": "restClient.post()\n                .uri(\"/api/extract\").body",
+          "lineNumber": 59
+        },
+        {
+          "caller": "extractMarkdown",
+          "callee": "restClient.post().uri",
+          "lineNumber": 59
+        },
+        {
+          "caller": "extractMarkdown",
+          "callee": "restClient.post",
+          "lineNumber": 59
+        },
+        {
+          "caller": "extractMarkdown",
+          "callee": "Map.of",
+          "lineNumber": 61
+        },
+        {
+          "caller": "extractMarkdown",
+          "callee": "response.get",
+          "lineNumber": 64
+        },
+        {
+          "caller": "extractMarkdown",
+          "callee": "markdown.toString",
+          "lineNumber": 65
+        },
+        {
+          "caller": "triggerTopCvScrape",
+          "callee": "scraperClient.get()\n                .uri(\"/api/v1/scraper/scrape/topcv/{limit}\", limit)\n                .retrieve().body",
+          "lineNumber": 73
+        },
+        {
+          "caller": "triggerTopCvScrape",
+          "callee": "scraperClient.get()\n                .uri(\"/api/v1/scraper/scrape/topcv/{limit}\", limit).retrieve",
+          "lineNumber": 73
+        },
+        {
+          "caller": "triggerTopCvScrape",
+          "callee": "scraperClient.get().uri",
+          "lineNumber": 73
+        },
+        {
+          "caller": "triggerTopCvScrape",
+          "callee": "scraperClient.get",
+          "lineNumber": 73
+        },
+        {
+          "caller": "triggerItviecScrape",
+          "callee": "scraperClient.get()\n                .uri(\"/api/v1/scraper/scrape/itviec/{limit}\", limit)\n                .retrieve().body",
+          "lineNumber": 85
+        },
+        {
+          "caller": "triggerItviecScrape",
+          "callee": "scraperClient.get()\n                .uri(\"/api/v1/scraper/scrape/itviec/{limit}\", limit).retrieve",
+          "lineNumber": 85
+        },
+        {
+          "caller": "triggerItviecScrape",
+          "callee": "scraperClient.get().uri",
+          "lineNumber": 85
+        },
+        {
+          "caller": "triggerItviecScrape",
+          "callee": "scraperClient.get",
+          "lineNumber": 85
+        },
+        {
+          "caller": "startFlmSync",
+          "callee": "restClient.post()\n                .uri(\"/api/v1/flm/sync\")\n                .body(body)\n                .retrieve().body",
+          "lineNumber": 101
+        },
+        {
+          "caller": "startFlmSync",
+          "callee": "restClient.post()\n                .uri(\"/api/v1/flm/sync\")\n                .body(body).retrieve",
+          "lineNumber": 101
+        },
+        {
+          "caller": "startFlmSync",
+          "callee": "restClient.post()\n                .uri(\"/api/v1/flm/sync\").body",
+          "lineNumber": 101
+        },
+        {
+          "caller": "startFlmSync",
+          "callee": "restClient.post().uri",
+          "lineNumber": 101
+        },
+        {
+          "caller": "startFlmSync",
+          "callee": "restClient.post",
+          "lineNumber": 101
+        },
+        {
+          "caller": "startFlmSync",
+          "callee": "response.jobId",
+          "lineNumber": 106
+        },
+        {
+          "caller": "getFlmSyncStatus",
+          "callee": "restClient.get()\n                .uri(\"/api/v1/flm/sync/{jobId}\", jobId)\n                .retrieve().body",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getFlmSyncStatus",
+          "callee": "restClient.get()\n                .uri(\"/api/v1/flm/sync/{jobId}\", jobId).retrieve",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getFlmSyncStatus",
+          "callee": "restClient.get().uri",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getFlmSyncStatus",
+          "callee": "restClient.get",
+          "lineNumber": 111
+        },
+        {
+          "caller": "isHealthy",
+          "callee": "healthClient.get().uri(\"/\").retrieve().toBodilessEntity",
+          "lineNumber": 120
+        },
+        {
+          "caller": "isHealthy",
+          "callee": "healthClient.get().uri(\"/\").retrieve",
+          "lineNumber": 120
+        },
+        {
+          "caller": "isHealthy",
+          "callee": "healthClient.get().uri",
+          "lineNumber": 120
+        },
+        {
+          "caller": "isHealthy",
+          "callee": "healthClient.get",
+          "lineNumber": 120
+        },
+        {
+          "caller": "isHealthy",
+          "callee": "log.warn",
+          "lineNumber": 123
+        },
+        {
+          "caller": "isHealthy",
+          "callee": "e.getMessage",
+          "lineNumber": 123
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 9,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 88,
+      "nonEmptyLines": 75,
+      "functions": [
+        {
+          "name": "apply",
+          "startLine": 29,
+          "endLine": 50,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "searchJobs",
+          "startLine": 58,
+          "endLine": 87,
+          "params": [
+            "keyword"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "JobMarketTool",
+          "startLine": 17,
+          "endLine": 88,
+          "methods": [
+            "apply",
+            "searchJobs"
+          ],
+          "properties": [
+            "recruitmentRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "apply",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "JobMarketTool",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "apply",
+          "callee": "log.info",
+          "lineNumber": 31
+        },
+        {
+          "caller": "apply",
+          "callee": "request.keyword",
+          "lineNumber": 31
+        },
+        {
+          "caller": "apply",
+          "callee": "searchJobs",
+          "lineNumber": 32
+        },
+        {
+          "caller": "apply",
+          "callee": "request.keyword",
+          "lineNumber": 32
+        },
+        {
+          "caller": "apply",
+          "callee": "recruitments.isEmpty",
+          "lineNumber": 34
+        },
+        {
+          "caller": "apply",
+          "callee": "new Response",
+          "lineNumber": 35
+        },
+        {
+          "caller": "apply",
+          "callee": "List.of",
+          "lineNumber": 35
+        },
+        {
+          "caller": "apply",
+          "callee": "request.keyword",
+          "lineNumber": 35
+        },
+        {
+          "caller": "apply",
+          "callee": "recruitments.stream()\n                .map(r -> new JobData(\n                        com.inteliroadmap.backend.mappers.ScraperMapper.str(r.getRecruitmentInfos(), \"title\"),\n                        com.inteliroadmap.backend.mappers.ScraperMapper.str(r.getRecruitmentInfos(), \"salary\"),\n                        com.inteliroadmap.backend.mappers.ScraperMapper.str(r.getRecruitmentInfos(), \"location\"),\n                        com.inteliroadmap.backend.mappers.ScraperMapper.str(r.getRecruitmentInfos(), \"experience\"),\n                        com.inteliroadmap.backend.mappers.ScraperMapper.str(r.getRecruitmentInfos(), \"link\")\n                )).collect",
+          "lineNumber": 38
+        },
+        {
+          "caller": "apply",
+          "callee": "recruitments.stream().map",
+          "lineNumber": 38
+        },
+        {
+          "caller": "apply",
+          "callee": "recruitments.stream",
+          "lineNumber": 38
+        },
+        {
+          "caller": "apply",
+          "callee": "new JobData",
+          "lineNumber": 39
+        },
+        {
+          "caller": "apply",
+          "callee": "com.inteliroadmap.backend.mappers.ScraperMapper.str",
+          "lineNumber": 40
+        },
+        {
+          "caller": "apply",
+          "callee": "r.getRecruitmentInfos",
+          "lineNumber": 40
+        },
+        {
+          "caller": "apply",
+          "callee": "com.inteliroadmap.backend.mappers.ScraperMapper.str",
+          "lineNumber": 41
+        },
+        {
+          "caller": "apply",
+          "callee": "r.getRecruitmentInfos",
+          "lineNumber": 41
+        },
+        {
+          "caller": "apply",
+          "callee": "com.inteliroadmap.backend.mappers.ScraperMapper.str",
+          "lineNumber": 42
+        },
+        {
+          "caller": "apply",
+          "callee": "r.getRecruitmentInfos",
+          "lineNumber": 42
+        },
+        {
+          "caller": "apply",
+          "callee": "com.inteliroadmap.backend.mappers.ScraperMapper.str",
+          "lineNumber": 43
+        },
+        {
+          "caller": "apply",
+          "callee": "r.getRecruitmentInfos",
+          "lineNumber": 43
+        },
+        {
+          "caller": "apply",
+          "callee": "com.inteliroadmap.backend.mappers.ScraperMapper.str",
+          "lineNumber": 44
+        },
+        {
+          "caller": "apply",
+          "callee": "r.getRecruitmentInfos",
+          "lineNumber": 44
+        },
+        {
+          "caller": "apply",
+          "callee": "Collectors.toList",
+          "lineNumber": 46
+        },
+        {
+          "caller": "apply",
+          "callee": "String.format",
+          "lineNumber": 48
+        },
+        {
+          "caller": "apply",
+          "callee": "jobs.size",
+          "lineNumber": 48
+        },
+        {
+          "caller": "apply",
+          "callee": "request.keyword",
+          "lineNumber": 48
+        },
+        {
+          "caller": "apply",
+          "callee": "new Response",
+          "lineNumber": 49
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "keyword.trim",
+          "lineNumber": 59
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "phrase.isEmpty",
+          "lineNumber": 60
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "List.of",
+          "lineNumber": 61
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "recruitmentRepository.findTop10ByTitleContainingIgnoreCase",
+          "lineNumber": 64
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "exact.isEmpty",
+          "lineNumber": 65
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 70
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "new HashMap<>",
+          "lineNumber": 71
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "phrase.split",
+          "lineNumber": 72
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "token.length",
+          "lineNumber": 73
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "recruitmentRepository.findTop10ByTitleContainingIgnoreCase",
+          "lineNumber": 76
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "r.getTopCvRecruitmentId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "byId.putIfAbsent",
+          "lineNumber": 78
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "score.merge",
+          "lineNumber": 79
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "byId.values().stream()\n                .sorted((a, b) -> score.get(b.getTopCvRecruitmentId()) - score.get(a.getTopCvRecruitmentId()))\n                .limit(10).collect",
+          "lineNumber": 83
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "byId.values().stream()\n                .sorted((a, b) -> score.get(b.getTopCvRecruitmentId()) - score.get(a.getTopCvRecruitmentId())).limit",
+          "lineNumber": 83
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "byId.values().stream().sorted",
+          "lineNumber": 83
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "byId.values().stream",
+          "lineNumber": 83
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "byId.values",
+          "lineNumber": 83
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "score.get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "b.getTopCvRecruitmentId",
+          "lineNumber": 84
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "score.get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "a.getTopCvRecruitmentId",
+          "lineNumber": 84
+        },
+        {
+          "caller": "searchJobs",
+          "callee": "Collectors.toList",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "apply",
+          "startLine": 26,
+          "endLine": 51,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MarkItDownTool",
+          "startLine": 16,
+          "endLine": 52,
+          "methods": [
+            "apply"
+          ],
+          "properties": [
+            "aiServiceClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "apply",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "MarkItDownTool",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "apply",
+          "callee": "log.info",
+          "lineNumber": 28
+        },
+        {
+          "caller": "apply",
+          "callee": "request.fileUrl",
+          "lineNumber": 28
+        },
+        {
+          "caller": "apply",
+          "callee": "request.fileUrl",
+          "lineNumber": 30
+        },
+        {
+          "caller": "apply",
+          "callee": "request.fileUrl().isBlank",
+          "lineNumber": 30
+        },
+        {
+          "caller": "apply",
+          "callee": "request.fileUrl",
+          "lineNumber": 30
+        },
+        {
+          "caller": "apply",
+          "callee": "aiServiceClient.extractMarkdown",
+          "lineNumber": 35
+        },
+        {
+          "caller": "apply",
+          "callee": "request.fileUrl",
+          "lineNumber": 35
+        },
+        {
+          "caller": "apply",
+          "callee": "markdown.isBlank",
+          "lineNumber": 36
+        },
+        {
+          "caller": "apply",
+          "callee": "log.info",
+          "lineNumber": 40
+        },
+        {
+          "caller": "apply",
+          "callee": "markdown.length",
+          "lineNumber": 40
+        },
+        {
+          "caller": "apply",
+          "callee": "request.fileUrl",
+          "lineNumber": 40
+        },
+        {
+          "caller": "apply",
+          "callee": "log.error",
+          "lineNumber": 43
+        },
+        {
+          "caller": "apply",
+          "callee": "log.error",
+          "lineNumber": 47
+        },
+        {
+          "caller": "apply",
+          "callee": "request.fileUrl",
+          "lineNumber": 47
+        },
+        {
+          "caller": "apply",
+          "callee": "e.getMessage",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "getTopHiringCompanies",
+          "startLine": 28,
+          "endLine": 33,
+          "params": [
+            "limit"
+          ]
+        },
+        {
+          "name": "getSkillTrends",
+          "startLine": 35,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "getSalaryDistribution",
+          "startLine": 41,
+          "endLine": 45,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MarketTrendController",
+          "startLine": 19,
+          "endLine": 46,
+          "methods": [
+            "getTopHiringCompanies",
+            "getSkillTrends",
+            "getSalaryDistribution"
+          ],
+          "properties": [
+            "marketTrendService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getTopHiringCompanies",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "getSkillTrends",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "getSalaryDistribution",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "MarketTrendController",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 32
+        },
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "marketTrendService.getTopHiringCompanies",
+          "lineNumber": 32
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "marketTrendService.getSkillTrends",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "marketTrendService.getSalaryDistribution",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 114,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "getRecruitmentPosts",
+          "startLine": 34,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "getCompanyInfos",
+          "startLine": 61,
+          "endLine": 86,
+          "params": [
+            "companyId"
+          ]
+        },
+        {
+          "name": "getRecruitmentInfos",
+          "startLine": 88,
+          "endLine": 113,
+          "params": [
+            "recruitmentId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RecruitmentPostsController",
+          "startLine": 24,
+          "endLine": 114,
+          "methods": [
+            "getRecruitmentPosts",
+            "getCompanyInfos",
+            "getRecruitmentInfos"
+          ],
+          "properties": [
+            "scraperService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getRecruitmentPosts",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "getCompanyInfos",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "getRecruitmentInfos",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "RecruitmentPostsController",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "log.info",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "scraperService.getRecruitmentPosts",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "log.info",
+          "lineNumber": 84
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "scraperService.getCompanyInfos",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "log.info",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 112
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "scraperService.getRecruitmentInfos",
+          "lineNumber": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "MarketTrendResponse",
+          "startLine": 9,
+          "endLine": 41,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MarketTrendResponse",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "CompanyResponse",
+          "startLine": 11,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "companyId",
+            "companyLink",
+            "logo",
+            "name",
+            "introductions",
+            "infos",
+            "contacts"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CompanyResponse",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 42,
+      "classes": [
+        {
+          "name": "RecruitmentPostResponse",
+          "startLine": 13,
+          "endLine": 49,
+          "methods": [],
+          "properties": [
+            "postId",
+            "company",
+            "recruitment"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RecruitmentPostResponse",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 23,
+      "classes": [
+        {
+          "name": "RecruitmentResponse",
+          "startLine": 10,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "topCvRecruitmentId",
+            "recruitmentLink",
+            "title",
+            "salary",
+            "location",
+            "experience",
+            "applicationDeadline",
+            "tags",
+            "descriptions",
+            "generalInfos",
+            "relatedTags"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RecruitmentResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "ScrapedCompanyResponse",
+          "startLine": 8,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "companyId",
+            "signatures",
+            "infos"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScrapedCompanyResponse",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "ScrapedPostResponse",
+          "startLine": 6,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "postId",
+            "companyId",
+            "recruitmentId",
+            "expireAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScrapedPostResponse",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "ScrapedRecruitmentResponse",
+          "startLine": 8,
+          "endLine": 25,
+          "methods": [],
+          "properties": [
+            "recruitmentId",
+            "recruitmentInfos",
+            "descriptions",
+            "postedDate",
+            "applicationDeadline"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScrapedRecruitmentResponse",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "ScraperResponse",
+          "startLine": 7,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "recruitmentPosts",
+            "companies",
+            "recruitments"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScraperResponse",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 36,
+      "classes": [
+        {
+          "name": "Company",
+          "startLine": 22,
+          "endLine": 42,
+          "methods": [],
+          "properties": [
+            "topCvCompanyId",
+            "signatures",
+            "infos"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Company",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 41,
+      "classes": [
+        {
+          "name": "Recruitment",
+          "startLine": 23,
+          "endLine": 49,
+          "methods": [],
+          "properties": [
+            "topCvRecruitmentId",
+            "recruitmentInfos",
+            "descriptions",
+            "postedDate",
+            "applicationDeadline"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Recruitment",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 40,
+      "classes": [
+        {
+          "name": "RecruitmentPost",
+          "startLine": 23,
+          "endLine": 47,
+          "methods": [],
+          "properties": [
+            "postId",
+            "company",
+            "recruitment",
+            "expiredAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RecruitmentPost",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 36,
+      "classes": [
+        {
+          "name": "SkillTrend",
+          "startLine": 21,
+          "endLine": 43,
+          "methods": [],
+          "properties": [
+            "trendId",
+            "skill",
+            "jobsNeeded",
+            "weekStamp"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SkillTrend",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "toCompanyTrendResponse",
+          "startLine": 15,
+          "endLine": 27,
+          "params": [
+            "company",
+            "recruitmentCount"
+          ]
+        },
+        {
+          "name": "toTrendDataPoint",
+          "startLine": 29,
+          "endLine": 37,
+          "params": [
+            "skillTrend"
+          ]
+        },
+        {
+          "name": "toSkillTrendResponse",
+          "startLine": 39,
+          "endLine": 56,
+          "params": [
+            "skillName",
+            "skillTrends"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "MarketTrendMapper",
+          "startLine": 12,
+          "endLine": 57,
+          "methods": [
+            "toCompanyTrendResponse",
+            "toTrendDataPoint",
+            "toSkillTrendResponse"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "toCompanyTrendResponse",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "toTrendDataPoint",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "toSkillTrendResponse",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "MarketTrendMapper",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "company.getSignatures",
+          "lineNumber": 19
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "MarketTrendResponse.CompanyTrendResponse.builder()\r\n                .topCvCompanyId(company.getTopCvCompanyId())\r\n                .name(ScraperMapper.str(sig, \"name\"))\r\n                .logo(ScraperMapper.str(sig, \"logo\"))\r\n                .companyLink(ScraperMapper.str(sig, \"link\"))\r\n                .recruitmentCount((int) recruitmentCount).build",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "MarketTrendResponse.CompanyTrendResponse.builder()\r\n                .topCvCompanyId(company.getTopCvCompanyId())\r\n                .name(ScraperMapper.str(sig, \"name\"))\r\n                .logo(ScraperMapper.str(sig, \"logo\"))\r\n                .companyLink(ScraperMapper.str(sig, \"link\")).recruitmentCount",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "MarketTrendResponse.CompanyTrendResponse.builder()\r\n                .topCvCompanyId(company.getTopCvCompanyId())\r\n                .name(ScraperMapper.str(sig, \"name\"))\r\n                .logo(ScraperMapper.str(sig, \"logo\")).companyLink",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "MarketTrendResponse.CompanyTrendResponse.builder()\r\n                .topCvCompanyId(company.getTopCvCompanyId())\r\n                .name(ScraperMapper.str(sig, \"name\")).logo",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "MarketTrendResponse.CompanyTrendResponse.builder()\r\n                .topCvCompanyId(company.getTopCvCompanyId()).name",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "MarketTrendResponse.CompanyTrendResponse.builder().topCvCompanyId",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "MarketTrendResponse.CompanyTrendResponse.builder",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "company.getTopCvCompanyId",
+          "lineNumber": 21
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "ScraperMapper.str",
+          "lineNumber": 22
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "ScraperMapper.str",
+          "lineNumber": 23
+        },
+        {
+          "caller": "toCompanyTrendResponse",
+          "callee": "ScraperMapper.str",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toTrendDataPoint",
+          "callee": "MarketTrendResponse.TrendDataPoint.builder()\r\n                .date(skillTrend.getWeekStamp())\r\n                .jobsNeeded(skillTrend.getJobsNeeded() != null ? skillTrend.getJobsNeeded() : 0).build",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toTrendDataPoint",
+          "callee": "MarketTrendResponse.TrendDataPoint.builder()\r\n                .date(skillTrend.getWeekStamp()).jobsNeeded",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toTrendDataPoint",
+          "callee": "MarketTrendResponse.TrendDataPoint.builder().date",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toTrendDataPoint",
+          "callee": "MarketTrendResponse.TrendDataPoint.builder",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toTrendDataPoint",
+          "callee": "skillTrend.getWeekStamp",
+          "lineNumber": 34
+        },
+        {
+          "caller": "toTrendDataPoint",
+          "callee": "skillTrend.getJobsNeeded",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toTrendDataPoint",
+          "callee": "skillTrend.getJobsNeeded",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "MarketTrendResponse.SkillTrendResponse.builder()\r\n                    .skillName(skillName)\r\n                    .dataPoints(List.of()).build",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "MarketTrendResponse.SkillTrendResponse.builder()\r\n                    .skillName(skillName).dataPoints",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "MarketTrendResponse.SkillTrendResponse.builder().skillName",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "MarketTrendResponse.SkillTrendResponse.builder",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "List.of",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "skillTrends.stream()\r\n                .sorted(Comparator.comparing(SkillTrend::getWeekStamp))\r\n                .map(this::toTrendDataPoint).collect",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "skillTrends.stream()\r\n                .sorted(Comparator.comparing(SkillTrend::getWeekStamp)).map",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "skillTrends.stream().sorted",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "skillTrends.stream",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "Comparator.comparing",
+          "lineNumber": 48
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "Collectors.toList",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "MarketTrendResponse.SkillTrendResponse.builder()\r\n                .skillName(skillName)\r\n                .dataPoints(dataPoints).build",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "MarketTrendResponse.SkillTrendResponse.builder()\r\n                .skillName(skillName).dataPoints",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "MarketTrendResponse.SkillTrendResponse.builder().skillName",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toSkillTrendResponse",
+          "callee": "MarketTrendResponse.SkillTrendResponse.builder",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "str",
+          "startLine": 18,
+          "endLine": 21,
+          "params": [
+            "map",
+            "key"
+          ]
+        },
+        {
+          "name": "toCompanyResponse",
+          "startLine": 23,
+          "endLine": 35,
+          "params": [
+            "company"
+          ]
+        },
+        {
+          "name": "toRecruitmentResponse",
+          "startLine": 37,
+          "endLine": 53,
+          "params": [
+            "recruitment"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScraperMapper",
+          "startLine": 14,
+          "endLine": 54,
+          "methods": [
+            "str",
+            "toCompanyResponse",
+            "toRecruitmentResponse"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "str",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "toCompanyResponse",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "toRecruitmentResponse",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "ScraperMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "str",
+          "callee": "map.get",
+          "lineNumber": 19
+        },
+        {
+          "caller": "str",
+          "callee": "v.toString",
+          "lineNumber": 20
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "company.getSignatures",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "company.getInfos",
+          "lineNumber": 25
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder()\r\n                .companyId(company.getTopCvCompanyId())\r\n                .companyLink(str(sig, \"link\"))\r\n                .name(str(sig, \"name\"))\r\n                .logo(str(sig, \"logo\"))\r\n                .introductions(null)\r\n                .infos(infos)\r\n                .contacts(str(infos, \"contact\") != null ? List.of(str(infos, \"contact\")) : null).build",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder()\r\n                .companyId(company.getTopCvCompanyId())\r\n                .companyLink(str(sig, \"link\"))\r\n                .name(str(sig, \"name\"))\r\n                .logo(str(sig, \"logo\"))\r\n                .introductions(null)\r\n                .infos(infos).contacts",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder()\r\n                .companyId(company.getTopCvCompanyId())\r\n                .companyLink(str(sig, \"link\"))\r\n                .name(str(sig, \"name\"))\r\n                .logo(str(sig, \"logo\"))\r\n                .introductions(null).infos",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder()\r\n                .companyId(company.getTopCvCompanyId())\r\n                .companyLink(str(sig, \"link\"))\r\n                .name(str(sig, \"name\"))\r\n                .logo(str(sig, \"logo\")).introductions",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder()\r\n                .companyId(company.getTopCvCompanyId())\r\n                .companyLink(str(sig, \"link\"))\r\n                .name(str(sig, \"name\")).logo",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder()\r\n                .companyId(company.getTopCvCompanyId())\r\n                .companyLink(str(sig, \"link\")).name",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder()\r\n                .companyId(company.getTopCvCompanyId()).companyLink",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder().companyId",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "CompanyResponse.builder",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "company.getTopCvCompanyId",
+          "lineNumber": 27
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "str",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "str",
+          "lineNumber": 29
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "str",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "str",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "List.of",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toCompanyResponse",
+          "callee": "str",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 39
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\"))\r\n                .salary(str(info, \"salary\"))\r\n                .location(str(info, \"location\"))\r\n                .experience(str(info, \"experience\"))\r\n                .applicationDeadline(recruitment.getApplicationDeadline())\r\n                .tags(desc != null ? desc.get(\"tags\") : null)\r\n                .descriptions(desc)\r\n                .generalInfos(desc != null ? desc.get(\"general_infos\") : null)\r\n                .relatedTags(desc != null ? desc.get(\"related_tags\") : null).build",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\"))\r\n                .salary(str(info, \"salary\"))\r\n                .location(str(info, \"location\"))\r\n                .experience(str(info, \"experience\"))\r\n                .applicationDeadline(recruitment.getApplicationDeadline())\r\n                .tags(desc != null ? desc.get(\"tags\") : null)\r\n                .descriptions(desc)\r\n                .generalInfos(desc != null ? desc.get(\"general_infos\") : null).relatedTags",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\"))\r\n                .salary(str(info, \"salary\"))\r\n                .location(str(info, \"location\"))\r\n                .experience(str(info, \"experience\"))\r\n                .applicationDeadline(recruitment.getApplicationDeadline())\r\n                .tags(desc != null ? desc.get(\"tags\") : null)\r\n                .descriptions(desc).generalInfos",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\"))\r\n                .salary(str(info, \"salary\"))\r\n                .location(str(info, \"location\"))\r\n                .experience(str(info, \"experience\"))\r\n                .applicationDeadline(recruitment.getApplicationDeadline())\r\n                .tags(desc != null ? desc.get(\"tags\") : null).descriptions",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\"))\r\n                .salary(str(info, \"salary\"))\r\n                .location(str(info, \"location\"))\r\n                .experience(str(info, \"experience\"))\r\n                .applicationDeadline(recruitment.getApplicationDeadline()).tags",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\"))\r\n                .salary(str(info, \"salary\"))\r\n                .location(str(info, \"location\"))\r\n                .experience(str(info, \"experience\")).applicationDeadline",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\"))\r\n                .salary(str(info, \"salary\"))\r\n                .location(str(info, \"location\")).experience",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\"))\r\n                .salary(str(info, \"salary\")).location",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\"))\r\n                .title(str(info, \"title\")).salary",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\r\n                .recruitmentLink(str(info, \"link\")).title",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder()\r\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId()).recruitmentLink",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder().topCvRecruitmentId",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "RecruitmentResponse.builder",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "recruitment.getTopCvRecruitmentId",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "str",
+          "lineNumber": 42
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "str",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "str",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "str",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "str",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "recruitment.getApplicationDeadline",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "desc.get",
+          "lineNumber": 48
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "desc.get",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toRecruitmentResponse",
+          "callee": "desc.get",
+          "lineNumber": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "CompanyRepository",
+          "startLine": 10,
+          "endLine": 20,
+          "methods": [
+            "findByTopCvCompanyId",
+            "findTopHiringCompaniesWithCount"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CompanyRepository",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "RecruitmentPostRepository",
+          "startLine": 12,
+          "endLine": 18,
+          "methods": [
+            "findFirstByCompany_TopCvCompanyIdAndRecruitment_TopCvRecruitmentId",
+            "deleteByExpiredAtBefore"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RecruitmentPostRepository",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "RecruitmentRepository",
+          "startLine": 11,
+          "endLine": 21,
+          "methods": [
+            "existsByTopCvRecruitmentId",
+            "findByTopCvRecruitmentId",
+            "findTop10ByTitleContainingIgnoreCase",
+            "findAllSalaries"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RecruitmentRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "SkillTrendRepository",
+          "startLine": 10,
+          "endLine": 13,
+          "methods": [
+            "findBySkill_SkillIdInOrderByWeekStampAsc"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SkillTrendRepository",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 141,
+      "nonEmptyLines": 124,
+      "functions": [
+        {
+          "name": "fetchJobsFromPython",
+          "startLine": 44,
+          "endLine": 52,
+          "params": []
+        },
+        {
+          "name": "fetchJobs",
+          "startLine": 64,
+          "endLine": 86,
+          "params": [
+            "source"
+          ]
+        },
+        {
+          "name": "persistScrapedData",
+          "startLine": 88,
+          "endLine": 140,
+          "params": [
+            "response"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "JobScrapingScheduler",
+          "startLine": 26,
+          "endLine": 141,
+          "methods": [
+            "fetchJobsFromPython",
+            "fetchJobs",
+            "persistScrapedData"
+          ],
+          "properties": [
+            "scraperLimit",
+            "aiServiceClient",
+            "companyRepository",
+            "recruitmentRepository",
+            "recruitmentPostRepository",
+            "transactionTemplate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "fetchJobsFromPython",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "fetchJobs",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "JobScrapingScheduler",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fetchJobsFromPython",
+          "callee": "fetchJobs",
+          "lineNumber": 48
+        },
+        {
+          "caller": "fetchJobsFromPython",
+          "callee": "log.error",
+          "lineNumber": 50
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "log.info",
+          "lineNumber": 66
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "aiServiceClient.triggerTopCvScrape",
+          "lineNumber": 71
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "aiServiceClient.triggerItviecScrape",
+          "lineNumber": 72
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "log.warn",
+          "lineNumber": 75
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "log.info",
+          "lineNumber": 79
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "response.getCompanies().size",
+          "lineNumber": 80
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "response.getCompanies",
+          "lineNumber": 80
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "response.getRecruitments().size",
+          "lineNumber": 80
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "response.getRecruitments",
+          "lineNumber": 80
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "response.getRecruitmentPosts().size",
+          "lineNumber": 80
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "response.getRecruitmentPosts",
+          "lineNumber": 80
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "transactionTemplate.executeWithoutResult",
+          "lineNumber": 83
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "persistScrapedData",
+          "lineNumber": 83
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "log.info",
+          "lineNumber": 84
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "response.getRecruitmentPosts().size",
+          "lineNumber": 85
+        },
+        {
+          "caller": "fetchJobs",
+          "callee": "response.getRecruitmentPosts",
+          "lineNumber": 85
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "response.getCompanies",
+          "lineNumber": 90
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "companyRepository.findById(cDto.getCompanyId()).orElse",
+          "lineNumber": 91
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "companyRepository.findById",
+          "lineNumber": 91
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "cDto.getCompanyId",
+          "lineNumber": 91
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "new Company",
+          "lineNumber": 91
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "company.setTopCvCompanyId",
+          "lineNumber": 92
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "cDto.getCompanyId",
+          "lineNumber": 92
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "company.setSignatures",
+          "lineNumber": 93
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "cDto.getSignatures",
+          "lineNumber": 93
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "company.setInfos",
+          "lineNumber": 94
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "cDto.getInfos",
+          "lineNumber": 94
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "companyRepository.save",
+          "lineNumber": 95
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "DateTimeFormatter.ofPattern",
+          "lineNumber": 99
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "response.getRecruitments",
+          "lineNumber": 100
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitmentRepository.findById(rDto.getRecruitmentId()).orElse",
+          "lineNumber": 101
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitmentRepository.findById",
+          "lineNumber": 101
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rDto.getRecruitmentId",
+          "lineNumber": 101
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "new Recruitment",
+          "lineNumber": 101
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitment.setTopCvRecruitmentId",
+          "lineNumber": 102
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rDto.getRecruitmentId",
+          "lineNumber": 102
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitment.setRecruitmentInfos",
+          "lineNumber": 103
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rDto.getRecruitmentInfos",
+          "lineNumber": 103
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitment.setDescriptions",
+          "lineNumber": 104
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rDto.getDescriptions",
+          "lineNumber": 104
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rDto.getPostedDate",
+          "lineNumber": 106
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitment.setPostedDate",
+          "lineNumber": 107
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "LocalDate.parse",
+          "lineNumber": 107
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rDto.getPostedDate",
+          "lineNumber": 107
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rDto.getApplicationDeadline",
+          "lineNumber": 109
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitment.setApplicationDeadline",
+          "lineNumber": 110
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "LocalDate.parse",
+          "lineNumber": 110
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rDto.getApplicationDeadline",
+          "lineNumber": 110
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitmentRepository.save",
+          "lineNumber": 113
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "response.getRecruitmentPosts",
+          "lineNumber": 117
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "companyRepository.findById(pDto.getCompanyId()).orElse",
+          "lineNumber": 118
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "companyRepository.findById",
+          "lineNumber": 118
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "pDto.getCompanyId",
+          "lineNumber": 118
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitmentRepository.findById(pDto.getRecruitmentId()).orElse",
+          "lineNumber": 119
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitmentRepository.findById",
+          "lineNumber": 119
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "pDto.getRecruitmentId",
+          "lineNumber": 119
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitmentPostRepository.findFirstByCompany_TopCvCompanyIdAndRecruitment_TopCvRecruitmentId",
+          "lineNumber": 122
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "comp.getTopCvCompanyId",
+          "lineNumber": 123
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rec.getTopCvRecruitmentId",
+          "lineNumber": 123
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "new RecruitmentPost",
+          "lineNumber": 125
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "post.setCompany",
+          "lineNumber": 126
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "Company.builder().topCvCompanyId(comp.getTopCvCompanyId()).build",
+          "lineNumber": 126
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "Company.builder().topCvCompanyId",
+          "lineNumber": 126
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "Company.builder",
+          "lineNumber": 126
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "comp.getTopCvCompanyId",
+          "lineNumber": 126
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "post.setRecruitment",
+          "lineNumber": 127
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "Recruitment.builder().topCvRecruitmentId(rec.getTopCvRecruitmentId()).build",
+          "lineNumber": 127
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "Recruitment.builder().topCvRecruitmentId",
+          "lineNumber": 127
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "Recruitment.builder",
+          "lineNumber": 127
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "rec.getTopCvRecruitmentId",
+          "lineNumber": 127
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "pDto.getExpireAt",
+          "lineNumber": 128
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "post.setExpiredAt",
+          "lineNumber": 129
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "LocalDate.parse",
+          "lineNumber": 129
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "pDto.getExpireAt",
+          "lineNumber": 129
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitmentPostRepository.save",
+          "lineNumber": 131
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "pDto.getExpireAt",
+          "lineNumber": 133
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "existingPost.setExpiredAt",
+          "lineNumber": 134
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "LocalDate.parse",
+          "lineNumber": 134
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "pDto.getExpireAt",
+          "lineNumber": 134
+        },
+        {
+          "caller": "persistScrapedData",
+          "callee": "recruitmentPostRepository.save",
+          "lineNumber": 135
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 22,
+      "functions": [
+        {
+          "name": "removeOverdueRecruitmentPosts",
+          "startLine": 20,
+          "endLine": 26,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RemoveOverdueJobScheduler",
+          "startLine": 12,
+          "endLine": 27,
+          "methods": [
+            "removeOverdueRecruitmentPosts"
+          ],
+          "properties": [
+            "recruitmentPostRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "removeOverdueRecruitmentPosts",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "RemoveOverdueJobScheduler",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "removeOverdueRecruitmentPosts",
+          "callee": "log.info",
+          "lineNumber": 23
+        },
+        {
+          "caller": "removeOverdueRecruitmentPosts",
+          "callee": "recruitmentPostRepository.deleteByExpiredAtBefore",
+          "lineNumber": 24
+        },
+        {
+          "caller": "removeOverdueRecruitmentPosts",
+          "callee": "LocalDate.now",
+          "lineNumber": 24
+        },
+        {
+          "caller": "removeOverdueRecruitmentPosts",
+          "callee": "log.info",
+          "lineNumber": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "MarketTrendService",
+          "startLine": 7,
+          "endLine": 14,
+          "methods": [
+            "getTopHiringCompanies",
+            "getSkillTrends",
+            "getSalaryDistribution"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MarketTrendService",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "ScraperService",
+          "startLine": 9,
+          "endLine": 16,
+          "methods": [
+            "getRecruitmentPosts",
+            "getCompanyInfos",
+            "getRecruitmentInfos"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScraperService",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 157,
+      "nonEmptyLines": 138,
+      "functions": [
+        {
+          "name": "getTopHiringCompanies",
+          "startLine": 48,
+          "endLine": 58,
+          "params": [
+            "limit"
+          ]
+        },
+        {
+          "name": "getSkillTrends",
+          "startLine": 65,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "getSalaryDistribution",
+          "startLine": 98,
+          "endLine": 156,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "MarketTrendServiceImpl",
+          "startLine": 31,
+          "endLine": 157,
+          "methods": [
+            "getTopHiringCompanies",
+            "getSkillTrends",
+            "getSalaryDistribution"
+          ],
+          "properties": [
+            "companyRepository",
+            "skillTrendRepository",
+            "skillRepository",
+            "recruitmentRepository",
+            "marketTrendMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getTopHiringCompanies",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "getSkillTrends",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "getSalaryDistribution",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "MarketTrendServiceImpl",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "companyRepository.findTopHiringCompaniesWithCount",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "PageRequest.of",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "rows.stream()\r\n                .map(row -> marketTrendMapper.toCompanyTrendResponse((Company) row[0], ((Number) row[1]).longValue())).collect",
+          "lineNumber": 55
+        },
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "rows.stream().map",
+          "lineNumber": 55
+        },
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "rows.stream",
+          "lineNumber": 55
+        },
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "marketTrendMapper.toCompanyTrendResponse",
+          "lineNumber": 56
+        },
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "((Number) row[1]).longValue",
+          "lineNumber": 56
+        },
+        {
+          "caller": "getTopHiringCompanies",
+          "callee": "Collectors.toList",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "skillTrendRepository.findAll",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "allTrends.stream()\r\n                .filter(t -> t.getSkill().getSkillId() != null).collect",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "allTrends.stream().filter",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "allTrends.stream",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "t.getSkill().getSkillId",
+          "lineNumber": 73
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "t.getSkill",
+          "lineNumber": 73
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "Collectors.groupingBy",
+          "lineNumber": 74
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "skillRepository.findById(t.getSkill().getSkillId()).orElse",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "skillRepository.findById",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "t.getSkill().getSkillId",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "t.getSkill",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "skill.getSkillName",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "trendsBySkill.entrySet().stream()\r\n                .map(entry -> marketTrendMapper.toSkillTrendResponse(entry.getKey(), entry.getValue()))\r\n                // Sort the responses by total jobs needed in descending order (highest demand first)\r\n                .sorted((a, b) -> Integer.compare(\r\n                        b.getDataPoints().stream().mapToInt(MarketTrendResponse.TrendDataPoint::getJobsNeeded).sum(),\r\n                        a.getDataPoints().stream().mapToInt(MarketTrendResponse.TrendDataPoint::getJobsNeeded).sum()\r\n                ))\r\n                .limit(10).collect",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "trendsBySkill.entrySet().stream()\r\n                .map(entry -> marketTrendMapper.toSkillTrendResponse(entry.getKey(), entry.getValue()))\r\n                // Sort the responses by total jobs needed in descending order (highest demand first)\r\n                .sorted((a, b) -> Integer.compare(\r\n                        b.getDataPoints().stream().mapToInt(MarketTrendResponse.TrendDataPoint::getJobsNeeded).sum(),\r\n                        a.getDataPoints().stream().mapToInt(MarketTrendResponse.TrendDataPoint::getJobsNeeded).sum()\r\n                )).limit",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "trendsBySkill.entrySet().stream()\r\n                .map(entry -> marketTrendMapper.toSkillTrendResponse(entry.getKey(), entry.getValue())).sorted",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "trendsBySkill.entrySet().stream().map",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "trendsBySkill.entrySet().stream",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "trendsBySkill.entrySet",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "marketTrendMapper.toSkillTrendResponse",
+          "lineNumber": 82
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "entry.getKey",
+          "lineNumber": 82
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "entry.getValue",
+          "lineNumber": 82
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "Integer.compare",
+          "lineNumber": 84
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "b.getDataPoints().stream().mapToInt(MarketTrendResponse.TrendDataPoint::getJobsNeeded).sum",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "b.getDataPoints().stream().mapToInt",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "b.getDataPoints().stream",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "b.getDataPoints",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "a.getDataPoints().stream().mapToInt(MarketTrendResponse.TrendDataPoint::getJobsNeeded).sum",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "a.getDataPoints().stream().mapToInt",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "a.getDataPoints().stream",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "a.getDataPoints",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getSkillTrends",
+          "callee": "Collectors.toList",
+          "lineNumber": 89
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "recruitmentRepository.findAllSalaries",
+          "lineNumber": 102
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "Pattern.compile",
+          "lineNumber": 112
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "salaryText.toLowerCase",
+          "lineNumber": 115
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "salaryText.contains",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "salaryText.contains",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "numberPattern.matcher",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "new ArrayList<>",
+          "lineNumber": 122
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "matcher.find",
+          "lineNumber": 124
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "numbers.add",
+          "lineNumber": 125
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "Integer.parseInt",
+          "lineNumber": 125
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "matcher.group",
+          "lineNumber": 125
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "numbers.isEmpty",
+          "lineNumber": 129
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "numbers.stream().mapToInt(Integer::intValue).average().orElse",
+          "lineNumber": 132
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "numbers.stream().mapToInt(Integer::intValue).average",
+          "lineNumber": 132
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "numbers.stream().mapToInt",
+          "lineNumber": 132
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "numbers.stream",
+          "lineNumber": 132
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "List.of",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"Dưới 10 triệu\").jobCount(count0To10).build",
+          "lineNumber": 150
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"Dưới 10 triệu\").jobCount",
+          "lineNumber": 150
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category",
+          "lineNumber": 150
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder",
+          "lineNumber": 150
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"10 - 20 triệu\").jobCount(count10To20).build",
+          "lineNumber": 151
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"10 - 20 triệu\").jobCount",
+          "lineNumber": 151
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category",
+          "lineNumber": 151
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder",
+          "lineNumber": 151
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"20 - 30 triệu\").jobCount(count20To30).build",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"20 - 30 triệu\").jobCount",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"30 - 50 triệu\").jobCount(count30To50).build",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"30 - 50 triệu\").jobCount",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"Trên 50 triệu\").jobCount(countOver50).build",
+          "lineNumber": 154
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category(\"Trên 50 triệu\").jobCount",
+          "lineNumber": 154
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder().category",
+          "lineNumber": 154
+        },
+        {
+          "caller": "getSalaryDistribution",
+          "callee": "MarketTrendResponse.SalaryTrendResponse.builder",
+          "lineNumber": 154
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 155,
+      "nonEmptyLines": 139,
+      "functions": [
+        {
+          "name": "getRecruitmentPosts",
+          "startLine": 42,
+          "endLine": 96,
+          "params": []
+        },
+        {
+          "name": "getCompanyInfos",
+          "startLine": 105,
+          "endLine": 123,
+          "params": [
+            "companyId"
+          ]
+        },
+        {
+          "name": "getRecruitmentInfos",
+          "startLine": 132,
+          "endLine": 154,
+          "params": [
+            "recruitmentId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ScraperServiceImpl",
+          "startLine": 27,
+          "endLine": 155,
+          "methods": [
+            "getRecruitmentPosts",
+            "getCompanyInfos",
+            "getRecruitmentInfos"
+          ],
+          "properties": [
+            "companyRepository",
+            "recruitmentRepository",
+            "recruitmentPostRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getRecruitmentPosts",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "getCompanyInfos",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "getRecruitmentInfos",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "ScraperServiceImpl",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "log.info",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitmentPostRepository.findAll",
+          "lineNumber": 47
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "new ArrayList<>",
+          "lineNumber": 49
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "companyRepository.findByTopCvCompanyId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "post.getCompany().getTopCvCompanyId",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "post.getCompany",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitmentRepository.findByTopCvRecruitmentId",
+          "lineNumber": 54
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "post.getRecruitment().getTopCvRecruitmentId",
+          "lineNumber": 54
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "post.getRecruitment",
+          "lineNumber": 54
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Company.builder()\n                    .name(str(company.getSignatures(), \"name\"))\n                    .logo(str(company.getSignatures(), \"logo\"))\n                    .companyLink(str(company.getSignatures(), \"link\")).build",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Company.builder()\n                    .name(str(company.getSignatures(), \"name\"))\n                    .logo(str(company.getSignatures(), \"logo\")).companyLink",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Company.builder()\n                    .name(str(company.getSignatures(), \"name\")).logo",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Company.builder().name",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Company.builder",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "str",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "company.getSignatures",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "str",
+          "lineNumber": 59
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "company.getSignatures",
+          "lineNumber": 59
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "str",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "company.getSignatures",
+          "lineNumber": 60
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "new ArrayList<>",
+          "lineNumber": 64
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitment.getDescriptions().get",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "s.isBlank",
+          "lineNumber": 66
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "flattenedTags.add",
+          "lineNumber": 67
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "flattenedTags.add",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "t.toString",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Recruitment.builder()\n                    .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                    .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                    .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                    .experience(str(recruitment.getRecruitmentInfos(), \"experience\"))\n                    .applicationDeadline(recruitment.getApplicationDeadline())\n                    .tags(flattenedTags).build",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Recruitment.builder()\n                    .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                    .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                    .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                    .experience(str(recruitment.getRecruitmentInfos(), \"experience\"))\n                    .applicationDeadline(recruitment.getApplicationDeadline()).tags",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Recruitment.builder()\n                    .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                    .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                    .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                    .experience(str(recruitment.getRecruitmentInfos(), \"experience\")).applicationDeadline",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Recruitment.builder()\n                    .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                    .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                    .location(str(recruitment.getRecruitmentInfos(), \"location\")).experience",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Recruitment.builder()\n                    .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                    .salary(str(recruitment.getRecruitmentInfos(), \"salary\")).location",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Recruitment.builder()\n                    .title(str(recruitment.getRecruitmentInfos(), \"title\")).salary",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Recruitment.builder().title",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.Recruitment.builder",
+          "lineNumber": 75
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "str",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "str",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 77
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "str",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 78
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "str",
+          "lineNumber": 79
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 79
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "recruitment.getApplicationDeadline",
+          "lineNumber": 80
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.builder()\n                    .postId(post.getPostId())\n                    .company(companyDto)\n                    .recruitment(recruitmentDto).build",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.builder()\n                    .postId(post.getPostId())\n                    .company(companyDto).recruitment",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.builder()\n                    .postId(post.getPostId()).company",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.builder().postId",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "RecruitmentPostResponse.builder",
+          "lineNumber": 85
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "post.getPostId",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "postDtos.add",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getRecruitmentPosts",
+          "callee": "log.info",
+          "lineNumber": 94
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "log.info",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "companyRepository.findByTopCvCompanyId",
+          "lineNumber": 108
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "log.info",
+          "lineNumber": 113
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder()\n                .companyId(company.getTopCvCompanyId())\n                .companyLink(str(company.getSignatures(), \"link\"))\n                .name(str(company.getSignatures(), \"name\"))\n                .logo(str(company.getSignatures(), \"logo\"))\n                .introductions(null)\n                .infos(company.getInfos())\n                .contacts(str(company.getInfos(), \"contact\") != null ? List.of(str(company.getInfos(), \"contact\")) : null).build",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder()\n                .companyId(company.getTopCvCompanyId())\n                .companyLink(str(company.getSignatures(), \"link\"))\n                .name(str(company.getSignatures(), \"name\"))\n                .logo(str(company.getSignatures(), \"logo\"))\n                .introductions(null)\n                .infos(company.getInfos()).contacts",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder()\n                .companyId(company.getTopCvCompanyId())\n                .companyLink(str(company.getSignatures(), \"link\"))\n                .name(str(company.getSignatures(), \"name\"))\n                .logo(str(company.getSignatures(), \"logo\"))\n                .introductions(null).infos",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder()\n                .companyId(company.getTopCvCompanyId())\n                .companyLink(str(company.getSignatures(), \"link\"))\n                .name(str(company.getSignatures(), \"name\"))\n                .logo(str(company.getSignatures(), \"logo\")).introductions",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder()\n                .companyId(company.getTopCvCompanyId())\n                .companyLink(str(company.getSignatures(), \"link\"))\n                .name(str(company.getSignatures(), \"name\")).logo",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder()\n                .companyId(company.getTopCvCompanyId())\n                .companyLink(str(company.getSignatures(), \"link\")).name",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder()\n                .companyId(company.getTopCvCompanyId()).companyLink",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder().companyId",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "CompanyResponse.builder",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "company.getTopCvCompanyId",
+          "lineNumber": 115
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "str",
+          "lineNumber": 116
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "company.getSignatures",
+          "lineNumber": 116
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "str",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "company.getSignatures",
+          "lineNumber": 117
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "str",
+          "lineNumber": 118
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "company.getSignatures",
+          "lineNumber": 118
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "company.getInfos",
+          "lineNumber": 120
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "str",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "company.getInfos",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "List.of",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "str",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getCompanyInfos",
+          "callee": "company.getInfos",
+          "lineNumber": 121
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "log.info",
+          "lineNumber": 134
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitmentRepository.findByTopCvRecruitmentId",
+          "lineNumber": 135
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 137
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "log.info",
+          "lineNumber": 140
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                .experience(str(recruitment.getRecruitmentInfos(), \"experience\"))\n                .applicationDeadline(recruitment.getApplicationDeadline())\n                .tags(recruitment.getDescriptions() != null ? recruitment.getDescriptions().get(\"tags\") : null)\n                .descriptions(recruitment.getDescriptions())\n                .generalInfos(recruitment.getDescriptions() != null ? recruitment.getDescriptions().get(\"general_infos\") : null)\n                .relatedTags(recruitment.getDescriptions() != null ? recruitment.getDescriptions().get(\"related_tags\") : null).build",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                .experience(str(recruitment.getRecruitmentInfos(), \"experience\"))\n                .applicationDeadline(recruitment.getApplicationDeadline())\n                .tags(recruitment.getDescriptions() != null ? recruitment.getDescriptions().get(\"tags\") : null)\n                .descriptions(recruitment.getDescriptions())\n                .generalInfos(recruitment.getDescriptions() != null ? recruitment.getDescriptions().get(\"general_infos\") : null).relatedTags",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                .experience(str(recruitment.getRecruitmentInfos(), \"experience\"))\n                .applicationDeadline(recruitment.getApplicationDeadline())\n                .tags(recruitment.getDescriptions() != null ? recruitment.getDescriptions().get(\"tags\") : null)\n                .descriptions(recruitment.getDescriptions()).generalInfos",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                .experience(str(recruitment.getRecruitmentInfos(), \"experience\"))\n                .applicationDeadline(recruitment.getApplicationDeadline())\n                .tags(recruitment.getDescriptions() != null ? recruitment.getDescriptions().get(\"tags\") : null).descriptions",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                .experience(str(recruitment.getRecruitmentInfos(), \"experience\"))\n                .applicationDeadline(recruitment.getApplicationDeadline()).tags",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                .location(str(recruitment.getRecruitmentInfos(), \"location\"))\n                .experience(str(recruitment.getRecruitmentInfos(), \"experience\")).applicationDeadline",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                .salary(str(recruitment.getRecruitmentInfos(), \"salary\"))\n                .location(str(recruitment.getRecruitmentInfos(), \"location\")).experience",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\"))\n                .salary(str(recruitment.getRecruitmentInfos(), \"salary\")).location",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\"))\n                .title(str(recruitment.getRecruitmentInfos(), \"title\")).salary",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId())\n                .recruitmentLink(str(recruitment.getRecruitmentInfos(), \"link\")).title",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder()\n                .topCvRecruitmentId(recruitment.getTopCvRecruitmentId()).recruitmentLink",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder().topCvRecruitmentId",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "RecruitmentResponse.builder",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getTopCvRecruitmentId",
+          "lineNumber": 142
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "str",
+          "lineNumber": 143
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 143
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "str",
+          "lineNumber": 144
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 144
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "str",
+          "lineNumber": 145
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 145
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "str",
+          "lineNumber": 146
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 146
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "str",
+          "lineNumber": 147
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getRecruitmentInfos",
+          "lineNumber": 147
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getApplicationDeadline",
+          "lineNumber": 148
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions().get",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 150
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 151
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions().get",
+          "lineNumber": 151
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 151
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions().get",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getRecruitmentInfos",
+          "callee": "recruitment.getDescriptions",
+          "lineNumber": 152
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 152,
+      "nonEmptyLines": 134,
+      "functions": [
+        {
+          "name": "extractAndRebuildSkillTrends",
+          "startLine": 42,
+          "endLine": 151,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SkillExtractionServiceImpl",
+          "startLine": 27,
+          "endLine": 152,
+          "methods": [
+            "extractAndRebuildSkillTrends"
+          ],
+          "properties": [
+            "recruitmentRepository",
+            "skillRepository",
+            "skillTrendRepository",
+            "aiServiceClient"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "extractAndRebuildSkillTrends",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "SkillExtractionServiceImpl",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "log.info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "recruitmentRepository.findAll",
+          "lineNumber": 48
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "recruitments.isEmpty",
+          "lineNumber": 49
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "log.info",
+          "lineNumber": 50
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "new ArrayList<>",
+          "lineNumber": 55
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "new ArrayList<>",
+          "lineNumber": 56
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "new StringBuilder",
+          "lineNumber": 59
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "com.inteliroadmap.backend.mappers.ScraperMapper.str",
+          "lineNumber": 61
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "r.getRecruitmentInfos",
+          "lineNumber": 61
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append(title).append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "r.getDescriptions",
+          "lineNumber": 66
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "r.getDescriptions().values",
+          "lineNumber": 67
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "r.getDescriptions",
+          "lineNumber": 67
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append(v).append",
+          "lineNumber": 70
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append",
+          "lineNumber": 70
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "((java.util.Map<?, ?>) val).values",
+          "lineNumber": 73
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append(v2).append",
+          "lineNumber": 76
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append",
+          "lineNumber": 76
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append(v).append",
+          "lineNumber": 79
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append",
+          "lineNumber": 79
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append(val).append",
+          "lineNumber": 83
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.append",
+          "lineNumber": 83
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.toString().trim",
+          "lineNumber": 91
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descBuilder.toString",
+          "lineNumber": 91
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "r.getPostedDate",
+          "lineNumber": 92
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "r.getPostedDate",
+          "lineNumber": 92
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "r.getApplicationDeadline",
+          "lineNumber": 93
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "r.getApplicationDeadline",
+          "lineNumber": 93
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "LocalDate.now",
+          "lineNumber": 93
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descriptions.add",
+          "lineNumber": 94
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "dates.add",
+          "lineNumber": 95
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "log.info",
+          "lineNumber": 98
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "descriptions.size",
+          "lineNumber": 98
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "aiServiceClient.extractSkills",
+          "lineNumber": 99
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "extractedSkills.isEmpty",
+          "lineNumber": 100
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "log.warn",
+          "lineNumber": 101
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "log.info",
+          "lineNumber": 104
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "new HashMap<>",
+          "lineNumber": 107
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "extractedSkills.size",
+          "lineNumber": 109
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "extractedSkills.get",
+          "lineNumber": 110
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "dates.get",
+          "lineNumber": 111
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "skillDateCountMap.putIfAbsent",
+          "lineNumber": 114
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "new HashMap<>",
+          "lineNumber": 114
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "skillDateCountMap.get",
+          "lineNumber": 115
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "dateCount.put",
+          "lineNumber": 116
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "dateCount.getOrDefault",
+          "lineNumber": 116
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "skillTrendRepository.deleteAllInBatch",
+          "lineNumber": 121
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "log.info",
+          "lineNumber": 122
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "new ArrayList<>",
+          "lineNumber": 125
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "skillDateCountMap.entrySet",
+          "lineNumber": 126
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "entry.getKey",
+          "lineNumber": 127
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "skillRepository.findBySkillName",
+          "lineNumber": 130
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "Skill.builder()\r\n                        .skillName(skillName).build",
+          "lineNumber": 132
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "Skill.builder().skillName",
+          "lineNumber": 132
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "Skill.builder",
+          "lineNumber": 132
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "skillRepository.save",
+          "lineNumber": 136
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "entry.getValue().entrySet",
+          "lineNumber": 139
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "entry.getValue",
+          "lineNumber": 139
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "SkillTrend.builder()\r\n                        .skill(Skill.builder().skillId(skill.getSkillId()).build())\r\n                        .weekStamp(dateEntry.getKey())\r\n                        .jobsNeeded(dateEntry.getValue()).build",
+          "lineNumber": 140
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "SkillTrend.builder()\r\n                        .skill(Skill.builder().skillId(skill.getSkillId()).build())\r\n                        .weekStamp(dateEntry.getKey()).jobsNeeded",
+          "lineNumber": 140
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "SkillTrend.builder()\r\n                        .skill(Skill.builder().skillId(skill.getSkillId()).build()).weekStamp",
+          "lineNumber": 140
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "SkillTrend.builder().skill",
+          "lineNumber": 140
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "SkillTrend.builder",
+          "lineNumber": 140
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "Skill.builder().skillId(skill.getSkillId()).build",
+          "lineNumber": 141
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "Skill.builder().skillId",
+          "lineNumber": 141
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "Skill.builder",
+          "lineNumber": 141
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "skill.getSkillId",
+          "lineNumber": 141
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "dateEntry.getKey",
+          "lineNumber": 142
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "dateEntry.getValue",
+          "lineNumber": 143
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "newTrends.add",
+          "lineNumber": 145
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "skillTrendRepository.saveAll",
+          "lineNumber": 149
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "log.info",
+          "lineNumber": 150
+        },
+        {
+          "caller": "extractAndRebuildSkillTrends",
+          "callee": "newTrends.size",
+          "lineNumber": 150
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

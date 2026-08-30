@@ -1,0 +1,4523 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 29,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 29,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 29,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 165,
+      "nonEmptyLines": 151,
+      "functions": [
+        {
+          "name": "createSession",
+          "startLine": 57,
+          "endLine": 65,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "getSessions",
+          "startLine": 67,
+          "endLine": 76,
+          "params": []
+        },
+        {
+          "name": "renameSession",
+          "startLine": 78,
+          "endLine": 86,
+          "params": [
+            "sessionId",
+            "request"
+          ]
+        },
+        {
+          "name": "deleteSession",
+          "startLine": 88,
+          "endLine": 95,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "getSessionMessages",
+          "startLine": 97,
+          "endLine": 106,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "streamChat",
+          "startLine": 108,
+          "endLine": 115,
+          "params": [
+            "sessionId",
+            "request"
+          ]
+        },
+        {
+          "name": "uploadChatFile",
+          "startLine": 117,
+          "endLine": 125,
+          "params": [
+            "file"
+          ]
+        },
+        {
+          "name": "ingestKnowledge",
+          "startLine": 127,
+          "endLine": 145,
+          "params": [
+            "file"
+          ]
+        },
+        {
+          "name": "mapToSessionResponse",
+          "startLine": 147,
+          "endLine": 154,
+          "params": [
+            "session"
+          ]
+        },
+        {
+          "name": "mapToMessageResponse",
+          "startLine": 156,
+          "endLine": 164,
+          "params": [
+            "message"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "VirtualMentorController",
+          "startLine": 43,
+          "endLine": 165,
+          "methods": [
+            "createSession",
+            "getSessions",
+            "renameSession",
+            "deleteSession",
+            "getSessionMessages",
+            "streamChat",
+            "uploadChatFile",
+            "ingestKnowledge",
+            "mapToSessionResponse",
+            "mapToMessageResponse"
+          ],
+          "properties": [
+            "virtualMentorService",
+            "supabaseStorageService",
+            "documentIngestionService",
+            "ragDocumentService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createSession",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "getSessions",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "renameSession",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "deleteSession",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "getSessionMessages",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "streamChat",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "uploadChatFile",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "ingestKnowledge",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "VirtualMentorController",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createSession",
+          "callee": "log.info",
+          "lineNumber": 61
+        },
+        {
+          "caller": "createSession",
+          "callee": "request.getSessionName",
+          "lineNumber": 62
+        },
+        {
+          "caller": "createSession",
+          "callee": "request.getSessionName",
+          "lineNumber": 62
+        },
+        {
+          "caller": "createSession",
+          "callee": "virtualMentorService.createSession",
+          "lineNumber": 63
+        },
+        {
+          "caller": "createSession",
+          "callee": "ResponseEntity.status(HttpStatus.CREATED).body",
+          "lineNumber": 64
+        },
+        {
+          "caller": "createSession",
+          "callee": "ResponseEntity.status",
+          "lineNumber": 64
+        },
+        {
+          "caller": "createSession",
+          "callee": "mapToSessionResponse",
+          "lineNumber": 64
+        },
+        {
+          "caller": "getSessions",
+          "callee": "log.info",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getSessions",
+          "callee": "virtualMentorService.getUserSessions",
+          "lineNumber": 71
+        },
+        {
+          "caller": "getSessions",
+          "callee": "sessions.stream()\n                .map(this::mapToSessionResponse).collect",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getSessions",
+          "callee": "sessions.stream().map",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getSessions",
+          "callee": "sessions.stream",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getSessions",
+          "callee": "Collectors.toList",
+          "lineNumber": 74
+        },
+        {
+          "caller": "getSessions",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 75
+        },
+        {
+          "caller": "renameSession",
+          "callee": "log.info",
+          "lineNumber": 83
+        },
+        {
+          "caller": "renameSession",
+          "callee": "virtualMentorService.renameSession",
+          "lineNumber": 84
+        },
+        {
+          "caller": "renameSession",
+          "callee": "request.getSessionName",
+          "lineNumber": 84
+        },
+        {
+          "caller": "renameSession",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 85
+        },
+        {
+          "caller": "renameSession",
+          "callee": "mapToSessionResponse",
+          "lineNumber": 85
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "log.info",
+          "lineNumber": 92
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "virtualMentorService.deleteSession",
+          "lineNumber": 93
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "ResponseEntity.noContent().build",
+          "lineNumber": 94
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "ResponseEntity.noContent",
+          "lineNumber": 94
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "log.info",
+          "lineNumber": 101
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "virtualMentorService.getSessionMessages",
+          "lineNumber": 102
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "messages.stream()\n                .map(this::mapToMessageResponse).collect",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "messages.stream().map",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "messages.stream",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "Collectors.toList",
+          "lineNumber": 105
+        },
+        {
+          "caller": "streamChat",
+          "callee": "log.info",
+          "lineNumber": 113
+        },
+        {
+          "caller": "streamChat",
+          "callee": "virtualMentorService.streamChat",
+          "lineNumber": 114
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "log.info",
+          "lineNumber": 122
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 122
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "supabaseStorageService.uploadChatFile",
+          "lineNumber": 123
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 124
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "Map.of",
+          "lineNumber": 124
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "FileValidationUtil.validatePdf",
+          "lineNumber": 132
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "ragDocumentService.startGlobalKnowledge",
+          "lineNumber": 134
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "log.info",
+          "lineNumber": 136
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 136
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "documentIngestionService.ingestPdfDocument",
+          "lineNumber": 137
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "ragDocumentService.markCompleted",
+          "lineNumber": 138
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "document.getDocumentId",
+          "lineNumber": 138
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 139
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "Map.of",
+          "lineNumber": 139
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "log.error",
+          "lineNumber": 141
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "ragDocumentService.markFailed",
+          "lineNumber": 142
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "document.getDocumentId",
+          "lineNumber": 142
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "ResponseEntity.internalServerError().body",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "ResponseEntity.internalServerError",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "Map.of",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ingestKnowledge",
+          "callee": "e.getMessage",
+          "lineNumber": 143
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "VirtualMentorSessionResponse.builder()\n                .sessionId(session.getSessionId())\n                .userId(session.getUser().getUserId())\n                .sessionName(session.getSessionName())\n                .createAt(session.getCreatedAt()).build",
+          "lineNumber": 148
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "VirtualMentorSessionResponse.builder()\n                .sessionId(session.getSessionId())\n                .userId(session.getUser().getUserId())\n                .sessionName(session.getSessionName()).createAt",
+          "lineNumber": 148
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "VirtualMentorSessionResponse.builder()\n                .sessionId(session.getSessionId())\n                .userId(session.getUser().getUserId()).sessionName",
+          "lineNumber": 148
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "VirtualMentorSessionResponse.builder()\n                .sessionId(session.getSessionId()).userId",
+          "lineNumber": 148
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "VirtualMentorSessionResponse.builder().sessionId",
+          "lineNumber": 148
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "VirtualMentorSessionResponse.builder",
+          "lineNumber": 148
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "session.getSessionId",
+          "lineNumber": 149
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "session.getUser().getUserId",
+          "lineNumber": 150
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "session.getUser",
+          "lineNumber": 150
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "session.getSessionName",
+          "lineNumber": 151
+        },
+        {
+          "caller": "mapToSessionResponse",
+          "callee": "session.getCreatedAt",
+          "lineNumber": 152
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "VirtualMentorMessageResponse.builder()\n                .messageId(message.getMessageId())\n                .sessionId(message.getChatSession().getSessionId())\n                .role(message.getRole())\n                .content(message.getContent())\n                .createAt(message.getCreatedAt()).build",
+          "lineNumber": 157
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "VirtualMentorMessageResponse.builder()\n                .messageId(message.getMessageId())\n                .sessionId(message.getChatSession().getSessionId())\n                .role(message.getRole())\n                .content(message.getContent()).createAt",
+          "lineNumber": 157
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "VirtualMentorMessageResponse.builder()\n                .messageId(message.getMessageId())\n                .sessionId(message.getChatSession().getSessionId())\n                .role(message.getRole()).content",
+          "lineNumber": 157
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "VirtualMentorMessageResponse.builder()\n                .messageId(message.getMessageId())\n                .sessionId(message.getChatSession().getSessionId()).role",
+          "lineNumber": 157
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "VirtualMentorMessageResponse.builder()\n                .messageId(message.getMessageId()).sessionId",
+          "lineNumber": 157
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "VirtualMentorMessageResponse.builder().messageId",
+          "lineNumber": 157
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "VirtualMentorMessageResponse.builder",
+          "lineNumber": 157
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "message.getMessageId",
+          "lineNumber": 158
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "message.getChatSession().getSessionId",
+          "lineNumber": 159
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "message.getChatSession",
+          "lineNumber": 159
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "message.getRole",
+          "lineNumber": 160
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "message.getContent",
+          "lineNumber": 161
+        },
+        {
+          "caller": "mapToMessageResponse",
+          "callee": "message.getCreatedAt",
+          "lineNumber": 162
+        }
+      ],
+      "metrics": {
+        "importCount": 13,
+        "exportCount": 9,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "VirtualMentorChatRequest",
+          "startLine": 9,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "message",
+            "fileUrl"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VirtualMentorChatRequest",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "VirtualMentorRenameSessionRequest",
+          "startLine": 10,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "sessionName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VirtualMentorRenameSessionRequest",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "VirtualMentorSessionRequest",
+          "startLine": 9,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "sessionName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VirtualMentorSessionRequest",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "VirtualMentorMessageResponse",
+          "startLine": 11,
+          "endLine": 21,
+          "methods": [],
+          "properties": [
+            "messageId",
+            "sessionId",
+            "role",
+            "content",
+            "createAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VirtualMentorMessageResponse",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "VirtualMentorSessionResponse",
+          "startLine": 11,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "sessionId",
+            "userId",
+            "sessionName",
+            "createAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VirtualMentorSessionResponse",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 45,
+      "functions": [
+        {
+          "name": "prePersist",
+          "startLine": 48,
+          "endLine": 53,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ChatMessage",
+          "startLine": 22,
+          "endLine": 54,
+          "methods": [
+            "prePersist"
+          ],
+          "properties": [
+            "messageId",
+            "chatSession",
+            "role",
+            "content",
+            "createdAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "prePersist",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "ChatMessage",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "prePersist",
+          "startLine": 45,
+          "endLine": 50,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ChatSession",
+          "startLine": 22,
+          "endLine": 51,
+          "methods": [
+            "prePersist"
+          ],
+          "properties": [
+            "sessionId",
+            "user",
+            "sessionName",
+            "createdAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "prePersist",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "ChatSession",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "prePersist",
+          "startLine": 75,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "preUpdate",
+          "startLine": 92,
+          "endLine": 95,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RagDocument",
+          "startLine": 25,
+          "endLine": 96,
+          "methods": [
+            "prePersist",
+            "preUpdate"
+          ],
+          "properties": [
+            "documentId",
+            "ownerUserId",
+            "scope",
+            "sourceType",
+            "fileName",
+            "storageUrl",
+            "checksum",
+            "ingestionStatus",
+            "ingestionVersion",
+            "errorMessage",
+            "createdAt",
+            "updatedAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "prePersist",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "preUpdate",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "RagDocument",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 77
+        },
+        {
+          "caller": "preUpdate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "classes": [
+        {
+          "name": "RagDocumentScope",
+          "startLine": 3,
+          "endLine": 6,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RagDocumentScope",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "classes": [
+        {
+          "name": "RagDocumentSourceType",
+          "startLine": 3,
+          "endLine": 6,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RagDocumentSourceType",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "classes": [
+        {
+          "name": "RagDocumentStatus",
+          "startLine": 3,
+          "endLine": 7,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RagDocumentStatus",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "functions": [
+        {
+          "name": "ForbiddenException",
+          "startLine": 6,
+          "endLine": 8,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "ForbiddenException",
+          "startLine": 10,
+          "endLine": 12,
+          "params": [
+            "message",
+            "cause"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ForbiddenException",
+          "startLine": 4,
+          "endLine": 13,
+          "methods": [
+            "ForbiddenException",
+            "ForbiddenException"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ForbiddenException",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "ForbiddenException",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "ForbiddenException",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "ChatMessageRepository",
+          "startLine": 11,
+          "endLine": 17,
+          "methods": [
+            "findByChatSession_SessionIdInOrderByCreatedAtAsc",
+            "findByChatSession_SessionIdOrderByCreatedAtAsc",
+            "findTop10ByChatSession_SessionIdOrderByCreatedAtDesc",
+            "deleteByChatSession_SessionId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatMessageRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "ChatSessionRepository",
+          "startLine": 10,
+          "endLine": 13,
+          "methods": [
+            "findByUser_UserIdOrderByCreatedAtDesc"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ChatSessionRepository",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "RagDocumentRepository",
+          "startLine": 11,
+          "endLine": 18,
+          "methods": [
+            "findFirstByOwnerUserIdAndSourceTypeOrderByUpdatedAtDesc"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RagDocumentRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "DocumentIngestionService",
+          "startLine": 8,
+          "endLine": 17,
+          "methods": [
+            "ingestPdfDocument"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DocumentIngestionService",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "PdfToMarkdownService",
+          "startLine": 7,
+          "endLine": 15,
+          "methods": [
+            "convertToMarkdown",
+            "convertToMarkdown",
+            "convertToMarkdown"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PdfToMarkdownService",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "RagDocumentService",
+          "startLine": 9,
+          "endLine": 18,
+          "methods": [
+            "startStudentTranscript",
+            "startGlobalKnowledge",
+            "markCompleted",
+            "markFailed"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RagDocumentService",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "RagVectorStoreService",
+          "startLine": 9,
+          "endLine": 14,
+          "methods": [
+            "replaceDocumentChunks",
+            "deleteDocumentChunks"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RagVectorStoreService",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 31,
+      "classes": [
+        {
+          "name": "SupabaseStorageService",
+          "startLine": 5,
+          "endLine": 38,
+          "methods": [
+            "uploadAvatar",
+            "uploadChatFile",
+            "uploadTranscript",
+            "uploadCourseMaterial",
+            "signCourseMaterial"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SupabaseStorageService",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "VirtualMentorService",
+          "startLine": 11,
+          "endLine": 24,
+          "methods": [
+            "createSession",
+            "getUserSessions",
+            "getSessionMessages",
+            "renameSession",
+            "deleteSession",
+            "streamChat"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "VirtualMentorService",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/DocumentIngestionServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 106,
+      "nonEmptyLines": 88,
+      "functions": [
+        {
+          "name": "ingestPdfDocument",
+          "startLine": 40,
+          "endLine": 69,
+          "params": [
+            "file",
+            "document"
+          ]
+        },
+        {
+          "name": "splitMarkdownIntoDocuments",
+          "startLine": 79,
+          "endLine": 105,
+          "params": [
+            "markdown",
+            "fileName"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DocumentIngestionServiceImpl",
+          "startLine": 25,
+          "endLine": 106,
+          "methods": [
+            "ingestPdfDocument",
+            "splitMarkdownIntoDocuments"
+          ],
+          "properties": [
+            "pdfToMarkdownService",
+            "ragVectorStoreService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ingestPdfDocument",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "DocumentIngestionServiceImpl",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "log.info",
+          "lineNumber": 42
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 42
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "pdfToMarkdownService.convertToMarkdown",
+          "lineNumber": 44
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "log.info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "markdown.length",
+          "lineNumber": 45
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "splitMarkdownIntoDocuments",
+          "lineNumber": 47
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 47
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "log.info",
+          "lineNumber": 48
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "documents.size",
+          "lineNumber": 48
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "new TokenTextSplitter",
+          "lineNumber": 50
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "List.of",
+          "lineNumber": 55
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "tokenTextSplitter.apply",
+          "lineNumber": 56
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "doc.getMetadata().put",
+          "lineNumber": 59
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "doc.getMetadata",
+          "lineNumber": 59
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "log.info",
+          "lineNumber": 62
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "chunkedDocuments.size",
+          "lineNumber": 62
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "ragVectorStoreService.replaceDocumentChunks",
+          "lineNumber": 66
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "log.info",
+          "lineNumber": 68
+        },
+        {
+          "caller": "ingestPdfDocument",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 68
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "new ArrayList<>",
+          "lineNumber": 80
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "markdown.split",
+          "lineNumber": 82
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "page.trim",
+          "lineNumber": 86
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "trimmed.isEmpty",
+          "lineNumber": 87
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "new Document",
+          "lineNumber": 90
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "Map.of",
+          "lineNumber": 90
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "documents.add",
+          "lineNumber": 94
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "documents.isEmpty",
+          "lineNumber": 97
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "markdown.isBlank",
+          "lineNumber": 97
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "documents.add",
+          "lineNumber": 98
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "new Document",
+          "lineNumber": 98
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "markdown.trim",
+          "lineNumber": 98
+        },
+        {
+          "caller": "splitMarkdownIntoDocuments",
+          "callee": "Map.of",
+          "lineNumber": 98
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PdfToMarkdownServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 267,
+      "nonEmptyLines": 231,
+      "functions": [
+        {
+          "name": "PdfToMarkdownServiceImpl",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "chatClient"
+          ]
+        },
+        {
+          "name": "convertToMarkdown",
+          "startLine": 95,
+          "endLine": 106,
+          "params": [
+            "file"
+          ]
+        },
+        {
+          "name": "convertToMarkdown",
+          "startLine": 115,
+          "endLine": 123,
+          "params": [
+            "pdfUrl"
+          ]
+        },
+        {
+          "name": "convertToMarkdown",
+          "startLine": 133,
+          "endLine": 138,
+          "params": [
+            "pdfBytes",
+            "sourceName"
+          ]
+        },
+        {
+          "name": "processPages",
+          "startLine": 149,
+          "endLine": 190,
+          "params": [
+            "pdfBytes",
+            "sourceName"
+          ]
+        },
+        {
+          "name": "renderPdfToImages",
+          "startLine": 199,
+          "endLine": 221,
+          "params": [
+            "pdfBytes"
+          ]
+        },
+        {
+          "name": "convertPageToMarkdown",
+          "startLine": 230,
+          "endLine": 266,
+          "params": [
+            "imageBytes",
+            "pageNumber"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PdfToMarkdownServiceImpl",
+          "startLine": 35,
+          "endLine": 267,
+          "methods": [
+            "PdfToMarkdownServiceImpl",
+            "convertToMarkdown",
+            "convertToMarkdown",
+            "convertToMarkdown",
+            "processPages",
+            "renderPdfToImages",
+            "convertPageToMarkdown"
+          ],
+          "properties": [
+            "chatClient",
+            "RENDER_DPI",
+            "VISION_PROMPT"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PdfToMarkdownServiceImpl",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "convertToMarkdown",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "convertToMarkdown",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "convertToMarkdown",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "PdfToMarkdownServiceImpl",
+          "line": 35,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "convertToMarkdown",
+          "callee": "log.info",
+          "lineNumber": 97
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 98
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "file.getSize",
+          "lineNumber": 98
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "file.getInputStream",
+          "lineNumber": 101
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "inputStream.readAllBytes",
+          "lineNumber": 102
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "processPages",
+          "lineNumber": 104
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 104
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "log.info",
+          "lineNumber": 117
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "new URL(pdfUrl).openStream",
+          "lineNumber": 119
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "new URL",
+          "lineNumber": 119
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "inputStream.readAllBytes",
+          "lineNumber": 120
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "processPages",
+          "lineNumber": 121
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "log.info",
+          "lineNumber": 135
+        },
+        {
+          "caller": "convertToMarkdown",
+          "callee": "processPages",
+          "lineNumber": 137
+        },
+        {
+          "caller": "processPages",
+          "callee": "renderPdfToImages",
+          "lineNumber": 151
+        },
+        {
+          "caller": "processPages",
+          "callee": "log.info",
+          "lineNumber": 152
+        },
+        {
+          "caller": "processPages",
+          "callee": "pageImages.size",
+          "lineNumber": 152
+        },
+        {
+          "caller": "processPages",
+          "callee": "pageImages.isEmpty",
+          "lineNumber": 155
+        },
+        {
+          "caller": "processPages",
+          "callee": "log.warn",
+          "lineNumber": 156
+        },
+        {
+          "caller": "processPages",
+          "callee": "new StringBuilder",
+          "lineNumber": 160
+        },
+        {
+          "caller": "processPages",
+          "callee": "pageImages.size",
+          "lineNumber": 163
+        },
+        {
+          "caller": "processPages",
+          "callee": "log.debug",
+          "lineNumber": 165
+        },
+        {
+          "caller": "processPages",
+          "callee": "pageImages.size",
+          "lineNumber": 165
+        },
+        {
+          "caller": "processPages",
+          "callee": "convertPageToMarkdown",
+          "lineNumber": 169
+        },
+        {
+          "caller": "processPages",
+          "callee": "pageImages.get",
+          "lineNumber": 169
+        },
+        {
+          "caller": "processPages",
+          "callee": "pageImages.size",
+          "lineNumber": 172
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append(\"\\n\\n<!-- page: \").append(pageNumber).append",
+          "lineNumber": 173
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append(\"\\n\\n<!-- page: \").append",
+          "lineNumber": 173
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append",
+          "lineNumber": 173
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append",
+          "lineNumber": 176
+        },
+        {
+          "caller": "processPages",
+          "callee": "log.error",
+          "lineNumber": 180
+        },
+        {
+          "caller": "processPages",
+          "callee": "e.getMessage",
+          "lineNumber": 180
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append(\"\\n\\n<!-- page: \").append(pageNumber)\r\n                        .append(\" failed: \").append(e.getMessage()).append",
+          "lineNumber": 181
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append(\"\\n\\n<!-- page: \").append(pageNumber)\r\n                        .append(\" failed: \").append",
+          "lineNumber": 181
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append(\"\\n\\n<!-- page: \").append(pageNumber).append",
+          "lineNumber": 181
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append(\"\\n\\n<!-- page: \").append",
+          "lineNumber": 181
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.append",
+          "lineNumber": 181
+        },
+        {
+          "caller": "processPages",
+          "callee": "e.getMessage",
+          "lineNumber": 182
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.toString().trim",
+          "lineNumber": 187
+        },
+        {
+          "caller": "processPages",
+          "callee": "fullMarkdown.toString",
+          "lineNumber": 187
+        },
+        {
+          "caller": "processPages",
+          "callee": "log.info",
+          "lineNumber": 188
+        },
+        {
+          "caller": "processPages",
+          "callee": "result.length",
+          "lineNumber": 188
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "new ArrayList<>",
+          "lineNumber": 200
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "Loader.loadPDF",
+          "lineNumber": 203
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "new PDFRenderer",
+          "lineNumber": 204
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "document.getNumberOfPages",
+          "lineNumber": 205
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "renderer.renderImageWithDPI",
+          "lineNumber": 210
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "new ByteArrayOutputStream",
+          "lineNumber": 213
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "ImageIO.write",
+          "lineNumber": 214
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "images.add",
+          "lineNumber": 215
+        },
+        {
+          "caller": "renderPdfToImages",
+          "callee": "baos.toByteArray",
+          "lineNumber": 215
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "log.debug",
+          "lineNumber": 231
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "new ByteArrayResource",
+          "lineNumber": 235
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "new Media",
+          "lineNumber": 244
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "UserMessage.builder()\r\n                .text(VISION_PROMPT + \"\\n\\nThis is page \" + pageNumber + \" of the document.\")\r\n                .media(List.of(imageMedia)).build",
+          "lineNumber": 248
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "UserMessage.builder()\r\n                .text(VISION_PROMPT + \"\\n\\nThis is page \" + pageNumber + \" of the document.\").media",
+          "lineNumber": 248
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "UserMessage.builder().text",
+          "lineNumber": 248
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "UserMessage.builder",
+          "lineNumber": 248
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "List.of",
+          "lineNumber": 250
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "chatClient.prompt()\r\n                .messages(List.of(userMessage))\r\n                .call().content",
+          "lineNumber": 255
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "chatClient.prompt()\r\n                .messages(List.of(userMessage)).call",
+          "lineNumber": 255
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "chatClient.prompt().messages",
+          "lineNumber": 255
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "chatClient.prompt",
+          "lineNumber": 255
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "List.of",
+          "lineNumber": 256
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "markdown.isBlank",
+          "lineNumber": 261
+        },
+        {
+          "caller": "convertPageToMarkdown",
+          "callee": "markdown.trim",
+          "lineNumber": 265
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 99,
+      "nonEmptyLines": 87,
+      "functions": [
+        {
+          "name": "startStudentTranscript",
+          "startLine": 28,
+          "endLine": 45,
+          "params": [
+            "user",
+            "storageUrl",
+            "file"
+          ]
+        },
+        {
+          "name": "startGlobalKnowledge",
+          "startLine": 47,
+          "endLine": 58,
+          "params": [
+            "file"
+          ]
+        },
+        {
+          "name": "markCompleted",
+          "startLine": 60,
+          "endLine": 68,
+          "params": [
+            "documentId"
+          ]
+        },
+        {
+          "name": "markFailed",
+          "startLine": 70,
+          "endLine": 78,
+          "params": [
+            "documentId",
+            "exception"
+          ]
+        },
+        {
+          "name": "populateForIngestion",
+          "startLine": 80,
+          "endLine": 87,
+          "params": [
+            "document",
+            "file",
+            "storageUrl"
+          ]
+        },
+        {
+          "name": "sha256",
+          "startLine": 89,
+          "endLine": 98,
+          "params": [
+            "file"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RagDocumentServiceImpl",
+          "startLine": 22,
+          "endLine": 99,
+          "methods": [
+            "startStudentTranscript",
+            "startGlobalKnowledge",
+            "markCompleted",
+            "markFailed",
+            "populateForIngestion",
+            "sha256"
+          ],
+          "properties": [
+            "ragDocumentRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "startStudentTranscript",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "startGlobalKnowledge",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "markCompleted",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "markFailed",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "RagDocumentServiceImpl",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "startStudentTranscript",
+          "callee": "ragDocumentRepository\r\n                .findFirstByOwnerUserIdAndSourceTypeOrderByUpdatedAtDesc(\r\n                        user.getUserId(),\r\n                        RagDocumentSourceType.TRANSCRIPT\r\n                ).orElseGet",
+          "lineNumber": 31
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "ragDocumentRepository.findFirstByOwnerUserIdAndSourceTypeOrderByUpdatedAtDesc",
+          "lineNumber": 31
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "user.getUserId",
+          "lineNumber": 33
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "RagDocument.builder()\r\n                        .ownerUserId(user.getUserId())\r\n                        .scope(RagDocumentScope.STUDENT)\r\n                        .sourceType(RagDocumentSourceType.TRANSCRIPT)\r\n                        .ingestionVersion(0).build",
+          "lineNumber": 36
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "RagDocument.builder()\r\n                        .ownerUserId(user.getUserId())\r\n                        .scope(RagDocumentScope.STUDENT)\r\n                        .sourceType(RagDocumentSourceType.TRANSCRIPT).ingestionVersion",
+          "lineNumber": 36
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "RagDocument.builder()\r\n                        .ownerUserId(user.getUserId())\r\n                        .scope(RagDocumentScope.STUDENT).sourceType",
+          "lineNumber": 36
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "RagDocument.builder()\r\n                        .ownerUserId(user.getUserId()).scope",
+          "lineNumber": 36
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "RagDocument.builder().ownerUserId",
+          "lineNumber": 36
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "RagDocument.builder",
+          "lineNumber": 36
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "user.getUserId",
+          "lineNumber": 37
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "populateForIngestion",
+          "lineNumber": 43
+        },
+        {
+          "caller": "startStudentTranscript",
+          "callee": "ragDocumentRepository.save",
+          "lineNumber": 44
+        },
+        {
+          "caller": "startGlobalKnowledge",
+          "callee": "RagDocument.builder()\r\n                .scope(RagDocumentScope.GLOBAL)\r\n                .sourceType(RagDocumentSourceType.ADMIN_KNOWLEDGE)\r\n                .ingestionVersion(0).build",
+          "lineNumber": 50
+        },
+        {
+          "caller": "startGlobalKnowledge",
+          "callee": "RagDocument.builder()\r\n                .scope(RagDocumentScope.GLOBAL)\r\n                .sourceType(RagDocumentSourceType.ADMIN_KNOWLEDGE).ingestionVersion",
+          "lineNumber": 50
+        },
+        {
+          "caller": "startGlobalKnowledge",
+          "callee": "RagDocument.builder()\r\n                .scope(RagDocumentScope.GLOBAL).sourceType",
+          "lineNumber": 50
+        },
+        {
+          "caller": "startGlobalKnowledge",
+          "callee": "RagDocument.builder().scope",
+          "lineNumber": 50
+        },
+        {
+          "caller": "startGlobalKnowledge",
+          "callee": "RagDocument.builder",
+          "lineNumber": 50
+        },
+        {
+          "caller": "startGlobalKnowledge",
+          "callee": "populateForIngestion",
+          "lineNumber": 56
+        },
+        {
+          "caller": "startGlobalKnowledge",
+          "callee": "ragDocumentRepository.save",
+          "lineNumber": 57
+        },
+        {
+          "caller": "markCompleted",
+          "callee": "ragDocumentRepository.findById(documentId).ifPresent",
+          "lineNumber": 63
+        },
+        {
+          "caller": "markCompleted",
+          "callee": "ragDocumentRepository.findById",
+          "lineNumber": 63
+        },
+        {
+          "caller": "markCompleted",
+          "callee": "document.setIngestionStatus",
+          "lineNumber": 64
+        },
+        {
+          "caller": "markCompleted",
+          "callee": "document.setErrorMessage",
+          "lineNumber": 65
+        },
+        {
+          "caller": "markCompleted",
+          "callee": "ragDocumentRepository.save",
+          "lineNumber": 66
+        },
+        {
+          "caller": "markFailed",
+          "callee": "ragDocumentRepository.findById(documentId).ifPresent",
+          "lineNumber": 73
+        },
+        {
+          "caller": "markFailed",
+          "callee": "ragDocumentRepository.findById",
+          "lineNumber": 73
+        },
+        {
+          "caller": "markFailed",
+          "callee": "document.setIngestionStatus",
+          "lineNumber": 74
+        },
+        {
+          "caller": "markFailed",
+          "callee": "document.setErrorMessage",
+          "lineNumber": 75
+        },
+        {
+          "caller": "markFailed",
+          "callee": "exception.getMessage",
+          "lineNumber": 75
+        },
+        {
+          "caller": "markFailed",
+          "callee": "ragDocumentRepository.save",
+          "lineNumber": 76
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "document.setFileName",
+          "lineNumber": 81
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 81
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 81
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "document.setStorageUrl",
+          "lineNumber": 82
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "document.setChecksum",
+          "lineNumber": 83
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "sha256",
+          "lineNumber": 83
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "document.setIngestionStatus",
+          "lineNumber": 84
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "document.setErrorMessage",
+          "lineNumber": 85
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "document.setIngestionVersion",
+          "lineNumber": 86
+        },
+        {
+          "caller": "populateForIngestion",
+          "callee": "document.getIngestionVersion",
+          "lineNumber": 86
+        },
+        {
+          "caller": "sha256",
+          "callee": "MessageDigest.getInstance(\"SHA-256\").digest",
+          "lineNumber": 91
+        },
+        {
+          "caller": "sha256",
+          "callee": "MessageDigest.getInstance",
+          "lineNumber": 91
+        },
+        {
+          "caller": "sha256",
+          "callee": "file.getBytes",
+          "lineNumber": 91
+        },
+        {
+          "caller": "sha256",
+          "callee": "HexFormat.of().formatHex",
+          "lineNumber": 92
+        },
+        {
+          "caller": "sha256",
+          "callee": "HexFormat.of",
+          "lineNumber": 92
+        },
+        {
+          "caller": "sha256",
+          "callee": "new IllegalStateException",
+          "lineNumber": 94
+        },
+        {
+          "caller": "sha256",
+          "callee": "new IllegalStateException",
+          "lineNumber": 96
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 5,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagVectorStoreServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "replaceDocumentChunks",
+          "startLine": 22,
+          "endLine": 41,
+          "params": [
+            "ragDocument",
+            "chunks"
+          ]
+        },
+        {
+          "name": "deleteDocumentChunks",
+          "startLine": 43,
+          "endLine": 49,
+          "params": [
+            "documentId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RagVectorStoreServiceImpl",
+          "startLine": 15,
+          "endLine": 50,
+          "methods": [
+            "replaceDocumentChunks",
+            "deleteDocumentChunks"
+          ],
+          "properties": [
+            "vectorStore",
+            "jdbcTemplate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "replaceDocumentChunks",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "deleteDocumentChunks",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "RagVectorStoreServiceImpl",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "deleteDocumentChunks",
+          "lineNumber": 24
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getDocumentId",
+          "lineNumber": 24
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunks.size",
+          "lineNumber": 26
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunks.get",
+          "lineNumber": 27
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata().put",
+          "lineNumber": 28
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata",
+          "lineNumber": 28
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getDocumentId().toString",
+          "lineNumber": 28
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getDocumentId",
+          "lineNumber": 28
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata().put",
+          "lineNumber": 29
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata",
+          "lineNumber": 29
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getScope().name",
+          "lineNumber": 29
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getScope",
+          "lineNumber": 29
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata().put",
+          "lineNumber": 30
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata",
+          "lineNumber": 30
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getSourceType().name",
+          "lineNumber": 30
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getSourceType",
+          "lineNumber": 30
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata().put",
+          "lineNumber": 31
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata",
+          "lineNumber": 31
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getFileName",
+          "lineNumber": 31
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata().put",
+          "lineNumber": 32
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata",
+          "lineNumber": 32
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getOwnerUserId",
+          "lineNumber": 33
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata().put",
+          "lineNumber": 34
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunk.getMetadata",
+          "lineNumber": 34
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getOwnerUserId().toString",
+          "lineNumber": 34
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "ragDocument.getOwnerUserId",
+          "lineNumber": 34
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "chunks.isEmpty",
+          "lineNumber": 38
+        },
+        {
+          "caller": "replaceDocumentChunks",
+          "callee": "vectorStore.add",
+          "lineNumber": 39
+        },
+        {
+          "caller": "deleteDocumentChunks",
+          "callee": "jdbcTemplate.update",
+          "lineNumber": 45
+        },
+        {
+          "caller": "deleteDocumentChunks",
+          "callee": "documentId.toString",
+          "lineNumber": 47
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SupabaseStorageServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 240,
+      "nonEmptyLines": 210,
+      "functions": [
+        {
+          "name": "uploadAvatar",
+          "startLine": 56,
+          "endLine": 97,
+          "params": [
+            "file",
+            "userId"
+          ]
+        },
+        {
+          "name": "getFileExtension",
+          "startLine": 105,
+          "endLine": 110,
+          "params": [
+            "fileName"
+          ]
+        },
+        {
+          "name": "uploadChatFile",
+          "startLine": 119,
+          "endLine": 126,
+          "params": [
+            "file"
+          ]
+        },
+        {
+          "name": "uploadTranscript",
+          "startLine": 128,
+          "endLine": 136,
+          "params": [
+            "file",
+            "userId"
+          ]
+        },
+        {
+          "name": "uploadCourseMaterial",
+          "startLine": 138,
+          "endLine": 170,
+          "params": [
+            "content",
+            "objectPath",
+            "contentType"
+          ]
+        },
+        {
+          "name": "signCourseMaterial",
+          "startLine": 172,
+          "endLine": 200,
+          "params": [
+            "objectPath",
+            "expiresInSeconds"
+          ]
+        },
+        {
+          "name": "uploadFile",
+          "startLine": 202,
+          "endLine": 239,
+          "params": [
+            "bucket",
+            "fileName",
+            "file",
+            "defaultContentType",
+            "upsert",
+            "label"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SupabaseStorageServiceImpl",
+          "startLine": 26,
+          "endLine": 240,
+          "methods": [
+            "uploadAvatar",
+            "getFileExtension",
+            "uploadChatFile",
+            "uploadTranscript",
+            "uploadCourseMaterial",
+            "signCourseMaterial",
+            "uploadFile"
+          ],
+          "properties": [
+            "externalApiRestTemplate",
+            "supabaseUrl",
+            "supabaseKey",
+            "AVATAR_BUCKET",
+            "CHAT_BUCKET",
+            "TRANSCRIPT_BUCKET",
+            "COURSE_MATERIAL_BUCKET"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "uploadAvatar",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "uploadChatFile",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "uploadTranscript",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "uploadCourseMaterial",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "signCourseMaterial",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "SupabaseStorageServiceImpl",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "uploadAvatar",
+          "callee": "log.info",
+          "lineNumber": 58
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "FileValidationUtil.validateImage",
+          "lineNumber": 59
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "getFileExtension",
+          "lineNumber": 65
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 65
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "fileExtension.isEmpty",
+          "lineNumber": 66
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "new HttpHeaders",
+          "lineNumber": 70
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "headers.setBearerAuth",
+          "lineNumber": 71
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "headers.setContentType",
+          "lineNumber": 72
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "MediaType.valueOf",
+          "lineNumber": 72
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "file.getContentType",
+          "lineNumber": 72
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "file.getContentType",
+          "lineNumber": 72
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "headers.set",
+          "lineNumber": 75
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "new HttpEntity<>",
+          "lineNumber": 78
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "file.getBytes",
+          "lineNumber": 78
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "restTemplate.exchange",
+          "lineNumber": 81
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "response.getStatusCode().is2xxSuccessful",
+          "lineNumber": 83
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "response.getStatusCode",
+          "lineNumber": 83
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "log.error",
+          "lineNumber": 87
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "response.getBody",
+          "lineNumber": 87
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "new RuntimeException",
+          "lineNumber": 88
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "log.error",
+          "lineNumber": 91
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "new RuntimeException",
+          "lineNumber": 92
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "log.error",
+          "lineNumber": 94
+        },
+        {
+          "caller": "uploadAvatar",
+          "callee": "new RuntimeException",
+          "lineNumber": 95
+        },
+        {
+          "caller": "getFileExtension",
+          "callee": "fileName.lastIndexOf",
+          "lineNumber": 106
+        },
+        {
+          "caller": "getFileExtension",
+          "callee": "fileName.substring",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getFileExtension",
+          "callee": "fileName.lastIndexOf",
+          "lineNumber": 109
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "log.info",
+          "lineNumber": 121
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 121
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "FileValidationUtil.validateAttachment",
+          "lineNumber": 122
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "getFileExtension",
+          "lineNumber": 123
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 123
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 124
+        },
+        {
+          "caller": "uploadChatFile",
+          "callee": "uploadFile",
+          "lineNumber": 125
+        },
+        {
+          "caller": "uploadTranscript",
+          "callee": "log.info",
+          "lineNumber": 130
+        },
+        {
+          "caller": "uploadTranscript",
+          "callee": "FileValidationUtil.validatePdf",
+          "lineNumber": 131
+        },
+        {
+          "caller": "uploadTranscript",
+          "callee": "getFileExtension",
+          "lineNumber": 132
+        },
+        {
+          "caller": "uploadTranscript",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 132
+        },
+        {
+          "caller": "uploadTranscript",
+          "callee": "fileExtension.isEmpty",
+          "lineNumber": 133
+        },
+        {
+          "caller": "uploadTranscript",
+          "callee": "UUID.randomUUID",
+          "lineNumber": 134
+        },
+        {
+          "caller": "uploadTranscript",
+          "callee": "uploadFile",
+          "lineNumber": 135
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "new HttpHeaders",
+          "lineNumber": 143
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "headers.setBearerAuth",
+          "lineNumber": 144
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "headers.setContentType",
+          "lineNumber": 145
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "MediaType.valueOf",
+          "lineNumber": 145
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "contentType.isBlank",
+          "lineNumber": 146
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "headers.set",
+          "lineNumber": 148
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "externalApiRestTemplate.exchange",
+          "lineNumber": 150
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "new HttpEntity<>",
+          "lineNumber": 151
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "response.getStatusCode().is2xxSuccessful",
+          "lineNumber": 153
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "response.getStatusCode",
+          "lineNumber": 153
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "log.info",
+          "lineNumber": 154
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "log.error",
+          "lineNumber": 160
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "response.getBody",
+          "lineNumber": 160
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "new RuntimeException",
+          "lineNumber": 161
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "log.error",
+          "lineNumber": 163
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "e.getStatusCode",
+          "lineNumber": 164
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "e.getResponseBodyAsString",
+          "lineNumber": 164
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "new RuntimeException",
+          "lineNumber": 165
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "e.getResponseBodyAsString",
+          "lineNumber": 165
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "log.error",
+          "lineNumber": 167
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "new RuntimeException",
+          "lineNumber": 168
+        },
+        {
+          "caller": "uploadCourseMaterial",
+          "callee": "e.getMessage",
+          "lineNumber": 168
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "new HttpHeaders",
+          "lineNumber": 177
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "headers.setBearerAuth",
+          "lineNumber": 178
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "headers.setContentType",
+          "lineNumber": 179
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "externalApiRestTemplate.exchange",
+          "lineNumber": 181
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "new HttpEntity<>",
+          "lineNumber": 183
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "Map.of",
+          "lineNumber": 183
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "response.getBody",
+          "lineNumber": 186
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "response.getBody().get",
+          "lineNumber": 186
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "response.getBody",
+          "lineNumber": 186
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "new RuntimeException",
+          "lineNumber": 188
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "log.error",
+          "lineNumber": 193
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "e.getStatusCode",
+          "lineNumber": 194
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "e.getResponseBodyAsString",
+          "lineNumber": 194
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "new RuntimeException",
+          "lineNumber": 195
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "e.getResponseBodyAsString",
+          "lineNumber": 195
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "log.error",
+          "lineNumber": 197
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "new RuntimeException",
+          "lineNumber": 198
+        },
+        {
+          "caller": "signCourseMaterial",
+          "callee": "e.getMessage",
+          "lineNumber": 198
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "new HttpHeaders",
+          "lineNumber": 214
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "headers.setBearerAuth",
+          "lineNumber": 215
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "headers.setContentType",
+          "lineNumber": 216
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "MediaType.valueOf",
+          "lineNumber": 216
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "file.getContentType",
+          "lineNumber": 216
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "file.getContentType",
+          "lineNumber": 216
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "headers.set",
+          "lineNumber": 217
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "String.valueOf",
+          "lineNumber": 217
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "new HttpEntity<>",
+          "lineNumber": 219
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "file.getBytes",
+          "lineNumber": 219
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "restTemplate.exchange",
+          "lineNumber": 220
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "response.getStatusCode().is2xxSuccessful",
+          "lineNumber": 222
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "response.getStatusCode",
+          "lineNumber": 222
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "log.error",
+          "lineNumber": 226
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "response.getBody",
+          "lineNumber": 226
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "new RuntimeException",
+          "lineNumber": 227
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "e.getResponseBodyAsString",
+          "lineNumber": 229
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "log.error",
+          "lineNumber": 230
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "e.getStatusCode",
+          "lineNumber": 230
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "new RuntimeException",
+          "lineNumber": 231
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "log.error",
+          "lineNumber": 233
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "new RuntimeException",
+          "lineNumber": 234
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "log.error",
+          "lineNumber": 236
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "new RuntimeException",
+          "lineNumber": 237
+        },
+        {
+          "caller": "uploadFile",
+          "callee": "e.getMessage",
+          "lineNumber": 237
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 6,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 370,
+      "nonEmptyLines": 334,
+      "functions": [
+        {
+          "name": "VirtualMentorServiceImpl",
+          "startLine": 79,
+          "endLine": 101,
+          "params": [
+            "chatSessionRepository",
+            "chatMessageRepository",
+            "studentRepository",
+            "userRepository",
+            "chatClient",
+            "vectorStore",
+            "aiServiceClient",
+            "systemPrompt",
+            "ragPrompt"
+          ]
+        },
+        {
+          "name": "createSession",
+          "startLine": 109,
+          "endLine": 123,
+          "params": [
+            "sessionName"
+          ]
+        },
+        {
+          "name": "getUserSessions",
+          "startLine": 130,
+          "endLine": 134,
+          "params": []
+        },
+        {
+          "name": "getSessionMessages",
+          "startLine": 143,
+          "endLine": 154,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "renameSession",
+          "startLine": 164,
+          "endLine": 177,
+          "params": [
+            "sessionId",
+            "newName"
+          ]
+        },
+        {
+          "name": "deleteSession",
+          "startLine": 185,
+          "endLine": 200,
+          "params": [
+            "sessionId"
+          ]
+        },
+        {
+          "name": "streamChat",
+          "startLine": 210,
+          "endLine": 295,
+          "params": [
+            "sessionId",
+            "request"
+          ]
+        },
+        {
+          "name": "retrievableBy",
+          "startLine": 309,
+          "endLine": 315,
+          "params": [
+            "user"
+          ]
+        },
+        {
+          "name": "augmentWithAttachment",
+          "startLine": 322,
+          "endLine": 343,
+          "params": [
+            "message",
+            "fileUrl"
+          ]
+        },
+        {
+          "name": "buildSystemPrompt",
+          "startLine": 345,
+          "endLine": 354,
+          "params": [
+            "user",
+            "student"
+          ]
+        },
+        {
+          "name": "getAuthenticatedUser",
+          "startLine": 362,
+          "endLine": 369,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "VirtualMentorServiceImpl",
+          "startLine": 48,
+          "endLine": 370,
+          "methods": [
+            "VirtualMentorServiceImpl",
+            "createSession",
+            "getUserSessions",
+            "getSessionMessages",
+            "renameSession",
+            "deleteSession",
+            "streamChat",
+            "retrievableBy",
+            "augmentWithAttachment",
+            "buildSystemPrompt",
+            "getAuthenticatedUser"
+          ],
+          "properties": [
+            "chatSessionRepository",
+            "chatMessageRepository",
+            "studentRepository",
+            "userRepository",
+            "chatClient",
+            "vectorStore",
+            "aiServiceClient",
+            "systemPromptTemplate",
+            "ragPromptTemplate",
+            "MAX_ATTACHMENT_CHARS",
+            "ragEnabled"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VirtualMentorServiceImpl",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "createSession",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "getUserSessions",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "getSessionMessages",
+          "line": 143,
+          "isDefault": false
+        },
+        {
+          "name": "renameSession",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "deleteSession",
+          "line": 185,
+          "isDefault": false
+        },
+        {
+          "name": "streamChat",
+          "line": 210,
+          "isDefault": false
+        },
+        {
+          "name": "VirtualMentorServiceImpl",
+          "line": 48,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "VirtualMentorServiceImpl",
+          "callee": "systemPrompt.getContentAsString",
+          "lineNumber": 96
+        },
+        {
+          "caller": "VirtualMentorServiceImpl",
+          "callee": "ragPrompt.getContentAsString",
+          "lineNumber": 97
+        },
+        {
+          "caller": "VirtualMentorServiceImpl",
+          "callee": "new UncheckedIOException",
+          "lineNumber": 99
+        },
+        {
+          "caller": "createSession",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 112
+        },
+        {
+          "caller": "createSession",
+          "callee": "ChatSession.builder()\n                .user(user)\n                .sessionName(sessionName != null && !sessionName.isBlank() ? sessionName : \"New Chat\")\n                .createdAt(LocalDateTime.now()).build",
+          "lineNumber": 115
+        },
+        {
+          "caller": "createSession",
+          "callee": "ChatSession.builder()\n                .user(user)\n                .sessionName(sessionName != null && !sessionName.isBlank() ? sessionName : \"New Chat\").createdAt",
+          "lineNumber": 115
+        },
+        {
+          "caller": "createSession",
+          "callee": "ChatSession.builder()\n                .user(user).sessionName",
+          "lineNumber": 115
+        },
+        {
+          "caller": "createSession",
+          "callee": "ChatSession.builder().user",
+          "lineNumber": 115
+        },
+        {
+          "caller": "createSession",
+          "callee": "ChatSession.builder",
+          "lineNumber": 115
+        },
+        {
+          "caller": "createSession",
+          "callee": "sessionName.isBlank",
+          "lineNumber": 117
+        },
+        {
+          "caller": "createSession",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 118
+        },
+        {
+          "caller": "createSession",
+          "callee": "chatSessionRepository.save",
+          "lineNumber": 122
+        },
+        {
+          "caller": "getUserSessions",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 132
+        },
+        {
+          "caller": "getUserSessions",
+          "callee": "chatSessionRepository.findByUser_UserIdOrderByCreatedAtDesc",
+          "lineNumber": 133
+        },
+        {
+          "caller": "getUserSessions",
+          "callee": "user.getUserId",
+          "lineNumber": 133
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 145
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "chatSessionRepository.findById(sessionId).orElseThrow",
+          "lineNumber": 146
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "chatSessionRepository.findById",
+          "lineNumber": 146
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 147
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "session.getUser().getUserId().equals",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "session.getUser().getUserId",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "session.getUser",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "user.getUserId",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "new ForbiddenException",
+          "lineNumber": 150
+        },
+        {
+          "caller": "getSessionMessages",
+          "callee": "chatMessageRepository.findByChatSession_SessionIdOrderByCreatedAtAsc",
+          "lineNumber": 153
+        },
+        {
+          "caller": "renameSession",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 167
+        },
+        {
+          "caller": "renameSession",
+          "callee": "chatSessionRepository.findById(sessionId).orElseThrow",
+          "lineNumber": 168
+        },
+        {
+          "caller": "renameSession",
+          "callee": "chatSessionRepository.findById",
+          "lineNumber": 168
+        },
+        {
+          "caller": "renameSession",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 169
+        },
+        {
+          "caller": "renameSession",
+          "callee": "session.getUser().getUserId().equals",
+          "lineNumber": 171
+        },
+        {
+          "caller": "renameSession",
+          "callee": "session.getUser().getUserId",
+          "lineNumber": 171
+        },
+        {
+          "caller": "renameSession",
+          "callee": "session.getUser",
+          "lineNumber": 171
+        },
+        {
+          "caller": "renameSession",
+          "callee": "user.getUserId",
+          "lineNumber": 171
+        },
+        {
+          "caller": "renameSession",
+          "callee": "new ForbiddenException",
+          "lineNumber": 172
+        },
+        {
+          "caller": "renameSession",
+          "callee": "session.setSessionName",
+          "lineNumber": 175
+        },
+        {
+          "caller": "renameSession",
+          "callee": "chatSessionRepository.save",
+          "lineNumber": 176
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 188
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "chatSessionRepository.findById(sessionId).orElseThrow",
+          "lineNumber": 189
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "chatSessionRepository.findById",
+          "lineNumber": 189
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 190
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "session.getUser().getUserId().equals",
+          "lineNumber": 192
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "session.getUser().getUserId",
+          "lineNumber": 192
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "session.getUser",
+          "lineNumber": 192
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "user.getUserId",
+          "lineNumber": 192
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "new ForbiddenException",
+          "lineNumber": 193
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "chatMessageRepository.deleteByChatSession_SessionId",
+          "lineNumber": 197
+        },
+        {
+          "caller": "deleteSession",
+          "callee": "chatSessionRepository.delete",
+          "lineNumber": 199
+        },
+        {
+          "caller": "streamChat",
+          "callee": "getAuthenticatedUser",
+          "lineNumber": 213
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatSessionRepository.findById(sessionId).orElseThrow",
+          "lineNumber": 214
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatSessionRepository.findById",
+          "lineNumber": 214
+        },
+        {
+          "caller": "streamChat",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 215
+        },
+        {
+          "caller": "streamChat",
+          "callee": "session.getUser().getUserId().equals",
+          "lineNumber": 218
+        },
+        {
+          "caller": "streamChat",
+          "callee": "session.getUser().getUserId",
+          "lineNumber": 218
+        },
+        {
+          "caller": "streamChat",
+          "callee": "session.getUser",
+          "lineNumber": 218
+        },
+        {
+          "caller": "streamChat",
+          "callee": "user.getUserId",
+          "lineNumber": 218
+        },
+        {
+          "caller": "streamChat",
+          "callee": "new ForbiddenException",
+          "lineNumber": 219
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder()\n                .chatSession(ChatSession.builder().sessionId(session.getSessionId()).build())\n                .role(\"USER\")\n                .content(request.getMessage())\n                .createdAt(LocalDateTime.now()).build",
+          "lineNumber": 223
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder()\n                .chatSession(ChatSession.builder().sessionId(session.getSessionId()).build())\n                .role(\"USER\")\n                .content(request.getMessage()).createdAt",
+          "lineNumber": 223
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder()\n                .chatSession(ChatSession.builder().sessionId(session.getSessionId()).build())\n                .role(\"USER\").content",
+          "lineNumber": 223
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder()\n                .chatSession(ChatSession.builder().sessionId(session.getSessionId()).build()).role",
+          "lineNumber": 223
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder().chatSession",
+          "lineNumber": 223
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder",
+          "lineNumber": 223
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatSession.builder().sessionId(session.getSessionId()).build",
+          "lineNumber": 224
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatSession.builder().sessionId",
+          "lineNumber": 224
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatSession.builder",
+          "lineNumber": 224
+        },
+        {
+          "caller": "streamChat",
+          "callee": "session.getSessionId",
+          "lineNumber": 224
+        },
+        {
+          "caller": "streamChat",
+          "callee": "request.getMessage",
+          "lineNumber": 226
+        },
+        {
+          "caller": "streamChat",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 227
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatMessageRepository.save",
+          "lineNumber": 229
+        },
+        {
+          "caller": "streamChat",
+          "callee": "studentRepository.findById(user.getUserId()).orElse",
+          "lineNumber": 233
+        },
+        {
+          "caller": "streamChat",
+          "callee": "studentRepository.findById",
+          "lineNumber": 233
+        },
+        {
+          "caller": "streamChat",
+          "callee": "user.getUserId",
+          "lineNumber": 233
+        },
+        {
+          "caller": "streamChat",
+          "callee": "buildSystemPrompt",
+          "lineNumber": 234
+        },
+        {
+          "caller": "streamChat",
+          "callee": "new ArrayList<>",
+          "lineNumber": 237
+        },
+        {
+          "caller": "streamChat",
+          "callee": "messageHistory.add",
+          "lineNumber": 240
+        },
+        {
+          "caller": "streamChat",
+          "callee": "new SystemMessage",
+          "lineNumber": 240
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatMessageRepository.findByChatSession_SessionIdOrderByCreatedAtAsc",
+          "lineNumber": 243
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatHistory.size",
+          "lineNumber": 244
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatHistory.get",
+          "lineNumber": 245
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatHistory.size",
+          "lineNumber": 247
+        },
+        {
+          "caller": "streamChat",
+          "callee": "\"USER\".equalsIgnoreCase",
+          "lineNumber": 247
+        },
+        {
+          "caller": "streamChat",
+          "callee": "msg.getRole",
+          "lineNumber": 247
+        },
+        {
+          "caller": "streamChat",
+          "callee": "msg.getContent().equals",
+          "lineNumber": 247
+        },
+        {
+          "caller": "streamChat",
+          "callee": "msg.getContent",
+          "lineNumber": 247
+        },
+        {
+          "caller": "streamChat",
+          "callee": "request.getMessage",
+          "lineNumber": 247
+        },
+        {
+          "caller": "streamChat",
+          "callee": "\"USER\".equalsIgnoreCase",
+          "lineNumber": 251
+        },
+        {
+          "caller": "streamChat",
+          "callee": "msg.getRole",
+          "lineNumber": 251
+        },
+        {
+          "caller": "streamChat",
+          "callee": "messageHistory.add",
+          "lineNumber": 252
+        },
+        {
+          "caller": "streamChat",
+          "callee": "new UserMessage",
+          "lineNumber": 252
+        },
+        {
+          "caller": "streamChat",
+          "callee": "msg.getContent",
+          "lineNumber": 252
+        },
+        {
+          "caller": "streamChat",
+          "callee": "\"ASSISTANT\".equalsIgnoreCase",
+          "lineNumber": 253
+        },
+        {
+          "caller": "streamChat",
+          "callee": "msg.getRole",
+          "lineNumber": 253
+        },
+        {
+          "caller": "streamChat",
+          "callee": "messageHistory.add",
+          "lineNumber": 254
+        },
+        {
+          "caller": "streamChat",
+          "callee": "new AssistantMessage",
+          "lineNumber": 254
+        },
+        {
+          "caller": "streamChat",
+          "callee": "msg.getContent",
+          "lineNumber": 254
+        },
+        {
+          "caller": "streamChat",
+          "callee": "augmentWithAttachment",
+          "lineNumber": 260
+        },
+        {
+          "caller": "streamChat",
+          "callee": "request.getMessage",
+          "lineNumber": 260
+        },
+        {
+          "caller": "streamChat",
+          "callee": "request.getFileUrl",
+          "lineNumber": 260
+        },
+        {
+          "caller": "streamChat",
+          "callee": "new StringBuffer",
+          "lineNumber": 263
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatClient.prompt()\n                .messages(messageHistory)\n                .user(userPrompt).toolNames",
+          "lineNumber": 265
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatClient.prompt()\n                .messages(messageHistory).user",
+          "lineNumber": 265
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatClient.prompt().messages",
+          "lineNumber": 265
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatClient.prompt",
+          "lineNumber": 265
+        },
+        {
+          "caller": "streamChat",
+          "callee": "promptSpec.advisors",
+          "lineNumber": 273
+        },
+        {
+          "caller": "streamChat",
+          "callee": "QuestionAnswerAdvisor.builder(vectorStore)\n                    .searchRequest(SearchRequest.builder()\n                            .filterExpression(retrievableBy(user))\n                            .build())\n                    .promptTemplate(new PromptTemplate(ragPromptTemplate)).build",
+          "lineNumber": 273
+        },
+        {
+          "caller": "streamChat",
+          "callee": "QuestionAnswerAdvisor.builder(vectorStore)\n                    .searchRequest(SearchRequest.builder()\n                            .filterExpression(retrievableBy(user))\n                            .build()).promptTemplate",
+          "lineNumber": 273
+        },
+        {
+          "caller": "streamChat",
+          "callee": "QuestionAnswerAdvisor.builder(vectorStore).searchRequest",
+          "lineNumber": 273
+        },
+        {
+          "caller": "streamChat",
+          "callee": "QuestionAnswerAdvisor.builder",
+          "lineNumber": 273
+        },
+        {
+          "caller": "streamChat",
+          "callee": "SearchRequest.builder()\n                            .filterExpression(retrievableBy(user)).build",
+          "lineNumber": 274
+        },
+        {
+          "caller": "streamChat",
+          "callee": "SearchRequest.builder().filterExpression",
+          "lineNumber": 274
+        },
+        {
+          "caller": "streamChat",
+          "callee": "SearchRequest.builder",
+          "lineNumber": 274
+        },
+        {
+          "caller": "streamChat",
+          "callee": "retrievableBy",
+          "lineNumber": 275
+        },
+        {
+          "caller": "streamChat",
+          "callee": "new PromptTemplate",
+          "lineNumber": 277
+        },
+        {
+          "caller": "streamChat",
+          "callee": "promptSpec\n                .stream()\n                .content()\n                .doOnNext(fullResponse::append).doOnComplete",
+          "lineNumber": 281
+        },
+        {
+          "caller": "streamChat",
+          "callee": "promptSpec\n                .stream()\n                .content().doOnNext",
+          "lineNumber": 281
+        },
+        {
+          "caller": "streamChat",
+          "callee": "promptSpec\n                .stream().content",
+          "lineNumber": 281
+        },
+        {
+          "caller": "streamChat",
+          "callee": "promptSpec.stream",
+          "lineNumber": 281
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder()\n                            .chatSession(ChatSession.builder().sessionId(session.getSessionId()).build())\n                            .role(\"ASSISTANT\")\n                            .content(fullResponse.toString())\n                            .createdAt(LocalDateTime.now()).build",
+          "lineNumber": 287
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder()\n                            .chatSession(ChatSession.builder().sessionId(session.getSessionId()).build())\n                            .role(\"ASSISTANT\")\n                            .content(fullResponse.toString()).createdAt",
+          "lineNumber": 287
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder()\n                            .chatSession(ChatSession.builder().sessionId(session.getSessionId()).build())\n                            .role(\"ASSISTANT\").content",
+          "lineNumber": 287
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder()\n                            .chatSession(ChatSession.builder().sessionId(session.getSessionId()).build()).role",
+          "lineNumber": 287
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder().chatSession",
+          "lineNumber": 287
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatMessage.builder",
+          "lineNumber": 287
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatSession.builder().sessionId(session.getSessionId()).build",
+          "lineNumber": 288
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatSession.builder().sessionId",
+          "lineNumber": 288
+        },
+        {
+          "caller": "streamChat",
+          "callee": "ChatSession.builder",
+          "lineNumber": 288
+        },
+        {
+          "caller": "streamChat",
+          "callee": "session.getSessionId",
+          "lineNumber": 288
+        },
+        {
+          "caller": "streamChat",
+          "callee": "fullResponse.toString",
+          "lineNumber": 290
+        },
+        {
+          "caller": "streamChat",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 291
+        },
+        {
+          "caller": "streamChat",
+          "callee": "chatMessageRepository.save",
+          "lineNumber": 293
+        },
+        {
+          "caller": "retrievableBy",
+          "callee": "new FilterExpressionBuilder",
+          "lineNumber": 310
+        },
+        {
+          "caller": "retrievableBy",
+          "callee": "b.or(\n                b.eq(\"scope\", RagDocumentScope.GLOBAL.name()),\n                b.eq(\"userId\", user.getUserId().toString())\n        ).build",
+          "lineNumber": 311
+        },
+        {
+          "caller": "retrievableBy",
+          "callee": "b.or",
+          "lineNumber": 311
+        },
+        {
+          "caller": "retrievableBy",
+          "callee": "b.eq",
+          "lineNumber": 312
+        },
+        {
+          "caller": "retrievableBy",
+          "callee": "RagDocumentScope.GLOBAL.name",
+          "lineNumber": 312
+        },
+        {
+          "caller": "retrievableBy",
+          "callee": "b.eq",
+          "lineNumber": 313
+        },
+        {
+          "caller": "retrievableBy",
+          "callee": "user.getUserId().toString",
+          "lineNumber": 313
+        },
+        {
+          "caller": "retrievableBy",
+          "callee": "user.getUserId",
+          "lineNumber": 313
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "fileUrl.isBlank",
+          "lineNumber": 324
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "aiServiceClient.extractMarkdown",
+          "lineNumber": 328
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "docText.isBlank",
+          "lineNumber": 329
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "docText.length",
+          "lineNumber": 332
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "docText.substring",
+          "lineNumber": 333
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "base.isBlank",
+          "lineNumber": 335
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "log.warn",
+          "lineNumber": 338
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "e.getMessage",
+          "lineNumber": 338
+        },
+        {
+          "caller": "augmentWithAttachment",
+          "callee": "base.isBlank",
+          "lineNumber": 339
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getUniversityName",
+          "lineNumber": 346
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getUniversityName",
+          "lineNumber": 346
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getMajor",
+          "lineNumber": 347
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getMajor",
+          "lineNumber": 347
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getCareerRole",
+          "lineNumber": 348
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getCareerRole().getCareerName",
+          "lineNumber": 349
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getCareerRole",
+          "lineNumber": 349
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getGithubProfile",
+          "lineNumber": 350
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getGithubProfile",
+          "lineNumber": 350
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getTranscriptUrl",
+          "lineNumber": 351
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "student.getTranscriptUrl",
+          "lineNumber": 351
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "String.format",
+          "lineNumber": 352
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "user.getFullName",
+          "lineNumber": 353
+        },
+        {
+          "caller": "buildSystemPrompt",
+          "callee": "user.getUserId",
+          "lineNumber": 353
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "SecurityUtils.getCurrentUserEmail",
+          "lineNumber": 363
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "userRepository.findByEmail",
+          "lineNumber": 364
+        },
+        {
+          "caller": "getAuthenticatedUser",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 366
+        }
+      ],
+      "metrics": {
+        "importCount": 15,
+        "exportCount": 8,
+        "functionCount": 11,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 92,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "FileValidationUtil",
+          "startLine": 19,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "validateImage",
+          "startLine": 45,
+          "endLine": 47,
+          "params": [
+            "file"
+          ]
+        },
+        {
+          "name": "validatePdf",
+          "startLine": 50,
+          "endLine": 52,
+          "params": [
+            "file"
+          ]
+        },
+        {
+          "name": "validateAttachment",
+          "startLine": 55,
+          "endLine": 58,
+          "params": [
+            "file"
+          ]
+        },
+        {
+          "name": "validate",
+          "startLine": 60,
+          "endLine": 83,
+          "params": [
+            "file",
+            "allowedTypes",
+            "allowedExts",
+            "maxBytes",
+            "label"
+          ]
+        },
+        {
+          "name": "extensionOf",
+          "startLine": 85,
+          "endLine": 91,
+          "params": [
+            "fileName"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FileValidationUtil",
+          "startLine": 17,
+          "endLine": 92,
+          "methods": [
+            "FileValidationUtil",
+            "validateImage",
+            "validatePdf",
+            "validateAttachment",
+            "validate",
+            "extensionOf"
+          ],
+          "properties": [
+            "MAX_IMAGE_BYTES",
+            "MAX_DOCUMENT_BYTES",
+            "IMAGE_TYPES",
+            "IMAGE_EXTS",
+            "PDF_TYPES",
+            "PDF_EXTS",
+            "ATTACHMENT_TYPES",
+            "ATTACHMENT_EXTS"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MAX_IMAGE_BYTES",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "MAX_DOCUMENT_BYTES",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "validateImage",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "validatePdf",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "validateAttachment",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "FileValidationUtil",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "validateImage",
+          "callee": "validate",
+          "lineNumber": 46
+        },
+        {
+          "caller": "validatePdf",
+          "callee": "validate",
+          "lineNumber": 51
+        },
+        {
+          "caller": "validateAttachment",
+          "callee": "validate",
+          "lineNumber": 56
+        },
+        {
+          "caller": "validate",
+          "callee": "file.isEmpty",
+          "lineNumber": 62
+        },
+        {
+          "caller": "validate",
+          "callee": "new BadRequestException",
+          "lineNumber": 63
+        },
+        {
+          "caller": "validate",
+          "callee": "file.getSize",
+          "lineNumber": 65
+        },
+        {
+          "caller": "validate",
+          "callee": "new BadRequestException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "validate",
+          "callee": "extensionOf",
+          "lineNumber": 69
+        },
+        {
+          "caller": "validate",
+          "callee": "file.getOriginalFilename",
+          "lineNumber": 69
+        },
+        {
+          "caller": "validate",
+          "callee": "allowedExts.contains",
+          "lineNumber": 70
+        },
+        {
+          "caller": "validate",
+          "callee": "new BadRequestException",
+          "lineNumber": 71
+        },
+        {
+          "caller": "validate",
+          "callee": "file.getContentType",
+          "lineNumber": 76
+        },
+        {
+          "caller": "validate",
+          "callee": "file.getContentType().toLowerCase",
+          "lineNumber": 76
+        },
+        {
+          "caller": "validate",
+          "callee": "file.getContentType",
+          "lineNumber": 76
+        },
+        {
+          "caller": "validate",
+          "callee": "contentType.isBlank",
+          "lineNumber": 77
+        },
+        {
+          "caller": "validate",
+          "callee": "contentType.equals",
+          "lineNumber": 78
+        },
+        {
+          "caller": "validate",
+          "callee": "allowedTypes.contains",
+          "lineNumber": 79
+        },
+        {
+          "caller": "validate",
+          "callee": "new BadRequestException",
+          "lineNumber": 81
+        },
+        {
+          "caller": "extensionOf",
+          "callee": "fileName.lastIndexOf",
+          "lineNumber": 89
+        },
+        {
+          "caller": "extensionOf",
+          "callee": "fileName.substring(dot).toLowerCase",
+          "lineNumber": 90
+        },
+        {
+          "caller": "extensionOf",
+          "callee": "fileName.substring",
+          "lineNumber": 90
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    }
+  ]
+}

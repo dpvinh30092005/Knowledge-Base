@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vé xe khách - TourVista</title>
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <link rel="apple-touch-icon" th:href="@{/images/favicon.png}">
+
+    <link rel="stylesheet" th:href="@{/vendor/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap-icons/font/bootstrap-icons.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/tourvista-header.css}">
+    <link rel="stylesheet" th:href="@{/css/tourvista-auth.css}">
+    <link rel="stylesheet" th:href="@{/css/tourvista-bus.css}">
+</head>
+<body data-solid-nav="true">
+
+<div th:replace="~{fragments/header :: travelHeader('bus')}"></div>
+
+<section class="hero-banner"
+         th:style="|background: url('@{/images/bus/bus-banner.jpg}') center/cover no-repeat;
+                   background-size: cover;
+                   padding:80px 0;
+                   color:white;
+                   border-radius:0 0 40px 40px;
+                   margin-bottom:40px;
+                   min-height:300px;
+                   position:relative;|">
+    <div style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.3); border-radius: 0 0 40px 40px;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h1><i class="fas fa-bus me-2"></i>Vé xe khách</h1>
+                <p>Đặt vé xe khách dễ dàng, giá tốt nhất. Hơn 100 nhà xe uy tín.</p>
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <span class="badge bg-white text-dark p-2 px-3 rounded-pill"><i class="fas fa-check-circle text-success me-1"></i> Hoàn tiền 100% nếu hủy</span>
+                    <span class="badge bg-white text-dark p-2 px-3 rounded-pill"><i class="fas fa-gift text-warning me-1"></i> Giảm đến 50.000đ</span>
+                </div>
+            </div>
+            <div class="col-md-5 d-none d-md-block"></div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="search-card">
+        <form th:action="@{/bus/search}" method="get">
+            <div class="row g-3">
+                <div class="col-md-2">
+                    <label for="from" class="form-label"><i class="fas fa-map-pin text-primary me-1"></i> Điểm đi</label>
+                    <input type="text" class="form-control" id="from" name="from" placeholder="TP.HCM" value="TP. Hồ Chí Minh">
+                </div>
+                <div class="col-md-2">
+                    <label for="to" class="form-label"><i class="fas fa-flag-checkered text-danger me-1"></i> Điểm đến</label>
+                    <input type="text" class="form-control" id="to" name="to" placeholder="Hà Nội" value="Hà Nội">
+                </div>
+                <div class="col-md-2">
+                    <label for="date" class="form-label"><i class="fas fa-calendar-alt me-1"></i> Ngày đi</label>
+                    <input type="date" class="form-control" id="date" name="date" value="2026-07-10">
+                </div>
+                <div class="col-md-2">
+                    <label for="passenger" class="form-label"><i class="fas fa-user me-1"></i> Hành khách</label>
+                    <select class="form-select" id="passenger" name="passenger">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-flex align-items-center">
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" id="roundTrip" name="roundTrip" value="true"
+                               style="width:20px; height:20px; cursor:pointer; border:2px solid #00b5b5; border-radius:4px;">
+                        <label class="form-check-label fw-bold" for="roundTrip" style="font-size:0.95rem; cursor:pointer; color:#1a2b3c;">
+                            <i class="fas fa-exchange-alt me-1" style="color:#00b5b5;"></i> Khứ hồi
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button type="submit" class="btn-search-2"><i class="fas fa-search me-2"></i>Tìm kiếm</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h3 class="section-title">🚌 Chuyến xe gợi ý</h3>
+
+    <div class="mb-4">
+        <h5 class="fw-bold text-uppercase" style="color:#00b5b5; border-left: 5px solid #00b5b5; padding-left: 15px;">
+            <i class="fas fa-map-marker-alt me-2"></i>Hà Nội đến
+        </h5>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/HCM.jpg}" alt="Tp.Hồ Chí Minh"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm</strong>
+                                <a th:href="@{/bus/search(from='Hà Nội', to='Tp.Hồ Chí Minh', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Tp.Hồ Chí Minh
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">1.058.000 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/HPr.jpg}" alt="Hải Phòng"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm:</strong>
+                                <a th:href="@{/bus/search(from='Hà Nội', to='Hải Phòng', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Hải Phòng
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">115.000 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/hue.jpg}" alt="Huế"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm:</strong>
+                                <a th:href="@{/bus/search(from='Hà Nội', to='Huế', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Huế
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">402.500 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="fw-bold text-uppercase" style="color:#00b5b5; border-left: 5px solid #00b5b5; padding-left: 15px;">
+            <i class="fas fa-map-marker-alt me-2"></i>Tp.Hồ Chí Minh đến
+        </h5>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/DN.jpg}" alt="Đà Nẵng"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm:</strong>
+                                <a th:href="@{/bus/search(from='Tp.Hồ Chí Minh', to='Đà Nẵng', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Đà Nẵng
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">517.500 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/HaNoi1.png}" alt="Hà Nội"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm:</strong>
+                                <a th:href="@{/bus/search(from='Tp.Hồ Chí Minh', to='Hà Nội', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Hà Nội
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">1.058.000 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/Dalat.jpg}" alt="Đà Lạt"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm:</strong>
+                                <a th:href="@{/bus/search(from='Tp.Hồ Chí Minh', to='Đà Lạt', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Đà Lạt
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">207.000 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="fw-bold text-uppercase" style="color:#00b5b5; border-left: 5px solid #00b5b5; padding-left: 15px;">
+            <i class="fas fa-map-marker-alt me-2"></i>Đà Nẵng đến
+        </h5>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/HCM.jpg}" alt="Tp.Hồ Chí Minh"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm:</strong>
+                                <a th:href="@{/bus/search(from='Đà Nẵng', to='Tp.Hồ Chí Minh', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Tp.Hồ Chí Minh
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">517.500 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/QN.jpg}" alt="Quảng Ngãi"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm:</strong>
+                                <a th:href="@{/bus/search(from='Đà Nẵng', to='Quảng Ngãi', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Quảng Ngãi
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">287.500 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="route-suggest-card">
+                    <div class="route-img-wrap" style="width:100%; height:200px; overflow:hidden; position:relative; background:#e9edf2;">
+                        <img th:src="@{/images/bus/GL.jpg}" alt="Gia Lai"
+                             style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+                    <div class="route-info">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Địa điểm:</strong>
+                                <a th:href="@{/bus/search(from='Đà Nẵng', to='Gia Lai', date='2026-07-10', passenger=1)}"
+                                   class="route-name text-decoration-none fw-bold" style="color:#1a2b3c;">
+                                    Gia Lai
+                                </a>
+                            </div>
+                            <div class="col-6 text-end">
+                                <strong>Giá tiền:</strong>
+                                <span class="route-price">284.400 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <hr class="mb-4" style="border-top: 2px solid #dee2e6; opacity: 0.5;">
+
+    <h3 class="section-title">
+        <i class="fas fa-bus me-2"></i>Đối tác xe khách
+    </h3>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/PhuongTrang.jpg}" alt="Phương Trang"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">Phương Trang</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/MaiLinh.png}" alt="Mai Linh"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">Mai Linh</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/HoangLong.png}" alt="Hoàng Long"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">Hoàng Long</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/ThanhBuoi.png}" alt="Thành Bưởi"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">Thành Bưởi</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/NxHaNoi.png}" alt="Hà Nội"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">Hà Nội</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/saoViet.png}" alt="Sao Việt"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">Sao Việt</p>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <p class="h4 fw-bold text-dark">Hãng xe khách yêu thích của bạn</p>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+            Cho dù đó là kỳ nghỉ hay chỉ đơn giản là trở về nhà với gia đình,
+            việc đặt vé xe khách yêu thích của bạn giờ đây dễ dàng hơn với chúng tôi.
+        </p>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <hr class="mb-4" style="border-top: 2px solid #dee2e6; opacity: 0.5;">
+    <h3 class="section-title">
+        <i class="fas fa-credit-card me-2"></i>Đối tác thanh toán
+    </h3>
+    <div class="row g-4 justify-content-center">
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/VCB.png}" alt="Vietcombank"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">Vietcombank</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/techcombank.png}" alt="Techcombank"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">Techcombank</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/bidv.jpg}" alt="BIDV"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">BIDV</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/bus/MoMo.png}" alt="MoMo"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">MoMo</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+            <img th:src="@{/images/ZaloPay.png}" alt="ZaloPay"
+                 class="rounded-circle img-fluid border"
+                 style="width: 80px; height: 80px; object-fit: cover; border-color: #dee2e6 !important;">
+            <p class="mt-2 fw-bold small">ZaloPay</p>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <p class="h4 fw-bold text-dark">Thanh toán một cách dễ dàng</p>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+            Chúng tôi hợp tác với các ngân hàng đáng tin cậy và cửa hàng cho phép bạn thanh toán dễ dàng.
+        </p>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <hr class="mb-4" style="border-top: 2px solid #dee2e6; opacity: 0.5;">
+    <h3 class="section-title text-center mb-5">
+        <i class="fas fa-question-circle me-2" style="color:#00b5b5;"></i>Tại sao nên mua vé xe khách trực tuyến tại TourVista?
+    </h3>
+
+    <div class="benefit-item py-3">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-1 text-center">
+                <i class="fas fa-mobile-alt" style="font-size: 4rem; color: #00b5b5;"></i>
+            </div>
+            <div class="col-md-6 order-md-2">
+                <h4 class="fw-bold"><i class="fas fa-check-circle me-2" style="color:#00b5b5;"></i>Tiện lợi</h4>
+                <p class="text-muted">Mua vé xe khách mọi lúc, mọi nơi với TourVista mà không cần tốn nhiều thời gian
+                    đến nhà ga hoặc văn phòng đại lý.
+                    Giờ đây bạn có thể mua vé thoải mái như ở nhà.</p>
+            </div>
+        </div>
+    </div>
+    <hr class="my-4" style="border-top: 1px dashed dodgerblue;">
+
+    <div class="benefit-item py-3">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-2 text-center">
+                <i class="fas fa-headset" style="font-size: 4rem; color: #f39c12;"></i>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h4 class="fw-bold"><i class="fas fa-check-circle me-2" style="color:#f39c12;"></i>Chăm sóc khách hàng 24/7</h4>
+                <p class="text-muted">Chúng tôi cung cấp dịch vụ chăm sóc khách hàng 24 giờ. Bất cứ khi nào bạn gặp vấn đề hoặc thắc mắc,
+                    hãy gọi điện, trò chuyện hoặc gửi tin nhắn cho chúng tôi từ Ứng dụng TourVista.
+                    Chúng tôi sẽ luôn ở đó.</p>
+            </div>
+        </div>
+    </div>
+    <hr class="my-4" style="border-top: 1px dashed dodgerblue;">
+
+    <div class="benefit-item py-3">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-1 text-center">
+                <i class="fas fa-info-circle" style="font-size: 4rem; color: #2ecc71;"></i>
+            </div>
+            <div class="col-md-6 order-md-2">
+                <h4 class="fw-bold"><i class="fas fa-check-circle me-2" style="color:#2ecc71;"></i>Thông tin đầy đủ</h4>
+                <p class="text-muted">Từ lịch trình xe, tuyến đường, điểm đón và trả khách, giá vé,
+                    đến hình ảnh và cơ sở vật chất xe, bạn có thể tìm thấy tất cả trên TourVista.
+                    Chúng tôi cung cấp thông tin đầy đủ để giúp bạn quyết định chuyến đi tốt nhất.</p>
+            </div>
+        </div>
+    </div>
+    <hr class="my-4" style="border-top: 1px dashed dodgerblue;">
+
+    <div class="benefit-item py-3">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-2 text-center">
+                <i class="fas fa-credit-card" style="font-size: 4rem; color: #e74c3c;"></i>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h4 class="fw-bold"><i class="fas fa-check-circle me-2" style="color:#e74c3c;"></i>Thanh toán dễ dàng</h4>
+                <p class="text-muted">Cho dù bạn muốn thanh toán bằng chuyển khoản ngân hàng,
+                    thẻ tín dụng hay bằng tiền mặt, chúng tôi đều có thể hỗ trợ bạn.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container py-5">
+
+    <hr class="mb-4" style="border-top: 2px solid #dee2e6; opacity: 0.5;">
+
+    <h3 class="fw-bold mb-3">
+        <i class="fas fa-bus text-info me-2"></i>
+        Hướng dẫn đặt vé xe khách trên TourVista
+    </h3>
+
+    <p class="text-muted mb-5">
+        Chỉ với vài bước đơn giản, bạn đã có thể đặt vé xe khách nhanh chóng và dễ dàng.
+    </p>
+
+    <div class="row align-items-center g-4 step mb-5">
+
+        <div class="col-lg-3">
+
+            <div class="d-flex align-items-center position-relative">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <div class="step-icon ms-3">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <div class="flex-grow-1 border-top border-2 ms-3"></div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-9">
+
+            <div class="card border-0 shadow-sm rounded-5">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold">
+                        Tìm kiếm chuyến xe
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Nhập điểm đi, điểm đến, ngày đi và số lượng hành khách.
+                        Hệ thống sẽ hiển thị danh sách các chuyến xe phù hợp.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row align-items-center g-4 step mb-5">
+
+        <div class="col-lg-3">
+
+            <div class="d-flex align-items-center position-relative">
+
+                <div class="step-number">2</div>
+
+                <div class="step-icon ms-3">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+
+                <div class="flex-grow-1 border-top border-2 ms-3"></div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-9">
+
+            <div class="card border-0 shadow-sm rounded-5">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold">
+                        Chọn chuyến xe
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        So sánh giờ khởi hành, giá vé, nhà xe và tiện nghi để chọn chuyến phù hợp.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row align-items-center g-4 step mb-5">
+
+        <div class="col-lg-3">
+
+            <div class="d-flex align-items-center position-relative">
+
+                <div class="step-number">3</div>
+
+                <div class="step-icon ms-3">
+                    <i class="fas fa-eye"></i>
+                </div>
+
+                <div class="flex-grow-1 border-top border-2 ms-3"></div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-9">
+
+            <div class="card border-0 shadow-sm rounded-5">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold">
+                        Xem chi tiết xe
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Kiểm tra loại xe, điểm đón, điểm trả và các tiện nghi trước khi đặt vé.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row align-items-center g-4 step mb-5">
+
+        <div class="col-lg-3">
+
+            <div class="d-flex align-items-center position-relative">
+
+                <div class="step-number">4</div>
+
+                <div class="step-icon ms-3">
+                    <i class="fas fa-user-edit"></i>
+                </div>
+
+                <div class="flex-grow-1 border-top border-2 ms-3"></div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-9">
+
+            <div class="card border-0 shadow-sm rounded-5">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold">
+                        Điền thông tin
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Nhập họ tên, email, số điện thoại và thông tin hành khách.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row align-items-center g-4 step mb-5">
+
+        <div class="col-lg-3">
+
+            <div class="d-flex align-items-center position-relative">
+
+                <div class="step-number">5</div>
+
+                <div class="step-icon ms-3">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+
+                <div class="flex-grow-1 border-top border-2 ms-3"></div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-9">
+
+            <div class="card border-0 shadow-sm rounded-5">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold">
+                        Thanh toán
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Chọn phương thức thanh toán và hoàn tất giao dịch.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row align-items-center g-4">
+
+        <div class="col-lg-3">
+
+            <div class="d-flex align-items-center">
+
+                <div class="step-number">6</div>
+
+                <div class="step-icon ms-3">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+
+                <div class="flex-grow-1 border-top border-2 ms-3"></div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-9">
+
+            <div class="card border-0 shadow-sm rounded-5">
+
+                <div class="card-body p-4">
+
+                    <h4 class="fw-bold">
+                        Nhận vé & Lên xe
+                    </h4>
+
+                    <p class="text-muted mb-0">
+                        Vé điện tử sẽ được gửi qua Email và SMS. Xuất trình mã vé khi lên xe.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+
+            <hr class="mb-4" style="border-top: 2px solid #dee2e6; opacity: 0.5;">
+            <h3 class="section-title mb-3" style="border-left-color: #00b5b5;">
+                <i class="fas fa-bus me-2" style="color:#00b5b5;"></i> Đặt Vé Xe Khách Tại TourVista
+                Giúp Bạn Thỏa Sức Du Ngoạn
+            </h3>
+            <p style="line-height: 1.8; font-size: 1.0rem;">
+                Hãy sẵn sàng để trải nghiệm nhiều tiện ích hơn khi lên kế hoạch cho chuyến đi bằng dịch vụ
+                đặt vé xe khách với TourVista. Tính năng mới nhất này của TourVista giúp người dùng đặt vé xe online
+                chỉ trong vài cú nhấp chuột. Với <strong>“Chọn, Đặt, Đi!”</strong> tất cả những gì bạn cần làm là —
+                chọn loại xe phù hợp với nhu cầu, đặt vé cho chuyến xe theo ý thích, sau đó tận hưởng chuyến đi
+                mà không phải lo lắng bất cứ điều gì. Dưới đây là một số mẹo mua vé xe khách trên TourVista để
+                có chuyến đi dễ dàng và suôn sẻ hơn!
+            </p>
+
+            <hr class="my-5" style="border-color: #dee2e6;">
+
+            <h3 class="section-title mb-3" style="border-left-color: #f39c12;">
+                <i class="fas fa-ticket-alt me-2" style="color:#f39c12;"></i> Mua Vé Xe Khách Trực Tuyến Tại
+                TourVista Với Giá Tốt
+            </h3>
+
+            <p style="line-height: 1.8; font-size: 1.0rem;">
+                Vào ngày 16 tháng 3 năm 2018, TourVista đã giới thiệu dịch vụ đặt vé xe online thông qua
+                Ứng dụng TourVista phiên bản 2.21. Dịch vụ này giúp người dùng có thể đặt vé xe khách dễ dàng hơn
+                rất nhiều vì không phải xếp hàng tại quầy hay mất nhiều thời gian để đến các đại lý bán vé.
+            </p>
+            <p style="line-height: 1.8; font-size: 1.0rem;">
+                Trên thực tế, dịch vụ đặt vé xe khách online này hiện cũng có sẵn trên app của TourVista.
+                Đến nay, TourVista đã hợp tác với hơn 20 hãng xe khách nổi tiếng trên khắp Việt Nam
+                đảm bảo đáp ứng nhu cầu đa dạng của người dùng. Các hạng xe khách hiện có bao gồm từ xe khách
+                thông thường, xe khách giường nằm, xe khách limousine, xe giường nằm cao cấp… Hành khách có thể
+                tận hưởng nhiều tiện nghi khác nhau trên xe khách như máy lạnh, ghế ngả, nhà vệ sinh,
+                WiFi và ổ cắm điện, tùy thuộc vào hạng và loại xe khách.
+            </p>
+            <p style="line-height: 1.8; font-size: 1.0rem;">
+                Ngoài những lợi ích đã đề cập ở trên, còn có nhiều lợi ích khác mà người dùng có thể nhận được khi
+                đặt vé xe khách trực tuyến thông qua TourVista - Nền tảng du lịch hàng đầu Đông Nam Á.
+                Bạn có thể tìm hiểu thêm bên dưới.
+            </p>
+
+            <div class="collapse" id="moreContent">
+                <div style="line-height: 1.9; font-size: 1rem; margin-top: 1.5rem;">
+                    <p><strong>1. Chọn - Đặt - Đi</strong><br>
+                        Đặt vé xe khách online không còn rắc rối nhờ ứng dụng TourVista và trang web di động.
+                        Tất cả những gì bạn phải làm là mở app đặt vé xe online trên điện thoại di động mọi lúc,
+                        mọi nơi. Quá trình đặt vé xe khách online này rất dễ dàng, nhanh chóng và an toàn.
+                        Bạn không còn phải mất nhiều thời gian cùng sức lực để đến và xếp hàng dài chờ đợi tại các
+                        bến xe khách. Bạn cũng không phải lo lắng nếu gặp sự cố khi đặt vé xe khách.
+                        Dịch vụ khách hàng 24 giờ của TourVista sẽ luôn sẵn sàng trợ giúp bạn qua tính năng trò chuyện,
+                        điện thoại, email hoặc qua trung tâm tin nhắn trên Ứng dụng TourVista.</p>
+
+                    <p><strong>2. Tùy chọn không giới hạn</strong><br>
+                        TourVista chính thức hợp tác với nhiều nhà điều hành xe khách (PO)
+                        và dịch vụ đưa đón phục vụ hàng trăm tuyến đường đến các tỉnh thành khác nhau trên khắp Việt Nam.
+                        Hiện tại, TourVista đã hợp tác với nhiều công ty đưa đón, nổi tiếng nhất có thể kể đến
+                        Hoa Mai, Sao Việt, Thành Bưởi, Thành Long, v.v.
+                        Dịch vụ xe khách phủ khắp các tuyến đường, đặc biệt giữa các thành phố nổi tiếng
+                        như Tp.Hồ Chí Minh, Hà Nội, Đà Nẵng, Huế, v.v.
+                        Số lượng công ty xe khách, đối tác xe đưa đón và các lựa chọn tuyến đường mà TourVista
+                        cung cấp chắc chắn sẽ tiếp tục tăng trong tương lai.</p>
+
+                    <p><strong>3. Thông tin đầy đủ</strong><br>
+                        Khi đặt vé xe online trên TourVista, bạn có thể dễ dàng tìm thấy đầy
+                        đủ thông tin liên quan đến chuyến xe của mình. Thông tin chi tiết về giá cả, tuyến đường,
+                        lịch trình, điểm lên và xuống, loại xe khách, thông số kỹ thuật cũng như hình ảnh xe
+                        khách đều có trên Ứng dụng TourVista và trang web di động. Bạn cũng có thể so sánh các xe khách
+                        và chọn loại xe phù hợp nhất với nhu cầu của mình chỉ bằng một vài thao tác.</p>
+
+                    <p><strong>4. Phương thức thanh toán đa dạng</strong><br>
+                        TourVista đảm bảo người dùng có thể hoàn thành thanh toán vé xe khách
+                        một cách nhanh chóng và an toàn bằng cách hợp tác với nhiều ngân hàng đáng tin cậy khác nhau,
+                        nhiều phương thức thanh toán có sẵn để thuận tiện hơn cho giao dịch.
+                        Người dùng có thể thực hiện thanh toán vé xe khách thông qua máy ATM,
+                        chuyển khoản ngân hàng hoặc thẻ tín dụng.</p>
+
+                    <p><strong>5. Giá rẻ hơn</strong><br>
+                        Trên tất cả các dịch vụ của mình, TourVista luôn cung cấp mức giá tốt nhất cho người dùng.
+                        Điều này bao gồm dịch vụ đặt vé xe khách và xe đưa đón trực tuyến.
+                        Tất cả vé xe khách và xe đưa đón tại TourVista đều được cung cấp với mức giá thấp
+                        hơn so với các loại vé khác trên thị trường. Việc luôn có sẵn các chương trình
+                        khuyến mãi hấp dẫn còn giúp việc mua vé xe khách tại TourVista trở nên không thể bỏ qua.</p>
+
+                    <p><strong>6. Đảm bảo vé chính thức</strong><br>
+                        TourVista thiết lập quan hệ đối tác chính thức với các nhà điều hành xe khách và xe đưa đón.
+                        Do đó, tất cả các thông tin liên quan đến vé xe khách và xe đưa đón của bạn đều được phối hợp
+                        chặt chẽ với tất cả các nhân viên xe khách tại điểm lên xe. Bạn chỉ cần xuất trình vé điện tử
+                        TourVista và lên xe để bắt đầu chuyến đi. Ngay cả khi vé xe khách của bạn có vấn đề,
+                        chẳng hạn như bị từ chối lên xe, bị hành khách khác chiếm chỗ hoặc xe khách khởi hành sớm hơn
+                        lịch trình, TourVista sẵn sàng cung cấp phương tiện thay thế hoặc hoàn tiền 100% cho bạn.
+                        Khi du lịch 4.0 lên ngôi, hãy tận dụng tối đa sức mạnh công nghệ để chuyến đi của bạn diễn
+                        ra nhanh chóng và dễ dàng nhất. Trải nghiệm ngay dịch vụ đặt vé xe khách cùng
+                        TourVista cho chuyến đi sắp tới bạn nhé!</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#moreContent" aria-expanded="false" aria-controls="moreContent" style="border-color: #00b5b5; color: #00b5b5; border-radius: 20px; padding: 8px 30px; font-weight: 500;">
+                    <span class="when-collapsed">Đọc thêm <i class="fas fa-chevron-down ms-1"></i></span>
+                    <span class="when-expanded" style="display: none;">Thu gọn <i class="fas fa-chevron-up ms-1"></i></span>
+                </button>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var collapseElement = document.getElementById('moreContent');
+                    var button = collapseElement.closest('.container').querySelector('button[data-bs-toggle="collapse"]');
+
+                    collapseElement.addEventListener('show.bs.collapse', function() {
+                        button.querySelector('.when-collapsed').style.display = 'none';
+                        button.querySelector('.when-expanded').style.display = 'inline';
+                    });
+
+                    collapseElement.addEventListener('hide.bs.collapse', function() {
+                        button.querySelector('.when-collapsed').style.display = 'inline';
+                        button.querySelector('.when-expanded').style.display = 'none';
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+</div>
+
+<footer th:replace="~{fragments/footer :: travelFooter}"></footer>
+
+<script th:src="@{/vendor/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/tourvista.js}"></script>
+</body>
+</html>

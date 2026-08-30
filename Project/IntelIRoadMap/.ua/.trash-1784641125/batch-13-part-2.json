@@ -1,0 +1,1300 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "type": "file",
+      "name": "SkillServiceImpl.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "summary": "Implements SkillService: retrieves a student's skills, searches the skill catalog, imports new skills, and compares student skills against career requirements to find gaps.",
+      "tags": [
+        "service",
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:SkillServiceImpl",
+      "type": "class",
+      "name": "SkillServiceImpl",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "lineRange": [
+        35,
+        244
+      ],
+      "summary": "SkillService implementation handling skill listing, search, import, and comparison against career requirements via SkillRepository and StudentSkillRepository.",
+      "tags": [
+        "service",
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:getStudentSkills",
+      "type": "function",
+      "name": "getStudentSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "lineRange": [
+        52,
+        86
+      ],
+      "summary": "getStudentSkills method of SkillServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:searchSkills",
+      "type": "function",
+      "name": "searchSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "lineRange": [
+        94,
+        106
+      ],
+      "summary": "searchSkills method of SkillServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:importStudentSkills",
+      "type": "function",
+      "name": "importStudentSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "lineRange": [
+        115,
+        174
+      ],
+      "summary": "importStudentSkills method of SkillServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:compareWithStudentSkills",
+      "type": "function",
+      "name": "compareWithStudentSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "lineRange": [
+        183,
+        213
+      ],
+      "summary": "compareWithStudentSkills method of SkillServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:findMissingSkills",
+      "type": "function",
+      "name": "findMissingSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "lineRange": [
+        222,
+        243
+      ],
+      "summary": "findMissingSkills method of SkillServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "type": "file",
+      "name": "StudentDashboardServiceImpl.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "summary": "Implements StudentDashboardService: aggregates roadmap progress, skill gaps, mentor feedback, AI chat history, market demand trends, and personalized recommendations for the student dashboard.",
+      "tags": [
+        "service",
+        "business-logic",
+        "dashboard"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "type": "class",
+      "name": "StudentDashboardServiceImpl",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        55,
+        458
+      ],
+      "summary": "StudentDashboardService implementation pulling data from many repositories (progress, feedback, chat, skill trend) and mapping it via StudentDashboardMapper for the dashboard UI.",
+      "tags": [
+        "service",
+        "business-logic",
+        "dashboard"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getRoadmapProgress",
+      "type": "function",
+      "name": "getRoadmapProgress",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        91,
+        131
+      ],
+      "summary": "getRoadmapProgress method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getSkillGaps",
+      "type": "function",
+      "name": "getSkillGaps",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        147,
+        163
+      ],
+      "summary": "getSkillGaps method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getMentorFeedback",
+      "type": "function",
+      "name": "getMentorFeedback",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        170,
+        183
+      ],
+      "summary": "getMentorFeedback method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getOwnedFeedback",
+      "type": "function",
+      "name": "getOwnedFeedback",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        189,
+        198
+      ],
+      "summary": "getOwnedFeedback method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:markFeedbackRead",
+      "type": "function",
+      "name": "markFeedbackRead",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        200,
+        208
+      ],
+      "summary": "markFeedbackRead method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:dismissFeedback",
+      "type": "function",
+      "name": "dismissFeedback",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        210,
+        218
+      ],
+      "summary": "dismissFeedback method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getAiHistory",
+      "type": "function",
+      "name": "getAiHistory",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        225,
+        249
+      ],
+      "summary": "getAiHistory method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getMarketDemand",
+      "type": "function",
+      "name": "getMarketDemand",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        256,
+        300
+      ],
+      "summary": "getMarketDemand method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getRecommendations",
+      "type": "function",
+      "name": "getRecommendations",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        307,
+        326
+      ],
+      "summary": "getRecommendations method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:mapRoadmapStepStatus",
+      "type": "function",
+      "name": "mapRoadmapStepStatus",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        371,
+        386
+      ],
+      "summary": "mapRoadmapStepStatus method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:selectDashboardMessage",
+      "type": "function",
+      "name": "selectDashboardMessage",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        396,
+        419
+      ],
+      "summary": "selectDashboardMessage method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:sumJobsByWeek",
+      "type": "function",
+      "name": "sumJobsByWeek",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "lineRange": [
+        443,
+        457
+      ],
+      "summary": "sumJobsByWeek method of StudentDashboardServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "type": "file",
+      "name": "StudentServiceImpl.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "summary": "Implements StudentService: sets up student profiles, updates target career, compares skills against requirements, and handles transcript upload/ingestion.",
+      "tags": [
+        "service",
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "type": "class",
+      "name": "StudentServiceImpl",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        55,
+        336
+      ],
+      "summary": "StudentService implementation managing student profile setup, career target updates, skill gap comparison, and transcript upload via DocumentIngestionService and SupabaseStorageService.",
+      "tags": [
+        "service",
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:setupStudentProfile",
+      "type": "function",
+      "name": "setupStudentProfile",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        90,
+        144
+      ],
+      "summary": "setupStudentProfile method of StudentServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:getStudentProfile",
+      "type": "function",
+      "name": "getStudentProfile",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        151,
+        157
+      ],
+      "summary": "getStudentProfile method of StudentServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:updateTargetCareer",
+      "type": "function",
+      "name": "updateTargetCareer",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        166,
+        179
+      ],
+      "summary": "updateTargetCareer method of StudentServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:compareCurrentStudentSkills",
+      "type": "function",
+      "name": "compareCurrentStudentSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        186,
+        232
+      ],
+      "summary": "compareCurrentStudentSkills method of StudentServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:findMissingRequiredSkills",
+      "type": "function",
+      "name": "findMissingRequiredSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        249,
+        258
+      ],
+      "summary": "findMissingRequiredSkills method of StudentServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:filterMissingRequiredSkills",
+      "type": "function",
+      "name": "filterMissingRequiredSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        267,
+        280
+      ],
+      "summary": "filterMissingRequiredSkills method of StudentServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:calculateSkillProgress",
+      "type": "function",
+      "name": "calculateSkillProgress",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        291,
+        307
+      ],
+      "summary": "calculateSkillProgress method of StudentServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:uploadTranscript",
+      "type": "function",
+      "name": "uploadTranscript",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "lineRange": [
+        309,
+        335
+      ],
+      "summary": "uploadTranscript method of StudentServiceImpl.",
+      "tags": [
+        "business-logic"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CompareStRmSkillRequest.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportSkillsRequest.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:SkillServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:getStudentSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:SkillServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:searchSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:SkillServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:importStudentSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:SkillServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:compareWithStudentSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:SkillServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:findMissingSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:SkillServiceImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java:SkillServiceImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillService.java",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RoadmapStepResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentDashboardService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getRoadmapProgress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getSkillGaps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getMentorFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getOwnedFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:markFeedbackRead",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:dismissFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getAiHistory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getMarketDemand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:getRecommendations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:mapRoadmapStepStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:selectDashboardMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:sumJobsByWeek",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java:StudentDashboardServiceImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentDashboardService.java",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupStudentProfileRequest.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RequiredSkillResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:setupStudentProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:getStudentProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:updateTargetCareer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:compareCurrentStudentSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:findMissingRequiredSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:filterMissingRequiredSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:calculateSkillProgress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:uploadTranscript",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java:StudentServiceImpl",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

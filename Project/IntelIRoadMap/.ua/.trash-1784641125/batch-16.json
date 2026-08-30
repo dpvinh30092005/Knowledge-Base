@@ -1,0 +1,365 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "type": "file",
+      "name": "FptCurriculumTool.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "summary": "AI agent tool that lets the LLM query a student's FPT curriculum context: resolving subject codes, describing which subjects teach a given skill, and mapping subjects to roadmap nodes for the student's target career.",
+      "tags": ["ai-tool", "curriculum", "service", "fpt"],
+      "complexity": "complex",
+      "languageNotes": "Implements a function-calling style tool (apply method) intended to be invoked by an AI agent framework, with defensive parsing of partial subject codes."
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:FptCurriculumTool",
+      "type": "class",
+      "name": "FptCurriculumTool",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "lineRange": [33, 226],
+      "summary": "Tool class exposing curriculum-lookup capabilities (subject-by-skill, subject expansion, roadmap node mapping) for use by the AI recommendation agent.",
+      "tags": ["ai-tool", "curriculum"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:apply",
+      "type": "function",
+      "name": "apply",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "lineRange": [70, 156],
+      "summary": "Main entry point of the tool: resolves the caller's career and requested skill/subject codes, then builds a text response describing relevant FPT subjects and the roadmap nodes they cover.",
+      "tags": ["ai-tool", "entry-point", "curriculum"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:describeSubjectsForSkill",
+      "type": "function",
+      "name": "describeSubjectsForSkill",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "lineRange": [169, 192],
+      "summary": "Builds a human-readable description of which FPT subjects teach a given skill name and which roadmap nodes they cover.",
+      "tags": ["curriculum", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:expandPartialCodes",
+      "type": "function",
+      "name": "expandPartialCodes",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "lineRange": [199, 214],
+      "summary": "Expands partial or prefix subject codes supplied by the LLM into full matching subject codes via repository lookup.",
+      "tags": ["curriculum", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "type": "file",
+      "name": "StudentCurriculumController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "summary": "REST controller exposing endpoints for viewing and managing a student's FPT curriculum: fetching curriculum/subject details, declaring completed terms, updating subject statuses, and generating signed download links for course materials.",
+      "tags": ["api-handler", "curriculum", "controller"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:StudentCurriculumController",
+      "type": "class",
+      "name": "StudentCurriculumController",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "lineRange": [44, 181],
+      "summary": "Controller class handling curriculum CRUD and course-material download endpoints for the authenticated student.",
+      "tags": ["api-handler", "curriculum", "controller"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:downloadMaterial",
+      "type": "function",
+      "name": "downloadMaterial",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "lineRange": [71, 97],
+      "summary": "Generates and returns a time-limited signed URL for downloading a course material resource stored in Supabase storage.",
+      "tags": ["api-handler", "storage"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:setCurriculum",
+      "type": "function",
+      "name": "setCurriculum",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "lineRange": [125, 137],
+      "summary": "Sets the active curriculum for the authenticated student and returns the updated curriculum with fresh recommendations.",
+      "tags": ["api-handler", "curriculum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:declareTerm",
+      "type": "function",
+      "name": "declareTerm",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "lineRange": [139, 152],
+      "summary": "Declares the student's most recently completed academic term, applying the curriculum term change and returning refreshed recommendations.",
+      "tags": ["api-handler", "curriculum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:updateSubjects",
+      "type": "function",
+      "name": "updateSubjects",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "lineRange": [154, 167],
+      "summary": "Updates the pass/fail/in-progress status of a batch of FPT subjects for the student and returns the curriculum with refreshed recommendations.",
+      "tags": ["api-handler", "curriculum"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:withRecommendations",
+      "type": "function",
+      "name": "withRecommendations",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "lineRange": [173, 180],
+      "summary": "Helper that attaches freshly generated roadmap recommendations to a StudentCurriculumResponse, logging and tolerating failures.",
+      "tags": ["utility", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "type": "file",
+      "name": "DeclareCurriculumTermRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "summary": "Request DTO carrying the completed academic term number when a student declares curriculum progress.",
+      "tags": ["data-model", "request-dto", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "type": "file",
+      "name": "SetStudentCurriculumRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "summary": "Request DTO carrying the curriculum ID a student selects as their active FPT curriculum.",
+      "tags": ["data-model", "request-dto", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "type": "file",
+      "name": "UpdateFptSubjectsRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "summary": "Request DTO holding a batch of subject status updates (e.g. passed, failed, in-progress) submitted by the student.",
+      "tags": ["data-model", "request-dto", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CurriculumOptionResponse.java",
+      "type": "file",
+      "name": "CurriculumOptionResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CurriculumOptionResponse.java",
+      "summary": "Response DTO representing a selectable curriculum option (code, program, cohort, batch, default flag) for a student to choose from.",
+      "tags": ["data-model", "response-dto", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "type": "file",
+      "name": "FptSubjectDetailResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "summary": "Response DTO with full detail for a single FPT subject, including skills, CLOs, materials, and session data.",
+      "tags": ["data-model", "response-dto", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectResponse.java",
+      "type": "file",
+      "name": "FptSubjectResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectResponse.java",
+      "summary": "Response DTO summarizing an FPT subject for curriculum listing views, including semester, credits, prerequisite, skills, and completion status.",
+      "tags": ["data-model", "response-dto", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java",
+      "type": "file",
+      "name": "StudentCurriculumResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java",
+      "summary": "Top-level response DTO aggregating a student's active curriculum, completed term, available curriculum options, subjects, and roadmap recommendations.",
+      "tags": ["data-model", "response-dto", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java",
+      "type": "file",
+      "name": "FptCurriculum.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java",
+      "summary": "JPA entity representing an FPT University curriculum version (program, cohort, batch, effective date) synced from the external curriculum source.",
+      "tags": ["data-model", "entity", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java",
+      "type": "file",
+      "name": "FptCurriculumSubject.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java",
+      "summary": "JPA entity linking a curriculum to a subject code, capturing the semester and optional combo (elective group) it belongs to.",
+      "tags": ["data-model", "entity", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "type": "file",
+      "name": "FptSubject.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "summary": "JPA entity representing a single FPT University subject with code, name, credits, prerequisite, and description.",
+      "tags": ["data-model", "entity", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java",
+      "type": "file",
+      "name": "FptSubjectClo.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java",
+      "summary": "JPA entity representing a Course Learning Outcome (CLO) entry belonging to an FPT subject, with an ordering index.",
+      "tags": ["data-model", "entity", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "type": "file",
+      "name": "FptSubjectResource.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "summary": "JPA entity representing a downloadable/mirrored learning resource (slide, document, etc.) attached to an FPT subject, tracking storage path, size, source URL, and related CLO.",
+      "tags": ["data-model", "entity", "curriculum", "storage"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "type": "file",
+      "name": "FptSubjectSkill.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "summary": "JPA entity linking an FPT subject to a skill it teaches, storing both the skill ID and denormalized skill name.",
+      "tags": ["data-model", "entity", "curriculum", "skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java",
+      "type": "file",
+      "name": "StudentFptSubject.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java",
+      "summary": "JPA entity tracking a student's per-subject progress within a curriculum (status such as passed/failed, source of the record, last-updated timestamp).",
+      "tags": ["data-model", "entity", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java:touch",
+      "type": "function",
+      "name": "touch",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java",
+      "lineRange": [65, 69],
+      "summary": "JPA lifecycle callback that stamps the entity's updatedAt field with the current timestamp before persist/update.",
+      "tags": ["entity", "lifecycle-hook"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "type": "file",
+      "name": "StudentSkillEvidence.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "summary": "JPA entity capturing evidence (e.g. project, certificate) that a student possesses a given skill, including source, confidence, detection method, and review status.",
+      "tags": ["data-model", "entity", "skill", "evidence"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "type": "file",
+      "name": "EvidenceStatus.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "summary": "Enum representing the review status of a piece of student skill evidence (e.g. pending, approved, rejected), with a lenient fromString parser.",
+      "tags": ["enum", "evidence", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java:fromString",
+      "type": "function",
+      "name": "fromString",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "lineRange": [10, 13],
+      "summary": "Parses a raw string into an EvidenceStatus enum value, normalizing case.",
+      "tags": ["enum", "parsing", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "type": "file",
+      "name": "EvidenceType.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "summary": "Enum representing the type/source of student skill evidence (e.g. certificate, project, self-report), with a lenient fromString parser.",
+      "tags": ["enum", "evidence", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java:fromString",
+      "type": "function",
+      "name": "fromString",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "lineRange": [11, 14],
+      "summary": "Parses a raw string into an EvidenceType enum value, normalizing case.",
+      "tags": ["enum", "parsing", "utility"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:FptCurriculumTool", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:FptCurriculumTool", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:apply", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:FptCurriculumTool", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:describeSubjectsForSkill", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:FptCurriculumTool", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:expandPartialCodes", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:apply", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:apply", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:describeSubjectsForSkill", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:apply", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:expandPartialCodes", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:describeSubjectsForSkill", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java:apply", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentFptSubjectRepository.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:StudentCurriculumController", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:StudentCurriculumController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:downloadMaterial", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:StudentCurriculumController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:setCurriculum", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:StudentCurriculumController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:declareTerm", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:StudentCurriculumController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:updateSubjects", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:StudentCurriculumController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:withRecommendations", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:downloadMaterial", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:setCurriculum", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:declareTerm", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:updateSubjects", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:declareTerm", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:withRecommendations", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:updateSubjects", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:withRecommendations", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java:downloadMaterial", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentCurriculumService.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FptResourceKind.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectSource.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java:touch", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java:touch", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java:fromString", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java:fromString", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java:fromString", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java:fromString", "type": "exports", "direction": "forward", "weight": 0.8 }
+  ]
+}

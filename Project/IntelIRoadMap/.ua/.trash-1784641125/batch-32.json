@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "id": "config:BackEnd/intelipath-service/.env",
+      "type": "config",
+      "name": ".env",
+      "filePath": "BackEnd/intelipath-service/.env",
+      "summary": "Local runtime environment file for the Python intelipath-service, providing scraper targets, service API key, LLM connection settings, and scraping delay/cookie configuration.",
+      "tags": ["configuration", "environment-variables", "secrets", "python-service"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:BackEnd/intelipath-service/.env.example",
+      "type": "config",
+      "name": ".env.example",
+      "filePath": "BackEnd/intelipath-service/.env.example",
+      "summary": "Template listing the environment variable names required to run the intelipath-service (scraper targets, service API key, LLM settings, scraping delay) without real values, for developers to copy into their own .env.",
+      "tags": ["configuration", "environment-variables", "template", "python-service"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:BackEnd/intelipath-service/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "BackEnd/intelipath-service/README.md",
+      "summary": "Placeholder README for the intelipath-service Python microservice; currently empty of content.",
+      "tags": ["documentation", "placeholder", "python-service"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:BackEnd/intelipath-service/requirements.txt",
+      "type": "config",
+      "name": "requirements.txt",
+      "filePath": "BackEnd/intelipath-service/requirements.txt",
+      "summary": "Production Python dependency list for intelipath-service, including FastAPI, Uvicorn, FastMCP, web scraping libraries (BeautifulSoup, curl_cffi, Selenium), OpenAI client, and SQLAlchemy/psycopg2 for database access.",
+      "tags": ["configuration", "dependencies", "python-service", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:BackEnd/intelipath-service/requirements-dev.txt",
+      "type": "config",
+      "name": "requirements-dev.txt",
+      "filePath": "BackEnd/intelipath-service/requirements-dev.txt",
+      "summary": "Development-only Python dependency list that layers pytest on top of requirements.txt, kept separate so the production Docker image doesn't ship a test runner.",
+      "tags": ["configuration", "dependencies", "testing", "python-service"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:BackEnd/intelipath-service/requirements-dev.txt",
+      "target": "config:BackEnd/intelipath-service/requirements.txt",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:BackEnd/intelipath-service/.env.example",
+      "target": "config:BackEnd/intelipath-service/.env",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

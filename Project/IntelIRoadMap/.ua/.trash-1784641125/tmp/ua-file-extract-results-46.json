@@ -1,0 +1,732 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 21,
+  "filesSkipped": [
+    "FrontEnd/intelipath-frontend/portfolio-html/index.html",
+    "FrontEnd/intelipath-frontend/src/App.css",
+    "FrontEnd/intelipath-frontend/src/features/portfolio/styles.css",
+    "FrontEnd/intelipath-frontend/src/index.css"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 21,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 21,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/portfolio-html/js/script.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 70,
+      "functions": [
+        {
+          "name": "switchTheme",
+          "startLine": 29,
+          "endLine": 37,
+          "params": [
+            "e"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "switchTheme",
+          "callee": "document.documentElement.setAttribute",
+          "lineNumber": 31
+        },
+        {
+          "caller": "switchTheme",
+          "callee": "localStorage.setItem",
+          "lineNumber": 32
+        },
+        {
+          "caller": "switchTheme",
+          "callee": "document.documentElement.setAttribute",
+          "lineNumber": 34
+        },
+        {
+          "caller": "switchTheme",
+          "callee": "localStorage.setItem",
+          "lineNumber": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 14,
+      "functions": [
+        {
+          "name": "WidgetSkeleton",
+          "startLine": 3,
+          "endLine": 15,
+          "params": [
+            "{ rows = 5 }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "WidgetSkeleton",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "WidgetSkeleton",
+          "callee": "Array.from({ length: rows }).map",
+          "lineNumber": 6
+        },
+        {
+          "caller": "WidgetSkeleton",
+          "callee": "Array.from",
+          "lineNumber": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/layouts/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "exports": [
+        {
+          "name": "AuthLayout",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "AuthCardLayout",
+          "line": 2,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "functions": [
+        {
+          "name": "DiagonalGridBackground",
+          "startLine": 1,
+          "endLine": 14,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DiagonalGridBackground",
+          "line": 1,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 70,
+      "functions": [
+        {
+          "name": "GlobalToast",
+          "startLine": 16,
+          "endLine": 77,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GlobalToast",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "GlobalToast",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "useEffect",
+          "lineNumber": 22
+        },
+        {
+          "caller": "handleToast",
+          "callee": "Date.now",
+          "lineNumber": 26
+        },
+        {
+          "caller": "handleToast",
+          "callee": "setToasts",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleToast",
+          "callee": "prev.findIndex",
+          "lineNumber": 28
+        },
+        {
+          "caller": "handleToast",
+          "callee": "Date.now",
+          "lineNumber": 34
+        },
+        {
+          "caller": "handleToast",
+          "callee": "Math.random",
+          "lineNumber": 34
+        },
+        {
+          "caller": "handleToast",
+          "callee": "next.slice",
+          "lineNumber": 35
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "window.addEventListener",
+          "lineNumber": 39
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "window.removeEventListener",
+          "lineNumber": 40
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "useEffect",
+          "lineNumber": 45
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "setInterval",
+          "lineNumber": 47
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "Date.now",
+          "lineNumber": 48
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "setToasts",
+          "lineNumber": 49
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "prev.filter",
+          "lineNumber": 49
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "clearInterval",
+          "lineNumber": 51
+        },
+        {
+          "caller": "GlobalToast",
+          "callee": "toasts.map",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 92,
+      "nonEmptyLines": 87,
+      "functions": [
+        {
+          "name": "MobileNavMenu",
+          "startLine": 17,
+          "endLine": 92,
+          "params": [
+            "{ items }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MobileNavMenu",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MobileNavMenu",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "useRef",
+          "lineNumber": 19
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "useEffect",
+          "lineNumber": 21
+        },
+        {
+          "caller": "onClick",
+          "callee": "ref.current.contains",
+          "lineNumber": 24
+        },
+        {
+          "caller": "onClick",
+          "callee": "setOpen",
+          "lineNumber": 24
+        },
+        {
+          "caller": "onKey",
+          "callee": "setOpen",
+          "lineNumber": 27
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "document.addEventListener",
+          "lineNumber": 29
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "document.addEventListener",
+          "lineNumber": 30
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "document.removeEventListener",
+          "lineNumber": 32
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "document.removeEventListener",
+          "lineNumber": 33
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "setOpen",
+          "lineNumber": 43
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "items.map",
+          "lineNumber": 71
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "item.onSelect",
+          "lineNumber": 76
+        },
+        {
+          "caller": "MobileNavMenu",
+          "callee": "setOpen",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 24,
+      "functions": [
+        {
+          "name": "SharedAppBackground",
+          "startLine": 1,
+          "endLine": 24,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SharedAppBackground",
+          "line": 1,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/admin/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "exports": [
+        {
+          "name": "AdminDashboardView",
+          "line": 2,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "exports": [
+        {
+          "name": "AIMentorView",
+          "line": 1,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "exports": [
+        {
+          "name": "LoginForm",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "LoginDialog",
+          "line": 2,
+          "isDefault": false
+        },
+        {
+          "name": "RegisterForm",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "ForgotPasswordForm",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "ResetPasswordForm",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/hooks/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/types/auth.types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "exports": [
+        {
+          "name": "CounselorDashboardView",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "CounselorFeedbackView",
+          "line": 2,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorAddStudent.types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 25,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorDashboard.types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 31,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorFeedback.types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 32,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "useMentorDashboardData",
+          "startLine": 4,
+          "endLine": 30,
+          "params": [
+            "loader"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useMentorDashboardData",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "useRef",
+          "lineNumber": 5
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "useState",
+          "lineNumber": 6
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "useState",
+          "lineNumber": 7
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "useEffect",
+          "lineNumber": 9
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "loaderRef.current()\r\n      .then((response) => {\r\n        if (!active) return;\r\n        setData(response);\r\n        setStatus(\"success\");\r\n      })\r\n      .catch",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "loaderRef.current()\r\n      .then",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "loaderRef.current",
+          "lineNumber": 12
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "setData",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "setStatus",
+          "lineNumber": 16
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "console.error",
+          "lineNumber": 20
+        },
+        {
+          "caller": "useMentorDashboardData",
+          "callee": "setStatus",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/mentorDashboard.types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 36,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "functions": [
+        {
+          "name": "AIMentorPage",
+          "startLine": 3,
+          "endLine": 5,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AIMentorPage",
+          "line": 3,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

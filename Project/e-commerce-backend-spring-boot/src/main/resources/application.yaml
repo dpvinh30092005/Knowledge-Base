@@ -1,0 +1,86 @@
+# Cấu hình Spring Boot cho E-Commerce Backend
+
+# Cấu hình Database (PostgreSQL)
+spring:
+  datasource:
+    # Đường dẫn kết nối tới PostgreSQL
+    # format: jdbc:postgresql://host:port/database
+    url: jdbc:postgresql://localhost:5432/ecommerce
+
+    # Username PostgreSQL (user bạn đã tạo, ví dụ: sa hoặc postgres)
+    username: sa
+
+    # Password của user PostgreSQL
+    password: 123456
+
+    # Driver PostgreSQL (Spring Boot thường tự nhận, nhưng ghi rõ cho chắc)
+    driver-class-name: org.postgresql.Driver
+
+    # Tùy chọn nâng cao: Connection pool (HikariCP mặc định)
+    hikari:
+      maximum-pool-size: 10  # Giới hạn connections để tránh overload
+      connection-timeout: 20000  # Timeout kết nối (ms)
+
+  jpa:
+    hibernate:
+      # Tự động xử lý bảng trong DB
+      # none        : không làm gì
+      # validate    : kiểm tra schema, sai thì lỗi
+      # update      : tự tạo bảng/cột còn thiếu (dùng cho dev)
+      # create      : xoá DB cũ tạo lại
+      # create-drop : tạo khi chạy, xoá khi tắt app
+      ddl-auto: update
+
+    # In câu SQL ra console để debug
+    show-sql: true
+
+    properties:
+      hibernate:
+        # Format SQL cho dễ đọc
+        format_sql: true
+
+        # Dialect giúp Hibernate hiểu PostgreSQL
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+# Cấu hình port chạy server Spring Boot
+server:
+  port: 8080
+
+  servlet:
+    context-path: /api  # Tiền tố cho tất cả endpoints (e.g., /api/users/register)
+
+
+# Cấu hình Logging
+logging:
+  level:
+    com.fptu.ecommerce: DEBUG  # Log chi tiết cho package của bạn
+    org.springframework.security: DEBUG  # Log security events
+    org.hibernate.SQL: DEBUG  # Log SQL Hibernate
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"  # Format log dễ đọc
+
+
+# Cấu hình Custom (Thêm cho dự án e-commerce)
+app:
+  jwt:
+    secret: mySecretKey123456789  # Secret key cho JWT
+    expiration: 86400000  # Thời gian hết hạn token (ms, 24h)
+  stripe:
+    api-key: sk_test_your_stripe_key  # Stripe API key
+  cors:
+    allowed-origins: http://localhost:3000  # Domain frontend
+
+
+# Cấu hình Profiles (Tùy chọn cho dev/prod)
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: jdbc:postgresql://prod-host:5432/ecommerce  # Thay host production
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    show-sql: false  # Tắt SQL log trong production

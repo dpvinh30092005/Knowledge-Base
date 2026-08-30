@@ -1,0 +1,226 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 8,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 7,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorAddStudentPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "exports": [
+        {
+          "name": "default",
+          "line": 1,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorFeedbackPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "exports": [
+        {
+          "name": "default",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/ForgotPasswordPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/LoginPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/constants.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 42,
+      "exports": [
+        {
+          "name": "ROUTES",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "ROLES",
+          "line": 37,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/vite-env.d.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/vite.config.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 17,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "profile/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 137,
+      "nonEmptyLines": 102,
+      "sections": [
+        {
+          "heading": "🧭 InteliRoadMap",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "📌 About",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "👥 Team",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "🏗️ Repositories",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "🚀 Tech Stack",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "Frontend",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "Backend",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "AI & External APIs",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "Scraping",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "🎯 Key Features",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "👤 Actors",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "🌿 Git Flow",
+          "level": 2,
+          "line": 81
+        },
+        {
+          "heading": "📅 Sprint Planning",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "📋 Commit Convention",
+          "level": 2,
+          "line": 110
+        },
+        {
+          "heading": "🔗 Project Management",
+          "level": 2,
+          "line": 134
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    }
+  ]
+}

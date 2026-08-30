@@ -1,0 +1,228 @@
+{
+  "nodes": [
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c1-outlined-chip.md",
+      "type": "document",
+      "name": "c1-outlined-chip.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c1-outlined-chip.md",
+      "summary": "Hallmark design-skill reference card for the 'C1 Outlined chip' CTA pattern: a bordered, transparent button for a single quiet primary action, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "cta"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c2-inline-form-as-cta.md",
+      "type": "document",
+      "name": "c2-inline-form-as-cta.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c2-inline-form-as-cta.md",
+      "summary": "Hallmark design-skill reference card for the 'C2 Inline form-as-CTA' pattern, showing a single-field form used as the primary call to action, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "cta"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c3-typographic-link.md",
+      "type": "document",
+      "name": "c3-typographic-link.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c3-typographic-link.md",
+      "summary": "Hallmark design-skill reference card for the 'C3 Typographic link' CTA pattern, a text-only link styled as the primary action, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "cta"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c4-sticky-bottom-bar.md",
+      "type": "document",
+      "name": "c4-sticky-bottom-bar.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c4-sticky-bottom-bar.md",
+      "summary": "Hallmark design-skill reference card for the 'C4 Sticky bottom bar' CTA pattern, a persistent action bar pinned to the viewport bottom, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "cta"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f1-bento-grid.md",
+      "type": "document",
+      "name": "f1-bento-grid.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f1-bento-grid.md",
+      "summary": "Hallmark design-skill reference card for the 'F1 Bento grid' feature-layout pattern: an asymmetric grid of mixed-span tiles for SaaS feature pages with multiple entry points, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "feature-layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f2-sticky-scroll-stack.md",
+      "type": "document",
+      "name": "f2-sticky-scroll-stack.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f2-sticky-scroll-stack.md",
+      "summary": "Hallmark design-skill reference card for the 'F2 Sticky-scroll stack' feature-layout pattern: vertically stacked feature panels with sticky scroll pacing, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "feature-layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f3-tabular-spec-sheet.md",
+      "type": "document",
+      "name": "f3-tabular-spec-sheet.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f3-tabular-spec-sheet.md",
+      "summary": "Hallmark design-skill reference card for the 'F3 Tabular spec sheet' feature-layout pattern presenting features as a comparison/spec table, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "feature-layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f4-step-sequence.md",
+      "type": "document",
+      "name": "f4-step-sequence.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f4-step-sequence.md",
+      "summary": "Hallmark design-skill reference card for the 'F4 Step sequence' feature-layout pattern, presenting a numbered ordered sequence of steps, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "feature-layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f5-annotated-screenshot.md",
+      "type": "document",
+      "name": "f5-annotated-screenshot.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f5-annotated-screenshot.md",
+      "summary": "Hallmark design-skill reference card for the 'F5 Annotated screenshot' feature-layout pattern, a product screenshot with callout annotations, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "feature-layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f6-product-card-grid.md",
+      "type": "document",
+      "name": "f6-product-card-grid.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f6-product-card-grid.md",
+      "summary": "Hallmark design-skill reference card for the 'F6 Product card grid' pattern: uniform image/name/price product cards for commerce, catalogue, or marketplace pages, with variation knobs, example HTML/CSS, and anti-patterns to avoid.",
+      "tags": ["documentation", "design-system", "component-reference", "commerce-layout"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft1-mast-headed.md",
+      "type": "document",
+      "name": "ft1-mast-headed.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft1-mast-headed.md",
+      "summary": "Hallmark design-skill reference card for the 'Ft1 Mast-headed' footer pattern, a masthead-style footer layout, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft2-inline-rule-single-line.md",
+      "type": "document",
+      "name": "ft2-inline-rule-single-line.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft2-inline-rule-single-line.md",
+      "summary": "Hallmark design-skill reference card for the 'Ft2 Inline-rule single line' minimal footer pattern, a single ruled line of links, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft3-index-style-category-list.md",
+      "type": "document",
+      "name": "ft3-index-style-category-list.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft3-index-style-category-list.md",
+      "summary": "Hallmark design-skill reference card for the 'Ft3 Index-style category list' footer pattern, organizing footer links into categorized index columns, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft4-dense-typographic.md",
+      "type": "document",
+      "name": "ft4-dense-typographic.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft4-dense-typographic.md",
+      "summary": "Hallmark design-skill reference card for the 'Ft4 Dense typographic' footer pattern, a compact text-dense footer layout, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft5-statement.md",
+      "type": "document",
+      "name": "ft5-statement.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft5-statement.md",
+      "summary": "Hallmark design-skill reference card for the 'Ft5 Statement' footer pattern, a large closing statement/tagline used as the footer's focal element, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft6-letter-close.md",
+      "type": "document",
+      "name": "ft6-letter-close.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft6-letter-close.md",
+      "summary": "Hallmark design-skill reference card for the 'Ft6 Letter close' footer pattern, styled like the sign-off of a written letter, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft7-newsletter-first.md",
+      "type": "document",
+      "name": "ft7-newsletter-first.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft7-newsletter-first.md",
+      "summary": "Hallmark design-skill reference card for the 'Ft7 Newsletter-first' footer pattern, where a subscription form is the primary footer element and other links are secondary, with example HTML/CSS and an anti-pattern warning.",
+      "tags": ["documentation", "design-system", "component-reference", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft8-marquee-scroll.md",
+      "type": "document",
+      "name": "ft8-marquee-scroll.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft8-marquee-scroll.md",
+      "summary": "Hallmark design-skill reference card for the 'Ft8 Marquee scroll' footer pattern, a scrolling marquee element in the footer, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "footer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h1-marquee.md",
+      "type": "document",
+      "name": "h1-marquee.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h1-marquee.md",
+      "summary": "Hallmark design-skill reference card for the 'H1 Marquee' hero pattern, a large scrolling/marquee hero treatment, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "hero"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h2-split-diptych.md",
+      "type": "document",
+      "name": "h2-split-diptych.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h2-split-diptych.md",
+      "summary": "Hallmark design-skill reference card for the 'H2 Split Diptych' hero pattern, a two-panel split hero layout, with example HTML/CSS.",
+      "tags": ["documentation", "design-system", "component-reference", "hero"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c1-outlined-chip.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c2-inline-form-as-cta.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f1-bento-grid.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f2-sticky-scroll-stack.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f1-bento-grid.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f6-product-card-grid.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft1-mast-headed.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft2-inline-rule-single-line.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft2-inline-rule-single-line.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft7-newsletter-first.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h1-marquee.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h2-split-diptych.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

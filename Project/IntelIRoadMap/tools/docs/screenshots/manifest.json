@@ -1,0 +1,30 @@
+{
+  "base": "https://intelipath.online",
+  "capturedAt": "2026-08-12T10:11:57.329Z",
+  "shots": [
+    {
+      "file": "docs\\screenshots\\01-landing.png",
+      "slug": "landing",
+      "note": "Landing page",
+      "url": "https://intelipath.online/"
+    },
+    {
+      "file": "docs\\screenshots\\02-features.png",
+      "slug": "features",
+      "note": "Landing section #features",
+      "url": "https://intelipath.online/"
+    },
+    {
+      "file": "docs\\screenshots\\03-how-it-works.png",
+      "slug": "how-it-works",
+      "note": "Landing section #how-it-works",
+      "url": "https://intelipath.online/"
+    },
+    {
+      "file": "docs\\screenshots\\04-testimonials.png",
+      "slug": "testimonials",
+      "note": "Landing section #testimonials",
+      "url": "https://intelipath.online/"
+    }
+  ]
+}

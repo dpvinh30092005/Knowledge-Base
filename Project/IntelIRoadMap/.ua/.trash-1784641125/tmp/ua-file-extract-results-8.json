@@ -1,0 +1,2565 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 28,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 28,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 28,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/lib/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/main.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 17,
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/AdminDashboardPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "functions": [
+        {
+          "name": "AdminDashboard",
+          "startLine": 3,
+          "endLine": 5,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AdminDashboard",
+          "line": 3,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorProfileSettingsPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 459,
+      "nonEmptyLines": 433,
+      "functions": [
+        {
+          "name": "CounselorProfileSettingsPage",
+          "startLine": 30,
+          "endLine": 459,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CounselorProfileSettingsPage",
+          "line": 30,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useProfileSettings",
+          "lineNumber": 41
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useAuth",
+          "lineNumber": 43
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useNavigate",
+          "lineNumber": 44
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useLocation",
+          "lineNumber": 45
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useRef",
+          "lineNumber": 46
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useRef",
+          "lineNumber": 47
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useRef",
+          "lineNumber": 48
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useState",
+          "lineNumber": 50
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useState",
+          "lineNumber": 51
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useEffect",
+          "lineNumber": 54
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "setAvatarError",
+          "lineNumber": 55
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "useGSAP",
+          "lineNumber": 58
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 61
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 69
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 78
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "gsap.timeline",
+          "lineNumber": 89
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1.4,\n            opacity: 0.6,\n            rotate: 10,\n            duration: 0.3,\n            ease: \"power2.inOut\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1,\n            opacity: 1,\n            rotate: 0,\n            duration: 0.5,\n            ease: \"elastic.out(1, 0.5)\"\n          })\n          .to",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1.4,\n            opacity: 0.6,\n            rotate: 10,\n            duration: 0.3,\n            ease: \"power2.inOut\"\n          })\n          .to",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "tl.to",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 127
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 128
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "navigate",
+          "lineNumber": 197
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "loadProfile",
+          "lineNumber": 233
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "setIsUploadModalOpen",
+          "lineNumber": 250
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "setAvatarError",
+          "lineNumber": 267
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "setIsUploadModalOpen",
+          "lineNumber": 276
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 316
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 328
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 344
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 359
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 375
+        },
+        {
+          "caller": "CounselorProfileSettingsPage",
+          "callee": "loadProfile",
+          "lineNumber": 383
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/DashboardPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "DashboardPage",
+          "startLine": 5,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DashboardPage",
+          "line": 5,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DashboardPage",
+          "callee": "useAuth",
+          "lineNumber": 6
+        },
+        {
+          "caller": "DashboardPage",
+          "callee": "user?.role?.toUpperCase",
+          "lineNumber": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorFeedbackPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "functions": [
+        {
+          "name": "MentorFeedbackPage",
+          "startLine": 3,
+          "endLine": 5,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MentorFeedbackPage",
+          "line": 3,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorPortfolioPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "MentorPortfolioPage",
+          "startLine": 9,
+          "endLine": 70,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MentorPortfolioPage",
+          "line": 9,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "useParams",
+          "lineNumber": 10
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "useNavigate",
+          "lineNumber": 11
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "useState",
+          "lineNumber": 13
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "useEffect",
+          "lineNumber": 15
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "mentorApi.getStudentPortfolio(slug).then(res => {\n      setData(res);\n      setLoading(false);\n    }).catch",
+          "lineNumber": 17
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "mentorApi.getStudentPortfolio(slug).then",
+          "lineNumber": 17
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "mentorApi.getStudentPortfolio",
+          "lineNumber": 17
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "setData",
+          "lineNumber": 18
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "setLoading",
+          "lineNumber": 19
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "setLoading",
+          "lineNumber": 20
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "navigate",
+          "lineNumber": 36
+        },
+        {
+          "caller": "MentorPortfolioPage",
+          "callee": "navigate",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorProfileSettingsPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 462,
+      "nonEmptyLines": 439,
+      "functions": [
+        {
+          "name": "MentorProfileSettingsPage",
+          "startLine": 28,
+          "endLine": 462,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MentorProfileSettingsPage",
+          "line": 28,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "useProfileSettings",
+          "lineNumber": 38
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "useAuth",
+          "lineNumber": 40
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "useNavigate",
+          "lineNumber": 41
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "useLocation",
+          "lineNumber": 42
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "useRef",
+          "lineNumber": 43
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "useRef",
+          "lineNumber": 44
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "useGSAP",
+          "lineNumber": 46
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 49
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 57
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 66
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.timeline",
+          "lineNumber": 77
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1.4,\n            opacity: 0.6,\n            rotate: 10,\n            duration: 0.3,\n            ease: \"power2.inOut\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1,\n            opacity: 1,\n            rotate: 0,\n            duration: 0.5,\n            ease: \"elastic.out(1, 0.5)\"\n          })\n          .to",
+          "lineNumber": 78
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1.4,\n            opacity: 0.6,\n            rotate: 10,\n            duration: 0.3,\n            ease: \"power2.inOut\"\n          })\n          .to",
+          "lineNumber": 78
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to",
+          "lineNumber": 78
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to",
+          "lineNumber": 78
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "tl.to",
+          "lineNumber": 78
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 115
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 116
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "navigate",
+          "lineNumber": 133
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "navigate",
+          "lineNumber": 141
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 183
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 191
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.fromTo",
+          "lineNumber": 199
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "loadProfile",
+          "lineNumber": 204
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 257
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 270
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 287
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 302
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 318
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 327
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 335
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.fromTo",
+          "lineNumber": 343
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "loadProfile",
+          "lineNumber": 352
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 362
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 371
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.fromTo",
+          "lineNumber": 380
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "handleSave",
+          "lineNumber": 389
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 422
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 430
+        },
+        {
+          "caller": "MentorProfileSettingsPage",
+          "callee": "gsap.fromTo",
+          "lineNumber": 438
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorRoadmapEditorPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "functions": [
+        {
+          "name": "MentorRoadmapEditorPage",
+          "startLine": 3,
+          "endLine": 5,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MentorRoadmapEditorPage",
+          "line": 3,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/NotFoundPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 312,
+      "nonEmptyLines": 296,
+      "functions": [
+        {
+          "name": "NotFoundPage",
+          "startLine": 85,
+          "endLine": 312,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NotFoundPage",
+          "line": 85,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "NotFoundPage",
+          "callee": "useNavigate",
+          "lineNumber": 86
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "useRef",
+          "lineNumber": 87
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "useEffect",
+          "lineNumber": 90
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "document.createElement",
+          "lineNumber": 92
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "document.head.appendChild",
+          "lineNumber": 94
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "styleRef.current?.remove",
+          "lineNumber": 98
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "orbs.map",
+          "lineNumber": 110
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "navigate",
+          "lineNumber": 219
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "navigate",
+          "lineNumber": 239
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "[\r\n            {\r\n              label: \"Sign In\",\r\n              path: ROUTES.LOGIN,\r\n              icon: <Compass className=\"w-3.5 h-3.5\" />\r\n            }\r\n          ].map",
+          "lineNumber": 278
+        },
+        {
+          "caller": "NotFoundPage",
+          "callee": "navigate",
+          "lineNumber": 287
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/OAuthCallbackPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 108,
+      "nonEmptyLines": 92,
+      "functions": [
+        {
+          "name": "OAuthCallbackPage",
+          "startLine": 13,
+          "endLine": 108,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OAuthCallbackPage",
+          "line": 13,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useSearchParams",
+          "lineNumber": 14
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useAuth",
+          "lineNumber": 15
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useNavigate",
+          "lineNumber": 16
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "searchParams.get",
+          "lineNumber": 18
+        },
+        {
+          "caller": "getCookie",
+          "callee": "value.split",
+          "lineNumber": 22
+        },
+        {
+          "caller": "getCookie",
+          "callee": "parts.pop()?.split(\";\").shift",
+          "lineNumber": 23
+        },
+        {
+          "caller": "getCookie",
+          "callee": "parts.pop()?.split",
+          "lineNumber": 23
+        },
+        {
+          "caller": "getCookie",
+          "callee": "parts.pop",
+          "lineNumber": 23
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useState",
+          "lineNumber": 31
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "getCookie",
+          "lineNumber": 31
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "getCookie",
+          "lineNumber": 32
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useEffect",
+          "lineNumber": 34
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "deleteCookie",
+          "lineNumber": 35
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "deleteCookie",
+          "lineNumber": 36
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useMemo",
+          "lineNumber": 45
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "jwtDecode",
+          "lineNumber": 49
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "String",
+          "lineNumber": 54
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useState",
+          "lineNumber": 59
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "useEffect",
+          "lineNumber": 62
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "new Date(tokenResult.decoded.exp * 1000).toISOString",
+          "lineNumber": 67
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "login({ accessToken: token, refreshToken, expiresIn })\r\n      .then(() => {\r\n        const userRole = role?.toUpperCase() || ROLES.STUDENT\r\n        if (userRole === ROLES.ADMIN) navigate(ROUTES.DASHBOARD_ADMIN)\r\n        else if (userRole === ROLES.COUNSELOR)\r\n          navigate(ROUTES.DASHBOARD_COUNSELOR)\r\n        else if (userRole === ROLES.MENTOR) navigate(ROUTES.DASHBOARD_MENTOR)\r\n        else navigate(ROUTES.DASHBOARD_STUDENT)\r\n      })\r\n      .catch",
+          "lineNumber": 70
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "login({ accessToken: token, refreshToken, expiresIn })\r\n      .then",
+          "lineNumber": 70
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "login",
+          "lineNumber": 70
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "role?.toUpperCase",
+          "lineNumber": 72
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "navigate",
+          "lineNumber": 73
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "navigate",
+          "lineNumber": 75
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "navigate",
+          "lineNumber": 76
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "navigate",
+          "lineNumber": 77
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "console.error",
+          "lineNumber": 80
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "setLoginError",
+          "lineNumber": 81
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "JSON.stringify",
+          "lineNumber": 81
+        },
+        {
+          "caller": "OAuthCallbackPage",
+          "callee": "navigate",
+          "lineNumber": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/PublicPortfolioPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 56,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "PublicPortfolioPage",
+          "startLine": 8,
+          "endLine": 56,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PublicPortfolioPage",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "useParams",
+          "lineNumber": 9
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "useState",
+          "lineNumber": 10
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "useState",
+          "lineNumber": 11
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "useEffect",
+          "lineNumber": 14
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "portfolioApi.getPublicPortfolio(slug).then((res) => {\r\n      if (!res) {\r\n        setError(\"Portfolio not found.\");\r\n      } else {\r\n        setData(res);\r\n      }\r\n      setLoading(false);\r\n    }).catch",
+          "lineNumber": 16
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "portfolioApi.getPublicPortfolio(slug).then",
+          "lineNumber": 16
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "portfolioApi.getPublicPortfolio",
+          "lineNumber": 16
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "setError",
+          "lineNumber": 18
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "setData",
+          "lineNumber": 20
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "setLoading",
+          "lineNumber": 22
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "console.error",
+          "lineNumber": 24
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "setError",
+          "lineNumber": 25
+        },
+        {
+          "caller": "PublicPortfolioPage",
+          "callee": "setLoading",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/RegisterPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "functions": [
+        {
+          "name": "RegisterPage",
+          "startLine": 4,
+          "endLine": 10,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RegisterPage",
+          "line": 4,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/ResetPasswordPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "functions": [
+        {
+          "name": "ResetPasswordPage",
+          "startLine": 4,
+          "endLine": 11,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ResetPasswordPage",
+          "line": 4,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/SkillAssessmentModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 121,
+      "nonEmptyLines": 115,
+      "functions": [
+        {
+          "name": "SkillsModal",
+          "startLine": 10,
+          "endLine": 121,
+          "params": [
+            "{ isOpen, onClose }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SkillsModal",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SkillsModal",
+          "callee": "useSkillAssessment",
+          "lineNumber": 21
+        },
+        {
+          "caller": "SkillsModal",
+          "callee": "user?.fullName?.split",
+          "lineNumber": 38
+        },
+        {
+          "caller": "SkillsModal",
+          "callee": "setSearchQuery",
+          "lineNumber": 51
+        },
+        {
+          "caller": "SkillsModal",
+          "callee": "setSearchQuery",
+          "lineNumber": 58
+        },
+        {
+          "caller": "SkillsModal",
+          "callee": "skills.map",
+          "lineNumber": 79
+        },
+        {
+          "caller": "SkillsModal",
+          "callee": "selectedSkillIds.includes",
+          "lineNumber": 80
+        },
+        {
+          "caller": "SkillsModal",
+          "callee": "toggleSkill",
+          "lineNumber": 87
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentFeedbackPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "functions": [
+        {
+          "name": "StudentFeedbackPage",
+          "startLine": 3,
+          "endLine": 5,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentFeedbackPage",
+          "line": 3,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentOnboardingModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 225,
+      "nonEmptyLines": 211,
+      "functions": [
+        {
+          "name": "StudentOnboardingModal",
+          "startLine": 19,
+          "endLine": 225,
+          "params": [
+            "{\n  isOpen,\n  onClose\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentOnboardingModal",
+          "line": 19,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StudentOnboardingModal",
+          "callee": "useStudentOnboarding",
+          "lineNumber": 43
+        },
+        {
+          "caller": "StudentOnboardingModal",
+          "callee": "setFullName",
+          "lineNumber": 88
+        },
+        {
+          "caller": "StudentOnboardingModal",
+          "callee": "setyob",
+          "lineNumber": 121
+        },
+        {
+          "caller": "StudentOnboardingModal",
+          "callee": "setBio",
+          "lineNumber": 133
+        },
+        {
+          "caller": "StudentOnboardingModal",
+          "callee": "setUniversity",
+          "lineNumber": 151
+        },
+        {
+          "caller": "StudentOnboardingModal",
+          "callee": "setAdmissionDate",
+          "lineNumber": 165
+        },
+        {
+          "caller": "StudentOnboardingModal",
+          "callee": "setStep",
+          "lineNumber": 195
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentPortfolioPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "StudentPortfolioPage",
+          "startLine": 10,
+          "endLine": 82,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentPortfolioPage",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StudentPortfolioPage",
+          "callee": "useAuth",
+          "lineNumber": 11
+        },
+        {
+          "caller": "StudentPortfolioPage",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "StudentPortfolioPage",
+          "callee": "useState",
+          "lineNumber": 13
+        },
+        {
+          "caller": "StudentPortfolioPage",
+          "callee": "useEffect",
+          "lineNumber": 15
+        },
+        {
+          "caller": "fetchPortfolioData",
+          "callee": "Promise.all",
+          "lineNumber": 18
+        },
+        {
+          "caller": "fetchPortfolioData",
+          "callee": "portfolioApi.getPortfolio",
+          "lineNumber": 19
+        },
+        {
+          "caller": "fetchPortfolioData",
+          "callee": "studentDashboardService.getStudentProfile",
+          "lineNumber": 20
+        },
+        {
+          "caller": "fetchPortfolioData",
+          "callee": "user.fullName?.split",
+          "lineNumber": 26
+        },
+        {
+          "caller": "fetchPortfolioData",
+          "callee": "new Date(profile.admissionDate).getFullYear",
+          "lineNumber": 40
+        },
+        {
+          "caller": "fetchPortfolioData",
+          "callee": "setData",
+          "lineNumber": 48
+        },
+        {
+          "caller": "fetchPortfolioData",
+          "callee": "console.error",
+          "lineNumber": 50
+        },
+        {
+          "caller": "fetchPortfolioData",
+          "callee": "setLoading",
+          "lineNumber": 52
+        },
+        {
+          "caller": "StudentPortfolioPage",
+          "callee": "fetchPortfolioData",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentProfileSettingsPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 478,
+      "nonEmptyLines": 454,
+      "functions": [
+        {
+          "name": "StudentProfileSettingsPage",
+          "startLine": 27,
+          "endLine": 478,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentProfileSettingsPage",
+          "line": 27,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "useProfileSettings",
+          "lineNumber": 37
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "useAuth",
+          "lineNumber": 39
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "useNavigate",
+          "lineNumber": 40
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "useLocation",
+          "lineNumber": 41
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "useRef",
+          "lineNumber": 42
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "useRef",
+          "lineNumber": 43
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "useGSAP",
+          "lineNumber": 45
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 48
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 56
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.from",
+          "lineNumber": 65
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.timeline",
+          "lineNumber": 76
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1.4,\n            opacity: 0.6,\n            rotate: 10,\n            duration: 0.3,\n            ease: \"power2.inOut\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1,\n            opacity: 1,\n            rotate: 0,\n            duration: 0.5,\n            ease: \"elastic.out(1, 0.5)\"\n          })\n          .to",
+          "lineNumber": 77
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to(sparkleRef.current, {\n            scale: 1.4,\n            opacity: 0.6,\n            rotate: 10,\n            duration: 0.3,\n            ease: \"power2.inOut\"\n          })\n          .to",
+          "lineNumber": 77
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to(sparkleRef.current, {\n            scale: 1.15,\n            opacity: 1,\n            rotate: -15,\n            duration: 0.25,\n            ease: \"power2.out\"\n          })\n          .to",
+          "lineNumber": 77
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "tl.to(sparkleRef.current, {\n          scale: 1.3,\n          opacity: 0.4,\n          rotate: 20,\n          duration: 0.35,\n          ease: \"power2.in\"\n        })\n          .to",
+          "lineNumber": 77
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "tl.to",
+          "lineNumber": 77
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 114
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "navigate",
+          "lineNumber": 115
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "navigate",
+          "lineNumber": 131
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "navigate",
+          "lineNumber": 137
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 179
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 187
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.fromTo",
+          "lineNumber": 195
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "loadProfile",
+          "lineNumber": 200
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 247
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 259
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 275
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 288
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "new Date().toISOString().split",
+          "lineNumber": 302
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "new Date().toISOString",
+          "lineNumber": 302
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 305
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 320
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "handleChange",
+          "lineNumber": 336
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 345
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 353
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.fromTo",
+          "lineNumber": 361
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "loadProfile",
+          "lineNumber": 370
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 380
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 389
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.fromTo",
+          "lineNumber": 398
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "handleSave",
+          "lineNumber": 407
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 438
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.to",
+          "lineNumber": 446
+        },
+        {
+          "caller": "StudentProfileSettingsPage",
+          "callee": "gsap.fromTo",
+          "lineNumber": 454
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/WelcomePage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 242,
+      "nonEmptyLines": 214,
+      "functions": [
+        {
+          "name": "WelcomePage",
+          "startLine": 13,
+          "endLine": 242,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "WelcomePage",
+          "line": 13,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "WelcomePage",
+          "callee": "useRef",
+          "lineNumber": 14
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "useGSAP",
+          "lineNumber": 16
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "gsap.timeline",
+          "lineNumber": 17
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "tl.fromTo",
+          "lineNumber": 20
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "tl.fromTo",
+          "lineNumber": 26
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "tl.fromTo",
+          "lineNumber": 33
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "gsap.to",
+          "lineNumber": 51
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "useEffect",
+          "lineNumber": 63
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "gsap.to",
+          "lineNumber": 72
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "gsap.to",
+          "lineNumber": 77
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "window.addEventListener",
+          "lineNumber": 83
+        },
+        {
+          "caller": "WelcomePage",
+          "callee": "window.removeEventListener",
+          "lineNumber": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 30,
+      "exports": [
+        {
+          "name": "WelcomePage",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "RegisterPage",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "ResetPasswordPage",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "DashboardPage",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "StudentDashboardPage",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "StudentRoadmapPage",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "AIMentorPage",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "StudentFeedbackPage",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "CounselorDashboardPage",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "CounselorFeedbackPage",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "CounselorAddStudentPage",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "MentorDashboardPage",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "MentorStudentsPage",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "MentorFeedbackPage",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "MentorPortfolioPage",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "MentorRoadmapEditorPage",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "AdminDashboardPage",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "OAuthCallbackPage",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "NotFoundPage",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "ProfileSettingsPage",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "StudentProfileSettingsPage",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "MentorProfileSettingsPage",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "CounselorProfileSettingsPage",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "StudentCoursesPage",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "StudentMarketPulsePage",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 25,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/api/apiClients.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 22,
+      "exports": [
+        {
+          "name": "publicClient",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "mainClient",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/api/endpoints.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 157,
+      "nonEmptyLines": 156,
+      "exports": [
+        {
+          "name": "ENDPOINTS",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/api/httpClient.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 364,
+      "nonEmptyLines": 329,
+      "functions": [
+        {
+          "name": "processQueue",
+          "startLine": 59,
+          "endLine": 71,
+          "params": [
+            "error",
+            "token"
+          ]
+        },
+        {
+          "name": "incrementLoading",
+          "startLine": 79,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "decrementLoading",
+          "startLine": 84,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "getStoredToken",
+          "startLine": 91,
+          "endLine": 91,
+          "params": []
+        },
+        {
+          "name": "defaultGetRefreshToken",
+          "startLine": 92,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "handleUnauthorized",
+          "startLine": 94,
+          "endLine": 114,
+          "params": [
+            "error"
+          ]
+        },
+        {
+          "name": "createApiClient",
+          "startLine": 118,
+          "endLine": 364,
+          "params": [
+            "{\r\n  baseURL = API_BASE_URL,\r\n  // COMMENTED OUT ORIGINAL FOR TEAM CONTRIBUTION PRESERVATION (Removing timeout):\r\n  // timeout = 300000,\r\n  timeout = 0, // 0 means no timeout\r\n  headers = {},\r\n  withCredentials = true,\r\n  getToken = getStoredToken, //Get access token from localStorage\r\n  getRefreshToken = defaultGetRefreshToken,\r\n  onUnauthorized = handleUnauthorized, //Token expired → logout user\r\n  onForbidden\r\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "globalActiveRequests",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "onLoadingChange",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "incrementLoading",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "decrementLoading",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getStoredToken",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "handleUnauthorized",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "createApiClient",
+          "line": 118,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "processQueue",
+          "callee": "failedQueue.forEach",
+          "lineNumber": 63
+        },
+        {
+          "caller": "processQueue",
+          "callee": "prom.reject",
+          "lineNumber": 65
+        },
+        {
+          "caller": "processQueue",
+          "callee": "prom.resolve",
+          "lineNumber": 67
+        },
+        {
+          "caller": "incrementLoading",
+          "callee": "onLoadingChange.forEach",
+          "lineNumber": 81
+        },
+        {
+          "caller": "incrementLoading",
+          "callee": "cb",
+          "lineNumber": 81
+        },
+        {
+          "caller": "decrementLoading",
+          "callee": "Math.max",
+          "lineNumber": 87
+        },
+        {
+          "caller": "decrementLoading",
+          "callee": "onLoadingChange.forEach",
+          "lineNumber": 88
+        },
+        {
+          "caller": "decrementLoading",
+          "callee": "cb",
+          "lineNumber": 88
+        },
+        {
+          "caller": "getStoredToken",
+          "callee": "localStorage.getItem",
+          "lineNumber": 91
+        },
+        {
+          "caller": "defaultGetRefreshToken",
+          "callee": "localStorage.getItem",
+          "lineNumber": 92
+        },
+        {
+          "caller": "handleUnauthorized",
+          "callee": "console.error",
+          "lineNumber": 96
+        },
+        {
+          "caller": "handleUnauthorized",
+          "callee": "localStorage.removeItem",
+          "lineNumber": 102
+        },
+        {
+          "caller": "handleUnauthorized",
+          "callee": "localStorage.removeItem",
+          "lineNumber": 103
+        },
+        {
+          "caller": "handleUnauthorized",
+          "callee": "localStorage.removeItem",
+          "lineNumber": 104
+        },
+        {
+          "caller": "handleUnauthorized",
+          "callee": "localStorage.removeItem",
+          "lineNumber": 105
+        },
+        {
+          "caller": "handleUnauthorized",
+          "callee": "window.location.pathname.includes",
+          "lineNumber": 110
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "axios.create",
+          "lineNumber": 130
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "client.interceptors.request.use",
+          "lineNumber": 140
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "incrementLoading",
+          "lineNumber": 142
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.group",
+          "lineNumber": 144
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "config.method?.toUpperCase",
+          "lineNumber": 145
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 147
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 152
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.groupEnd",
+          "lineNumber": 154
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "getToken",
+          "lineNumber": 158
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "decrementLoading",
+          "lineNumber": 168
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.error",
+          "lineNumber": 169
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "Promise.reject",
+          "lineNumber": 170
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "client.interceptors.response.use",
+          "lineNumber": 175
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "decrementLoading",
+          "lineNumber": 177
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.group",
+          "lineNumber": 179
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "response.config.method?.toUpperCase",
+          "lineNumber": 180
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 183
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 184
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.groupEnd",
+          "lineNumber": 185
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "decrementLoading",
+          "lineNumber": 190
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.group",
+          "lineNumber": 197
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "originalRequest?.method?.toUpperCase",
+          "lineNumber": 198
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 201
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 202
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 203
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.groupEnd",
+          "lineNumber": 204
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.group",
+          "lineNumber": 206
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 210
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 211
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.groupEnd",
+          "lineNumber": 212
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "onForbidden",
+          "lineNumber": 218
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "Promise.reject",
+          "lineNumber": 219
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "(originalRequest?.url || \"\").startsWith",
+          "lineNumber": 227
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "new Promise(function (resolve, reject) {\r\n            failedQueue.push({ resolve, reject }) // Queue requests while refreshing token\r\n          })\r\n            .then((token) => {\r\n              if (originalRequest.headers) {\r\n                originalRequest.headers.Authorization = `Bearer ${token}`\r\n              }\r\n              return client(originalRequest)\r\n            })\r\n            .catch",
+          "lineNumber": 231
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "new Promise(function (resolve, reject) {\r\n            failedQueue.push({ resolve, reject }) // Queue requests while refreshing token\r\n          })\r\n            .then",
+          "lineNumber": 231
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "failedQueue.push",
+          "lineNumber": 232
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "client",
+          "lineNumber": 238
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "Promise.reject",
+          "lineNumber": 240
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "getRefreshToken",
+          "lineNumber": 274
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.group",
+          "lineNumber": 276
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 277
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 278
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.log",
+          "lineNumber": 279
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.groupEnd",
+          "lineNumber": 280
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "axios.post",
+          "lineNumber": 283
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "localStorage.setItem",
+          "lineNumber": 299
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "localStorage.setItem",
+          "lineNumber": 301
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "localStorage.setItem",
+          "lineNumber": 304
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "processQueue",
+          "lineNumber": 309
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "client",
+          "lineNumber": 310
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "refreshResponse.data.trimStart().toLowerCase().startsWith",
+          "lineNumber": 314
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "refreshResponse.data.trimStart().toLowerCase",
+          "lineNumber": 314
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "refreshResponse.data.trimStart",
+          "lineNumber": 314
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "console.error",
+          "lineNumber": 316
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "processQueue",
+          "lineNumber": 327
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "onUnauthorized",
+          "lineNumber": 328
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "Promise.reject",
+          "lineNumber": 329
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "toast.error",
+          "lineNumber": 344
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "toast.error",
+          "lineNumber": 350
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "toast.error",
+          "lineNumber": 355
+        },
+        {
+          "caller": "createApiClient",
+          "callee": "Promise.reject",
+          "lineNumber": 359
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/utils/tags.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "normalizeTags",
+          "startLine": 8,
+          "endLine": 27,
+          "params": [
+            "raw"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "normalizeTags",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "push",
+          "callee": "Array.isArray",
+          "lineNumber": 12
+        },
+        {
+          "caller": "push",
+          "callee": "v.forEach",
+          "lineNumber": 12
+        },
+        {
+          "caller": "push",
+          "callee": "Object.values(v as Record<string, unknown>).forEach",
+          "lineNumber": 13
+        },
+        {
+          "caller": "push",
+          "callee": "Object.values",
+          "lineNumber": 13
+        },
+        {
+          "caller": "push",
+          "callee": "String(v).trim",
+          "lineNumber": 14
+        },
+        {
+          "caller": "push",
+          "callee": "String",
+          "lineNumber": 14
+        },
+        {
+          "caller": "push",
+          "callee": "s.endsWith",
+          "lineNumber": 16
+        },
+        {
+          "caller": "push",
+          "callee": "s.endsWith",
+          "lineNumber": 16
+        },
+        {
+          "caller": "push",
+          "callee": "push",
+          "lineNumber": 18
+        },
+        {
+          "caller": "push",
+          "callee": "JSON.parse",
+          "lineNumber": 18
+        },
+        {
+          "caller": "push",
+          "callee": "out.push",
+          "lineNumber": 23
+        },
+        {
+          "caller": "normalizeTags",
+          "callee": "push",
+          "lineNumber": 25
+        },
+        {
+          "caller": "normalizeTags",
+          "callee": "Array.from",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/utils/toast.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "emitToast",
+          "startLine": 3,
+          "endLine": 8,
+          "params": [
+            "message",
+            "type"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "emitToast",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "toast",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "emitToast",
+          "callee": "window.dispatchEvent",
+          "lineNumber": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

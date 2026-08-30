@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md",
+      "type": "document",
+      "name": "carnival.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md",
+      "summary": "Design reference for the 'Carnival' visual theme used by the Hallmark design skill, defining its palette drops, signature moves, layout pitfalls, macrostructure affinities, and anti-patterns for generated UI builds.",
+      "tags": ["documentation", "design-theme", "style-guide", "hallmark-skill"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md",
+      "type": "document",
+      "name": "cobalt.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md",
+      "summary": "Design reference for the 'Cobalt' visual theme used by the Hallmark design skill, covering axes, required dependencies, signature moves, motion, and anti-patterns for theme-consistent UI generation.",
+      "tags": ["documentation", "design-theme", "style-guide", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md",
+      "type": "document",
+      "name": "hum.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md",
+      "summary": "Design reference for the 'Hum' visual theme used by the Hallmark design skill, detailing palette, typography, seven signature moves, motion direction, layout discipline, and anti-AI-slop rules for generated builds.",
+      "tags": ["documentation", "design-theme", "style-guide", "hallmark-skill"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md",
+      "type": "document",
+      "name": "lumen.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md",
+      "summary": "Design reference for the 'Lumen' visual theme used by the Hallmark design skill, describing palette drops, an apparatus component family, seven signature moves, motion, macrostructure rules, and anti-patterns for generated builds.",
+      "tags": ["documentation", "design-theme", "style-guide", "hallmark-skill"],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/portfolio-html/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "FrontEnd/intelipath-frontend/portfolio-html/index.html",
+      "summary": "Static HTML page for a standalone student e-portfolio template, separate from the main React app, that links its own script and styling.",
+      "tags": ["markup", "portfolio", "static-page", "html"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/portfolio-html/js/script.js",
+      "type": "file",
+      "name": "script.js",
+      "filePath": "FrontEnd/intelipath-frontend/portfolio-html/js/script.js",
+      "summary": "Vanilla JavaScript for the standalone portfolio HTML template, providing a light/dark theme switcher persisted to localStorage.",
+      "tags": ["utility", "theme-toggle", "vanilla-js", "portfolio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/portfolio-html/js/script.js:switchTheme",
+      "type": "function",
+      "name": "switchTheme",
+      "filePath": "FrontEnd/intelipath-frontend/portfolio-html/js/script.js",
+      "lineRange": [29, 37],
+      "summary": "Toggles the page's light/dark theme attribute and stores the selected theme in localStorage.",
+      "tags": ["theme-toggle", "event-handler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/App.css",
+      "type": "file",
+      "name": "App.css",
+      "filePath": "FrontEnd/intelipath-frontend/src/App.css",
+      "summary": "Global application-level CSS defining layout, theming, and base styles used across the React frontend.",
+      "tags": ["stylesheet", "global-styles", "theming"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx",
+      "type": "file",
+      "name": "WidgetSkeleton.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx",
+      "summary": "Small presentational component rendering a configurable number of skeleton-loading rows for counselor dashboard widgets.",
+      "tags": ["component", "skeleton-loader", "atom", "ui"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx:WidgetSkeleton",
+      "type": "function",
+      "name": "WidgetSkeleton",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx",
+      "lineRange": [3, 15],
+      "summary": "Renders a placeholder skeleton block with a configurable row count while widget data loads.",
+      "tags": ["component", "skeleton-loader"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/layouts/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/layouts/index.ts",
+      "summary": "Barrel file re-exporting the AuthLayout and AuthCardLayout components for simplified imports.",
+      "tags": ["barrel", "entry-point", "layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx",
+      "type": "file",
+      "name": "DiagonalGridBackground.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx",
+      "summary": "Decorative UI component that renders a diagonal grid pattern background, used for visual styling across pages.",
+      "tags": ["component", "decorative", "ui", "background"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx:DiagonalGridBackground",
+      "type": "function",
+      "name": "DiagonalGridBackground",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx",
+      "lineRange": [1, 14],
+      "summary": "Renders a diagonal grid pattern as a decorative background element.",
+      "tags": ["component", "decorative"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx",
+      "type": "file",
+      "name": "GlobalToast.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx",
+      "summary": "Global toast notification component that listens for custom window events to display, deduplicate, and auto-expire transient notification messages.",
+      "tags": ["component", "notification", "event-handler", "global-state"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx:GlobalToast",
+      "type": "function",
+      "name": "GlobalToast",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx",
+      "lineRange": [16, 77],
+      "summary": "React component managing toast lifecycle: listens for a custom event to add toasts, deduplicates near-identical messages, and clears expired ones on an interval.",
+      "tags": ["component", "notification", "event-handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx",
+      "type": "file",
+      "name": "MobileNavMenu.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx",
+      "summary": "Mobile navigation dropdown menu component handling outside-click and Escape-key dismissal and rendering a list of selectable nav items.",
+      "tags": ["component", "navigation", "mobile", "event-handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx:MobileNavMenu",
+      "type": "function",
+      "name": "MobileNavMenu",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx",
+      "lineRange": [17, 92],
+      "summary": "Renders a collapsible mobile navigation menu, closing itself on outside clicks, Escape key, or item selection.",
+      "tags": ["component", "navigation", "event-handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx",
+      "type": "file",
+      "name": "SharedAppBackground.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx",
+      "summary": "Shared decorative background wrapper component applied consistently across multiple application pages.",
+      "tags": ["component", "decorative", "ui", "background"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx:SharedAppBackground",
+      "type": "function",
+      "name": "SharedAppBackground",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx",
+      "lineRange": [1, 24],
+      "summary": "Renders the shared background visual treatment used consistently across app pages.",
+      "tags": ["component", "decorative"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/admin/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/admin/index.ts",
+      "summary": "Barrel file re-exporting the AdminDashboardView component for the admin feature module.",
+      "tags": ["barrel", "entry-point", "admin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts",
+      "summary": "Barrel file re-exporting the AIMentorView component for the AI mentor feature module.",
+      "tags": ["barrel", "entry-point", "ai-mentor"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/components/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/components/index.ts",
+      "summary": "Barrel file re-exporting authentication UI components: login, registration, and password reset/forgot forms and dialogs.",
+      "tags": ["barrel", "entry-point", "auth", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/hooks/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/hooks/index.ts",
+      "summary": "Barrel file placeholder for re-exporting authentication-related React hooks.",
+      "tags": ["barrel", "entry-point", "auth", "hook"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/auth/types/auth.types.ts",
+      "type": "file",
+      "name": "auth.types.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/auth/types/auth.types.ts",
+      "summary": "TypeScript type definitions for the authentication feature, describing shapes used by login, registration, and password reset flows.",
+      "tags": ["type-definition", "auth", "types"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/index.ts",
+      "summary": "Barrel file re-exporting the CounselorDashboardView and CounselorFeedbackView components for the counselor dashboard feature module.",
+      "tags": ["barrel", "entry-point", "counselor-dashboard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorAddStudent.types.ts",
+      "type": "file",
+      "name": "counselorAddStudent.types.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorAddStudent.types.ts",
+      "summary": "TypeScript type definitions describing the shape of data used when a counselor adds a new student.",
+      "tags": ["type-definition", "counselor-dashboard", "types"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorDashboard.types.ts",
+      "type": "file",
+      "name": "counselorDashboard.types.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorDashboard.types.ts",
+      "summary": "TypeScript type definitions describing the core data structures rendered on the counselor dashboard.",
+      "tags": ["type-definition", "counselor-dashboard", "types"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorFeedback.types.ts",
+      "type": "file",
+      "name": "counselorFeedback.types.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorFeedback.types.ts",
+      "summary": "TypeScript type definitions for counselor feedback data, building on shared counselor dashboard types.",
+      "tags": ["type-definition", "counselor-dashboard", "feedback", "types"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/index.ts",
+      "summary": "Barrel file placeholder for re-exporting mentor dashboard hooks.",
+      "tags": ["barrel", "entry-point", "mentor-dashboard", "hook"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "type": "file",
+      "name": "useMentorDashboardData.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "summary": "Custom React hook that loads mentor dashboard data asynchronously via an injected loader function, tracking loading/success/error status and guarding against updates after unmount.",
+      "tags": ["hook", "data-fetching", "mentor-dashboard", "async"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts:useMentorDashboardData",
+      "type": "function",
+      "name": "useMentorDashboardData",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "lineRange": [4, 30],
+      "summary": "Fetches mentor dashboard data via a provided loader callback, exposing status and data state while avoiding state updates after the component unmounts.",
+      "tags": ["hook", "data-fetching", "async"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/index.ts",
+      "summary": "Barrel file placeholder re-exporting mentor dashboard type definitions.",
+      "tags": ["barrel", "entry-point", "mentor-dashboard", "types"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/mentorDashboard.types.ts",
+      "type": "file",
+      "name": "mentorDashboard.types.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/mentorDashboard.types.ts",
+      "summary": "TypeScript type definitions describing the data structures used across the mentor dashboard feature.",
+      "tags": ["type-definition", "mentor-dashboard", "types"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/portfolio/styles.css",
+      "type": "file",
+      "name": "styles.css",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/portfolio/styles.css",
+      "summary": "CSS stylesheet providing layout and visual styling for the e-portfolio editor feature.",
+      "tags": ["stylesheet", "portfolio", "styling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "FrontEnd/intelipath-frontend/src/index.css",
+      "summary": "Root-level global CSS stylesheet defining base typography, resets, and theme variables for the entire React application.",
+      "tags": ["stylesheet", "global-styles", "theming", "entry-point"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "type": "file",
+      "name": "AIMentorPage.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "summary": "Page-level component that renders the AI mentor feature view as the default export for its route.",
+      "tags": ["page", "ai-mentor", "route", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx:AIMentorPage",
+      "type": "function",
+      "name": "AIMentorPage",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "lineRange": [3, 5],
+      "summary": "Thin page wrapper that renders the AIMentorView component from the ai-mentor feature module.",
+      "tags": ["page", "ai-mentor"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/portfolio-html/js/script.js",
+      "target": "function:FrontEnd/intelipath-frontend/portfolio-html/js/script.js:switchTheme",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx:WidgetSkeleton",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx:WidgetSkeleton",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx:DiagonalGridBackground",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx:DiagonalGridBackground",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx:GlobalToast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx:GlobalToast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx:MobileNavMenu",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx:MobileNavMenu",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx:SharedAppBackground",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx:SharedAppBackground",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts:useMentorDashboardData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts:useMentorDashboardData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx:AIMentorPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx:AIMentorPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorFeedback.types.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorDashboard.types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/portfolio-html/index.html",
+      "target": "file:FrontEnd/intelipath-frontend/portfolio-html/js/script.js",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/portfolio/styles.css",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/portfolio/components/EPortfolioEditor.tsx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/index.css",
+      "target": "file:FrontEnd/intelipath-frontend/src/main.tsx",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

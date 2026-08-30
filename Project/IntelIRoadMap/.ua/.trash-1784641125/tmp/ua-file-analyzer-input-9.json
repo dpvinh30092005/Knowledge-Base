@@ -1,0 +1,262 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-service/app/api/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/endpoints/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/endpoints/extraction.py",
+      "language": "python",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/flm_routes.py",
+      "language": "python",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "language": "python",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/security.py",
+      "language": "python",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/config/config.py",
+      "language": "python",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/db/database.py",
+      "language": "python",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/db/models.py",
+      "language": "python",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/main.py",
+      "language": "python",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/mcp_server.py",
+      "language": "python",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/schemas/extraction.py",
+      "language": "python",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py",
+      "language": "python",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "language": "python",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/client.py",
+      "language": "python",
+      "sizeLines": 243,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/flm_to_coverage.py",
+      "language": "python",
+      "sizeLines": 345,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/scraper.py",
+      "language": "python",
+      "sizeLines": 270,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/sync_job.py",
+      "language": "python",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/itviec_parser.py",
+      "language": "python",
+      "sizeLines": 333,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/linkedin_parser.py",
+      "language": "python",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/topcv_parser.py",
+      "language": "python",
+      "sizeLines": 436,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/processor.py",
+      "language": "python",
+      "sizeLines": 147,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/llm_service.py",
+      "language": "python",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/markitdown_service.py",
+      "language": "python",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/tests/scrapers/test_flm_curriculum.py",
+      "language": "python",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/tests/scrapers/test_flm_parsers.py",
+      "language": "python",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-service/app/api/__init__.py": [],
+    "BackEnd/intelipath-service/app/api/endpoints/__init__.py": [],
+    "BackEnd/intelipath-service/app/api/endpoints/extraction.py": [
+      "BackEnd/intelipath-service/app/api/security.py",
+      "BackEnd/intelipath-service/app/schemas/extraction.py",
+      "BackEnd/intelipath-service/app/services/__init__.py",
+      "BackEnd/intelipath-service/app/services/llm_service.py",
+      "BackEnd/intelipath-service/app/services/markitdown_service.py"
+    ],
+    "BackEnd/intelipath-service/app/api/flm_routes.py": [
+      "BackEnd/intelipath-service/app/api/security.py",
+      "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "BackEnd/intelipath-service/app/scrapers/flm/sync_job.py"
+    ],
+    "BackEnd/intelipath-service/app/api/recruitment_routes.py": [
+      "BackEnd/intelipath-service/app/api/security.py",
+      "BackEnd/intelipath-service/app/config/config.py",
+      "BackEnd/intelipath-service/app/db/database.py",
+      "BackEnd/intelipath-service/app/db/models.py",
+      "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py",
+      "BackEnd/intelipath-service/app/scrapers/parsers/itviec_parser.py",
+      "BackEnd/intelipath-service/app/scrapers/parsers/topcv_parser.py",
+      "BackEnd/intelipath-service/app/scrapers/processor.py"
+    ],
+    "BackEnd/intelipath-service/app/api/security.py": [
+      "BackEnd/intelipath-service/app/config/config.py"
+    ],
+    "BackEnd/intelipath-service/app/config/config.py": [],
+    "BackEnd/intelipath-service/app/db/database.py": [
+      "BackEnd/intelipath-service/app/config/config.py"
+    ],
+    "BackEnd/intelipath-service/app/db/models.py": [],
+    "BackEnd/intelipath-service/app/main.py": [
+      "BackEnd/intelipath-service/app/api/__init__.py",
+      "BackEnd/intelipath-service/app/api/endpoints/__init__.py",
+      "BackEnd/intelipath-service/app/api/endpoints/extraction.py",
+      "BackEnd/intelipath-service/app/api/flm_routes.py",
+      "BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "BackEnd/intelipath-service/app/mcp_server.py"
+    ],
+    "BackEnd/intelipath-service/app/mcp_server.py": [
+      "BackEnd/intelipath-service/app/services/markitdown_service.py"
+    ],
+    "BackEnd/intelipath-service/app/schemas/extraction.py": [],
+    "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py": [],
+    "BackEnd/intelipath-service/app/scrapers/flm/__init__.py": [],
+    "BackEnd/intelipath-service/app/scrapers/flm/client.py": [
+      "BackEnd/intelipath-service/app/config/config.py"
+    ],
+    "BackEnd/intelipath-service/app/scrapers/flm/flm_to_coverage.py": [
+      "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "BackEnd/intelipath-service/app/services/llm_service.py"
+    ],
+    "BackEnd/intelipath-service/app/scrapers/flm/scraper.py": [
+      "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "BackEnd/intelipath-service/app/scrapers/flm/client.py"
+    ],
+    "BackEnd/intelipath-service/app/scrapers/flm/sync_job.py": [
+      "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "BackEnd/intelipath-service/app/scrapers/flm/client.py",
+      "BackEnd/intelipath-service/app/scrapers/flm/flm_to_coverage.py",
+      "BackEnd/intelipath-service/app/scrapers/flm/scraper.py"
+    ],
+    "BackEnd/intelipath-service/app/scrapers/parsers/itviec_parser.py": [
+      "BackEnd/intelipath-service/app/config/config.py",
+      "BackEnd/intelipath-service/app/db/models.py",
+      "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py"
+    ],
+    "BackEnd/intelipath-service/app/scrapers/parsers/linkedin_parser.py": [
+      "BackEnd/intelipath-service/app/config/config.py"
+    ],
+    "BackEnd/intelipath-service/app/scrapers/parsers/topcv_parser.py": [
+      "BackEnd/intelipath-service/app/config/config.py",
+      "BackEnd/intelipath-service/app/db/models.py",
+      "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py"
+    ],
+    "BackEnd/intelipath-service/app/scrapers/processor.py": [
+      "BackEnd/intelipath-service/app/config/config.py",
+      "BackEnd/intelipath-service/app/db/models.py",
+      "BackEnd/intelipath-service/app/services/llm_service.py"
+    ],
+    "BackEnd/intelipath-service/app/services/__init__.py": [],
+    "BackEnd/intelipath-service/app/services/llm_service.py": [
+      "BackEnd/intelipath-service/app/config/config.py"
+    ],
+    "BackEnd/intelipath-service/app/services/markitdown_service.py": [],
+    "BackEnd/intelipath-service/tests/scrapers/test_flm_curriculum.py": [
+      "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "BackEnd/intelipath-service/app/scrapers/flm/flm_to_coverage.py"
+    ],
+    "BackEnd/intelipath-service/tests/scrapers/test_flm_parsers.py": [
+      "BackEnd/intelipath-service/app/scrapers/flm/__init__.py"
+    ]
+  }
+}

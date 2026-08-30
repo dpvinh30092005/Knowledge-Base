@@ -1,0 +1,463 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java",
+      "type": "file",
+      "name": "AdminFlmController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java",
+      "summary": "Admin REST controller exposing endpoints to mirror FPT curriculum materials and start/poll asynchronous FLM (FPT Learning Material) sync jobs.",
+      "tags": ["api-handler", "admin", "async-job", "controller"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:AdminFlmController",
+      "type": "class",
+      "name": "AdminFlmController",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java",
+      "lineRange": [35, 95],
+      "summary": "Controller class defining admin endpoints for mirroring FPT materials and managing curriculum sync jobs, delegating to AdminFlmSyncService and FptMaterialMirrorService.",
+      "tags": ["api-handler", "admin", "controller"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:mirrorMaterials",
+      "type": "function",
+      "name": "mirrorMaterials",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java",
+      "lineRange": [54, 65],
+      "summary": "Starts an asynchronous job to mirror FPT curriculum materials for a given subject code, returning a job identifier.",
+      "tags": ["api-handler", "async-job"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:pollMirror",
+      "type": "function",
+      "name": "pollMirror",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java",
+      "lineRange": [67, 78],
+      "summary": "Polls the status of an in-progress material mirroring job by job ID, throwing a not-found exception if missing.",
+      "tags": ["api-handler", "async-job", "polling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:startSync",
+      "type": "function",
+      "name": "startSync",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java",
+      "lineRange": [80, 87],
+      "summary": "Kicks off an admin FLM curriculum sync job based on a request specifying curriculum ID and prefixes.",
+      "tags": ["api-handler", "async-job"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:pollSync",
+      "type": "function",
+      "name": "pollSync",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java",
+      "lineRange": [89, 94],
+      "summary": "Returns the current status of a running curriculum sync job by job ID.",
+      "tags": ["api-handler", "async-job", "polling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "type": "file",
+      "name": "VirtualMentorController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "summary": "REST controller for the AI Virtual Mentor chat feature, handling chat session CRUD, streaming chat responses, file uploads, and RAG knowledge ingestion.",
+      "tags": ["api-handler", "chat", "rag", "controller"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController",
+      "type": "class",
+      "name": "VirtualMentorController",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [43, 165],
+      "summary": "Controller orchestrating virtual mentor chat sessions, message streaming, chat file uploads, and PDF knowledge ingestion via injected services.",
+      "tags": ["api-handler", "chat", "rag", "controller"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:createSession",
+      "type": "function",
+      "name": "createSession",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [57, 65],
+      "summary": "Creates a new virtual mentor chat session with an optional name and returns the created session response.",
+      "tags": ["api-handler", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:getSessions",
+      "type": "function",
+      "name": "getSessions",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [67, 76],
+      "summary": "Lists all chat sessions belonging to the current user.",
+      "tags": ["api-handler", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:renameSession",
+      "type": "function",
+      "name": "renameSession",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [78, 86],
+      "summary": "Renames an existing chat session identified by session ID.",
+      "tags": ["api-handler", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:deleteSession",
+      "type": "function",
+      "name": "deleteSession",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [88, 95],
+      "summary": "Deletes a chat session by session ID and returns no content.",
+      "tags": ["api-handler", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:getSessionMessages",
+      "type": "function",
+      "name": "getSessionMessages",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [97, 106],
+      "summary": "Retrieves the message history for a given chat session.",
+      "tags": ["api-handler", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:streamChat",
+      "type": "function",
+      "name": "streamChat",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [108, 115],
+      "summary": "Streams an AI mentor chat response for a user message within a given session, delegating to VirtualMentorService.",
+      "tags": ["api-handler", "chat", "streaming"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:uploadChatFile",
+      "type": "function",
+      "name": "uploadChatFile",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [117, 125],
+      "summary": "Uploads a file attachment for use in a chat conversation via Supabase storage.",
+      "tags": ["api-handler", "file-upload"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:ingestKnowledge",
+      "type": "function",
+      "name": "ingestKnowledge",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [127, 145],
+      "summary": "Validates and ingests a PDF document into the RAG knowledge base, tracking progress via RagDocumentService and marking completion or failure.",
+      "tags": ["api-handler", "rag", "file-upload"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:mapToSessionResponse",
+      "type": "function",
+      "name": "mapToSessionResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [147, 154],
+      "summary": "Maps a ChatSession entity to a VirtualMentorSessionResponse DTO.",
+      "tags": ["serialization", "mapper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:mapToMessageResponse",
+      "type": "function",
+      "name": "mapToMessageResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "lineRange": [156, 164],
+      "summary": "Maps a ChatMessage entity to a VirtualMentorMessageResponse DTO.",
+      "tags": ["serialization", "mapper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java",
+      "type": "file",
+      "name": "AdminFlmSyncRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java",
+      "summary": "Request DTO carrying FPT portal cookie, curriculum code, curriculum ID, subject prefixes, and career filter for admin FLM sync operations.",
+      "tags": ["data-model", "dto", "admin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+      "type": "file",
+      "name": "VirtualMentorChatRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+      "summary": "Request DTO for sending a chat message with an optional attached file URL to the virtual mentor.",
+      "tags": ["data-model", "dto", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java",
+      "type": "file",
+      "name": "VirtualMentorRenameSessionRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java",
+      "summary": "Request DTO carrying the new session name for renaming a virtual mentor chat session.",
+      "tags": ["data-model", "dto", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java",
+      "type": "file",
+      "name": "VirtualMentorSessionRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java",
+      "summary": "Request DTO for creating a new virtual mentor chat session with an optional session name.",
+      "tags": ["data-model", "dto", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java",
+      "type": "file",
+      "name": "FlmSyncStartResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java",
+      "summary": "Response DTO returning the job ID for a newly started admin FLM sync or mirror job.",
+      "tags": ["data-model", "dto", "admin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java",
+      "type": "file",
+      "name": "FlmSyncStatusResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java",
+      "summary": "Response DTO reporting the state, phase, progress counts, message, error, and summary of an admin FLM sync job.",
+      "tags": ["data-model", "dto", "admin"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java",
+      "type": "file",
+      "name": "VirtualMentorMessageResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java",
+      "summary": "Response DTO representing a single chat message with ID, session ID, role, content, and creation timestamp.",
+      "tags": ["data-model", "dto", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java",
+      "type": "file",
+      "name": "VirtualMentorSessionResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java",
+      "summary": "Response DTO representing a chat session with ID, owning user ID, session name, and creation timestamp.",
+      "tags": ["data-model", "dto", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "type": "file",
+      "name": "ChatMessage.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "summary": "JPA entity representing a single message (user or assistant) within a virtual mentor chat session, with a lifecycle hook setting the creation timestamp.",
+      "tags": ["data-model", "entity", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java:prePersist",
+      "type": "function",
+      "name": "prePersist",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "lineRange": [48, 53],
+      "summary": "JPA lifecycle callback that sets createdAt to the current time before the entity is persisted.",
+      "tags": ["lifecycle-hook", "entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "type": "file",
+      "name": "ChatSession.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "summary": "JPA entity representing a virtual mentor chat session owned by a user, with name and creation timestamp.",
+      "tags": ["data-model", "entity", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java:prePersist",
+      "type": "function",
+      "name": "prePersist",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "lineRange": [45, 50],
+      "summary": "JPA lifecycle callback that sets createdAt to the current time before the entity is persisted.",
+      "tags": ["lifecycle-hook", "entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "type": "file",
+      "name": "RagDocument.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "summary": "JPA entity tracking a document ingested into the RAG knowledge base, including scope, source type, storage URL, checksum, and ingestion status lifecycle.",
+      "tags": ["data-model", "entity", "rag"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java:RagDocument",
+      "type": "class",
+      "name": "RagDocument",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "lineRange": [25, 96],
+      "summary": "Entity class modeling an ingested RAG source document with owner, scope, source type, storage location, checksum, and ingestion status/version fields plus timestamp lifecycle hooks.",
+      "tags": ["data-model", "entity", "rag"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java:prePersist",
+      "type": "function",
+      "name": "prePersist",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "lineRange": [75, 90],
+      "summary": "JPA lifecycle callback initializing default status, timestamps, and version before the RagDocument is first persisted.",
+      "tags": ["lifecycle-hook", "entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java:preUpdate",
+      "type": "function",
+      "name": "preUpdate",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "lineRange": [92, 95],
+      "summary": "JPA lifecycle callback that refreshes the updatedAt timestamp whenever the RagDocument entity is updated.",
+      "tags": ["lifecycle-hook", "entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+      "type": "file",
+      "name": "RagDocumentScope.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+      "summary": "Enum defining the visibility scope (e.g., global vs. user-specific) of an ingested RAG document.",
+      "tags": ["data-model", "enum", "rag"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+      "type": "file",
+      "name": "RagDocumentSourceType.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+      "summary": "Enum defining the source type (e.g., PDF upload) of an ingested RAG document.",
+      "tags": ["data-model", "enum", "rag"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java",
+      "type": "file",
+      "name": "RagDocumentStatus.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java",
+      "summary": "Enum defining the ingestion status lifecycle (e.g., pending, completed, failed) of a RAG document.",
+      "tags": ["data-model", "enum", "rag"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "type": "file",
+      "name": "ResourceNotFoundException.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "summary": "Custom runtime exception thrown when a requested resource (e.g., a job or session) cannot be found, supporting a message and optional cause.",
+      "tags": ["exception-handling", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "type": "file",
+      "name": "ChatMessageRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "summary": "Spring Data repository providing query methods to fetch, order, and delete ChatMessage records by chat session.",
+      "tags": ["data-model", "repository", "chat"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "type": "file",
+      "name": "ChatSessionRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "summary": "Spring Data repository providing a query method to fetch a user's chat sessions ordered by creation date.",
+      "tags": ["data-model", "repository", "chat"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:AdminFlmController", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:AdminFlmController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:mirrorMaterials", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:AdminFlmController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:pollMirror", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:AdminFlmController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:startSync", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:AdminFlmController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:pollSync", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:mirrorMaterials", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:pollMirror", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:startSync", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:pollSync", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptMaterialMirrorService.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:pollMirror", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:mirrorMaterials", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptMaterialMirrorService.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java:startSync", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:createSession", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:getSessions", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:renameSession", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:deleteSession", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:getSessionMessages", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:streamChat", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:uploadChatFile", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:ingestKnowledge", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:mapToSessionResponse", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:VirtualMentorController", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:mapToMessageResponse", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:createSession", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:getSessions", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:renameSession", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:deleteSession", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:getSessionMessages", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:streamChat", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:uploadChatFile", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:ingestKnowledge", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:createSession", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:streamChat", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:uploadChatFile", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:ingestKnowledge", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:ingestKnowledge", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:ingestKnowledge", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:mapToSessionResponse", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java:mapToMessageResponse", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java:prePersist", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java:prePersist", "type": "contains", "direction": "forward", "weight": 1.0},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java:RagDocument", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java:RagDocument", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java:prePersist", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java:RagDocument", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java:preUpdate", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java", "type": "depends_on", "direction": "forward", "weight": 0.6},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java", "type": "depends_on", "direction": "forward", "weight": 0.6}
+  ]
+}

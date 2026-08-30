@@ -1,0 +1,373 @@
+% ============================================================
+%  IntelIPath — Project Report
+%  Compile with: pdflatex / xelatex
+% ============================================================
+\documentclass[12pt,a4paper]{report}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{amsmath}
+\usepackage{tabularx}
+
+% ---------- Hyperlink style ----------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    pdftitle={IntelIPath - Project Report},
+    pdfauthor={IntelIPath Team}
+}
+
+% ---------- Header / Footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{IntelIPath}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---------- Section numbering depth ----------
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% ---------- Helper: image placeholder box ----------
+% Usage: \figplaceholder{width}{height}{Caption text}{label}
+\newcommand{\figplaceholder}[4]{%
+    \begin{figure}[H]
+        \centering
+        \fbox{%
+            \begin{minipage}[c][#2][c]{#1}
+                \centering
+                \textit{[Insert image here: #3]}
+            \end{minipage}%
+        }
+        \caption{#3}
+        \label{#4}
+    \end{figure}
+}
+
+% Real image insertion (uncomment and edit path when the image is ready):
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{images/image-name.png}
+%     \caption{Figure description}
+%     \label{fig:image-name}
+% \end{figure}
+
+\begin{document}
+
+% ============================================================
+% COVER PAGE
+% ============================================================
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/school-logo.png}\\[0.5cm]
+    % TODO: replace with the school/project logo at images/school-logo.png
+
+    {\large \textbf{FPT UNIVERSITY}}\\[0.2cm]
+    {\normalsize DEPARTMENT OF INFORMATION TECHNOLOGY}\\[2.5cm]
+
+    {\Huge \textbf{PROJECT REPORT}}\\[0.4cm]
+    {\Large \textbf{IntelIPath — Personalized Learning Roadmap Platform}}\\[2cm]
+
+    \begin{tabular}{ll}
+        \textbf{Course:}      & \textit{[Course name]} \\
+        \textbf{Supervisor:}  & \textit{[Supervisor name]} \\
+        \textbf{Class:}       & \textit{[Class code]} \\
+        \textbf{Semester:}    & \textit{[Semester / Year]} \\
+    \end{tabular}
+
+    \vfill
+
+    {\large \today}
+\end{titlepage}
+
+% ============================================================
+% TABLE OF CONTENTS
+% ============================================================
+\tableofcontents
+\listoffigures
+\listoftables
+\clearpage
+
+% ============================================================
+% CHAPTER: INTRODUCTION
+% ============================================================
+\chapter{Introduction}
+
+\section{Overview}
+IntelIPath is a platform that helps students build and track a personalized learning roadmap,
+connecting students with mentors and academic counselors to receive feedback on their
+portfolio and career guidance. The system is role-based (Student, Mentor, Counselor, Admin)
+and integrates a Virtual Mentor assistant for automated guidance.
+
+% TODO: expand this section — project scope, target users, core technology stack
+% (Spring Boot backend, React + TypeScript frontend, PostgreSQL, Docker).
+
+\section{Project Objectives}
+\begin{itemize}[leftmargin=1.2cm]
+    \item Build a visual learning roadmap organized by skill/career track.
+    \item Allow students to build a portfolio and request reviews from mentors.
+    \item Support academic counselors in tracking and managing student progress.
+    \item \textit{[Add further objectives if applicable]}
+\end{itemize}
+
+% ============================================================
+% CHAPTER: MEMBER / TEAM
+% ============================================================
+\chapter{Team Members}
+
+\begin{table}[H]
+    \centering
+    \caption{Team members and roles}
+    \label{tab:members}
+    \begin{tabularx}{\textwidth}{|l|X|X|X|}
+        \hline
+        \textbf{Student ID} & \textbf{Full Name} & \textbf{Role} & \textbf{Main Responsibility} \\
+        \hline
+        \textit{[Student ID]} & \textit{[Full name]} & \textit{[Team Lead / Backend / Frontend / ...]} & \textit{[Responsibility]} \\
+        \hline
+        \textit{[Student ID]} & \textit{[Full name]} & \textit{[Role]} & \textit{[Responsibility]} \\
+        \hline
+        \textit{[Student ID]} & \textit{[Full name]} & \textit{[Role]} & \textit{[Responsibility]} \\
+        \hline
+        \textit{[Student ID]} & \textit{[Full name]} & \textit{[Role]} & \textit{[Responsibility]} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% ============================================================
+% CHAPTER: PROBLEMS
+% ============================================================
+\chapter{Problems}
+
+\section{Background}
+% TODO: describe the current state before the system existed — students struggle to build
+% their own learning roadmap, lack a direct channel to mentors, cannot centrally track
+% progress, etc.
+
+\section{Problem Statement}
+\begin{enumerate}[leftmargin=1.2cm]
+    \item \textit{[Problem 1: e.g. students lack a clear roadmap organized by skill]}
+    \item \textit{[Problem 2: e.g. no feedback channel from mentors/counselors]}
+    \item \textit{[Problem 3: e.g. counselors struggle to manage a large number of students]}
+    \item \textit{[Problem 4]}
+\end{enumerate}
+
+\section{Affected Stakeholders}
+\begin{itemize}[leftmargin=1.2cm]
+    \item \textbf{Students:} \textit{[describe impact]}
+    \item \textbf{Mentors:} \textit{[describe impact]}
+    \item \textbf{Academic Counselors:} \textit{[describe impact]}
+\end{itemize}
+
+% ============================================================
+% CHAPTER: SOLUTION
+% ============================================================
+\chapter{Solution}
+
+\section{Proposed Solution}
+% TODO: present the overall solution — a web platform that lets students build a learning
+% roadmap, build a portfolio, and request reviews; mentors approve and give feedback;
+% counselors track progress.
+
+\section{Key Features}
+\begin{table}[H]
+    \centering
+    \caption{Feature list by role}
+    \label{tab:features}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        \textbf{Role} & \textbf{Feature} \\
+        \hline
+        Student & View learning roadmap, build portfolio, request portfolio review, reset password via email \\
+        \hline
+        Mentor & View/approve review requests, give feedback on student portfolios \\
+        \hline
+        Counselor & Track student progress, export reports, manage assigned student list \\
+        \hline
+        Admin & Manage users, configure the system \\
+        \hline
+        \textit{[...]} & \textit{[...]} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\section{Technology Architecture}
+% TODO: list the technology stack — Backend: Spring Boot, PostgreSQL, Docker; Frontend:
+% React, TypeScript, Vite, Tailwind; Auth: JWT + OAuth2 (GitHub/Google) + magic-link reset.
+
+\figplaceholder{0.85\textwidth}{6cm}{System Architecture Diagram}{fig:architecture}
+
+% ============================================================
+% CHAPTER: BUSINESS PROCESS
+% ============================================================
+\chapter{Business Process}
+
+\section{Sign-up / Sign-in Process}
+% TODO: describe the steps — sign in via OAuth (GitHub/Google) or username/password (FPT
+% students), forgot password via a magic link sent by email.
+
+\figplaceholder{\textwidth}{7cm}{Flowchart — Sign-in / Password Reset Process}{fig:process-login}
+
+\section{Portfolio Review Request Process}
+% TODO: describe the steps — student enters mentor's email, system creates the request,
+% mentor gets notified, mentor approves/rejects, mentor sends feedback, student receives it.
+
+\figplaceholder{\textwidth}{7cm}{Flowchart — Portfolio Review Request Process}{fig:process-review}
+
+\section{Counselor Progress Tracking Process}
+% TODO: describe the steps — counselor views the student list, views statistics, exports
+% an Excel report.
+
+\figplaceholder{\textwidth}{7cm}{Flowchart — Student Progress Tracking Process}{fig:process-counselor}
+
+% ============================================================
+% CHAPTER: BUSINESS RULES
+% ============================================================
+\chapter{Business Rules}
+
+\begin{table}[H]
+    \centering
+    \caption{Business rules list}
+    \label{tab:business-rules}
+    \begin{tabularx}{\textwidth}{|c|X|X|}
+        \hline
+        \textbf{ID} & \textbf{Rule Description} & \textbf{Applies To} \\
+        \hline
+        BR-01 & A student may have at most \textbf{one} pending review request to the same mentor at a time & Student, Portfolio Review \\
+        \hline
+        BR-02 & A password-reset token (magic link) can be used \textbf{only once} and expires after a fixed period & Auth, Password Reset \\
+        \hline
+        BR-03 & An account must be in \textit{ACTIVE} status to sign in & Auth \\
+        \hline
+        BR-04 & \textit{[Add another rule]} & \textit{[...]} \\
+        \hline
+        BR-05 & \textit{[Add another rule]} & \textit{[...]} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% ============================================================
+% CHAPTER: STATE CHART
+% ============================================================
+\chapter{State Chart}
+
+\section{Portfolio Review Request State Chart}
+% TODO: describe the states: PENDING -> APPROVED / REJECTED -> COMPLETED, with the
+% transition conditions.
+
+\figplaceholder{0.8\textwidth}{6cm}{State chart — Portfolio review request lifecycle}{fig:state-review}
+
+\section{User Account State Chart}
+% TODO: describe the states: PENDING_ACTIVATION -> ACTIVE -> DISABLED, etc.
+
+\figplaceholder{0.8\textwidth}{6cm}{State chart — User account lifecycle}{fig:state-account}
+
+% ============================================================
+% CHAPTER: CONTEXT DIAGRAM
+% ============================================================
+\chapter{Context Diagram}
+
+% TODO: describe the system as a black box and the external actors interacting with it:
+% Student, Mentor, Counselor, Admin, Email Service, OAuth Provider (GitHub/Google).
+
+\figplaceholder{0.9\textwidth}{8cm}{Context Diagram — IntelIPath System}{fig:context-diagram}
+
+% ============================================================
+% CHAPTER: CONCEPTUAL MODEL
+% ============================================================
+\chapter{Conceptual Model}
+
+\section{Key Entities}
+\begin{itemize}[leftmargin=1.2cm]
+    \item \textbf{User} — the shared user account (email, username, password\_hash, role, status)
+    \item \textbf{Student} — the student profile, linked to \textit{User}
+    \item \textbf{AcademicCounselor} — the academic counselor profile
+    \item \textbf{Mentor} — the mentor profile
+    \item \textbf{Portfolio} — the student's competency portfolio
+    \item \textbf{PortfolioReviewRequest} — a review request sent to a mentor
+    \item \textbf{Roadmap} — the learning roadmap organized by skill/career track
+    \item \textit{[Add further entities]}
+\end{itemize}
+
+\figplaceholder{0.9\textwidth}{8cm}{Conceptual Model — Relationships among key entities}{fig:conceptual-model}
+
+% ============================================================
+% CHAPTER: ERD
+% ============================================================
+\chapter{Entity Relationship Diagram (ERD)}
+
+% TODO: insert a detailed ERD (tables, primary/foreign keys, data types) generated from
+% docker/postgres/init/01_init_intelipath.sql or a tool such as dbdiagram/drawio.
+
+\figplaceholder{\textwidth}{10cm}{Entity Relationship Diagram (ERD) — IntelIPath Database}{fig:erd}
+
+\section{Key Table Descriptions}
+\begin{table}[H]
+    \centering
+    \caption{Description of key data tables}
+    \label{tab:erd-tables}
+    \begin{tabularx}{\textwidth}{|l|X|}
+        \hline
+        \textbf{Table} & \textbf{Description} \\
+        \hline
+        users & User account information \\
+        \hline
+        students & Student profile \\
+        \hline
+        academic\_counselor & Academic counselor profile \\
+        \hline
+        password\_reset\_tokens & Password-reset tokens (magic link) \\
+        \hline
+        portfolio\_review\_requests & Portfolio review requests \\
+        \hline
+        \textit{[...]} & \textit{[...]} \\
+        \hline
+    \end{tabularx}
+\end{table}
+
+% ============================================================
+% CHAPTER: SWIMLANE
+% ============================================================
+\chapter{Swimlane Diagram}
+
+\section{Swimlane — Review Request and Feedback Process}
+% TODO: describe the lanes: Student | System | Mentor, showing the flow across each role.
+
+\figplaceholder{\textwidth}{9cm}{Swimlane Diagram — Portfolio Review Request Process}{fig:swimlane-review}
+
+\section{Swimlane — Password Reset Process}
+% TODO: describe the lanes: Student | System | Email Service.
+
+\figplaceholder{\textwidth}{9cm}{Swimlane Diagram — Password Reset Process (magic link)}{fig:swimlane-reset}
+
+% ============================================================
+% APPENDIX (optional)
+% ============================================================
+\appendix
+\chapter{Appendix}
+\section{References}
+\begin{itemize}[leftmargin=1.2cm]
+    \item \textit{[Reference 1]}
+    \item \textit{[Reference 2]}
+\end{itemize}
+
+\end{document}

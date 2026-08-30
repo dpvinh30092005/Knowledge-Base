@@ -1,0 +1,3176 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 14,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 14,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 14,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 147,
+      "nonEmptyLines": 139,
+      "functions": [
+        {
+          "name": "getPendingRecommendations",
+          "startLine": 45,
+          "endLine": 67,
+          "params": []
+        },
+        {
+          "name": "generateRecommendations",
+          "startLine": 69,
+          "endLine": 93,
+          "params": []
+        },
+        {
+          "name": "acceptRecommendation",
+          "startLine": 95,
+          "endLine": 120,
+          "params": [
+            "recommendationId"
+          ]
+        },
+        {
+          "name": "rejectRecommendation",
+          "startLine": 122,
+          "endLine": 146,
+          "params": [
+            "recommendationId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RoadmapRecommendationController",
+          "startLine": 34,
+          "endLine": 147,
+          "methods": [
+            "getPendingRecommendations",
+            "generateRecommendations",
+            "acceptRecommendation",
+            "rejectRecommendation"
+          ],
+          "properties": [
+            "roadmapPersonalizationService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getPendingRecommendations",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "generateRecommendations",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "acceptRecommendation",
+          "line": 95,
+          "isDefault": false
+        },
+        {
+          "name": "rejectRecommendation",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "RoadmapRecommendationController",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getPendingRecommendations",
+          "callee": "log.info",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getPendingRecommendations",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 66
+        },
+        {
+          "caller": "getPendingRecommendations",
+          "callee": "roadmapPersonalizationService.getPendingRecommendationsForCurrentStudent",
+          "lineNumber": 66
+        },
+        {
+          "caller": "generateRecommendations",
+          "callee": "log.info",
+          "lineNumber": 91
+        },
+        {
+          "caller": "generateRecommendations",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 92
+        },
+        {
+          "caller": "generateRecommendations",
+          "callee": "roadmapPersonalizationService.generateRecommendationsForCurrentStudent",
+          "lineNumber": 92
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "log.info",
+          "lineNumber": 118
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 119
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "roadmapPersonalizationService.acceptRecommendation",
+          "lineNumber": 119
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "log.info",
+          "lineNumber": 144
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 145
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "roadmapPersonalizationService.rejectRecommendation",
+          "lineNumber": 145
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 23,
+      "classes": [
+        {
+          "name": "RoadmapRecommendationDecisionResponse",
+          "startLine": 17,
+          "endLine": 27,
+          "methods": [],
+          "properties": [
+            "recommendationId",
+            "status",
+            "decidedAt",
+            "roadmapProgress"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapRecommendationDecisionResponse",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationItemResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 26,
+      "classes": [
+        {
+          "name": "RoadmapRecommendationItemResponse",
+          "startLine": 17,
+          "endLine": 30,
+          "methods": [],
+          "properties": [
+            "recItemId",
+            "nodeId",
+            "nodeName",
+            "action",
+            "reason",
+            "confidence",
+            "evidenceIds"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapRecommendationItemResponse",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 31,
+      "classes": [
+        {
+          "name": "RoadmapRecommendationResponse",
+          "startLine": 19,
+          "endLine": 35,
+          "methods": [],
+          "properties": [
+            "recommendationId",
+            "type",
+            "title",
+            "summary",
+            "reason",
+            "confidence",
+            "status",
+            "createdAt",
+            "decidedAt",
+            "items"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapRecommendationResponse",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 75,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "onCreate",
+          "startLine": 71,
+          "endLine": 74,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RoadmapRecommendation",
+          "startLine": 23,
+          "endLine": 75,
+          "methods": [
+            "onCreate"
+          ],
+          "properties": [
+            "recommendationId",
+            "userId",
+            "currentCareerId",
+            "recommendCareerId",
+            "recommendationType",
+            "title",
+            "summary",
+            "reason",
+            "confidence",
+            "status",
+            "createdAt",
+            "decidedAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapRecommendation",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onCreate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 44,
+      "classes": [
+        {
+          "name": "RoadmapRecommendationItem",
+          "startLine": 22,
+          "endLine": 54,
+          "methods": [],
+          "properties": [
+            "recItemId",
+            "recommendationId",
+            "nodeId",
+            "action",
+            "reason",
+            "evidenceIds",
+            "confidence"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapRecommendationItem",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 13,
+          "endLine": 16,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RecommendationAction",
+          "startLine": 5,
+          "endLine": 17,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "RecommendationAction",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "RecommendationAction.valueOf",
+          "lineNumber": 15
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RecommendationStatus",
+          "startLine": 5,
+          "endLine": 15,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "RecommendationStatus",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "RecommendationStatus.valueOf",
+          "lineNumber": 13
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RecommendationType",
+          "startLine": 5,
+          "endLine": 15,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "RecommendationType",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "RecommendationType.valueOf",
+          "lineNumber": 13
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "toRecommendationResponse",
+          "startLine": 21,
+          "endLine": 42,
+          "params": [
+            "recommendation",
+            "items",
+            "nodeNameByNodeId"
+          ]
+        },
+        {
+          "name": "toItemResponse",
+          "startLine": 44,
+          "endLine": 54,
+          "params": [
+            "item",
+            "nodeName"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RoadmapRecommendationMapper",
+          "startLine": 18,
+          "endLine": 55,
+          "methods": [
+            "toRecommendationResponse",
+            "toItemResponse"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "toRecommendationResponse",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "toItemResponse",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "RoadmapRecommendationMapper",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "items.stream()\n                .map(item -> toItemResponse(item, nodeNameByNodeId.get(item.getNodeId()))).toList",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "items.stream().map",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "items.stream",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "toItemResponse",
+          "lineNumber": 27
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "nodeNameByNodeId.get",
+          "lineNumber": 27
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "item.getNodeId",
+          "lineNumber": 27
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType())\n                .title(recommendation.getTitle())\n                .summary(recommendation.getSummary())\n                .reason(recommendation.getReason())\n                .confidence(recommendation.getConfidence())\n                .status(recommendation.getStatus())\n                .createdAt(recommendation.getCreatedAt())\n                .decidedAt(recommendation.getDecidedAt())\n                .items(itemResponses).build",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType())\n                .title(recommendation.getTitle())\n                .summary(recommendation.getSummary())\n                .reason(recommendation.getReason())\n                .confidence(recommendation.getConfidence())\n                .status(recommendation.getStatus())\n                .createdAt(recommendation.getCreatedAt())\n                .decidedAt(recommendation.getDecidedAt()).items",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType())\n                .title(recommendation.getTitle())\n                .summary(recommendation.getSummary())\n                .reason(recommendation.getReason())\n                .confidence(recommendation.getConfidence())\n                .status(recommendation.getStatus())\n                .createdAt(recommendation.getCreatedAt()).decidedAt",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType())\n                .title(recommendation.getTitle())\n                .summary(recommendation.getSummary())\n                .reason(recommendation.getReason())\n                .confidence(recommendation.getConfidence())\n                .status(recommendation.getStatus()).createdAt",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType())\n                .title(recommendation.getTitle())\n                .summary(recommendation.getSummary())\n                .reason(recommendation.getReason())\n                .confidence(recommendation.getConfidence()).status",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType())\n                .title(recommendation.getTitle())\n                .summary(recommendation.getSummary())\n                .reason(recommendation.getReason()).confidence",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType())\n                .title(recommendation.getTitle())\n                .summary(recommendation.getSummary()).reason",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType())\n                .title(recommendation.getTitle()).summary",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId())\n                .type(recommendation.getRecommendationType()).title",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder()\n                .recommendationId(recommendation.getRecommendationId()).type",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder().recommendationId",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "RoadmapRecommendationResponse.builder",
+          "lineNumber": 30
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getRecommendationId",
+          "lineNumber": 31
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getRecommendationType",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getTitle",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getSummary",
+          "lineNumber": 34
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getReason",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getConfidence",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getStatus",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getCreatedAt",
+          "lineNumber": 38
+        },
+        {
+          "caller": "toRecommendationResponse",
+          "callee": "recommendation.getDecidedAt",
+          "lineNumber": 39
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder()\n                .recItemId(item.getRecItemId())\n                .nodeId(item.getNodeId())\n                .nodeName(nodeName)\n                .action(item.getAction())\n                .reason(item.getReason())\n                .confidence(item.getConfidence())\n                .evidenceIds(item.getEvidenceIds()).build",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder()\n                .recItemId(item.getRecItemId())\n                .nodeId(item.getNodeId())\n                .nodeName(nodeName)\n                .action(item.getAction())\n                .reason(item.getReason())\n                .confidence(item.getConfidence()).evidenceIds",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder()\n                .recItemId(item.getRecItemId())\n                .nodeId(item.getNodeId())\n                .nodeName(nodeName)\n                .action(item.getAction())\n                .reason(item.getReason()).confidence",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder()\n                .recItemId(item.getRecItemId())\n                .nodeId(item.getNodeId())\n                .nodeName(nodeName)\n                .action(item.getAction()).reason",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder()\n                .recItemId(item.getRecItemId())\n                .nodeId(item.getNodeId())\n                .nodeName(nodeName).action",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder()\n                .recItemId(item.getRecItemId())\n                .nodeId(item.getNodeId()).nodeName",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder()\n                .recItemId(item.getRecItemId()).nodeId",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder().recItemId",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "RoadmapRecommendationItemResponse.builder",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "item.getRecItemId",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "item.getNodeId",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "item.getAction",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "item.getReason",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "item.getConfidence",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toItemResponse",
+          "callee": "item.getEvidenceIds",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationItemRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "RoadmapRecommendationItemRepository",
+          "startLine": 11,
+          "endLine": 17,
+          "methods": [
+            "findByRecommendationId",
+            "findByRecommendationIdIn"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapRecommendationItemRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "RoadmapRecommendationRepository",
+          "startLine": 11,
+          "endLine": 15,
+          "methods": [
+            "findByUserIdAndStatusOrderByCreatedAtDesc"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapRecommendationRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 30,
+      "classes": [
+        {
+          "name": "RoadmapPersonalizationService",
+          "startLine": 16,
+          "endLine": 37,
+          "methods": [
+            "generateRecommendationsForCurrentStudent",
+            "getPendingRecommendationsForCurrentStudent",
+            "acceptRecommendation",
+            "rejectRecommendation"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapPersonalizationService",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 633,
+      "nonEmptyLines": 567,
+      "functions": [
+        {
+          "name": "generateRecommendationsForCurrentStudent",
+          "startLine": 103,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "getPendingRecommendationsForCurrentStudent",
+          "startLine": 140,
+          "endLine": 167,
+          "params": []
+        },
+        {
+          "name": "acceptRecommendation",
+          "startLine": 169,
+          "endLine": 196,
+          "params": [
+            "recommendationId"
+          ]
+        },
+        {
+          "name": "rejectRecommendation",
+          "startLine": 198,
+          "endLine": 216,
+          "params": [
+            "recommendationId"
+          ]
+        },
+        {
+          "name": "loadImportanceBySkillId",
+          "startLine": 223,
+          "endLine": 231,
+          "params": [
+            "careerId"
+          ]
+        },
+        {
+          "name": "collectCandidates",
+          "startLine": 233,
+          "endLine": 285,
+          "params": [
+            "student",
+            "careerNodes",
+            "excludedNodeIds",
+            "importanceBySkillId"
+          ]
+        },
+        {
+          "name": "offerCandidate",
+          "startLine": 288,
+          "endLine": 318,
+          "params": [
+            "candidates",
+            "excludedNodeIds",
+            "node",
+            "confidence",
+            "reason",
+            "evidenceId",
+            "importanceBySkillId"
+          ]
+        },
+        {
+          "name": "meetsNodeProficiency",
+          "startLine": 326,
+          "endLine": 336,
+          "params": [
+            "node",
+            "confidence",
+            "importanceBySkillId"
+          ]
+        },
+        {
+          "name": "importanceFloor",
+          "startLine": 339,
+          "endLine": 352,
+          "params": [
+            "node",
+            "importanceBySkillId"
+          ]
+        },
+        {
+          "name": "buildEvidenceReason",
+          "startLine": 354,
+          "endLine": 358,
+          "params": [
+            "evidence"
+          ]
+        },
+        {
+          "name": "saveRecommendation",
+          "startLine": 360,
+          "endLine": 374,
+          "params": [
+            "student",
+            "careerId",
+            "candidates"
+          ]
+        },
+        {
+          "name": "saveRecommendationItems",
+          "startLine": 376,
+          "endLine": 390,
+          "params": [
+            "recommendation",
+            "candidates"
+          ]
+        },
+        {
+          "name": "applyMarkCompleteItems",
+          "startLine": 397,
+          "endLine": 413,
+          "params": [
+            "student",
+            "items"
+          ]
+        },
+        {
+          "name": "upsertCompletedProgress",
+          "startLine": 415,
+          "endLine": 428,
+          "params": [
+            "student",
+            "node"
+          ]
+        },
+        {
+          "name": "syncCompletedSkillsToProfile",
+          "startLine": 435,
+          "endLine": 457,
+          "params": [
+            "student",
+            "completedNodes"
+          ]
+        },
+        {
+          "name": "allSkillNodesCompleted",
+          "startLine": 459,
+          "endLine": 469,
+          "params": [
+            "userId",
+            "skillId",
+            "careerId"
+          ]
+        },
+        {
+          "name": "linkAndAcceptEvidence",
+          "startLine": 475,
+          "endLine": 512,
+          "params": [
+            "student",
+            "items",
+            "completedNodes"
+          ]
+        },
+        {
+          "name": "resolveStudentSkillId",
+          "startLine": 514,
+          "endLine": 525,
+          "params": [
+            "evidence",
+            "nodeIdToSkillId",
+            "skillIdToStudentSkillId",
+            "skillNameToStudentSkillId"
+          ]
+        },
+        {
+          "name": "getOwnedPendingRecommendation",
+          "startLine": 531,
+          "endLine": 546,
+          "params": [
+            "recommendationId",
+            "student"
+          ]
+        },
+        {
+          "name": "requireSelectedCareer",
+          "startLine": 548,
+          "endLine": 554,
+          "params": [
+            "student"
+          ]
+        },
+        {
+          "name": "findCompletedNodeIds",
+          "startLine": 556,
+          "endLine": 564,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "findNodeIdsInPendingRecommendations",
+          "startLine": 567,
+          "endLine": 584,
+          "params": [
+            "userId"
+          ]
+        },
+        {
+          "name": "calculateCurrentProgress",
+          "startLine": 586,
+          "endLine": 593,
+          "params": [
+            "student"
+          ]
+        },
+        {
+          "name": "nodeNamesById",
+          "startLine": 595,
+          "endLine": 601,
+          "params": [
+            "nodes"
+          ]
+        },
+        {
+          "name": "nodeNamesForItems",
+          "startLine": 603,
+          "endLine": 611,
+          "params": [
+            "itemGroups"
+          ]
+        },
+        {
+          "name": "countOf",
+          "startLine": 613,
+          "endLine": 619,
+          "params": [
+            "candidates"
+          ]
+        },
+        {
+          "name": "averageConfidence",
+          "startLine": 621,
+          "endLine": 632,
+          "params": [
+            "candidates"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RoadmapPersonalizationServiceImpl",
+          "startLine": 66,
+          "endLine": 633,
+          "methods": [
+            "generateRecommendationsForCurrentStudent",
+            "getPendingRecommendationsForCurrentStudent",
+            "acceptRecommendation",
+            "rejectRecommendation",
+            "loadImportanceBySkillId",
+            "collectCandidates",
+            "offerCandidate",
+            "meetsNodeProficiency",
+            "importanceFloor",
+            "buildEvidenceReason",
+            "saveRecommendation",
+            "saveRecommendationItems",
+            "applyMarkCompleteItems",
+            "upsertCompletedProgress",
+            "syncCompletedSkillsToProfile",
+            "allSkillNodesCompleted",
+            "linkAndAcceptEvidence",
+            "resolveStudentSkillId",
+            "getOwnedPendingRecommendation",
+            "requireSelectedCareer",
+            "findCompletedNodeIds",
+            "findNodeIdsInPendingRecommendations",
+            "calculateCurrentProgress",
+            "nodeNamesById",
+            "nodeNamesForItems",
+            "countOf",
+            "averageConfidence"
+          ],
+          "properties": [
+            "MIN_EVIDENCE_CONFIDENCE",
+            "PROFILE_SKILL_CONFIDENCE",
+            "HIGH_IMPORTANCE_CONFIDENCE",
+            "AVG_IMPORTANCE_CONFIDENCE",
+            "LOW_IMPORTANCE_CONFIDENCE",
+            "EVIDENCE_ALLOWED_POLICY",
+            "authenticatedStudentService",
+            "recommendationRepository",
+            "recommendationItemRepository",
+            "evidenceRepository",
+            "studentProgressRepository",
+            "studentSkillRepository",
+            "skillNodeRepository",
+            "careerRequiredSkillRepository",
+            "recommendationMapper",
+            "progressCalculator",
+            "roadmapSelectionResolver"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "generateRecommendationsForCurrentStudent",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "getPendingRecommendationsForCurrentStudent",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "acceptRecommendation",
+          "line": 169,
+          "isDefault": false
+        },
+        {
+          "name": "rejectRecommendation",
+          "line": 198,
+          "isDefault": false
+        },
+        {
+          "name": "RoadmapPersonalizationServiceImpl",
+          "line": 66,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "log.info",
+          "lineNumber": 106
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "authenticatedStudentService.getRequiredStudent",
+          "lineNumber": 108
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "requireSelectedCareer",
+          "lineNumber": 109
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "skillNodeRepository.findByCareerRole_CareerId",
+          "lineNumber": 111
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "careerNodes.isEmpty",
+          "lineNumber": 112
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "log.info",
+          "lineNumber": 113
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "List.of",
+          "lineNumber": 114
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "new HashSet<>",
+          "lineNumber": 117
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "excludedNodeIds.addAll",
+          "lineNumber": 118
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "findCompletedNodeIds",
+          "lineNumber": 118
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "student.getUserId",
+          "lineNumber": 118
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "excludedNodeIds.addAll",
+          "lineNumber": 119
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "findNodeIdsInPendingRecommendations",
+          "lineNumber": 119
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "student.getUserId",
+          "lineNumber": 119
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "excludedNodeIds.addAll",
+          "lineNumber": 122
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "roadmapSelectionResolver.resolve(student.getUserId(), careerNodes).progressExcluded",
+          "lineNumber": 122
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "roadmapSelectionResolver.resolve",
+          "lineNumber": 122
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "student.getUserId",
+          "lineNumber": 122
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "loadImportanceBySkillId",
+          "lineNumber": 124
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "collectCandidates",
+          "lineNumber": 125
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "candidates.isEmpty",
+          "lineNumber": 126
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "log.info",
+          "lineNumber": 127
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "student.getUserId",
+          "lineNumber": 127
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "List.of",
+          "lineNumber": 128
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "saveRecommendation",
+          "lineNumber": 131
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "candidates.values",
+          "lineNumber": 131
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "saveRecommendationItems",
+          "lineNumber": 132
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "candidates.values",
+          "lineNumber": 132
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "log.info",
+          "lineNumber": 134
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "recommendation.getRecommendationId",
+          "lineNumber": 135
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "items.size",
+          "lineNumber": 135
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "student.getUserId",
+          "lineNumber": 135
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "List.of",
+          "lineNumber": 136
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "recommendationMapper.toRecommendationResponse",
+          "lineNumber": 136
+        },
+        {
+          "caller": "generateRecommendationsForCurrentStudent",
+          "callee": "nodeNamesById",
+          "lineNumber": 137
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "log.info",
+          "lineNumber": 143
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "authenticatedStudentService.getRequiredStudent",
+          "lineNumber": 145
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendationRepository.findByUserIdAndStatusOrderByCreatedAtDesc",
+          "lineNumber": 146
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "student.getUserId",
+          "lineNumber": 147
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendations.isEmpty",
+          "lineNumber": 148
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "List.of",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendations.stream()\n                .map(RoadmapRecommendation::getRecommendationId).toList",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendations.stream().map",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendations.stream",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "new HashMap<>",
+          "lineNumber": 155
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendationItemRepository.findByRecommendationIdIn",
+          "lineNumber": 156
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "itemsByRecommendationId.computeIfAbsent(item.getRecommendationId(), key -> new ArrayList<>()).add",
+          "lineNumber": 157
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "itemsByRecommendationId.computeIfAbsent",
+          "lineNumber": 157
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "item.getRecommendationId",
+          "lineNumber": 157
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "new ArrayList<>",
+          "lineNumber": 157
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "nodeNamesForItems",
+          "lineNumber": 160
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "itemsByRecommendationId.values",
+          "lineNumber": 160
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendations.stream()\n                .map(recommendation -> recommendationMapper.toRecommendationResponse(\n                        recommendation,\n                        itemsByRecommendationId.getOrDefault(recommendation.getRecommendationId(), List.of()),\n                        nodeNames)).toList",
+          "lineNumber": 161
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendations.stream().map",
+          "lineNumber": 161
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendations.stream",
+          "lineNumber": 161
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendationMapper.toRecommendationResponse",
+          "lineNumber": 162
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "itemsByRecommendationId.getOrDefault",
+          "lineNumber": 164
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "recommendation.getRecommendationId",
+          "lineNumber": 164
+        },
+        {
+          "caller": "getPendingRecommendationsForCurrentStudent",
+          "callee": "List.of",
+          "lineNumber": 164
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "log.info",
+          "lineNumber": 172
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "authenticatedStudentService.getRequiredStudent",
+          "lineNumber": 174
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "getOwnedPendingRecommendation",
+          "lineNumber": 175
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "recommendationItemRepository.findByRecommendationId",
+          "lineNumber": 176
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "applyMarkCompleteItems",
+          "lineNumber": 178
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "syncCompletedSkillsToProfile",
+          "lineNumber": 179
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "linkAndAcceptEvidence",
+          "lineNumber": 180
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "recommendation.setStatus",
+          "lineNumber": 182
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "recommendation.setDecidedAt",
+          "lineNumber": 183
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 183
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "recommendationRepository.save",
+          "lineNumber": 184
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "calculateCurrentProgress",
+          "lineNumber": 186
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "log.info",
+          "lineNumber": 187
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "completedNodes.size",
+          "lineNumber": 188
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder()\n                .recommendationId(recommendationId)\n                .status(RecommendationStatus.ACCEPTED)\n                .decidedAt(recommendation.getDecidedAt())\n                .roadmapProgress(progress).build",
+          "lineNumber": 190
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder()\n                .recommendationId(recommendationId)\n                .status(RecommendationStatus.ACCEPTED)\n                .decidedAt(recommendation.getDecidedAt()).roadmapProgress",
+          "lineNumber": 190
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder()\n                .recommendationId(recommendationId)\n                .status(RecommendationStatus.ACCEPTED).decidedAt",
+          "lineNumber": 190
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder()\n                .recommendationId(recommendationId).status",
+          "lineNumber": 190
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder().recommendationId",
+          "lineNumber": 190
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder",
+          "lineNumber": 190
+        },
+        {
+          "caller": "acceptRecommendation",
+          "callee": "recommendation.getDecidedAt",
+          "lineNumber": 193
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "log.info",
+          "lineNumber": 201
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "authenticatedStudentService.getRequiredStudent",
+          "lineNumber": 203
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "getOwnedPendingRecommendation",
+          "lineNumber": 204
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "recommendation.setStatus",
+          "lineNumber": 206
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "recommendation.setDecidedAt",
+          "lineNumber": 207
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 207
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "recommendationRepository.save",
+          "lineNumber": 208
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "log.info",
+          "lineNumber": 210
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder()\n                .recommendationId(recommendationId)\n                .status(RecommendationStatus.REJECTED)\n                .decidedAt(recommendation.getDecidedAt()).build",
+          "lineNumber": 211
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder()\n                .recommendationId(recommendationId)\n                .status(RecommendationStatus.REJECTED).decidedAt",
+          "lineNumber": 211
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder()\n                .recommendationId(recommendationId).status",
+          "lineNumber": 211
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder().recommendationId",
+          "lineNumber": 211
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "RoadmapRecommendationDecisionResponse.builder",
+          "lineNumber": 211
+        },
+        {
+          "caller": "rejectRecommendation",
+          "callee": "recommendation.getDecidedAt",
+          "lineNumber": 214
+        },
+        {
+          "caller": "loadImportanceBySkillId",
+          "callee": "new HashMap<>",
+          "lineNumber": 224
+        },
+        {
+          "caller": "loadImportanceBySkillId",
+          "callee": "careerRequiredSkillRepository.findByCareerRole_CareerId",
+          "lineNumber": 225
+        },
+        {
+          "caller": "loadImportanceBySkillId",
+          "callee": "required.getSkill",
+          "lineNumber": 226
+        },
+        {
+          "caller": "loadImportanceBySkillId",
+          "callee": "required.getImportanceLevel",
+          "lineNumber": 226
+        },
+        {
+          "caller": "loadImportanceBySkillId",
+          "callee": "importanceBySkillId.put",
+          "lineNumber": 227
+        },
+        {
+          "caller": "loadImportanceBySkillId",
+          "callee": "required.getSkill().getSkillId",
+          "lineNumber": 227
+        },
+        {
+          "caller": "loadImportanceBySkillId",
+          "callee": "required.getSkill",
+          "lineNumber": 227
+        },
+        {
+          "caller": "loadImportanceBySkillId",
+          "callee": "required.getImportanceLevel",
+          "lineNumber": 227
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 236
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "new HashMap<>",
+          "lineNumber": 238
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "new HashMap<>",
+          "lineNumber": 239
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "new HashMap<>",
+          "lineNumber": 240
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesById.put",
+          "lineNumber": 242
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getNodeId",
+          "lineNumber": 242
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getSkill",
+          "lineNumber": 243
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesBySkillId.computeIfAbsent(node.getSkill().getSkillId(), key -> new ArrayList<>()).add",
+          "lineNumber": 244
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesBySkillId.computeIfAbsent",
+          "lineNumber": 244
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getSkill().getSkillId",
+          "lineNumber": 244
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getSkill",
+          "lineNumber": 244
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "new ArrayList<>",
+          "lineNumber": 244
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getSkill().getSkillName",
+          "lineNumber": 245
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getSkill",
+          "lineNumber": 245
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesBySkillName\n                            .computeIfAbsent(node.getSkill().getSkillName().toLowerCase(), key -> new ArrayList<>()).add",
+          "lineNumber": 246
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesBySkillName.computeIfAbsent",
+          "lineNumber": 246
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getSkill().getSkillName().toLowerCase",
+          "lineNumber": 247
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getSkill().getSkillName",
+          "lineNumber": 247
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "node.getSkill",
+          "lineNumber": 247
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "new ArrayList<>",
+          "lineNumber": 247
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "studentSkillRepository.findByStudent_UserId",
+          "lineNumber": 254
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "student.getUserId",
+          "lineNumber": 254
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "studentSkill.getSkill",
+          "lineNumber": 255
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "studentSkill.getSkill().getSkillName",
+          "lineNumber": 258
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "studentSkill.getSkill",
+          "lineNumber": 258
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesBySkillId.getOrDefault",
+          "lineNumber": 259
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "studentSkill.getSkill().getSkillId",
+          "lineNumber": 259
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "studentSkill.getSkill",
+          "lineNumber": 259
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "List.of",
+          "lineNumber": 259
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "offerCandidate",
+          "lineNumber": 260
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidenceRepository.findByUserIdAndStatusIn",
+          "lineNumber": 266
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "student.getUserId",
+          "lineNumber": 267
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "List.of",
+          "lineNumber": 267
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getConfidence",
+          "lineNumber": 269
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "buildEvidenceReason",
+          "lineNumber": 273
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getNodeId",
+          "lineNumber": 274
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesById.containsKey",
+          "lineNumber": 274
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getNodeId",
+          "lineNumber": 274
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "offerCandidate",
+          "lineNumber": 275
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesById.get",
+          "lineNumber": 276
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getNodeId",
+          "lineNumber": 276
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getEvidenceId",
+          "lineNumber": 276
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getSkillName",
+          "lineNumber": 277
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "nodesBySkillName.getOrDefault",
+          "lineNumber": 278
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getSkillName().toLowerCase",
+          "lineNumber": 278
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getSkillName",
+          "lineNumber": 278
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "List.of",
+          "lineNumber": 278
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "offerCandidate",
+          "lineNumber": 279
+        },
+        {
+          "caller": "collectCandidates",
+          "callee": "evidence.getEvidenceId",
+          "lineNumber": 279
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "excludedNodeIds.contains",
+          "lineNumber": 291
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "node.getNodeId",
+          "lineNumber": 291
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "EVIDENCE_ALLOWED_POLICY.equalsIgnoreCase",
+          "lineNumber": 294
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "node.getCompletionPolicy",
+          "lineNumber": 294
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "meetsNodeProficiency",
+          "lineNumber": 297
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "candidates.get",
+          "lineNumber": 301
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "node.getNodeId",
+          "lineNumber": 301
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "new ArrayList<>",
+          "lineNumber": 303
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "evidenceIds.add",
+          "lineNumber": 305
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "candidates.put",
+          "lineNumber": 307
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "node.getNodeId",
+          "lineNumber": 307
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "new NodeCandidate",
+          "lineNumber": 307
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "existing.evidenceIds().contains",
+          "lineNumber": 311
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "existing.evidenceIds",
+          "lineNumber": 311
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "existing.evidenceIds().add",
+          "lineNumber": 312
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "existing.evidenceIds",
+          "lineNumber": 312
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "confidence.compareTo",
+          "lineNumber": 314
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "existing.confidence",
+          "lineNumber": 314
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "candidates.put",
+          "lineNumber": 315
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "node.getNodeId",
+          "lineNumber": 315
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "new NodeCandidate",
+          "lineNumber": 316
+        },
+        {
+          "caller": "offerCandidate",
+          "callee": "existing.evidenceIds",
+          "lineNumber": 316
+        },
+        {
+          "caller": "meetsNodeProficiency",
+          "callee": "node.getRequiredProficiency",
+          "lineNumber": 331
+        },
+        {
+          "caller": "meetsNodeProficiency",
+          "callee": "node.getRequiredProficiency",
+          "lineNumber": 331
+        },
+        {
+          "caller": "meetsNodeProficiency",
+          "callee": "BigDecimal.valueOf(node.getRequiredProficiency()).movePointLeft",
+          "lineNumber": 332
+        },
+        {
+          "caller": "meetsNodeProficiency",
+          "callee": "BigDecimal.valueOf",
+          "lineNumber": 332
+        },
+        {
+          "caller": "meetsNodeProficiency",
+          "callee": "node.getRequiredProficiency",
+          "lineNumber": 332
+        },
+        {
+          "caller": "meetsNodeProficiency",
+          "callee": "threshold.max",
+          "lineNumber": 334
+        },
+        {
+          "caller": "meetsNodeProficiency",
+          "callee": "importanceFloor",
+          "lineNumber": 334
+        },
+        {
+          "caller": "meetsNodeProficiency",
+          "callee": "confidence.compareTo",
+          "lineNumber": 335
+        },
+        {
+          "caller": "importanceFloor",
+          "callee": "node.getSkill",
+          "lineNumber": 340
+        },
+        {
+          "caller": "importanceFloor",
+          "callee": "importanceBySkillId.get",
+          "lineNumber": 343
+        },
+        {
+          "caller": "importanceFloor",
+          "callee": "node.getSkill().getSkillId",
+          "lineNumber": 343
+        },
+        {
+          "caller": "importanceFloor",
+          "callee": "node.getSkill",
+          "lineNumber": 343
+        },
+        {
+          "caller": "buildEvidenceReason",
+          "callee": "evidence.getSkillName",
+          "lineNumber": 355
+        },
+        {
+          "caller": "buildEvidenceReason",
+          "callee": "evidence.getSkillName",
+          "lineNumber": 355
+        },
+        {
+          "caller": "buildEvidenceReason",
+          "callee": "evidence.getSourceType().name().toLowerCase().replace",
+          "lineNumber": 357
+        },
+        {
+          "caller": "buildEvidenceReason",
+          "callee": "evidence.getSourceType().name().toLowerCase",
+          "lineNumber": 357
+        },
+        {
+          "caller": "buildEvidenceReason",
+          "callee": "evidence.getSourceType().name",
+          "lineNumber": 357
+        },
+        {
+          "caller": "buildEvidenceReason",
+          "callee": "evidence.getSourceType",
+          "lineNumber": 357
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "recommendationRepository.save",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId())\n                .currentCareerId(careerId)\n                .recommendCareerId(careerId)\n                .recommendationType(RecommendationType.SKIP_KNOWN_SKILLS)\n                .title(\"Skip skills you already know\")\n                .summary(\"Based on your skill profile and detected evidence, you can mark \"\n                        + countOf(candidates) + \" roadmap node(s) as completed.\")\n                .reason(\"Your existing skills and evidence cover these roadmap nodes. \"\n                        + \"Accepting will mark them completed and update your progress.\")\n                .confidence(averageConfidence(candidates))\n                .status(RecommendationStatus.PENDING).build",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId())\n                .currentCareerId(careerId)\n                .recommendCareerId(careerId)\n                .recommendationType(RecommendationType.SKIP_KNOWN_SKILLS)\n                .title(\"Skip skills you already know\")\n                .summary(\"Based on your skill profile and detected evidence, you can mark \"\n                        + countOf(candidates) + \" roadmap node(s) as completed.\")\n                .reason(\"Your existing skills and evidence cover these roadmap nodes. \"\n                        + \"Accepting will mark them completed and update your progress.\")\n                .confidence(averageConfidence(candidates)).status",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId())\n                .currentCareerId(careerId)\n                .recommendCareerId(careerId)\n                .recommendationType(RecommendationType.SKIP_KNOWN_SKILLS)\n                .title(\"Skip skills you already know\")\n                .summary(\"Based on your skill profile and detected evidence, you can mark \"\n                        + countOf(candidates) + \" roadmap node(s) as completed.\")\n                .reason(\"Your existing skills and evidence cover these roadmap nodes. \"\n                        + \"Accepting will mark them completed and update your progress.\").confidence",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId())\n                .currentCareerId(careerId)\n                .recommendCareerId(careerId)\n                .recommendationType(RecommendationType.SKIP_KNOWN_SKILLS)\n                .title(\"Skip skills you already know\")\n                .summary(\"Based on your skill profile and detected evidence, you can mark \"\n                        + countOf(candidates) + \" roadmap node(s) as completed.\").reason",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId())\n                .currentCareerId(careerId)\n                .recommendCareerId(careerId)\n                .recommendationType(RecommendationType.SKIP_KNOWN_SKILLS)\n                .title(\"Skip skills you already know\").summary",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId())\n                .currentCareerId(careerId)\n                .recommendCareerId(careerId)\n                .recommendationType(RecommendationType.SKIP_KNOWN_SKILLS).title",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId())\n                .currentCareerId(careerId)\n                .recommendCareerId(careerId).recommendationType",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId())\n                .currentCareerId(careerId).recommendCareerId",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder()\n                .userId(student.getUserId()).currentCareerId",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder().userId",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "RoadmapRecommendation.builder",
+          "lineNumber": 361
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "student.getUserId",
+          "lineNumber": 362
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "countOf",
+          "lineNumber": 368
+        },
+        {
+          "caller": "saveRecommendation",
+          "callee": "averageConfidence",
+          "lineNumber": 371
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "new ArrayList<>",
+          "lineNumber": 378
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "items.add",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "RoadmapRecommendationItem.builder()\n                    .recommendationId(recommendation.getRecommendationId())\n                    .nodeId(candidate.node().getNodeId())\n                    .action(RecommendationAction.MARK_COMPLETE)\n                    .reason(candidate.reason())\n                    .confidence(candidate.confidence())\n                    .evidenceIds(candidate.evidenceIds().isEmpty() ? null : candidate.evidenceIds()).build",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "RoadmapRecommendationItem.builder()\n                    .recommendationId(recommendation.getRecommendationId())\n                    .nodeId(candidate.node().getNodeId())\n                    .action(RecommendationAction.MARK_COMPLETE)\n                    .reason(candidate.reason())\n                    .confidence(candidate.confidence()).evidenceIds",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "RoadmapRecommendationItem.builder()\n                    .recommendationId(recommendation.getRecommendationId())\n                    .nodeId(candidate.node().getNodeId())\n                    .action(RecommendationAction.MARK_COMPLETE)\n                    .reason(candidate.reason()).confidence",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "RoadmapRecommendationItem.builder()\n                    .recommendationId(recommendation.getRecommendationId())\n                    .nodeId(candidate.node().getNodeId())\n                    .action(RecommendationAction.MARK_COMPLETE).reason",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "RoadmapRecommendationItem.builder()\n                    .recommendationId(recommendation.getRecommendationId())\n                    .nodeId(candidate.node().getNodeId()).action",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "RoadmapRecommendationItem.builder()\n                    .recommendationId(recommendation.getRecommendationId()).nodeId",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "RoadmapRecommendationItem.builder().recommendationId",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "RoadmapRecommendationItem.builder",
+          "lineNumber": 380
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "recommendation.getRecommendationId",
+          "lineNumber": 381
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "candidate.node().getNodeId",
+          "lineNumber": 382
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "candidate.node",
+          "lineNumber": 382
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "candidate.reason",
+          "lineNumber": 384
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "candidate.confidence",
+          "lineNumber": 385
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "candidate.evidenceIds().isEmpty",
+          "lineNumber": 386
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "candidate.evidenceIds",
+          "lineNumber": 386
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "candidate.evidenceIds",
+          "lineNumber": 386
+        },
+        {
+          "caller": "saveRecommendationItems",
+          "callee": "recommendationItemRepository.saveAll",
+          "lineNumber": 389
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "new ArrayList<>",
+          "lineNumber": 398
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "item.getAction",
+          "lineNumber": 400
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "skillNodeRepository.findById(item.getNodeId()).orElse",
+          "lineNumber": 403
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "skillNodeRepository.findById",
+          "lineNumber": 403
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "item.getNodeId",
+          "lineNumber": 403
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "log.warn",
+          "lineNumber": 405
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "item.getRecItemId",
+          "lineNumber": 406
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "item.getNodeId",
+          "lineNumber": 406
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "upsertCompletedProgress",
+          "lineNumber": 409
+        },
+        {
+          "caller": "applyMarkCompleteItems",
+          "callee": "completedNodes.add",
+          "lineNumber": 410
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "studentProgressRepository\n                .findByStudent_UserIdAndSkillNode_NodeId(student.getUserId(), node.getNodeId()).orElseGet",
+          "lineNumber": 416
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "studentProgressRepository.findByStudent_UserIdAndSkillNode_NodeId",
+          "lineNumber": 416
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "student.getUserId",
+          "lineNumber": 417
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "node.getNodeId",
+          "lineNumber": 417
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "StudentProgress.builder()\n                        .student(Student.builder().userId(student.getUserId()).build())\n                        .skillNode(node).build",
+          "lineNumber": 418
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "StudentProgress.builder()\n                        .student(Student.builder().userId(student.getUserId()).build()).skillNode",
+          "lineNumber": 418
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "StudentProgress.builder().student",
+          "lineNumber": 418
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "StudentProgress.builder",
+          "lineNumber": 418
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "Student.builder().userId(student.getUserId()).build",
+          "lineNumber": 419
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "Student.builder().userId",
+          "lineNumber": 419
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "Student.builder",
+          "lineNumber": 419
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "student.getUserId",
+          "lineNumber": 419
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "progress.setStatus",
+          "lineNumber": 423
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "progress.getCompletedAt",
+          "lineNumber": 424
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "progress.setCompletedAt",
+          "lineNumber": 425
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 425
+        },
+        {
+          "caller": "upsertCompletedProgress",
+          "callee": "studentProgressRepository.save",
+          "lineNumber": 427
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 436
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "student.getCareerRole",
+          "lineNumber": 436
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "new HashMap<>",
+          "lineNumber": 437
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "node.getSkill",
+          "lineNumber": 439
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "touchedSkills.putIfAbsent",
+          "lineNumber": 440
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "node.getSkill().getSkillId",
+          "lineNumber": 440
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "node.getSkill",
+          "lineNumber": 440
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "node.getSkill",
+          "lineNumber": 440
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "touchedSkills.values",
+          "lineNumber": 444
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "studentSkillRepository.existsByStudent_UserIdAndSkill_SkillId",
+          "lineNumber": 445
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "student.getUserId",
+          "lineNumber": 445
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "skill.getSkillId",
+          "lineNumber": 445
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "allSkillNodesCompleted",
+          "lineNumber": 448
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "student.getUserId",
+          "lineNumber": 448
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "skill.getSkillId",
+          "lineNumber": 448
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "studentSkillRepository.save",
+          "lineNumber": 449
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "StudentSkill.builder()\n                        .student(Student.builder().userId(student.getUserId()).build())\n                        .skill(skill).build",
+          "lineNumber": 449
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "StudentSkill.builder()\n                        .student(Student.builder().userId(student.getUserId()).build()).skill",
+          "lineNumber": 449
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "StudentSkill.builder().student",
+          "lineNumber": 449
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "StudentSkill.builder",
+          "lineNumber": 449
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "Student.builder().userId(student.getUserId()).build",
+          "lineNumber": 450
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "Student.builder().userId",
+          "lineNumber": 450
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "Student.builder",
+          "lineNumber": 450
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "student.getUserId",
+          "lineNumber": 450
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "log.info",
+          "lineNumber": 453
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "skill.getSkillName",
+          "lineNumber": 454
+        },
+        {
+          "caller": "syncCompletedSkillsToProfile",
+          "callee": "student.getUserId",
+          "lineNumber": 454
+        },
+        {
+          "caller": "allSkillNodesCompleted",
+          "callee": "skillNodeRepository.findBySkill_SkillIdAndCareerRole_CareerId",
+          "lineNumber": 460
+        },
+        {
+          "caller": "allSkillNodesCompleted",
+          "callee": "studentProgressRepository\n                    .findByStudent_UserIdAndSkillNode_NodeId(userId, node.getNodeId()).orElse",
+          "lineNumber": 461
+        },
+        {
+          "caller": "allSkillNodesCompleted",
+          "callee": "studentProgressRepository.findByStudent_UserIdAndSkillNode_NodeId",
+          "lineNumber": 461
+        },
+        {
+          "caller": "allSkillNodesCompleted",
+          "callee": "node.getNodeId",
+          "lineNumber": 462
+        },
+        {
+          "caller": "allSkillNodesCompleted",
+          "callee": "progress.getStatus",
+          "lineNumber": 464
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "new HashSet<>",
+          "lineNumber": 476
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "item.getEvidenceIds",
+          "lineNumber": 478
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "evidenceIds.addAll",
+          "lineNumber": 479
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "item.getEvidenceIds",
+          "lineNumber": 479
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "evidenceIds.isEmpty",
+          "lineNumber": 482
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "new HashMap<>",
+          "lineNumber": 486
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "node.getSkill",
+          "lineNumber": 488
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "nodeIdToSkillId.put",
+          "lineNumber": 489
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "node.getNodeId",
+          "lineNumber": 489
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "node.getSkill().getSkillId",
+          "lineNumber": 489
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "node.getSkill",
+          "lineNumber": 489
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "new HashMap<>",
+          "lineNumber": 492
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "new HashMap<>",
+          "lineNumber": 493
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkillRepository.findByStudent_UserId",
+          "lineNumber": 494
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "student.getUserId",
+          "lineNumber": 494
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getSkill",
+          "lineNumber": 495
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "skillIdToStudentSkillId.put",
+          "lineNumber": 496
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getSkill().getSkillId",
+          "lineNumber": 496
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getSkill",
+          "lineNumber": 496
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getStudentSkillId",
+          "lineNumber": 496
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getSkill().getSkillName",
+          "lineNumber": 497
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getSkill",
+          "lineNumber": 497
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "skillNameToStudentSkillId.put",
+          "lineNumber": 498
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getSkill().getSkillName().toLowerCase",
+          "lineNumber": 499
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getSkill().getSkillName",
+          "lineNumber": 499
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getSkill",
+          "lineNumber": 499
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "studentSkill.getStudentSkillId",
+          "lineNumber": 499
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "evidenceRepository.findAllById",
+          "lineNumber": 504
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "evidence.setStatus",
+          "lineNumber": 505
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "evidence.getStudentSkillId",
+          "lineNumber": 506
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "evidence.setStudentSkillId",
+          "lineNumber": 507
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "resolveStudentSkillId",
+          "lineNumber": 507
+        },
+        {
+          "caller": "linkAndAcceptEvidence",
+          "callee": "evidenceRepository.save",
+          "lineNumber": 510
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "evidence.getNodeId",
+          "lineNumber": 518
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "nodeIdToSkillId.containsKey",
+          "lineNumber": 518
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "evidence.getNodeId",
+          "lineNumber": 518
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "skillIdToStudentSkillId.get",
+          "lineNumber": 519
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "nodeIdToSkillId.get",
+          "lineNumber": 519
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "evidence.getNodeId",
+          "lineNumber": 519
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "evidence.getSkillName",
+          "lineNumber": 521
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "skillNameToStudentSkillId.get",
+          "lineNumber": 522
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "evidence.getSkillName().toLowerCase",
+          "lineNumber": 522
+        },
+        {
+          "caller": "resolveStudentSkillId",
+          "callee": "evidence.getSkillName",
+          "lineNumber": 522
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "recommendationRepository.findById(recommendationId).orElseThrow",
+          "lineNumber": 532
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "recommendationRepository.findById",
+          "lineNumber": 532
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 533
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "student.getUserId().equals",
+          "lineNumber": 535
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "student.getUserId",
+          "lineNumber": 535
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "recommendation.getUserId",
+          "lineNumber": 535
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "log.warn",
+          "lineNumber": 536
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "student.getUserId",
+          "lineNumber": 537
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "recommendation.getUserId",
+          "lineNumber": 537
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 538
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "recommendation.getStatus",
+          "lineNumber": 541
+        },
+        {
+          "caller": "getOwnedPendingRecommendation",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 542
+        },
+        {
+          "caller": "requireSelectedCareer",
+          "callee": "student.getCareerRole",
+          "lineNumber": 549
+        },
+        {
+          "caller": "requireSelectedCareer",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 549
+        },
+        {
+          "caller": "requireSelectedCareer",
+          "callee": "student.getCareerRole",
+          "lineNumber": 549
+        },
+        {
+          "caller": "requireSelectedCareer",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 550
+        },
+        {
+          "caller": "requireSelectedCareer",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 553
+        },
+        {
+          "caller": "requireSelectedCareer",
+          "callee": "student.getCareerRole",
+          "lineNumber": 553
+        },
+        {
+          "caller": "findCompletedNodeIds",
+          "callee": "new HashSet<>",
+          "lineNumber": 557
+        },
+        {
+          "caller": "findCompletedNodeIds",
+          "callee": "studentProgressRepository.findByStudent_UserId",
+          "lineNumber": 558
+        },
+        {
+          "caller": "findCompletedNodeIds",
+          "callee": "progress.getStatus",
+          "lineNumber": 559
+        },
+        {
+          "caller": "findCompletedNodeIds",
+          "callee": "completedNodeIds.add",
+          "lineNumber": 560
+        },
+        {
+          "caller": "findCompletedNodeIds",
+          "callee": "progress.getSkillNode().getNodeId",
+          "lineNumber": 560
+        },
+        {
+          "caller": "findCompletedNodeIds",
+          "callee": "progress.getSkillNode",
+          "lineNumber": 560
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "recommendationRepository\n                .findByUserIdAndStatusOrderByCreatedAtDesc(userId, RecommendationStatus.PENDING)\n                .stream()\n                .map(RoadmapRecommendation::getRecommendationId).toList",
+          "lineNumber": 568
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "recommendationRepository\n                .findByUserIdAndStatusOrderByCreatedAtDesc(userId, RecommendationStatus.PENDING)\n                .stream().map",
+          "lineNumber": 568
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "recommendationRepository\n                .findByUserIdAndStatusOrderByCreatedAtDesc(userId, RecommendationStatus.PENDING).stream",
+          "lineNumber": 568
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "recommendationRepository.findByUserIdAndStatusOrderByCreatedAtDesc",
+          "lineNumber": 568
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "pendingIds.isEmpty",
+          "lineNumber": 573
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "Set.of",
+          "lineNumber": 574
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "new HashSet<>",
+          "lineNumber": 577
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "recommendationItemRepository.findByRecommendationIdIn",
+          "lineNumber": 578
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "item.getAction",
+          "lineNumber": 579
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "nodeIds.add",
+          "lineNumber": 580
+        },
+        {
+          "caller": "findNodeIdsInPendingRecommendations",
+          "callee": "item.getNodeId",
+          "lineNumber": 580
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "skillNodeRepository.findByCareerRole_CareerId",
+          "lineNumber": 587
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 588
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "student.getCareerRole",
+          "lineNumber": 588
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "studentProgressRepository.findByStudent_UserId",
+          "lineNumber": 589
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "student.getUserId",
+          "lineNumber": 589
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "roadmapSelectionResolver.resolve",
+          "lineNumber": 591
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "student.getUserId",
+          "lineNumber": 591
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "progressCalculator.calculateProgress",
+          "lineNumber": 592
+        },
+        {
+          "caller": "calculateCurrentProgress",
+          "callee": "selectionView.activePathNodes",
+          "lineNumber": 592
+        },
+        {
+          "caller": "nodeNamesById",
+          "callee": "new HashMap<>",
+          "lineNumber": 596
+        },
+        {
+          "caller": "nodeNamesById",
+          "callee": "names.put",
+          "lineNumber": 598
+        },
+        {
+          "caller": "nodeNamesById",
+          "callee": "node.getNodeId",
+          "lineNumber": 598
+        },
+        {
+          "caller": "nodeNamesById",
+          "callee": "node.getNodeName",
+          "lineNumber": 598
+        },
+        {
+          "caller": "nodeNamesForItems",
+          "callee": "new HashSet<>",
+          "lineNumber": 604
+        },
+        {
+          "caller": "nodeNamesForItems",
+          "callee": "nodeIds.add",
+          "lineNumber": 607
+        },
+        {
+          "caller": "nodeNamesForItems",
+          "callee": "item.getNodeId",
+          "lineNumber": 607
+        },
+        {
+          "caller": "nodeNamesForItems",
+          "callee": "nodeNamesById",
+          "lineNumber": 610
+        },
+        {
+          "caller": "nodeNamesForItems",
+          "callee": "skillNodeRepository.findAllById",
+          "lineNumber": 610
+        },
+        {
+          "caller": "averageConfidence",
+          "callee": "sum.add",
+          "lineNumber": 625
+        },
+        {
+          "caller": "averageConfidence",
+          "callee": "candidate.confidence",
+          "lineNumber": 625
+        },
+        {
+          "caller": "averageConfidence",
+          "callee": "sum.divide",
+          "lineNumber": 631
+        },
+        {
+          "caller": "averageConfidence",
+          "callee": "BigDecimal.valueOf",
+          "lineNumber": 631
+        }
+      ],
+      "metrics": {
+        "importCount": 31,
+        "exportCount": 5,
+        "functionCount": 27,
+        "classCount": 1
+      }
+    }
+  ]
+}

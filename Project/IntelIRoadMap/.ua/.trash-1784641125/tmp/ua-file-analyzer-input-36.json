@@ -1,0 +1,147 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h3-quote-led.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h4-stat-led.md",
+      "language": "markdown",
+      "sizeLines": 14,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h5-letter-hero.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h6-photographic-fold.md",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h7-demo-video-clipped-by-viewport-edge.md",
+      "language": "markdown",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h8-mockup-split-browser-framed.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h9-custom-illustration-centerpiece.md",
+      "language": "markdown",
+      "sizeLines": 27,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1-wordmark-2-links.md",
+      "language": "markdown",
+      "sizeLines": 12,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n10-floating-on-scroll-morph.md",
+      "language": "markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n11-mega-menu.md",
+      "language": "markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n12-banner-retract.md",
+      "language": "markdown",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n13-inline-cmdk-pill.md",
+      "language": "markdown",
+      "sizeLines": 39,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1b-saas-three-section.md",
+      "language": "markdown",
+      "sizeLines": 35,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n2-floating-chip.md",
+      "language": "markdown",
+      "sizeLines": 14,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n3-side-rail.md",
+      "language": "markdown",
+      "sizeLines": 14,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n4-hidden-behind-k.md",
+      "language": "markdown",
+      "sizeLines": 9,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n5-floating-pill.md",
+      "language": "markdown",
+      "sizeLines": 28,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n6-newspaper-masthead.md",
+      "language": "markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n7-brutal-slab.md",
+      "language": "markdown",
+      "sizeLines": 22,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n8-terminal-command.md",
+      "language": "markdown",
+      "sizeLines": 21,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h3-quote-led.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h4-stat-led.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h5-letter-hero.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h6-photographic-fold.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h7-demo-video-clipped-by-viewport-edge.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h8-mockup-split-browser-framed.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h9-custom-illustration-centerpiece.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1-wordmark-2-links.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n10-floating-on-scroll-morph.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n11-mega-menu.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n12-banner-retract.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n13-inline-cmdk-pill.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1b-saas-three-section.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n2-floating-chip.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n3-side-rail.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n4-hidden-behind-k.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n5-floating-pill.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n6-newspaper-masthead.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n7-brutal-slab.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n8-terminal-command.md": []
+  }
+}

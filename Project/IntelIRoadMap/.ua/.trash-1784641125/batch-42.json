@@ -1,0 +1,60 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/styles/auth.css",
+      "type": "file",
+      "name": "auth.css",
+      "filePath": "FrontEnd/intelipath-frontend/src/styles/auth.css",
+      "summary": "Stylesheet for the authentication screens (login/register/reset) providing a dark gradient hero background, grid overlays, glow effects, topbar, and form/panel layout classes.",
+      "tags": ["stylesheet", "authentication", "layout", "css", "component"],
+      "complexity": "complex",
+      "languageNotes": "Heavy use of layered radial/linear gradients, backdrop blur, and pseudo-decorative grid/glow elements for a dark-themed auth UI."
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/styles/variables.css",
+      "type": "file",
+      "name": "variables.css",
+      "filePath": "FrontEnd/intelipath-frontend/src/styles/variables.css",
+      "summary": "Global CSS custom properties defining the design system tokens: color palette, typography, border radii, shadows, and transition timings shared across the frontend.",
+      "tags": ["css-variables", "design-tokens", "theming", "css", "shared"],
+      "complexity": "simple",
+      "languageNotes": "Uses :root-scoped CSS custom properties as a lightweight design token system."
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/styles/welcome-demo.css",
+      "type": "file",
+      "name": "welcome-demo.css",
+      "filePath": "FrontEnd/intelipath-frontend/src/styles/welcome-demo.css",
+      "summary": "Stylesheet for the welcome/demo landing page, styling a fixed navigation bar, hero sections, action buttons, and page layout with a light theme referencing shared design token variables.",
+      "tags": ["stylesheet", "landing-page", "layout", "css", "navigation"],
+      "complexity": "complex",
+      "languageNotes": "References design tokens from variables.css (e.g. var(--font-sans)) and uses backdrop-filter blur for a sticky translucent nav bar."
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/styles/welcome.css",
+      "type": "file",
+      "name": "welcome.css",
+      "filePath": "FrontEnd/intelipath-frontend/src/styles/welcome.css",
+      "summary": "Defines floating/bobbing keyframe animations for the AI Mentor Robot illustration shown on the welcome page, animating its head, body, and arms independently.",
+      "tags": ["css", "animation", "illustration", "welcome-page", "keyframes"],
+      "complexity": "simple",
+      "languageNotes": "Uses CSS @keyframes with staggered timing/easing per robot part to create a layered floating effect."
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/styles/welcome-demo.css",
+      "target": "file:FrontEnd/intelipath-frontend/src/styles/variables.css",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/styles/welcome.css",
+      "target": "file:FrontEnd/intelipath-frontend/src/styles/welcome-demo.css",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

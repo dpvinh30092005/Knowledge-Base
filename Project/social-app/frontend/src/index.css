@@ -1,0 +1,55 @@
+:root {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #132031;
+  background: #eef3f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg: #eef3f9;
+  --bg-soft: #f7f9fc;
+  --surface: #ffffff;
+  --surface-2: #f2f6fb;
+  --border: #d5deea;
+  --text: #132031;
+  --muted: #59708a;
+  --primary: #1f6fd8;
+  --primary-strong: #1559af;
+  --danger: #bf2d2d;
+  --success: #1f8b4d;
+  --warning: #b46b00;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(25, 56, 93, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: radial-gradient(circle at top right, #dbe9ff, var(--bg) 46%);
+  color: var(--text);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}

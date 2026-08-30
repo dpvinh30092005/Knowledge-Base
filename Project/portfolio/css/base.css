@@ -1,0 +1,263 @@
+/* =========================
+   BASE / RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-ink);
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.18);
+  color: var(--color-ink);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+p {
+  color: var(--color-text);
+}
+
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: 0.875rem;
+}
+@font-face {
+  font-family: "MyHeadline";
+  src: url("../fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyBody";
+  src: url("../fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyLabel";
+  src: url("../fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* =========================
+   MEDIA DEFAULTS
+========================= */
+
+iframe,
+video {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
+/* =========================
+   FORM DEFAULTS
+========================= */
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+[hidden] {
+  display: none !important;
+}
+
+[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* =========================
+   APP ROOT
+========================= */
+
+body.is-locked {
+  overflow: hidden;
+}
+
+#scene-root {
+  position: relative;
+}
+body {
+  font-family: "MyBody", "Inter", sans-serif;
+}
+
+.logo,
+h1 {
+  font-family: "MyHeadline", sans-serif;
+}
+.version-tag,
+.tag,
+.btn-say-hello,
+.nav-links a {
+  font-family: "MyLabel", sans-serif;
+}
+
+.hero-content p {
+  font-family: "MyBody", sans-serif;
+  line-height: 1.6;
+}
+.overlay-root {
+  position: relative;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a5eb0;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.nav-links a {
+  padding-bottom: 8px;
+}
+.nav-links a:hover {
+  color: #1a5eb0;
+  font-weight: 600;
+  border: 3px solid #76a1d7;
+    
+}
+.nav-links a.active {
+  color: #1a5eb0;
+  font-weight: 600;
+  position: relative;
+}
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1a5eb0;
+}
+.navbar .btn-say-hello {
+  padding: 10px 20px;
+  background-color: #1a5eb0;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}

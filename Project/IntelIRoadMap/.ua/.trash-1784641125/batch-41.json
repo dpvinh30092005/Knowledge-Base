@@ -1,0 +1,138 @@
+{
+  "nodes": [
+    {
+      "id": "config:FrontEnd/intelipath-frontend/.env",
+      "type": "config",
+      "name": ".env",
+      "filePath": "FrontEnd/intelipath-frontend/.env",
+      "summary": "Local environment variables for the frontend, defining OAuth client IDs for Google and GitHub login.",
+      "tags": ["configuration", "environment-variables", "oauth", "secrets"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:FrontEnd/intelipath-frontend/.env.example",
+      "type": "config",
+      "name": ".env.example",
+      "filePath": "FrontEnd/intelipath-frontend/.env.example",
+      "summary": "Example environment file listing the required variable names (Google and GitHub OAuth client IDs) without real values, for developer onboarding.",
+      "tags": ["configuration", "environment-variables", "documentation", "oauth"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/CONTRIBUTING.md",
+      "type": "document",
+      "name": "CONTRIBUTING.md",
+      "filePath": "FrontEnd/intelipath-frontend/CONTRIBUTING.md",
+      "summary": "Contribution guidelines documenting the commit message convention, allowed types, scopes, and examples for the frontend repository.",
+      "tags": ["documentation", "development", "commit-convention"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "FrontEnd/intelipath-frontend/README.md",
+      "summary": "Project overview for the React + TypeScript + Vite frontend, covering the React Compiler and instructions for expanding the ESLint configuration.",
+      "tags": ["documentation", "entry-point", "overview"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:FrontEnd/intelipath-frontend/components.json",
+      "type": "config",
+      "name": "components.json",
+      "filePath": "FrontEnd/intelipath-frontend/components.json",
+      "summary": "shadcn/ui component generator configuration specifying style, TSX usage, Tailwind settings, path aliases, and icon library for the frontend.",
+      "tags": ["configuration", "ui-components", "tailwind", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "FrontEnd/intelipath-frontend/index.html",
+      "summary": "Root HTML shell for the Vite-powered React application, mounting the app into a root div and loading the main script entry point.",
+      "tags": ["entry-point", "markup", "html"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:FrontEnd/intelipath-frontend/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "FrontEnd/intelipath-frontend/package.json",
+      "summary": "NPM package manifest for the frontend defining build/dev/lint scripts along with runtime and development dependencies.",
+      "tags": ["configuration", "build-system", "dependencies", "npm"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:FrontEnd/intelipath-frontend/skills-lock.json",
+      "type": "config",
+      "name": "skills-lock.json",
+      "filePath": "FrontEnd/intelipath-frontend/skills-lock.json",
+      "summary": "Lockfile pinning versioned skill definitions used by tooling in the frontend project.",
+      "tags": ["configuration", "lockfile", "tooling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:FrontEnd/intelipath-frontend/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "FrontEnd/intelipath-frontend/tsconfig.json",
+      "summary": "Root TypeScript project configuration referencing app and node configs and specifying compiler options and included files for the frontend.",
+      "tags": ["configuration", "typescript", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:FrontEnd/intelipath-frontend/tsconfig.node.json",
+      "type": "config",
+      "name": "tsconfig.node.json",
+      "filePath": "FrontEnd/intelipath-frontend/tsconfig.node.json",
+      "summary": "TypeScript compiler configuration scoped to Node-context build tooling files (e.g. Vite config) in the frontend project.",
+      "tags": ["configuration", "typescript", "build-system"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:FrontEnd/intelipath-frontend/.env.example",
+      "target": "config:FrontEnd/intelipath-frontend/.env",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/README.md",
+      "target": "file:FrontEnd/intelipath-frontend/index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:FrontEnd/intelipath-frontend/tsconfig.json",
+      "target": "file:FrontEnd/intelipath-frontend/index.html",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:FrontEnd/intelipath-frontend/tsconfig.node.json",
+      "target": "config:FrontEnd/intelipath-frontend/package.json",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:FrontEnd/intelipath-frontend/components.json",
+      "target": "config:FrontEnd/intelipath-frontend/package.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/CONTRIBUTING.md",
+      "target": "document:FrontEnd/intelipath-frontend/README.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

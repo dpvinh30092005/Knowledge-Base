@@ -1,0 +1,1465 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "type": "file",
+      "name": "counselorApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "summary": "API client and type definitions for the counselor dashboard: career statistics, missing-skill analytics, student feedback CRUD (including multipart attachments), and paginated student lists.",
+      "tags": [
+        "api-handler",
+        "counselor",
+        "service",
+        "data-model"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "type": "file",
+      "name": "useCounselorAddStudent.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "summary": "Hook powering the counselor's add-student workflow: single-student form validation/submission plus bulk import from an Excel (.xlsx) file, with draft persistence to localStorage.",
+      "tags": [
+        "hook",
+        "counselor",
+        "form",
+        "data-import"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "type": "file",
+      "name": "useCounselorDashboard.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "summary": "Data-fetching hooks for the counselor dashboard's charts: career distribution, missing-skill breakdown (optionally filtered by career), and recent feedback list.",
+      "tags": [
+        "hook",
+        "counselor",
+        "data-fetching",
+        "analytics"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "type": "file",
+      "name": "useCounselorFeedback.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "summary": "Data hooks for the counselor's student-feedback panel: fetching the assigned student list, a single student's detail info, and sending new feedback entries.",
+      "tags": [
+        "hook",
+        "counselor",
+        "data-fetching",
+        "feedback"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/index.ts",
+      "summary": "Barrel file re-exporting the counselor dashboard's type definitions for the main dashboard, feedback, and add-student features.",
+      "tags": [
+        "barrel",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "type": "file",
+      "name": "CounselorAddStudentView.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "summary": "Page component for counselors to add students individually or via bulk Excel import, rendering the form, validation errors, and import results using the useCounselorAddStudent hook.",
+      "tags": [
+        "component",
+        "counselor",
+        "form",
+        "data-import"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "type": "file",
+      "name": "CounselorDashboardView.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "summary": "Counselor dashboard page composing a career-distribution pie chart, a missing-skills bar chart, and a recent feedback list, each backed by its own data-fetching hook.",
+      "tags": [
+        "component",
+        "counselor",
+        "dashboard",
+        "chart"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "type": "file",
+      "name": "CounselorFeedbackView.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "summary": "Large counselor feedback page: lists assigned students with search/filter, and a detail panel with tabs for roadmap progress, skill gaps, and sending/viewing feedback.",
+      "tags": [
+        "component",
+        "counselor",
+        "feedback",
+        "dashboard"
+      ],
+      "complexity": "complex",
+      "languageNotes": "At over 1,500 lines this is one of the largest frontend components; RoadmapTab/SkillGapTab/FeedbackTab are good candidates to extract into their own files."
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "type": "file",
+      "name": "mentorApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "summary": "API client for the mentor dashboard: welcome alert, metrics, pending reviews, career distribution, assigned students, student portfolio lookup, feedback history/submission, and progress reports, each defensively unwrapping the response envelope.",
+      "tags": [
+        "api-handler",
+        "mentor",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/roadmapEditorApi.ts",
+      "type": "file",
+      "name": "roadmapEditorApi.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/roadmapEditorApi.ts",
+      "summary": "API client for the mentor's roadmap editor: CRUD operations on career roadmap nodes and bulk saving of node canvas positions.",
+      "tags": [
+        "api-handler",
+        "mentor",
+        "roadmap",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "type": "file",
+      "name": "MentorDashboardView.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "summary": "Mentor dashboard landing page composing the welcome banner, metric strip, and pending-reviews widget.",
+      "tags": [
+        "component",
+        "mentor",
+        "dashboard"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "type": "file",
+      "name": "MentorDashboardWidgets.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "summary": "Collection of presentational widgets for the mentor dashboard (welcome banner, metric strip/cards, pending-reviews list) plus placeholder stubs for insight and career-distribution widgets.",
+      "tags": [
+        "component",
+        "mentor",
+        "widget",
+        "dashboard"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "type": "file",
+      "name": "MentorEPortfoliosView.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "summary": "Mentor-facing view listing assigned students' e-portfolios for review.",
+      "tags": [
+        "component",
+        "mentor",
+        "portfolio"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx",
+      "type": "file",
+      "name": "MentorFeedbackHistoryView.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx",
+      "summary": "Mentor view displaying the history of feedback previously submitted to students.",
+      "tags": [
+        "component",
+        "mentor",
+        "feedback"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "type": "file",
+      "name": "MentorHeader.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "summary": "Shared header/navigation bar for mentor dashboard pages, showing the active tab and a user menu with logout.",
+      "tags": [
+        "component",
+        "mentor",
+        "navigation",
+        "header"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts:buildFeedbackFormData",
+      "type": "function",
+      "name": "buildFeedbackFormData",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "lineRange": [
+        35,
+        52
+      ],
+      "summary": "Builds a multipart FormData payload for submitting counselor feedback, including any file attachment.",
+      "tags": [
+        "utility",
+        "counselor",
+        "form-data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts:validateForm",
+      "type": "function",
+      "name": "validateForm",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "lineRange": [
+        8,
+        20
+      ],
+      "summary": "Validates the add-student form fields (email format, required name/date/major/curriculum) and returns field-level errors.",
+      "tags": [
+        "validation",
+        "counselor",
+        "form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts:useCounselorAddStudent",
+      "type": "function",
+      "name": "useCounselorAddStudent",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "lineRange": [
+        22,
+        355
+      ],
+      "summary": "Hook driving the add-student workflow: single-entry form state/validation/submission and bulk import of students from an uploaded Excel file, with a localStorage draft.",
+      "tags": [
+        "hook",
+        "counselor",
+        "form",
+        "data-import",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useCareerDistribution",
+      "type": "function",
+      "name": "useCareerDistribution",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "lineRange": [
+        16,
+        73
+      ],
+      "summary": "Fetches career-distribution statistics for the counselor dashboard pie chart.",
+      "tags": [
+        "hook",
+        "counselor",
+        "data-fetching",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useMissingSkills",
+      "type": "function",
+      "name": "useMissingSkills",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "lineRange": [
+        88,
+        155
+      ],
+      "summary": "Fetches missing-skill statistics, optionally filtered by career, for the counselor dashboard bar chart.",
+      "tags": [
+        "hook",
+        "counselor",
+        "data-fetching",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useFeedbackList",
+      "type": "function",
+      "name": "useFeedbackList",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "lineRange": [
+        164,
+        185
+      ],
+      "summary": "Fetches the recent feedback list shown on the counselor dashboard.",
+      "tags": [
+        "hook",
+        "counselor",
+        "data-fetching",
+        "exported"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useStudentList",
+      "type": "function",
+      "name": "useStudentList",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "lineRange": [
+        22,
+        71
+      ],
+      "summary": "Fetches the counselor's assigned student list for the feedback page.",
+      "tags": [
+        "hook",
+        "counselor",
+        "data-fetching",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useStudentDetailInfo",
+      "type": "function",
+      "name": "useStudentDetailInfo",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "lineRange": [
+        82,
+        112
+      ],
+      "summary": "Fetches roadmap progress, skill gaps, and feedback history for a single student.",
+      "tags": [
+        "hook",
+        "counselor",
+        "data-fetching",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useSendFeedback",
+      "type": "function",
+      "name": "useSendFeedback",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "lineRange": [
+        129,
+        154
+      ],
+      "summary": "Hook wrapping the send-feedback API call with sending/sent state.",
+      "tags": [
+        "hook",
+        "counselor",
+        "feedback",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx:CounselorAddStudentView",
+      "type": "function",
+      "name": "CounselorAddStudentView",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "lineRange": [
+        38,
+        584
+      ],
+      "summary": "Page rendering the counselor add-student form, bulk Excel import UI, and results/errors, backed entirely by the useCounselorAddStudent hook.",
+      "tags": [
+        "component",
+        "counselor",
+        "form",
+        "data-import",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:renderCustomizedLabel",
+      "type": "function",
+      "name": "renderCustomizedLabel",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "lineRange": [
+        115,
+        143
+      ],
+      "summary": "Custom Recharts pie-slice label renderer for the career distribution chart.",
+      "tags": [
+        "chart",
+        "utility",
+        "counselor"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CareerDistributionChart",
+      "type": "function",
+      "name": "CareerDistributionChart",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "lineRange": [
+        145,
+        253
+      ],
+      "summary": "Pie chart of student career distribution, fetched via useCareerDistribution.",
+      "tags": [
+        "component",
+        "counselor",
+        "chart",
+        "data-fetching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:MissingSkillsChart",
+      "type": "function",
+      "name": "MissingSkillsChart",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "lineRange": [
+        272,
+        449
+      ],
+      "summary": "Bar chart of the most common missing skills, filterable by career, fetched via useMissingSkills.",
+      "tags": [
+        "component",
+        "counselor",
+        "chart",
+        "data-fetching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:FeedbackList",
+      "type": "function",
+      "name": "FeedbackList",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "lineRange": [
+        454,
+        560
+      ],
+      "summary": "List of recent feedback entries shown on the counselor dashboard, fetched via useFeedbackList.",
+      "tags": [
+        "component",
+        "counselor",
+        "feedback",
+        "data-fetching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CounselorDashboard",
+      "type": "function",
+      "name": "CounselorDashboard",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "lineRange": [
+        565,
+        880
+      ],
+      "summary": "Counselor dashboard page composing the career distribution chart, missing-skills chart, and feedback list.",
+      "tags": [
+        "component",
+        "counselor",
+        "dashboard",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:FilterDropdown",
+      "type": "function",
+      "name": "FilterDropdown",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "lineRange": [
+        77,
+        150
+      ],
+      "summary": "Reusable labeled dropdown filter control used across the feedback page.",
+      "tags": [
+        "component",
+        "presentational",
+        "form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:RoadmapTab",
+      "type": "function",
+      "name": "RoadmapTab",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "lineRange": [
+        152,
+        293
+      ],
+      "summary": "Detail-panel tab rendering a student's roadmap progress.",
+      "tags": [
+        "component",
+        "counselor",
+        "roadmap"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:SkillGapTab",
+      "type": "function",
+      "name": "SkillGapTab",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "lineRange": [
+        296,
+        357
+      ],
+      "summary": "Detail-panel tab rendering a student's skill gaps.",
+      "tags": [
+        "component",
+        "counselor",
+        "analytics"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:FeedbackTab",
+      "type": "function",
+      "name": "FeedbackTab",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "lineRange": [
+        360,
+        782
+      ],
+      "summary": "Detail-panel tab for viewing feedback history and composing/sending new feedback to a student, using useSendFeedback.",
+      "tags": [
+        "component",
+        "counselor",
+        "feedback",
+        "form"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:StudentDetailPanel",
+      "type": "function",
+      "name": "StudentDetailPanel",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "lineRange": [
+        794,
+        943
+      ],
+      "summary": "Side panel showing a selected student's roadmap/skill-gap/feedback tabs, fetched via useStudentDetailInfo.",
+      "tags": [
+        "component",
+        "counselor",
+        "data-fetching"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:CounselorFeedbackPage",
+      "type": "function",
+      "name": "CounselorFeedbackPage",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "lineRange": [
+        948,
+        1564
+      ],
+      "summary": "Main feedback page listing assigned students (via useStudentList) with search/filter and opening the student detail panel.",
+      "tags": [
+        "component",
+        "counselor",
+        "feedback",
+        "dashboard",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx:MentorDashboardView",
+      "type": "function",
+      "name": "MentorDashboardView",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "lineRange": [
+        22,
+        124
+      ],
+      "summary": "Mentor dashboard landing page rendering the welcome banner, metric strip, and pending-reviews widget.",
+      "tags": [
+        "component",
+        "mentor",
+        "dashboard",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:WelcomeBanner",
+      "type": "function",
+      "name": "WelcomeBanner",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "lineRange": [
+        24,
+        36
+      ],
+      "summary": "Greeting banner showing the signed-in mentor's name.",
+      "tags": [
+        "component",
+        "mentor",
+        "presentational",
+        "exported"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:MetricStrip",
+      "type": "function",
+      "name": "MetricStrip",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "lineRange": [
+        39,
+        73
+      ],
+      "summary": "Row of metric cards summarizing the mentor's key stats, with loading skeletons.",
+      "tags": [
+        "component",
+        "mentor",
+        "presentational",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:MetricWidget",
+      "type": "function",
+      "name": "MetricWidget",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "lineRange": [
+        76,
+        86
+      ],
+      "summary": "Single metric display card used within the metric strip.",
+      "tags": [
+        "component",
+        "mentor",
+        "presentational",
+        "exported"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:PendingReviewsWidget",
+      "type": "function",
+      "name": "PendingReviewsWidget",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "lineRange": [
+        88,
+        214
+      ],
+      "summary": "Widget listing students' pending review items (e.g. portfolios/roadmaps awaiting mentor feedback), fetched from mentorApi.",
+      "tags": [
+        "component",
+        "mentor",
+        "data-fetching",
+        "exported"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx:MentorEPortfoliosView",
+      "type": "function",
+      "name": "MentorEPortfoliosView",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "lineRange": [
+        42,
+        160
+      ],
+      "summary": "Mentor view listing assigned students' e-portfolios for review.",
+      "tags": [
+        "component",
+        "mentor",
+        "portfolio",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx:MentorFeedbackHistoryView",
+      "type": "function",
+      "name": "MentorFeedbackHistoryView",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx",
+      "lineRange": [
+        8,
+        99
+      ],
+      "summary": "Mentor view listing previously submitted feedback entries, fetched via mentorApi.getFeedbackHistory.",
+      "tags": [
+        "component",
+        "mentor",
+        "feedback",
+        "exported"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx:MentorHeader",
+      "type": "function",
+      "name": "MentorHeader",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "lineRange": [
+        13,
+        74
+      ],
+      "summary": "Shared header/tab navigation bar for mentor dashboard pages with a logout action.",
+      "tags": [
+        "component",
+        "mentor",
+        "navigation",
+        "header",
+        "exported"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/utils/toast.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/portfolio/api/portfolioApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/roadmapEditorApi.ts",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/MarketPulsePageView.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/auth/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts:buildFeedbackFormData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts:validateForm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts:useCounselorAddStudent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useCareerDistribution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useMissingSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useFeedbackList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useStudentList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useStudentDetailInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useSendFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx:CounselorAddStudentView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:renderCustomizedLabel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CareerDistributionChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:MissingSkillsChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:FeedbackList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CounselorDashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:FilterDropdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:RoadmapTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:SkillGapTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:FeedbackTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:StudentDetailPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:CounselorFeedbackPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx:MentorDashboardView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:WelcomeBanner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:MetricStrip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:MetricWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:PendingReviewsWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx:MentorEPortfoliosView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx:MentorFeedbackHistoryView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx:MentorHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts:useCounselorAddStudent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useCareerDistribution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useMissingSkills",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useFeedbackList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useStudentList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useStudentDetailInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useSendFeedback",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx:CounselorAddStudentView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CounselorDashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:CounselorFeedbackPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx:MentorDashboardView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:WelcomeBanner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:MetricStrip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:MetricWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:PendingReviewsWidget",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx:MentorEPortfoliosView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx:MentorFeedbackHistoryView",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx:MentorHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CareerDistributionChart",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useCareerDistribution",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:MissingSkillsChart",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useMissingSkills",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:FeedbackList",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useFeedbackList",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:FeedbackTab",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useSendFeedback",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:StudentDetailPanel",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useStudentDetailInfo",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:CounselorFeedbackPage",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts:useStudentList",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx:CounselorAddStudentView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts:useCounselorAddStudent",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx:MentorDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:WelcomeBanner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx:MentorDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:MetricStrip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx:MentorDashboardView",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx:PendingReviewsWidget",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:StudentDetailPanel",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:RoadmapTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:StudentDetailPanel",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:SkillGapTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:StudentDetailPanel",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:FeedbackTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:CounselorFeedbackPage",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx:StudentDetailPanel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CounselorDashboard",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CareerDistributionChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CounselorDashboard",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:MissingSkillsChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:CounselorDashboard",
+      "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx:FeedbackList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

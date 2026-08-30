@@ -1,0 +1,188 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/portfolio-html/index.html",
+      "language": "html",
+      "sizeLines": 225,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/portfolio-html/js/script.js",
+      "language": "javascript",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/App.css",
+      "language": "css",
+      "sizeLines": 272,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/layouts/index.ts",
+      "language": "typescript",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx",
+      "language": "typescript",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx",
+      "language": "typescript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx",
+      "language": "typescript",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/admin/index.ts",
+      "language": "typescript",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts",
+      "language": "typescript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/index.ts",
+      "language": "typescript",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/hooks/index.ts",
+      "language": "typescript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/types/auth.types.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/index.ts",
+      "language": "typescript",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorAddStudent.types.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorDashboard.types.ts",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorFeedback.types.ts",
+      "language": "typescript",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/index.ts",
+      "language": "typescript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/index.ts",
+      "language": "typescript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/mentorDashboard.types.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/styles.css",
+      "language": "css",
+      "sizeLines": 41,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/index.css",
+      "language": "css",
+      "sizeLines": 267,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/portfolio-html/index.html": [],
+    "FrontEnd/intelipath-frontend/portfolio-html/js/script.js": [],
+    "FrontEnd/intelipath-frontend/src/App.css": [],
+    "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx": [],
+    "FrontEnd/intelipath-frontend/src/components/layouts/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx": [],
+    "FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx": [],
+    "FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx": [],
+    "FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx": [],
+    "FrontEnd/intelipath-frontend/src/features/admin/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/auth/components/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/auth/hooks/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/auth/types/auth.types.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorAddStudent.types.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorDashboard.types.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorFeedback.types.ts": [
+      "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorDashboard.types.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts": [
+      "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/mentorDashboard.types.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/portfolio/styles.css": [],
+    "FrontEnd/intelipath-frontend/src/index.css": [],
+    "FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts"
+    ]
+  }
+}

@@ -1,0 +1,481 @@
+:root {
+    --at-blue: #0194F3;
+    --at-blue-dark: #0177c4;
+    --at-orange: #FF5E1F;
+    --at-orange-dark: #e54c0e;
+    --at-bg: #F7F9FA;
+}
+
+.at-page-main {
+    padding-top: 0;
+    padding-bottom: 20px;
+    background: var(--at-bg);
+    min-height: 100vh;
+}
+
+.at-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.at-hero {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.at-hero-img {
+    height: 320px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    background-color: #0b3d63;
+    background-image: linear-gradient(120deg, rgba(0, 59, 115, 0.65), rgba(1, 148, 243, 0.55)), url(/images/airport-transfer/Background_thumnail.jpg);
+    position: relative;
+    overflow: hidden;
+}
+
+.at-hero-panel {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    color: #ffffff;
+}
+
+.at-hero-panel h1 {
+    font-size: 32px;
+    font-weight: 800;
+    max-width: 680px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.at-hero-panel p {
+    font-size: 16px;
+    opacity: 0.95;
+    margin: 0;
+    max-width: 560px;
+}
+
+.at-search-card {
+    position: relative;
+    z-index: 2;
+    margin: -56px 28px 0;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 14px 34px rgba(15, 40, 70, 0.18);
+    padding: 20px 22px;
+}
+
+.at-toggle-group .btn-check:checked + .at-toggle-btn {
+    background: var(--at-blue);
+    border-color: var(--at-blue);
+    color: #ffffff;
+}
+
+.at-toggle-btn {
+    border-radius: 20px !important;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 20px;
+    color: #3f4b5b;
+    border-color: #dbe2ea;
+}
+
+.at-toggle-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.at-field-label {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.at-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    padding: 11px 14px;
+    background: #ffffff;
+}
+
+.at-field:focus-within {
+    border-color: var(--at-blue);
+    box-shadow: 0 0 0 3px rgba(1, 148, 243, 0.12);
+}
+
+.at-field i {
+    color: var(--at-blue);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.at-field-input {
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1f2937;
+    width: 100%;
+    background: transparent;
+}
+
+.at-field-input::placeholder {
+    color: #9aa4b2;
+    font-weight: 500;
+}
+
+select.at-field-input {
+    appearance: none;
+    cursor: pointer;
+}
+
+.btn-at-search {
+    background: var(--at-orange);
+    color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.btn-at-search:hover {
+    background: var(--at-orange-dark);
+    color: #ffffff;
+}
+
+.at-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 15px 10px;
+}
+
+.at-section-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.at-section-subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.at-perk-card {
+    text-align: center;
+    height: 100%;
+    padding: 10px 8px;
+}
+
+.at-perk-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(1, 148, 243, 0.1);
+    color: var(--at-blue);
+    font-size: 28px;
+}
+
+.at-perk-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.at-perk-desc {
+    font-size: 13px;
+    color: #8a94a3;
+    line-height: 1.5;
+}
+
+.at-vehicle-card {
+    background: #ffffff;
+    border: 1px solid #eef0f2;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 2px 10px rgba(15, 40, 70, 0.06);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.at-vehicle-card:hover {
+    box-shadow: 0 10px 24px rgba(15, 40, 70, 0.14);
+    transform: translateY(-3px);
+}
+
+.at-vehicle-thumb {
+    position: relative;
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+    background-color: #e4ecf3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b7c4d1;
+    font-size: 46px;
+}
+
+.at-vehicle-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--at-orange);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.at-vehicle-body {
+    padding: 16px 18px 18px;
+}
+
+.at-vehicle-name {
+    font-weight: 800;
+    font-size: 17px;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+}
+
+.at-vehicle-seats {
+    font-size: 13px;
+    color: #8a94a3;
+    margin-bottom: 12px;
+}
+
+.at-vehicle-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-bottom: 14px;
+}
+
+.at-vehicle-specs span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #3f4b5b;
+    font-weight: 500;
+}
+
+.at-vehicle-specs i {
+    color: var(--at-blue);
+}
+
+.at-vehicle-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.at-vehicle-price {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--at-orange);
+}
+
+.at-vehicle-price small {
+    font-size: 12px;
+    color: #9aa4b2;
+    font-weight: 500;
+}
+
+.btn-at-select {
+    width: 100%;
+    background: var(--at-blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn-at-select:hover {
+    background: var(--at-blue-dark);
+    color: #ffffff;
+}
+
+.bg-at-sedan { background-image: url(/images/airport-transfer/sedan.jpg); }
+.bg-at-suv { background-image: url(/images/airport-transfer/suv.png); }
+.bg-at-van { background-image: url(/images/airport-transfer/van.jpg); }
+
+.at-steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.at-step {
+    flex: 1;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #eef0f2;
+    border-radius: 16px;
+    padding: 26px 16px 22px;
+    box-shadow: 0 2px 10px rgba(15, 40, 70, 0.05);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.at-step:hover {
+    box-shadow: 0 10px 24px rgba(1, 148, 243, 0.14);
+    transform: translateY(-4px);
+}
+
+.at-step-icon {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(1, 148, 243, 0.1);
+    color: var(--at-blue);
+    font-size: 26px;
+}
+
+.at-step-num {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--at-blue);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+}
+
+.at-step-title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.at-step-desc {
+    font-size: 13px;
+    color: #8a94a3;
+    line-height: 1.5;
+}
+
+.at-step-arrow {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    margin-top: 26px;
+    color: var(--at-blue);
+    font-size: 22px;
+    opacity: 0.5;
+}
+
+.at-cta-banner {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: #0b3d63;
+    background-image: linear-gradient(120deg, rgba(0, 59, 115, 0.72), rgba(1, 148, 243, 0.62)), url(/images/airport-transfer/background_Datxe.jpg);
+    padding: 56px 20px;
+    margin-top: 50px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.at-cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.at-cta-inner h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.at-cta-inner p {
+    font-size: 15px;
+    opacity: 0.92;
+    margin-bottom: 26px;
+}
+
+.btn-at-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--at-orange);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 14px 32px;
+    border-radius: 24px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-at-cta:hover {
+    background: var(--at-orange-dark);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    .at-hero-img { height: 260px; }
+    .at-hero-panel h1 { font-size: 22px; }
+    .at-search-card { margin: -48px 12px 0; padding: 16px; }
+}
+
+@media (max-width: 767px) {
+    .at-section-title { font-size: 20px; }
+
+    .at-steps {
+        flex-direction: column;
+    }
+
+    .at-step-arrow {
+        height: auto;
+        margin: 4px 0;
+        transform: rotate(90deg);
+    }
+
+    .at-cta-banner { padding: 40px 16px; }
+    .at-cta-inner h2 { font-size: 22px; }
+}

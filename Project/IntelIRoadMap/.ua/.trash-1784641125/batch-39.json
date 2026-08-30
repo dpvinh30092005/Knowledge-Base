@@ -1,0 +1,185 @@
+{
+  "nodes": [
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/01-bento-grid.md",
+      "type": "document",
+      "name": "01-bento-grid.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/01-bento-grid.md",
+      "summary": "Design reference describing the Bento Grid macrostructure — an asymmetric grid of mixed-size feature blocks — with usage guidance, references, and an HTML skeleton example for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/02-long-document.md",
+      "type": "document",
+      "name": "02-long-document.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/02-long-document.md",
+      "summary": "Design reference describing the Long Document macrostructure pattern, covering heading, body, and reveal conventions plus when to use it, for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/03-marquee-hero.md",
+      "type": "document",
+      "name": "03-marquee-hero.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/03-marquee-hero.md",
+      "summary": "Design reference describing the Marquee Hero macrostructure — a single dominant hero statement layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/04-stat-led.md",
+      "type": "document",
+      "name": "04-stat-led.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/04-stat-led.md",
+      "summary": "Design reference describing the Stat-Led macrostructure — a page organized around a dominant statistic or metric — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/05-workbench.md",
+      "type": "document",
+      "name": "05-workbench.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/05-workbench.md",
+      "summary": "Design reference describing the Workbench macrostructure — a tool-like, panel-driven layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/06-conversational-faq.md",
+      "type": "document",
+      "name": "06-conversational-faq.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/06-conversational-faq.md",
+      "summary": "Design reference describing the Conversational FAQ macrostructure — a dialogue-style question/answer layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/07-manifesto.md",
+      "type": "document",
+      "name": "07-manifesto.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/07-manifesto.md",
+      "summary": "Design reference describing the Manifesto macrostructure — a statement-driven, typographic layout for brand declarations — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/08-photographic.md",
+      "type": "document",
+      "name": "08-photographic.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/08-photographic.md",
+      "summary": "Design reference describing the Photographic macrostructure — a full-bleed image-led layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/09-quote-led.md",
+      "type": "document",
+      "name": "09-quote-led.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/09-quote-led.md",
+      "summary": "Design reference describing the Quote-Led macrostructure — a testimonial or quote-centered layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/10-specimen.md",
+      "type": "document",
+      "name": "10-specimen.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/10-specimen.md",
+      "summary": "Design reference describing the Specimen macrostructure (noted as no longer the default choice) — a type/product specimen showcase layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/11-catalogue.md",
+      "type": "document",
+      "name": "11-catalogue.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/11-catalogue.md",
+      "summary": "Design reference describing the Catalogue macrostructure — a uniform grid of same-sized cards for indexing product/type/color variants — with usage guidance and sample copy for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/12-letter.md",
+      "type": "document",
+      "name": "12-letter.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/12-letter.md",
+      "summary": "Design reference describing the Letter macrostructure — a personal, correspondence-style page layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/13-index-first.md",
+      "type": "document",
+      "name": "13-index-first.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/13-index-first.md",
+      "summary": "Design reference describing the Index-First macrostructure — a table-of-contents-led entry layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/14-narrative-workflow.md",
+      "type": "document",
+      "name": "14-narrative-workflow.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/14-narrative-workflow.md",
+      "summary": "Design reference describing the Narrative Workflow macrostructure — a step-by-step storytelling layout for processes — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/15-split-studio.md",
+      "type": "document",
+      "name": "15-split-studio.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/15-split-studio.md",
+      "summary": "Design reference describing the Split Studio macrostructure — a two-column split layout contrasting content and visuals — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/16-feature-stack.md",
+      "type": "document",
+      "name": "16-feature-stack.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/16-feature-stack.md",
+      "summary": "Design reference describing the Feature Stack macrostructure — a vertically stacked sequence of feature sections — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/17-type-specimen.md",
+      "type": "document",
+      "name": "17-type-specimen.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/17-type-specimen.md",
+      "summary": "Design reference describing the Type Specimen macrostructure — a typography-forward showcase layout — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/18-portfolio-grid.md",
+      "type": "document",
+      "name": "18-portfolio-grid.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/18-portfolio-grid.md",
+      "summary": "Design reference describing the Portfolio Grid macrostructure — a gallery-style grid layout for showcasing work items — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/19-map-diagram.md",
+      "type": "document",
+      "name": "19-map-diagram.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/19-map-diagram.md",
+      "summary": "Design reference describing the Map/Diagram macrostructure — a spatial or diagrammatic layout for visualizing relationships or geography — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/20-ecosystem-index.md",
+      "type": "document",
+      "name": "20-ecosystem-index.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/20-ecosystem-index.md",
+      "summary": "Design reference describing the Ecosystem Index macrostructure — an index-style layout mapping an interconnected set of products or entities — with usage guidance for the Hallmark design skill.",
+      "tags": ["documentation", "design-reference", "macrostructure", "layout-pattern"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

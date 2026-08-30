@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <!-- Back document (peeks bottom-right) -->
+  <path fill="#f6e6a8" stroke="#000" stroke-width="1.4"
+        d="M15 9 h10 l4 4 v15 h-14 z" />
+
+  <!-- Front document with folded top-right corner -->
+  <path fill="#f3e4a0" stroke="#000" stroke-width="1.4"
+        d="M13 7 h10 l4 4 v15 h-14 z" />
+  <path fill="#fbf3cf" stroke="#000" stroke-width="1.4"
+        d="M23 7 v4 h4 z" />
+
+  <!-- Blue chat bubble overlapping the document's left edge -->
+  <path fill="#2f7de1" stroke="#000" stroke-width="1.4"
+        d="M4 9 h12 v8 h-7 l-2 3 v-3 h-3 z" />
+</svg>

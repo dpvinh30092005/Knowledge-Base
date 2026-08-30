@@ -1,0 +1,1384 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "type": "file",
+      "name": "StudentSkill.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "summary": "JPA entity representing a skill a student has selected, with a custom description and tech stack.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java:StudentSkill",
+      "type": "class",
+      "name": "StudentSkill",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "lineRange": [
+        21,
+        48
+      ],
+      "summary": "JPA entity representing a skill a student has selected, with a custom description and tech stack.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "type": "file",
+      "name": "StudentNodeSelection.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "summary": "JPA entity recording a student's chosen node within an optional/choose-group skill node, with a JPA lifecycle hook to set the creation timestamp.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa",
+        "roadmap"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java:StudentNodeSelection",
+      "type": "class",
+      "name": "StudentNodeSelection",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "lineRange": [
+        30,
+        70
+      ],
+      "summary": "JPA entity recording a student's chosen node within an optional/choose-group skill node, with a JPA lifecycle hook to set the creation timestamp.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa",
+        "roadmap"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java:prePersist",
+      "type": "function",
+      "name": "prePersist",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "lineRange": [
+        64,
+        69
+      ],
+      "summary": "JPA @PrePersist hook that stamps the createdAt timestamp before the selection row is inserted.",
+      "tags": [
+        "lifecycle-hook",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "type": "file",
+      "name": "StudentProgress.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "summary": "JPA entity tracking a student's progress status on a given skill node, with timestamps for creation and completion.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa",
+        "roadmap"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java:StudentProgress",
+      "type": "class",
+      "name": "StudentProgress",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "lineRange": [
+        25,
+        63
+      ],
+      "summary": "JPA entity tracking a student's progress status on a given skill node, with timestamps for creation and completion.",
+      "tags": [
+        "data-model",
+        "entity",
+        "jpa",
+        "roadmap"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java:prePersist",
+      "type": "function",
+      "name": "prePersist",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "lineRange": [
+        57,
+        62
+      ],
+      "summary": "JPA @PrePersist hook that stamps the createdAt timestamp before the progress row is inserted.",
+      "tags": [
+        "lifecycle-hook",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "type": "file",
+      "name": "ImportanceLevel.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "summary": "Enum representing the importance level of a required skill (e.g. CRITICAL/HIGH/etc.), with a case-insensitive parser from string values.",
+      "tags": [
+        "data-model",
+        "enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java:ImportanceLevel",
+      "type": "class",
+      "name": "ImportanceLevel",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "lineRange": [
+        5,
+        14
+      ],
+      "summary": "Enum of skill importance levels with a fromString factory method.",
+      "tags": [
+        "data-model",
+        "enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java:fromString",
+      "type": "function",
+      "name": "fromString",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "lineRange": [
+        10,
+        13
+      ],
+      "summary": "Parses a string value into the matching ImportanceLevel enum constant case-insensitively.",
+      "tags": [
+        "parsing",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "type": "file",
+      "name": "RoadmapStepStatus.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "summary": "Enum representing a roadmap step's status, with a method converting it to the frontend-facing string representation.",
+      "tags": [
+        "data-model",
+        "enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java:RoadmapStepStatus",
+      "type": "class",
+      "name": "RoadmapStepStatus",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "lineRange": [
+        8,
+        22
+      ],
+      "summary": "Enum of roadmap step statuses with a toFrontendValue conversion method.",
+      "tags": [
+        "data-model",
+        "enum"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java:toFrontendValue",
+      "type": "function",
+      "name": "toFrontendValue",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "lineRange": [
+        14,
+        21
+      ],
+      "summary": "Converts the backend enum value into the string representation expected by the frontend.",
+      "tags": [
+        "serialization",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "type": "file",
+      "name": "BadRequestException.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "summary": "Custom runtime exception representing an HTTP 400 bad-request condition, with constructors for message-only and message+cause variants.",
+      "tags": [
+        "exception-handling",
+        "error-model"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java:BadRequestException",
+      "type": "class",
+      "name": "BadRequestException",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "lineRange": [
+        4,
+        13
+      ],
+      "summary": "Runtime exception used to signal bad request errors across the backend.",
+      "tags": [
+        "exception-handling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "type": "file",
+      "name": "SkillMapper.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "summary": "Mapper component converting Skill entities and related associations into skill-related response DTOs (item, selected, required skill responses).",
+      "tags": [
+        "mapper",
+        "service",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:SkillMapper",
+      "type": "class",
+      "name": "SkillMapper",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "lineRange": [
+        17,
+        57
+      ],
+      "summary": "Mapper converting Skill entities to various response DTOs used across skill-selection and career endpoints.",
+      "tags": [
+        "mapper",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSkillItemResponse",
+      "type": "function",
+      "name": "toSkillItemResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "lineRange": [
+        23,
+        30
+      ],
+      "summary": "Maps a single Skill entity to a SkillItemResponse, joining related career names into a comma-separated string.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSkillItemResponses",
+      "type": "function",
+      "name": "toSkillItemResponses",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "lineRange": [
+        32,
+        36
+      ],
+      "summary": "Maps a list of Skill entities to a list of SkillItemResponse DTOs.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSelectedSkillResponses",
+      "type": "function",
+      "name": "toSelectedSkillResponses",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "lineRange": [
+        38,
+        44
+      ],
+      "summary": "Resolves student-selected skills by id and maps them to SkillItemResponse DTOs, filtering out unresolved skills.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toRequiredSkillResponses",
+      "type": "function",
+      "name": "toRequiredSkillResponses",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "lineRange": [
+        46,
+        56
+      ],
+      "summary": "Resolves required skills for a career and maps them to RequiredSkillResponse DTOs including importance level.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "type": "file",
+      "name": "StudentDashboardMapper.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "summary": "Mapper component assembling the entire student dashboard payload: roadmap progress, skill gaps, mentor feedback, AI history, market demand, and recommendations from multiple domain entities.",
+      "tags": [
+        "mapper",
+        "service",
+        "student-dashboard"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:StudentDashboardMapper",
+      "type": "class",
+      "name": "StudentDashboardMapper",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        28,
+        170
+      ],
+      "summary": "Central mapper producing all student-dashboard response DTOs from roadmap, skill, feedback, and chat entities.",
+      "tags": [
+        "mapper",
+        "service",
+        "student-dashboard"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRoadmapProgressResponse",
+      "type": "function",
+      "name": "toRoadmapProgressResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        39,
+        43
+      ],
+      "summary": "Wraps a list of roadmap step responses and an AI tip into a DashboardRoadmapProgressResponse.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRoadmapStepResponse",
+      "type": "function",
+      "name": "toRoadmapStepResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        45,
+        51
+      ],
+      "summary": "Maps a SkillNode and its status into a RoadmapStepResponse.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toSkillGapItemResponse",
+      "type": "function",
+      "name": "toSkillGapItemResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        53,
+        67
+      ],
+      "summary": "Builds a SkillGapItemResponse for a required skill, resolving the skill entity, gap type, description, and progress.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toMentorFeedbackItemResponse",
+      "type": "function",
+      "name": "toMentorFeedbackItemResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        69,
+        77
+      ],
+      "summary": "Maps a Feedback entity to a MentorFeedbackItemResponse with a formatted relative time and read flag.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toAiHistoryItemResponse",
+      "type": "function",
+      "name": "toAiHistoryItemResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        79,
+        91
+      ],
+      "summary": "Builds an AiHistoryItemResponse from a chat session and message, deriving a tag from the message role.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toMarketDemandResponse",
+      "type": "function",
+      "name": "toMarketDemandResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        93,
+        99
+      ],
+      "summary": "Builds a MarketDemandResponse from growth stats, career role name, and chart data.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toEmptyMarketDemandResponse",
+      "type": "function",
+      "name": "toEmptyMarketDemandResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        101,
+        106
+      ],
+      "summary": "Builds a placeholder MarketDemandResponse with zero growth when no market data is available.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRecommendationItemResponse",
+      "type": "function",
+      "name": "toRecommendationItemResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        108,
+        121
+      ],
+      "summary": "Builds a RecommendationItemResponse for a required skill, resolving skill name and description.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:importanceRank",
+      "type": "function",
+      "name": "importanceRank",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        123,
+        132
+      ],
+      "summary": "Converts an importance level into a numeric rank used for sorting skill gaps.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:skillGapType",
+      "type": "function",
+      "name": "skillGapType",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        134,
+        139
+      ],
+      "summary": "Derives the skill-gap display type (e.g. critical vs recommended) from an importance level.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:skillDescription",
+      "type": "function",
+      "name": "skillDescription",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        141,
+        149
+      ],
+      "summary": "Builds a human-readable skill description combining category and related career names.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:formatRelativeTime",
+      "type": "function",
+      "name": "formatRelativeTime",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "lineRange": [
+        151,
+        169
+      ],
+      "summary": "Formats a LocalDateTime into a human-readable relative time string (e.g. \"5 minutes ago\").",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "type": "file",
+      "name": "StudentMapper.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "summary": "Mapper component converting Student and User entities into profile response DTOs used by the setup-profile and get-profile endpoints.",
+      "tags": [
+        "mapper",
+        "service",
+        "student-profile"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:StudentMapper",
+      "type": "class",
+      "name": "StudentMapper",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "lineRange": [
+        14,
+        58
+      ],
+      "summary": "Mapper producing StudentResponse DTOs from Student/User entities, resolving career role names via repository lookup.",
+      "tags": [
+        "mapper",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:toSetupProfileResponse",
+      "type": "function",
+      "name": "toSetupProfileResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "lineRange": [
+        21,
+        29
+      ],
+      "summary": "Builds a minimal StudentResponse right after profile setup, including id, name, role, and career id.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:toProfileResponse",
+      "type": "function",
+      "name": "toProfileResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "lineRange": [
+        31,
+        57
+      ],
+      "summary": "Builds the full StudentResponse for the profile page, resolving the career role name via repository lookup.",
+      "tags": [
+        "mapper",
+        "data-transformation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "type": "file",
+      "name": "CareerRequiredSkillRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "summary": "Spring Data JPA repository for CareerRequiredSkill, with lookups by career role id and an existence check for a career-skill pair.",
+      "tags": [
+        "repository",
+        "data-access",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java:CareerRequiredSkillRepository",
+      "type": "class",
+      "name": "CareerRequiredSkillRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "lineRange": [
+        11,
+        16
+      ],
+      "summary": "Repository interface for CareerRequiredSkill queries by career role.",
+      "tags": [
+        "repository",
+        "data-access"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "type": "file",
+      "name": "CareerRoleRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "summary": "Spring Data JPA repository for CareerRole, with lookups by career id, exact name, and case-insensitive name search.",
+      "tags": [
+        "repository",
+        "data-access",
+        "jpa"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java:CareerRoleRepository",
+      "type": "class",
+      "name": "CareerRoleRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "lineRange": [
+        11,
+        18
+      ],
+      "summary": "Repository interface for CareerRole lookups by id and name.",
+      "tags": [
+        "repository",
+        "data-access"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "type": "file",
+      "name": "SkillNodeRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "summary": "Spring Data JPA repository for SkillNode, providing roadmap tree queries by node id/name, career role, parent/previous node relationships, and roadmap aggregate counts.",
+      "tags": [
+        "repository",
+        "data-access",
+        "jpa",
+        "roadmap"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java:SkillNodeRepository",
+      "type": "class",
+      "name": "SkillNodeRepository",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "lineRange": [
+        12,
+        30
+      ],
+      "summary": "Repository interface for SkillNode roadmap tree queries including hierarchy and aggregate counts.",
+      "tags": [
+        "repository",
+        "data-access",
+        "roadmap"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java:StudentSkill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java:StudentSkill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java:StudentNodeSelection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java:StudentNodeSelection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java:prePersist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java:StudentProgress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java:StudentProgress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java:prePersist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java:ImportanceLevel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java:ImportanceLevel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java:fromString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java:RoadmapStepStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java:RoadmapStepStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java:toFrontendValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java:BadRequestException",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java:BadRequestException",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:SkillMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:SkillMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSkillItemResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSkillItemResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSkillItemResponses",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSkillItemResponses",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSelectedSkillResponses",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toSelectedSkillResponses",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toRequiredSkillResponses",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java:toRequiredSkillResponses",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RequiredSkillResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:StudentDashboardMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:StudentDashboardMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRoadmapProgressResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRoadmapStepResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toSkillGapItemResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toMentorFeedbackItemResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toAiHistoryItemResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toMarketDemandResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toEmptyMarketDemandResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRecommendationItemResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:importanceRank",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:skillGapType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:skillDescription",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:formatRelativeTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRoadmapProgressResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRoadmapStepResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toSkillGapItemResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toMentorFeedbackItemResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toAiHistoryItemResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toMarketDemandResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toEmptyMarketDemandResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:toRecommendationItemResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java:importanceRank",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RoadmapStepResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:StudentMapper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:StudentMapper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:toSetupProfileResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:toSetupProfileResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:toProfileResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java:toProfileResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java:CareerRequiredSkillRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java:CareerRequiredSkillRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java:CareerRoleRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java:CareerRoleRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java:SkillNodeRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java:SkillNodeRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

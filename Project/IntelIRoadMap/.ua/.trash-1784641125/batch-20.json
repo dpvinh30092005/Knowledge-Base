@@ -1,0 +1,405 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java",
+      "type": "file",
+      "name": "RoadmapRecommendationController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java",
+      "summary": "REST controller exposing endpoints to fetch, generate, accept, and reject roadmap recommendations for the current student.",
+      "tags": ["api-handler", "controller", "roadmap", "recommendation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:getPendingRecommendations",
+      "type": "function",
+      "name": "getPendingRecommendations",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java",
+      "lineRange": [45, 67],
+      "summary": "Endpoint handler that returns pending roadmap recommendations for the currently authenticated student.",
+      "tags": ["api-handler", "endpoint"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:generateRecommendations",
+      "type": "function",
+      "name": "generateRecommendations",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java",
+      "lineRange": [69, 93],
+      "summary": "Endpoint handler that triggers generation of new roadmap recommendations for the current student.",
+      "tags": ["api-handler", "endpoint"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:acceptRecommendation",
+      "type": "function",
+      "name": "acceptRecommendation",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java",
+      "lineRange": [95, 120],
+      "summary": "Endpoint handler that accepts a pending recommendation by id and applies its effects to the student's roadmap.",
+      "tags": ["api-handler", "endpoint"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:rejectRecommendation",
+      "type": "function",
+      "name": "rejectRecommendation",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java",
+      "lineRange": [122, 146],
+      "summary": "Endpoint handler that rejects a pending recommendation by id.",
+      "tags": ["api-handler", "endpoint"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java",
+      "type": "file",
+      "name": "RoadmapRecommendationDecisionResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java",
+      "summary": "Response DTO representing the outcome of accepting or rejecting a roadmap recommendation, including updated roadmap progress.",
+      "tags": ["data-model", "dto", "response"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationItemResponse.java",
+      "type": "file",
+      "name": "RoadmapRecommendationItemResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationItemResponse.java",
+      "summary": "Response DTO for a single recommendation item, carrying node info, suggested action, reason, confidence, and supporting evidence.",
+      "tags": ["data-model", "dto", "response"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java",
+      "type": "file",
+      "name": "RoadmapRecommendationResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java",
+      "summary": "Response DTO representing a roadmap recommendation with its metadata, status, and list of constituent recommendation items.",
+      "tags": ["data-model", "dto", "response"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java",
+      "type": "file",
+      "name": "RoadmapRecommendation.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java",
+      "summary": "JPA entity persisting a roadmap recommendation record with career context, type, status, and confidence.",
+      "tags": ["data-model", "entity", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java:onCreate",
+      "type": "function",
+      "name": "onCreate",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java",
+      "lineRange": [71, 74],
+      "summary": "JPA lifecycle callback that stamps the createdAt timestamp before the entity is persisted.",
+      "tags": ["lifecycle-hook", "entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java",
+      "type": "file",
+      "name": "RoadmapRecommendationItem.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java",
+      "summary": "JPA entity representing an individual line item within a roadmap recommendation, including action, reason, and evidence links.",
+      "tags": ["data-model", "entity", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java",
+      "type": "file",
+      "name": "RecommendationAction.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java",
+      "summary": "Enum defining possible recommendation actions (e.g., mark complete, start next) with a lenient string-parsing helper.",
+      "tags": ["enum", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java:fromString",
+      "type": "function",
+      "name": "fromString",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java",
+      "lineRange": [13, 16],
+      "summary": "Parses a case-insensitive string value into the corresponding RecommendationAction enum constant.",
+      "tags": ["utility", "parsing", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java",
+      "type": "file",
+      "name": "RecommendationStatus.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java",
+      "summary": "Enum defining the lifecycle status of a recommendation (pending, accepted, rejected) with a lenient string-parsing helper.",
+      "tags": ["enum", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java:fromString",
+      "type": "function",
+      "name": "fromString",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java",
+      "lineRange": [11, 14],
+      "summary": "Parses a case-insensitive string value into the corresponding RecommendationStatus enum constant.",
+      "tags": ["utility", "parsing", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java",
+      "type": "file",
+      "name": "RecommendationType.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java",
+      "summary": "Enum defining the category of a roadmap recommendation with a lenient string-parsing helper.",
+      "tags": ["enum", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java:fromString",
+      "type": "function",
+      "name": "fromString",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java",
+      "lineRange": [11, 14],
+      "summary": "Parses a case-insensitive string value into the corresponding RecommendationType enum constant.",
+      "tags": ["utility", "parsing", "enum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java",
+      "type": "file",
+      "name": "RoadmapRecommendationMapper.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java",
+      "summary": "Mapper that converts RoadmapRecommendation and RoadmapRecommendationItem entities into their corresponding response DTOs.",
+      "tags": ["mapper", "data-model", "conversion"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java:toRecommendationResponse",
+      "type": "function",
+      "name": "toRecommendationResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java",
+      "lineRange": [21, 42],
+      "summary": "Builds a RoadmapRecommendationResponse from a recommendation entity, its items, and a node-id-to-name lookup map.",
+      "tags": ["mapper", "conversion"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java:toItemResponse",
+      "type": "function",
+      "name": "toItemResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java",
+      "lineRange": [44, 54],
+      "summary": "Builds a RoadmapRecommendationItemResponse from an item entity and a resolved node name.",
+      "tags": ["mapper", "conversion"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationItemRepository.java",
+      "type": "file",
+      "name": "RoadmapRecommendationItemRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationItemRepository.java",
+      "summary": "Spring Data repository providing lookups of recommendation items by recommendation id or set of recommendation ids.",
+      "tags": ["repository", "data-access", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java",
+      "type": "file",
+      "name": "RoadmapRecommendationRepository.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java",
+      "summary": "Spring Data repository providing lookup of a user's recommendations filtered by status and ordered by creation time.",
+      "tags": ["repository", "data-access", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java",
+      "type": "file",
+      "name": "RoadmapPersonalizationService.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java",
+      "summary": "Service interface defining operations to generate, list, accept, and reject personalized roadmap recommendations for a student.",
+      "tags": ["service", "interface", "roadmap"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "type": "file",
+      "name": "RoadmapPersonalizationServiceImpl.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "summary": "Core implementation of roadmap personalization: collects skill-node candidates weighted by career importance and evidence, generates and persists recommendations, and processes accept/reject decisions including progress recalculation and evidence linking.",
+      "tags": ["service", "roadmap", "recommendation-engine", "business-logic"],
+      "complexity": "complex",
+      "languageNotes": "Large service class (27 methods) that centralizes candidate scoring, evidence-based confidence thresholds, and recommendation lifecycle management in one place."
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:generateRecommendationsForCurrentStudent",
+      "type": "function",
+      "name": "generateRecommendationsForCurrentStudent",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "lineRange": [103, 138],
+      "summary": "Generates new roadmap recommendations for the current student by collecting weighted candidates from career skill nodes and persisting the resulting recommendation and its items.",
+      "tags": ["business-logic", "recommendation-engine"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:getPendingRecommendationsForCurrentStudent",
+      "type": "function",
+      "name": "getPendingRecommendationsForCurrentStudent",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "lineRange": [140, 167],
+      "summary": "Fetches pending recommendations for the current student along with their items and resolved node names.",
+      "tags": ["business-logic", "query"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:acceptRecommendation",
+      "type": "function",
+      "name": "acceptRecommendation",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "lineRange": [169, 196],
+      "summary": "Accepts an owned pending recommendation, applies its mark-complete items, syncs completed skills to the student profile, links evidence, and recalculates roadmap progress.",
+      "tags": ["business-logic", "state-transition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:rejectRecommendation",
+      "type": "function",
+      "name": "rejectRecommendation",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "lineRange": [198, 216],
+      "summary": "Marks an owned pending recommendation as rejected and persists the decision.",
+      "tags": ["business-logic", "state-transition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:collectCandidates",
+      "type": "function",
+      "name": "collectCandidates",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "lineRange": [233, 285],
+      "summary": "Scans career skill nodes to build recommendation candidates, excluding already-completed or already-recommended nodes and scoring them by importance and evidence.",
+      "tags": ["business-logic", "recommendation-engine", "scoring"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:linkAndAcceptEvidence",
+      "type": "function",
+      "name": "linkAndAcceptEvidence",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "lineRange": [475, 512],
+      "summary": "Links accepted recommendation items to supporting student skill evidence records and marks that evidence as accepted.",
+      "tags": ["business-logic", "evidence"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:syncCompletedSkillsToProfile",
+      "type": "function",
+      "name": "syncCompletedSkillsToProfile",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "lineRange": [435, 457],
+      "summary": "Updates the student's skill profile to reflect newly completed skill nodes after a recommendation is accepted.",
+      "tags": ["business-logic", "profile-sync"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:calculateCurrentProgress",
+      "type": "function",
+      "name": "calculateCurrentProgress",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "lineRange": [586, 593],
+      "summary": "Recomputes the student's current roadmap progress using the selection resolver and progress calculator.",
+      "tags": ["business-logic", "progress-calculation"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:getPendingRecommendations", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:generateRecommendations", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:acceptRecommendation", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:rejectRecommendation", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:getPendingRecommendations", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:RoadmapPersonalizationServiceImpl", "type": "calls", "direction": "forward", "weight": 0.6},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:generateRecommendations", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:generateRecommendationsForCurrentStudent", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:acceptRecommendation", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:acceptRecommendation", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java:rejectRecommendation", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:rejectRecommendation", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationItemResponse.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java:onCreate", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java:fromString", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java:fromString", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java:fromString", "type": "contains", "direction": "forward", "weight": 1.0},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java:toRecommendationResponse", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java:toItemResponse", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java:toRecommendationResponse", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java:toItemResponse", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationItemResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationItemRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:RoadmapPersonalizationServiceImpl", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java", "type": "implements", "direction": "forward", "weight": 0.9},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:generateRecommendationsForCurrentStudent", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:getPendingRecommendationsForCurrentStudent", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:acceptRecommendation", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:rejectRecommendation", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:collectCandidates", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:linkAndAcceptEvidence", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:syncCompletedSkillsToProfile", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:calculateCurrentProgress", "type": "contains", "direction": "forward", "weight": 1.0},
+
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:generateRecommendationsForCurrentStudent", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:collectCandidates", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:acceptRecommendation", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:linkAndAcceptEvidence", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:acceptRecommendation", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:syncCompletedSkillsToProfile", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:acceptRecommendation", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:calculateCurrentProgress", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java:generateRecommendationsForCurrentStudent", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java", "type": "depends_on", "direction": "forward", "weight": 0.6},
+
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapSelectionResolver.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/components/SelectionView.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationItemRepository.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillEvidenceRepository.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java", "type": "imports", "direction": "forward", "weight": 0.7}
+  ]
+}

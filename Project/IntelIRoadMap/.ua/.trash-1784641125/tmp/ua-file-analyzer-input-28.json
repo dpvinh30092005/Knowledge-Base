@@ -1,0 +1,21 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {"path": "BackEnd/intelipath-backend/.env", "language": "config", "sizeLines": 54, "fileCategory": "config"},
+    {"path": "BackEnd/intelipath-backend/.env.example", "language": "config", "sizeLines": 54, "fileCategory": "config"},
+    {"path": "BackEnd/intelipath-backend/CONTRIBUTING.md", "language": "markdown", "sizeLines": 22, "fileCategory": "docs"},
+    {"path": "BackEnd/intelipath-backend/HELP.md", "language": "markdown", "sizeLines": 18, "fileCategory": "docs"},
+    {"path": "BackEnd/intelipath-backend/README.md", "language": "markdown", "sizeLines": 11, "fileCategory": "docs"},
+    {"path": "BackEnd/intelipath-backend/mvnw.cmd", "language": "batch", "sizeLines": 189, "fileCategory": "script"},
+    {"path": "BackEnd/intelipath-backend/pom.xml", "language": "xml", "sizeLines": 245, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/.env": [],
+    "BackEnd/intelipath-backend/.env.example": [],
+    "BackEnd/intelipath-backend/CONTRIBUTING.md": [],
+    "BackEnd/intelipath-backend/HELP.md": [],
+    "BackEnd/intelipath-backend/README.md": [],
+    "BackEnd/intelipath-backend/mvnw.cmd": [],
+    "BackEnd/intelipath-backend/pom.xml": []
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {"path": "FrontEnd/demo/oauth-login.html", "language": "html", "sizeLines": 17, "fileCategory": "markup"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/AGENTS.md", "language": "markdown", "sizeLines": 3, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/brandkit/SKILL.md", "language": "markdown", "sizeLines": 798, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend-v1/SKILL.md", "language": "markdown", "sizeLines": 226, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend/SKILL.md", "language": "markdown", "sizeLines": 1206, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/LICENSE.txt", "language": "txt", "sizeLines": 177, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/SKILL.md", "language": "markdown", "sizeLines": 55, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/full-output-enforcement/SKILL.md", "language": "markdown", "sizeLines": 49, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/gpt-taste/SKILL.md", "language": "markdown", "sizeLines": 74, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/SKILL.md", "language": "markdown", "sizeLines": 558, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/21-component-playground.md", "language": "markdown", "sizeLines": 23, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/audit.md", "language": "markdown", "sizeLines": 25, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/redesign.md", "language": "markdown", "sizeLines": 269, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/high-end-visual-design/SKILL.md", "language": "markdown", "sizeLines": 98, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/image-to-code/SKILL.md", "language": "markdown", "sizeLines": 1228, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-mobile/SKILL.md", "language": "markdown", "sizeLines": 1465, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-web/SKILL.md", "language": "markdown", "sizeLines": 987, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/industrial-brutalist-ui/SKILL.md", "language": "markdown", "sizeLines": 92, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/minimalist-ui/SKILL.md", "language": "markdown", "sizeLines": 85, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/redesign-existing-projects/SKILL.md", "language": "markdown", "sizeLines": 178, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/DESIGN.md", "language": "markdown", "sizeLines": 121, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/SKILL.md", "language": "markdown", "sizeLines": 184, "fileCategory": "docs"},
+    {"path": "FrontEnd/intelipath-frontend/eslint.config.js", "language": "javascript", "sizeLines": 28, "fileCategory": "code"},
+    {"path": "FrontEnd/intelipath-frontend/portfolio-html/css/style.css", "language": "css", "sizeLines": 593, "fileCategory": "markup"},
+    {"path": "FrontEnd/intelipath-frontend/portfolio-html/css/utilities.css", "language": "css", "sizeLines": 160, "fileCategory": "markup"}
+  ],
+  "batchImportData": {"FrontEnd/demo/oauth-login.html":[],"FrontEnd/intelipath-frontend/.agents/AGENTS.md":[],"FrontEnd/intelipath-frontend/.agents/skills/brandkit/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend-v1/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/LICENSE.txt":[],"FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/full-output-enforcement/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/gpt-taste/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/hallmark/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/21-component-playground.md":[],"FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/audit.md":[],"FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/redesign.md":[],"FrontEnd/intelipath-frontend/.agents/skills/high-end-visual-design/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/image-to-code/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-mobile/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-web/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/industrial-brutalist-ui/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/minimalist-ui/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/redesign-existing-projects/SKILL.md":[],"FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/DESIGN.md":[],"FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/SKILL.md":[],"FrontEnd/intelipath-frontend/eslint.config.js":[],"FrontEnd/intelipath-frontend/portfolio-html/css/style.css":[],"FrontEnd/intelipath-frontend/portfolio-html/css/utilities.css":[]}
+}

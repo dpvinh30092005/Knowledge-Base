@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+fastmcp==3.4.2
+python-multipart
+markitdown[all]
+requests
+pydantic-settings
+beautifulsoup4
+curl_cffi
+selenium
+python-dotenv
+openai>=1.0
+sqlalchemy
+psycopg2-binary

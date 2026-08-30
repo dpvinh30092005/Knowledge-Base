@@ -1,0 +1,39 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "intelipath-frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "D:/Project/IntelIRoadMap/FrontEnd/intelipath-frontend",
+        "run",
+        "dev"
+      ],
+      "port": 5173
+    },
+    {
+      "name": "portfolio-vinh",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "D:/Project/portfolio-vinh",
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "5182"
+      ],
+      "port": 5182
+    },
+    {
+      "name": "tour-vista",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": [
+        "/c",
+        "cd /d D:\\Project\\tour-vista && .\\mvnw.cmd -q spring-boot:run -Dspring-boot.run.arguments=--server.port=8085"
+      ],
+      "port": 8085
+    }
+  ]
+}

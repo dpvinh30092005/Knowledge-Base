@@ -1,0 +1,850 @@
+{
+  "nodes": [
+    {
+      "id": "file:.github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+      "type": "file",
+      "name": "recordToolUse.ps1",
+      "filePath": ".github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+      "summary": "PowerShell hook script that records tool-use events during the Java upgrade automation workflow, mirroring the shell version for Windows environments.",
+      "tags": ["script", "hook", "automation", "powershell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "type": "file",
+      "name": "recordToolUse.sh",
+      "filePath": ".github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "summary": "Shell hook script that logs tool-use events for the Java upgrade automation pipeline running in CI/CD.",
+      "tags": ["script", "hook", "automation", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.ua/.understandignore",
+      "type": "config",
+      "name": ".understandignore",
+      "filePath": ".ua/.understandignore",
+      "summary": "Ignore-pattern file that excludes directories and file types from the Understand-Anything codebase scan.",
+      "tags": ["configuration", "tooling", "ignore-rules"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:BackEnd/.claude/launch.json",
+      "type": "config",
+      "name": "launch.json",
+      "filePath": "BackEnd/.claude/launch.json",
+      "summary": "Claude Code launch configuration defining dev-server run commands and ports for previewing the backend project.",
+      "tags": ["configuration", "tooling", "dev-server"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/docs/project_report.tex",
+      "type": "file",
+      "name": "project_report.tex",
+      "filePath": "BackEnd/docs/project_report.tex",
+      "summary": "LaTeX source for the project's academic/technical report documenting the InteliPath platform design and implementation.",
+      "tags": ["documentation", "latex", "report"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/.gitattributes",
+      "type": "file",
+      "name": ".gitattributes",
+      "filePath": "BackEnd/intelipath-backend/.gitattributes",
+      "summary": "Git attributes file controlling line-ending normalization and diff behavior for the backend repository.",
+      "tags": ["configuration", "git", "repository-settings"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+      "type": "file",
+      "name": "recordToolUse.ps1",
+      "filePath": "BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+      "summary": "PowerShell hook script (backend-local copy) that records tool-use events during the Java upgrade automation workflow.",
+      "tags": ["script", "hook", "automation", "powershell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "type": "file",
+      "name": "recordToolUse.sh",
+      "filePath": "BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "summary": "Shell hook script (backend-local copy) that logs tool-use events for the Java upgrade automation pipeline.",
+      "tags": ["script", "hook", "automation", "shell"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:BackEnd/intelipath-backend/.mvn/wrapper/maven-wrapper.properties",
+      "type": "config",
+      "name": "maven-wrapper.properties",
+      "filePath": "BackEnd/intelipath-backend/.mvn/wrapper/maven-wrapper.properties",
+      "summary": "Maven Wrapper configuration pinning the Maven distribution version used to build the backend without a local Maven install.",
+      "tags": ["configuration", "build-system", "maven"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/00_create_scraper_db.sql",
+      "type": "table",
+      "name": "00_create_scraper_db.sql",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/00_create_scraper_db.sql",
+      "summary": "Postgres init script that creates the separate scraper database used by the data-scraping subsystem during container bootstrap.",
+      "tags": ["database", "migration", "postgres", "docker-init"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "type": "table",
+      "name": "01_init_intelipath.sql",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "summary": "Comprehensive Postgres schema initialization script defining the full InteliPath data model: users, students, mentors, career roadmaps, skills, portfolios, feedback, RAG documents, FPT curriculum tables, auth tokens, and chat sessions, plus all supporting indexes.",
+      "tags": ["database", "migration", "postgres", "schema-definition"],
+      "complexity": "complex",
+      "languageNotes": "Defines 37+ tables and 70+ indexes covering the entire application domain (career roadmap, skill graph, portfolio, feedback, RAG ingestion, FPT curriculum sync, and authentication)."
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:career_roles",
+      "type": "table",
+      "name": "career_roles",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [16, 21],
+      "summary": "Table storing career role definitions with prerequisites, used as the root reference for career-based roadmaps.",
+      "tags": ["database", "table", "career-domain"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:skills",
+      "type": "table",
+      "name": "skills",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [23, 28],
+      "summary": "Table storing individual skill definitions categorized and linked to careers.",
+      "tags": ["database", "table", "skill-domain"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:users",
+      "type": "table",
+      "name": "users",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [30, 33],
+      "summary": "Base users table holding account identity and email, parent to all role-specific profile tables.",
+      "tags": ["database", "table", "auth", "user-domain"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:students",
+      "type": "table",
+      "name": "students",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [54, 69],
+      "summary": "Student profile table linking users to career roadmaps, portfolio slug, and FPT curriculum, extending the base users table.",
+      "tags": ["database", "table", "student-domain"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:skill_nodes",
+      "type": "table",
+      "name": "skill_nodes",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [116, 155],
+      "summary": "Core roadmap graph table defining individual skill nodes with prerequisites, node kind, checkpoints, and evidence keywords — the backbone of the career roadmap tree.",
+      "tags": ["database", "table", "roadmap-domain", "graph-structure"],
+      "complexity": "complex"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:student_progress",
+      "type": "table",
+      "name": "student_progress",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [195, 209],
+      "summary": "Tracks each student's completion status per roadmap node over time.",
+      "tags": ["database", "table", "progress-tracking"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:rag_documents",
+      "type": "table",
+      "name": "rag_documents",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [403, 424],
+      "summary": "Tracks ingested documents used by the RAG pipeline, including ingestion status and versioning for retrieval-augmented generation features.",
+      "tags": ["database", "table", "rag", "ai-domain"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:fpt_curricula",
+      "type": "table",
+      "name": "fpt_curricula",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [576, 586],
+      "summary": "Stores synced FPT University curriculum versions used to align student subjects with official program requirements.",
+      "tags": ["database", "table", "fpt-curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:refresh_tokens",
+      "type": "table",
+      "name": "refresh_tokens",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [469, 476],
+      "summary": "Stores refresh tokens for JWT-based session renewal per user.",
+      "tags": ["database", "table", "auth", "security"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:password_reset_tokens",
+      "type": "table",
+      "name": "password_reset_tokens",
+      "filePath": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "lineRange": [482, 491],
+      "summary": "Stores hashed, single-use password reset tokens with expiry for the magic-link password reset flow.",
+      "tags": ["database", "table", "auth", "security"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:BackEnd/intelipath-backend/docs/code-audit.md",
+      "type": "document",
+      "name": "code-audit.md",
+      "filePath": "BackEnd/intelipath-backend/docs/code-audit.md",
+      "summary": "Full source code audit of the InteliPath backend covering dependency injection, business logic bugs, logging conventions, SOLID principles, package placement, imports, and Swagger documentation gaps, ending with a prioritized fix list.",
+      "tags": ["documentation", "code-quality", "audit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:BackEnd/intelipath-backend/docs/security-review.md",
+      "type": "document",
+      "name": "security-review.md",
+      "filePath": "BackEnd/intelipath-backend/docs/security-review.md",
+      "summary": "Security review of both the Java/Spring Boot backend and the Python/FastAPI service, listing critical security issues, code quality concerns, architecture observations, and recommended next steps.",
+      "tags": ["documentation", "security", "audit"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/mvnw",
+      "type": "file",
+      "name": "mvnw",
+      "filePath": "BackEnd/intelipath-backend/mvnw",
+      "summary": "Maven Wrapper shell script that bootstraps and runs the pinned Maven version without requiring a system-wide Maven installation.",
+      "tags": ["build-system", "maven", "script"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "type": "file",
+      "name": "IntelipathBackendApplication.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "summary": "Spring Boot application entry point that bootstraps the InteliPath backend service.",
+      "tags": ["entry-point", "spring-boot", "bootstrap"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java:IntelipathBackendApplication",
+      "type": "class",
+      "name": "IntelipathBackendApplication",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "lineRange": [7, 16],
+      "summary": "Main Spring Boot application class annotated to bootstrap the whole InteliPath backend context.",
+      "tags": ["entry-point", "spring-boot"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "lineRange": [11, 14],
+      "summary": "Application main method that invokes SpringApplication.run to start the backend server.",
+      "tags": ["entry-point", "bootstrap"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "type": "file",
+      "name": "AiClientConfig.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "summary": "Spring configuration that builds RestClient beans for the external AI service (general, scraper, and health-check clients) with per-purpose timeouts.",
+      "tags": ["config", "ai-service", "rest-client", "spring-config"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java:AiClientConfig",
+      "type": "class",
+      "name": "AiClientConfig",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "lineRange": [17, 51],
+      "summary": "Configuration class producing three specialized RestClient beans for talking to the AI microservice, each with distinct timeouts.",
+      "tags": ["config", "ai-service", "rest-client"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java:buildClient",
+      "type": "function",
+      "name": "buildClient",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "lineRange": [39, 50],
+      "summary": "Shared helper that constructs a configured RestClient with connect/read timeouts, base URL, and API key header for the AI service.",
+      "tags": ["utility", "rest-client", "factory"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java",
+      "type": "file",
+      "name": "AiServiceProperties.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java",
+      "summary": "Externalized configuration properties (base URL, API key, timeouts) bound from application config for the AI service integration.",
+      "tags": ["config", "properties", "ai-service"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java:AiServiceProperties",
+      "type": "class",
+      "name": "AiServiceProperties",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java",
+      "lineRange": [13, 90],
+      "summary": "Spring @ConfigurationProperties POJO holding base URL, API key, and per-operation timeouts for the AI service, with getters/setters for each field.",
+      "tags": ["config", "properties", "ai-service"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java",
+      "type": "file",
+      "name": "ChatClientConfig.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java",
+      "summary": "Spring configuration that builds the Spring AI ChatClient bean used for LLM-backed chat interactions.",
+      "tags": ["config", "ai-service", "chat-client", "spring-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java:ChatClientConfig",
+      "type": "class",
+      "name": "ChatClientConfig",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java",
+      "lineRange": [12, 19],
+      "summary": "Configuration class that builds and exposes a Spring AI ChatClient bean from its builder.",
+      "tags": ["config", "ai-service", "chat-client"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "type": "file",
+      "name": "CorsConfig.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "summary": "Spring configuration defining CORS policy (allowed origins, methods, headers, credentials) for the backend API.",
+      "tags": ["config", "cors", "security", "spring-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java:CorsConfig",
+      "type": "class",
+      "name": "CorsConfig",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "lineRange": [11, 34],
+      "summary": "Configuration class registering a UrlBasedCorsConfigurationSource bean that defines allowed origins, methods, headers, and credential support.",
+      "tags": ["config", "cors", "security"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java:corsConfigurationSource",
+      "type": "function",
+      "name": "corsConfigurationSource",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "lineRange": [14, 33],
+      "summary": "Builds the CorsConfiguration bean specifying allowed origins, methods, headers, and credentials, then registers it on a URL-based source.",
+      "tags": ["cors", "security", "factory"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java",
+      "type": "file",
+      "name": "HttpClientConfig.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java",
+      "summary": "Spring configuration providing a general-purpose RestTemplate bean with fixed connect/read timeouts for calling external APIs.",
+      "tags": ["config", "rest-client", "spring-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java:HttpClientConfig",
+      "type": "class",
+      "name": "HttpClientConfig",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java",
+      "lineRange": [19, 30],
+      "summary": "Configuration class exposing a RestTemplate bean configured with 5-second connect and read timeouts for external API calls.",
+      "tags": ["config", "rest-client"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java",
+      "type": "file",
+      "name": "SeedAccountsProperties.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java",
+      "summary": "Configuration properties holding seed account credentials (admin, counselor, student, mentor) used to bootstrap initial accounts on startup.",
+      "tags": ["config", "properties", "seed-data"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java:SeedAccountsProperties",
+      "type": "class",
+      "name": "SeedAccountsProperties",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java",
+      "lineRange": [14, 34],
+      "summary": "Holds nested seed-account definitions for the four role types (admin, counselor, student, mentor) with an isUsable helper validating username/password presence.",
+      "tags": ["config", "properties", "seed-data"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java",
+      "type": "file",
+      "name": "SwaggerConfig.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java",
+      "summary": "Spring configuration that sets up OpenAPI/Swagger documentation metadata for the backend API.",
+      "tags": ["config", "swagger", "api-documentation", "spring-config"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java:SwaggerConfig",
+      "type": "class",
+      "name": "SwaggerConfig",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java",
+      "lineRange": [17, 37],
+      "summary": "Configuration class defining the OpenAPI bean with title, description, and security scheme metadata for Swagger UI.",
+      "tags": ["config", "swagger", "api-documentation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java:UpdateUserProgressRequest",
+      "type": "class",
+      "name": "UpdateUserProgressRequest",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java",
+      "lineRange": [12, 20],
+      "summary": "Request DTO carrying a roadmap node ID and new status used to update a student's progress on that node.",
+      "tags": ["dto", "request", "roadmap-domain"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java",
+      "type": "file",
+      "name": "UpdateUserProgressRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java",
+      "summary": "Defines the request payload DTO for updating a student's progress status on a specific roadmap node.",
+      "tags": ["dto", "request", "roadmap-domain"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java:SkillGapResponse",
+      "type": "class",
+      "name": "SkillGapResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java",
+      "lineRange": [10, 17],
+      "summary": "Response DTO exposing a student's current skills versus missing skills for a target career roadmap.",
+      "tags": ["dto", "response", "roadmap-domain"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java",
+      "type": "file",
+      "name": "SkillGapResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java",
+      "summary": "Defines the response DTO representing a skill gap analysis result (current vs. missing skills) for a student.",
+      "tags": ["dto", "response", "roadmap-domain"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java:StudentRoadmapResourceResponse",
+      "type": "class",
+      "name": "StudentRoadmapResourceResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java",
+      "lineRange": [8, 16],
+      "summary": "Response DTO representing a single learning resource (title, URL, type) attached to a roadmap node.",
+      "tags": ["dto", "response", "roadmap-domain"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java",
+      "type": "file",
+      "name": "StudentRoadmapResourceResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java",
+      "summary": "Defines the response DTO for a single roadmap learning resource returned to students.",
+      "tags": ["dto", "response", "roadmap-domain"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java:IntelipathBackendApplication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java:IntelipathBackendApplication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java:AiClientConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java:buildClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java:AiClientConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java:AiServiceProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java:AiServiceProperties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java:ChatClientConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java:ChatClientConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java:CorsConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java:corsConfigurationSource",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java:CorsConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java:HttpClientConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java:HttpClientConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java:SeedAccountsProperties",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java:SeedAccountsProperties",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java:SwaggerConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java:SwaggerConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java:UpdateUserProgressRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java:UpdateUserProgressRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java:SkillGapResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java:SkillGapResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java:StudentRoadmapResourceResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java:StudentRoadmapResourceResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:career_roles",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:skills",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:users",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:students",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:skill_nodes",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:student_progress",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:rag_documents",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:fpt_curricula",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:refresh_tokens",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:password_reset_tokens",
+      "type": "migrates",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:students",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:users",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:students",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:career_roles",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:skill_nodes",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:career_roles",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:skill_nodes",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:skills",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:student_progress",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:skill_nodes",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:student_progress",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:users",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:refresh_tokens",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:users",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:password_reset_tokens",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:users",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:students",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:fpt_curricula",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/docker/postgres/init/00_create_scraper_db.sql",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:BackEnd/intelipath-backend/docs/code-audit.md",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:BackEnd/intelipath-backend/docs/code-audit.md",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:BackEnd/intelipath-backend/docs/security-review.md",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:BackEnd/intelipath-backend/docs/security-review.md",
+      "target": "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql:refresh_tokens",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:BackEnd/intelipath-backend/.mvn/wrapper/maven-wrapper.properties",
+      "target": "file:BackEnd/intelipath-backend/mvnw",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:BackEnd/.claude/launch.json",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "target": "file:.github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+      "target": "file:.github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

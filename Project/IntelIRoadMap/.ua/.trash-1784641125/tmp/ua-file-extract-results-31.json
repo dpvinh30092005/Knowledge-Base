@@ -1,0 +1,126 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application-dev.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 12,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "logging",
+          "level": 1,
+          "line": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application-prod.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "logging",
+          "level": 1,
+          "line": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 140,
+      "nonEmptyLines": 126,
+      "sections": [
+        {
+          "heading": "spring",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "app",
+          "level": 1,
+          "line": 92
+        },
+        {
+          "heading": "supabase",
+          "level": 1,
+          "line": 97
+        },
+        {
+          "heading": "springdoc",
+          "level": 1,
+          "line": 101
+        },
+        {
+          "heading": "ai-service",
+          "level": 1,
+          "line": 107
+        },
+        {
+          "heading": "mentor",
+          "level": 1,
+          "line": 113
+        },
+        {
+          "heading": "seed",
+          "level": 1,
+          "line": 122
+        },
+        {
+          "heading": "roadmap",
+          "level": 1,
+          "line": 136
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    }
+  ]
+}

@@ -1,0 +1,806 @@
+{
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "AdminFlmSyncService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptMaterialMirrorService.java",
+      "batchIndex": 18,
+      "symbols": [
+        "FptMaterialMirrorService"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "DocumentIngestionService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "RagDocumentService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "SupabaseStorageService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java",
+      "batchIndex": 19,
+      "symbols": [
+        "MAX_IMAGE_BYTES",
+        "MAX_DOCUMENT_BYTES",
+        "validateImage",
+        "validatePdf",
+        "validateAttachment",
+        "FileValidationUtil"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "AdminFlmSyncService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminFlmSyncServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "start",
+        "poll",
+        "AdminFlmSyncServiceImpl"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorServiceImpl",
+        "createSession",
+        "getUserSessions",
+        "getSessionMessages",
+        "renameSession",
+        "deleteSession",
+        "streamChat",
+        "VirtualMentorServiceImpl"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "AdminFlmSyncService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminFlmSyncServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "start",
+        "poll",
+        "AdminFlmSyncServiceImpl"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "AdminFlmSyncService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminFlmSyncServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "start",
+        "poll",
+        "AdminFlmSyncServiceImpl"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "batchIndex": 11,
+      "symbols": [
+        "toRoadmapProgressResponse",
+        "toRoadmapStepResponse",
+        "toSkillGapItemResponse",
+        "toMentorFeedbackItemResponse",
+        "toAiHistoryItemResponse",
+        "toMarketDemandResponse",
+        "toEmptyMarketDemandResponse",
+        "toRecommendationItemResponse",
+        "importanceRank",
+        "StudentDashboardMapper"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getRoadmapProgress",
+        "getRoadmapProgress",
+        "getSkillGaps",
+        "getSkillGaps",
+        "getMentorFeedback",
+        "markFeedbackRead",
+        "dismissFeedback",
+        "getAiHistory",
+        "getMarketDemand",
+        "getRecommendations",
+        "StudentDashboardServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorServiceImpl",
+        "createSession",
+        "getUserSessions",
+        "getSessionMessages",
+        "renameSession",
+        "deleteSession",
+        "streamChat",
+        "VirtualMentorServiceImpl"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "batchIndex": 11,
+      "symbols": [
+        "toRoadmapProgressResponse",
+        "toRoadmapStepResponse",
+        "toSkillGapItemResponse",
+        "toMentorFeedbackItemResponse",
+        "toAiHistoryItemResponse",
+        "toMarketDemandResponse",
+        "toEmptyMarketDemandResponse",
+        "toRecommendationItemResponse",
+        "importanceRank",
+        "StudentDashboardMapper"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getRoadmapProgress",
+        "getRoadmapProgress",
+        "getSkillGaps",
+        "getSkillGaps",
+        "getMentorFeedback",
+        "markFeedbackRead",
+        "dismissFeedback",
+        "getAiHistory",
+        "getMarketDemand",
+        "getRecommendations",
+        "StudentDashboardServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorServiceImpl",
+        "createSession",
+        "getUserSessions",
+        "getSessionMessages",
+        "renameSession",
+        "deleteSession",
+        "streamChat",
+        "VirtualMentorServiceImpl"
+      ]
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java",
+      "batchIndex": 19,
+      "symbols": [
+        "RagDocumentRepository"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "DocumentIngestionService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "RagDocumentService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java",
+      "batchIndex": 19,
+      "symbols": [
+        "RagVectorStoreService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/DocumentIngestionServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "ingestPdfDocument",
+        "DocumentIngestionServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "startStudentTranscript",
+        "startGlobalKnowledge",
+        "markCompleted",
+        "markFailed",
+        "RagDocumentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagVectorStoreServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "replaceDocumentChunks",
+        "deleteDocumentChunks",
+        "RagVectorStoreServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "setupStudentProfile",
+        "getStudentProfile",
+        "updateTargetCareer",
+        "compareCurrentStudentSkills",
+        "findMissingRequiredSkills",
+        "calculateSkillProgress",
+        "uploadTranscript",
+        "StudentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagDocumentServiceTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagVectorStoreServiceTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "startStudentTranscript",
+        "startGlobalKnowledge",
+        "markCompleted",
+        "markFailed",
+        "RagDocumentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorServiceImpl",
+        "createSession",
+        "getUserSessions",
+        "getSessionMessages",
+        "renameSession",
+        "deleteSession",
+        "streamChat",
+        "VirtualMentorServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagDocumentServiceTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagVectorStoreServiceTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java",
+      "batchIndex": 19,
+      "symbols": [
+        "RagDocumentRepository"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "startStudentTranscript",
+        "startGlobalKnowledge",
+        "markCompleted",
+        "markFailed",
+        "RagDocumentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagDocumentServiceTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagVectorStoreServiceTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "startStudentTranscript",
+        "startGlobalKnowledge",
+        "markCompleted",
+        "markFailed",
+        "RagDocumentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagDocumentServiceTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "batchIndex": 16,
+      "symbols": [
+        "downloadMaterial",
+        "getSubjectDetail",
+        "getCurriculum",
+        "setCurriculum",
+        "declareTerm",
+        "updateSubjects",
+        "StudentCurriculumController"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtService.java",
+      "batchIndex": 3,
+      "symbols": [
+        "generateAccessToken",
+        "generateRefreshToken",
+        "isTokenValid",
+        "extractEmail",
+        "extractRole",
+        "JwtService"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminFlmSyncServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "start",
+        "poll",
+        "AdminFlmSyncServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminServiceImpl.java",
+      "batchIndex": 3,
+      "symbols": [
+        "getUserMetrics",
+        "getCourseMetrics",
+        "getSystemHealth",
+        "getUsers",
+        "updateUserRole",
+        "updateUserStatus",
+        "deleteUser",
+        "AdminServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthServiceImpl.java",
+      "batchIndex": 3,
+      "symbols": [
+        "login",
+        "refreshAccount",
+        "forgotPassword",
+        "resetPassword",
+        "logout",
+        "refreshResponse",
+        "invalidRefreshToken",
+        "AuthServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthenticatedStudentServiceImpl.java",
+      "batchIndex": 3,
+      "symbols": [
+        "getOrCreateStudent",
+        "getRequiredStudent",
+        "getOrCreateStudentForUpdate",
+        "getAuthenticatedUser",
+        "getAuthenticatedEmail",
+        "AuthenticatedStudentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CareerServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getAllCareers",
+        "getCareerRequirements",
+        "CareerServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java",
+      "batchIndex": 14,
+      "symbols": [
+        "getCareerStatistics",
+        "getStudentsMissingSkills",
+        "getAllFeedbacksSentByMe",
+        "getStudentInfos",
+        "getStudentStatisticAndFeedback",
+        "getProfile",
+        "updateProfile",
+        "exportStudentList",
+        "getCurriculums",
+        "checkStudentEmail",
+        "importStudentAccounts",
+        "CounselorServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FeedbackServiceImpl.java",
+      "batchIndex": 14,
+      "symbols": [
+        "createFeedback",
+        "modifyFeedback",
+        "markReadFeedback",
+        "deleteFeedback",
+        "FeedbackServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java",
+      "batchIndex": 14,
+      "symbols": [
+        "getDashboardMetrics",
+        "getWelcomeAlert",
+        "getInsight",
+        "getPendingReviews",
+        "getStudentInfos",
+        "getMentorDirectory",
+        "getCareerDistribution",
+        "getMentorProfile",
+        "updateMentorProfile",
+        "getFeedbackHistory",
+        "getProgressReports",
+        "submitFeedback",
+        "MentorServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/OAuth2UserServiceImpl.java",
+      "batchIndex": 3,
+      "symbols": [
+        "loadUser",
+        "OAuth2UserServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioServiceImpl.java",
+      "batchIndex": 15,
+      "symbols": [
+        "getPortfolio",
+        "getPortfolioBySlug",
+        "getPortfolioByStudentId",
+        "upsertPortfolio",
+        "requestReview",
+        "PortfolioServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapEditorServiceImpl.java",
+      "batchIndex": 22,
+      "symbols": [
+        "getCareerNodes",
+        "saveNodePositions",
+        "createNode",
+        "updateNode",
+        "deleteNode",
+        "RoadmapEditorServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "batchIndex": 20,
+      "symbols": [
+        "generateRecommendationsForCurrentStudent",
+        "getPendingRecommendationsForCurrentStudent",
+        "acceptRecommendation",
+        "rejectRecommendation",
+        "RoadmapPersonalizationServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapSelectionServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "selectAlternative",
+        "getSelections",
+        "clearSelection",
+        "autoDefaultSelections",
+        "RoadmapSelectionServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getStudentRoadmap",
+        "getCareerRoadmapTemplate",
+        "getCareerProgress",
+        "getNodeDetail",
+        "updateNodeProgress",
+        "RoadmapServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "batchIndex": 1,
+      "symbols": [
+        "getRecruitmentPosts",
+        "getCompanyInfos",
+        "getRecruitmentInfos",
+        "ScraperServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getStudentSkills",
+        "searchSkills",
+        "importStudentSkills",
+        "compareWithStudentSkills",
+        "SkillServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentCurriculumServiceImpl.java",
+      "batchIndex": 18,
+      "symbols": [
+        "getCurriculum",
+        "getSubjectDetail",
+        "applyCurriculumTerm",
+        "updateSubjects",
+        "setCurriculum",
+        "StudentCurriculumServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "setupStudentProfile",
+        "getStudentProfile",
+        "updateTargetCareer",
+        "compareCurrentStudentSkills",
+        "findMissingRequiredSkills",
+        "calculateSkillProgress",
+        "uploadTranscript",
+        "StudentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/UserServiceImpl.java",
+      "batchIndex": 3,
+      "symbols": [
+        "getCurrentUser",
+        "getUserByEmail",
+        "setupUserProfile",
+        "updateAvatar",
+        "UserServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorServiceImpl",
+        "createSession",
+        "getUserSessions",
+        "getSessionMessages",
+        "renameSession",
+        "deleteSession",
+        "streamChat",
+        "VirtualMentorServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "batchIndex": 13,
+      "symbols": []
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "batchIndex": 13,
+      "symbols": []
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/VirtualMentorServiceSecurityContextTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getRoadmapProgress",
+        "getRoadmapProgress",
+        "getSkillGaps",
+        "getSkillGaps",
+        "getMentorFeedback",
+        "markFeedbackRead",
+        "dismissFeedback",
+        "getAiHistory",
+        "getMarketDemand",
+        "getRecommendations",
+        "StudentDashboardServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "setupStudentProfile",
+        "getStudentProfile",
+        "updateTargetCareer",
+        "compareCurrentStudentSkills",
+        "findMissingRequiredSkills",
+        "calculateSkillProgress",
+        "uploadTranscript",
+        "StudentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorServiceImpl",
+        "createSession",
+        "getUserSessions",
+        "getSessionMessages",
+        "renameSession",
+        "deleteSession",
+        "streamChat",
+        "VirtualMentorServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/VirtualMentorServiceSecurityContextTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    }
+  ],
+  "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "getRoadmapProgress",
+        "getRoadmapProgress",
+        "getSkillGaps",
+        "getSkillGaps",
+        "getMentorFeedback",
+        "markFeedbackRead",
+        "dismissFeedback",
+        "getAiHistory",
+        "getMarketDemand",
+        "getRecommendations",
+        "StudentDashboardServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "batchIndex": 13,
+      "symbols": [
+        "setupStudentProfile",
+        "getStudentProfile",
+        "updateTargetCareer",
+        "compareCurrentStudentSkills",
+        "findMissingRequiredSkills",
+        "calculateSkillProgress",
+        "uploadTranscript",
+        "StudentServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "batchIndex": 19,
+      "symbols": [
+        "VirtualMentorServiceImpl",
+        "createSession",
+        "getUserSessions",
+        "getSessionMessages",
+        "renameSession",
+        "deleteSession",
+        "streamChat",
+        "VirtualMentorServiceImpl"
+      ]
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/VirtualMentorServiceSecurityContextTest.java",
+      "batchIndex": 19,
+      "symbols": []
+    }
+  ]
+}

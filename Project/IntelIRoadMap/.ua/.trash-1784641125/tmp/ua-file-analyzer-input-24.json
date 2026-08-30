@@ -1,0 +1,32 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentCoursesPage.tsx",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentMarketPulsePage.tsx",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/pages/StudentCoursesPage.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/pages/StudentMarketPulsePage.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts"
+    ]
+  }
+}

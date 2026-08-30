@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1040" width="1500" height="1040" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect width="1500" height="1040" fill="#ffffff"/>
+
+  <text x="40" y="40" font-size="22" font-weight="700" fill="#0f172a">InteliPath — Deployment Diagram</text>
+  <text x="40" y="61" font-size="12.5" fill="#64748b">Corrected: adds Nginx as the real entry point, the frontend build as a deployed artifact, Python's own DB link, the backend's direct LLM call, and Supabase Storage</text>
+
+  <!-- ============ WEB BROWSER (device) ============ -->
+  <g>
+    <rect x="30" y="430" width="200" height="90" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+    <line x1="30" y1="430" x2="230" y2="430" stroke="#0f172a" stroke-width="1.6"/>
+    <path d="M 30 430 l 14 -10 h 186 v 10" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+    <text x="130" y="418" text-anchor="middle" font-size="10.5" font-style="italic" fill="#475569">«device»</text>
+    <text x="130" y="465" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Web Browser</text>
+    <text x="130" y="484" text-anchor="middle" font-size="10.5" fill="#64748b">(desktop / mobile —</text>
+    <text x="130" y="498" text-anchor="middle" font-size="10.5" fill="#64748b">executes the React SPA)</text>
+  </g>
+
+  <!-- ============ CLOUD INFRASTRUCTURE (execution environment) ============ -->
+  <rect x="330" y="90" width="790" height="870" rx="6" fill="#7fc9d4" fill-opacity="0.9" stroke="#0f172a" stroke-width="1.6"/>
+  <text x="725" y="118" text-anchor="middle" font-size="10.5" font-style="italic" fill="#0b3b45">«executionEnvironment»</text>
+  <text x="725" y="138" text-anchor="middle" font-size="14.5" font-weight="700" fill="#0b3b45">Cloud Infrastructure — Hostinger VPS</text>
+  <text x="725" y="156" text-anchor="middle" font-size="10" fill="#0b3b45" opacity="0.8">1 vCPU / 4GB · ports 8080 / 8000 / 5432 bind to localhost only</text>
+
+  <!-- Nginx (now tall enough to show the frontend build nested inside it as a deployed artifact) -->
+  <rect x="360" y="185" width="280" height="150" rx="5" fill="#ffffff" stroke="#0f172a" stroke-width="1.4"/>
+  <text x="500" y="204" text-anchor="middle" font-size="10.5" font-style="italic" fill="#475569">«component»</text>
+  <text x="500" y="223" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Nginx (on host, not containerised)</text>
+  <text x="500" y="239" text-anchor="middle" font-size="10" fill="#475569">TLS · reverse proxy for /api /oauth2 /login/oauth2</text>
+  <text x="500" y="253" text-anchor="middle" font-size="10" fill="#475569">→ 127.0.0.1:8080</text>
+
+  <!-- React SPA build — deployed as a static artifact ON Nginx, not a running service -->
+  <rect x="380" y="262" width="240" height="60" rx="4" fill="#f8fafc" stroke="#0f172a" stroke-width="1.1"/>
+  <text x="500" y="277" text-anchor="middle" font-size="9.5" font-style="italic" fill="#475569">«artifact»</text>
+  <text x="500" y="293" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">React SPA build (dist/)</text>
+  <text x="500" y="309" text-anchor="middle" font-size="9.5" fill="#64748b">static files, served for GET /</text>
+
+  <!-- Spring Boot Backend -->
+  <rect x="360" y="380" width="280" height="120" rx="5" fill="#ffffff" stroke="#0f172a" stroke-width="1.4"/>
+  <text x="500" y="399" text-anchor="middle" font-size="10.5" font-style="italic" fill="#475569">«component»</text>
+  <text x="500" y="418" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Spring Boot Backend</text>
+  <text x="500" y="434" text-anchor="middle" font-size="10.5" fill="#475569">:8080 (localhost only)</text>
+  <text x="500" y="451" text-anchor="middle" font-size="10.2" fill="#475569">API · JWT/OAuth2 · JobScrapingScheduler</text>
+  <text x="500" y="466" text-anchor="middle" font-size="10.2" fill="#475569">Spring AI — RAG chat, embeddings</text>
+  <text x="500" y="481" text-anchor="middle" font-size="10.2" fill="#475569">docker container</text>
+
+  <!-- Python AI Service -->
+  <rect x="700" y="380" width="280" height="120" rx="5" fill="#ffffff" stroke="#0f172a" stroke-width="1.4"/>
+  <text x="840" y="399" text-anchor="middle" font-size="10.5" font-style="italic" fill="#475569">«component»</text>
+  <text x="840" y="418" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Python AI Service</text>
+  <text x="840" y="434" text-anchor="middle" font-size="10.5" fill="#475569">:8000 (localhost only)</text>
+  <text x="840" y="451" text-anchor="middle" font-size="10.2" fill="#475569">FastAPI · async scrape jobs</text>
+  <text x="840" y="466" text-anchor="middle" font-size="10.2" fill="#475569">skill extraction · markitdown</text>
+  <text x="840" y="481" text-anchor="middle" font-size="10.2" fill="#475569">docker container</text>
+
+  <!-- PostgreSQL -->
+  <g>
+    <path d="M 445 670 v 90 a 90 14 0 0 0 180 0 v -90" fill="#ffffff" stroke="#0f172a" stroke-width="1.4"/>
+    <ellipse cx="535" cy="670" rx="90" ry="14" fill="#ffffff" stroke="#0f172a" stroke-width="1.4"/>
+    <text x="535" y="650" text-anchor="middle" font-size="10.5" font-style="italic" fill="#475569">«database»</text>
+    <text x="535" y="705" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">PostgreSQL 16</text>
+    <text x="535" y="722" text-anchor="middle" font-size="10" fill="#475569">+ pgvector</text>
+    <text x="535" y="740" text-anchor="middle" font-size="9.5" fill="#64748b">db intelipath · db scraper</text>
+  </g>
+
+  <!-- ============ EXTERNAL SERVICES ============ -->
+  <text x="1330" y="235" text-anchor="middle" font-size="10.5" font-weight="700" letter-spacing="1" fill="#94a3b8">EXTERNAL</text>
+
+  <rect x="1180" y="250" width="300" height="70" rx="5" fill="#fffdf5" stroke="#b8923f" stroke-width="1.3"/>
+  <text x="1330" y="268" text-anchor="middle" font-size="10.5" font-style="italic" fill="#7a5c1e">«external service»</text>
+  <text x="1330" y="288" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3a2e0f">IT Job Portals</text>
+  <text x="1330" y="306" text-anchor="middle" font-size="9.5" fill="#7a5c1e">ITviec, TopCV</text>
+
+  <rect x="1180" y="380" width="300" height="70" rx="5" fill="#fffdf5" stroke="#b8923f" stroke-width="1.3"/>
+  <text x="1330" y="398" text-anchor="middle" font-size="10.5" font-style="italic" fill="#7a5c1e">«external service»</text>
+  <text x="1330" y="418" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3a2e0f">LLM API</text>
+  <text x="1330" y="436" text-anchor="middle" font-size="9.5" fill="#7a5c1e">OpenAI — chat, embeddings, extraction</text>
+
+  <rect x="1180" y="510" width="300" height="70" rx="5" fill="#fffdf5" stroke="#b8923f" stroke-width="1.3"/>
+  <text x="1330" y="528" text-anchor="middle" font-size="10.5" font-style="italic" fill="#7a5c1e">«external service»</text>
+  <text x="1330" y="548" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3a2e0f">Google OAuth 2.0</text>
+  <text x="1330" y="566" text-anchor="middle" font-size="9.5" fill="#7a5c1e">login</text>
+
+  <rect x="1180" y="640" width="300" height="70" rx="5" fill="#fffdf5" stroke="#b8923f" stroke-width="1.3"/>
+  <text x="1330" y="658" text-anchor="middle" font-size="10.5" font-style="italic" fill="#7a5c1e">«external service»</text>
+  <text x="1330" y="678" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3a2e0f">GitHub API</text>
+  <text x="1330" y="696" text-anchor="middle" font-size="9.5" fill="#7a5c1e">login OAuth · repo import</text>
+
+  <rect x="1180" y="770" width="300" height="88" rx="5" fill="#fffdf5" stroke="#b8923f" stroke-width="1.3"/>
+  <text x="1330" y="789" text-anchor="middle" font-size="10.5" font-style="italic" fill="#7a5c1e">«external service»</text>
+  <text x="1330" y="809" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3a2e0f">Supabase Storage</text>
+  <text x="1330" y="828" text-anchor="middle" font-size="9.5" fill="#7a5c1e">object storage — avatars, chat files,</text>
+  <text x="1330" y="842" text-anchor="middle" font-size="9.5" fill="#7a5c1e">transcripts, course materials</text>
+
+  <!-- ============ ARROWS ============ -->
+
+  <!-- Browser -> Nginx (also implicitly retrieves the artifact for the first load) -->
+  <line x1="230" y1="470" x2="356" y2="330" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="255" y="395" font-size="10.5" fill="#334155" transform="rotate(-33 255 395)">HTTPS</text>
+  <text x="255" y="410" font-size="9.5" fill="#64748b" transform="rotate(-33 255 410)">static bundle + REST/JSON, SSE</text>
+
+  <!-- Nginx -> Backend -->
+  <line x1="500" y1="335" x2="500" y2="376" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="512" y="360" font-size="10" fill="#334155">proxy_pass</text>
+
+  <!-- Backend <-> Python -->
+  <line x1="640" y1="440" x2="696" y2="440" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="668" y="432" text-anchor="middle" font-size="9.5" fill="#334155">REST</text>
+  <text x="668" y="455" text-anchor="middle" font-size="8.5" fill="#64748b">internal, x-api-key</text>
+
+  <!-- Backend -> Postgres -->
+  <line x1="470" y1="500" x2="500" y2="666" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="440" y="580" font-size="10" fill="#334155">JDBC</text>
+  <text x="415" y="595" font-size="9" fill="#64748b">db: intelipath</text>
+
+  <!-- Python -> Postgres -->
+  <line x1="800" y1="500" x2="580" y2="678" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="655" y="580" font-size="10" fill="#334155">SQLAlchemy</text>
+  <text x="655" y="595" font-size="9" fill="#64748b">db: scraper</text>
+
+  <!-- Backend -> LLM API -->
+  <path d="M 640 410 H 1050 V 415" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <line x1="1050" y1="410" x2="1176" y2="415" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="900" y="402" text-anchor="middle" font-size="10" fill="#334155">HTTPS — Spring AI (chat, embeddings)</text>
+
+  <!-- Python -> LLM API -->
+  <line x1="980" y1="428" x2="1176" y2="428" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="1078" y="446" text-anchor="middle" font-size="10" fill="#334155">HTTPS — skill extraction</text>
+
+  <!-- Python -> IT Job Portals -->
+  <path d="M 980 395 H 1120 V 285" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <line x1="1120" y1="285" x2="1176" y2="285" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="1048" y="278" text-anchor="middle" font-size="10" fill="#334155">HTTPS — scrape</text>
+  <text x="1048" y="230" text-anchor="middle" font-size="9" fill="#64748b">triggered daily by the</text>
+  <text x="1048" y="243" text-anchor="middle" font-size="9" fill="#64748b">backend's JobScrapingScheduler</text>
+
+  <!-- Backend -> Google OAuth -->
+  <path d="M 640 455 H 1120 V 545" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <line x1="1120" y1="545" x2="1176" y2="545" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="900" y="540" text-anchor="middle" font-size="10" fill="#334155">OAuth 2.0</text>
+
+  <!-- Backend -> GitHub API -->
+  <path d="M 640 470 H 1140 V 675" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <line x1="1140" y1="675" x2="1176" y2="675" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="900" y="668" text-anchor="middle" font-size="10" fill="#334155">HTTPS — login + repo import</text>
+
+  <!-- Backend -> Supabase Storage (routes left of the JDBC label and below Postgres to stay clear of both) -->
+  <path d="M 390 500 V 813 H 1160" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <line x1="1160" y1="813" x2="1176" y2="813" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="785" y="806" text-anchor="middle" font-size="10" fill="#334155">HTTPS</text>
+  <text x="785" y="828" text-anchor="middle" font-size="9" fill="#64748b">upload avatar / chat file / transcript,</text>
+  <text x="785" y="840" text-anchor="middle" font-size="9" fill="#64748b">mirror + sign course material</text>
+
+  <!-- ============ FOOTER NOTE ============ -->
+  <line x1="30" y1="980" x2="1470" y2="980" stroke="#e2e8f0"/>
+  <text x="30" y="1005" font-size="10.5" fill="#94a3b8">Frontend is deployed, not "missing": the intelipath-frontend build produces a static artifact (dist/), shown nested inside Nginx because that is</text>
+  <text x="30" y="1022" font-size="10.5" fill="#94a3b8">literally where it lives on the VPS (/var/www/intelipath) — there is no separate running frontend process; Nginx reads those files directly.</text>
+
+</svg>

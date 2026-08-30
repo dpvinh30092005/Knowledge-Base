@@ -1,0 +1,21 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "BackEnd/intelipath-backend/data/v2/careers.csv",
+    "BackEnd/intelipath-backend/data/v2/roadmap_nodes.csv",
+    "BackEnd/intelipath-backend/data/v2/skills.csv"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 0,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": []
+}

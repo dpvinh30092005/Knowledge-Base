@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    {
+      "id": "config:BackEnd/intelipath-backend/src/main/resources/application.yaml",
+      "type": "config",
+      "name": "application.yaml",
+      "filePath": "BackEnd/intelipath-backend/src/main/resources/application.yaml",
+      "summary": "Base Spring Boot configuration defining application name, active profile, mail/SMTP settings, PostgreSQL datasource with HikariCP pool tuning, JPA/Hibernate settings, OAuth2 client registrations (Google, GitHub), Spring AI OpenAI chat and pgvector settings, MCP client connection, Supabase, Swagger, AI-service client, mentor RAG toggle, seed account credentials, and roadmap auto-completion threshold.",
+      "tags": ["configuration", "spring-boot", "database", "oauth2", "ai-integration"],
+      "complexity": "complex",
+      "languageNotes": "Uses Spring property placeholders (${VAR:default}) to externalize secrets and environment-specific values, keeping credentials out of the repo."
+    },
+    {
+      "id": "config:BackEnd/intelipath-backend/src/main/resources/application-dev.yaml",
+      "type": "config",
+      "name": "application-dev.yaml",
+      "filePath": "BackEnd/intelipath-backend/src/main/resources/application-dev.yaml",
+      "summary": "Spring Boot 'dev' profile overlay enabling SQL statement logging and DEBUG-level logging for Spring Security and the project's own packages.",
+      "tags": ["configuration", "spring-boot", "development", "logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:BackEnd/intelipath-backend/src/main/resources/application-prod.yaml",
+      "type": "config",
+      "name": "application-prod.yaml",
+      "filePath": "BackEnd/intelipath-backend/src/main/resources/application-prod.yaml",
+      "summary": "Spring Boot 'prod' profile overlay activated for production deployments, tuning logging levels for a live environment.",
+      "tags": ["configuration", "spring-boot", "production", "logging"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:BackEnd/intelipath-backend/src/main/resources/application-dev.yaml",
+      "target": "config:BackEnd/intelipath-backend/src/main/resources/application.yaml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:BackEnd/intelipath-backend/src/main/resources/application-prod.yaml",
+      "target": "config:BackEnd/intelipath-backend/src/main/resources/application.yaml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

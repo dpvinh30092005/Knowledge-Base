@@ -1,0 +1,1754 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 19,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 19,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 19,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 226,
+      "nonEmptyLines": 206,
+      "functions": [
+        {
+          "name": "FptCurriculumTool",
+          "startLine": 52,
+          "endLine": 64,
+          "params": [
+            "fptSubjectRepository",
+            "fptSubjectSkillRepository",
+            "skillNodeRepository",
+            "studentRepository",
+            "studentFptSubjectRepository",
+            "careerRoleRepository"
+          ]
+        },
+        {
+          "name": "apply",
+          "startLine": 70,
+          "endLine": 156,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "nodesForSkill",
+          "startLine": 159,
+          "endLine": 167,
+          "params": [
+            "link",
+            "careerId"
+          ]
+        },
+        {
+          "name": "describeSubjectsForSkill",
+          "startLine": 169,
+          "endLine": 192,
+          "params": [
+            "skillName",
+            "careerId",
+            "careerName"
+          ]
+        },
+        {
+          "name": "expandPartialCodes",
+          "startLine": 199,
+          "endLine": 214,
+          "params": [
+            "codes"
+          ]
+        },
+        {
+          "name": "normalizeCodes",
+          "startLine": 216,
+          "endLine": 225,
+          "params": [
+            "raw"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FptCurriculumTool",
+          "startLine": 33,
+          "endLine": 226,
+          "methods": [
+            "FptCurriculumTool",
+            "apply",
+            "nodesForSkill",
+            "describeSubjectsForSkill",
+            "expandPartialCodes",
+            "normalizeCodes"
+          ],
+          "properties": [
+            "MAX_SUBJECTS",
+            "fptSubjectRepository",
+            "fptSubjectSkillRepository",
+            "skillNodeRepository",
+            "studentRepository",
+            "studentFptSubjectRepository",
+            "careerRoleRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptCurriculumTool",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "apply",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "FptCurriculumTool",
+          "line": 33,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "apply",
+          "callee": "request.userId",
+          "lineNumber": 73
+        },
+        {
+          "caller": "apply",
+          "callee": "new Response",
+          "lineNumber": 74
+        },
+        {
+          "caller": "apply",
+          "callee": "studentRepository.findCareerIdByUserId(request.userId()).orElse",
+          "lineNumber": 80
+        },
+        {
+          "caller": "apply",
+          "callee": "studentRepository.findCareerIdByUserId",
+          "lineNumber": 80
+        },
+        {
+          "caller": "apply",
+          "callee": "request.userId",
+          "lineNumber": 80
+        },
+        {
+          "caller": "apply",
+          "callee": "careerRoleRepository.findById(careerId).map(c -> c.getCareerName()).orElse",
+          "lineNumber": 82
+        },
+        {
+          "caller": "apply",
+          "callee": "careerRoleRepository.findById(careerId).map",
+          "lineNumber": 82
+        },
+        {
+          "caller": "apply",
+          "callee": "careerRoleRepository.findById",
+          "lineNumber": 82
+        },
+        {
+          "caller": "apply",
+          "callee": "c.getCareerName",
+          "lineNumber": 82
+        },
+        {
+          "caller": "apply",
+          "callee": "request.skillName",
+          "lineNumber": 86
+        },
+        {
+          "caller": "apply",
+          "callee": "request.skillName().isBlank",
+          "lineNumber": 86
+        },
+        {
+          "caller": "apply",
+          "callee": "request.skillName",
+          "lineNumber": 86
+        },
+        {
+          "caller": "apply",
+          "callee": "new Response",
+          "lineNumber": 87
+        },
+        {
+          "caller": "apply",
+          "callee": "describeSubjectsForSkill",
+          "lineNumber": 87
+        },
+        {
+          "caller": "apply",
+          "callee": "request.skillName().trim",
+          "lineNumber": 87
+        },
+        {
+          "caller": "apply",
+          "callee": "request.skillName",
+          "lineNumber": 87
+        },
+        {
+          "caller": "apply",
+          "callee": "normalizeCodes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "apply",
+          "callee": "request.subjectCodes",
+          "lineNumber": 90
+        },
+        {
+          "caller": "apply",
+          "callee": "codes.isEmpty",
+          "lineNumber": 92
+        },
+        {
+          "caller": "apply",
+          "callee": "studentFptSubjectRepository.findByUserId(request.userId()).stream()\n                        .filter(s -> s.getStatus() == StudentSubjectStatus.PASSED)\n                        .map(s -> s.getSubjectCode()).toList",
+          "lineNumber": 93
+        },
+        {
+          "caller": "apply",
+          "callee": "studentFptSubjectRepository.findByUserId(request.userId()).stream()\n                        .filter(s -> s.getStatus() == StudentSubjectStatus.PASSED).map",
+          "lineNumber": 93
+        },
+        {
+          "caller": "apply",
+          "callee": "studentFptSubjectRepository.findByUserId(request.userId()).stream().filter",
+          "lineNumber": 93
+        },
+        {
+          "caller": "apply",
+          "callee": "studentFptSubjectRepository.findByUserId(request.userId()).stream",
+          "lineNumber": 93
+        },
+        {
+          "caller": "apply",
+          "callee": "studentFptSubjectRepository.findByUserId",
+          "lineNumber": 93
+        },
+        {
+          "caller": "apply",
+          "callee": "request.userId",
+          "lineNumber": 93
+        },
+        {
+          "caller": "apply",
+          "callee": "s.getStatus",
+          "lineNumber": 94
+        },
+        {
+          "caller": "apply",
+          "callee": "s.getSubjectCode",
+          "lineNumber": 95
+        },
+        {
+          "caller": "apply",
+          "callee": "codes.isEmpty",
+          "lineNumber": 99
+        },
+        {
+          "caller": "apply",
+          "callee": "new Response",
+          "lineNumber": 100
+        },
+        {
+          "caller": "apply",
+          "callee": "expandPartialCodes",
+          "lineNumber": 104
+        },
+        {
+          "caller": "apply",
+          "callee": "codes.size",
+          "lineNumber": 105
+        },
+        {
+          "caller": "apply",
+          "callee": "codes.subList",
+          "lineNumber": 106
+        },
+        {
+          "caller": "apply",
+          "callee": "new StringBuilder",
+          "lineNumber": 109
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\"Student's target career roadmap: \").append(careerName).append",
+          "lineNumber": 111
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\"Student's target career roadmap: \").append",
+          "lineNumber": 111
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 111
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 113
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\"Using the \").append(codes.size()).append",
+          "lineNumber": 116
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\"Using the \").append",
+          "lineNumber": 116
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 116
+        },
+        {
+          "caller": "apply",
+          "callee": "codes.size",
+          "lineNumber": 116
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 118
+        },
+        {
+          "caller": "apply",
+          "callee": "new LinkedHashSet<>",
+          "lineNumber": 120
+        },
+        {
+          "caller": "apply",
+          "callee": "fptSubjectRepository.findById(code).orElse",
+          "lineNumber": 122
+        },
+        {
+          "caller": "apply",
+          "callee": "fptSubjectRepository.findById",
+          "lineNumber": 122
+        },
+        {
+          "caller": "apply",
+          "callee": "fptSubjectSkillRepository.findBySubjectCode",
+          "lineNumber": 123
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\"- \").append",
+          "lineNumber": 125
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 125
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\" (\").append(subject.getName().split(\"_\")[0].trim()).append",
+          "lineNumber": 128
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\" (\").append",
+          "lineNumber": 128
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 128
+        },
+        {
+          "caller": "apply",
+          "callee": "subject.getName().split(\"_\")[0].trim",
+          "lineNumber": 128
+        },
+        {
+          "caller": "apply",
+          "callee": "subject.getName().split",
+          "lineNumber": 128
+        },
+        {
+          "caller": "apply",
+          "callee": "subject.getName",
+          "lineNumber": 128
+        },
+        {
+          "caller": "apply",
+          "callee": "links.isEmpty",
+          "lineNumber": 130
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 131
+        },
+        {
+          "caller": "apply",
+          "callee": "new ArrayList<>",
+          "lineNumber": 136
+        },
+        {
+          "caller": "apply",
+          "callee": "nodesForSkill",
+          "lineNumber": 138
+        },
+        {
+          "caller": "apply",
+          "callee": "coveredNodes.addAll",
+          "lineNumber": 139
+        },
+        {
+          "caller": "apply",
+          "callee": "skillParts.add",
+          "lineNumber": 140
+        },
+        {
+          "caller": "apply",
+          "callee": "nodeNames.isEmpty",
+          "lineNumber": 140
+        },
+        {
+          "caller": "apply",
+          "callee": "link.getSkillName",
+          "lineNumber": 141
+        },
+        {
+          "caller": "apply",
+          "callee": "link.getSkillName",
+          "lineNumber": 142
+        },
+        {
+          "caller": "apply",
+          "callee": "String.join",
+          "lineNumber": 142
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\": teaches \").append(String.join(\"; \", skillParts)).append",
+          "lineNumber": 144
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\": teaches \").append",
+          "lineNumber": 144
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 144
+        },
+        {
+          "caller": "apply",
+          "callee": "String.join",
+          "lineNumber": 144
+        },
+        {
+          "caller": "apply",
+          "callee": "coveredNodes.isEmpty",
+          "lineNumber": 147
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append(\"\\nRoadmap nodes these subjects cover: \").append",
+          "lineNumber": 148
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 148
+        },
+        {
+          "caller": "apply",
+          "callee": "String.join",
+          "lineNumber": 148
+        },
+        {
+          "caller": "apply",
+          "callee": "out.append",
+          "lineNumber": 149
+        },
+        {
+          "caller": "apply",
+          "callee": "new Response",
+          "lineNumber": 152
+        },
+        {
+          "caller": "apply",
+          "callee": "out.toString",
+          "lineNumber": 152
+        },
+        {
+          "caller": "apply",
+          "callee": "new Response",
+          "lineNumber": 154
+        },
+        {
+          "caller": "apply",
+          "callee": "e.getMessage",
+          "lineNumber": 154
+        },
+        {
+          "caller": "nodesForSkill",
+          "callee": "link.getSkillId",
+          "lineNumber": 160
+        },
+        {
+          "caller": "nodesForSkill",
+          "callee": "List.of",
+          "lineNumber": 161
+        },
+        {
+          "caller": "nodesForSkill",
+          "callee": "skillNodeRepository.findBySkill_SkillIdAndCareerRole_CareerId(link.getSkillId(), careerId).stream()\n                .map(SkillNode::getNodeName)\n                .distinct().toList",
+          "lineNumber": 163
+        },
+        {
+          "caller": "nodesForSkill",
+          "callee": "skillNodeRepository.findBySkill_SkillIdAndCareerRole_CareerId(link.getSkillId(), careerId).stream()\n                .map(SkillNode::getNodeName).distinct",
+          "lineNumber": 163
+        },
+        {
+          "caller": "nodesForSkill",
+          "callee": "skillNodeRepository.findBySkill_SkillIdAndCareerRole_CareerId(link.getSkillId(), careerId).stream().map",
+          "lineNumber": 163
+        },
+        {
+          "caller": "nodesForSkill",
+          "callee": "skillNodeRepository.findBySkill_SkillIdAndCareerRole_CareerId(link.getSkillId(), careerId).stream",
+          "lineNumber": 163
+        },
+        {
+          "caller": "nodesForSkill",
+          "callee": "skillNodeRepository.findBySkill_SkillIdAndCareerRole_CareerId",
+          "lineNumber": 163
+        },
+        {
+          "caller": "nodesForSkill",
+          "callee": "link.getSkillId",
+          "lineNumber": 163
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "fptSubjectSkillRepository.findBySkillNameIgnoreCase",
+          "lineNumber": 170
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "links.isEmpty",
+          "lineNumber": 171
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "new StringBuilder",
+          "lineNumber": 175
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "fptSubjectRepository.findById(link.getSubjectCode()).orElse",
+          "lineNumber": 177
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "fptSubjectRepository.findById",
+          "lineNumber": 177
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "link.getSubjectCode",
+          "lineNumber": 177
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append(\"- \").append",
+          "lineNumber": 178
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append",
+          "lineNumber": 178
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "link.getSubjectCode",
+          "lineNumber": 178
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append(\" (\").append(subject.getName().split(\"_\")[0].trim()).append",
+          "lineNumber": 180
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append(\" (\").append",
+          "lineNumber": 180
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append",
+          "lineNumber": 180
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "subject.getName().split(\"_\")[0].trim",
+          "lineNumber": 180
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "subject.getName().split",
+          "lineNumber": 180
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "subject.getName",
+          "lineNumber": 180
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "nodesForSkill",
+          "lineNumber": 182
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "nodes.isEmpty",
+          "lineNumber": 183
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append(\" — covers node(s) \").append",
+          "lineNumber": 184
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append",
+          "lineNumber": 184
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "String.join",
+          "lineNumber": 184
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append(\" on the \").append(careerName).append",
+          "lineNumber": 186
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append(\" on the \").append",
+          "lineNumber": 186
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append",
+          "lineNumber": 186
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.append",
+          "lineNumber": 189
+        },
+        {
+          "caller": "describeSubjectsForSkill",
+          "callee": "out.toString",
+          "lineNumber": 191
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "new ArrayList<>",
+          "lineNumber": 200
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "fptSubjectRepository.existsById",
+          "lineNumber": 202
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "out.add",
+          "lineNumber": 203
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "fptSubjectRepository.findByCodeStartingWithOrderByCodeAsc",
+          "lineNumber": 206
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "matches.isEmpty",
+          "lineNumber": 207
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "out.add",
+          "lineNumber": 208
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "matches.stream().map(FptSubject::getCode).limit(5).forEach",
+          "lineNumber": 210
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "matches.stream().map(FptSubject::getCode).limit",
+          "lineNumber": 210
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "matches.stream().map",
+          "lineNumber": 210
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "matches.stream",
+          "lineNumber": 210
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "out.stream().distinct().toList",
+          "lineNumber": 213
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "out.stream().distinct",
+          "lineNumber": 213
+        },
+        {
+          "caller": "expandPartialCodes",
+          "callee": "out.stream",
+          "lineNumber": 213
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "List.of",
+          "lineNumber": 218
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "raw.stream()\n                .filter(c -> c != null && !c.isBlank())\n                .map(c -> c.trim().toUpperCase())\n                .distinct().toList",
+          "lineNumber": 220
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "raw.stream()\n                .filter(c -> c != null && !c.isBlank())\n                .map(c -> c.trim().toUpperCase()).distinct",
+          "lineNumber": 220
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "raw.stream()\n                .filter(c -> c != null && !c.isBlank()).map",
+          "lineNumber": 220
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "raw.stream().filter",
+          "lineNumber": 220
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "raw.stream",
+          "lineNumber": 220
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "c.isBlank",
+          "lineNumber": 221
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "c.trim().toUpperCase",
+          "lineNumber": 222
+        },
+        {
+          "caller": "normalizeCodes",
+          "callee": "c.trim",
+          "lineNumber": 222
+        }
+      ],
+      "metrics": {
+        "importCount": 10,
+        "exportCount": 3,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 181,
+      "nonEmptyLines": 167,
+      "functions": [
+        {
+          "name": "downloadMaterial",
+          "startLine": 71,
+          "endLine": 97,
+          "params": [
+            "resourceId"
+          ]
+        },
+        {
+          "name": "getSubjectDetail",
+          "startLine": 99,
+          "endLine": 111,
+          "params": [
+            "subjectCode"
+          ]
+        },
+        {
+          "name": "getCurriculum",
+          "startLine": 113,
+          "endLine": 123,
+          "params": []
+        },
+        {
+          "name": "setCurriculum",
+          "startLine": 125,
+          "endLine": 137,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "declareTerm",
+          "startLine": 139,
+          "endLine": 152,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "updateSubjects",
+          "startLine": 154,
+          "endLine": 167,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "withRecommendations",
+          "startLine": 173,
+          "endLine": 180,
+          "params": [
+            "response"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "StudentCurriculumController",
+          "startLine": 44,
+          "endLine": 181,
+          "methods": [
+            "downloadMaterial",
+            "getSubjectDetail",
+            "getCurriculum",
+            "setCurriculum",
+            "declareTerm",
+            "updateSubjects",
+            "withRecommendations"
+          ],
+          "properties": [
+            "DOWNLOAD_LINK_TTL_SECONDS",
+            "studentCurriculumService",
+            "roadmapPersonalizationService",
+            "fptSubjectResourceRepository",
+            "supabaseStorageService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "downloadMaterial",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "getSubjectDetail",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "getCurriculum",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "setCurriculum",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "declareTerm",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "updateSubjects",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "StudentCurriculumController",
+          "line": 44,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "downloadMaterial",
+          "callee": "fptSubjectResourceRepository.findById(resourceId).orElseThrow",
+          "lineNumber": 80
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "fptSubjectResourceRepository.findById",
+          "lineNumber": 80
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 81
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "resource.getStoragePath",
+          "lineNumber": 83
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "resource.getStoragePath().isBlank",
+          "lineNumber": 83
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "resource.getStoragePath",
+          "lineNumber": 83
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 86
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "resource.getSubjectCode",
+          "lineNumber": 87
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "supabaseStorageService.signCourseMaterial",
+          "lineNumber": 90
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "resource.getStoragePath",
+          "lineNumber": 91
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "log.info",
+          "lineNumber": 92
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "resource.getSubjectCode",
+          "lineNumber": 93
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 94
+        },
+        {
+          "caller": "downloadMaterial",
+          "callee": "Map.of",
+          "lineNumber": 94
+        },
+        {
+          "caller": "getSubjectDetail",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getSubjectDetail",
+          "callee": "studentCurriculumService.getSubjectDetail",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getCurriculum",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 122
+        },
+        {
+          "caller": "getCurriculum",
+          "callee": "studentCurriculumService.getCurriculum",
+          "lineNumber": 122
+        },
+        {
+          "caller": "setCurriculum",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 136
+        },
+        {
+          "caller": "setCurriculum",
+          "callee": "studentCurriculumService.setCurriculum",
+          "lineNumber": 136
+        },
+        {
+          "caller": "declareTerm",
+          "callee": "studentCurriculumService.applyCurriculumTerm",
+          "lineNumber": 150
+        },
+        {
+          "caller": "declareTerm",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 151
+        },
+        {
+          "caller": "declareTerm",
+          "callee": "withRecommendations",
+          "lineNumber": 151
+        },
+        {
+          "caller": "updateSubjects",
+          "callee": "studentCurriculumService.updateSubjects",
+          "lineNumber": 165
+        },
+        {
+          "caller": "updateSubjects",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 166
+        },
+        {
+          "caller": "updateSubjects",
+          "callee": "withRecommendations",
+          "lineNumber": 166
+        },
+        {
+          "caller": "withRecommendations",
+          "callee": "response.setRecommendations",
+          "lineNumber": 175
+        },
+        {
+          "caller": "withRecommendations",
+          "callee": "roadmapPersonalizationService.generateRecommendationsForCurrentStudent",
+          "lineNumber": 175
+        },
+        {
+          "caller": "withRecommendations",
+          "callee": "log.warn",
+          "lineNumber": 177
+        },
+        {
+          "caller": "withRecommendations",
+          "callee": "e.getMessage",
+          "lineNumber": 177
+        }
+      ],
+      "metrics": {
+        "importCount": 11,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "DeclareCurriculumTermRequest",
+          "startLine": 12,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "completedTerm"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DeclareCurriculumTermRequest",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "SetStudentCurriculumRequest",
+          "startLine": 12,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "curriculumId"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SetStudentCurriculumRequest",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 23,
+      "classes": [
+        {
+          "name": "UpdateFptSubjectsRequest",
+          "startLine": 15,
+          "endLine": 30,
+          "methods": [],
+          "properties": [
+            "subjects"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateFptSubjectsRequest",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CurriculumOptionResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "CurriculumOptionResponse",
+          "startLine": 7,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "id",
+            "code",
+            "program",
+            "cohort",
+            "batch",
+            "isDefault"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CurriculumOptionResponse",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 54,
+      "classes": [
+        {
+          "name": "FptSubjectDetailResponse",
+          "startLine": 16,
+          "endLine": 64,
+          "methods": [],
+          "properties": [
+            "code",
+            "name",
+            "credits",
+            "prerequisite",
+            "description",
+            "skills",
+            "clos",
+            "materials",
+            "sessions"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptSubjectDetailResponse",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 20,
+      "classes": [
+        {
+          "name": "FptSubjectResponse",
+          "startLine": 9,
+          "endLine": 27,
+          "methods": [],
+          "properties": [
+            "code",
+            "name",
+            "semester",
+            "credits",
+            "prerequisite",
+            "skills",
+            "status",
+            "source"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptSubjectResponse",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 23,
+      "classes": [
+        {
+          "name": "StudentCurriculumResponse",
+          "startLine": 14,
+          "endLine": 31,
+          "methods": [],
+          "properties": [
+            "completedTerm",
+            "curriculumId",
+            "curriculumCode",
+            "curriculumLabel",
+            "availableCurricula",
+            "subjects",
+            "recommendations"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentCurriculumResponse",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 53,
+      "classes": [
+        {
+          "name": "FptCurriculum",
+          "startLine": 23,
+          "endLine": 65,
+          "methods": [],
+          "properties": [
+            "id",
+            "code",
+            "curid",
+            "program",
+            "cohort",
+            "batch",
+            "effectiveDate",
+            "isDefault",
+            "syncedAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptCurriculum",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 55,
+      "classes": [
+        {
+          "name": "FptCurriculumSubject",
+          "startLine": 24,
+          "endLine": 64,
+          "methods": [],
+          "properties": [
+            "curriculumId",
+            "subjectCode",
+            "semester",
+            "comboCode",
+            "comboName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptCurriculumSubject",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "FptSubject",
+          "startLine": 18,
+          "endLine": 41,
+          "methods": [],
+          "properties": [
+            "code",
+            "name",
+            "credits",
+            "prerequisite",
+            "description"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptSubject",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 42,
+      "classes": [
+        {
+          "name": "FptSubjectClo",
+          "startLine": 24,
+          "endLine": 50,
+          "methods": [],
+          "properties": [
+            "id",
+            "subjectCode",
+            "code",
+            "outcome",
+            "orderIndex"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptSubjectClo",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 82,
+      "nonEmptyLines": 67,
+      "classes": [
+        {
+          "name": "FptSubjectResource",
+          "startLine": 26,
+          "endLine": 82,
+          "methods": [],
+          "properties": [
+            "id",
+            "subjectCode",
+            "kind",
+            "title",
+            "url",
+            "sourceUrl",
+            "storagePath",
+            "sizeBytes",
+            "mirroredAt",
+            "topic",
+            "cloRef",
+            "orderIndex"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptSubjectResource",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 38,
+      "classes": [
+        {
+          "name": "FptSubjectSkill",
+          "startLine": 22,
+          "endLine": 45,
+          "methods": [],
+          "properties": [
+            "id",
+            "subjectCode",
+            "skillId",
+            "skillName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FptSubjectSkill",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 59,
+      "functions": [
+        {
+          "name": "touch",
+          "startLine": 65,
+          "endLine": 69,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "StudentFptSubject",
+          "startLine": 29,
+          "endLine": 70,
+          "methods": [
+            "touch"
+          ],
+          "properties": [
+            "id",
+            "userId",
+            "subjectCode",
+            "curriculumId",
+            "status",
+            "source",
+            "updatedAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "touch",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "StudentFptSubject",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "touch",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 58,
+      "classes": [
+        {
+          "name": "StudentSkillEvidence",
+          "startLine": 22,
+          "endLine": 74,
+          "methods": [],
+          "properties": [
+            "evidenceId",
+            "userId",
+            "studentSkillId",
+            "nodeId",
+            "skillName",
+            "sourceType",
+            "sourceId",
+            "sourceUrl",
+            "evidenceText",
+            "confidence",
+            "detectedBy",
+            "detectedAt",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentSkillEvidence",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 10,
+          "endLine": 13,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EvidenceStatus",
+          "startLine": 5,
+          "endLine": 14,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "EvidenceStatus",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "EvidenceStatus.valueOf",
+          "lineNumber": 12
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EvidenceType",
+          "startLine": 5,
+          "endLine": 15,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "EvidenceType",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "EvidenceType.valueOf",
+          "lineNumber": 13
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

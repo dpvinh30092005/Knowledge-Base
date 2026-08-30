@@ -1,0 +1,36 @@
+{
+  "batchIndex": 29,
+  "files": [
+    {
+      "path": "BackEnd/intelipath-backend/data/CareerDataTemplate.csv",
+      "language": "csv",
+      "sizeLines": 6,
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/RoadmapDataTemplate.csv",
+      "language": "csv",
+      "sizeLines": 190,
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/SkillDataTemplate.csv",
+      "language": "csv",
+      "sizeLines": 88,
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/flm_overlay.json",
+      "language": "json",
+      "sizeLines": 588,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/data/CareerDataTemplate.csv": [],
+    "BackEnd/intelipath-backend/data/RoadmapDataTemplate.csv": [],
+    "BackEnd/intelipath-backend/data/SkillDataTemplate.csv": [],
+    "BackEnd/intelipath-backend/data/flm_overlay.json": []
+  },
+  "neighborMap": {}
+}

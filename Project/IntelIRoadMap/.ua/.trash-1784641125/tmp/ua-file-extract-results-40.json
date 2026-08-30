@@ -1,0 +1,582 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 301,
+      "nonEmptyLines": 212,
+      "sections": [
+        {
+          "heading": "Theme — Carnival",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Axes (diversification)",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Palette drops",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Drop 01 · Cold Snap *(default)*",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "Drop 02 · Citrus Riot",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "Drop 03 · Diner Sign",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Drop 04 · Studio Night",
+          "level": 3,
+          "line": 71
+        },
+        {
+          "heading": "Drop 05 · Aqua Park",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "Drop 06 · Pressroom",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "Drop rotation rule",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "Pick the drop by domain first",
+          "level": 3,
+          "line": 129
+        },
+        {
+          "heading": "When to construct a custom drop instead",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "Reference register",
+          "level": 2,
+          "line": 146
+        },
+        {
+          "heading": "Signature moves",
+          "level": 2,
+          "line": 154
+        },
+        {
+          "heading": "Layout pitfalls (must avoid)",
+          "level": 2,
+          "line": 193
+        },
+        {
+          "heading": "Macrostructure affinity",
+          "level": 2,
+          "line": 216
+        },
+        {
+          "heading": "Macrostructure rejection",
+          "level": 2,
+          "line": 227
+        },
+        {
+          "heading": "Voice fixtures",
+          "level": 2,
+          "line": 239
+        },
+        {
+          "heading": "Anti-patterns (theme-specific)",
+          "level": 2,
+          "line": 257
+        },
+        {
+          "heading": "How Carnival differs from neighbouring themes",
+          "level": 2,
+          "line": 268
+        },
+        {
+          "heading": "Test brief expectations",
+          "level": 2,
+          "line": 277
+        },
+        {
+          "heading": "Build hint",
+          "level": 2,
+          "line": 287
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 22
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 146,
+      "nonEmptyLines": 98,
+      "sections": [
+        {
+          "heading": "Theme — Cobalt",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Axes (diversification)",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Reference register",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Required dependencies",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "The signature moves",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "Motion",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "Anti-patterns",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "Macrostructure affinity",
+          "level": 2,
+          "line": 64
+        },
+        {
+          "heading": "Macrostructure rejection",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "Voice fixtures",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "How Cobalt differs from neighbouring themes",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "Test brief expectations",
+          "level": 2,
+          "line": 104
+        },
+        {
+          "heading": "Build hint",
+          "level": 2,
+          "line": 114
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 403,
+      "nonEmptyLines": 299,
+      "sections": [
+        {
+          "heading": "Theme — Hum",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Axes (diversification)",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Reference register",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Palette",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "Typography",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "The seven signature moves",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "1. The button system — three variations, the press is the feedback",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "2. Multi-accent section bands",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "3. Color-shift card grid",
+          "level": 3,
+          "line": 96
+        },
+        {
+          "heading": "4. Streak / counter tick-up",
+          "level": 3,
+          "line": 100
+        },
+        {
+          "heading": "5. Character moment — one small reacting mark",
+          "level": 3,
+          "line": 104
+        },
+        {
+          "heading": "6. Big rounded everything",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "7. Star-burst micro-celebration on success",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "Motion direction",
+          "level": 2,
+          "line": 138
+        },
+        {
+          "heading": "Required dependencies",
+          "level": 2,
+          "line": 165
+        },
+        {
+          "heading": "Macrostructure affinity",
+          "level": 2,
+          "line": 177
+        },
+        {
+          "heading": "Macrostructure rejection",
+          "level": 2,
+          "line": 188
+        },
+        {
+          "heading": "Layout & emphasis discipline (non-negotiable)",
+          "level": 2,
+          "line": 198
+        },
+        {
+          "heading": "Section alignment — one content shell, identical edges",
+          "level": 3,
+          "line": 202
+        },
+        {
+          "heading": "Emphasis highlight — must follow the text, never a floating bar",
+          "level": 3,
+          "line": 221
+        },
+        {
+          "heading": "Not-AI discipline — make every build read as a different studio (non-negotiable)",
+          "level": 2,
+          "line": 243
+        },
+        {
+          "heading": "The deadliest tells — forbidden by default",
+          "level": 3,
+          "line": 251
+        },
+        {
+          "heading": "Kill the shared tail (the highest-leverage rule)",
+          "level": 3,
+          "line": 261
+        },
+        {
+          "heading": "Variety levers — pick a *different* combination each build (independent of palette)",
+          "level": 3,
+          "line": 267
+        },
+        {
+          "heading": "Two requirements every build must meet",
+          "level": 3,
+          "line": 278
+        },
+        {
+          "heading": "Micro-craft that reads hand-made",
+          "level": 3,
+          "line": 282
+        },
+        {
+          "heading": "Voice fixtures",
+          "level": 2,
+          "line": 288
+        },
+        {
+          "heading": "Anti-patterns (theme-specific)",
+          "level": 2,
+          "line": 315
+        },
+        {
+          "heading": "How Hum differs from neighbouring themes",
+          "level": 2,
+          "line": 330
+        },
+        {
+          "heading": "Test brief expectations",
+          "level": 2,
+          "line": 338
+        },
+        {
+          "heading": "Build hint",
+          "level": 2,
+          "line": 348
+        },
+        {
+          "heading": "What Hum refuses (restated)",
+          "level": 2,
+          "line": 385
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 32
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 478,
+      "nonEmptyLines": 364,
+      "sections": [
+        {
+          "heading": "Theme — Lumen",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Axes (diversification)",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Reference register",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Palette drops",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Drop 01 · Night Foundry *(default · canonical)*",
+          "level": 3,
+          "line": 27
+        },
+        {
+          "heading": "Drop 02 · Day Foundry",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "Drop rotation rule",
+          "level": 3,
+          "line": 58
+        },
+        {
+          "heading": "Why two drops, not five",
+          "level": 3,
+          "line": 62
+        },
+        {
+          "heading": "The apparatus family",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "Apparatus type · Filament chamber *(Night Foundry, instrument-grade)*",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "Apparatus type · Codebase graph / topology *(Night Foundry)*",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "Apparatus type · Indicator dial / spectrum *(either drop)*",
+          "level": 3,
+          "line": 156
+        },
+        {
+          "heading": "Apparatus type · Prism + measurement *(Day Foundry canonical)*",
+          "level": 3,
+          "line": 162
+        },
+        {
+          "heading": "Building rules across the family",
+          "level": 3,
+          "line": 168
+        },
+        {
+          "heading": "The seven signature moves",
+          "level": 2,
+          "line": 178
+        },
+        {
+          "heading": "1. Hand-built apparatus (no orb)",
+          "level": 3,
+          "line": 182
+        },
+        {
+          "heading": "2. Lowercase headline with verb-landmark (no italics)",
+          "level": 3,
+          "line": 186
+        },
+        {
+          "heading": "3. Mono eyebrow above every section",
+          "level": 3,
+          "line": 223
+        },
+        {
+          "heading": "4. Blueprint grid background (4% opacity)",
+          "level": 3,
+          "line": 227
+        },
+        {
+          "heading": "5. Meter strip (below the hero)",
+          "level": 3,
+          "line": 241
+        },
+        {
+          "heading": "6. Hairline cards with inner emission",
+          "level": 3,
+          "line": 275
+        },
+        {
+          "heading": "7. Three-stat row with Instrument Serif numerals + tabular-nums",
+          "level": 3,
+          "line": 279
+        },
+        {
+          "heading": "Motion direction",
+          "level": 2,
+          "line": 283
+        },
+        {
+          "heading": "Required dependencies",
+          "level": 2,
+          "line": 301
+        },
+        {
+          "heading": "Macrostructure affinity",
+          "level": 2,
+          "line": 311
+        },
+        {
+          "heading": "Macrostructure rejection",
+          "level": 2,
+          "line": 321
+        },
+        {
+          "heading": "Voice fixtures",
+          "level": 2,
+          "line": 331
+        },
+        {
+          "heading": "Anti-patterns (theme-specific)",
+          "level": 2,
+          "line": 369
+        },
+        {
+          "heading": "Macrostructure pitfalls",
+          "level": 2,
+          "line": 388
+        },
+        {
+          "heading": "How Lumen differs from neighbouring themes",
+          "level": 2,
+          "line": 397
+        },
+        {
+          "heading": "Test brief expectations",
+          "level": 2,
+          "line": 406
+        },
+        {
+          "heading": "Build hint",
+          "level": 2,
+          "line": 416
+        },
+        {
+          "heading": "What Lumen refuses (restated)",
+          "level": 2,
+          "line": 456
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 33
+      }
+    }
+  ]
+}

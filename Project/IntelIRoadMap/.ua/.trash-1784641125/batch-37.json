@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n9-edge-aligned-minimal.md",
+      "type": "document",
+      "name": "n9-edge-aligned-minimal.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n9-edge-aligned-minimal.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'N9 Edge-aligned minimal' navbar pattern (wordmark hard-left, single CTA hard-right) with usage guidance and an HTML/CSS example.",
+      "tags": ["documentation", "design-reference", "navbar-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s1-left-margin-numbered.md",
+      "type": "document",
+      "name": "s1-left-margin-numbered.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s1-left-margin-numbered.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'S1 Left-margin numbered' section-heading pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "section-heading-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s2-hanging.md",
+      "type": "document",
+      "name": "s2-hanging.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s2-hanging.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'S2 Hanging' section-heading layout pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "section-heading-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s3-sticky-pinned.md",
+      "type": "document",
+      "name": "s3-sticky-pinned.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s3-sticky-pinned.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'S3 Sticky pinned' section-heading layout pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "section-heading-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s4-inline-no-break.md",
+      "type": "document",
+      "name": "s4-inline-no-break.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s4-inline-no-break.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'S4 Inline (no break)' section-heading layout pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "section-heading-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s5-bottom-anchored.md",
+      "type": "document",
+      "name": "s5-bottom-anchored.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s5-bottom-anchored.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'S5 Bottom-anchored' section-heading layout pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "section-heading-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t1-pull-quote-with-marginalia.md",
+      "type": "document",
+      "name": "t1-pull-quote-with-marginalia.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t1-pull-quote-with-marginalia.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'T1 Pull-quote with marginalia' testimonial layout pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "testimonial-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t2-logo-wall-hairline.md",
+      "type": "document",
+      "name": "t2-logo-wall-hairline.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t2-logo-wall-hairline.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'T2 Logo wall (hairline)' trust-signal layout pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "trust-signal-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t3-single-huge-quote.md",
+      "type": "document",
+      "name": "t3-single-huge-quote.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t3-single-huge-quote.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'T3 Single huge quote' testimonial layout pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "testimonial-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t4-numbered-stat-strip.md",
+      "type": "document",
+      "name": "t4-numbered-stat-strip.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t4-numbered-stat-strip.md",
+      "summary": "Hallmark design-skill reference snippet describing the 'T4 Numbered stat strip' stats-display layout pattern with usage guidance and a code example.",
+      "tags": ["documentation", "design-reference", "stat-display-pattern", "hallmark-skill"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

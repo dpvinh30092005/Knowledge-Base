@@ -1,0 +1,2051 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 11,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 11,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapEditorController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 160,
+      "nonEmptyLines": 151,
+      "functions": [
+        {
+          "name": "getCareerNodes",
+          "startLine": 51,
+          "endLine": 71,
+          "params": [
+            "careerId"
+          ]
+        },
+        {
+          "name": "saveNodePositions",
+          "startLine": 73,
+          "endLine": 89,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "createNode",
+          "startLine": 91,
+          "endLine": 115,
+          "params": [
+            "careerId",
+            "request"
+          ]
+        },
+        {
+          "name": "updateNode",
+          "startLine": 117,
+          "endLine": 140,
+          "params": [
+            "nodeId",
+            "request"
+          ]
+        },
+        {
+          "name": "deleteNode",
+          "startLine": 142,
+          "endLine": 159,
+          "params": [
+            "nodeId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RoadmapEditorController",
+          "startLine": 40,
+          "endLine": 160,
+          "methods": [
+            "getCareerNodes",
+            "saveNodePositions",
+            "createNode",
+            "updateNode",
+            "deleteNode"
+          ],
+          "properties": [
+            "roadmapEditorService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getCareerNodes",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "saveNodePositions",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "createNode",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "updateNode",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "deleteNode",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "RoadmapEditorController",
+          "line": 40,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getCareerNodes",
+          "callee": "log.info",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "roadmapEditorService.getCareerNodes",
+          "lineNumber": 70
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "log.info",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "request.getPositions().size",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "request.getPositions",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "roadmapEditorService.saveNodePositions",
+          "lineNumber": 87
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "ResponseEntity.ok().build",
+          "lineNumber": 88
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 88
+        },
+        {
+          "caller": "createNode",
+          "callee": "log.info",
+          "lineNumber": 113
+        },
+        {
+          "caller": "createNode",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 114
+        },
+        {
+          "caller": "createNode",
+          "callee": "roadmapEditorService.createNode",
+          "lineNumber": 114
+        },
+        {
+          "caller": "updateNode",
+          "callee": "log.info",
+          "lineNumber": 138
+        },
+        {
+          "caller": "updateNode",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 139
+        },
+        {
+          "caller": "updateNode",
+          "callee": "roadmapEditorService.updateNode",
+          "lineNumber": 139
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "log.info",
+          "lineNumber": 156
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "roadmapEditorService.deleteNode",
+          "lineNumber": 157
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "ResponseEntity.ok().build",
+          "lineNumber": 158
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 158
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SaveNodePositionsRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 30,
+      "classes": [
+        {
+          "name": "SaveNodePositionsRequest",
+          "startLine": 12,
+          "endLine": 40,
+          "methods": [],
+          "properties": [
+            "positions"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SaveNodePositionsRequest",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpsertRoadmapNodeRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 41,
+      "classes": [
+        {
+          "name": "UpsertRoadmapNodeRequest",
+          "startLine": 14,
+          "endLine": 57,
+          "methods": [],
+          "properties": [
+            "nodeName",
+            "description",
+            "stage",
+            "completionPolicy",
+            "weight",
+            "requiredProficiency",
+            "parentNodeId",
+            "previousNodeId",
+            "resources",
+            "positionX",
+            "positionY",
+            "lane",
+            "displayOrder"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpsertRoadmapNodeRequest",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 49,
+      "classes": [
+        {
+          "name": "RoadmapNodeResponse",
+          "startLine": 10,
+          "endLine": 52,
+          "methods": [],
+          "properties": [
+            "nodeId",
+            "nodeName",
+            "parentNode",
+            "previousNode",
+            "nodeLevel",
+            "stage",
+            "completionPolicy",
+            "weight",
+            "requiredProficiency",
+            "parentTopic",
+            "childTotal",
+            "childCompleted",
+            "selection",
+            "chooseCount",
+            "nodeKind",
+            "axis",
+            "isOptional",
+            "isCheckpoint",
+            "positionX",
+            "positionY",
+            "lane",
+            "displayOrder",
+            "layoutVersion",
+            "description",
+            "resource",
+            "status",
+            "completedAt",
+            "fptCoverage",
+            "fptResources"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapNodeResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/NodeType.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 43,
+      "classes": [
+        {
+          "name": "NodeType",
+          "startLine": 22,
+          "endLine": 51,
+          "methods": [],
+          "properties": [
+            "typeId",
+            "stage",
+            "unlockKeyRequired",
+            "stageUnlockKey",
+            "weight"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "NodeType",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapNodeLayout.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "onUpdate",
+          "startLine": 63,
+          "endLine": 66,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RoadmapNodeLayout",
+          "startLine": 24,
+          "endLine": 67,
+          "methods": [
+            "onUpdate"
+          ],
+          "properties": [
+            "layoutId",
+            "nodeId",
+            "positionX",
+            "positionY",
+            "lane",
+            "displayOrder",
+            "layoutVersion",
+            "editedBy",
+            "updatedAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapNodeLayout",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onUpdate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StageType.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 12,
+          "endLine": 15,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "toFrontendValue",
+          "startLine": 17,
+          "endLine": 26,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "StageType",
+          "startLine": 5,
+          "endLine": 27,
+          "methods": [
+            "fromString",
+            "toFrontendValue"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "toFrontendValue",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "StageType",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "StageType.valueOf",
+          "lineNumber": 14
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/NodeTypeRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "NodeTypeRepository",
+          "startLine": 9,
+          "endLine": 11,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "NodeTypeRepository",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapNodeLayoutRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "RoadmapNodeLayoutRepository",
+          "startLine": 12,
+          "endLine": 18,
+          "methods": [
+            "findByNodeId",
+            "findByNodeIdIn"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapNodeLayoutRepository",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapEditorService.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "RoadmapEditorService",
+          "startLine": 15,
+          "endLine": 33,
+          "methods": [
+            "getCareerNodes",
+            "saveNodePositions",
+            "createNode",
+            "updateNode",
+            "deleteNode"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapEditorService",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapEditorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 336,
+      "nonEmptyLines": 300,
+      "functions": [
+        {
+          "name": "getCareerNodes",
+          "startLine": 62,
+          "endLine": 73,
+          "params": [
+            "careerId"
+          ]
+        },
+        {
+          "name": "saveNodePositions",
+          "startLine": 75,
+          "endLine": 106,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "createNode",
+          "startLine": 108,
+          "endLine": 121,
+          "params": [
+            "careerId",
+            "request"
+          ]
+        },
+        {
+          "name": "updateNode",
+          "startLine": 123,
+          "endLine": 134,
+          "params": [
+            "nodeId",
+            "request"
+          ]
+        },
+        {
+          "name": "deleteNode",
+          "startLine": 136,
+          "endLine": 155,
+          "params": [
+            "nodeId"
+          ]
+        },
+        {
+          "name": "applyLogic",
+          "startLine": 161,
+          "endLine": 170,
+          "params": [
+            "node",
+            "request",
+            "careerId"
+          ]
+        },
+        {
+          "name": "applyNodeType",
+          "startLine": 173,
+          "endLine": 186,
+          "params": [
+            "node",
+            "request"
+          ]
+        },
+        {
+          "name": "resolveReference",
+          "startLine": 188,
+          "endLine": 203,
+          "params": [
+            "referencedNodeId",
+            "node",
+            "careerId",
+            "label"
+          ]
+        },
+        {
+          "name": "assertNoAncestorCycle",
+          "startLine": 206,
+          "endLine": 219,
+          "params": [
+            "node",
+            "candidate",
+            "label"
+          ]
+        },
+        {
+          "name": "applyLayout",
+          "startLine": 226,
+          "endLine": 245,
+          "params": [
+            "nodeId",
+            "request"
+          ]
+        },
+        {
+          "name": "loadLayouts",
+          "startLine": 247,
+          "endLine": 256,
+          "params": [
+            "nodeIds"
+          ]
+        },
+        {
+          "name": "parseStage",
+          "startLine": 262,
+          "endLine": 272,
+          "params": [
+            "stage"
+          ]
+        },
+        {
+          "name": "parseCompletionPolicy",
+          "startLine": 274,
+          "endLine": 284,
+          "params": [
+            "policy"
+          ]
+        },
+        {
+          "name": "toResourceJson",
+          "startLine": 286,
+          "endLine": 294,
+          "params": [
+            "resources"
+          ]
+        },
+        {
+          "name": "toEditorDto",
+          "startLine": 296,
+          "endLine": 316,
+          "params": [
+            "node",
+            "layout"
+          ]
+        },
+        {
+          "name": "requireCareer",
+          "startLine": 318,
+          "endLine": 324,
+          "params": [
+            "careerId"
+          ]
+        },
+        {
+          "name": "requireNode",
+          "startLine": 326,
+          "endLine": 329,
+          "params": [
+            "nodeId"
+          ]
+        },
+        {
+          "name": "currentUserId",
+          "startLine": 331,
+          "endLine": 335,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RoadmapEditorServiceImpl",
+          "startLine": 46,
+          "endLine": 336,
+          "methods": [
+            "getCareerNodes",
+            "saveNodePositions",
+            "createNode",
+            "updateNode",
+            "deleteNode",
+            "applyLogic",
+            "applyNodeType",
+            "resolveReference",
+            "assertNoAncestorCycle",
+            "applyLayout",
+            "loadLayouts",
+            "parseStage",
+            "parseCompletionPolicy",
+            "toResourceJson",
+            "toEditorDto",
+            "requireCareer",
+            "requireNode",
+            "currentUserId"
+          ],
+          "properties": [
+            "VALID_COMPLETION_POLICIES",
+            "skillNodeRepository",
+            "nodeTypeRepository",
+            "careerRoleRepository",
+            "studentProgressRepository",
+            "layoutRepository",
+            "userRepository",
+            "objectMapper"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getCareerNodes",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "saveNodePositions",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "createNode",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "updateNode",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "deleteNode",
+          "line": 136,
+          "isDefault": false
+        },
+        {
+          "name": "RoadmapEditorServiceImpl",
+          "line": 46,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getCareerNodes",
+          "callee": "log.info",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "requireCareer",
+          "lineNumber": 66
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "skillNodeRepository.findByCareerRole_CareerId",
+          "lineNumber": 68
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "loadLayouts",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "nodes.stream().map(SkillNode::getNodeId).toList",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "nodes.stream().map",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "nodes.stream",
+          "lineNumber": 69
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "nodes.stream()\n                .map(node -> toEditorDto(node, layouts.get(node.getNodeId()))).toList",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "nodes.stream().map",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "nodes.stream",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "toEditorDto",
+          "lineNumber": 71
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "layouts.get",
+          "lineNumber": 71
+        },
+        {
+          "caller": "getCareerNodes",
+          "callee": "node.getNodeId",
+          "lineNumber": 71
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "log.info",
+          "lineNumber": 78
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "request.getPositions().size",
+          "lineNumber": 78
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "request.getPositions",
+          "lineNumber": 78
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "currentUserId",
+          "lineNumber": 79
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "request.getPositions",
+          "lineNumber": 81
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "requireNode",
+          "lineNumber": 82
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getNodeId",
+          "lineNumber": 82
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layoutRepository.findByNodeId(node.getNodeId()).orElse",
+          "lineNumber": 83
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layoutRepository.findByNodeId",
+          "lineNumber": 83
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "node.getNodeId",
+          "lineNumber": 83
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "RoadmapNodeLayout.builder().nodeId(node.getNodeId()).layoutVersion(0).build",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "RoadmapNodeLayout.builder().nodeId(node.getNodeId()).layoutVersion",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "RoadmapNodeLayout.builder().nodeId",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "RoadmapNodeLayout.builder",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "node.getNodeId",
+          "lineNumber": 86
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getLayoutVersion",
+          "lineNumber": 87
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getLayoutVersion().equals",
+          "lineNumber": 88
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getLayoutVersion",
+          "lineNumber": 88
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.getLayoutVersion",
+          "lineNumber": 88
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 89
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.setPositionX",
+          "lineNumber": 93
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getPositionX",
+          "lineNumber": 93
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.setPositionY",
+          "lineNumber": 94
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getPositionY",
+          "lineNumber": 94
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getLane",
+          "lineNumber": 95
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.setLane",
+          "lineNumber": 96
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getLane",
+          "lineNumber": 96
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getDisplayOrder",
+          "lineNumber": 98
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.setDisplayOrder",
+          "lineNumber": 99
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "position.getDisplayOrder",
+          "lineNumber": 99
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.setLayoutVersion",
+          "lineNumber": 101
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.getLayoutVersion",
+          "lineNumber": 101
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.setEditedBy",
+          "lineNumber": 102
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layout.setUpdatedAt",
+          "lineNumber": 103
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 103
+        },
+        {
+          "caller": "saveNodePositions",
+          "callee": "layoutRepository.save",
+          "lineNumber": 104
+        },
+        {
+          "caller": "createNode",
+          "callee": "log.info",
+          "lineNumber": 111
+        },
+        {
+          "caller": "createNode",
+          "callee": "requireCareer",
+          "lineNumber": 112
+        },
+        {
+          "caller": "createNode",
+          "callee": "SkillNode.builder().careerRole(career).build",
+          "lineNumber": 114
+        },
+        {
+          "caller": "createNode",
+          "callee": "SkillNode.builder().careerRole",
+          "lineNumber": 114
+        },
+        {
+          "caller": "createNode",
+          "callee": "SkillNode.builder",
+          "lineNumber": 114
+        },
+        {
+          "caller": "createNode",
+          "callee": "applyLogic",
+          "lineNumber": 115
+        },
+        {
+          "caller": "createNode",
+          "callee": "skillNodeRepository.save",
+          "lineNumber": 116
+        },
+        {
+          "caller": "createNode",
+          "callee": "applyLayout",
+          "lineNumber": 118
+        },
+        {
+          "caller": "createNode",
+          "callee": "node.getNodeId",
+          "lineNumber": 118
+        },
+        {
+          "caller": "createNode",
+          "callee": "log.info",
+          "lineNumber": 119
+        },
+        {
+          "caller": "createNode",
+          "callee": "node.getNodeName",
+          "lineNumber": 119
+        },
+        {
+          "caller": "createNode",
+          "callee": "node.getNodeId",
+          "lineNumber": 119
+        },
+        {
+          "caller": "createNode",
+          "callee": "toEditorDto",
+          "lineNumber": 120
+        },
+        {
+          "caller": "updateNode",
+          "callee": "log.info",
+          "lineNumber": 126
+        },
+        {
+          "caller": "updateNode",
+          "callee": "requireNode",
+          "lineNumber": 127
+        },
+        {
+          "caller": "updateNode",
+          "callee": "applyLogic",
+          "lineNumber": 128
+        },
+        {
+          "caller": "updateNode",
+          "callee": "node.getCareerRole().getCareerId",
+          "lineNumber": 128
+        },
+        {
+          "caller": "updateNode",
+          "callee": "node.getCareerRole",
+          "lineNumber": 128
+        },
+        {
+          "caller": "updateNode",
+          "callee": "skillNodeRepository.save",
+          "lineNumber": 129
+        },
+        {
+          "caller": "updateNode",
+          "callee": "applyLayout",
+          "lineNumber": 131
+        },
+        {
+          "caller": "updateNode",
+          "callee": "node.getNodeId",
+          "lineNumber": 131
+        },
+        {
+          "caller": "updateNode",
+          "callee": "log.info",
+          "lineNumber": 132
+        },
+        {
+          "caller": "updateNode",
+          "callee": "node.getNodeName",
+          "lineNumber": 132
+        },
+        {
+          "caller": "updateNode",
+          "callee": "toEditorDto",
+          "lineNumber": 133
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "log.info",
+          "lineNumber": 139
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "requireNode",
+          "lineNumber": 140
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "studentProgressRepository.existsBySkillNode_NodeId",
+          "lineNumber": 142
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 143
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "skillNodeRepository.existsByParentNode_NodeId",
+          "lineNumber": 146
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "skillNodeRepository.existsByPreviousNode_NodeId",
+          "lineNumber": 147
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 148
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "skillNodeRepository.delete",
+          "lineNumber": 153
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "log.info",
+          "lineNumber": 154
+        },
+        {
+          "caller": "deleteNode",
+          "callee": "node.getNodeName",
+          "lineNumber": 154
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "node.setNodeName",
+          "lineNumber": 162
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "request.getNodeName().trim",
+          "lineNumber": 162
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "request.getNodeName",
+          "lineNumber": 162
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "node.setDescription",
+          "lineNumber": 163
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "request.getDescription",
+          "lineNumber": 163
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "node.setCompletionPolicy",
+          "lineNumber": 164
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "parseCompletionPolicy",
+          "lineNumber": 164
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "request.getCompletionPolicy",
+          "lineNumber": 164
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "node.setRequiredProficiency",
+          "lineNumber": 165
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "request.getRequiredProficiency",
+          "lineNumber": 165
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "node.setParentNode",
+          "lineNumber": 166
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "resolveReference",
+          "lineNumber": 166
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "request.getParentNodeId",
+          "lineNumber": 166
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "node.setPreviousNode",
+          "lineNumber": 167
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "resolveReference",
+          "lineNumber": 167
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "request.getPreviousNodeId",
+          "lineNumber": 167
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "node.setResource",
+          "lineNumber": 168
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "toResourceJson",
+          "lineNumber": 168
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "request.getResources",
+          "lineNumber": 168
+        },
+        {
+          "caller": "applyLogic",
+          "callee": "applyNodeType",
+          "lineNumber": 169
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "parseStage",
+          "lineNumber": 174
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "request.getStage",
+          "lineNumber": 174
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "node.getType",
+          "lineNumber": 175
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "NodeType.builder()\n                    .stage(stage != null ? stage : StageType.FOUNDATION)\n                    .unlockKeyRequired(false).build",
+          "lineNumber": 177
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "NodeType.builder()\n                    .stage(stage != null ? stage : StageType.FOUNDATION).unlockKeyRequired",
+          "lineNumber": 177
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "NodeType.builder().stage",
+          "lineNumber": 177
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "NodeType.builder",
+          "lineNumber": 177
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "type.setStage",
+          "lineNumber": 182
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "type.setWeight",
+          "lineNumber": 184
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "request.getWeight",
+          "lineNumber": 184
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "node.setType",
+          "lineNumber": 185
+        },
+        {
+          "caller": "applyNodeType",
+          "callee": "nodeTypeRepository.save",
+          "lineNumber": 185
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "node.getNodeId",
+          "lineNumber": 192
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "referencedNodeId.equals",
+          "lineNumber": 192
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "node.getNodeId",
+          "lineNumber": 192
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 193
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "requireNode",
+          "lineNumber": 196
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "careerId.equals",
+          "lineNumber": 197
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "referenced.getCareerRole().getCareerId",
+          "lineNumber": 197
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "referenced.getCareerRole",
+          "lineNumber": 197
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 198
+        },
+        {
+          "caller": "resolveReference",
+          "callee": "assertNoAncestorCycle",
+          "lineNumber": 201
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "node.getNodeId",
+          "lineNumber": 207
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "new HashSet<>",
+          "lineNumber": 210
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "visited.add",
+          "lineNumber": 212
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "cursor.getNodeId",
+          "lineNumber": 212
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "node.getNodeId().equals",
+          "lineNumber": 213
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "node.getNodeId",
+          "lineNumber": 213
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "cursor.getNodeId",
+          "lineNumber": 213
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 214
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "cursor.getParentNode",
+          "lineNumber": 217
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "cursor.getParentNode",
+          "lineNumber": 217
+        },
+        {
+          "caller": "assertNoAncestorCycle",
+          "callee": "cursor.getPreviousNode",
+          "lineNumber": 217
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "request.getPositionX",
+          "lineNumber": 227
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "request.getPositionY",
+          "lineNumber": 227
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "request.getLane",
+          "lineNumber": 228
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "request.getDisplayOrder",
+          "lineNumber": 228
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layoutRepository.findByNodeId(nodeId).orElse",
+          "lineNumber": 229
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layoutRepository.findByNodeId",
+          "lineNumber": 229
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "RoadmapNodeLayout.builder().nodeId(nodeId).layoutVersion(0).build",
+          "lineNumber": 236
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "RoadmapNodeLayout.builder().nodeId(nodeId).layoutVersion",
+          "lineNumber": 236
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "RoadmapNodeLayout.builder().nodeId",
+          "lineNumber": 236
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "RoadmapNodeLayout.builder",
+          "lineNumber": 236
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layout.setPositionX",
+          "lineNumber": 237
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "request.getPositionX",
+          "lineNumber": 237
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layout.setPositionY",
+          "lineNumber": 238
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "request.getPositionY",
+          "lineNumber": 238
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layout.setLane",
+          "lineNumber": 239
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "request.getLane",
+          "lineNumber": 239
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layout.setDisplayOrder",
+          "lineNumber": 240
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "request.getDisplayOrder",
+          "lineNumber": 240
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layout.setLayoutVersion",
+          "lineNumber": 241
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layout.getLayoutVersion",
+          "lineNumber": 241
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layout.setEditedBy",
+          "lineNumber": 242
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "currentUserId",
+          "lineNumber": 242
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layout.setUpdatedAt",
+          "lineNumber": 243
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 243
+        },
+        {
+          "caller": "applyLayout",
+          "callee": "layoutRepository.save",
+          "lineNumber": 244
+        },
+        {
+          "caller": "loadLayouts",
+          "callee": "new HashMap<>",
+          "lineNumber": 248
+        },
+        {
+          "caller": "loadLayouts",
+          "callee": "nodeIds.isEmpty",
+          "lineNumber": 249
+        },
+        {
+          "caller": "loadLayouts",
+          "callee": "layoutRepository.findByNodeIdIn",
+          "lineNumber": 252
+        },
+        {
+          "caller": "loadLayouts",
+          "callee": "byNodeId.put",
+          "lineNumber": 253
+        },
+        {
+          "caller": "loadLayouts",
+          "callee": "layout.getNodeId",
+          "lineNumber": 253
+        },
+        {
+          "caller": "parseStage",
+          "callee": "stage.isBlank",
+          "lineNumber": 263
+        },
+        {
+          "caller": "parseStage",
+          "callee": "StageType.valueOf",
+          "lineNumber": 267
+        },
+        {
+          "caller": "parseStage",
+          "callee": "stage.trim().toUpperCase",
+          "lineNumber": 267
+        },
+        {
+          "caller": "parseStage",
+          "callee": "stage.trim",
+          "lineNumber": 267
+        },
+        {
+          "caller": "parseStage",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 269
+        },
+        {
+          "caller": "parseCompletionPolicy",
+          "callee": "policy.isBlank",
+          "lineNumber": 275
+        },
+        {
+          "caller": "parseCompletionPolicy",
+          "callee": "policy.trim().toUpperCase",
+          "lineNumber": 278
+        },
+        {
+          "caller": "parseCompletionPolicy",
+          "callee": "policy.trim",
+          "lineNumber": 278
+        },
+        {
+          "caller": "parseCompletionPolicy",
+          "callee": "VALID_COMPLETION_POLICIES.contains",
+          "lineNumber": 279
+        },
+        {
+          "caller": "parseCompletionPolicy",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 280
+        },
+        {
+          "caller": "toResourceJson",
+          "callee": "objectMapper.createArrayNode",
+          "lineNumber": 287
+        },
+        {
+          "caller": "toResourceJson",
+          "callee": "resources.stream()\n                    .filter(link -> link != null && !link.isBlank()).forEach",
+          "lineNumber": 289
+        },
+        {
+          "caller": "toResourceJson",
+          "callee": "resources.stream().filter",
+          "lineNumber": 289
+        },
+        {
+          "caller": "toResourceJson",
+          "callee": "resources.stream",
+          "lineNumber": 289
+        },
+        {
+          "caller": "toResourceJson",
+          "callee": "link.isBlank",
+          "lineNumber": 290
+        },
+        {
+          "caller": "toResourceJson",
+          "callee": "links.add",
+          "lineNumber": 291
+        },
+        {
+          "caller": "toResourceJson",
+          "callee": "link.trim",
+          "lineNumber": 291
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null)\n                .requiredProficiency(node.getRequiredProficiency())\n                .positionX(layout != null ? layout.getPositionX() : null)\n                .positionY(layout != null ? layout.getPositionY() : null)\n                .lane(layout != null ? layout.getLane() : null)\n                .displayOrder(layout != null ? layout.getDisplayOrder() : null)\n                .layoutVersion(layout != null ? layout.getLayoutVersion() : null)\n                .description(node.getDescription())\n                .resource(node.getResource()).build",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null)\n                .requiredProficiency(node.getRequiredProficiency())\n                .positionX(layout != null ? layout.getPositionX() : null)\n                .positionY(layout != null ? layout.getPositionY() : null)\n                .lane(layout != null ? layout.getLane() : null)\n                .displayOrder(layout != null ? layout.getDisplayOrder() : null)\n                .layoutVersion(layout != null ? layout.getLayoutVersion() : null)\n                .description(node.getDescription()).resource",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null)\n                .requiredProficiency(node.getRequiredProficiency())\n                .positionX(layout != null ? layout.getPositionX() : null)\n                .positionY(layout != null ? layout.getPositionY() : null)\n                .lane(layout != null ? layout.getLane() : null)\n                .displayOrder(layout != null ? layout.getDisplayOrder() : null)\n                .layoutVersion(layout != null ? layout.getLayoutVersion() : null).description",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null)\n                .requiredProficiency(node.getRequiredProficiency())\n                .positionX(layout != null ? layout.getPositionX() : null)\n                .positionY(layout != null ? layout.getPositionY() : null)\n                .lane(layout != null ? layout.getLane() : null)\n                .displayOrder(layout != null ? layout.getDisplayOrder() : null).layoutVersion",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null)\n                .requiredProficiency(node.getRequiredProficiency())\n                .positionX(layout != null ? layout.getPositionX() : null)\n                .positionY(layout != null ? layout.getPositionY() : null)\n                .lane(layout != null ? layout.getLane() : null).displayOrder",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null)\n                .requiredProficiency(node.getRequiredProficiency())\n                .positionX(layout != null ? layout.getPositionX() : null)\n                .positionY(layout != null ? layout.getPositionY() : null).lane",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null)\n                .requiredProficiency(node.getRequiredProficiency())\n                .positionX(layout != null ? layout.getPositionX() : null).positionY",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null)\n                .requiredProficiency(node.getRequiredProficiency()).positionX",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy())\n                .weight(node.getType() != null ? node.getType().getWeight() : null).requiredProficiency",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null)\n                .completionPolicy(node.getCompletionPolicy()).weight",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel())\n                .stage(node.getType() != null && node.getType().getStage() != null\n                        ? node.getType().getStage().name() : null).completionPolicy",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null)\n                .nodeLevel(node.getNodeLevel()).stage",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null)\n                .previousNode(node.getPreviousNode() != null ? node.getPreviousNode().getNodeId().toString() : null).nodeLevel",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName())\n                .parentNode(node.getParentNode() != null ? node.getParentNode().getNodeId().toString() : null).previousNode",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId())\n                .nodeName(node.getNodeName()).parentNode",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder()\n                .nodeId(node.getNodeId()).nodeName",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder().nodeId",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "RoadmapNodeResponse.builder",
+          "lineNumber": 297
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getNodeId",
+          "lineNumber": 298
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getNodeName",
+          "lineNumber": 299
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getParentNode",
+          "lineNumber": 300
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getParentNode().getNodeId().toString",
+          "lineNumber": 300
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getParentNode().getNodeId",
+          "lineNumber": 300
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getParentNode",
+          "lineNumber": 300
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getPreviousNode",
+          "lineNumber": 301
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getPreviousNode().getNodeId().toString",
+          "lineNumber": 301
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getPreviousNode().getNodeId",
+          "lineNumber": 301
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getPreviousNode",
+          "lineNumber": 301
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getNodeLevel",
+          "lineNumber": 302
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType",
+          "lineNumber": 303
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType().getStage",
+          "lineNumber": 303
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType",
+          "lineNumber": 303
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType().getStage().name",
+          "lineNumber": 304
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType().getStage",
+          "lineNumber": 304
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType",
+          "lineNumber": 304
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getCompletionPolicy",
+          "lineNumber": 305
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType",
+          "lineNumber": 306
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType().getWeight",
+          "lineNumber": 306
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getType",
+          "lineNumber": 306
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getRequiredProficiency",
+          "lineNumber": 307
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "layout.getPositionX",
+          "lineNumber": 308
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "layout.getPositionY",
+          "lineNumber": 309
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "layout.getLane",
+          "lineNumber": 310
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "layout.getDisplayOrder",
+          "lineNumber": 311
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "layout.getLayoutVersion",
+          "lineNumber": 312
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getDescription",
+          "lineNumber": 313
+        },
+        {
+          "caller": "toEditorDto",
+          "callee": "node.getResource",
+          "lineNumber": 314
+        },
+        {
+          "caller": "requireCareer",
+          "callee": "careerRoleRepository.findByCareerId",
+          "lineNumber": 319
+        },
+        {
+          "caller": "requireCareer",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 321
+        },
+        {
+          "caller": "requireNode",
+          "callee": "skillNodeRepository.findById(nodeId).orElseThrow",
+          "lineNumber": 327
+        },
+        {
+          "caller": "requireNode",
+          "callee": "skillNodeRepository.findById",
+          "lineNumber": 327
+        },
+        {
+          "caller": "requireNode",
+          "callee": "new ResourceNotFoundException",
+          "lineNumber": 328
+        },
+        {
+          "caller": "currentUserId",
+          "callee": "SecurityContextHolder.getContext().getAuthentication().getName",
+          "lineNumber": 332
+        },
+        {
+          "caller": "currentUserId",
+          "callee": "SecurityContextHolder.getContext().getAuthentication",
+          "lineNumber": 332
+        },
+        {
+          "caller": "currentUserId",
+          "callee": "SecurityContextHolder.getContext",
+          "lineNumber": 332
+        },
+        {
+          "caller": "currentUserId",
+          "callee": "userRepository.findByEmail",
+          "lineNumber": 333
+        },
+        {
+          "caller": "currentUserId",
+          "callee": "user.getUserId",
+          "lineNumber": 334
+        }
+      ],
+      "metrics": {
+        "importCount": 17,
+        "exportCount": 6,
+        "functionCount": 18,
+        "classCount": 1
+      }
+    }
+  ]
+}

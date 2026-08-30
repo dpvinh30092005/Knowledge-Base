@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Project/HomestayBookingManagement/src/view/Main.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/view/TourView.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/view/StatisticsView.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/utils/InputterUtils.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/controller/BookingController.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/model/Tour.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/model/Booking.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/model/Statistics.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/controller/TourController.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/view/BookingView.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/controller/FileHandle.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/view/HomeStayView.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/dispatcher/Service.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/view/MenuView.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/model/HomeStay.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/utils/AcceptableUtils.java</file>
+            <file>file:/D:/Project/HomestayBookingManagement/src/controller/HomeStayController.java</file>
+        </group>
+    </open-files>
+</project-private>

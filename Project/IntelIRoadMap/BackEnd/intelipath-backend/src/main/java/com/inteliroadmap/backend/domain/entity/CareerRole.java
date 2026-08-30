@@ -1,0 +1,44 @@
+package com.inteliroadmap.backend.domain.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
+
+import java.util.List;
+import java.util.UUID;
+
+@Entity
+@Table(name = "career_roles")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+public class CareerRole {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "career_id")
+    private UUID careerId;
+
+    @Column(name = "career_name", nullable = false)
+    private String careerName;
+
+    @JdbcTypeCode(SqlTypes.JSON)
+    @Column(name = "prerequisite", columnDefinition = "jsonb")
+    private List<CareerRole> prerequisite;
+
+    @Column(name = "description", columnDefinition = "TEXT")
+    private String description;
+}
+

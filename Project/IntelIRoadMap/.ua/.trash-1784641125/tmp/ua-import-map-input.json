@@ -1,0 +1,3920 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "files": [
+    {
+      "path": ".github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+      "language": "powershell",
+      "fileCategory": "script"
+    },
+    {
+      "path": ".github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "language": "shell",
+      "fileCategory": "script"
+    },
+    {
+      "path": ".ua/.understandignore",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/.claude/launch.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/docs/project_report.tex",
+      "language": "tex",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/.env",
+      "language": "config",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/.env.example",
+      "language": "config",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/.gitattributes",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.ps1",
+      "language": "powershell",
+      "fileCategory": "script"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.sh",
+      "language": "shell",
+      "fileCategory": "script"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/.mvn/wrapper/maven-wrapper.properties",
+      "language": "properties",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/CONTRIBUTING.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/Dockerfile",
+      "language": "dockerfile",
+      "fileCategory": "infra"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/HELP.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/CareerDataTemplate.csv",
+      "language": "csv",
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/RoadmapDataTemplate.csv",
+      "language": "csv",
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/SkillDataTemplate.csv",
+      "language": "csv",
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/flm_overlay.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/v2/careers.csv",
+      "language": "csv",
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/v2/roadmap_nodes.csv",
+      "language": "csv",
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/data/v2/skills.csv",
+      "language": "csv",
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docker-compose.yml",
+      "language": "yaml",
+      "fileCategory": "infra"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docker/postgres/init/00_create_scraper_db.sql",
+      "language": "sql",
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql",
+      "language": "sql",
+      "fileCategory": "data"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docs/code-audit.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docs/security-review.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/mvnw",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/mvnw.cmd",
+      "language": "batch",
+      "fileCategory": "script"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/pom.xml",
+      "language": "xml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/analyzer/PortfolioAiAnalyzer.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/StudentProgressTool.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/clients/GithubApiClient.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapSelectionResolver.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/components/SelectionView.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/DatabaseSeeder.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SecurityConfig.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AuthController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CareerController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/GithubPortfolioController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PortfolioController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PublicPortfolioController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapEditorController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapSkillController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentDashboardController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/UserController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/OAuth2UserInfoInternal.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GitHubOauth2UserInfo.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GoogleOAuth2UserInfo.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CompareStRmSkillRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ForgotPasswordRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportSkillsRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ResetPasswordRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SaveNodePositionsRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SelectAlternativeRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupStudentProfileRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupUserProfileRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/TargetCareerRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateNodeProgressRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateSlugRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserRoleRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserStatusRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpsertRoadmapNodeRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UserRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminSystemHealthResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CareerResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CurriculumOptionResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptNodeCoverageResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptNodeResourceResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/NodeSelectionResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RequiredSkillResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationItemResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillItemResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RoadmapStepResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/AcademicCounselor.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FeedbackAttachment.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/IndustryMentor.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/NodeType.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapNodeLayout.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FptResourceKind.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ReviewStatus.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StageType.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectSource.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/CounselorMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/PortfolioMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/AcademicCounselorRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptCurriculumRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptCurriculumSubjectRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectCloRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/IndustryMentorRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/NodeTypeRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioConfigRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioProjectRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioReviewRequestRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapNodeLayoutRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationItemRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentEducationRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentFptSubjectRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentNodeSelectionRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillEvidenceRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationFailureHandler.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationSuccessHandler.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenHashUtil.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CareerService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CounselorService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/EmailService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FeedbackService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptMaterialMirrorService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptOverlayImportService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapEditorService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapSelectionService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillEvidenceService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentCurriculumService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentDashboardService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/UserService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminFlmSyncServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthenticatedStudentServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CareerServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/DocumentIngestionServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/EmailServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FeedbackServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FptMaterialMirrorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FptOverlayImportServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/GithubPortfolioServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/OAuth2UserServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PdfToMarkdownServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioSlugServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagVectorStoreServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapEditorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapSelectionServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillEvidenceServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentCurriculumServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SupabaseStorageServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/UserServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/EmailUtil.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/SlugUtils.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application-dev.yaml",
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application-prod.yaml",
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application.yaml",
+      "language": "yaml",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/prompts/github-portfolio-analysis.st",
+      "language": "st",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/prompts/virtual-mentor-rag.st",
+      "language": "st",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/prompts/virtual-mentor-system.st",
+      "language": "st",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/IntelipathBackendApplicationTests.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/components/RoadmapSelectionResolverTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/AuthControllerTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/StudentControllerValidationTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/mappers/SkillMapperTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/JwtAuthenticationFilterTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagDocumentServiceTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagVectorStoreServiceTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RoadmapSelectionServiceTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/SkillServiceTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/VirtualMentorServiceSecurityContextTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/impl/VirtualMentorRetrievalFilterTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/utils/FileValidationUtilTest.java",
+      "language": "java",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/.dockerignore",
+      "language": "unknown",
+      "fileCategory": "infra"
+    },
+    {
+      "path": "BackEnd/intelipath-service/.env",
+      "language": "config",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-service/.env.example",
+      "language": "config",
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-service/.pytest_cache/CACHEDIR.TAG",
+      "language": "tag",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/.pytest_cache/README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-service/.pytest_cache/v/cache/lastfailed",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/.pytest_cache/v/cache/nodeids",
+      "language": "unknown",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/Dockerfile",
+      "language": "dockerfile",
+      "fileCategory": "infra"
+    },
+    {
+      "path": "BackEnd/intelipath-service/README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/endpoints/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/endpoints/extraction.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/flm_routes.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/security.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/config/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/config/config.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/core/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/core/config.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/db/database.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/db/models.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/main.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/mcp_server.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/run.bat",
+      "language": "batch",
+      "fileCategory": "script"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/schemas/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/schemas/extraction.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/schemas/schemas.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/engines/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/client.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/flm_to_coverage.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/scraper.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/sync_job.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/itviec_parser.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/linkedin_parser.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/topcv_parser.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/processor.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/__init__.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/llm_service.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/markitdown_service.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/requirements-dev.txt",
+      "language": "txt",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-service/requirements.txt",
+      "language": "txt",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-service/scripts/migrate_roadmap.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/tests/scrapers/test_flm_curriculum.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "BackEnd/intelipath-service/tests/scrapers/test_flm_parsers.py",
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/demo/index.html",
+      "language": "html",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/demo/oauth-login.html",
+      "language": "html",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/AGENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/brandkit/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend-v1/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/design-taste-frontend/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/LICENSE.txt",
+      "language": "txt",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/frontend-design-anthropic/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/full-output-enforcement/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/gpt-taste/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/anti-patterns.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/assets.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/color.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/component-cookbook.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c1-outlined-chip.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c2-inline-form-as-cta.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c3-typographic-link.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/c4-sticky-bottom-bar.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f1-bento-grid.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f2-sticky-scroll-stack.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f3-tabular-spec-sheet.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f4-step-sequence.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f5-annotated-screenshot.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/f6-product-card-grid.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft1-mast-headed.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft2-inline-rule-single-line.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft3-index-style-category-list.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft4-dense-typographic.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft5-statement.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft6-letter-close.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft7-newsletter-first.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/ft8-marquee-scroll.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h1-marquee.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h2-split-diptych.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h3-quote-led.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h4-stat-led.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h5-letter-hero.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h6-photographic-fold.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h7-demo-video-clipped-by-viewport-edge.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h8-mockup-split-browser-framed.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/h9-custom-illustration-centerpiece.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1-wordmark-2-links.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n10-floating-on-scroll-morph.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n11-mega-menu.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n12-banner-retract.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n13-inline-cmdk-pill.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n1b-saas-three-section.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n2-floating-chip.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n3-side-rail.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n4-hidden-behind-k.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n5-floating-pill.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n6-newspaper-masthead.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n7-brutal-slab.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n8-terminal-command.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n9-edge-aligned-minimal.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s1-left-margin-numbered.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s2-hanging.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s3-sticky-pinned.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s4-inline-no-break.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s5-bottom-anchored.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t1-pull-quote-with-marginalia.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t2-logo-wall-hairline.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t3-single-huge-quote.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t4-numbered-stat-strip.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/contract.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/copy.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-craft.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-theme.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/design-md.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/export-formats.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/floating-nav.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/imagery-kit.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/interaction-and-states.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/layout-and-space.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/01-bento-grid.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/02-long-document.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/03-marquee-hero.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/04-stat-led.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/05-workbench.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/06-conversational-faq.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/07-manifesto.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/08-photographic.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/09-quote-led.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/10-specimen.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/11-catalogue.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/12-letter.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/13-index-first.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/14-narrative-workflow.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/15-split-studio.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/16-feature-stack.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/17-type-specimen.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/18-portfolio-grid.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/19-map-diagram.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/20-ecosystem-index.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/21-component-playground.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/motion.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/preview-examples.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/responsive.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/slop-test.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/structure.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/study.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/carnival.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/cobalt.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/hum.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/themes/lumen.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/typography.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/audit.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/verbs/redesign.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/high-end-visual-design/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/image-to-code/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-mobile/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/imagegen-frontend-web/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/industrial-brutalist-ui/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/minimalist-ui/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/redesign-existing-projects/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/DESIGN.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/stitch-design-taste/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.env",
+      "language": "config",
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.env.example",
+      "language": "config",
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/CONTRIBUTING.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/components.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/eslint.config.js",
+      "language": "javascript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/index.html",
+      "language": "html",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/package.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/portfolio-html/css/style.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/portfolio-html/css/utilities.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/portfolio-html/index.html",
+      "language": "html",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/portfolio-html/js/script.js",
+      "language": "javascript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/skills-lock.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/App.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/App.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/careerApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/dashboardApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/profileApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/roadmapApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/skillApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/studentApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/api/userApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/app/config/appConfig.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/app/router/AppRoutes.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/app/router/GuestRoute.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/app/router/ProtectedRoute.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/app/router/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/WidgetSkeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/layouts/AuthCardLayout.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/layouts/AuthLayout.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/layouts/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/modals/AvatarUploadModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/modals/BaseModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/modals/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/profile/AvatarUpload.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/AbstractIllustration.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/DiagonalGridBackground.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/GlobalToast.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/Header.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/Logo.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/MobileNavMenu.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/NotificationBell.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/ProgressBar.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/ProtectedRoute.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/SharedAppBackground.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/UserHeaderActions.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/chart.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/context/AuthContext.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/context/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/admin/AdminDashboardView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/admin/admin.types.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/admin/api/adminApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminExtraTabs.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/admin/components/AdminFlmSyncTab.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/admin/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/ai-mentor/api/chatApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/ai-mentor/ui/AIMentorView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/api/authApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/RegisterForm.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/ResetPasswordForm.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/hooks/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/hooks/useLogin.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/types/auth.types.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/types/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorAddStudent.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorFeedback.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorAddStudent.types.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorDashboard.types.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/counselorFeedback.types.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/types/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorAddStudentView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorDashboardView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/counselor-dashboard/ui/CounselorFeedbackView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/mentorApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/api/roadmapEditorApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorDashboardWidgets.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorEPortfoliosView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorFeedbackHistoryView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorHeader.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorProgressReportsView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorRoadmapEditorView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/MentorStudentsView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/hooks/useMentorDashboardData.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/types/mentorDashboard.types.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/api/portfolioApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/EPortfolioEditor.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/EditableText.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/FeedbackModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/IconPicker.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/RequestReviewModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/components/ThemeEditor.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/portfolio/styles.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/profile-settings/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/profile-settings/model/useProfileSettings.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/api/fptCoursesApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/api/marketPulseApi.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/FptCoursesView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/FptCurriculumPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/GradeReportUI.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/MarketPulsePageView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapContainers.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapRecommendationsPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapVectorGraph.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StageLegend.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentDashboardView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentDashboardWidgets.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentFeedbackPageView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentHeader.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentProfileSetupModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentRoadmapPageView.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentSkillSelectionModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/market-pulse/SalaryOverviewChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/market-pulse/TopHiringCompaniesChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/market-pulse/TrendingSkillsChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/RoadmapProgressContext.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/useDashboardData.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/useStudentSetup.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/studentDashboardService.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/marketPulse.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/studentDashboard.types.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/hooks/useDebounce.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/hooks/useSkillAssessment.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/hooks/useStudentOnboarding.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/index.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/lib/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/main.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/AIMentorPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/AdminDashboardPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorAddStudentPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorFeedbackPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/CounselorProfileSettingsPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/DashboardPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/ForgotPasswordPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/LoginPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorDashboardPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorFeedbackPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorPortfolioPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorProfileSettingsPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorRoadmapEditorPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorStudentsPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/NotFoundPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/OAuthCallbackPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/PublicPortfolioPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/RegisterPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/ResetPasswordPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/SkillAssessmentModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentCoursesPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentDashboardPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentFeedbackPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentMarketPulsePage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentOnboardingModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentPortfolioPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentProfileSettingsPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/StudentRoadmapPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/WelcomePage.tsx",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/api/apiClients.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/api/endpoints.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/api/httpClient.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/api/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/constants.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/shared/index.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/styles/auth.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/styles/variables.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/styles/welcome-demo.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/styles/welcome.css",
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/types/dashboard.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/utils/tags.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/utils/toast.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/vite-env.d.ts",
+      "language": "typescript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/tsconfig.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/tsconfig.node.json",
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/vite.config.js",
+      "language": "javascript",
+      "fileCategory": "code"
+    },
+    {
+      "path": "profile/README.md",
+      "language": "markdown",
+      "fileCategory": "docs"
+    }
+  ]
+}

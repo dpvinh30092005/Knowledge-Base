@@ -1,0 +1,730 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "type": "file",
+      "name": "SecureOAuth2CookieCodec.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "summary": "Encrypts and authenticates OAuth2 cookie payloads using AES-GCM with an HMAC-derived key, providing tamper-proof serialization/deserialization for OAuth2 authorization state stored in cookies.",
+      "tags": ["security", "encryption", "utility", "oauth2"],
+      "complexity": "moderate",
+      "languageNotes": "Uses AES/GCM/NoPadding with a SHA-256 derived key and Java's SerializationUtils for payload marshaling, providing authenticated encryption to prevent cookie tampering."
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:SecureOAuth2CookieCodec",
+      "type": "class",
+      "name": "SecureOAuth2CookieCodec",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "lineRange": [25, 104],
+      "summary": "Encapsulates AES-GCM encryption/decryption logic for encoding serializable OAuth2 objects into secure cookie strings and safely decoding them back with type checking.",
+      "tags": ["security", "encryption", "data-model"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:encode",
+      "type": "function",
+      "name": "encode",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "lineRange": [46, 67],
+      "summary": "Serializes a value, encrypts it with AES-GCM using a random nonce, and Base64URL-encodes the nonce+ciphertext for safe cookie storage.",
+      "tags": ["encryption", "serialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:decode",
+      "type": "function",
+      "name": "decode",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "lineRange": [69, 94],
+      "summary": "Decodes and decrypts a cookie-encoded string, verifies the deserialized object matches the expected type, and returns an empty Optional on any tampering or error.",
+      "tags": ["encryption", "validation", "deserialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/resources/prompts/github-portfolio-analysis.st",
+      "type": "file",
+      "name": "github-portfolio-analysis.st",
+      "filePath": "BackEnd/intelipath-backend/src/main/resources/prompts/github-portfolio-analysis.st",
+      "summary": "Spring AI prompt template used to instruct an LLM to analyze a student's GitHub portfolio for the career-roadmap feature.",
+      "tags": ["prompt-template", "ai", "spring-ai"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/resources/prompts/virtual-mentor-rag.st",
+      "type": "file",
+      "name": "virtual-mentor-rag.st",
+      "filePath": "BackEnd/intelipath-backend/src/main/resources/prompts/virtual-mentor-rag.st",
+      "summary": "Prompt template that provides retrieval-augmented-generation context instructions for the virtual mentor AI feature.",
+      "tags": ["prompt-template", "ai", "rag"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/resources/prompts/virtual-mentor-system.st",
+      "type": "file",
+      "name": "virtual-mentor-system.st",
+      "filePath": "BackEnd/intelipath-backend/src/main/resources/prompts/virtual-mentor-system.st",
+      "summary": "System prompt template defining the persona and behavior rules for the virtual mentor AI chatbot.",
+      "tags": ["prompt-template", "ai", "system-prompt"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/IntelipathBackendApplicationTests.java",
+      "type": "file",
+      "name": "IntelipathBackendApplicationTests.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/IntelipathBackendApplicationTests.java",
+      "summary": "Spring Boot smoke test verifying the application context loads successfully.",
+      "tags": ["test", "spring-boot", "smoke-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java",
+      "type": "file",
+      "name": "HttpCookieOAuth2AuthorizationRequestRepositoryTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java",
+      "summary": "Unit test verifying that OAuth2 authorization requests are round-tripped correctly through an HttpOnly cookie using the secure cookie repository and codec.",
+      "tags": ["test", "security", "oauth2"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java:HttpCookieOAuth2AuthorizationRequestRepositoryTest",
+      "type": "class",
+      "name": "HttpCookieOAuth2AuthorizationRequestRepositoryTest",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java",
+      "lineRange": [13, 47],
+      "summary": "Test class asserting the cookie-backed OAuth2 authorization request repository stores requests as HttpOnly cookies and loads them back correctly.",
+      "tags": ["test", "security"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java:storesAndLoadsAuthenticatedOAuthRequestFromCookie",
+      "type": "function",
+      "name": "storesAndLoadsAuthenticatedOAuthRequestFromCookie",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java",
+      "lineRange": [15, 46],
+      "summary": "Builds an OAuth2AuthorizationRequest, saves it via the repository, asserts the resulting cookie is HttpOnly, then reloads it from a mock request and verifies field equality.",
+      "tags": ["test", "security", "oauth2"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/JwtAuthenticationFilterTest.java",
+      "type": "file",
+      "name": "JwtAuthenticationFilterTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/JwtAuthenticationFilterTest.java",
+      "summary": "Unit test verifying JwtAuthenticationFilter correctly skips filtering the refresh-token endpoint on POST while still filtering other requests.",
+      "tags": ["test", "security", "jwt"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/JwtAuthenticationFilterTest.java:JwtAuthenticationFilterTest",
+      "type": "class",
+      "name": "JwtAuthenticationFilterTest",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/JwtAuthenticationFilterTest.java",
+      "lineRange": [11, 32],
+      "summary": "Test class covering the shouldNotFilter logic of JwtAuthenticationFilter for the refresh endpoint versus other requests.",
+      "tags": ["test", "security"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java",
+      "type": "file",
+      "name": "SecureOAuth2CookieCodecTest.java",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java",
+      "summary": "Unit tests verifying SecureOAuth2CookieCodec correctly round-trips string and OAuth2AuthorizationRequest payloads and rejects tampered ciphertext before deserialization.",
+      "tags": ["test", "security", "encryption"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java:SecureOAuth2CookieCodecTest",
+      "type": "class",
+      "name": "SecureOAuth2CookieCodecTest",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java",
+      "lineRange": [9, 45],
+      "summary": "Test class covering round-trip encoding/decoding of both simple strings and OAuth2AuthorizationRequest objects, plus tamper rejection, using SecureOAuth2CookieCodec.",
+      "tags": ["test", "security", "encryption"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java:roundTripsOAuthAuthorizationRequest",
+      "type": "function",
+      "name": "roundTripsOAuthAuthorizationRequest",
+      "filePath": "BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java",
+      "lineRange": [20, 35],
+      "summary": "Encodes and decodes an OAuth2AuthorizationRequest through the codec and asserts client ID and state survive the round trip unchanged.",
+      "tags": ["test", "encryption"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:BackEnd/intelipath-service/.pytest_cache/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "BackEnd/intelipath-service/.pytest_cache/README.md",
+      "summary": "Auto-generated pytest cache directory notice explaining its purpose and that it should not be committed to version control.",
+      "tags": ["documentation", "generated", "pytest"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/.pytest_cache/CACHEDIR.TAG",
+      "type": "file",
+      "name": "CACHEDIR.TAG",
+      "filePath": "BackEnd/intelipath-service/.pytest_cache/CACHEDIR.TAG",
+      "summary": "Standard cache-directory tag file that signals backup and cache-cleanup tools to skip this pytest cache directory.",
+      "tags": ["generated", "cache", "pytest"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/.pytest_cache/v/cache/lastfailed",
+      "type": "file",
+      "name": "lastfailed",
+      "filePath": "BackEnd/intelipath-service/.pytest_cache/v/cache/lastfailed",
+      "summary": "Auto-generated pytest cache file tracking which tests failed in the last test run for faster re-runs.",
+      "tags": ["generated", "cache", "pytest"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/.pytest_cache/v/cache/nodeids",
+      "type": "file",
+      "name": "nodeids",
+      "filePath": "BackEnd/intelipath-service/.pytest_cache/v/cache/nodeids",
+      "summary": "Auto-generated pytest cache file listing collected test node IDs from the last test session.",
+      "tags": ["generated", "cache", "pytest"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/__init__.py",
+      "summary": "Empty package marker file establishing the app directory as a Python package.",
+      "tags": ["entry-point", "package-init"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/config/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/config/__init__.py",
+      "summary": "Empty package marker file establishing app/config as a Python package.",
+      "tags": ["package-init"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/core/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/core/__init__.py",
+      "summary": "Empty package marker file establishing app/core as a Python package.",
+      "tags": ["package-init"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/core/config.py",
+      "type": "file",
+      "name": "config.py",
+      "filePath": "BackEnd/intelipath-service/app/core/config.py",
+      "summary": "Defines a minimal Settings class holding the FastAPI service's project name and API version prefix.",
+      "tags": ["config", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/run.bat",
+      "type": "file",
+      "name": "run.bat",
+      "filePath": "BackEnd/intelipath-service/app/run.bat",
+      "summary": "Windows batch script for launching the Python intelipath-service locally (e.g. starting the Uvicorn/FastAPI dev server).",
+      "tags": ["script", "dev-tooling", "windows"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/schemas/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/schemas/__init__.py",
+      "summary": "Empty package marker file establishing app/schemas as a Python package.",
+      "tags": ["package-init"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/schemas/schemas.py",
+      "type": "file",
+      "name": "schemas.py",
+      "filePath": "BackEnd/intelipath-service/app/schemas/schemas.py",
+      "summary": "Pydantic response/data models for recruitment post details, scrape-start responses, and company/recruitment listings returned by the scraping service's API.",
+      "tags": ["data-model", "type-definition", "api-schema"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/scrapers/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/__init__.py",
+      "summary": "Empty package marker file establishing app/scrapers as a Python package.",
+      "tags": ["package-init"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/scrapers/engines/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/engines/__init__.py",
+      "summary": "Empty package marker file establishing app/scrapers/engines as a Python package.",
+      "tags": ["package-init"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "type": "file",
+      "name": "parsers.py",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "summary": "Large HTML-scraping parser module for the FLM (curriculum/course-listing) site: extracts tables, syllabus/curriculum links, combo and elective programs, course learning outcomes, materials, sessions, and prerequisites from BeautifulSoup-parsed pages.",
+      "tags": ["scraper", "html-parsing", "utility", "data-extraction"],
+      "complexity": "complex",
+      "languageNotes": "Heavy use of BeautifulSoup table-to-record conversion helpers (table_records, _header_index, _cell) shared across many higher-level parsing functions; relies on regex-based link/date matching."
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:table_records",
+      "type": "function",
+      "name": "table_records",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [37, 57],
+      "summary": "Converts an HTML table element into a list of dict records keyed by header labels, also capturing each cell's link href under a '_href' suffixed key.",
+      "tags": ["html-parsing", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:find_syllabus_links",
+      "type": "function",
+      "name": "find_syllabus_links",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [93, 139],
+      "summary": "Scans a page's anchor tags for syllabus detail links, deduplicates them, and enriches each with decision/course-code metadata extracted from the surrounding table row, sorted by decision date.",
+      "tags": ["html-parsing", "scraper", "data-extraction"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_combo_name",
+      "type": "function",
+      "name": "parse_combo_name",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [174, 183],
+      "summary": "Extracts the combo/major program name and label from a details table on a combo-program page.",
+      "tags": ["html-parsing", "scraper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:split_combo_label",
+      "type": "function",
+      "name": "split_combo_label",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [186, 198],
+      "summary": "Splits a combined combo-program label string into its constituent major and minor program name parts.",
+      "tags": ["utility", "text-processing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_group_subjects",
+      "type": "function",
+      "name": "parse_group_subjects",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [201, 233],
+      "summary": "Parses a curriculum group's subject table into structured subject records with code, name, credits, and notes, handling missing/optional columns defensively.",
+      "tags": ["html-parsing", "scraper", "data-extraction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_pick_table",
+      "type": "function",
+      "name": "_pick_table",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [236, 246],
+      "summary": "Selects the most relevant table on a page by scoring each table's header set against a set of expected keyword columns.",
+      "tags": ["html-parsing", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_clos",
+      "type": "function",
+      "name": "parse_clos",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [257, 291],
+      "summary": "Extracts course learning outcome (CLO) codes and descriptions from a syllabus table, detecting the correct code/description columns heuristically.",
+      "tags": ["html-parsing", "scraper", "data-extraction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_syllabus_meta",
+      "type": "function",
+      "name": "parse_syllabus_meta",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [301, 311],
+      "summary": "Extracts labeled metadata fields (e.g. course title, credits) from a syllabus page by matching label elements and reading their following sibling text.",
+      "tags": ["html-parsing", "scraper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_first_url_in_row",
+      "type": "function",
+      "name": "_first_url_in_row",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [317, 337],
+      "summary": "Finds the first usable URL within a table row's cells, preferring a specified column's href before falling back to scanning all href-suffixed keys.",
+      "tags": ["html-parsing", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_materials",
+      "type": "function",
+      "name": "parse_materials",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [340, 379],
+      "summary": "Parses a syllabus page's course materials table into structured records including description, download URL, online flag, ISBN/edition metadata, and main-material flag.",
+      "tags": ["html-parsing", "scraper", "data-extraction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_first_link",
+      "type": "function",
+      "name": "_first_link",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [382, 394],
+      "summary": "Extracts and cleans the first URL segment from a raw href attribute string, handling multi-URL or query-appended hrefs.",
+      "tags": ["utility", "text-processing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_looks_like_download",
+      "type": "function",
+      "name": "_looks_like_download",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [397, 406],
+      "summary": "Heuristically determines whether a URL points to a downloadable file based on its path extension.",
+      "tags": ["utility", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_resolve_download",
+      "type": "function",
+      "name": "_resolve_download",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [409, 441],
+      "summary": "Resolves the final downloadable material URL for a materials-table row, trying a direct download-href column, then a resolvable link, and joining relative URLs against the page's base URL.",
+      "tags": ["html-parsing", "scraper", "url-resolution"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_sessions",
+      "type": "function",
+      "name": "parse_sessions",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "lineRange": [444, 476],
+      "summary": "Parses a syllabus page's weekly session/topic table into structured session records with resolved download links for session materials.",
+      "tags": ["html-parsing", "scraper", "data-extraction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/app/scrapers/parsers/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "BackEnd/intelipath-service/app/scrapers/parsers/__init__.py",
+      "summary": "Empty package marker file establishing app/scrapers/parsers as a Python package.",
+      "tags": ["package-init"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-service/scripts/migrate_roadmap.py",
+      "type": "file",
+      "name": "migrate_roadmap.py",
+      "filePath": "BackEnd/intelipath-service/scripts/migrate_roadmap.py",
+      "summary": "One-off migration/build script that reads career and roadmap CSV source files and transforms them into normalized node/edge CSVs (with slugged IDs, choice-group detection, and computed importance scores) for the roadmap data pipeline.",
+      "tags": ["migration", "data-pipeline", "script", "csv"],
+      "complexity": "complex",
+      "languageNotes": "Uses defaultdict-based grouping to detect 'choice parent' nodes (mutually-exclusive elective groups) and derives an importance ranking from a raw numeric weight column."
+    },
+    {
+      "id": "function:BackEnd/intelipath-service/scripts/migrate_roadmap.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "BackEnd/intelipath-service/scripts/migrate_roadmap.py",
+      "lineRange": [78, 229],
+      "summary": "Orchestrates the full roadmap migration: loads career and roadmap CSVs, builds slugged node IDs, detects choice-parent groups, computes importance scores, and writes the resulting nodes/edges CSV files plus a choice-group report.",
+      "tags": ["migration", "data-pipeline", "entry-point"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/demo/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "FrontEnd/demo/index.html",
+      "summary": "Standalone static HTML demo page for the frontend, likely used to preview UI concepts or components outside the main React application.",
+      "tags": ["markup", "demo", "static-page"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:SecureOAuth2CookieCodec",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:SecureOAuth2CookieCodec",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:encode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:SecureOAuth2CookieCodec",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:decode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:SecureOAuth2CookieCodec",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java",
+      "target": "class:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java:HttpCookieOAuth2AuthorizationRequestRepositoryTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java:HttpCookieOAuth2AuthorizationRequestRepositoryTest",
+      "target": "function:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java:storesAndLoadsAuthenticatedOAuthRequestFromCookie",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepositoryTest.java:storesAndLoadsAuthenticatedOAuthRequestFromCookie",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:SecureOAuth2CookieCodec",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/JwtAuthenticationFilterTest.java",
+      "target": "class:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/JwtAuthenticationFilterTest.java:JwtAuthenticationFilterTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java",
+      "target": "class:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java:SecureOAuth2CookieCodecTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java:SecureOAuth2CookieCodecTest",
+      "target": "function:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java:roundTripsOAuthAuthorizationRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java:roundTripsOAuthAuthorizationRequest",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java:SecureOAuth2CookieCodec",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java",
+      "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodecTest.java",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:table_records",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:find_syllabus_links",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_combo_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:split_combo_label",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_group_subjects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_pick_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_clos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_syllabus_meta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_first_url_in_row",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_materials",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_first_link",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_looks_like_download",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_resolve_download",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/app/scrapers/flm/parsers.py",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_sessions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:find_syllabus_links",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:table_records",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_group_subjects",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:table_records",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_clos",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:table_records",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_materials",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:table_records",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_materials",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_first_url_in_row",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_sessions",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:table_records",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_sessions",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_resolve_download",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:parse_sessions",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_first_url_in_row",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_resolve_download",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_first_link",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_resolve_download",
+      "target": "function:BackEnd/intelipath-service/app/scrapers/flm/parsers.py:_looks_like_download",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/scripts/migrate_roadmap.py",
+      "target": "function:BackEnd/intelipath-service/scripts/migrate_roadmap.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-service/scripts/migrate_roadmap.py",
+      "target": "function:BackEnd/intelipath-service/scripts/migrate_roadmap.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

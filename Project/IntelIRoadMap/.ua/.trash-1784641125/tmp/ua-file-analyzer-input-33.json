@@ -1,0 +1,147 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/anti-patterns.md",
+      "language": "markdown",
+      "sizeLines": 418,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/assets.md",
+      "language": "markdown",
+      "sizeLines": 406,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/color.md",
+      "language": "markdown",
+      "sizeLines": 95,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/component-cookbook.md",
+      "language": "markdown",
+      "sizeLines": 265,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/contract.md",
+      "language": "markdown",
+      "sizeLines": 25,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/copy.md",
+      "language": "markdown",
+      "sizeLines": 182,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-craft.md",
+      "language": "markdown",
+      "sizeLines": 626,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-theme.md",
+      "language": "markdown",
+      "sizeLines": 367,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/design-md.md",
+      "language": "markdown",
+      "sizeLines": 116,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/export-formats.md",
+      "language": "markdown",
+      "sizeLines": 329,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/floating-nav.md",
+      "language": "markdown",
+      "sizeLines": 89,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md",
+      "language": "markdown",
+      "sizeLines": 475,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/imagery-kit.md",
+      "language": "markdown",
+      "sizeLines": 170,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/interaction-and-states.md",
+      "language": "markdown",
+      "sizeLines": 208,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/layout-and-space.md",
+      "language": "markdown",
+      "sizeLines": 112,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures.md",
+      "language": "markdown",
+      "sizeLines": 89,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md",
+      "language": "markdown",
+      "sizeLines": 258,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/motion.md",
+      "language": "markdown",
+      "sizeLines": 109,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/preview-examples.md",
+      "language": "markdown",
+      "sizeLines": 49,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/responsive.md",
+      "language": "markdown",
+      "sizeLines": 138,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/anti-patterns.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/assets.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/color.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/component-cookbook.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/contract.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/copy.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-craft.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/custom-theme.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/design-md.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/export-formats.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/floating-nav.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/hero-enrichment.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/imagery-kit.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/interaction-and-states.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/layout-and-space.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/microinteractions.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/motion.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/preview-examples.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/responsive.md": []
+  }
+}

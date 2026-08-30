@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md",
+      "type": "document",
+      "name": "atmospheric.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md",
+      "summary": "Design-genre reference defining the 'atmospheric' visual/voice style for the Hallmark design skill, covering when to use it, allowed themes, voice guidelines, and nav/footer/stamp copy fixtures.",
+      "tags": ["documentation", "design-system", "style-guide", "reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md",
+      "type": "document",
+      "name": "editorial.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md",
+      "summary": "Design-genre reference defining the default 'editorial' visual/voice style for the Hallmark design skill, covering when to use it, allowed themes, voice guidelines, and nav/footer/stamp copy fixtures.",
+      "tags": ["documentation", "design-system", "style-guide", "reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md",
+      "type": "document",
+      "name": "modern-minimal.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md",
+      "summary": "Design-genre reference defining the 'modern-minimal' visual/voice style for the Hallmark design skill, covering when to use it, allowed themes, voice guidelines, and nav/footer/stamp copy fixtures.",
+      "tags": ["documentation", "design-system", "style-guide", "reference"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md",
+      "type": "document",
+      "name": "playful.md",
+      "filePath": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md",
+      "summary": "Design-genre reference defining the 'playful' visual/voice style for the Hallmark design skill, covering when to use it, allowed themes, voice guidelines, and nav/footer/stamp copy fixtures.",
+      "tags": ["documentation", "design-system", "style-guide", "reference"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md",
+      "target": "document:FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+/* Global App Styles */
+.app {
+  min-height: 100vh;
+}
+
+/* Loading spinner */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-bg);
+}
+* AI Badge */
+.ai-badge {
+  background-color: #eef2ff;
+  border: 1px solid #e0e7ff;
+}
+
+/* Custom Progress Bar */
+.custom-progress {
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 10px;
+}
+.custom-progress .progress-bar {
+  background-color: #3b66f5;
+  border-radius: 10px;
+}
+
+/* Cards */
+.card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Circular Chart */
+.progress-circle-container {
+  width: 120px;
+  height: 120px;
+}
+
+.circular-chart {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #e2e8f0;
+  stroke-width: 2.5;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+.blue .circle {
+  stroke: #3b66f5;
+}
+
+.percentage {
+  fill: #1e293b;
+  font-family: sans-serif;
+  font-size: 8px;
+  text-anchor: middle;
+}
+
+.percentage-label {
+  fill: #64748b;
+  font-size: 3px;
+  text-anchor: middle;
+}
+
+@keyframes progress {
+  0% { stroke-dasharray: 0 100; }
+}
+
+/* Roadmap Stepper */
+.roadmap-stepper {
+  padding: 0 10px;
+}
+.stepper-line {
+  height: 2px;
+  background-color: #e2e8f0;
+}
+.step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #94a3b8;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+.step-circle:hover {
+  transform: scale(1.1);
+  filter: brightness(1.05);
+}
+.step-circle.active {
+  background-color: #3b66f5;
+  border-color: #3b66f5;
+  color: white;
+}
+.step-circle.current {
+  background-color: #3b66f5;
+  border-color: #3b66f5;
+  color: white;
+  box-shadow: 0 0 0 4px rgba(59, 102, 245, 0.2);
+}
+.step-circle.locked {
+  background-color: #f1f5f9;
+}
+
+/* AI Mentor Card */
+.ai-mentor-card {
+  position: relative;
+  overflow: hidden;
+}
+.mentor-img-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+.mentor-robot-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  animation: float 3s ease-in-out infinite;
+}
+.robot-part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.robot-head {
+  z-index: 3;
+  width: 150px;
+  height: 150px;
+  top: -20px;
+  left: 0px;
+  animation: bob 3s ease-in-out infinite;
+}
+.robot-body {
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  top: 45px;
+  left: 15px;
+  animation: body-breathe 4s ease-in-out infinite;
+}
+.robot-arm-left {
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  top: 25px;
+  left: -15px;
+  animation: arm-float-left 3s ease-in-out infinite;
+}
+.robot-arm-right {
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  top: 25px;
+  left: 85px;
+  animation: arm-float-right 3.2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(6deg); }
+  75% { transform: translateY(-3px) rotate(-6deg); }
+}
+@keyframes body-breathe {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(2px) scale(0.98); }
+}
+@keyframes arm-float-left {
+  0%, 100% { transform: scaleY(-1) rotate(20deg) translateY(0px); }
+  50% { transform: scaleY(-1) rotate(30deg) translateY(-5px); }
+}
+@keyframes arm-float-right {
+  0%, 100% { transform: scaleY(-1) rotate(-20deg) translateY(0px); }
+  50% { transform: scaleY(-1) rotate(-30deg) translateY(-5px); }
+}
+.radar-circles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.radar-circles div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(59, 102, 245, 0.1);
+}
+.circle-1 { width: 100%; height: 100%; }
+.circle-2 { width: 150%; height: 150%; }
+.circle-3 { width: 200%; height: 200%; }
+
+/* Course Cards */
+.course-icon-bg {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Entrance Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.skill-gap-card {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.roadmap-card {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+/* Skill Gap Progress Bar Animation */
+@keyframes fillProgress {
+  from { width: 0 !important; }
+}
+
+.skill-gap-card .progress-bar {
+  animation: fillProgress 1.2s cubic-bezier(0.1, 0.7, 0.1, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+/* Roadmap Pulse Animation */
+@keyframes stepPulse {
+  0% { box-shadow: 0 0 0 0 rgba(59, 102, 245, 0.6); transform: scale(1); }
+  70% { box-shadow: 0 0 0 12px rgba(59, 102, 245, 0); transform: scale(1.05); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 102, 245, 0); transform: scale(1); }
+}
+
+.roadmap-stepper .step-circle.current {
+  animation: stepPulse 2s infinite;
+}

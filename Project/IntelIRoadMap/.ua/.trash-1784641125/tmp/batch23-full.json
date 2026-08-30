@@ -1,0 +1,33 @@
+{
+  "batchIndex": 23,
+  "files": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts",
+      "language": "typescript",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorDashboardPage.tsx",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/pages/MentorStudentsPage.tsx",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/pages/MentorDashboardPage.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/pages/MentorStudentsPage.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts"
+    ]
+  },
+  "neighborMap": {}
+}

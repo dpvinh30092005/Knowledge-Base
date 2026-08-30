@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ProjectFilterMVC2Template">
+  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" name="MyDB" password="trongkhanh" type="javax.sql.DataSource" url="jdbc:sqlserver://localhost:1433;databaseName=Sinhvien2K17;instanceName=SQL2017" username="sa"/>
+</Context>

@@ -1,0 +1,64 @@
+{
+  "nodes": [
+    {
+      "id": "table:BackEnd/intelipath-backend/data/CareerDataTemplate.csv:CareerDataTemplate",
+      "type": "table",
+      "name": "CareerDataTemplate.csv",
+      "filePath": "BackEnd/intelipath-backend/data/CareerDataTemplate.csv",
+      "summary": "Seed data template listing software engineering career paths (Frontend, Backend, Full Stack, Data Science, etc.) with prerequisite career relationships and descriptions, used to bootstrap the career catalog.",
+      "tags": ["database", "seed-data", "career-catalog", "csv-template"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/data/RoadmapDataTemplate.csv:RoadmapDataTemplate",
+      "type": "table",
+      "name": "RoadmapDataTemplate.csv",
+      "filePath": "BackEnd/intelipath-backend/data/RoadmapDataTemplate.csv",
+      "summary": "Large seed data template defining learning roadmap nodes per career/skill, including stage, unlock keys, weight, completion policy, required proficiency, evidence keywords, node hierarchy, and reference links, used to populate the roadmap structure.",
+      "tags": ["database", "seed-data", "roadmap", "csv-template", "learning-path"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/data/SkillDataTemplate.csv:SkillDataTemplate",
+      "type": "table",
+      "name": "SkillDataTemplate.csv",
+      "filePath": "BackEnd/intelipath-backend/data/SkillDataTemplate.csv",
+      "summary": "Seed data template mapping skills to categories, required careers, and importance level, used to populate the skill catalog referenced by roadmaps and career profiles.",
+      "tags": ["database", "seed-data", "skill-catalog", "csv-template"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/data/flm_overlay.json:flm_overlay",
+      "type": "table",
+      "name": "flm_overlay.json",
+      "filePath": "BackEnd/intelipath-backend/data/flm_overlay.json",
+      "summary": "Generated coverage overlay data (for the Backend career filter) reporting catalog skill coverage against university subjects, including a skill-to-subject coverage map, a gap list of missing skills with importance ratings, and summary counts.",
+      "tags": ["data", "coverage-report", "skill-gap-analysis", "json-data", "generated"],
+      "complexity": "moderate",
+      "languageNotes": "Structured as a JSON report with summary counts, a skill_coverage map (skill -> subject codes), and a gap array (skills not covered by any subject), likely produced by an offline analysis script rather than hand-authored."
+    }
+  ],
+  "edges": [
+    {
+      "source": "table:BackEnd/intelipath-backend/data/CareerDataTemplate.csv:CareerDataTemplate",
+      "target": "table:BackEnd/intelipath-backend/data/RoadmapDataTemplate.csv:RoadmapDataTemplate",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/data/RoadmapDataTemplate.csv:RoadmapDataTemplate",
+      "target": "table:BackEnd/intelipath-backend/data/SkillDataTemplate.csv:SkillDataTemplate",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/data/flm_overlay.json:flm_overlay",
+      "target": "table:BackEnd/intelipath-backend/data/SkillDataTemplate.csv:SkillDataTemplate",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,1047 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "type": "file",
+      "name": "AiServiceClient.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "summary": "Spring RestClient wrapper that calls the Python AI microservice for skill extraction, markdown extraction, job-scraping triggers, and FLM sync operations.",
+      "tags": [
+        "api-client",
+        "integration",
+        "ai-service",
+        "service"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses Spring's fluent RestClient builder API with three separately configured clients (rest, scraper, health) injected via constructor."
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:AiServiceClient",
+      "type": "class",
+      "name": "AiServiceClient",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "lineRange": [
+        19,
+        127
+      ],
+      "summary": "Central HTTP client class exposing methods to invoke the Python AI service's REST endpoints for skill extraction, document parsing, scraping, and FLM sync.",
+      "tags": [
+        "api-client",
+        "integration",
+        "http-client"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:extractSkills",
+      "type": "function",
+      "name": "extractSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "lineRange": [
+        41,
+        51
+      ],
+      "summary": "Sends job descriptions to the AI service's /api/extract-skills endpoint and returns extracted skills per document.",
+      "tags": [
+        "api-call",
+        "ai-integration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:extractMarkdown",
+      "type": "function",
+      "name": "extractMarkdown",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "lineRange": [
+        58,
+        66
+      ],
+      "summary": "Calls the AI service's /api/extract endpoint to convert a file URL into markdown text.",
+      "tags": [
+        "api-call",
+        "document-processing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:triggerTopCvScrape",
+      "type": "function",
+      "name": "triggerTopCvScrape",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "lineRange": [
+        72,
+        77
+      ],
+      "summary": "Triggers a scrape job on TopCV via the scraper microservice.",
+      "tags": [
+        "api-call",
+        "scraping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:triggerItviecScrape",
+      "type": "function",
+      "name": "triggerItviecScrape",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "lineRange": [
+        84,
+        89
+      ],
+      "summary": "Triggers a scrape job on ITviec via the scraper microservice.",
+      "tags": [
+        "api-call",
+        "scraping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:startFlmSync",
+      "type": "function",
+      "name": "startFlmSync",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "lineRange": [
+        100,
+        107
+      ],
+      "summary": "Starts an asynchronous FLM course-catalog sync job on the AI service.",
+      "tags": [
+        "api-call",
+        "sync"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:getFlmSyncStatus",
+      "type": "function",
+      "name": "getFlmSyncStatus",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "lineRange": [
+        110,
+        115
+      ],
+      "summary": "Polls the status of a previously started FLM sync job.",
+      "tags": [
+        "api-call",
+        "polling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:isHealthy",
+      "type": "function",
+      "name": "isHealthy",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "lineRange": [
+        118,
+        126
+      ],
+      "summary": "Performs a health check against the AI service's health endpoint, returning false on failure.",
+      "tags": [
+        "health-check",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "type": "file",
+      "name": "JobMarketTool.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "summary": "AI-agent tool that exposes job-market search capability to the LLM, matching recruitment postings by keyword against the database.",
+      "tags": [
+        "ai-tool",
+        "search",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:JobMarketTool",
+      "type": "class",
+      "name": "JobMarketTool",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "lineRange": [
+        17,
+        88
+      ],
+      "summary": "AI tool implementation providing keyword-based job search functionality callable by an AI agent.",
+      "tags": [
+        "ai-tool",
+        "function-calling"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:apply",
+      "type": "function",
+      "name": "apply",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "lineRange": [
+        29,
+        50
+      ],
+      "summary": "Entry point invoked by the AI agent; searches jobs by keyword and formats matching results into a tool response string.",
+      "tags": [
+        "ai-tool",
+        "entry-point"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:searchJobs",
+      "type": "function",
+      "name": "searchJobs",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "lineRange": [
+        58,
+        87
+      ],
+      "summary": "Performs multi-token relevance-scored search against the recruitment repository, falling back to per-token matching when an exact phrase match is empty.",
+      "tags": [
+        "search",
+        "ranking-algorithm"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "type": "file",
+      "name": "MarkItDownTool.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "summary": "AI-agent tool that converts a file at a given URL into markdown using the AI service, for use by the LLM during document analysis.",
+      "tags": [
+        "ai-tool",
+        "document-processing",
+        "api-handler"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java:MarkItDownTool",
+      "type": "class",
+      "name": "MarkItDownTool",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "lineRange": [
+        16,
+        52
+      ],
+      "summary": "AI tool wrapper delegating markdown extraction to AiServiceClient, with validation and error handling for the tool-calling interface.",
+      "tags": [
+        "ai-tool",
+        "function-calling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java:apply",
+      "type": "function",
+      "name": "apply",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "lineRange": [
+        26,
+        51
+      ],
+      "summary": "Validates the file URL and calls AiServiceClient.extractMarkdown, returning success or error tool responses for the AI agent.",
+      "tags": [
+        "ai-tool",
+        "entry-point",
+        "error-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "type": "file",
+      "name": "MarketTrendController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "summary": "REST controller exposing market-trend analytics endpoints (top hiring companies, skill trends, salary distribution) to the frontend.",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "market-trends"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:MarketTrendController",
+      "type": "class",
+      "name": "MarketTrendController",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "lineRange": [
+        19,
+        46
+      ],
+      "summary": "Spring REST controller delegating to MarketTrendService for job-market analytics endpoints.",
+      "tags": [
+        "api-handler",
+        "rest-controller"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getTopHiringCompanies",
+      "type": "function",
+      "name": "getTopHiringCompanies",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "GET endpoint returning the top companies by recruitment volume.",
+      "tags": [
+        "api-handler",
+        "endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getSkillTrends",
+      "type": "function",
+      "name": "getSkillTrends",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "lineRange": [
+        35,
+        39
+      ],
+      "summary": "GET endpoint returning skill demand trend data.",
+      "tags": [
+        "api-handler",
+        "endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getSalaryDistribution",
+      "type": "function",
+      "name": "getSalaryDistribution",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "lineRange": [
+        41,
+        45
+      ],
+      "summary": "GET endpoint returning salary distribution buckets across postings.",
+      "tags": [
+        "api-handler",
+        "endpoint"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "type": "file",
+      "name": "RecruitmentPostsController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "summary": "REST controller exposing recruitment post listings, company info, and recruitment detail endpoints backed by scraped job data.",
+      "tags": [
+        "api-handler",
+        "rest-controller",
+        "recruitment"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:RecruitmentPostsController",
+      "type": "class",
+      "name": "RecruitmentPostsController",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "lineRange": [
+        24,
+        114
+      ],
+      "summary": "Spring REST controller delegating to ScraperService for recruitment post, company, and recruitment detail endpoints.",
+      "tags": [
+        "api-handler",
+        "rest-controller"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getRecruitmentPosts",
+      "type": "function",
+      "name": "getRecruitmentPosts",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "lineRange": [
+        34,
+        59
+      ],
+      "summary": "GET endpoint listing all scraped recruitment posts with company and recruitment summaries.",
+      "tags": [
+        "api-handler",
+        "endpoint"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getCompanyInfos",
+      "type": "function",
+      "name": "getCompanyInfos",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "lineRange": [
+        61,
+        86
+      ],
+      "summary": "GET endpoint returning detailed company information by company ID.",
+      "tags": [
+        "api-handler",
+        "endpoint"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getRecruitmentInfos",
+      "type": "function",
+      "name": "getRecruitmentInfos",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "lineRange": [
+        88,
+        113
+      ],
+      "summary": "GET endpoint returning detailed recruitment information by recruitment ID.",
+      "tags": [
+        "api-handler",
+        "endpoint"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "type": "file",
+      "name": "MarketTrendResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "summary": "Response DTO container for market-trend API payloads, including nested company trend, skill trend, and salary trend data points.",
+      "tags": [
+        "data-model",
+        "dto",
+        "response"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java:MarketTrendResponse",
+      "type": "class",
+      "name": "MarketTrendResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "lineRange": [
+        9,
+        41
+      ],
+      "summary": "DTO holding nested response types (company trends, trend data points, salary buckets) returned by MarketTrendController endpoints.",
+      "tags": [
+        "data-model",
+        "dto"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "type": "file",
+      "name": "CompanyResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "summary": "Response DTO representing company profile data (name, logo, link, contacts) returned by the recruitment API.",
+      "tags": [
+        "data-model",
+        "dto",
+        "response"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java:CompanyResponse",
+      "type": "class",
+      "name": "CompanyResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "lineRange": [
+        11,
+        23
+      ],
+      "summary": "DTO for company details exposed via REST endpoints.",
+      "tags": [
+        "data-model",
+        "dto"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "type": "file",
+      "name": "RecruitmentPostResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "summary": "Response DTO combining a recruitment post ID with nested company and recruitment summary data for listing endpoints.",
+      "tags": [
+        "data-model",
+        "dto",
+        "response"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java:RecruitmentPostResponse",
+      "type": "class",
+      "name": "RecruitmentPostResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "lineRange": [
+        13,
+        49
+      ],
+      "summary": "DTO representing a recruitment post with embedded company and recruitment nested types.",
+      "tags": [
+        "data-model",
+        "dto"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "type": "file",
+      "name": "RecruitmentResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "summary": "Response DTO representing detailed recruitment posting data including salary, location, tags, and related metadata.",
+      "tags": [
+        "data-model",
+        "dto",
+        "response"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java:RecruitmentResponse",
+      "type": "class",
+      "name": "RecruitmentResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "lineRange": [
+        10,
+        26
+      ],
+      "summary": "DTO for detailed recruitment posting information returned by the recruitment detail endpoint.",
+      "tags": [
+        "data-model",
+        "dto"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "type": "file",
+      "name": "ScrapedCompanyResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "summary": "Response DTO representing a raw scraped company record (ID, signatures, infos) as returned by the Python scraper service.",
+      "tags": [
+        "data-model",
+        "dto",
+        "scraping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java:ScrapedCompanyResponse",
+      "type": "class",
+      "name": "ScrapedCompanyResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "lineRange": [
+        8,
+        18
+      ],
+      "summary": "DTO modeling a scraped company payload received from the AI/scraper microservice.",
+      "tags": [
+        "data-model",
+        "dto"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "type": "file",
+      "name": "ScrapedPostResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "summary": "Response DTO representing a raw scraped recruitment post record (post/company/recruitment IDs and expiry) from the scraper service.",
+      "tags": [
+        "data-model",
+        "dto",
+        "scraping"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java:ScrapedPostResponse",
+      "type": "class",
+      "name": "ScrapedPostResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "lineRange": [
+        6,
+        19
+      ],
+      "summary": "DTO modeling a scraped recruitment post payload received from the AI/scraper microservice.",
+      "tags": [
+        "data-model",
+        "dto"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:AiServiceClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:AiServiceClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:extractSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:extractSkills",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:extractMarkdown",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:extractMarkdown",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:triggerTopCvScrape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:triggerTopCvScrape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:triggerItviecScrape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:triggerItviecScrape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:startFlmSync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:startFlmSync",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:getFlmSyncStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:getFlmSyncStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:isHealthy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:isHealthy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:JobMarketTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:JobMarketTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:apply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:apply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:searchJobs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:searchJobs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java:MarkItDownTool",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java:MarkItDownTool",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java:apply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java:apply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:MarketTrendController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:MarketTrendController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getTopHiringCompanies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getTopHiringCompanies",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getSkillTrends",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getSkillTrends",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getSalaryDistribution",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java:getSalaryDistribution",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:RecruitmentPostsController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:RecruitmentPostsController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getRecruitmentPosts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getRecruitmentPosts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getCompanyInfos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getCompanyInfos",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getRecruitmentInfos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java:getRecruitmentInfos",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java:MarketTrendResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java:MarketTrendResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java:CompanyResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java:CompanyResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java:RecruitmentPostResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java:RecruitmentPostResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java:RecruitmentResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java:RecruitmentResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java:ScrapedCompanyResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java:ScrapedCompanyResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java:ScrapedPostResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java:ScrapedPostResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java:apply",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java:extractMarkdown",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java:apply",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java:str",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

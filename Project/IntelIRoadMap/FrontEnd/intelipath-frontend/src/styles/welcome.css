@@ -1,0 +1,74 @@
+/* ===================== */
+/* WELCOME PAGE ANIMATIONS */
+/* ===================== */
+
+/* AI Mentor Robot floating animations used in WelcomePage */
+.mentor-robot-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: float 3s ease-in-out infinite;
+}
+.robot-part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.robot-head {
+  z-index: 3;
+  width: 150px;
+  height: 150px;
+  top: -20px;
+  left: 0px;
+  animation: bob 3s ease-in-out infinite;
+}
+.robot-body {
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  top: 45px;
+  left: 15px;
+  animation: body-breathe 4s ease-in-out infinite;
+}
+.robot-arm-left {
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  top: 25px;
+  left: -15px;
+  animation: arm-float-left 3s ease-in-out infinite;
+}
+.robot-arm-right {
+  z-index: 2;
+  width: 80px;
+  height: 80px;
+  top: 25px;
+  left: 85px;
+  animation: arm-float-right 3.2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(6deg); }
+  75% { transform: translateY(-3px) rotate(-6deg); }
+}
+@keyframes body-breathe {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(2px) scale(0.98); }
+}
+@keyframes arm-float-left {
+  0%, 100% { transform: scaleY(-1) rotate(20deg) translateY(0px); }
+  50% { transform: scaleY(-1) rotate(30deg) translateY(-5px); }
+}
+@keyframes arm-float-right {
+  0%, 100% { transform: scaleY(-1) rotate(-20deg) translateY(0px); }
+  50% { transform: scaleY(-1) rotate(-30deg) translateY(-5px); }
+}
+

@@ -1,0 +1,123 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview",
+    "description": "InteliPath is a personalized career-orientation and learning-roadmap platform for software engineering students. The organization README explains the three-repository split (React frontend, Spring Boot backend, Python scraper service) and the platform's key features: an AI virtual mentor, dynamic roadmaps, skill-gap analysis, market pulse trends, e-portfolios, and counselor dashboards. Keep this map of features in mind — the rest of the tour walks through how each one is implemented.",
+    "nodeIds": ["document:profile/README.md"]
+  },
+  {
+    "order": 2,
+    "title": "Backend Entry Point",
+    "description": "The Spring Boot backend is the platform's core REST API. IntelipathBackendApplication.java is the `@SpringBootApplication` class that bootstraps the entire service — configuring component scanning, auto-configuration, and the embedded web server. Nearly every backend feature (auth, roadmaps, mentor, portfolio, counselor tools) is wired up and served from this process.",
+    "nodeIds": ["file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java"]
+  },
+  {
+    "order": 3,
+    "title": "Domain Model: User & Student",
+    "description": "User.java and Student.java are the two most depended-upon entities in the backend (35 and 27 incoming references respectively), forming the backbone of the JPA domain model. User captures core account identity, while Student extends that identity with roadmap progress, portfolio slug, and curriculum links — most other features (auth, roadmap, portfolio, counselor) build directly on these two entities.",
+    "nodeIds": [
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java"
+    ],
+    "languageLesson": "Spring Data JPA repositories are interfaces — extending JpaRepository generates CRUD and query implementations at runtime via dynamic proxies, so UserRepository never needs a hand-written implementation class."
+  },
+  {
+    "order": 4,
+    "title": "Authentication & Security",
+    "description": "SecurityConfig wires together the JWT filter chain, OAuth2 login (Google), password encoding, and which endpoints are public versus protected. AuthController and AuthServiceImpl implement the actual login/refresh/logout flows, including refresh-token rotation with a grace window and a magic-link password reset backed by hashed, single-use tokens. This security layer gates access to every other feature in the platform.",
+    "nodeIds": [
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SecurityConfig.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AuthController.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthServiceImpl.java"
+    ],
+    "languageLesson": "Spring Security filter chains process requests through an ordered pipeline; a custom JWT filter is inserted before the standard username/password filter so token-based auth is checked first."
+  },
+  {
+    "order": 5,
+    "title": "Career Roadmap & Skill Gap Engine",
+    "description": "SkillNode.java models a node in a career roadmap tree — capturing prerequisites, completion policy, and required proficiency — and is the backbone of the personalized roadmap feature described in the README. RoadmapController exposes roadmap fetching, progress updates, and node-selection endpoints, while SkillServiceImpl compares a student's recorded skills against a career's requirements to compute the skill-gap analysis shown on the dashboard.",
+    "nodeIds": [
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapController.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "AI Virtual Mentor (RAG Chat)",
+    "description": "VirtualMentorController exposes the AI chat feature from the README: session CRUD, streaming responses, file uploads, and knowledge ingestion. VirtualMentorServiceImpl implements the retrieval-augmented generation (RAG) pipeline — streaming responses from a vector store scoped to global knowledge plus the requesting student's own documents, so one student's uploaded material never leaks into another's chat.",
+    "nodeIds": [
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java"
+    ]
+  },
+  {
+    "order": 7,
+    "title": "E-Portfolio & GitHub Import",
+    "description": "PortfolioController manages a student's own portfolio (config, projects, education, mentor review requests), while PublicPortfolioController exposes a public, unauthenticated view by slug for the industry-mentor actor described in the README. GithubPortfolioServiceImpl auto-generates portfolio projects by parsing a GitHub URL, fetching repo metadata, and running AI analysis to match evidence of skills — directly implementing the 'E-Portfolio auto-generated from GitHub' feature.",
+    "nodeIds": [
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PortfolioController.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PublicPortfolioController.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/GithubPortfolioServiceImpl.java"
+    ]
+  },
+  {
+    "order": 8,
+    "title": "Counselor Dashboard",
+    "description": "CounselorController and CounselorServiceImpl implement the academic-counselor actor from the README: career/skill statistics, searching students missing key skills, feedback CRUD, and bulk Excel import/export of student rosters. This is the platform's monitoring surface, letting counselors track student progress across the same roadmap and skill-gap data introduced in Step 5.",
+    "nodeIds": [
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java"
+    ]
+  },
+  {
+    "order": 9,
+    "title": "Database Schema",
+    "description": "The Postgres init script defines the full data model backing everything covered so far: users and students (Step 3), skill_nodes and student_progress (Step 5), rag_documents (Step 6's RAG pipeline), and refresh_tokens/password_reset_tokens (Step 4's auth flows). It also introduces fpt_curricula, which ties into the FLM curriculum scraper covered next.",
+    "nodeIds": [
+      "table:BackEnd/intelipath-backend/docker/postgres/init/01_init_intelipath.sql"
+    ],
+    "languageLesson": "This init script runs once at container bootstrap via Postgres's docker-entrypoint-initdb.d convention — it is not a repeatable migration, so schema changes after first boot require a separate migration tool."
+  },
+  {
+    "order": 10,
+    "title": "Python Scraper Service Entry Point",
+    "description": "The intelipath-service is InteliPath's third component: a FastAPI microservice implementing the 'Market Pulse' job-market trend feature from the README. main.py is its entry point, wiring together routers for document extraction, FLM curriculum sync, and recruitment scraping behind a lifespan hook, plus exposing an MCP server for LLM-agent tool access.",
+    "nodeIds": ["file:BackEnd/intelipath-service/app/main.py"]
+  },
+  {
+    "order": 11,
+    "title": "Market Data Scrapers",
+    "description": "topcv_parser.py and itviec_parser.py scrape Vietnamese job boards for recruitment listings, normalizing fields like salary and location before persisting Company/Recruitment records. processor.py then post-processes raw scraped data through an LLM service to summarize and structure it into ProcessedCompany/ProcessedRecruitment records — this pipeline is what powers the Market Pulse trends surfaced to students.",
+    "nodeIds": [
+      "file:BackEnd/intelipath-service/app/scrapers/parsers/topcv_parser.py",
+      "file:BackEnd/intelipath-service/app/scrapers/parsers/itviec_parser.py",
+      "file:BackEnd/intelipath-service/app/scrapers/processor.py"
+    ],
+    "languageLesson": "Python generators and context managers are common in scraping pipelines for streaming large result sets and ensuring database sessions/HTTP clients are always closed, even on parse errors."
+  },
+  {
+    "order": 12,
+    "title": "Frontend Entry Point & Feature Modules",
+    "description": "main.tsx mounts the React application with its context providers, and App.tsx renders the route tree and shared UI chrome. The frontend is organized into feature modules — auth, student-dashboard, ai-mentor, counselor-dashboard, admin — each with a barrel index.ts that re-exports its public components, mirroring the backend features covered in Steps 4-8.",
+    "nodeIds": [
+      "file:FrontEnd/intelipath-frontend/src/main.tsx",
+      "file:FrontEnd/intelipath-frontend/src/App.tsx",
+      "file:FrontEnd/intelipath-frontend/src/features/ai-mentor/index.ts",
+      "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/index.ts"
+    ],
+    "languageLesson": "TypeScript barrel files (index.ts re-exporting from sibling modules) create a clean public API per feature folder, so consumers import from 'features/ai-mentor' instead of reaching into internal file paths. Note: the frontend also ships a large .agents/skills/hallmark/ reference tree used only by AI coding tools for design guidance — it is not part of the running application and is skipped in this tour."
+  },
+  {
+    "order": 13,
+    "title": "Containerized Deployment",
+    "description": "docker-compose.yml orchestrates all three services together: a pgvector-backed Postgres database, the Python AI/scraper service, and the Spring Boot backend, with health checks ensuring Postgres is ready before the backend and scraper start. The backend's Dockerfile uses a multi-stage build — a Maven builder stage compiles the JAR, then a slim Eclipse Temurin JRE Alpine image runs it — keeping the production image small while still building from source.",
+    "nodeIds": [
+      "service:BackEnd/intelipath-backend/docker-compose.yml",
+      "service:BackEnd/intelipath-backend/Dockerfile",
+      "service:BackEnd/intelipath-service/Dockerfile"
+    ],
+    "languageLesson": "Multi-stage Docker builds use multiple FROM statements: the builder stage carries build-time tools (Maven, JDK) that never ship to production, while the final stage copies only the compiled artifact into a minimal runtime image."
+  }
+]

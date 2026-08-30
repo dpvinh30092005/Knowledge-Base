@@ -1,0 +1,125 @@
+===== p351 =====
+Next, T is used to declare an object called ob, as shown here:
+T ob; // declare an object of type T
+As explained, T is a placeholder for the actual type that will be specified when a Gen object
+is created. Thus, ob will be an object of the type passed to T. For example, if type String is
+passed to T, then in that instance, ob will be of type String.
+Now consider Gen’s constructor:
+Gen(T o) {
+ob = o;
+}
+Notice that its parameter, o, is of type T. This means that the actual type of o is determined
+by the type passed to T when a Gen object is created. Also, because both the parameter o
+and the member variable ob are of type T, they will both be of the same actual type when a
+Gen object is created.
+The type parameter T can also be used to specify the return type of a method, as is the
+case with the getob( ) method, shown here:
+T getob() {
+return ob;
+}
+Because ob is also of type T, its type is compatible with the return type specified by getob( ).
+The showType( ) method displays the type of T by calling getName( ) on the Class object
+returned by the call to getClass( ) on ob. The getClass( ) method is defined by Object and is
+thus a member of all class types. It returns a Class object that corresponds to the type of the
+class of the object on which it is called. Class defines the getName( ) method, which returns
+a string representation of the class name.
+The GenDemo class demonstrates the generic Gen class. It first creates a version of Gen
+for integers, as shown here:
+Gen<Integer> iOb;
+Look closely at this declaration. First, notice that the type Integer is specified within the
+angle brackets after Gen. In this case, Integer is a type argument that is passed to Gen’s type
+parameter, T. This effectively creates a version of Gen in which all references to T are translated
+into references to Integer. Thus, for this declaration, ob is of type Integer, and the return type
+of getob( ) is of type Integer.
+Before moving on, it’s necessary to state that the Java compiler does not actually create
+different versions of Gen, or of any other generic class. Although it’s helpful to think in
+these terms, it is not what actually happens. Instead, the compiler removes all generic type
+information, substituting the necessary casts, to make your code behave as if a specific version
+of Gen were created. Thus, there is really only one version of Gen that actually exists in your
+program. The process of removing generic type information is called erasure, and we will
+return to this topic later in this chapter.
+318
+P a r t I :
+T h e J a v a L a n g u a g e
+
+===== p352 =====
+The next line assigns to iOb a reference to an instance of an Integer version of the Gen
+class:
+iOb = new Gen<Integer>(88);
+Notice that when the Gen constructor is called, the type argument Integer is also specified.
+This is necessary because the type of the object (in this case iOb) to which the reference is
+being assigned is of type Gen<Integer>. Thus, the reference returned by new must also be
+of type Gen<Integer>. If it isn’t, a compile-time error will result. For example, the following
+assignment will cause a compile-time error:
+iOb = new Gen<Double>(88.0); // Error!
+Because iOb is of type Gen<Integer>, it can’t be used to refer to an object of Gen<Double>.
+This type checking is one of the main benefits of generics because it ensures type safety.
+As the comments in the program state, the assignment
+iOb = new Gen<Integer>(88);
+makes use of autoboxing to encapsulate the value 88, which is an int, into an Integer. This
+works because Gen<Integer> creates a constructor that takes an Integer argument. Because
+an Integer is expected, Java will automatically box 88 inside one. Of course, the assignment
+could also have been written explicitly, like this:
+iOb = new Gen<Integer>(new Integer(88));
+However, there would be no benefit to using this version.
+The program then displays the type of ob within iOb, which is Integer. Next, the program
+obtains the value of ob by use of the following line:
+int v = iOb.getob();
+Because the return type of getob( ) is T, which was replaced by Integer when iOb was
+declared, the return type of getob( ) is also Integer, which unboxes into int when assigned
+to v (which is an int). Thus, there is no need to cast the return type of getob( ) to Integer.
+Of course, it’s not necessary to use the auto-unboxing feature. The preceding line could
+have been written like this, too:
+int v = iOb.getob().intValue();
+However, the auto-unboxing feature makes the code more compact.
+Next, GenDemo declares an object of type Gen<String>:
+Gen<String> strOb = new Gen<String>("Generics Test");
+Because the type argument is String, String is substituted for T inside Gen. This creates
+(conceptually) a String version of Gen, as the remaining lines in the program demonstrate.
+C h a p t e r 1 4 :
+G e n e r i c s
+319
+
+===== p353 =====
+Generics Work Only with Objects
+When declaring an instance of a generic type, the type argument passed to the type parameter
+must be a class type. You cannot use a primitive type, such as int or char. For example, with
+Gen, it is possible to pass any class type to T, but you cannot pass a primitive type to a type
+parameter. Therefore, the following declaration is illegal:
+Gen<int> strOb = new Gen<int>(53); // Error, can't use primitive type
+Of course, not being able to specify a primitive type is not a serious restriction because you
+can use the type wrappers (as the preceding example did) to encapsulate a primitive type.
+Further, Java’s autoboxing and auto-unboxing mechanism makes the use of the type wrapper
+transparent.
+Generic Types Differ Based on Their Type Arguments
+A key point to understand about generic types is that a reference of one specific version of a
+generic type is not type compatible with another version of the same generic type. For example,
+assuming the program just shown, the following line of code is in error and will not compile:
+iOb = strOb; // Wrong!
+Even though both iOb and strOb are of type Gen<T>, they are references to different types
+because their type parameters differ. This is part of the way that generics add type safety and
+prevent errors.
+How Generics Improve Type Safety
+At this point, you might be asking yourself the following question: Given that the same
+functionality found in the generic Gen class can be achieved without generics, by simply
+specifying Object as the data type and employing the proper casts, what is the benefit of
+making Gen generic? The answer is that generics automatically ensure the type safety of all
+operations involving Gen. In the process, they eliminate the need for you to enter casts and
+to type-check code by hand.
+To understand the benefits of generics, first consider the following program that creates
+a non-generic equivalent of Gen:
+// NonGen is functionally equivalent to Gen
+// but does not use generics.
+class NonGen {
+Object ob; // ob is now of type Object
+// Pass the constructor a reference to
+// an object of type Object
+NonGen(Object o) {
+ob = o;
+}
+// Return type Object.
+Object getob() {
+return ob;
+320
+P a r t I :
+T h e J a v a L a n g u a g e

@@ -1,0 +1,277 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/atmospheric.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 69,
+      "nonEmptyLines": 48,
+      "sections": [
+        {
+          "heading": "Genre — atmospheric",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "When to pick it",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Themes that belong",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Voice",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "What this genre allows",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "What this genre disallows",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "Voice fixtures",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "Nav and footer voice",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "Stamp signature",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "Reference register",
+          "level": 2,
+          "line": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/editorial.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 72,
+      "nonEmptyLines": 49,
+      "sections": [
+        {
+          "heading": "Genre — editorial (default)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "When to pick it",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Themes that belong",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Voice",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "What this genre allows",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "What this genre disallows",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Voice fixtures",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "Nav and footer voice",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "Stamp signature",
+          "level": 2,
+          "line": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/modern-minimal.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 71,
+      "nonEmptyLines": 49,
+      "sections": [
+        {
+          "heading": "Genre — modern-minimal",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "When to pick it",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Themes that belong",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Voice",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "What this genre allows",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "What this genre disallows",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Voice fixtures",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Nav and footer voice",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "Stamp signature",
+          "level": 2,
+          "line": 63
+        },
+        {
+          "heading": "Reference register (for the LLM, not credited to anyone)",
+          "level": 2,
+          "line": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/genres/playful.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 70,
+      "nonEmptyLines": 49,
+      "sections": [
+        {
+          "heading": "Genre — playful",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "When to pick it",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Themes that belong",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Voice",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "What this genre allows",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "What this genre disallows",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "Voice fixtures",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "Nav and footer voice",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "Stamp signature",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "Reference register",
+          "level": 2,
+          "line": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    }
+  ]
+}

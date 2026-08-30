@@ -1,0 +1,35 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/slop-test.md",
+      "language": "markdown",
+      "sizeLines": 192,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/structure.md",
+      "language": "markdown",
+      "sizeLines": 160,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/study.md",
+      "language": "markdown",
+      "sizeLines": 509,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/typography.md",
+      "language": "markdown",
+      "sizeLines": 243,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/slop-test.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/structure.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/study.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/typography.md": []
+  }
+}

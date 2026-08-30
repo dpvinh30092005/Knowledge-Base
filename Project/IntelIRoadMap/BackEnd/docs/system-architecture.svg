@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1010" width="1440" height="1010" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowBoth" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#00838f"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="1010" fill="#ffffff"/>
+
+  <!-- ============ TITLE ============ -->
+  <text x="40" y="46" font-size="25" font-weight="700" fill="#0f172a">InteliPath — System Architecture</text>
+  <text x="40" y="72" font-size="13" fill="#64748b">4 repositories · 3 runtime services · 1 PostgreSQL instance hosting 2 separate databases</text>
+
+  <!-- ============ TIER BANDS ============ -->
+  <rect x="130" y="100" width="940" height="90"  rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="130" y="220" width="940" height="80"  rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="130" y="350" width="940" height="265" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="130" y="660" width="940" height="150" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+
+  <text transform="translate(112,145) rotate(-90)" text-anchor="middle" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94a3b8">CLIENT</text>
+  <text transform="translate(112,260) rotate(-90)" text-anchor="middle" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94a3b8">EDGE</text>
+  <text transform="translate(112,483) rotate(-90)" text-anchor="middle" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94a3b8">APPLICATION</text>
+  <text transform="translate(112,735) rotate(-90)" text-anchor="middle" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94a3b8">DATA</text>
+
+  <!-- ============ CLIENT ============ -->
+  <rect x="380" y="118" width="400" height="60" rx="9" fill="#ffffff" stroke="#00838f" stroke-width="1.6"/>
+  <text x="580" y="142" text-anchor="middle" font-size="14.5" font-weight="700" fill="#0f172a">React 19 SPA — Vite 8 · TypeScript 6</text>
+  <text x="580" y="163" text-anchor="middle" font-size="11" fill="#64748b">Redux Toolkit · React Router 7 · Tailwind 4 · @xyflow/react + dagre</text>
+
+  <!-- ============ EDGE ============ -->
+  <rect x="380" y="232" width="400" height="58" rx="9" fill="#ffffff" stroke="#00838f" stroke-width="1.6"/>
+  <text x="580" y="253" text-anchor="middle" font-size="14.5" font-weight="700" fill="#0f172a">Nginx — on the host, not containerised</text>
+  <text x="580" y="272" text-anchor="middle" font-size="11" fill="#64748b">TLS · serves the static build · SPA fallback · 32M upload cap</text>
+  <text x="580" y="287" text-anchor="middle" font-size="10" fill="#94a3b8">proxies /api · /oauth2 · /login/oauth2 → 127.0.0.1:8080</text>
+
+  <!-- ============ APPLICATION : Spring Boot ============ -->
+  <rect x="155" y="380" width="420" height="215" rx="9" fill="#ffffff" stroke="#00838f" stroke-width="2"/>
+  <rect x="155" y="380" width="420" height="30" rx="9" fill="#00838f"/>
+  <rect x="155" y="400" width="420" height="10" fill="#00838f"/>
+  <text x="171" y="401" font-size="13.5" font-weight="700" fill="#ffffff">Spring Boot 3.5.15  ·  :8080</text>
+  <text x="171" y="432" font-size="10.5" font-weight="700" fill="#00838f" letter-spacing="0.6">JAVA 21 — container intelipath-backend</text>
+
+  <text x="171" y="457" font-size="11.5" fill="#334155">Controller → Service → ServiceImpl → Repository → Entity</text>
+  <text x="171" y="478" font-size="11.5" fill="#334155">22 REST controllers · Mappers for entity ↔ DTO</text>
+  <text x="171" y="499" font-size="11.5" fill="#334155">Spring Security · JJWT access + refresh · OAuth2 client</text>
+  <text x="171" y="520" font-size="11.5" fill="#334155">Spring AI 1.1.8 — RAG retrieval over pgvector</text>
+  <text x="171" y="541" font-size="11.5" fill="#334155">LLM function-calling tools: StudentProgress ·</text>
+  <text x="171" y="559" font-size="11.5" fill="#334155">FptCurriculum · JobMarket · MarkItDown</text>
+  <text x="171" y="580" font-size="11.5" fill="#334155">JobScrapingScheduler — daily cron 09:00</text>
+
+  <!-- ============ APPLICATION : FastAPI ============ -->
+  <rect x="650" y="380" width="400" height="215" rx="9" fill="#ffffff" stroke="#00838f" stroke-width="2"/>
+  <rect x="650" y="380" width="400" height="30" rx="9" fill="#006064"/>
+  <rect x="650" y="400" width="400" height="10" fill="#006064"/>
+  <text x="666" y="401" font-size="13.5" font-weight="700" fill="#ffffff">FastAPI  ·  :8000</text>
+  <text x="666" y="432" font-size="10.5" font-weight="700" fill="#006064" letter-spacing="0.6">PYTHON — container intelipath-service</text>
+
+  <text x="666" y="457" font-size="11.5" fill="#334155">Async scrape jobs — 202 + jobId, client polls</text>
+  <text x="666" y="478" font-size="11.5" fill="#334155">Scrapers: curl_cffi · BeautifulSoup4 · Selenium</text>
+  <text x="666" y="499" font-size="11.5" fill="#334155">markitdown — PDF / DOCX / image → markdown</text>
+  <text x="666" y="520" font-size="11.5" fill="#334155">Per-posting LLM skill extraction</text>
+  <text x="666" y="541" font-size="11.5" fill="#334155">MCP server mounted at /mcp (fastmcp)</text>
+  <text x="666" y="562" font-size="11.5" fill="#334155">SQLAlchemy · Pydantic Settings</text>
+
+  <!-- ============ DATA ============ -->
+  <rect x="300" y="680" width="750" height="120" rx="9" fill="#ffffff" stroke="#00838f" stroke-width="2"/>
+  <text x="675" y="707" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">PostgreSQL 16 + pgvector — container intelipath-postgres</text>
+
+  <rect x="325" y="722" width="350" height="62" rx="7" fill="#f0fafa" stroke="#b6dfe2"/>
+  <text x="340" y="744" font-size="12.5" font-weight="700" fill="#006064">database  intelipath</text>
+  <text x="340" y="764" font-size="10.5" fill="#475569">users · students · skill_nodes · student_progress</text>
+  <text x="340" y="778" font-size="10.5" fill="#475569">rag_documents + vector store · refresh_tokens</text>
+
+  <rect x="690" y="722" width="335" height="62" rx="7" fill="#f0fafa" stroke="#b6dfe2"/>
+  <text x="705" y="744" font-size="12.5" font-weight="700" fill="#006064">database  scraper</text>
+  <text x="705" y="764" font-size="10.5" fill="#475569">raw companies · recruitments · posts</text>
+  <text x="705" y="778" font-size="10.5" fill="#475569">isolated — no access to user tables</text>
+
+  <!-- ============ EXTERNAL ============ -->
+  <text x="1250" y="90" text-anchor="middle" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#94a3b8">EXTERNAL</text>
+
+  <rect x="1100" y="115" width="300" height="66" rx="9" fill="#fffdf5" stroke="#d9c48a" stroke-width="1.5"/>
+  <text x="1250" y="140" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">OAuth 2.0 providers</text>
+  <text x="1250" y="160" text-anchor="middle" font-size="11" fill="#64748b">Google · GitHub</text>
+  <text x="1250" y="175" text-anchor="middle" font-size="9.5" fill="#94a3b8">flow driven by Spring OAuth2 client on the backend</text>
+
+  <rect x="1100" y="380" width="300" height="70" rx="9" fill="#fffdf5" stroke="#d9c48a" stroke-width="1.5"/>
+  <text x="1250" y="406" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">OpenAI API</text>
+  <text x="1250" y="425" text-anchor="middle" font-size="11" fill="#64748b">chat completions · embeddings</text>
+  <text x="1250" y="440" text-anchor="middle" font-size="9.5" fill="#94a3b8">used by both services</text>
+
+  <rect x="1100" y="505" width="300" height="70" rx="9" fill="#fffdf5" stroke="#d9c48a" stroke-width="1.5"/>
+  <text x="1250" y="531" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Job boards</text>
+  <text x="1250" y="550" text-anchor="middle" font-size="11" fill="#64748b">ITviec (daily) · TopCV</text>
+  <text x="1250" y="565" text-anchor="middle" font-size="9.5" fill="#94a3b8">optional residential proxy</text>
+
+  <!-- ============ CONNECTIONS ============ -->
+
+  <!-- SPA -> OAuth -->
+  <line x1="782" y1="151" x2="1094" y2="151" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="938" y="134" text-anchor="middle" font-size="10" fill="#64748b">browser redirect, initiated by the backend</text>
+  <text x="938" y="168" text-anchor="middle" font-size="9.5" fill="#94a3b8">callback → /login/oauth2/code/{provider}</text>
+
+  <!-- SPA -> Nginx -->
+  <line x1="580" y1="178" x2="580" y2="226" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="592" y="206" font-size="10" fill="#64748b">HTTPS 443</text>
+
+  <!-- Nginx -> Backend -->
+  <path d="M 430 290 V 340 H 250 V 374" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="300" y="333" font-size="10" fill="#64748b">/api  ·  JWT bearer</text>
+
+  <!-- Backend <-> FastAPI -->
+  <line x1="577" y1="487" x2="648" y2="487" stroke="#00838f" stroke-width="2" marker-end="url(#arrowBoth)" marker-start="url(#arrowBoth)"/>
+  <text x="612" y="478" text-anchor="middle" font-size="9.5" font-weight="700" fill="#00838f">x-api-key</text>
+  <text x="612" y="504" text-anchor="middle" font-size="9" fill="#64748b">AiServiceClient</text>
+
+  <!-- Backend -> OpenAI -->
+  <path d="M 545 374 V 318 H 1250 V 374" fill="none" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="900" y="311" text-anchor="middle" font-size="10" fill="#64748b">Spring AI — embeddings, chat, tool calls</text>
+
+  <!-- FastAPI -> OpenAI -->
+  <line x1="1052" y1="415" x2="1094" y2="415" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- FastAPI -> Job boards -->
+  <line x1="1052" y1="540" x2="1094" y2="540" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Backend -> Postgres -->
+  <line x1="350" y1="597" x2="350" y2="674" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="360" y="633" font-size="10" fill="#64748b">Spring Data JPA / Hibernate</text>
+
+  <!-- FastAPI -> Postgres -->
+  <line x1="850" y1="597" x2="850" y2="674" stroke="#475569" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="860" y="633" font-size="10" fill="#64748b">SQLAlchemy</text>
+
+  <!-- ============ FOOTER : repos + deployment ============ -->
+  <line x1="40" y1="848" x2="1400" y2="848" stroke="#e2e8f0"/>
+
+  <text x="40" y="878" font-size="11" font-weight="700" letter-spacing="1.2" fill="#94a3b8">REPOSITORIES</text>
+  <text x="40"  y="901" font-size="11.5" font-weight="700" fill="#0f172a">intelipath-frontend</text>
+  <text x="172" y="901" font-size="11.5" fill="#64748b">React SPA</text>
+  <text x="330" y="901" font-size="11.5" font-weight="700" fill="#0f172a">intelipath-backend</text>
+  <text x="462" y="901" font-size="11.5" fill="#64748b">Spring Boot API</text>
+
+  <text x="40"  y="921" font-size="11.5" font-weight="700" fill="#0f172a">intelipath-service</text>
+  <text x="172" y="921" font-size="11.5" fill="#64748b">FastAPI scraper</text>
+  <text x="330" y="921" font-size="11.5" font-weight="700" fill="#0f172a">infrastructure</text>
+  <text x="462" y="921" font-size="11.5" fill="#64748b">compose · nginx · DB init</text>
+
+  <text x="700" y="878" font-size="11" font-weight="700" letter-spacing="1.2" fill="#94a3b8">DEPLOYMENT</text>
+  <text x="700" y="901" font-size="11.5" fill="#334155">Docker Compose brings up postgres → ai-service → backend, each gated on the previous health check.</text>
+  <text x="700" y="921" font-size="11.5" fill="#334155">Nginx runs on the host, not in a container. Compose reads a single .env from intelipath-backend,</text>
+  <text x="700" y="941" font-size="11.5" fill="#334155">so no credential is duplicated into the infrastructure repo.</text>
+
+  <text x="40" y="967" font-size="10.5" fill="#94a3b8">The backend container binds to 127.0.0.1 only, so Nginx is the sole route in from the internet. Only Spring Boot reaches the application database; the Python service is confined to its own. Every Java → Python call passes through AiServiceClient.</text>
+
+</svg>

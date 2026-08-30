@@ -1,0 +1,6591 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 27,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 27,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 27,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-service/app/api/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/endpoints/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/endpoints/extraction.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 61,
+      "functions": [
+        {
+          "name": "extract_content",
+          "startLine": 18,
+          "endLine": 28,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "_regex_extract",
+          "startLine": 47,
+          "endLine": 51,
+          "params": [
+            "desc"
+          ]
+        },
+        {
+          "name": "_extract_one",
+          "startLine": 54,
+          "endLine": 62,
+          "params": [
+            "desc"
+          ]
+        },
+        {
+          "name": "extract_skills",
+          "startLine": 66,
+          "endLine": 74,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "extract_content",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "_regex_extract",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "_extract_one",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "extract_skills",
+          "line": 65,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "extract_content",
+          "callee": "logger.info",
+          "lineNumber": 19
+        },
+        {
+          "caller": "extract_content",
+          "callee": "extract_markdown_from_url",
+          "lineNumber": 21
+        },
+        {
+          "caller": "extract_content",
+          "callee": "logger.error",
+          "lineNumber": 24
+        },
+        {
+          "caller": "extract_content",
+          "callee": "str",
+          "lineNumber": 24
+        },
+        {
+          "caller": "extract_content",
+          "callee": "HTTPException",
+          "lineNumber": 25
+        },
+        {
+          "caller": "extract_content",
+          "callee": "str",
+          "lineNumber": 25
+        },
+        {
+          "caller": "extract_content",
+          "callee": "logger.error",
+          "lineNumber": 27
+        },
+        {
+          "caller": "extract_content",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "extract_content",
+          "callee": "HTTPException",
+          "lineNumber": 28
+        },
+        {
+          "caller": "extract_content",
+          "callee": "str",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_regex_extract",
+          "callee": "_SKILL_PATTERNS.items",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_regex_extract",
+          "callee": "pattern.search",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_extract_one",
+          "callee": "llm_service.is_enabled",
+          "lineNumber": 58
+        },
+        {
+          "caller": "_extract_one",
+          "callee": "llm_service.extract_skills",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_extract_one",
+          "callee": "_regex_extract",
+          "lineNumber": 62
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "llm_service.is_enabled",
+          "lineNumber": 67
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "logger.info",
+          "lineNumber": 68
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "len",
+          "lineNumber": 68
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "asyncio.to_thread",
+          "lineNumber": 71
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "_extract_one",
+          "lineNumber": 71
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "logger.info",
+          "lineNumber": 73
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "SkillExtractResponse",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/flm_routes.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "start_flm_sync",
+          "startLine": 30,
+          "endLine": 36,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "get_flm_sync",
+          "startLine": 40,
+          "endLine": 54,
+          "params": [
+            "job_id"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "FlmSyncRequest",
+          "startLine": 20,
+          "endLine": 26,
+          "methods": [],
+          "properties": [
+            "cookie",
+            "curid",
+            "prefixes",
+            "catalog",
+            "career"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FlmSyncRequest",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "start_flm_sync",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "get_flm_sync",
+          "line": 39,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "start_flm_sync",
+          "callee": "req.cookie.strip",
+          "lineNumber": 31
+        },
+        {
+          "caller": "start_flm_sync",
+          "callee": "HTTPException",
+          "lineNumber": 32
+        },
+        {
+          "caller": "start_flm_sync",
+          "callee": "HTTPException",
+          "lineNumber": 34
+        },
+        {
+          "caller": "start_flm_sync",
+          "callee": "sync_job.start_job",
+          "lineNumber": 35
+        },
+        {
+          "caller": "get_flm_sync",
+          "callee": "sync_job.get_job",
+          "lineNumber": 41
+        },
+        {
+          "caller": "get_flm_sync",
+          "callee": "HTTPException",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/recruitment_routes.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 98,
+      "nonEmptyLines": 78,
+      "functions": [
+        {
+          "name": "_blocked_detail",
+          "startLine": 18,
+          "endLine": 22,
+          "params": [
+            "source",
+            "exc"
+          ]
+        },
+        {
+          "name": "_process_and_collect",
+          "startLine": 25,
+          "endLine": 54,
+          "params": [
+            "db"
+          ]
+        },
+        {
+          "name": "_validate_limit",
+          "startLine": 57,
+          "endLine": 61,
+          "params": [
+            "limit"
+          ]
+        },
+        {
+          "name": "start_topcv_scrape",
+          "startLine": 70,
+          "endLine": 81,
+          "params": [
+            "limit",
+            "db"
+          ]
+        },
+        {
+          "name": "start_itviec_scrape",
+          "startLine": 90,
+          "endLine": 98,
+          "params": [
+            "limit",
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_blocked_detail",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "_process_and_collect",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "_validate_limit",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "start_topcv_scrape",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "start_itviec_scrape",
+          "line": 84,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_process_and_collect",
+          "callee": "process_unprocessed_data",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "db.query(ProcessedCompany).all",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "db.query",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "db.query(ProcessedRecruitment).all",
+          "lineNumber": 35
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "db.query",
+          "lineNumber": 35
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "db.query(RecruitmentPost).all",
+          "lineNumber": 36
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "db.query",
+          "lineNumber": 36
+        },
+        {
+          "caller": "to_dict",
+          "callee": "obj.__dict__.items",
+          "lineNumber": 39
+        },
+        {
+          "caller": "to_dict",
+          "callee": "k.startswith",
+          "lineNumber": 39
+        },
+        {
+          "caller": "to_dict",
+          "callee": "hasattr",
+          "lineNumber": 40
+        },
+        {
+          "caller": "to_dict",
+          "callee": "str",
+          "lineNumber": 41
+        },
+        {
+          "caller": "to_dict",
+          "callee": "hasattr",
+          "lineNumber": 42
+        },
+        {
+          "caller": "to_dict",
+          "callee": "str",
+          "lineNumber": 43
+        },
+        {
+          "caller": "to_dict",
+          "callee": "hasattr",
+          "lineNumber": 44
+        },
+        {
+          "caller": "to_dict",
+          "callee": "str",
+          "lineNumber": 45
+        },
+        {
+          "caller": "to_dict",
+          "callee": "str",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "to_dict",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "to_dict",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_process_and_collect",
+          "callee": "to_dict",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_validate_limit",
+          "callee": "HTTPException",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_validate_limit",
+          "callee": "HTTPException",
+          "lineNumber": 61
+        },
+        {
+          "caller": "start_topcv_scrape",
+          "callee": "Depends",
+          "lineNumber": 70
+        },
+        {
+          "caller": "start_topcv_scrape",
+          "callee": "_validate_limit",
+          "lineNumber": 71
+        },
+        {
+          "caller": "start_topcv_scrape",
+          "callee": "parse_topcv_jobs",
+          "lineNumber": 77
+        },
+        {
+          "caller": "start_topcv_scrape",
+          "callee": "HTTPException",
+          "lineNumber": 79
+        },
+        {
+          "caller": "start_topcv_scrape",
+          "callee": "_blocked_detail",
+          "lineNumber": 79
+        },
+        {
+          "caller": "start_topcv_scrape",
+          "callee": "_process_and_collect",
+          "lineNumber": 81
+        },
+        {
+          "caller": "start_itviec_scrape",
+          "callee": "Depends",
+          "lineNumber": 90
+        },
+        {
+          "caller": "start_itviec_scrape",
+          "callee": "_validate_limit",
+          "lineNumber": 91
+        },
+        {
+          "caller": "start_itviec_scrape",
+          "callee": "parse_itviec_jobs",
+          "lineNumber": 94
+        },
+        {
+          "caller": "start_itviec_scrape",
+          "callee": "HTTPException",
+          "lineNumber": 96
+        },
+        {
+          "caller": "start_itviec_scrape",
+          "callee": "_blocked_detail",
+          "lineNumber": 96
+        },
+        {
+          "caller": "start_itviec_scrape",
+          "callee": "_process_and_collect",
+          "lineNumber": 98
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/api/security.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 7,
+      "functions": [
+        {
+          "name": "verify_api_key",
+          "startLine": 6,
+          "endLine": 10,
+          "params": [
+            "x_api_key"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "verify_api_key",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "verify_api_key",
+          "callee": "Header",
+          "lineNumber": 6
+        },
+        {
+          "caller": "verify_api_key",
+          "callee": "HTTPException",
+          "lineNumber": 8
+        },
+        {
+          "caller": "verify_api_key",
+          "callee": "HTTPException",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/config/config.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 25,
+      "classes": [
+        {
+          "name": "Settings",
+          "startLine": 4,
+          "endLine": 29,
+          "methods": [],
+          "properties": [
+            "thread_sleep",
+            "topcv_target",
+            "itviec_target",
+            "linkedin_target",
+            "service_api_key",
+            "max_scrape_limit",
+            "llm_api_key",
+            "llm_model",
+            "llm_base_url",
+            "database_url",
+            "flm_base_url",
+            "flm_cookie",
+            "flm_delay_ms",
+            "flm_user_agent"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Settings",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/db/database.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "get_db",
+          "startLine": 11,
+          "endLine": 16,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "get_db",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_db",
+          "callee": "SessionLocal",
+          "lineNumber": 12
+        },
+        {
+          "caller": "get_db",
+          "callee": "db.close",
+          "lineNumber": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/db/models.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 56,
+      "nonEmptyLines": 45,
+      "classes": [
+        {
+          "name": "Company",
+          "startLine": 8,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "ProcessedCompany",
+          "startLine": 18,
+          "endLine": 23,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "Recruitment",
+          "startLine": 25,
+          "endLine": 39,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "ProcessedRecruitment",
+          "startLine": 41,
+          "endLine": 48,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "RecruitmentPost",
+          "startLine": 50,
+          "endLine": 56,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Company",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "ProcessedCompany",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "Recruitment",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "ProcessedRecruitment",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "RecruitmentPost",
+          "line": 50,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 0,
+        "classCount": 5
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/main.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "lifespan",
+          "startLine": 17,
+          "endLine": 20,
+          "params": [
+            "app"
+          ]
+        },
+        {
+          "name": "root",
+          "startLine": 39,
+          "endLine": 40,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "lifespan",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "root",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "lifespan",
+          "callee": "logger.info",
+          "lineNumber": 18
+        },
+        {
+          "caller": "lifespan",
+          "callee": "logger.info",
+          "lineNumber": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/mcp_server.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 29,
+      "functions": [
+        {
+          "name": "extract_document",
+          "startLine": 18,
+          "endLine": 35,
+          "params": [
+            "url"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "extract_document",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "extract_document",
+          "callee": "validate_public_document_url",
+          "lineNumber": 20
+        },
+        {
+          "caller": "extract_document",
+          "callee": "extract_markdown_from_url",
+          "lineNumber": 21
+        },
+        {
+          "caller": "extract_document",
+          "callee": "len",
+          "lineNumber": 22
+        },
+        {
+          "caller": "extract_document",
+          "callee": "len",
+          "lineNumber": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/schemas/extraction.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "ExtractRequest",
+          "startLine": 4,
+          "endLine": 5,
+          "methods": [],
+          "properties": [
+            "url"
+          ]
+        },
+        {
+          "name": "SkillExtractRequest",
+          "startLine": 7,
+          "endLine": 8,
+          "methods": [],
+          "properties": [
+            "descriptions"
+          ]
+        },
+        {
+          "name": "SkillExtractResponse",
+          "startLine": 10,
+          "endLine": 11,
+          "methods": [],
+          "properties": [
+            "skills_per_doc"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ExtractRequest",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "SkillExtractRequest",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "SkillExtractResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 0,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/engines/curl_engine.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 96,
+      "nonEmptyLines": 77,
+      "classes": [
+        {
+          "name": "BlockedIpException",
+          "startLine": 11,
+          "endLine": 13,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "CurlEngine",
+          "startLine": 16,
+          "endLine": 96,
+          "methods": [
+            "_proxies",
+            "get_document"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BlockedIpException",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "CurlEngine",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_proxies",
+          "callee": "os.environ.get",
+          "lineNumber": 36
+        },
+        {
+          "caller": "_proxies",
+          "callee": "os.environ.get",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_proxies",
+          "callee": "os.environ.get",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_proxies",
+          "callee": "os.environ.get",
+          "lineNumber": 39
+        },
+        {
+          "caller": "get_document",
+          "callee": "url.strip",
+          "lineNumber": 47
+        },
+        {
+          "caller": "get_document",
+          "callee": "range",
+          "lineNumber": 55
+        },
+        {
+          "caller": "get_document",
+          "callee": "time.sleep",
+          "lineNumber": 58
+        },
+        {
+          "caller": "get_document",
+          "callee": "random.random",
+          "lineNumber": 58
+        },
+        {
+          "caller": "get_document",
+          "callee": "cffi_requests.get",
+          "lineNumber": 60
+        },
+        {
+          "caller": "get_document",
+          "callee": "CurlEngine._proxies",
+          "lineNumber": 64
+        },
+        {
+          "caller": "get_document",
+          "callee": "logger.warning",
+          "lineNumber": 76
+        },
+        {
+          "caller": "get_document",
+          "callee": "BlockedIpException",
+          "lineNumber": 77
+        },
+        {
+          "caller": "get_document",
+          "callee": "logger.error",
+          "lineNumber": 80
+        },
+        {
+          "caller": "get_document",
+          "callee": "time.sleep",
+          "lineNumber": 82
+        },
+        {
+          "caller": "get_document",
+          "callee": "BeautifulSoup",
+          "lineNumber": 85
+        },
+        {
+          "caller": "get_document",
+          "callee": "logger.error",
+          "lineNumber": 91
+        },
+        {
+          "caller": "get_document",
+          "callee": "logger.warning",
+          "lineNumber": 93
+        },
+        {
+          "caller": "get_document",
+          "callee": "time.sleep",
+          "lineNumber": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/client.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 243,
+      "nonEmptyLines": 206,
+      "classes": [
+        {
+          "name": "FlmAuthError",
+          "startLine": 42,
+          "endLine": 43,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "FlmDataError",
+          "startLine": 46,
+          "endLine": 47,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "FlmClient",
+          "startLine": 50,
+          "endLine": 243,
+          "methods": [
+            "__init__",
+            "_url",
+            "_check_auth",
+            "get_soup",
+            "get_json",
+            "_hidden_fields",
+            "search",
+            "subject_codes",
+            "search_syllabus",
+            "syllabus_details",
+            "syllabus_details_url",
+            "search_curriculum",
+            "curriculum_details",
+            "combo_list",
+            "combo_detail",
+            "elective_list",
+            "elective_detail",
+            "search_prerequisites"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FlmAuthError",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "FlmDataError",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "FlmClient",
+          "line": 50,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "(base_url or settings.flm_base_url).rstrip",
+          "lineNumber": 63
+        },
+        {
+          "caller": "__init__",
+          "callee": "requests.Session",
+          "lineNumber": 65
+        },
+        {
+          "caller": "__init__",
+          "callee": "getattr",
+          "lineNumber": 66
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.session.headers.update",
+          "lineNumber": 67
+        },
+        {
+          "caller": "__init__",
+          "callee": "cookie.strip",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_url",
+          "callee": "path.startswith",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_url",
+          "callee": "path.lstrip",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "resp.url.lower",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "FlmAuthError",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "resp.headers.get(\"Content-Type\", \"\").lower",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "resp.headers.get",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "resp.text[:1500].lower",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_check_auth",
+          "callee": "FlmAuthError",
+          "lineNumber": 100
+        },
+        {
+          "caller": "get_soup",
+          "callee": "time.sleep",
+          "lineNumber": 106
+        },
+        {
+          "caller": "get_soup",
+          "callee": "self.session.get",
+          "lineNumber": 107
+        },
+        {
+          "caller": "get_soup",
+          "callee": "self._url",
+          "lineNumber": 107
+        },
+        {
+          "caller": "get_soup",
+          "callee": "self._check_auth",
+          "lineNumber": 108
+        },
+        {
+          "caller": "get_soup",
+          "callee": "resp.raise_for_status",
+          "lineNumber": 109
+        },
+        {
+          "caller": "get_soup",
+          "callee": "BeautifulSoup",
+          "lineNumber": 110
+        },
+        {
+          "caller": "get_json",
+          "callee": "time.sleep",
+          "lineNumber": 113
+        },
+        {
+          "caller": "get_json",
+          "callee": "self.session.get",
+          "lineNumber": 114
+        },
+        {
+          "caller": "get_json",
+          "callee": "self._url",
+          "lineNumber": 115
+        },
+        {
+          "caller": "get_json",
+          "callee": "self._check_auth",
+          "lineNumber": 123
+        },
+        {
+          "caller": "get_json",
+          "callee": "resp.raise_for_status",
+          "lineNumber": 124
+        },
+        {
+          "caller": "get_json",
+          "callee": "resp.json",
+          "lineNumber": 126
+        },
+        {
+          "caller": "get_json",
+          "callee": "\" \".join",
+          "lineNumber": 131
+        },
+        {
+          "caller": "get_json",
+          "callee": "resp.text.split",
+          "lineNumber": 131
+        },
+        {
+          "caller": "get_json",
+          "callee": "FlmDataError",
+          "lineNumber": 132
+        },
+        {
+          "caller": "_hidden_fields",
+          "callee": "soup.find",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_hidden_fields",
+          "callee": "el.get",
+          "lineNumber": 143
+        },
+        {
+          "caller": "search",
+          "callee": "self.get_soup",
+          "lineNumber": 148
+        },
+        {
+          "caller": "search",
+          "callee": "self._hidden_fields",
+          "lineNumber": 149
+        },
+        {
+          "caller": "search",
+          "callee": "FlmDataError",
+          "lineNumber": 154
+        },
+        {
+          "caller": "search",
+          "callee": "data.update",
+          "lineNumber": 157
+        },
+        {
+          "caller": "search",
+          "callee": "time.sleep",
+          "lineNumber": 158
+        },
+        {
+          "caller": "search",
+          "callee": "self.session.post",
+          "lineNumber": 159
+        },
+        {
+          "caller": "search",
+          "callee": "self._url",
+          "lineNumber": 159
+        },
+        {
+          "caller": "search",
+          "callee": "self._check_auth",
+          "lineNumber": 160
+        },
+        {
+          "caller": "search",
+          "callee": "resp.raise_for_status",
+          "lineNumber": 161
+        },
+        {
+          "caller": "search",
+          "callee": "BeautifulSoup",
+          "lineNumber": 162
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "self.get_json",
+          "lineNumber": 174
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "logger.warning",
+          "lineNumber": 176
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "isinstance",
+          "lineNumber": 179
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "isinstance",
+          "lineNumber": 180
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "out.append",
+          "lineNumber": 181
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "isinstance",
+          "lineNumber": 182
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "out.append",
+          "lineNumber": 183
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "it.get",
+          "lineNumber": 183
+        },
+        {
+          "caller": "subject_codes",
+          "callee": "it.get",
+          "lineNumber": 183
+        },
+        {
+          "caller": "search_syllabus",
+          "callee": "self.get_soup",
+          "lineNumber": 193
+        },
+        {
+          "caller": "syllabus_details",
+          "callee": "self.get_soup",
+          "lineNumber": 198
+        },
+        {
+          "caller": "syllabus_details_url",
+          "callee": "self._url",
+          "lineNumber": 203
+        },
+        {
+          "caller": "search_curriculum",
+          "callee": "self.search",
+          "lineNumber": 206
+        },
+        {
+          "caller": "curriculum_details",
+          "callee": "self.get_soup",
+          "lineNumber": 216
+        },
+        {
+          "caller": "combo_list",
+          "callee": "self.get_soup",
+          "lineNumber": 225
+        },
+        {
+          "caller": "combo_detail",
+          "callee": "self.get_soup",
+          "lineNumber": 228
+        },
+        {
+          "caller": "elective_list",
+          "callee": "self.get_soup",
+          "lineNumber": 231
+        },
+        {
+          "caller": "elective_detail",
+          "callee": "self.get_soup",
+          "lineNumber": 234
+        },
+        {
+          "caller": "search_prerequisites",
+          "callee": "self.search",
+          "lineNumber": 237
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 0,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/flm_to_coverage.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 345,
+      "nonEmptyLines": 295,
+      "functions": [
+        {
+          "name": "load_catalog",
+          "startLine": 47,
+          "endLine": 63,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_match_llm",
+          "startLine": 66,
+          "endLine": 77,
+          "params": [
+            "clo_text",
+            "catalog_names"
+          ]
+        },
+        {
+          "name": "_match_keyword",
+          "startLine": 80,
+          "endLine": 83,
+          "params": [
+            "clo_text",
+            "catalog_names"
+          ]
+        },
+        {
+          "name": "_clo_text",
+          "startLine": 86,
+          "endLine": 92,
+          "params": [
+            "subject"
+          ]
+        },
+        {
+          "name": "is_major_subject",
+          "startLine": 120,
+          "endLine": 135,
+          "params": [
+            "code"
+          ]
+        },
+        {
+          "name": "_is_technical",
+          "startLine": 138,
+          "endLine": 145,
+          "params": [
+            "code"
+          ]
+        },
+        {
+          "name": "build_coverage",
+          "startLine": 148,
+          "endLine": 204,
+          "params": [
+            "flm",
+            "catalog",
+            "career"
+          ]
+        },
+        {
+          "name": "curriculum_from_soup",
+          "startLine": 207,
+          "endLine": 242,
+          "params": [
+            "soup"
+          ]
+        },
+        {
+          "name": "load_curriculum",
+          "startLine": 245,
+          "endLine": 248,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "build_overlay",
+          "startLine": 251,
+          "endLine": 304,
+          "params": [
+            "flm",
+            "coverage",
+            "curriculum"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 307,
+          "endLine": 341,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "load_catalog",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "_match_llm",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "_match_keyword",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "_clo_text",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "is_major_subject",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "_is_technical",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "build_coverage",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "curriculum_from_soup",
+          "line": 207,
+          "isDefault": false
+        },
+        {
+          "name": "load_curriculum",
+          "line": 245,
+          "isDefault": false
+        },
+        {
+          "name": "build_overlay",
+          "line": 251,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 307,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "load_catalog",
+          "callee": "open",
+          "lineNumber": 49
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "list",
+          "lineNumber": 50
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "csv.reader",
+          "lineNumber": 50
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "len",
+          "lineNumber": 53
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "r[2].strip",
+          "lineNumber": 53
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "out.append",
+          "lineNumber": 55
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "r[2].strip",
+          "lineNumber": 57
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "r[0].strip",
+          "lineNumber": 58
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "c.strip",
+          "lineNumber": 59
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "(r[1] or \"\").split",
+          "lineNumber": 59
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "c.strip",
+          "lineNumber": 59
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "r[3].strip",
+          "lineNumber": 60
+        },
+        {
+          "caller": "load_catalog",
+          "callee": "len",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "\", \".join",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "complete_json",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "n.lower",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "s.lower",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "res.get",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "isinstance",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "s.lower",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "s.strip",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "res.get",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "isinstance",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "s.strip",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "list",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "dict.fromkeys",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "list",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_match_llm",
+          "callee": "dict.fromkeys",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_match_keyword",
+          "callee": "clo_text.lower",
+          "lineNumber": 81
+        },
+        {
+          "caller": "_match_keyword",
+          "callee": "n.lower",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_clo_text",
+          "callee": "c.get",
+          "lineNumber": 88
+        },
+        {
+          "caller": "_clo_text",
+          "callee": "subject.get",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_clo_text",
+          "callee": "syl.get",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_clo_text",
+          "callee": "\"\\n\".join",
+          "lineNumber": 92
+        },
+        {
+          "caller": "is_major_subject",
+          "callee": "(code or \"\").strip",
+          "lineNumber": 129
+        },
+        {
+          "caller": "is_major_subject",
+          "callee": "_ALPHA_PREFIX.match",
+          "lineNumber": 132
+        },
+        {
+          "caller": "is_major_subject",
+          "callee": "m.group(0).upper",
+          "lineNumber": 135
+        },
+        {
+          "caller": "is_major_subject",
+          "callee": "m.group",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_is_technical",
+          "callee": "is_major_subject",
+          "lineNumber": 145
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "is_enabled",
+          "lineNumber": 150
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "log.info",
+          "lineNumber": 151
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "flm.get",
+          "lineNumber": 158
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "s.get",
+          "lineNumber": 159
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "_clo_text",
+          "lineNumber": 160
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "_is_technical",
+          "lineNumber": 161
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "_match_llm",
+          "lineNumber": 168
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "_match_keyword",
+          "lineNumber": 172
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "subject_coverage.append",
+          "lineNumber": 174
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "covers.setdefault(m, []).append",
+          "lineNumber": 176
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "covers.setdefault",
+          "lineNumber": 176
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "extra_all.setdefault(e, []).append",
+          "lineNumber": 178
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "extra_all.setdefault",
+          "lineNumber": 178
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "s.get",
+          "lineNumber": 179
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "prerequisites.append",
+          "lineNumber": 180
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "len",
+          "lineNumber": 194
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "len",
+          "lineNumber": 195
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "len",
+          "lineNumber": 196
+        },
+        {
+          "caller": "build_coverage",
+          "callee": "len",
+          "lineNumber": 197
+        },
+        {
+          "caller": "_int",
+          "callee": "(value or \"\").strip",
+          "lineNumber": 219
+        },
+        {
+          "caller": "_int",
+          "callee": "int",
+          "lineNumber": 220
+        },
+        {
+          "caller": "_int",
+          "callee": "value.isdigit",
+          "lineNumber": 220
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "P.parse_curriculum_subjects",
+          "lineNumber": 224
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "(r.get(\"SubjectCode\") or r.get(\"Subject Code\") or \"\").strip",
+          "lineNumber": 225
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 225
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 225
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "is_major_subject",
+          "lineNumber": 228
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "code.upper",
+          "lineNumber": 231
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "(r.get(\"Subject Name\") or r.get(\"SubjectName\") or \"\").strip",
+          "lineNumber": 232
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 232
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 232
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "_int",
+          "lineNumber": 233
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 233
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "_int",
+          "lineNumber": 234
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 234
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 234
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "(r.get(\"PreRequisite\") or r.get(\"Pre-Requisite\") or \"\").strip",
+          "lineNumber": 235
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 235
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "r.get",
+          "lineNumber": 235
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "log.info",
+          "lineNumber": 240
+        },
+        {
+          "caller": "curriculum_from_soup",
+          "callee": "len",
+          "lineNumber": 241
+        },
+        {
+          "caller": "load_curriculum",
+          "callee": "open",
+          "lineNumber": 247
+        },
+        {
+          "caller": "load_curriculum",
+          "callee": "curriculum_from_soup",
+          "lineNumber": 248
+        },
+        {
+          "caller": "load_curriculum",
+          "callee": "BeautifulSoup",
+          "lineNumber": 248
+        },
+        {
+          "caller": "load_curriculum",
+          "callee": "f.read",
+          "lineNumber": 248
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "s.get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "coverage.get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "s.get",
+          "lineNumber": 264
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "flm.get",
+          "lineNumber": 264
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "s.get",
+          "lineNumber": 264
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "is_major_subject",
+          "lineNumber": 268
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "sorted",
+          "lineNumber": 271
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "curriculum.get",
+          "lineNumber": 272
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "code.upper",
+          "lineNumber": 272
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "flm_by_code.get",
+          "lineNumber": 273
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "flm_s.get",
+          "lineNumber": 274
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "syl.get",
+          "lineNumber": 275
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "matched_by_code.get",
+          "lineNumber": 276
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "subjects.append",
+          "lineNumber": 277
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "cur.get",
+          "lineNumber": 280
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "meta.get",
+          "lineNumber": 280
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "cur.get",
+          "lineNumber": 281
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "cur.get",
+          "lineNumber": 282
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "cur.get",
+          "lineNumber": 283
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "meta.get",
+          "lineNumber": 284
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "cur.get",
+          "lineNumber": 287
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "cur.get",
+          "lineNumber": 288
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "syl.get",
+          "lineNumber": 292
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "syl.get",
+          "lineNumber": 293
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "syl.get",
+          "lineNumber": 294
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "coverage.get",
+          "lineNumber": 299
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "coverage.get",
+          "lineNumber": 300
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "len",
+          "lineNumber": 300
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "coverage.get",
+          "lineNumber": 301
+        },
+        {
+          "caller": "build_overlay",
+          "callee": "coverage.get",
+          "lineNumber": 302
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 308
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 309
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 310
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 311
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 312
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 313
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_argument",
+          "lineNumber": 314
+        },
+        {
+          "caller": "main",
+          "callee": "ap.parse_args",
+          "lineNumber": 315
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 317
+        },
+        {
+          "caller": "main",
+          "callee": "json.load",
+          "lineNumber": 318
+        },
+        {
+          "caller": "main",
+          "callee": "load_catalog",
+          "lineNumber": 319
+        },
+        {
+          "caller": "main",
+          "callee": "log.info",
+          "lineNumber": 320
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 320
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 320
+        },
+        {
+          "caller": "main",
+          "callee": "flm.get",
+          "lineNumber": 320
+        },
+        {
+          "caller": "main",
+          "callee": "build_coverage",
+          "lineNumber": 322
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 323
+        },
+        {
+          "caller": "main",
+          "callee": "json.dump",
+          "lineNumber": 324
+        },
+        {
+          "caller": "main",
+          "callee": "log.info",
+          "lineNumber": 327
+        },
+        {
+          "caller": "main",
+          "callee": "load_curriculum",
+          "lineNumber": 334
+        },
+        {
+          "caller": "main",
+          "callee": "build_overlay",
+          "lineNumber": 335
+        },
+        {
+          "caller": "main",
+          "callee": "open",
+          "lineNumber": 336
+        },
+        {
+          "caller": "main",
+          "callee": "json.dump",
+          "lineNumber": 337
+        },
+        {
+          "caller": "main",
+          "callee": "log.info",
+          "lineNumber": 338
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 340
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 340
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 11,
+        "functionCount": 11,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/scraper.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 270,
+      "nonEmptyLines": 225,
+      "functions": [
+        {
+          "name": "_dump",
+          "startLine": 34,
+          "endLine": 38,
+          "params": [
+            "name",
+            "soup"
+          ]
+        },
+        {
+          "name": "_print",
+          "startLine": 41,
+          "endLine": 42,
+          "params": [
+            "obj"
+          ]
+        },
+        {
+          "name": "scrape_syllabus",
+          "startLine": 45,
+          "endLine": 69,
+          "params": [
+            "client",
+            "code",
+            "cur_id"
+          ]
+        },
+        {
+          "name": "_merge_group",
+          "startLine": 72,
+          "endLine": 107,
+          "params": [
+            "curriculum",
+            "subjects",
+            "elective",
+            "combo_code",
+            "combo_name"
+          ]
+        },
+        {
+          "name": "discover_curriculum",
+          "startLine": 110,
+          "endLine": 150,
+          "params": [
+            "client",
+            "curid"
+          ]
+        },
+        {
+          "name": "cmd_codes",
+          "startLine": 153,
+          "endLine": 157,
+          "params": [
+            "client",
+            "args"
+          ]
+        },
+        {
+          "name": "cmd_syllabus",
+          "startLine": 160,
+          "endLine": 161,
+          "params": [
+            "client",
+            "args"
+          ]
+        },
+        {
+          "name": "cmd_curricula",
+          "startLine": 164,
+          "endLine": 168,
+          "params": [
+            "client",
+            "args"
+          ]
+        },
+        {
+          "name": "cmd_curriculum",
+          "startLine": 171,
+          "endLine": 174,
+          "params": [
+            "client",
+            "args"
+          ]
+        },
+        {
+          "name": "cmd_prereq",
+          "startLine": 177,
+          "endLine": 180,
+          "params": [
+            "client",
+            "args"
+          ]
+        },
+        {
+          "name": "cmd_crawl",
+          "startLine": 183,
+          "endLine": 222,
+          "params": [
+            "client",
+            "args"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 225,
+          "endLine": 266,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_dump",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "_print",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "scrape_syllabus",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "_merge_group",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "discover_curriculum",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "cmd_codes",
+          "line": 153,
+          "isDefault": false
+        },
+        {
+          "name": "cmd_syllabus",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "cmd_curricula",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "cmd_curriculum",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "cmd_prereq",
+          "line": 177,
+          "isDefault": false
+        },
+        {
+          "name": "cmd_crawl",
+          "line": 183,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 225,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_dump",
+          "callee": "pathlib.Path",
+          "lineNumber": 36
+        },
+        {
+          "caller": "_dump",
+          "callee": "d.mkdir",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_dump",
+          "callee": "(d / f\"{name}.html\").write_text",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_dump",
+          "callee": "str",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_print",
+          "callee": "print",
+          "lineNumber": 42
+        },
+        {
+          "caller": "_print",
+          "callee": "json.dumps",
+          "lineNumber": 42
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "client.search_syllabus",
+          "lineNumber": 51
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "_dump",
+          "lineNumber": 52
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "P.find_syllabus_links",
+          "lineNumber": 54
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "client.syllabus_details",
+          "lineNumber": 55
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "_dump",
+          "lineNumber": 56
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "out.append",
+          "lineNumber": 57
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "link.get",
+          "lineNumber": 60
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "link.get",
+          "lineNumber": 61
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "link.get",
+          "lineNumber": 62
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "P.parse_syllabus_meta",
+          "lineNumber": 63
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "P.parse_clos",
+          "lineNumber": 64
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "P.parse_materials",
+          "lineNumber": 65
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "P.parse_sessions",
+          "lineNumber": 66
+        },
+        {
+          "caller": "scrape_syllabus",
+          "callee": "client.syllabus_details_url",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "(s.get(\"code\") or \"\").upper",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "s.get",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "curriculum.get",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "existing.get",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "s.get",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "existing.setdefault",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "s.get",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "existing.setdefault",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "existing.setdefault",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "s.get",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_merge_group",
+          "callee": "s.get",
+          "lineNumber": 101
+        },
+        {
+          "caller": "discover_curriculum",
+          "callee": "curriculum_from_soup",
+          "lineNumber": 119
+        },
+        {
+          "caller": "discover_curriculum",
+          "callee": "client.curriculum_details",
+          "lineNumber": 119
+        },
+        {
+          "caller": "_collect",
+          "callee": "find_links",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_collect",
+          "callee": "list_page",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_collect",
+          "callee": "log.warning",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_collect",
+          "callee": "fetch_detail",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_collect",
+          "callee": "P.parse_group_subjects",
+          "lineNumber": 132
+        },
+        {
+          "caller": "_collect",
+          "callee": "P.split_combo_label",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_collect",
+          "callee": "P.parse_combo_name",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_collect",
+          "callee": "log.warning",
+          "lineNumber": 139
+        },
+        {
+          "caller": "_collect",
+          "callee": "log.warning",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_collect",
+          "callee": "_merge_group",
+          "lineNumber": 143
+        },
+        {
+          "caller": "discover_curriculum",
+          "callee": "_collect",
+          "lineNumber": 146
+        },
+        {
+          "caller": "discover_curriculum",
+          "callee": "client.combo_list",
+          "lineNumber": 146
+        },
+        {
+          "caller": "discover_curriculum",
+          "callee": "client.combo_detail",
+          "lineNumber": 147
+        },
+        {
+          "caller": "discover_curriculum",
+          "callee": "_collect",
+          "lineNumber": 148
+        },
+        {
+          "caller": "discover_curriculum",
+          "callee": "client.elective_list",
+          "lineNumber": 148
+        },
+        {
+          "caller": "discover_curriculum",
+          "callee": "client.elective_detail",
+          "lineNumber": 149
+        },
+        {
+          "caller": "cmd_codes",
+          "callee": "args.term.split",
+          "lineNumber": 155
+        },
+        {
+          "caller": "cmd_codes",
+          "callee": "client.subject_codes",
+          "lineNumber": 156
+        },
+        {
+          "caller": "cmd_codes",
+          "callee": "term.strip",
+          "lineNumber": 156
+        },
+        {
+          "caller": "cmd_codes",
+          "callee": "_print",
+          "lineNumber": 157
+        },
+        {
+          "caller": "cmd_codes",
+          "callee": "sorted",
+          "lineNumber": 157
+        },
+        {
+          "caller": "cmd_codes",
+          "callee": "set",
+          "lineNumber": 157
+        },
+        {
+          "caller": "cmd_syllabus",
+          "callee": "_print",
+          "lineNumber": 161
+        },
+        {
+          "caller": "cmd_syllabus",
+          "callee": "scrape_syllabus",
+          "lineNumber": 161
+        },
+        {
+          "caller": "cmd_curricula",
+          "callee": "client.search_curriculum",
+          "lineNumber": 166
+        },
+        {
+          "caller": "cmd_curricula",
+          "callee": "_dump",
+          "lineNumber": 167
+        },
+        {
+          "caller": "cmd_curricula",
+          "callee": "_print",
+          "lineNumber": 168
+        },
+        {
+          "caller": "cmd_curricula",
+          "callee": "P.find_curriculum_links",
+          "lineNumber": 168
+        },
+        {
+          "caller": "cmd_curriculum",
+          "callee": "client.curriculum_details",
+          "lineNumber": 172
+        },
+        {
+          "caller": "cmd_curriculum",
+          "callee": "_dump",
+          "lineNumber": 173
+        },
+        {
+          "caller": "cmd_curriculum",
+          "callee": "_print",
+          "lineNumber": 174
+        },
+        {
+          "caller": "cmd_curriculum",
+          "callee": "P.parse_curriculum_subjects",
+          "lineNumber": 174
+        },
+        {
+          "caller": "cmd_prereq",
+          "callee": "client.search_prerequisites",
+          "lineNumber": 178
+        },
+        {
+          "caller": "cmd_prereq",
+          "callee": "_dump",
+          "lineNumber": 179
+        },
+        {
+          "caller": "cmd_prereq",
+          "callee": "_print",
+          "lineNumber": 180
+        },
+        {
+          "caller": "cmd_prereq",
+          "callee": "P.parse_prerequisites",
+          "lineNumber": 180
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "sorted",
+          "lineNumber": 185
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "c.strip",
+          "lineNumber": 185
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "args.codes.split",
+          "lineNumber": 185
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "c.strip",
+          "lineNumber": 185
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "log.info",
+          "lineNumber": 186
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "len",
+          "lineNumber": 186
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "discover_curriculum",
+          "lineNumber": 188
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "sorted",
+          "lineNumber": 189
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "log.info",
+          "lineNumber": 190
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "len",
+          "lineNumber": 191
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "p.strip",
+          "lineNumber": 193
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "args.prefixes.split",
+          "lineNumber": 193
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "p.strip",
+          "lineNumber": 193
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "sorted",
+          "lineNumber": 194
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "client.subject_codes",
+          "lineNumber": 194
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "log.info",
+          "lineNumber": 195
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "len",
+          "lineNumber": 195
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "log.error",
+          "lineNumber": 197
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "scrape_syllabus",
+          "lineNumber": 205
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "P.parse_prerequisites",
+          "lineNumber": 206
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "client.search_prerequisites",
+          "lineNumber": 206
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "data[\"subjects\"].append",
+          "lineNumber": 208
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "log.info",
+          "lineNumber": 209
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "len",
+          "lineNumber": 212
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "len",
+          "lineNumber": 213
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "log.warning",
+          "lineNumber": 218
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "pathlib.Path",
+          "lineNumber": 220
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "out.write_text",
+          "lineNumber": 221
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "json.dumps",
+          "lineNumber": 221
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "log.info",
+          "lineNumber": 222
+        },
+        {
+          "caller": "cmd_crawl",
+          "callee": "len",
+          "lineNumber": 222
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 228
+        },
+        {
+          "caller": "main",
+          "callee": "common.add_argument",
+          "lineNumber": 229
+        },
+        {
+          "caller": "main",
+          "callee": "common.add_argument",
+          "lineNumber": 230
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 232
+        },
+        {
+          "caller": "main",
+          "callee": "ap.add_subparsers",
+          "lineNumber": 233
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 235
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 236
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 237
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 238
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 239
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 240
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 241
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 242
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 243
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 244
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 245
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 246
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 247
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 248
+        },
+        {
+          "caller": "main",
+          "callee": "p.add_argument",
+          "lineNumber": 249
+        },
+        {
+          "caller": "main",
+          "callee": "ap.parse_args",
+          "lineNumber": 251
+        },
+        {
+          "caller": "main",
+          "callee": "FlmClient",
+          "lineNumber": 253
+        },
+        {
+          "caller": "main",
+          "callee": "log.error",
+          "lineNumber": 265
+        },
+        {
+          "caller": "main",
+          "callee": "sys.exit",
+          "lineNumber": 266
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 12,
+        "functionCount": 12,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/flm/sync_job.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 130,
+      "nonEmptyLines": 110,
+      "functions": [
+        {
+          "name": "_update",
+          "startLine": 30,
+          "endLine": 34,
+          "params": [
+            "job_id",
+            "**changes"
+          ]
+        },
+        {
+          "name": "get_job",
+          "startLine": 37,
+          "endLine": 40,
+          "params": [
+            "job_id"
+          ]
+        },
+        {
+          "name": "start_job",
+          "startLine": 43,
+          "endLine": 56,
+          "params": [
+            "cookie",
+            "curid",
+            "prefixes",
+            "catalog",
+            "career"
+          ]
+        },
+        {
+          "name": "_discover_codes",
+          "startLine": 59,
+          "endLine": 79,
+          "params": [
+            "client",
+            "curid",
+            "prefixes"
+          ]
+        },
+        {
+          "name": "_run",
+          "startLine": 82,
+          "endLine": 130,
+          "params": [
+            "job_id",
+            "cookie",
+            "curid",
+            "prefixes",
+            "catalog",
+            "career"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_update",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "get_job",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "start_job",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "_discover_codes",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "_run",
+          "line": 82,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_update",
+          "callee": "_JOBS.get",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_update",
+          "callee": "job.update",
+          "lineNumber": 34
+        },
+        {
+          "caller": "get_job",
+          "callee": "_JOBS.get",
+          "lineNumber": 39
+        },
+        {
+          "caller": "get_job",
+          "callee": "dict",
+          "lineNumber": 40
+        },
+        {
+          "caller": "start_job",
+          "callee": "uuid.uuid4",
+          "lineNumber": 45
+        },
+        {
+          "caller": "start_job",
+          "callee": "threading.Thread(\n        target=_run,\n        args=(job_id, cookie, curid, prefixes, catalog, career),\n        daemon=True,\n    ).start",
+          "lineNumber": 51
+        },
+        {
+          "caller": "start_job",
+          "callee": "threading.Thread",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "discover_curriculum",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "code_map.setdefault",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "code.upper",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "p.strip",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "prefixes.split",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "p.strip",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "client.subject_codes",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "(code or \"\").strip",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "code_map.setdefault",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "code.upper",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_discover_codes",
+          "callee": "sorted",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_run",
+          "callee": "_update",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_run",
+          "callee": "FlmClient",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_run",
+          "callee": "_discover_codes",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_run",
+          "callee": "len",
+          "lineNumber": 88
+        },
+        {
+          "caller": "_run",
+          "callee": "_update",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_run",
+          "callee": "_update",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_run",
+          "callee": "enumerate",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_run",
+          "callee": "_update",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_run",
+          "callee": "scrape_syllabus",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_run",
+          "callee": "P.parse_prerequisites",
+          "lineNumber": 102
+        },
+        {
+          "caller": "_run",
+          "callee": "client.search_prerequisites",
+          "lineNumber": 102
+        },
+        {
+          "caller": "_run",
+          "callee": "log.warning",
+          "lineNumber": 106
+        },
+        {
+          "caller": "_run",
+          "callee": "subjects.append",
+          "lineNumber": 108
+        },
+        {
+          "caller": "_run",
+          "callee": "log.warning",
+          "lineNumber": 112
+        },
+        {
+          "caller": "_run",
+          "callee": "_update",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_run",
+          "callee": "isinstance",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_run",
+          "callee": "n.strip",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_run",
+          "callee": "build_coverage",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_run",
+          "callee": "build_overlay",
+          "lineNumber": 121
+        },
+        {
+          "caller": "_run",
+          "callee": "_update",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_run",
+          "callee": "len",
+          "lineNumber": 124
+        },
+        {
+          "caller": "_run",
+          "callee": "_update",
+          "lineNumber": 126
+        },
+        {
+          "caller": "_run",
+          "callee": "log.exception",
+          "lineNumber": 129
+        },
+        {
+          "caller": "_run",
+          "callee": "_update",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_run",
+          "callee": "str",
+          "lineNumber": 130
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/itviec_parser.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 333,
+      "nonEmptyLines": 283,
+      "functions": [
+        {
+          "name": "_json_ld",
+          "startLine": 29,
+          "endLine": 42,
+          "params": [
+            "doc",
+            "want_type"
+          ]
+        },
+        {
+          "name": "_slug",
+          "startLine": 45,
+          "endLine": 47,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "_html_to_lines",
+          "startLine": 50,
+          "endLine": 56,
+          "params": [
+            "html"
+          ]
+        },
+        {
+          "name": "_job_url_list",
+          "startLine": 59,
+          "endLine": 69,
+          "params": [
+            "doc"
+          ]
+        },
+        {
+          "name": "_max_page",
+          "startLine": 72,
+          "endLine": 79,
+          "params": [
+            "doc"
+          ]
+        },
+        {
+          "name": "_parse_salary",
+          "startLine": 82,
+          "endLine": 99,
+          "params": [
+            "base_salary"
+          ]
+        },
+        {
+          "name": "_parse_experience",
+          "startLine": 102,
+          "endLine": 120,
+          "params": [
+            "exp"
+          ]
+        },
+        {
+          "name": "_parse_location",
+          "startLine": 123,
+          "endLine": 134,
+          "params": [
+            "job_location"
+          ]
+        },
+        {
+          "name": "scrape_itviec_detail",
+          "startLine": 137,
+          "endLine": 203,
+          "params": [
+            "job_url",
+            "recruitment_id",
+            "company_id"
+          ]
+        },
+        {
+          "name": "parse_itviec_jobs",
+          "startLine": 206,
+          "endLine": 333,
+          "params": [
+            "limiter",
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_json_ld",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "_slug",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "_html_to_lines",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "_job_url_list",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "_max_page",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "_parse_salary",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "_parse_experience",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "_parse_location",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "scrape_itviec_detail",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "parse_itviec_jobs",
+          "line": 206,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_json_ld",
+          "callee": "doc.select",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_json_ld",
+          "callee": "tag.get_text",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_json_ld",
+          "callee": "raw.strip",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_json_ld",
+          "callee": "json.loads",
+          "lineNumber": 36
+        },
+        {
+          "caller": "_json_ld",
+          "callee": "isinstance",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_json_ld",
+          "callee": "isinstance",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_json_ld",
+          "callee": "block.get",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_slug",
+          "callee": "re.sub(r\"[^a-z0-9]+\", \"-\", (text or \"\").lower()).strip",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_slug",
+          "callee": "re.sub",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_slug",
+          "callee": "(text or \"\").lower",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_html_to_lines",
+          "callee": "BeautifulSoup",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_html_to_lines",
+          "callee": "soup.find_all",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_html_to_lines",
+          "callee": "br.replace_with",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_html_to_lines",
+          "callee": "soup.get_text",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_html_to_lines",
+          "callee": "ln.strip",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_html_to_lines",
+          "callee": "text.split",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_html_to_lines",
+          "callee": "ln.strip",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_job_url_list",
+          "callee": "_json_ld",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_job_url_list",
+          "callee": "item_list.get",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_job_url_list",
+          "callee": "el.get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_job_url_list",
+          "callee": "isinstance",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_job_url_list",
+          "callee": "urls.append",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_job_url_list",
+          "callee": "url.split",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_max_page",
+          "callee": "int",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_max_page",
+          "callee": "a.get_text",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_max_page",
+          "callee": "doc.select",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_max_page",
+          "callee": "a.get_text(strip=True).isdigit",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_max_page",
+          "callee": "a.get_text",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_max_page",
+          "callee": "max",
+          "lineNumber": 79
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "isinstance",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "base_salary.get",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "value.get",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "isinstance",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "base_salary.get",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "str(amount).strip",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "str",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "any",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "ch.isdigit",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "currency.lower",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "amount.lower",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_parse_salary",
+          "callee": "f\"{amount} {currency}\".strip",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_parse_experience",
+          "callee": "isinstance",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_parse_experience",
+          "callee": "exp.get",
+          "lineNumber": 106
+        },
+        {
+          "caller": "_parse_experience",
+          "callee": "int",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_parse_experience",
+          "callee": "str",
+          "lineNumber": 112
+        },
+        {
+          "caller": "_parse_experience",
+          "callee": "int",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_parse_experience",
+          "callee": "round",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_parse_experience",
+          "callee": "str",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_parse_location",
+          "callee": "isinstance",
+          "lineNumber": 124
+        },
+        {
+          "caller": "_parse_location",
+          "callee": "isinstance",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_parse_location",
+          "callee": "loc.get",
+          "lineNumber": 129
+        },
+        {
+          "caller": "_parse_location",
+          "callee": "isinstance",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_parse_location",
+          "callee": "addr.get",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_parse_location",
+          "callee": "addr.get",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_parse_location",
+          "callee": "parts.append",
+          "lineNumber": 133
+        },
+        {
+          "caller": "_parse_location",
+          "callee": "\", \".join",
+          "lineNumber": 134
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "CurlEngine.get_document",
+          "lineNumber": 139
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "_json_ld",
+          "lineNumber": 143
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "logger.error",
+          "lineNumber": 145
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 148
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "org.get",
+          "lineNumber": 149
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "isinstance",
+          "lineNumber": 149
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "org.get",
+          "lineNumber": 150
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "isinstance",
+          "lineNumber": 150
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "org.get",
+          "lineNumber": 151
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "isinstance",
+          "lineNumber": 151
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "(datetime.now() + timedelta(days=30)).strftime",
+          "lineNumber": 154
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "datetime.now",
+          "lineNumber": 154
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "timedelta",
+          "lineNumber": 154
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 155
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "datetime.fromisoformat(vt.split(\"T\")[0]).strftime",
+          "lineNumber": 158
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 158
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "vt.split",
+          "lineNumber": 158
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 164
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "datetime.fromisoformat(dp.split(\"T\")[0]).strftime",
+          "lineNumber": 167
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 167
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "dp.split",
+          "lineNumber": 167
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "s.strip",
+          "lineNumber": 171
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "(jp.get(\"skills\") or \"\").split",
+          "lineNumber": 171
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 171
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "s.strip",
+          "lineNumber": 171
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "b.strip",
+          "lineNumber": 172
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "(jp.get(\"jobBenefits\") or \"\").split",
+          "lineNumber": 172
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 172
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "b.strip",
+          "lineNumber": 172
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 181
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "_parse_location",
+          "lineNumber": 183
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 183
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get(\"title\", \"\").strip",
+          "lineNumber": 189
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 189
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "_parse_salary",
+          "lineNumber": 190
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 190
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "_parse_location",
+          "lineNumber": 191
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 191
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "_parse_experience",
+          "lineNumber": 192
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 192
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "_html_to_lines",
+          "lineNumber": 196
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 196
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 198
+        },
+        {
+          "caller": "scrape_itviec_detail",
+          "callee": "jp.get",
+          "lineNumber": 199
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.info",
+          "lineNumber": 213
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.info",
+          "lineNumber": 216
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.info",
+          "lineNumber": 218
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.info",
+          "lineNumber": 230
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "CurlEngine.get_document",
+          "lineNumber": 232
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "_max_page",
+          "lineNumber": 237
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.info",
+          "lineNumber": 238
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "_job_url_list",
+          "lineNumber": 240
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.warning",
+          "lineNumber": 242
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.info",
+          "lineNumber": 247
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "list",
+          "lineNumber": 250
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "companies_dict.values",
+          "lineNumber": 250
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "list",
+          "lineNumber": 251
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "recruitments_dict.values",
+          "lineNumber": 251
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "time.sleep",
+          "lineNumber": 254
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.info",
+          "lineNumber": 256
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "job_url.rstrip(\"/\").split",
+          "lineNumber": 258
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "job_url.rstrip",
+          "lineNumber": 258
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "scrape_itviec_detail",
+          "lineNumber": 267
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "_slug",
+          "lineNumber": 272
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "uuid.uuid4",
+          "lineNumber": 272
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query(Company).filter(Company.company_id == company_id).first",
+          "lineNumber": 277
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query(Company).filter",
+          "lineNumber": 277
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query",
+          "lineNumber": 277
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.add",
+          "lineNumber": 279
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "Company",
+          "lineNumber": 279
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.commit",
+          "lineNumber": 280
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query(Recruitment).filter(Recruitment.recruitment_id == recruitment_id).first",
+          "lineNumber": 283
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query(Recruitment).filter",
+          "lineNumber": 283
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query",
+          "lineNumber": 283
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "datetime.strptime(recruitment[\"application_deadline\"], \"%Y-%m-%d\").date",
+          "lineNumber": 285
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "datetime.strptime",
+          "lineNumber": 285
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "datetime.strptime(recruitment[\"posted_date\"], \"%Y-%m-%d\").date",
+          "lineNumber": 287
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "datetime.strptime",
+          "lineNumber": 287
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "recruitment.get",
+          "lineNumber": 288
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.add",
+          "lineNumber": 290
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "Recruitment",
+          "lineNumber": 290
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.commit",
+          "lineNumber": 304
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "str",
+          "lineNumber": 307
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "uuid.uuid4",
+          "lineNumber": 307
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "recruitment_posts.append",
+          "lineNumber": 312
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query(RecruitmentPost).filter(\n                    RecruitmentPost.company_id == company_id,\n                    RecruitmentPost.recruitment_id == recruitment_id,\n                ).first",
+          "lineNumber": 313
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query(RecruitmentPost).filter",
+          "lineNumber": 313
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.query",
+          "lineNumber": 313
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.add",
+          "lineNumber": 318
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "RecruitmentPost",
+          "lineNumber": 318
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "datetime.strptime(post[\"expire_at\"], \"%Y-%m-%d\").date",
+          "lineNumber": 322
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "datetime.strptime",
+          "lineNumber": 322
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.commit",
+          "lineNumber": 324
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.error",
+          "lineNumber": 327
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "db.rollback",
+          "lineNumber": 328
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "logger.info",
+          "lineNumber": 332
+        },
+        {
+          "caller": "parse_itviec_jobs",
+          "callee": "len",
+          "lineNumber": 332
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 10,
+        "functionCount": 10,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/linkedin_parser.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 24,
+      "functions": [
+        {
+          "name": "parse_linkedin_jobs",
+          "startLine": 9,
+          "endLine": 31,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "parse_linkedin_jobs",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "logger.info",
+          "lineNumber": 10
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "Options",
+          "lineNumber": 12
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "options.add_argument",
+          "lineNumber": 13
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "webdriver.Chrome",
+          "lineNumber": 17
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "driver.get",
+          "lineNumber": 18
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "logger.info",
+          "lineNumber": 21
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "driver.find_elements",
+          "lineNumber": 23
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "logger.info",
+          "lineNumber": 25
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "logger.error",
+          "lineNumber": 28
+        },
+        {
+          "caller": "parse_linkedin_jobs",
+          "callee": "driver.quit",
+          "lineNumber": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/parsers/topcv_parser.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 436,
+      "nonEmptyLines": 375,
+      "functions": [
+        {
+          "name": "convert_to_eng",
+          "startLine": 14,
+          "endLine": 49,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "get_descriptions",
+          "startLine": 52,
+          "endLine": 69,
+          "params": [
+            "items",
+            "results"
+          ]
+        },
+        {
+          "name": "scrape_company_detail",
+          "startLine": 72,
+          "endLine": 116,
+          "params": [
+            "company_link",
+            "company_id"
+          ]
+        },
+        {
+          "name": "scrape_recruitment_detail",
+          "startLine": 119,
+          "endLine": 283,
+          "params": [
+            "recruitment_link",
+            "recruitment_id"
+          ]
+        },
+        {
+          "name": "parse_topcv_jobs",
+          "startLine": 285,
+          "endLine": 436,
+          "params": [
+            "limiter",
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "convert_to_eng",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "get_descriptions",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "scrape_company_detail",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "scrape_recruitment_detail",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "parse_topcv_jobs",
+          "line": 285,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "convert_to_eng",
+          "callee": "text.lower().strip",
+          "lineNumber": 15
+        },
+        {
+          "caller": "convert_to_eng",
+          "callee": "text.lower",
+          "lineNumber": 15
+        },
+        {
+          "caller": "convert_to_eng",
+          "callee": "mapping.items",
+          "lineNumber": 43
+        },
+        {
+          "caller": "convert_to_eng",
+          "callee": "re.sub(r'[^a-z0-9_]', '', text.replace(' ', '_')).strip",
+          "lineNumber": 49
+        },
+        {
+          "caller": "convert_to_eng",
+          "callee": "re.sub",
+          "lineNumber": 49
+        },
+        {
+          "caller": "convert_to_eng",
+          "callee": "text.replace",
+          "lineNumber": 49
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "len",
+          "lineNumber": 61
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "len",
+          "lineNumber": 61
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "item.find_all",
+          "lineNumber": 61
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "get_descriptions",
+          "lineNumber": 62
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "item.find_all",
+          "lineNumber": 64
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "br.replace_with",
+          "lineNumber": 65
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "item.get_text().strip",
+          "lineNumber": 66
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "item.get_text",
+          "lineNumber": 66
+        },
+        {
+          "caller": "get_descriptions",
+          "callee": "results.append",
+          "lineNumber": 68
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "CurlEngine.get_document",
+          "lineNumber": 73
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "doc.select_one",
+          "lineNumber": 77
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "doc.select_one",
+          "lineNumber": 80
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "name_elem.text.strip",
+          "lineNumber": 81
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "doc.select",
+          "lineNumber": 83
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "doc.select",
+          "lineNumber": 85
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "get_descriptions",
+          "lineNumber": 86
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "doc.select",
+          "lineNumber": 89
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "info.select_one",
+          "lineNumber": 90
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "info.select_one",
+          "lineNumber": 91
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "title_elem.text.lower().strip",
+          "lineNumber": 93
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "title_elem.text.lower",
+          "lineNumber": 93
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "convert_to_eng",
+          "lineNumber": 96
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "desc_elem.find_all",
+          "lineNumber": 97
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "br.replace_with",
+          "lineNumber": 98
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "line.strip",
+          "lineNumber": 99
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "desc_elem.get_text().split",
+          "lineNumber": 99
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "desc_elem.get_text",
+          "lineNumber": 99
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "line.strip",
+          "lineNumber": 99
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "len",
+          "lineNumber": 100
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "doc.select",
+          "lineNumber": 102
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "doc.select",
+          "lineNumber": 104
+        },
+        {
+          "caller": "scrape_company_detail",
+          "callee": "get_descriptions",
+          "lineNumber": 105
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "CurlEngine.get_document",
+          "lineNumber": 120
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "doc.select_one",
+          "lineNumber": 124
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "doc.select_one",
+          "lineNumber": 129
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "doc.select_one",
+          "lineNumber": 133
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "logger.error",
+          "lineNumber": 138
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "(datetime.now() + timedelta(days=30)).strftime",
+          "lineNumber": 177
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "datetime.now",
+          "lineNumber": 177
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "timedelta",
+          "lineNumber": 177
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select_one",
+          "lineNumber": 180
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "header.select_one",
+          "lineNumber": 182
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "title_elem.text.strip",
+          "lineNumber": 184
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "header.select_one",
+          "lineNumber": 186
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "salary_elem.text.strip",
+          "lineNumber": 188
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "header.select_one",
+          "lineNumber": 190
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "re.sub",
+          "lineNumber": 192
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "int",
+          "lineNumber": 193
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "(datetime.now() + timedelta(days=days)).strftime",
+          "lineNumber": 194
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "datetime.now",
+          "lineNumber": 194
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "timedelta",
+          "lineNumber": 194
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select_one",
+          "lineNumber": 196
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "title_elem.text.strip",
+          "lineNumber": 198
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select",
+          "lineNumber": 200
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "basic_infos[0].text.strip",
+          "lineNumber": 201
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 201
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "basic_infos[1].text.strip",
+          "lineNumber": 202
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 202
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "basic_infos[-1].text.strip",
+          "lineNumber": 203
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 203
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select_one",
+          "lineNumber": 205
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "deadline_elem.text.strip",
+          "lineNumber": 206
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "datetime.strptime(deadline_elem.text.strip(), \"%d/%m/%Y\").strftime",
+          "lineNumber": 208
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "datetime.strptime",
+          "lineNumber": 208
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "deadline_elem.text.strip",
+          "lineNumber": 208
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select",
+          "lineNumber": 213
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "tag.find_all",
+          "lineNumber": 214
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 215
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "convert_to_eng",
+          "lineNumber": 216
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "children[1].find_all",
+          "lineNumber": 218
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "item.find_all",
+          "lineNumber": 219
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "br.replace_with",
+          "lineNumber": 220
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "item.get_text().split",
+          "lineNumber": 221
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "item.get_text",
+          "lineNumber": 221
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "t.strip",
+          "lineNumber": 222
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "tag_list.append",
+          "lineNumber": 224
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select",
+          "lineNumber": 229
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 230
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "descriptions.pop",
+          "lineNumber": 231
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "descriptions.extend",
+          "lineNumber": 232
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select",
+          "lineNumber": 232
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 233
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "descriptions.pop",
+          "lineNumber": 234
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "desc.find_all",
+          "lineNumber": 237
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 238
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "convert_to_eng",
+          "lineNumber": 239
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "get_descriptions",
+          "lineNumber": 240
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "children[1].find_all",
+          "lineNumber": 240
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select",
+          "lineNumber": 244
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "info.find_all",
+          "lineNumber": 245
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 246
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "children[1].find_all",
+          "lineNumber": 247
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "range",
+          "lineNumber": 248
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 248
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 249
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "convert_to_eng",
+          "lineNumber": 250
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "inner_children[i + 1].text.strip",
+          "lineNumber": 251
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "related_tags.extend",
+          "lineNumber": 257
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select",
+          "lineNumber": 257
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "related_tags.extend",
+          "lineNumber": 258
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select",
+          "lineNumber": 258
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "related_tags.extend",
+          "lineNumber": 260
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "job_info.select",
+          "lineNumber": 260
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "related_tag.find_all",
+          "lineNumber": 263
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "len",
+          "lineNumber": 264
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "convert_to_eng",
+          "lineNumber": 265
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "t.text.strip",
+          "lineNumber": 266
+        },
+        {
+          "caller": "scrape_recruitment_detail",
+          "callee": "children[1].find_all",
+          "lineNumber": 266
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.info",
+          "lineNumber": 287
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.info",
+          "lineNumber": 291
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.info",
+          "lineNumber": 293
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.info",
+          "lineNumber": 294
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.info",
+          "lineNumber": 306
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "CurlEngine.get_document",
+          "lineNumber": 308
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "doc.select_one",
+          "lineNumber": 312
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.warning",
+          "lineNumber": 314
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "re.search",
+          "lineNumber": 317
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "int",
+          "lineNumber": 319
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "m.group",
+          "lineNumber": 319
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "doc.select",
+          "lineNumber": 321
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.info",
+          "lineNumber": 324
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "list",
+          "lineNumber": 327
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "companies_dict.values",
+          "lineNumber": 327
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "list",
+          "lineNumber": 328
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "recruitments_dict.values",
+          "lineNumber": 328
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "time.sleep",
+          "lineNumber": 331
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.info",
+          "lineNumber": 333
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "job.select_one",
+          "lineNumber": 335
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "title_block.select_one",
+          "lineNumber": 339
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "company_elem.get",
+          "lineNumber": 342
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "re.search",
+          "lineNumber": 344
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "m2.group",
+          "lineNumber": 347
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "title_block.select_one",
+          "lineNumber": 349
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "rec_elem.get",
+          "lineNumber": 352
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "job.get",
+          "lineNumber": 354
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "scrape_company_detail",
+          "lineNumber": 362
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query(Company).filter(Company.company_id == company_id).first",
+          "lineNumber": 366
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query(Company).filter",
+          "lineNumber": 366
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query",
+          "lineNumber": 366
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "Company",
+          "lineNumber": 368
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.add",
+          "lineNumber": 369
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.commit",
+          "lineNumber": 370
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "scrape_recruitment_detail",
+          "lineNumber": 375
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query(Recruitment).filter(Recruitment.recruitment_id == recruitment_id).first",
+          "lineNumber": 379
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query(Recruitment).filter",
+          "lineNumber": 379
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query",
+          "lineNumber": 379
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "isinstance",
+          "lineNumber": 383
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "datetime.strptime(deadline, \"%Y-%m-%d\").date",
+          "lineNumber": 384
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "datetime.strptime",
+          "lineNumber": 384
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "Recruitment",
+          "lineNumber": 385
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.add",
+          "lineNumber": 398
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.commit",
+          "lineNumber": 399
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "str",
+          "lineNumber": 405
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "uuid.uuid4",
+          "lineNumber": 405
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "recruitment_posts.append",
+          "lineNumber": 410
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query(RecruitmentPost).filter(\r\n                        RecruitmentPost.company_id == company[\"company_id\"],\r\n                        RecruitmentPost.recruitment_id == recruitment[\"recruitment_id\"]\r\n                    ).first",
+          "lineNumber": 412
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query(RecruitmentPost).filter",
+          "lineNumber": 412
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.query",
+          "lineNumber": 412
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "isinstance",
+          "lineNumber": 418
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "datetime.strptime(deadline, \"%Y-%m-%d\").date",
+          "lineNumber": 419
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "datetime.strptime",
+          "lineNumber": 419
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "RecruitmentPost",
+          "lineNumber": 420
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.add",
+          "lineNumber": 426
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.commit",
+          "lineNumber": 427
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.error",
+          "lineNumber": 430
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "db.rollback",
+          "lineNumber": 431
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "logger.info",
+          "lineNumber": 435
+        },
+        {
+          "caller": "parse_topcv_jobs",
+          "callee": "len",
+          "lineNumber": 435
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/scrapers/processor.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 147,
+      "nonEmptyLines": 129,
+      "functions": [
+        {
+          "name": "summarize_text",
+          "startLine": 27,
+          "endLine": 33,
+          "params": [
+            "prompt",
+            "system_prompt"
+          ]
+        },
+        {
+          "name": "_jsonify",
+          "startLine": 36,
+          "endLine": 42,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "process_unprocessed_data",
+          "startLine": 44,
+          "endLine": 147,
+          "params": [
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "summarize_text",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "_jsonify",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "process_unprocessed_data",
+          "line": 44,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "summarize_text",
+          "callee": "logger.warning",
+          "lineNumber": 31
+        },
+        {
+          "caller": "summarize_text",
+          "callee": "complete_text",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_jsonify",
+          "callee": "isinstance",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_jsonify",
+          "callee": "json.dumps",
+          "lineNumber": 42
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "logger.info",
+          "lineNumber": 45
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.query(Company).outerjoin(\r\n        ProcessedCompany, Company.company_id == ProcessedCompany.company_id\r\n    ).filter(ProcessedCompany.company_id == None).all",
+          "lineNumber": 48
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.query(Company).outerjoin(\r\n        ProcessedCompany, Company.company_id == ProcessedCompany.company_id\r\n    ).filter",
+          "lineNumber": 48
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.query(Company).outerjoin",
+          "lineNumber": 48
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.query",
+          "lineNumber": 48
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "logger.info",
+          "lineNumber": 53
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "str",
+          "lineNumber": 55
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "str",
+          "lineNumber": 56
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "str",
+          "lineNumber": 57
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "summarize_text",
+          "lineNumber": 68
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "summary_json_str.strip().strip",
+          "lineNumber": 72
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "summary_json_str.strip",
+          "lineNumber": 72
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "clean_str.lower().startswith",
+          "lineNumber": 73
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "clean_str.lower",
+          "lineNumber": 73
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "json.loads",
+          "lineNumber": 75
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "_jsonify",
+          "lineNumber": 78
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "infos.items",
+          "lineNumber": 78
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "logger.error",
+          "lineNumber": 80
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "ProcessedCompany",
+          "lineNumber": 85
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.add",
+          "lineNumber": 90
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.commit",
+          "lineNumber": 91
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.query(Recruitment).outerjoin(\r\n        ProcessedRecruitment, Recruitment.recruitment_id == ProcessedRecruitment.recruitment_id\r\n    ).filter(ProcessedRecruitment.recruitment_id == None).all",
+          "lineNumber": 94
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.query(Recruitment).outerjoin(\r\n        ProcessedRecruitment, Recruitment.recruitment_id == ProcessedRecruitment.recruitment_id\r\n    ).filter",
+          "lineNumber": 94
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.query(Recruitment).outerjoin",
+          "lineNumber": 94
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.query",
+          "lineNumber": 94
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "logger.info",
+          "lineNumber": 99
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "str",
+          "lineNumber": 101
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "str",
+          "lineNumber": 102
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "str",
+          "lineNumber": 103
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "str",
+          "lineNumber": 104
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "str",
+          "lineNumber": 105
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "summarize_text",
+          "lineNumber": 120
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "summary_json_str.strip().strip",
+          "lineNumber": 124
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "summary_json_str.strip",
+          "lineNumber": 124
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "clean_str.lower().startswith",
+          "lineNumber": 125
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "clean_str.lower",
+          "lineNumber": 125
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "json.loads",
+          "lineNumber": 127
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "_jsonify",
+          "lineNumber": 130
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "descriptions.items",
+          "lineNumber": 130
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "logger.error",
+          "lineNumber": 132
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "ProcessedRecruitment",
+          "lineNumber": 137
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.add",
+          "lineNumber": 144
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "db.commit",
+          "lineNumber": 145
+        },
+        {
+          "caller": "process_unprocessed_data",
+          "callee": "logger.info",
+          "lineNumber": 147
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/llm_service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 120,
+      "nonEmptyLines": 100,
+      "functions": [
+        {
+          "name": "is_enabled",
+          "startLine": 26,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "_get_client",
+          "startLine": 31,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "complete_text",
+          "startLine": 45,
+          "endLine": 67,
+          "params": [
+            "system_prompt",
+            "user_prompt"
+          ]
+        },
+        {
+          "name": "complete_json",
+          "startLine": 70,
+          "endLine": 82,
+          "params": [
+            "system_prompt",
+            "user_prompt"
+          ]
+        },
+        {
+          "name": "extract_skills",
+          "startLine": 96,
+          "endLine": 120,
+          "params": [
+            "description"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "is_enabled",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "_get_client",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "complete_text",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "complete_json",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "extract_skills",
+          "line": 96,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "is_enabled",
+          "callee": "bool",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_get_client",
+          "callee": "is_enabled",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_get_client",
+          "callee": "OpenAI",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_get_client",
+          "callee": "logger.info",
+          "lineNumber": 41
+        },
+        {
+          "caller": "complete_text",
+          "callee": "_get_client",
+          "lineNumber": 51
+        },
+        {
+          "caller": "complete_text",
+          "callee": "client.chat.completions.create",
+          "lineNumber": 55
+        },
+        {
+          "caller": "complete_text",
+          "callee": "logger.error",
+          "lineNumber": 66
+        },
+        {
+          "caller": "complete_json",
+          "callee": "complete_text",
+          "lineNumber": 75
+        },
+        {
+          "caller": "complete_json",
+          "callee": "json.loads",
+          "lineNumber": 79
+        },
+        {
+          "caller": "complete_json",
+          "callee": "logger.error",
+          "lineNumber": 81
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "description.strip",
+          "lineNumber": 102
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "complete_json",
+          "lineNumber": 104
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "result.get",
+          "lineNumber": 107
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "isinstance",
+          "lineNumber": 108
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "set",
+          "lineNumber": 111
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "isinstance",
+          "lineNumber": 114
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "skill.strip",
+          "lineNumber": 116
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "name.lower",
+          "lineNumber": 117
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "seen.add",
+          "lineNumber": 118
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "name.lower",
+          "lineNumber": 118
+        },
+        {
+          "caller": "extract_skills",
+          "callee": "cleaned.append",
+          "lineNumber": 119
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/app/services/markitdown_service.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "validate_public_document_url",
+          "startLine": 18,
+          "endLine": 34,
+          "params": [
+            "url"
+          ]
+        },
+        {
+          "name": "extract_markdown_from_url",
+          "startLine": 37,
+          "endLine": 68,
+          "params": [
+            "url"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "validate_public_document_url",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "extract_markdown_from_url",
+          "line": 37,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "validate_public_document_url",
+          "callee": "urllib.parse.urlparse",
+          "lineNumber": 20
+        },
+        {
+          "caller": "validate_public_document_url",
+          "callee": "ValueError",
+          "lineNumber": 22
+        },
+        {
+          "caller": "validate_public_document_url",
+          "callee": "ValueError",
+          "lineNumber": 25
+        },
+        {
+          "caller": "validate_public_document_url",
+          "callee": "socket.getaddrinfo",
+          "lineNumber": 28
+        },
+        {
+          "caller": "validate_public_document_url",
+          "callee": "ValueError",
+          "lineNumber": 30
+        },
+        {
+          "caller": "validate_public_document_url",
+          "callee": "ipaddress.ip_address",
+          "lineNumber": 33
+        },
+        {
+          "caller": "validate_public_document_url",
+          "callee": "ValueError",
+          "lineNumber": 34
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "validate_public_document_url",
+          "lineNumber": 38
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "logger.info",
+          "lineNumber": 39
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "requests.get",
+          "lineNumber": 45
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "response.raise_for_status",
+          "lineNumber": 46
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "urllib.parse.urlparse",
+          "lineNumber": 49
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "os.path.basename",
+          "lineNumber": 50
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "tempfile.NamedTemporaryFile",
+          "lineNumber": 55
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "temp_file.write",
+          "lineNumber": 56
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "logger.info",
+          "lineNumber": 60
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "md.convert",
+          "lineNumber": 62
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "logger.info",
+          "lineNumber": 63
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "len",
+          "lineNumber": 63
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "os.path.exists",
+          "lineNumber": 67
+        },
+        {
+          "caller": "extract_markdown_from_url",
+          "callee": "os.remove",
+          "lineNumber": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/tests/scrapers/test_flm_curriculum.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 138,
+      "nonEmptyLines": 104,
+      "functions": [
+        {
+          "name": "_soup",
+          "startLine": 47,
+          "endLine": 48,
+          "params": [
+            "html"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestIsMajorSubject",
+          "startLine": 51,
+          "endLine": 71,
+          "methods": [
+            "test_keeps_engineering_subjects",
+            "test_keeps_maths_and_capstone",
+            "test_drops_subjects_outside_the_major",
+            "test_drops_combo_and_elective_placeholders"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestCurriculumFromSoup",
+          "startLine": 74,
+          "endLine": 89,
+          "methods": [
+            "test_keeps_only_major_subjects",
+            "test_carries_term_and_credits",
+            "test_trunk_subjects_have_no_combo"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestComboParsing",
+          "startLine": 92,
+          "endLine": 114,
+          "methods": [
+            "test_reads_the_combo_label",
+            "test_splits_code_from_name",
+            "test_label_without_a_colon_yields_no_code",
+            "test_reads_the_combo_subjects"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestMergeGroup",
+          "startLine": 117,
+          "endLine": 138,
+          "methods": [
+            "test_combo_subjects_keep_their_tag",
+            "test_trunk_subject_is_not_captured_by_a_combo"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_soup",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "TestIsMajorSubject",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "TestCurriculumFromSoup",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "TestComboParsing",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "TestMergeGroup",
+          "line": 117,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_soup",
+          "callee": "BeautifulSoup",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_keeps_engineering_subjects",
+          "callee": "is_major_subject",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_keeps_engineering_subjects",
+          "callee": "is_major_subject",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_keeps_engineering_subjects",
+          "callee": "is_major_subject",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_keeps_maths_and_capstone",
+          "callee": "is_major_subject",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_drops_subjects_outside_the_major",
+          "callee": "is_major_subject",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_drops_combo_and_elective_placeholders",
+          "callee": "is_major_subject",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_keeps_only_major_subjects",
+          "callee": "curriculum_from_soup",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_keeps_only_major_subjects",
+          "callee": "_soup",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_keeps_only_major_subjects",
+          "callee": "sorted",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_carries_term_and_credits",
+          "callee": "curriculum_from_soup",
+          "lineNumber": 81
+        },
+        {
+          "caller": "test_carries_term_and_credits",
+          "callee": "_soup",
+          "lineNumber": 81
+        },
+        {
+          "caller": "test_trunk_subjects_have_no_combo",
+          "callee": "curriculum_from_soup",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_trunk_subjects_have_no_combo",
+          "callee": "_soup",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_reads_the_combo_label",
+          "callee": "P.parse_combo_name",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_reads_the_combo_label",
+          "callee": "_soup",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_reads_the_combo_label",
+          "callee": "label.startswith",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_splits_code_from_name",
+          "callee": "P.split_combo_label",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_splits_code_from_name",
+          "callee": "P.parse_combo_name",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_splits_code_from_name",
+          "callee": "_soup",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_splits_code_from_name",
+          "callee": "name.startswith",
+          "lineNumber": 102
+        },
+        {
+          "caller": "test_label_without_a_colon_yields_no_code",
+          "callee": "P.split_combo_label",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_reads_the_combo_subjects",
+          "callee": "P.parse_group_subjects",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_reads_the_combo_subjects",
+          "callee": "_soup",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_combo_subjects_keep_their_tag",
+          "callee": "curriculum_from_soup",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_combo_subjects_keep_their_tag",
+          "callee": "_soup",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_combo_subjects_keep_their_tag",
+          "callee": "_merge_group",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_combo_subjects_keep_their_tag",
+          "callee": "P.parse_group_subjects",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_combo_subjects_keep_their_tag",
+          "callee": "_soup",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_trunk_subject_is_not_captured_by_a_combo",
+          "callee": "curriculum_from_soup",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_trunk_subject_is_not_captured_by_a_combo",
+          "callee": "_soup",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_trunk_subject_is_not_captured_by_a_combo",
+          "callee": "_merge_group",
+          "lineNumber": 134
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 5,
+        "functionCount": 1,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-service/tests/scrapers/test_flm_parsers.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 214,
+      "nonEmptyLines": 168,
+      "functions": [
+        {
+          "name": "_soup",
+          "startLine": 79,
+          "endLine": 80,
+          "params": [
+            "html"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestParseSessions",
+          "startLine": 83,
+          "endLine": 114,
+          "methods": [
+            "test_resolves_relative_download_href",
+            "test_keeps_the_id_from_the_href_not_the_page",
+            "test_session_without_download_stays_empty",
+            "test_relative_href_is_dropped_without_a_base_url",
+            "test_parses_every_session_row"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestParseClos",
+          "startLine": 117,
+          "endLine": 123,
+          "methods": [
+            "test_extracts_code_and_outcome"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestFindSyllabusLinks",
+          "startLine": 126,
+          "endLine": 174,
+          "methods": [
+            "test_current_version_ranks_first",
+            "test_keeps_superseded_versions_after_the_current_one",
+            "test_captures_the_rows_own_code",
+            "test_dbi202_picks_the_2024_version_over_the_active_approved_old_one",
+            "test_ranks_by_decision_date_when_flags_tie"
+          ],
+          "properties": []
+        },
+        {
+          "name": "TestDownloadLinkHygiene",
+          "startLine": 192,
+          "endLine": 214,
+          "methods": [
+            "test_page_link_is_not_taken_as_a_file",
+            "test_static_file_link_still_resolves",
+            "test_handler_style_link_is_kept",
+            "test_multi_link_href_keeps_only_the_first"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_soup",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "TestParseSessions",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "TestParseClos",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "TestFindSyllabusLinks",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "TestDownloadLinkHygiene",
+          "line": 192,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_soup",
+          "callee": "BeautifulSoup",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_resolves_relative_download_href",
+          "callee": "P.parse_sessions",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_resolves_relative_download_href",
+          "callee": "_soup",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_keeps_the_id_from_the_href_not_the_page",
+          "callee": "P.parse_sessions",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_keeps_the_id_from_the_href_not_the_page",
+          "callee": "_soup",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_session_without_download_stays_empty",
+          "callee": "P.parse_sessions",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_session_without_download_stays_empty",
+          "callee": "_soup",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_relative_href_is_dropped_without_a_base_url",
+          "callee": "P.parse_sessions",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_relative_href_is_dropped_without_a_base_url",
+          "callee": "_soup",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_parses_every_session_row",
+          "callee": "P.parse_sessions",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_parses_every_session_row",
+          "callee": "_soup",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_parses_every_session_row",
+          "callee": "len",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_extracts_code_and_outcome",
+          "callee": "P.parse_clos",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_extracts_code_and_outcome",
+          "callee": "_soup",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_extracts_code_and_outcome",
+          "callee": "len",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_current_version_ranks_first",
+          "callee": "P.find_syllabus_links",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_current_version_ranks_first",
+          "callee": "_soup",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_keeps_superseded_versions_after_the_current_one",
+          "callee": "P.find_syllabus_links",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_keeps_superseded_versions_after_the_current_one",
+          "callee": "_soup",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_captures_the_rows_own_code",
+          "callee": "P.find_syllabus_links",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_captures_the_rows_own_code",
+          "callee": "_soup",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_dbi202_picks_the_2024_version_over_the_active_approved_old_one",
+          "callee": "P.find_syllabus_links",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_dbi202_picks_the_2024_version_over_the_active_approved_old_one",
+          "callee": "_soup",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_ranks_by_decision_date_when_flags_tie",
+          "callee": "SYLLABUS_LIST_HTML.replace(\n            '<td>100/QD-DHFPT dated 01/05/2019</td>',\n            '<td>999/QD-DHFPT dated 12/31/2026</td>',\n        ).replace",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_ranks_by_decision_date_when_flags_tie",
+          "callee": "SYLLABUS_LIST_HTML.replace",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_ranks_by_decision_date_when_flags_tie",
+          "callee": "P.find_syllabus_links",
+          "lineNumber": 172
+        },
+        {
+          "caller": "test_ranks_by_decision_date_when_flags_tie",
+          "callee": "_soup",
+          "lineNumber": 172
+        },
+        {
+          "caller": "test_page_link_is_not_taken_as_a_file",
+          "callee": "P.parse_sessions",
+          "lineNumber": 194
+        },
+        {
+          "caller": "test_page_link_is_not_taken_as_a_file",
+          "callee": "_soup",
+          "lineNumber": 194
+        },
+        {
+          "caller": "test_static_file_link_still_resolves",
+          "callee": "P.parse_sessions",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_static_file_link_still_resolves",
+          "callee": "_soup",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_handler_style_link_is_kept",
+          "callee": "P.parse_sessions",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_handler_style_link_is_kept",
+          "callee": "_soup",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_multi_link_href_keeps_only_the_first",
+          "callee": "P._first_link",
+          "lineNumber": 212
+        },
+        {
+          "caller": "test_multi_link_href_keeps_only_the_first",
+          "callee": "P._first_link",
+          "lineNumber": 213
+        },
+        {
+          "caller": "test_multi_link_href_keeps_only_the_first",
+          "callee": "P._first_link",
+          "lineNumber": 214
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 1,
+        "classCount": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application-dev.yaml",
+      "language": "yaml",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application-prod.yaml",
+      "language": "yaml",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/resources/application.yaml",
+      "language": "yaml",
+      "sizeLines": 140,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/src/main/resources/application-dev.yaml": [],
+    "BackEnd/intelipath-backend/src/main/resources/application-prod.yaml": [],
+    "BackEnd/intelipath-backend/src/main/resources/application.yaml": []
+  }
+}

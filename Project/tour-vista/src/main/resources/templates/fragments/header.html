@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<body>
+
+<th:block th:fragment="travelHeader(activeMenu)">
+
+<header class="tourvista-header">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark travel-navbar fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold fs-3" th:href="@{/}">
+                TourVista
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://flagcdn.com/w20/vn.png" alt="VN" class="flag-ico"> VND | VI
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">VND | VI</a></li>
+                            <li><a class="dropdown-item" href="#">USD | EN</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Khuyến mãi
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hợp tác với chúng tôi</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                           href="#"
+                           role="button"
+                           data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Hỗ trợ
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Trợ giúp</a></li>
+                            <li><a class="dropdown-item" href="#">Liên hệ chúng tôi</a></li>
+                            <li><a class="dropdown-item" href="#">Hộp thư của tôi</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Đặt chỗ của tôi</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="btn btn-light rounded-pill px-4 fw-semibold"
+                                data-bs-toggle="modal"
+                                data-bs-target="#loginModal">
+                            Đăng Nhập
+                            <i class="bi bi-box-arrow-in-right ms-1"></i>
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button type="button"
+                                class="btn btn-primary rounded-pill px-4 fw-semibold"
+                                data-bs-toggle="modal"
+                                data-bs-target="#registerModal">
+                            Đăng Ký
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="travel-subnav">
+        <div class="container">
+            <ul class="nav gap-4">
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       th:classappend="${activeMenu == 'hotel'} ? 'active' : ''"
+                       th:href="@{/hotels}">
+                       Khách sạn
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       th:classappend="${activeMenu == 'flight'} ? 'active' : ''"
+                       th:href="@{/flights}">
+                       Vé máy bay
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       th:classappend="${activeMenu == 'bus'} ? 'active' : ''"
+                       th:href="@{/bus}">
+                       Vé xe khách
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       th:classappend="${activeMenu == 'airport'} ? 'active' : ''"
+                       th:href="@{/airport-transfer}">
+                       Đưa đón sân bay
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div th:replace="~{fragments/auth :: authModals}"></div>
+
+</th:block>
+
+</body>
+</html>

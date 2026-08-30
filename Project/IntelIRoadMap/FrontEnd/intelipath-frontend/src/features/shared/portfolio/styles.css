@@ -1,0 +1,93 @@
+/* Variables are controlled by React state via JS, but we define fallbacks and animations here */
+
+.portfolio-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.75rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.portfolio-identity strong {
+  padding: 0.375rem 0.625rem;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 45%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary-color) 10%, var(--bg-secondary));
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+}
+
+.portfolio-profile-prompts {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px dashed color-mix(in srgb, var(--primary-color) 45%, transparent);
+  border-radius: var(--card-radius);
+  background: color-mix(in srgb, var(--primary-color) 7%, var(--bg-secondary));
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.portfolio-profile-prompts strong { color: var(--title-color); }
+.portfolio-profile-prompts p { margin: 0.25rem 0 0; }
+.portfolio-profile-prompts__heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.portfolio-profile-prompts button { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: 0.5rem; border: 1px solid color-mix(in srgb, var(--primary-color) 45%, transparent); border-radius: 999px; padding: 0.625rem 1rem; color: var(--primary-color); font-weight: 700; white-space: nowrap; }
+.portfolio-profile-prompts button:hover { background: color-mix(in srgb, var(--primary-color) 12%, transparent); }
+.portfolio-profile-prompts button:focus-visible, .portfolio-profile-prompts input:focus-visible, .portfolio-profile-prompts textarea:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; }
+.portfolio-profile-prompts button:active { background: color-mix(in srgb, var(--primary-color) 18%, transparent); }
+.portfolio-profile-prompts button:disabled { cursor: not-allowed; opacity: 0.55; }
+.portfolio-profile-prompts svg { width: 1rem; height: 1rem; }
+.portfolio-profile-prompts__draft { display: grid; gap: 1rem; margin-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--text-color) 16%, transparent); padding-top: 1.25rem; }
+.portfolio-profile-prompts__draft label { display: grid; gap: 0.375rem; color: var(--title-color); font-size: 0.75rem; font-weight: 700; }
+.portfolio-profile-prompts__draft input, .portfolio-profile-prompts__draft textarea { width: 100%; min-height: 2.75rem; border: 1px solid color-mix(in srgb, var(--text-color) 24%, transparent); border-radius: calc(var(--card-radius) / 2); outline: 2px solid transparent; padding: 0.75rem; background: var(--bg-secondary); color: var(--text-color); font: inherit; font-weight: 400; }
+.portfolio-profile-prompts__draft textarea { min-height: 5rem; resize: vertical; }
+.portfolio-profile-prompts__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+
+@media (max-width: 48rem) {
+  .portfolio-identity > span { display: none; }
+  .portfolio-profile-prompts__heading { align-items: flex-start; flex-direction: column; }
+}
+
+@keyframes morph {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  100% { border-radius: 60% 40% 30% 70% / 50% 30% 70% 40%; }
+}
+
+.animate-morph {
+  animation: morph 8s ease-in-out infinite alternate;
+}
+
+.e-portfolio-wrapper {
+  /* Smooth transitions for theme switching */
+  transition: background-color 0.4s ease, color 0.4s ease;
+  background-color: var(--bg-primary);
+  /* --text-color is the variable the theme actually sets; --text-primary was never
+     defined anywhere, which made this declaration invalid and left the wrapper
+     inheriting the body colour instead of the student's theme. */
+  color: var(--text-color);
+}
+
+.e-portfolio-wrapper a {
+  transition: all 0.3s ease;
+}
+
+/* Base tailwind override just in case */
+.e-portfolio-wrapper section {
+  overflow-x: hidden;
+}
+
+/* Typography Overrides */
+.e-portfolio-wrapper {
+  font-family: var(--body-font, 'Inter', sans-serif);
+}
+
+.e-portfolio-wrapper h1,
+.e-portfolio-wrapper h2,
+.e-portfolio-wrapper h3,
+.e-portfolio-wrapper h4,
+.e-portfolio-wrapper h5,
+.e-portfolio-wrapper h6,
+.e-portfolio-wrapper .font-outfit {
+  font-family: var(--heading-font, 'Outfit', sans-serif) !important;
+}

@@ -1,0 +1,3108 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 31,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 31,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 31,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SecurityConfig.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 101,
+      "nonEmptyLines": 93,
+      "functions": [
+        {
+          "name": "passwordEncoder",
+          "startLine": 40,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "securityFilterChain",
+          "startLine": 45,
+          "endLine": 100,
+          "params": [
+            "http"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SecurityConfig",
+          "startLine": 22,
+          "endLine": 101,
+          "methods": [
+            "passwordEncoder",
+            "securityFilterChain"
+          ],
+          "properties": [
+            "jwtAuthenticationFilter",
+            "oAuth2UserService",
+            "oAuth2AuthenticationSuccessHandler",
+            "oAuth2AuthenticationFailureHandler",
+            "httpCookieOAuth2AuthorizationRequestRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "passwordEncoder",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "securityFilterChain",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "SecurityConfig",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "passwordEncoder",
+          "callee": "new BCryptPasswordEncoder",
+          "lineNumber": 42
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http\r\n                .csrf(csrf -> csrf.disable())\r\n                .cors(Customizer.withDefaults()) // ← Tự động dùng CorsConfig bean\r\n                .sessionManagement(session -> session\r\n                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)\r\n                )\r\n                .authorizeHttpRequests(auth -> auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll()\r\n                        .requestMatchers(\r\n                                \"/api/v1/auth/**\",\r\n                                \"/api/v1/public/**\",\r\n                                \"/api/v1/public-portfolio/**\",\r\n                                \"/oauth2/**\",\r\n                                \"/login/oauth2/**\"\r\n                        ).permitAll()\r\n                        // ============================================================\r\n                        // SWAGGER - No authentication required\r\n                        // ============================================================\r\n                        .requestMatchers(\r\n                                \"/swagger-ui/**\",\r\n                                \"/swagger-ui.html\",\r\n                                \"/v3/api-docs/**\",\r\n                                \"/webjars/**\"\r\n                        ).permitAll()\r\n\r\n                        // ============================================================\r\n                        // All other endpoints require authentication\r\n                        // Controller-level @PreAuthorize will handle specific role checks\r\n                        // ============================================================\r\n                        .anyRequest().authenticated()\r\n                )\r\n                .oauth2Login(oauth2 -> oauth2\r\n                        .authorizationEndpoint(authorization -> authorization\r\n                                .baseUri(\"/oauth2/authorization\")\r\n                                .authorizationRequestRepository(httpCookieOAuth2AuthorizationRequestRepository)\r\n                        )\r\n                        .userInfoEndpoint(userInfo -> userInfo\r\n                                .userService(oAuth2UserService)\r\n                        )\r\n                        .successHandler(oAuth2AuthenticationSuccessHandler)\r\n                        .failureHandler(oAuth2AuthenticationFailureHandler)\r\n                ).addFilterBefore",
+          "lineNumber": 47
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http\r\n                .csrf(csrf -> csrf.disable())\r\n                .cors(Customizer.withDefaults()) // ← Tự động dùng CorsConfig bean\r\n                .sessionManagement(session -> session\r\n                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)\r\n                )\r\n                .authorizeHttpRequests(auth -> auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll()\r\n                        .requestMatchers(\r\n                                \"/api/v1/auth/**\",\r\n                                \"/api/v1/public/**\",\r\n                                \"/api/v1/public-portfolio/**\",\r\n                                \"/oauth2/**\",\r\n                                \"/login/oauth2/**\"\r\n                        ).permitAll()\r\n                        // ============================================================\r\n                        // SWAGGER - No authentication required\r\n                        // ============================================================\r\n                        .requestMatchers(\r\n                                \"/swagger-ui/**\",\r\n                                \"/swagger-ui.html\",\r\n                                \"/v3/api-docs/**\",\r\n                                \"/webjars/**\"\r\n                        ).permitAll()\r\n\r\n                        // ============================================================\r\n                        // All other endpoints require authentication\r\n                        // Controller-level @PreAuthorize will handle specific role checks\r\n                        // ============================================================\r\n                        .anyRequest().authenticated()\r\n                ).oauth2Login",
+          "lineNumber": 47
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http\r\n                .csrf(csrf -> csrf.disable())\r\n                .cors(Customizer.withDefaults()) // ← Tự động dùng CorsConfig bean\r\n                .sessionManagement(session -> session\r\n                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)\r\n                ).authorizeHttpRequests",
+          "lineNumber": 47
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http\r\n                .csrf(csrf -> csrf.disable())\r\n                .cors(Customizer.withDefaults()).sessionManagement",
+          "lineNumber": 47
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http\r\n                .csrf(csrf -> csrf.disable()).cors",
+          "lineNumber": 47
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http.csrf",
+          "lineNumber": 47
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "csrf.disable",
+          "lineNumber": 48
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "Customizer.withDefaults",
+          "lineNumber": 49
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "session.sessionCreationPolicy",
+          "lineNumber": 50
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll()\r\n                        .requestMatchers(\r\n                                \"/api/v1/auth/**\",\r\n                                \"/api/v1/public/**\",\r\n                                \"/api/v1/public-portfolio/**\",\r\n                                \"/oauth2/**\",\r\n                                \"/login/oauth2/**\"\r\n                        ).permitAll()\r\n                        // ============================================================\r\n                        // SWAGGER - No authentication required\r\n                        // ============================================================\r\n                        .requestMatchers(\r\n                                \"/swagger-ui/**\",\r\n                                \"/swagger-ui.html\",\r\n                                \"/v3/api-docs/**\",\r\n                                \"/webjars/**\"\r\n                        ).permitAll()\r\n\r\n                        // ============================================================\r\n                        // All other endpoints require authentication\r\n                        // Controller-level @PreAuthorize will handle specific role checks\r\n                        // ============================================================\r\n                        .anyRequest().authenticated",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll()\r\n                        .requestMatchers(\r\n                                \"/api/v1/auth/**\",\r\n                                \"/api/v1/public/**\",\r\n                                \"/api/v1/public-portfolio/**\",\r\n                                \"/oauth2/**\",\r\n                                \"/login/oauth2/**\"\r\n                        ).permitAll()\r\n                        // ============================================================\r\n                        // SWAGGER - No authentication required\r\n                        // ============================================================\r\n                        .requestMatchers(\r\n                                \"/swagger-ui/**\",\r\n                                \"/swagger-ui.html\",\r\n                                \"/v3/api-docs/**\",\r\n                                \"/webjars/**\"\r\n                        ).permitAll().anyRequest",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll()\r\n                        .requestMatchers(\r\n                                \"/api/v1/auth/**\",\r\n                                \"/api/v1/public/**\",\r\n                                \"/api/v1/public-portfolio/**\",\r\n                                \"/oauth2/**\",\r\n                                \"/login/oauth2/**\"\r\n                        ).permitAll()\r\n                        // ============================================================\r\n                        // SWAGGER - No authentication required\r\n                        // ============================================================\r\n                        .requestMatchers(\r\n                                \"/swagger-ui/**\",\r\n                                \"/swagger-ui.html\",\r\n                                \"/v3/api-docs/**\",\r\n                                \"/webjars/**\"\r\n                        ).permitAll",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll()\r\n                        .requestMatchers(\r\n                                \"/api/v1/auth/**\",\r\n                                \"/api/v1/public/**\",\r\n                                \"/api/v1/public-portfolio/**\",\r\n                                \"/oauth2/**\",\r\n                                \"/login/oauth2/**\"\r\n                        ).permitAll().requestMatchers",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll()\r\n                        .requestMatchers(\r\n                                \"/api/v1/auth/**\",\r\n                                \"/api/v1/public/**\",\r\n                                \"/api/v1/public-portfolio/**\",\r\n                                \"/oauth2/**\",\r\n                                \"/login/oauth2/**\"\r\n                        ).permitAll",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll().requestMatchers",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll()\r\n                        .requestMatchers(HttpMethod.OPTIONS, \"/**\").permitAll",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll().requestMatchers",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth\r\n\r\n                        // ============================================================\r\n                        // PUBLIC ENDPOINTS - No authentication required\r\n                        // ============================================================\r\n                        .dispatcherTypeMatchers(jakarta.servlet.DispatcherType.ASYNC).permitAll",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "auth.dispatcherTypeMatchers",
+          "lineNumber": 53
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "oauth2\r\n                        .authorizationEndpoint(authorization -> authorization\r\n                                .baseUri(\"/oauth2/authorization\")\r\n                                .authorizationRequestRepository(httpCookieOAuth2AuthorizationRequestRepository)\r\n                        )\r\n                        .userInfoEndpoint(userInfo -> userInfo\r\n                                .userService(oAuth2UserService)\r\n                        )\r\n                        .successHandler(oAuth2AuthenticationSuccessHandler).failureHandler",
+          "lineNumber": 83
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "oauth2\r\n                        .authorizationEndpoint(authorization -> authorization\r\n                                .baseUri(\"/oauth2/authorization\")\r\n                                .authorizationRequestRepository(httpCookieOAuth2AuthorizationRequestRepository)\r\n                        )\r\n                        .userInfoEndpoint(userInfo -> userInfo\r\n                                .userService(oAuth2UserService)\r\n                        ).successHandler",
+          "lineNumber": 83
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "oauth2\r\n                        .authorizationEndpoint(authorization -> authorization\r\n                                .baseUri(\"/oauth2/authorization\")\r\n                                .authorizationRequestRepository(httpCookieOAuth2AuthorizationRequestRepository)\r\n                        ).userInfoEndpoint",
+          "lineNumber": 83
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "oauth2.authorizationEndpoint",
+          "lineNumber": 83
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "authorization\r\n                                .baseUri(\"/oauth2/authorization\").authorizationRequestRepository",
+          "lineNumber": 84
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "authorization.baseUri",
+          "lineNumber": 84
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "userInfo.userService",
+          "lineNumber": 88
+        },
+        {
+          "caller": "securityFilterChain",
+          "callee": "http.build",
+          "lineNumber": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 398,
+      "nonEmptyLines": 385,
+      "functions": [
+        {
+          "name": "triggerSkillExtraction",
+          "startLine": 62,
+          "endLine": 73,
+          "params": []
+        },
+        {
+          "name": "triggerJobScraper",
+          "startLine": 81,
+          "endLine": 112,
+          "params": [
+            "source"
+          ]
+        },
+        {
+          "name": "getUserMetric",
+          "startLine": 119,
+          "endLine": 148,
+          "params": []
+        },
+        {
+          "name": "getCourseMetric",
+          "startLine": 155,
+          "endLine": 184,
+          "params": []
+        },
+        {
+          "name": "getSystemHealth",
+          "startLine": 191,
+          "endLine": 220,
+          "params": []
+        },
+        {
+          "name": "getUsers",
+          "startLine": 227,
+          "endLine": 256,
+          "params": []
+        },
+        {
+          "name": "updateUserRole",
+          "startLine": 265,
+          "endLine": 312,
+          "params": [
+            "userId",
+            "request"
+          ]
+        },
+        {
+          "name": "updateUserStatus",
+          "startLine": 321,
+          "endLine": 356,
+          "params": [
+            "userId",
+            "request"
+          ]
+        },
+        {
+          "name": "deleteUser",
+          "startLine": 364,
+          "endLine": 397,
+          "params": [
+            "userId"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AdminController",
+          "startLine": 46,
+          "endLine": 398,
+          "methods": [
+            "triggerSkillExtraction",
+            "triggerJobScraper",
+            "getUserMetric",
+            "getCourseMetric",
+            "getSystemHealth",
+            "getUsers",
+            "updateUserRole",
+            "updateUserStatus",
+            "deleteUser"
+          ],
+          "properties": [
+            "adminService",
+            "skillExtractionService",
+            "jobScrapingScheduler"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "triggerSkillExtraction",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "triggerJobScraper",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "getUserMetric",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "getCourseMetric",
+          "line": 155,
+          "isDefault": false
+        },
+        {
+          "name": "getSystemHealth",
+          "line": 191,
+          "isDefault": false
+        },
+        {
+          "name": "getUsers",
+          "line": 227,
+          "isDefault": false
+        },
+        {
+          "name": "updateUserRole",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "updateUserStatus",
+          "line": 321,
+          "isDefault": false
+        },
+        {
+          "name": "deleteUser",
+          "line": 364,
+          "isDefault": false
+        },
+        {
+          "name": "AdminController",
+          "line": 46,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "triggerSkillExtraction",
+          "callee": "log.info",
+          "lineNumber": 65
+        },
+        {
+          "caller": "triggerSkillExtraction",
+          "callee": "skillExtractionService.extractAndRebuildSkillTrends",
+          "lineNumber": 67
+        },
+        {
+          "caller": "triggerSkillExtraction",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 68
+        },
+        {
+          "caller": "triggerSkillExtraction",
+          "callee": "log.error",
+          "lineNumber": 70
+        },
+        {
+          "caller": "triggerSkillExtraction",
+          "callee": "ResponseEntity.internalServerError().body",
+          "lineNumber": 71
+        },
+        {
+          "caller": "triggerSkillExtraction",
+          "callee": "ResponseEntity.internalServerError",
+          "lineNumber": 71
+        },
+        {
+          "caller": "triggerSkillExtraction",
+          "callee": "e.getMessage",
+          "lineNumber": 71
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "log.info",
+          "lineNumber": 85
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "JobScrapingScheduler.Source.valueOf",
+          "lineNumber": 88
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "source.trim().toUpperCase",
+          "lineNumber": 88
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "source.trim",
+          "lineNumber": 88
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.badRequest().body",
+          "lineNumber": 90
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.badRequest",
+          "lineNumber": 90
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "jobScrapingScheduler.fetchJobs",
+          "lineNumber": 93
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 94
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "log.error",
+          "lineNumber": 97
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.status(504).body",
+          "lineNumber": 98
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.status",
+          "lineNumber": 98
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "log.warn",
+          "lineNumber": 104
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "e.getStatusCode",
+          "lineNumber": 105
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "e.getResponseBodyAsString",
+          "lineNumber": 105
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.status(e.getStatusCode().value()).body",
+          "lineNumber": 106
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.status",
+          "lineNumber": 106
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "e.getStatusCode().value",
+          "lineNumber": 106
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "e.getStatusCode",
+          "lineNumber": 106
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "e.getResponseBodyAsString",
+          "lineNumber": 107
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "log.error",
+          "lineNumber": 109
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.internalServerError().body",
+          "lineNumber": 110
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "ResponseEntity.internalServerError",
+          "lineNumber": 110
+        },
+        {
+          "caller": "triggerJobScraper",
+          "callee": "e.getMessage",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getUserMetric",
+          "callee": "log.info",
+          "lineNumber": 144
+        },
+        {
+          "caller": "getUserMetric",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 145
+        },
+        {
+          "caller": "getUserMetric",
+          "callee": "adminService.getUserMetrics",
+          "lineNumber": 146
+        },
+        {
+          "caller": "getCourseMetric",
+          "callee": "log.info",
+          "lineNumber": 180
+        },
+        {
+          "caller": "getCourseMetric",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 181
+        },
+        {
+          "caller": "getCourseMetric",
+          "callee": "adminService.getCourseMetrics",
+          "lineNumber": 182
+        },
+        {
+          "caller": "getSystemHealth",
+          "callee": "log.info",
+          "lineNumber": 216
+        },
+        {
+          "caller": "getSystemHealth",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 217
+        },
+        {
+          "caller": "getSystemHealth",
+          "callee": "adminService.getSystemHealth",
+          "lineNumber": 218
+        },
+        {
+          "caller": "getUsers",
+          "callee": "log.info",
+          "lineNumber": 252
+        },
+        {
+          "caller": "getUsers",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 253
+        },
+        {
+          "caller": "getUsers",
+          "callee": "adminService.getUsers",
+          "lineNumber": 254
+        },
+        {
+          "caller": "updateUserRole",
+          "callee": "log.info",
+          "lineNumber": 308
+        },
+        {
+          "caller": "updateUserRole",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 309
+        },
+        {
+          "caller": "updateUserRole",
+          "callee": "adminService.updateUserRole",
+          "lineNumber": 310
+        },
+        {
+          "caller": "updateUserStatus",
+          "callee": "log.info",
+          "lineNumber": 352
+        },
+        {
+          "caller": "updateUserStatus",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 353
+        },
+        {
+          "caller": "updateUserStatus",
+          "callee": "adminService.updateUserStatus",
+          "lineNumber": 354
+        },
+        {
+          "caller": "deleteUser",
+          "callee": "log.info",
+          "lineNumber": 394
+        },
+        {
+          "caller": "deleteUser",
+          "callee": "adminService.deleteUser",
+          "lineNumber": 395
+        },
+        {
+          "caller": "deleteUser",
+          "callee": "ResponseEntity.noContent().build",
+          "lineNumber": 396
+        },
+        {
+          "caller": "deleteUser",
+          "callee": "ResponseEntity.noContent",
+          "lineNumber": 396
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 10,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AuthController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 179,
+      "nonEmptyLines": 169,
+      "functions": [
+        {
+          "name": "login",
+          "startLine": 51,
+          "endLine": 82,
+          "params": [
+            "request",
+            "servletResponse"
+          ]
+        },
+        {
+          "name": "refreshAccount",
+          "startLine": 90,
+          "endLine": 125,
+          "params": [
+            "refreshToken",
+            "servletResponse"
+          ]
+        },
+        {
+          "name": "forgotPassword",
+          "startLine": 132,
+          "endLine": 144,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "resetPassword",
+          "startLine": 149,
+          "endLine": 162,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "logout",
+          "startLine": 164,
+          "endLine": 177,
+          "params": [
+            "refreshToken",
+            "servletResponse"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthController",
+          "startLine": 34,
+          "endLine": 179,
+          "methods": [
+            "login",
+            "refreshAccount",
+            "forgotPassword",
+            "resetPassword",
+            "logout"
+          ],
+          "properties": [
+            "authService",
+            "authenticationCookieService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "login",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "refreshAccount",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "forgotPassword",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "resetPassword",
+          "line": 149,
+          "isDefault": false
+        },
+        {
+          "name": "logout",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "AuthController",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "login",
+          "callee": "log.info",
+          "lineNumber": 78
+        },
+        {
+          "caller": "login",
+          "callee": "authService.login",
+          "lineNumber": 79
+        },
+        {
+          "caller": "login",
+          "callee": "authenticationCookieService.addRefreshTokenCookie",
+          "lineNumber": 80
+        },
+        {
+          "caller": "login",
+          "callee": "loginResponse.getRefreshToken",
+          "lineNumber": 80
+        },
+        {
+          "caller": "login",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 81
+        },
+        {
+          "caller": "refreshAccount",
+          "callee": "log.info",
+          "lineNumber": 117
+        },
+        {
+          "caller": "refreshAccount",
+          "callee": "refreshToken.isBlank",
+          "lineNumber": 118
+        },
+        {
+          "caller": "refreshAccount",
+          "callee": "new ResponseStatusException",
+          "lineNumber": 119
+        },
+        {
+          "caller": "refreshAccount",
+          "callee": "authService.refreshAccount",
+          "lineNumber": 122
+        },
+        {
+          "caller": "refreshAccount",
+          "callee": "authenticationCookieService.addRefreshTokenCookie",
+          "lineNumber": 123
+        },
+        {
+          "caller": "refreshAccount",
+          "callee": "refreshResponse.getRefreshToken",
+          "lineNumber": 123
+        },
+        {
+          "caller": "refreshAccount",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 124
+        },
+        {
+          "caller": "forgotPassword",
+          "callee": "log.info",
+          "lineNumber": 141
+        },
+        {
+          "caller": "forgotPassword",
+          "callee": "authService.forgotPassword",
+          "lineNumber": 142
+        },
+        {
+          "caller": "forgotPassword",
+          "callee": "request.getEmail",
+          "lineNumber": 142
+        },
+        {
+          "caller": "forgotPassword",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 143
+        },
+        {
+          "caller": "resetPassword",
+          "callee": "log.info",
+          "lineNumber": 159
+        },
+        {
+          "caller": "resetPassword",
+          "callee": "authService.resetPassword",
+          "lineNumber": 160
+        },
+        {
+          "caller": "resetPassword",
+          "callee": "request.getToken",
+          "lineNumber": 160
+        },
+        {
+          "caller": "resetPassword",
+          "callee": "request.getNewPassword",
+          "lineNumber": 160
+        },
+        {
+          "caller": "resetPassword",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 161
+        },
+        {
+          "caller": "logout",
+          "callee": "log.info",
+          "lineNumber": 173
+        },
+        {
+          "caller": "logout",
+          "callee": "authService.logout",
+          "lineNumber": 174
+        },
+        {
+          "caller": "logout",
+          "callee": "authenticationCookieService.clearRefreshTokenCookie",
+          "lineNumber": 175
+        },
+        {
+          "caller": "logout",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 176
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/UserController.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 174,
+      "nonEmptyLines": 167,
+      "functions": [
+        {
+          "name": "getCurrentUser",
+          "startLine": 49,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "getUserByEmail",
+          "startLine": 83,
+          "endLine": 120,
+          "params": [
+            "userRequest"
+          ]
+        },
+        {
+          "name": "setupUserProfile",
+          "startLine": 122,
+          "endLine": 162,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "updateAvatar",
+          "startLine": 164,
+          "endLine": 173,
+          "params": [
+            "file"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserController",
+          "startLine": 34,
+          "endLine": 174,
+          "methods": [
+            "getCurrentUser",
+            "getUserByEmail",
+            "setupUserProfile",
+            "updateAvatar"
+          ],
+          "properties": [
+            "userService"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getCurrentUser",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "getUserByEmail",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "setupUserProfile",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "updateAvatar",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "UserController",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getCurrentUser",
+          "callee": "log.info",
+          "lineNumber": 73
+        },
+        {
+          "caller": "getCurrentUser",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 74
+        },
+        {
+          "caller": "getCurrentUser",
+          "callee": "userService.getCurrentUser",
+          "lineNumber": 74
+        },
+        {
+          "caller": "getUserByEmail",
+          "callee": "log.info",
+          "lineNumber": 118
+        },
+        {
+          "caller": "getUserByEmail",
+          "callee": "userRequest.getEmail",
+          "lineNumber": 118
+        },
+        {
+          "caller": "getUserByEmail",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 119
+        },
+        {
+          "caller": "getUserByEmail",
+          "callee": "userService.getUserByEmail",
+          "lineNumber": 119
+        },
+        {
+          "caller": "setupUserProfile",
+          "callee": "log.info",
+          "lineNumber": 160
+        },
+        {
+          "caller": "setupUserProfile",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 161
+        },
+        {
+          "caller": "setupUserProfile",
+          "callee": "userService.setupUserProfile",
+          "lineNumber": 161
+        },
+        {
+          "caller": "updateAvatar",
+          "callee": "ResponseEntity.ok",
+          "lineNumber": 172
+        },
+        {
+          "caller": "updateAvatar",
+          "callee": "userService.updateAvatar",
+          "lineNumber": 172
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/OAuth2UserInfoInternal.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "OAuth2UserInfoInternal",
+          "startLine": 10,
+          "endLine": 12,
+          "params": [
+            "attributes"
+          ]
+        },
+        {
+          "name": "getProviderId",
+          "startLine": 14,
+          "endLine": 14,
+          "params": []
+        },
+        {
+          "name": "getEmail",
+          "startLine": 15,
+          "endLine": 15,
+          "params": []
+        },
+        {
+          "name": "getFullName",
+          "startLine": 16,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "getBio",
+          "startLine": 18,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "getHtmlUrl",
+          "startLine": 19,
+          "endLine": 19,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "OAuth2UserInfoInternal",
+          "startLine": 6,
+          "endLine": 21,
+          "methods": [
+            "OAuth2UserInfoInternal",
+            "getProviderId",
+            "getEmail",
+            "getFullName",
+            "getBio",
+            "getHtmlUrl"
+          ],
+          "properties": [
+            "attributes"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OAuth2UserInfoInternal",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "getProviderId",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "getEmail",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "getFullName",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "getBio",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "getHtmlUrl",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "OAuth2UserInfoInternal",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GitHubOauth2UserInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 30,
+      "functions": [
+        {
+          "name": "GitHubOauth2UserInfo",
+          "startLine": 9,
+          "endLine": 11,
+          "params": [
+            "attributes"
+          ]
+        },
+        {
+          "name": "getProviderId",
+          "startLine": 13,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "getEmail",
+          "startLine": 18,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "getFullName",
+          "startLine": 23,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "getBio",
+          "startLine": 29,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "getHtmlUrl",
+          "startLine": 35,
+          "endLine": 38,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "GitHubOauth2UserInfo",
+          "startLine": 7,
+          "endLine": 39,
+          "methods": [
+            "GitHubOauth2UserInfo",
+            "getProviderId",
+            "getEmail",
+            "getFullName",
+            "getBio",
+            "getHtmlUrl"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GitHubOauth2UserInfo",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "getProviderId",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "getEmail",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "getFullName",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "getBio",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "getHtmlUrl",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "GitHubOauth2UserInfo",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getProviderId",
+          "callee": "attributes.get",
+          "lineNumber": 15
+        },
+        {
+          "caller": "getProviderId",
+          "callee": "String.valueOf",
+          "lineNumber": 15
+        },
+        {
+          "caller": "getProviderId",
+          "callee": "attributes.get",
+          "lineNumber": 15
+        },
+        {
+          "caller": "getEmail",
+          "callee": "attributes.get",
+          "lineNumber": 20
+        },
+        {
+          "caller": "getFullName",
+          "callee": "attributes.get",
+          "lineNumber": 25
+        },
+        {
+          "caller": "getFullName",
+          "callee": "attributes.get",
+          "lineNumber": 26
+        },
+        {
+          "caller": "getBio",
+          "callee": "attributes.get",
+          "lineNumber": 31
+        },
+        {
+          "caller": "getHtmlUrl",
+          "callee": "attributes.get",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GoogleOAuth2UserInfo.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "GoogleOAuth2UserInfo",
+          "startLine": 9,
+          "endLine": 9,
+          "params": [
+            "attributes"
+          ]
+        },
+        {
+          "name": "getProviderId",
+          "startLine": 11,
+          "endLine": 14,
+          "params": []
+        },
+        {
+          "name": "getEmail",
+          "startLine": 16,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "getFullName",
+          "startLine": 21,
+          "endLine": 24,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "GoogleOAuth2UserInfo",
+          "startLine": 7,
+          "endLine": 25,
+          "methods": [
+            "GoogleOAuth2UserInfo",
+            "getProviderId",
+            "getEmail",
+            "getFullName"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GoogleOAuth2UserInfo",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "getProviderId",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "getEmail",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "getFullName",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "GoogleOAuth2UserInfo",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getProviderId",
+          "callee": "attributes.get",
+          "lineNumber": 13
+        },
+        {
+          "caller": "getEmail",
+          "callee": "attributes.get",
+          "lineNumber": 18
+        },
+        {
+          "caller": "getFullName",
+          "callee": "attributes.get",
+          "lineNumber": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ForgotPasswordRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "ForgotPasswordRequest",
+          "startLine": 7,
+          "endLine": 13,
+          "methods": [],
+          "properties": [
+            "email"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ForgotPasswordRequest",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "LoginRequest",
+          "startLine": 12,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "username",
+            "password"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoginRequest",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ResetPasswordRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "ResetPasswordRequest",
+          "startLine": 7,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "token",
+            "newPassword"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ResetPasswordRequest",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupUserProfileRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "SetupUserProfileRequest",
+          "startLine": 7,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "fullName",
+            "yob",
+            "bio"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SetupUserProfileRequest",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserRoleRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "UpdateUserRoleRequest",
+          "startLine": 10,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "role"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateUserRoleRequest",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserStatusRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "UpdateUserStatusRequest",
+          "startLine": 10,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateUserStatusRequest",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UserRequest.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 18,
+      "classes": [
+        {
+          "name": "UserRequest",
+          "startLine": 11,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "email"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserRequest",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "AdminCourseMetricResponse",
+          "startLine": 8,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "total",
+            "status",
+            "progress"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AdminCourseMetricResponse",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminSystemHealthResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 50,
+      "classes": [
+        {
+          "name": "AdminSystemHealthResponse",
+          "startLine": 10,
+          "endLine": 57,
+          "methods": [],
+          "properties": [
+            "status",
+            "servicesUp",
+            "servicesTotal",
+            "services",
+            "uptimeMillis",
+            "version",
+            "javaVersion",
+            "db",
+            "memory"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AdminSystemHealthResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "AdminUserListItemResponse",
+          "startLine": 7,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "id",
+            "email",
+            "name",
+            "role",
+            "status",
+            "joinedDate"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AdminUserListItemResponse",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "AdminUserMetricResponse",
+          "startLine": 8,
+          "endLine": 15,
+          "methods": [],
+          "properties": [
+            "total",
+            "growth"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AdminUserMetricResponse",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "RefreshResponse",
+          "startLine": 9,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "accessToken",
+            "refreshToken",
+            "expiresIn"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RefreshResponse",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "UserResponse",
+          "startLine": 9,
+          "endLine": 23,
+          "methods": [],
+          "properties": [
+            "id",
+            "email",
+            "fullName",
+            "role",
+            "avatarUrl",
+            "accountType"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserResponse",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 33,
+      "classes": [
+        {
+          "name": "OauthAccount",
+          "startLine": 18,
+          "endLine": 41,
+          "methods": [],
+          "properties": [
+            "oauthAccountId",
+            "user",
+            "providerId",
+            "providerName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OauthAccount",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 44,
+      "classes": [
+        {
+          "name": "PasswordResetToken",
+          "startLine": 26,
+          "endLine": 53,
+          "methods": [],
+          "properties": [
+            "id",
+            "user",
+            "tokenHash",
+            "expiresAt",
+            "usedAt",
+            "createdAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PasswordResetToken",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "RefreshToken",
+          "startLine": 20,
+          "endLine": 41,
+          "methods": [],
+          "properties": [
+            "id",
+            "user",
+            "token",
+            "expiredAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RefreshToken",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 120,
+      "nonEmptyLines": 98,
+      "functions": [
+        {
+          "name": "prePersist",
+          "startLine": 103,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "preUpdate",
+          "startLine": 116,
+          "endLine": 119,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "User",
+          "startLine": 30,
+          "endLine": 120,
+          "methods": [
+            "prePersist",
+            "preUpdate"
+          ],
+          "properties": [
+            "userId",
+            "email",
+            "username",
+            "passwordHash",
+            "fullName",
+            "yob",
+            "bio",
+            "avatarUrl",
+            "createdAt",
+            "updatedAt",
+            "role",
+            "userStatus",
+            "accountType"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "prePersist",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "preUpdate",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "User",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 105
+        },
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 106
+        },
+        {
+          "caller": "preUpdate",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 118
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 15,
+          "endLine": 18,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AccountType",
+          "startLine": 11,
+          "endLine": 19,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "AccountType",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "AccountType.valueOf",
+          "lineNumber": 17
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserRole",
+          "startLine": 5,
+          "endLine": 15,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "UserRole",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "UserRole.valueOf",
+          "lineNumber": 13
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 10,
+          "endLine": 13,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserStatus",
+          "startLine": 5,
+          "endLine": 14,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "UserStatus",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "UserStatus.valueOf",
+          "lineNumber": 12
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "StudentInfoProjection",
+          "startLine": 5,
+          "endLine": 11,
+          "methods": [
+            "getStudentId",
+            "getFullName",
+            "getEmail",
+            "getUniversity",
+            "getCareerName"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentInfoProjection",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "functions": [
+        {
+          "name": "ForbiddenException",
+          "startLine": 6,
+          "endLine": 8,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "ForbiddenException",
+          "startLine": 10,
+          "endLine": 12,
+          "params": [
+            "message",
+            "cause"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ForbiddenException",
+          "startLine": 4,
+          "endLine": 13,
+          "methods": [
+            "ForbiddenException",
+            "ForbiddenException"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ForbiddenException",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "ForbiddenException",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "ForbiddenException",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 300,
+      "nonEmptyLines": 266,
+      "functions": [
+        {
+          "name": "build",
+          "startLine": 35,
+          "endLine": 44,
+          "params": [
+            "status",
+            "error",
+            "message",
+            "request"
+          ]
+        },
+        {
+          "name": "handleBadRequest",
+          "startLine": 46,
+          "endLine": 49,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleUnauthorized",
+          "startLine": 51,
+          "endLine": 54,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleForbidden",
+          "startLine": 56,
+          "endLine": 59,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleResourceNotFoundException",
+          "startLine": 70,
+          "endLine": 83,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleValidationException",
+          "startLine": 94,
+          "endLine": 121,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleHttpMessageNotReadableException",
+          "startLine": 130,
+          "endLine": 137,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleConstraintViolationException",
+          "startLine": 147,
+          "endLine": 155,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleHandlerMethodValidationException",
+          "startLine": 165,
+          "endLine": 169,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleMaxUploadSizeExceededException",
+          "startLine": 178,
+          "endLine": 183,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleIllegalArgumentException",
+          "startLine": 193,
+          "endLine": 197,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleMethodArgumentTypeMismatchException",
+          "startLine": 206,
+          "endLine": 219,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleResponseStatusException",
+          "startLine": 228,
+          "endLine": 240,
+          "params": [
+            "exception",
+            "request"
+          ]
+        },
+        {
+          "name": "handleGlobalException",
+          "startLine": 251,
+          "endLine": 262,
+          "params": [
+            "exception",
+            "request"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "GlobalExceptionHandler",
+          "startLine": 30,
+          "endLine": 300,
+          "methods": [
+            "build",
+            "handleBadRequest",
+            "handleUnauthorized",
+            "handleForbidden",
+            "handleResourceNotFoundException",
+            "handleValidationException",
+            "handleHttpMessageNotReadableException",
+            "handleConstraintViolationException",
+            "handleHandlerMethodValidationException",
+            "handleMaxUploadSizeExceededException",
+            "handleIllegalArgumentException",
+            "handleMethodArgumentTypeMismatchException",
+            "handleResponseStatusException",
+            "handleGlobalException"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "handleBadRequest",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "handleUnauthorized",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "handleForbidden",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "handleResourceNotFoundException",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "handleValidationException",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "handleHttpMessageNotReadableException",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "handleConstraintViolationException",
+          "line": 147,
+          "isDefault": false
+        },
+        {
+          "name": "handleHandlerMethodValidationException",
+          "line": 165,
+          "isDefault": false
+        },
+        {
+          "name": "handleMaxUploadSizeExceededException",
+          "line": 178,
+          "isDefault": false
+        },
+        {
+          "name": "handleIllegalArgumentException",
+          "line": 193,
+          "isDefault": false
+        },
+        {
+          "name": "handleMethodArgumentTypeMismatchException",
+          "line": 206,
+          "isDefault": false
+        },
+        {
+          "name": "handleResponseStatusException",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "handleGlobalException",
+          "line": 251,
+          "isDefault": false
+        },
+        {
+          "name": "GlobalExceptionHandler",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "build",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(status.value())\r\n                .error(error)\r\n                .message(message)\r\n                .path(request.getDescription(false).replace(\"uri=\", \"\")).build",
+          "lineNumber": 36
+        },
+        {
+          "caller": "build",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(status.value())\r\n                .error(error)\r\n                .message(message).path",
+          "lineNumber": 36
+        },
+        {
+          "caller": "build",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(status.value())\r\n                .error(error).message",
+          "lineNumber": 36
+        },
+        {
+          "caller": "build",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(status.value()).error",
+          "lineNumber": 36
+        },
+        {
+          "caller": "build",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now()).status",
+          "lineNumber": 36
+        },
+        {
+          "caller": "build",
+          "callee": "ErrorResponse.builder().timestamp",
+          "lineNumber": 36
+        },
+        {
+          "caller": "build",
+          "callee": "ErrorResponse.builder",
+          "lineNumber": 36
+        },
+        {
+          "caller": "build",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 37
+        },
+        {
+          "caller": "build",
+          "callee": "status.value",
+          "lineNumber": 38
+        },
+        {
+          "caller": "build",
+          "callee": "request.getDescription(false).replace",
+          "lineNumber": 41
+        },
+        {
+          "caller": "build",
+          "callee": "request.getDescription",
+          "lineNumber": 41
+        },
+        {
+          "caller": "build",
+          "callee": "new ResponseEntity<>",
+          "lineNumber": 43
+        },
+        {
+          "caller": "handleBadRequest",
+          "callee": "build",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleBadRequest",
+          "callee": "exception.getMessage",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleUnauthorized",
+          "callee": "build",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleUnauthorized",
+          "callee": "exception.getMessage",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleForbidden",
+          "callee": "build",
+          "lineNumber": 58
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.NOT_FOUND.value())\r\n                .error(\"NOT_FOUND\")\r\n                .message(exception.getMessage())\r\n                .path(request.getDescription(false).replace(\"uri=\", \"\")).build",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.NOT_FOUND.value())\r\n                .error(\"NOT_FOUND\")\r\n                .message(exception.getMessage()).path",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.NOT_FOUND.value())\r\n                .error(\"NOT_FOUND\").message",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.NOT_FOUND.value()).error",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now()).status",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "ErrorResponse.builder().timestamp",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "ErrorResponse.builder",
+          "lineNumber": 74
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 75
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "HttpStatus.NOT_FOUND.value",
+          "lineNumber": 76
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "exception.getMessage",
+          "lineNumber": 78
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "request.getDescription(false).replace",
+          "lineNumber": 79
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "request.getDescription",
+          "lineNumber": 79
+        },
+        {
+          "caller": "handleResourceNotFoundException",
+          "callee": "new ResponseEntity<>",
+          "lineNumber": 82
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "new HashMap<>",
+          "lineNumber": 98
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "exception.getBindingResult().getAllErrors().forEach",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "exception.getBindingResult().getAllErrors",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "exception.getBindingResult",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "((FieldError) error).getField",
+          "lineNumber": 100
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "error.getDefaultMessage",
+          "lineNumber": 101
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "validationErrors.put",
+          "lineNumber": 102
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "exception.getBindingResult().getAllErrors",
+          "lineNumber": 106
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "exception.getBindingResult",
+          "lineNumber": 106
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "errors.isEmpty",
+          "lineNumber": 107
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "errors.getFirst().getDefaultMessage",
+          "lineNumber": 107
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "errors.getFirst",
+          "lineNumber": 107
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "errors.getFirst().getDefaultMessage",
+          "lineNumber": 108
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "errors.getFirst",
+          "lineNumber": 108
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value())\r\n                .error(\"VALIDATION_ERROR\")\r\n                .message(message)\r\n                .details(validationErrors.toString())\r\n                .path(request.getDescription(false).replace(\"uri=\", \"\")).build",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value())\r\n                .error(\"VALIDATION_ERROR\")\r\n                .message(message)\r\n                .details(validationErrors.toString()).path",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value())\r\n                .error(\"VALIDATION_ERROR\")\r\n                .message(message).details",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value())\r\n                .error(\"VALIDATION_ERROR\").message",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value()).error",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now()).status",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ErrorResponse.builder().timestamp",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "ErrorResponse.builder",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 112
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "HttpStatus.BAD_REQUEST.value",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "validationErrors.toString",
+          "lineNumber": 116
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "request.getDescription(false).replace",
+          "lineNumber": 117
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "request.getDescription",
+          "lineNumber": 117
+        },
+        {
+          "caller": "handleValidationException",
+          "callee": "new ResponseEntity<>",
+          "lineNumber": 120
+        },
+        {
+          "caller": "handleHttpMessageNotReadableException",
+          "callee": "log.warn",
+          "lineNumber": 135
+        },
+        {
+          "caller": "handleHttpMessageNotReadableException",
+          "callee": "exception.getMostSpecificCause().getMessage",
+          "lineNumber": 135
+        },
+        {
+          "caller": "handleHttpMessageNotReadableException",
+          "callee": "exception.getMostSpecificCause",
+          "lineNumber": 135
+        },
+        {
+          "caller": "handleHttpMessageNotReadableException",
+          "callee": "build",
+          "lineNumber": 136
+        },
+        {
+          "caller": "handleConstraintViolationException",
+          "callee": "exception.getConstraintViolations().stream()\r\n                .map(ConstraintViolation::getMessage)\r\n                .findFirst().orElse",
+          "lineNumber": 150
+        },
+        {
+          "caller": "handleConstraintViolationException",
+          "callee": "exception.getConstraintViolations().stream()\r\n                .map(ConstraintViolation::getMessage).findFirst",
+          "lineNumber": 150
+        },
+        {
+          "caller": "handleConstraintViolationException",
+          "callee": "exception.getConstraintViolations().stream().map",
+          "lineNumber": 150
+        },
+        {
+          "caller": "handleConstraintViolationException",
+          "callee": "exception.getConstraintViolations().stream",
+          "lineNumber": 150
+        },
+        {
+          "caller": "handleConstraintViolationException",
+          "callee": "exception.getConstraintViolations",
+          "lineNumber": 150
+        },
+        {
+          "caller": "handleConstraintViolationException",
+          "callee": "build",
+          "lineNumber": 154
+        },
+        {
+          "caller": "handleHandlerMethodValidationException",
+          "callee": "build",
+          "lineNumber": 168
+        },
+        {
+          "caller": "handleMaxUploadSizeExceededException",
+          "callee": "build",
+          "lineNumber": 181
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "build",
+          "lineNumber": 196
+        },
+        {
+          "caller": "handleIllegalArgumentException",
+          "callee": "exception.getMessage",
+          "lineNumber": 196
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value())\r\n                .error(\"BAD_REQUEST\")\r\n                .message(\"Request parameter contains invalid data type\")\r\n                .details(exception.getMessage())\r\n                .path(request.getDescription(false).replace(\"uri=\", \"\")).build",
+          "lineNumber": 209
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value())\r\n                .error(\"BAD_REQUEST\")\r\n                .message(\"Request parameter contains invalid data type\")\r\n                .details(exception.getMessage()).path",
+          "lineNumber": 209
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value())\r\n                .error(\"BAD_REQUEST\")\r\n                .message(\"Request parameter contains invalid data type\").details",
+          "lineNumber": 209
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value())\r\n                .error(\"BAD_REQUEST\").message",
+          "lineNumber": 209
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(HttpStatus.BAD_REQUEST.value()).error",
+          "lineNumber": 209
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now()).status",
+          "lineNumber": 209
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "ErrorResponse.builder().timestamp",
+          "lineNumber": 209
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "ErrorResponse.builder",
+          "lineNumber": 209
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 210
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "HttpStatus.BAD_REQUEST.value",
+          "lineNumber": 211
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "exception.getMessage",
+          "lineNumber": 214
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "request.getDescription(false).replace",
+          "lineNumber": 215
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "request.getDescription",
+          "lineNumber": 215
+        },
+        {
+          "caller": "handleMethodArgumentTypeMismatchException",
+          "callee": "new ResponseEntity<>",
+          "lineNumber": 218
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(exception.getStatusCode().value())\r\n                .error(exception.getStatusCode().toString())\r\n                .message(exception.getReason())\r\n                .path(request.getDescription(false).replace(\"uri=\", \"\")).build",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(exception.getStatusCode().value())\r\n                .error(exception.getStatusCode().toString())\r\n                .message(exception.getReason()).path",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(exception.getStatusCode().value())\r\n                .error(exception.getStatusCode().toString()).message",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now())\r\n                .status(exception.getStatusCode().value()).error",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "ErrorResponse.builder()\r\n                .timestamp(LocalDateTime.now()).status",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "ErrorResponse.builder().timestamp",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "ErrorResponse.builder",
+          "lineNumber": 231
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 232
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "exception.getStatusCode().value",
+          "lineNumber": 233
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "exception.getStatusCode",
+          "lineNumber": 233
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "exception.getStatusCode().toString",
+          "lineNumber": 234
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "exception.getStatusCode",
+          "lineNumber": 234
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "exception.getReason",
+          "lineNumber": 235
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "request.getDescription(false).replace",
+          "lineNumber": 236
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "request.getDescription",
+          "lineNumber": 236
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "new ResponseEntity<>",
+          "lineNumber": 239
+        },
+        {
+          "caller": "handleResponseStatusException",
+          "callee": "exception.getStatusCode",
+          "lineNumber": 239
+        },
+        {
+          "caller": "handleGlobalException",
+          "callee": "log.error",
+          "lineNumber": 257
+        },
+        {
+          "caller": "handleGlobalException",
+          "callee": "request.getDescription(false).replace",
+          "lineNumber": 258
+        },
+        {
+          "caller": "handleGlobalException",
+          "callee": "request.getDescription",
+          "lineNumber": 258
+        },
+        {
+          "caller": "handleGlobalException",
+          "callee": "build",
+          "lineNumber": 260
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 14,
+        "functionCount": 14,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "functions": [
+        {
+          "name": "UnauthorizedException",
+          "startLine": 6,
+          "endLine": 8,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "UnauthorizedException",
+          "startLine": 10,
+          "endLine": 12,
+          "params": [
+            "message",
+            "cause"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "UnauthorizedException",
+          "startLine": 4,
+          "endLine": 13,
+          "methods": [
+            "UnauthorizedException",
+            "UnauthorizedException"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UnauthorizedException",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "UnauthorizedException",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "UnauthorizedException",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    }
+  ]
+}

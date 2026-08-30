@@ -1,0 +1,341 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "type": "file",
+      "name": "AdminUserListItemResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "summary": "Response DTO representing a single row in the admin user-management list: id, email, name, role, status, and joined date.",
+      "tags": ["dto", "response", "admin", "user-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "type": "file",
+      "name": "AdminUserMetricResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "summary": "Response DTO summarizing total user count and growth rate for the admin dashboard.",
+      "tags": ["dto", "response", "admin", "metrics"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "type": "file",
+      "name": "RefreshResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "summary": "Response DTO returned after a successful login or token refresh, carrying the access token, refresh token, and expiry time.",
+      "tags": ["dto", "response", "auth", "token"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "type": "file",
+      "name": "UserResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "summary": "Response DTO exposing a user's public profile fields (id, email, full name, role, avatar URL, account type) to API clients.",
+      "tags": ["dto", "response", "user", "profile"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java",
+      "type": "file",
+      "name": "OauthAccount.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java",
+      "summary": "JPA entity linking a User to an external OAuth2 identity provider account (provider name and provider-assigned ID).",
+      "tags": ["entity", "oauth2", "data-model", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java:OauthAccount",
+      "type": "class",
+      "name": "OauthAccount",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java",
+      "lineRange": [18, 41],
+      "summary": "JPA entity mapping an OAuth2 provider link (providerId, providerName) to its owning User record.",
+      "tags": ["entity", "oauth2", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java",
+      "type": "file",
+      "name": "PasswordResetToken.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java",
+      "summary": "JPA entity storing a hashed, single-use password-reset token for a User with expiry and usage timestamps.",
+      "tags": ["entity", "auth", "password-reset", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java:PasswordResetToken",
+      "type": "class",
+      "name": "PasswordResetToken",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java",
+      "lineRange": [26, 53],
+      "summary": "JPA entity representing a hashed password-reset token linked to a User, tracking creation, expiry, and consumption timestamps for the magic-link reset flow.",
+      "tags": ["entity", "auth", "password-reset", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "type": "file",
+      "name": "RefreshToken.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "summary": "JPA entity storing a refresh token string and its expiry, linked to the owning User for token-based session renewal.",
+      "tags": ["entity", "auth", "jwt", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java:RefreshToken",
+      "type": "class",
+      "name": "RefreshToken",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "lineRange": [20, 41],
+      "summary": "JPA entity persisting a refresh token value and expiry timestamp for a User, used to issue new access tokens without re-authentication.",
+      "tags": ["entity", "auth", "jwt", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "type": "file",
+      "name": "User.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "summary": "Core JPA entity representing a platform account: credentials, profile fields, role, status, and account type, with lifecycle callbacks for created/updated timestamps.",
+      "tags": ["entity", "user", "data-model", "jpa"],
+      "complexity": "moderate",
+      "languageNotes": "Uses @PrePersist/@PreUpdate lifecycle callbacks to auto-populate createdAt/updatedAt timestamps rather than relying on database defaults."
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java:User",
+      "type": "class",
+      "name": "User",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "lineRange": [30, 120],
+      "summary": "Central JPA entity for a platform account, holding identity fields (email, username, passwordHash), profile fields (fullName, yob, bio, avatarUrl), and classification fields (role, userStatus, accountType). Referenced throughout the codebase by mappers, services, and security components.",
+      "tags": ["entity", "user", "jpa", "data-model"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java:prePersist",
+      "type": "function",
+      "name": "prePersist",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "lineRange": [103, 114],
+      "summary": "JPA lifecycle callback that stamps createdAt and updatedAt with the current time before the User entity is first persisted.",
+      "tags": ["entity", "jpa", "lifecycle-callback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "type": "file",
+      "name": "AccountType.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "summary": "Enum distinguishing account origin (e.g., FPT institutional accounts vs. other/external accounts) with a lenient fromString parser.",
+      "tags": ["enum", "user", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "type": "file",
+      "name": "UserRole.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "summary": "Enum of platform user roles (e.g., student, mentor, counselor, admin) with a lenient fromString parser used for role assignment and authorization checks.",
+      "tags": ["enum", "user", "authorization", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "type": "file",
+      "name": "UserStatus.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "summary": "Enum of account status values (e.g., active, suspended) with a lenient fromString parser used for admin status management.",
+      "tags": ["enum", "user", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java",
+      "type": "file",
+      "name": "StudentInfoProjection.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java",
+      "summary": "Spring Data JPA projection interface exposing a flattened view of a student's id, full name, email, university, and career name for efficient list queries.",
+      "tags": ["projection", "student", "data-model", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java:StudentInfoProjection",
+      "type": "class",
+      "name": "StudentInfoProjection",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java",
+      "lineRange": [5, 11],
+      "summary": "Read-only projection interface declaring accessor methods (studentId, fullName, email, university, careerName) used by repository query methods to fetch a lightweight student view.",
+      "tags": ["projection", "student", "jpa"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "type": "file",
+      "name": "ForbiddenException.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "summary": "Custom runtime exception representing a 403 Forbidden condition, thrown by services to signal insufficient permissions.",
+      "tags": ["exception", "error-handling", "authorization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java:ForbiddenException",
+      "type": "class",
+      "name": "ForbiddenException",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "lineRange": [4, 13],
+      "summary": "RuntimeException subclass with message and message+cause constructors, thrown to represent forbidden/authorization-denied conditions, caught by GlobalExceptionHandler.",
+      "tags": ["exception", "error-handling", "authorization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "type": "file",
+      "name": "GlobalExceptionHandler.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "summary": "Centralized @RestControllerAdvice that maps domain exceptions (bad request, unauthorized, forbidden, not found, validation, file-upload, type mismatch, generic) to a consistent ErrorResponse payload and HTTP status code.",
+      "tags": ["exception", "error-handling", "middleware", "rest-endpoint"],
+      "complexity": "complex",
+      "languageNotes": "Centralizes error formatting through a shared private build() helper so every @ExceptionHandler method produces a uniform ErrorResponse shape."
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:GlobalExceptionHandler",
+      "type": "class",
+      "name": "GlobalExceptionHandler",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "lineRange": [30, 300],
+      "summary": "@RestControllerAdvice that intercepts exceptions thrown across all controllers and converts them into structured JSON error responses with appropriate HTTP status codes.",
+      "tags": ["exception", "error-handling", "middleware"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "lineRange": [35, 44],
+      "summary": "Private helper that assembles a uniform ErrorResponse (timestamp, status, error, message, path) shared by all exception handler methods in this class.",
+      "tags": ["error-handling", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleResourceNotFoundException",
+      "type": "function",
+      "name": "handleResourceNotFoundException",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "lineRange": [70, 83],
+      "summary": "Handles resource-not-found exceptions, returning a 404 NOT_FOUND error response with the exception message.",
+      "tags": ["error-handling", "rest-endpoint"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleValidationException",
+      "type": "function",
+      "name": "handleValidationException",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "lineRange": [94, 121],
+      "summary": "Handles bean-validation failures by collecting all field errors into a map and returning a 400 VALIDATION_ERROR response with per-field details.",
+      "tags": ["error-handling", "validation", "rest-endpoint"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleMethodArgumentTypeMismatchException",
+      "type": "function",
+      "name": "handleMethodArgumentTypeMismatchException",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "lineRange": [206, 219],
+      "summary": "Handles method-argument type-mismatch errors (e.g., invalid path/query parameter types), returning a 400 BAD_REQUEST response with details.",
+      "tags": ["error-handling", "validation", "rest-endpoint"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleResponseStatusException",
+      "type": "function",
+      "name": "handleResponseStatusException",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "lineRange": [228, 240],
+      "summary": "Handles Spring's ResponseStatusException by echoing its status code and reason into the standard ErrorResponse shape.",
+      "tags": ["error-handling", "rest-endpoint"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleGlobalException",
+      "type": "function",
+      "name": "handleGlobalException",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java",
+      "lineRange": [251, 262],
+      "summary": "Catch-all handler for any uncaught exception, logging the error and returning a generic 500 Internal Server Error response.",
+      "tags": ["error-handling", "logging", "rest-endpoint"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "type": "file",
+      "name": "UnauthorizedException.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "summary": "Custom runtime exception representing a 401 Unauthorized condition, thrown by services and security components to signal failed or missing authentication.",
+      "tags": ["exception", "error-handling", "auth"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java:UnauthorizedException",
+      "type": "class",
+      "name": "UnauthorizedException",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "lineRange": [4, 13],
+      "summary": "RuntimeException subclass with message and message+cause constructors, thrown to represent authentication failures, caught by GlobalExceptionHandler.",
+      "tags": ["exception", "error-handling", "auth"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/AuthControllerTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java:OauthAccount", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java:OauthAccount", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java:PasswordResetToken", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java:PasswordResetToken", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java:RefreshToken", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java:RefreshToken", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java:User", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java:prePersist", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java:User", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/RagDocumentServiceTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/VirtualMentorServiceSecurityContextTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/impl/VirtualMentorRetrievalFilterTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/services/AuthServiceTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java:StudentInfoProjection", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java:StudentInfoProjection", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java:ForbiddenException", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java:ForbiddenException", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:GlobalExceptionHandler", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:build", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleResourceNotFoundException", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleValidationException", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleMethodArgumentTypeMismatchException", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleResponseStatusException", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:handleGlobalException", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java:GlobalExceptionHandler", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java", "target": "file:BackEnd/intelipath-backend/src/test/java/com/inteliroadmap/backend/controllers/AuthControllerTest.java", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java:UnauthorizedException", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java", "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java:UnauthorizedException", "type": "exports", "direction": "forward", "weight": 0.8 }
+  ]
+}

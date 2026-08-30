@@ -1,0 +1,2 @@
+-- create-tables.sql
+-- TODO: add SQL Server DDL here.

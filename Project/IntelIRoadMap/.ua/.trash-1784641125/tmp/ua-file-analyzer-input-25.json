@@ -1,0 +1,13 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {"path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts", "language": "typescript", "sizeLines": 3, "fileCategory": "code"},
+    {"path": "FrontEnd/intelipath-frontend/src/pages/StudentDashboardPage.tsx", "language": "typescript", "sizeLines": 5, "fileCategory": "code"},
+    {"path": "FrontEnd/intelipath-frontend/src/pages/StudentRoadmapPage.tsx", "language": "typescript", "sizeLines": 5, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/pages/StudentDashboardPage.tsx": ["FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts"],
+    "FrontEnd/intelipath-frontend/src/pages/StudentRoadmapPage.tsx": ["FrontEnd/intelipath-frontend/src/features/student-dashboard/index.ts"]
+  }
+}

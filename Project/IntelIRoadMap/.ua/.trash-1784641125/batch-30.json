@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    {
+      "id": "table:BackEnd/intelipath-backend/data/v2/careers.csv:careers",
+      "type": "table",
+      "name": "careers.csv",
+      "filePath": "BackEnd/intelipath-backend/data/v2/careers.csv",
+      "summary": "Seed data listing career tracks (e.g. Frontend, Backend) with id, optional prerequisites, and a descriptive text, used to populate the career catalog for the roadmap platform.",
+      "tags": ["database", "seed-data", "csv", "career-catalog"],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/data/v2/roadmap_nodes.csv:roadmap_nodes",
+      "type": "table",
+      "name": "roadmap_nodes.csv",
+      "filePath": "BackEnd/intelipath-backend/data/v2/roadmap_nodes.csv",
+      "summary": "Large seed dataset (189 rows) defining the hierarchical roadmap tree for each career: nodes carry skill group, stage, axis, node kind, optionality/checkpoint flags, selection rules, weights, completion policy, required proficiency, evidence keywords, parent/previous linkage, description, and reference links, forming the structure of learning roadmaps shown to users.",
+      "tags": ["database", "seed-data", "csv", "roadmap-tree", "learning-path"],
+      "complexity": "complex",
+      "languageNotes": "Self-referential tree structure via parent_id/previous_id columns encodes ordering and hierarchy of roadmap nodes per career."
+    },
+    {
+      "id": "table:BackEnd/intelipath-backend/data/v2/skills.csv:skills",
+      "type": "table",
+      "name": "skills.csv",
+      "filePath": "BackEnd/intelipath-backend/data/v2/skills.csv",
+      "summary": "Seed data mapping skill names to a career track and an importance rating (HIGH/MEDIUM/LOW), used to drive skill relevance/weighting within each career's roadmap.",
+      "tags": ["database", "seed-data", "csv", "skills-catalog"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "table:BackEnd/intelipath-backend/data/v2/roadmap_nodes.csv:roadmap_nodes",
+      "target": "table:BackEnd/intelipath-backend/data/v2/careers.csv:careers",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:BackEnd/intelipath-backend/data/v2/skills.csv:skills",
+      "target": "table:BackEnd/intelipath-backend/data/v2/careers.csv:careers",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

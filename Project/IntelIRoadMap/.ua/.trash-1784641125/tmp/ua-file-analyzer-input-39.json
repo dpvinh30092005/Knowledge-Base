@@ -1,0 +1,147 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/01-bento-grid.md",
+      "language": "markdown",
+      "sizeLines": 35,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/02-long-document.md",
+      "language": "markdown",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/03-marquee-hero.md",
+      "language": "markdown",
+      "sizeLines": 31,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/04-stat-led.md",
+      "language": "markdown",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/05-workbench.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/06-conversational-faq.md",
+      "language": "markdown",
+      "sizeLines": 33,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/07-manifesto.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/08-photographic.md",
+      "language": "markdown",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/09-quote-led.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/10-specimen.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/11-catalogue.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/12-letter.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/13-index-first.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/14-narrative-workflow.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/15-split-studio.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/16-feature-stack.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/17-type-specimen.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/18-portfolio-grid.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/19-map-diagram.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/20-ecosystem-index.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/01-bento-grid.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/02-long-document.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/03-marquee-hero.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/04-stat-led.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/05-workbench.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/06-conversational-faq.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/07-manifesto.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/08-photographic.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/09-quote-led.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/10-specimen.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/11-catalogue.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/12-letter.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/13-index-first.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/14-narrative-workflow.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/15-split-studio.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/16-feature-stack.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/17-type-specimen.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/18-portfolio-grid.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/19-map-diagram.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/macrostructures/20-ecosystem-index.md": []
+  }
+}

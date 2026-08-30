@@ -1,0 +1,21 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-backend/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 30,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "BackEnd/intelipath-backend/docker-compose.yml",
+      "language": "yaml",
+      "sizeLines": 91,
+      "fileCategory": "infra"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-backend/Dockerfile": [],
+    "BackEnd/intelipath-backend/docker-compose.yml": []
+  }
+}

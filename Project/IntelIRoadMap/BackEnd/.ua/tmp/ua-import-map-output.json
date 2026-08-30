@@ -1,0 +1,1643 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 424,
+    "filesWithImports": 201,
+    "totalEdges": 1008
+  },
+  "importMap": {
+    ".claude/launch.json": [],
+    ".ua/.understandignore": [],
+    ".ua/config.json": [],
+    "intelipath-backend/.env": [],
+    "intelipath-backend/.env.example": [],
+    "intelipath-backend/.gitattributes": [],
+    "intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.ps1": [],
+    "intelipath-backend/.github/java-upgrade/hooks/scripts/recordToolUse.sh": [],
+    "intelipath-backend/.mvn/wrapper/maven-wrapper.properties": [],
+    "intelipath-backend/CONTRIBUTING.md": [],
+    "intelipath-backend/Dockerfile": [],
+    "intelipath-backend/HELP.md": [],
+    "intelipath-backend/README.md": [],
+    "intelipath-backend/data/CareerDataTemplate.csv": [],
+    "intelipath-backend/data/RoadmapDataTemplate.csv": [],
+    "intelipath-backend/data/SkillDataTemplate.csv": [],
+    "intelipath-backend/data/flm_overlay.json": [],
+    "intelipath-backend/data/v2/careers.csv": [],
+    "intelipath-backend/data/v2/roadmap_nodes.csv": [],
+    "intelipath-backend/data/v2/skills.csv": [],
+    "intelipath-backend/docker-compose.yml": [],
+    "intelipath-backend/docker/postgres/init/00_create_scraper_db.sql": [],
+    "intelipath-backend/docker/postgres/init/01_init_intelipath.sql": [],
+    "intelipath-backend/mvnw": [],
+    "intelipath-backend/mvnw.cmd": [],
+    "intelipath-backend/pom.xml": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/IntelipathBackendApplication.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/analyzer/PortfolioAiAnalyzer.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiClientConfig.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/AiServiceProperties.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/config/ChatClientConfig.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/FptCurriculumTool.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentFptSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/JobMarketTool.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/MarkItDownTool.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/tool/StudentProgressTool.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentDashboardService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/clients/GithubApiClient.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapSelectionResolver.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentNodeSelectionRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/SelectionView.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/CorsConfig.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/DatabaseSeeder.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/AcademicCounselorRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/IndustryMentorRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/NodeTypeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioReviewRequestRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptOverlayImportService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/HttpClientConfig.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SecurityConfig.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationFailureHandler.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationSuccessHandler.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/OAuth2UserServiceImpl.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SeedAccountsProperties.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/config/SwaggerConfig.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserRoleRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserStatusRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminSystemHealthResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AdminFlmController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptMaterialMirrorService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/AuthController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ForgotPasswordRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ResetPasswordRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CareerController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CareerResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CareerService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CounselorService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FeedbackService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/GithubAccountLinkController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubLinkRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubLinkResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubLinkStartResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubAccountLinkService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/GithubPortfolioController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportBatchRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubRepoRankResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MarketTrendController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PortfolioController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateSlugRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/PublicPortfolioController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RecruitmentPostsController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SelectAlternativeRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateNodeProgressRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/NodeSelectionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapSelectionService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapEditorController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SaveNodePositionsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpsertRoadmapNodeRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapEditorService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapRecommendationController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/RoadmapSkillController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportSkillsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupStudentProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/TargetCareerRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentCurriculumController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentCurriculumService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/StudentDashboardController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentDashboardService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/UserController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupUserProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UserRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/UserService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/VirtualMentorController.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/OAuth2UserInfoInternal.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GitHubOauth2UserInfo.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/OAuth2UserInfoInternal.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GoogleOAuth2UserInfo.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/OAuth2UserInfoInternal.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CompareStRmSkillRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ForgotPasswordRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportBatchRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubLinkRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportSkillsRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ResetPasswordRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SaveNodePositionsRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SelectAlternativeRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupStudentProfileRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupUserProfileRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/TargetCareerRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateNodeProgressRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateSlugRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserProgressRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserRoleRequest.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserStatusRequest.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpsertRoadmapNodeRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UserRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorRenameSessionRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorSessionRequest.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminSystemHealthResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorMessageResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/VirtualMentorSessionResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubLinkResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubLinkStartResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubRepoRankResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CareerResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CurriculumOptionResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptNodeCoverageResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptNodeResourceResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/NodeSelectionResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RequiredSkillResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationItemResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillGapResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillItemResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResourceResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RoadmapStepResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/AcademicCounselor.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/IndustryMentor.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/AcademicCounselor.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FeedbackAttachment.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FptResourceKind.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/IndustryMentor.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/NodeType.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StageType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ReviewStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapNodeLayout.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectSource.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FptResourceKind.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ReviewStatus.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StageType.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectSource.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/GlobalExceptionHandler.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/CounselorMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/AcademicCounselor.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/PortfolioMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/ScraperMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RequiredSkillResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RoadmapStepResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/AcademicCounselorRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/AcademicCounselor.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptCurriculumRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptCurriculumSubjectRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectCloRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/IndustryMentorRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/IndustryMentor.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/NodeTypeRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/NodeType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioConfigRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioProjectRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioReviewRequestRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ReviewStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapNodeLayoutRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapNodeLayout.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationItemRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentEducationRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentFptSubjectRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentNodeSelectionRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillEvidenceRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/JobScrapingScheduler.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedCompanyResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedPostResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScrapedRecruitmentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/ScraperResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/RemoveOverdueJobScheduler.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/scheduler/SkillExtractionScheduler.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/AuthenticationCookieService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/HttpCookieOAuth2AuthorizationRequestRepository.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtAuthenticationFilter.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationFailureHandler.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/OAuth2AuthenticationSuccessHandler.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecureOAuth2CookieCodec.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenCipher.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenHashUtil.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserRoleRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserStatusRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminSystemHealthResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CareerService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CareerResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CounselorService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/EmailService.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FeedbackService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptMaterialMirrorService.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptOverlayImportService.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubAccountLinkService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubLinkResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubLinkStartResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubRepoRankResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapEditorService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SaveNodePositionsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpsertRoadmapNodeRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapSelectionService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SelectAlternativeRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/NodeSelectionResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateNodeProgressRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillEvidenceService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CompareStRmSkillRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportSkillsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentCurriculumService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentDashboardService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/UserService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupUserProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UserRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminFlmSyncServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/AdminFlmSyncRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStartResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/FlmSyncStatusResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminFlmSyncService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptOverlayImportService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AdminServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserRoleRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateUserStatusRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminCourseMetricResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminSystemHealthResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserListItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/admin/AdminUserMetricResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/AdminMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AdminService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/LoginRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/RefreshResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PasswordResetToken.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RefreshToken.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PasswordResetTokenRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RefreshTokenRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/JwtService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenHashUtil.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/EmailService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/AuthenticatedStudentServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CareerServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CareerResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CareerService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/projection/StudentInfoProjection.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/CounselorMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CounselorService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/DocumentIngestionServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/EmailServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/EmailService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/EmailUtil.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FeedbackServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FeedbackAttachment.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/EmailService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FeedbackService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FptMaterialMirrorServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptMaterialMirrorService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FptOverlayImportServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectClo.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FptResourceKind.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptCurriculumRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptCurriculumSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectCloRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FptOverlayImportService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/GithubAccountLinkServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubLinkResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubLinkStartResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenCipher.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubAccountLinkService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/GithubPortfolioServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/analyzer/PortfolioAiAnalyzer.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/clients/GithubApiClient.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/GithubImportRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubRepoRankResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/TokenCipher.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/GithubPortfolioService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillEvidenceService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/GithubRepoRankingService.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/GithubRepoRankResponse.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MarketTrendServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/market/MarketTrendResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/MarketTrendMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MarketTrendService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/IndustryMentor.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ReviewStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/IndustryMentorRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioReviewRequestRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/EmailService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/OAuth2UserServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/OAuth2UserInfoInternal.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GitHubOauth2UserInfo.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/internal/info/GoogleOAuth2UserInfo.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/OauthAccount.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/OauthAccountRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/CustomOAuth2User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PdfToMarkdownServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PdfToMarkdownService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/PortfolioUpsertRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/RequestReviewRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/portfolio/PortfolioResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioConfig.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioProject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentEducation.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ReviewStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/UserRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/PortfolioMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioConfigRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioProjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/PortfolioReviewRequestRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentEducationRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/PortfolioSlugServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/PortfolioSlugService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/SlugUtils.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagDocumentServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentSourceType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RagDocumentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RagVectorStoreServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagVectorStoreService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapEditorServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SaveNodePositionsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpsertRoadmapNodeRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/NodeType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapNodeLayout.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StageType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/NodeTypeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapNodeLayoutRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapEditorService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapPersonalizationServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapSelectionResolver.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/SelectionView.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationDecisionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapRecommendationResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendation.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapRecommendationItem.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationAction.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RecommendationType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/RoadmapRecommendationMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationItemRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapRecommendationRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillEvidenceRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapPersonalizationService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapSelectionServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SelectAlternativeRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/NodeSelectionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentNodeSelectionRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapSelectionService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/RoadmapServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapSelectionResolver.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/SelectionView.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateNodeProgressRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptNodeCoverageResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptNodeResourceResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RoadmapNodeResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentRoadmapResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RoadmapNodeLayout.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/AccountType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RoadmapNodeLayoutRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapSelectionService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RoadmapService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/ScraperServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/CompanyResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentPostResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/scraper/RecruitmentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Company.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RecruitmentPost.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CompanyRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentPostRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/ScraperService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillEvidenceServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillEvidenceRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillEvidenceService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillExtractionServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Recruitment.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/RecruitmentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillExtractionService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SkillServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CompareStRmSkillRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportSkillsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SkillService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentCurriculumServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/DeclareCurriculumTermRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetStudentCurriculumRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateFptSubjectsRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/CurriculumOptionResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectDetailResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/FptSubjectResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/StudentCurriculumResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculum.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptCurriculumSubject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectResource.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/FptSubjectSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentFptSubject.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkillEvidence.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/EvidenceType.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FptResourceKind.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectSource.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/StudentSubjectStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptCurriculumRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptCurriculumSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectCloRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectResourceRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FptSubjectSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentFptSubjectRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillEvidenceRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentCurriculumService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentDashboardServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RoadmapStepResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillTrend.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentDashboardService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/StudentServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/components/RoadmapProgressCalculator.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupStudentProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/RequiredSkillResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/roadmap/SkillResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/RagDocument.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/FeedbackRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillTrendRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentProgressRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentSkillRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/AuthenticatedStudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/DocumentIngestionService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/RagDocumentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/StudentService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/SupabaseStorageServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/UserServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/SetupUserProfileRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UserRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/auth/UserResponse.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/UnauthorizedException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/UserMapper.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/SupabaseStorageService.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/UserService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/VirtualMentorServiceImpl.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/ai/client/AiServiceClient.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/VirtualMentorChatRequest.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatMessage.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/ChatSession.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RagDocumentScope.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ForbiddenException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/ResourceNotFoundException.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatMessageRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/ChatSessionRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/StudentRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/UserRepository.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/security/SecurityUtils.java",
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/services/VirtualMentorService.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/CookieUtils.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/EmailUtil.java": [],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/FileValidationUtil.java": [
+      "intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java"
+    ],
+    "intelipath-backend/src/main/java/com/inteliroadmap/backend/utils/SlugUtils.java": [],
+    "intelipath-backend/src/main/resources/application-dev.yaml": [],
+    "intelipath-backend/src/main/resources/application-prod.yaml": [],
+    "intelipath-backend/src/main/resources/application.yaml": [],
+    "intelipath-backend/src/main/resources/prompts/github-portfolio-analysis.st": [],
+    "intelipath-backend/src/main/resources/prompts/virtual-mentor-rag.st": [],
+    "intelipath-backend/src/main/resources/prompts/virtual-mentor-system.st": [],
+    "intelipath-service/.dockerignore": [],
+    "intelipath-service/.env": [],
+    "intelipath-service/.env.example": [],
+    "intelipath-service/.pytest_cache/CACHEDIR.TAG": [],
+    "intelipath-service/.pytest_cache/README.md": [],
+    "intelipath-service/.pytest_cache/v/cache/lastfailed": [],
+    "intelipath-service/.pytest_cache/v/cache/nodeids": [],
+    "intelipath-service/Dockerfile": [],
+    "intelipath-service/README.md": [],
+    "intelipath-service/app/__init__.py": [],
+    "intelipath-service/app/api/__init__.py": [],
+    "intelipath-service/app/api/endpoints/__init__.py": [],
+    "intelipath-service/app/api/endpoints/extraction.py": [
+      "intelipath-service/app/api/security.py",
+      "intelipath-service/app/schemas/extraction.py",
+      "intelipath-service/app/services/__init__.py",
+      "intelipath-service/app/services/llm_service.py",
+      "intelipath-service/app/services/markitdown_service.py"
+    ],
+    "intelipath-service/app/api/flm_routes.py": [
+      "intelipath-service/app/api/security.py",
+      "intelipath-service/app/scrapers/flm/__init__.py",
+      "intelipath-service/app/scrapers/flm/sync_job.py"
+    ],
+    "intelipath-service/app/api/recruitment_routes.py": [
+      "intelipath-service/app/api/security.py",
+      "intelipath-service/app/config/config.py",
+      "intelipath-service/app/db/database.py",
+      "intelipath-service/app/db/models.py",
+      "intelipath-service/app/scrapers/engines/curl_engine.py",
+      "intelipath-service/app/scrapers/parsers/itviec_parser.py",
+      "intelipath-service/app/scrapers/parsers/topcv_parser.py",
+      "intelipath-service/app/scrapers/processor.py"
+    ],
+    "intelipath-service/app/api/security.py": [
+      "intelipath-service/app/config/config.py"
+    ],
+    "intelipath-service/app/config/__init__.py": [],
+    "intelipath-service/app/config/config.py": [],
+    "intelipath-service/app/core/__init__.py": [],
+    "intelipath-service/app/core/config.py": [],
+    "intelipath-service/app/db/database.py": [
+      "intelipath-service/app/config/config.py"
+    ],
+    "intelipath-service/app/db/models.py": [],
+    "intelipath-service/app/main.py": [
+      "intelipath-service/app/api/__init__.py",
+      "intelipath-service/app/api/endpoints/__init__.py",
+      "intelipath-service/app/api/endpoints/extraction.py",
+      "intelipath-service/app/api/flm_routes.py",
+      "intelipath-service/app/api/recruitment_routes.py",
+      "intelipath-service/app/mcp_server.py"
+    ],
+    "intelipath-service/app/mcp_server.py": [
+      "intelipath-service/app/services/markitdown_service.py"
+    ],
+    "intelipath-service/app/run.bat": [],
+    "intelipath-service/app/schemas/__init__.py": [],
+    "intelipath-service/app/schemas/extraction.py": [],
+    "intelipath-service/app/schemas/schemas.py": [],
+    "intelipath-service/app/scrapers/__init__.py": [],
+    "intelipath-service/app/scrapers/engines/__init__.py": [],
+    "intelipath-service/app/scrapers/engines/curl_engine.py": [],
+    "intelipath-service/app/scrapers/flm/__init__.py": [],
+    "intelipath-service/app/scrapers/flm/client.py": [
+      "intelipath-service/app/config/config.py"
+    ],
+    "intelipath-service/app/scrapers/flm/flm_to_coverage.py": [
+      "intelipath-service/app/scrapers/flm/__init__.py",
+      "intelipath-service/app/services/llm_service.py"
+    ],
+    "intelipath-service/app/scrapers/flm/parsers.py": [],
+    "intelipath-service/app/scrapers/flm/scraper.py": [
+      "intelipath-service/app/scrapers/flm/__init__.py",
+      "intelipath-service/app/scrapers/flm/client.py"
+    ],
+    "intelipath-service/app/scrapers/flm/sync_job.py": [
+      "intelipath-service/app/scrapers/flm/__init__.py",
+      "intelipath-service/app/scrapers/flm/client.py",
+      "intelipath-service/app/scrapers/flm/flm_to_coverage.py",
+      "intelipath-service/app/scrapers/flm/scraper.py"
+    ],
+    "intelipath-service/app/scrapers/parsers/__init__.py": [],
+    "intelipath-service/app/scrapers/parsers/itviec_parser.py": [
+      "intelipath-service/app/config/config.py",
+      "intelipath-service/app/db/models.py",
+      "intelipath-service/app/scrapers/engines/curl_engine.py"
+    ],
+    "intelipath-service/app/scrapers/parsers/linkedin_parser.py": [
+      "intelipath-service/app/config/config.py"
+    ],
+    "intelipath-service/app/scrapers/parsers/topcv_parser.py": [
+      "intelipath-service/app/config/config.py",
+      "intelipath-service/app/db/models.py",
+      "intelipath-service/app/scrapers/engines/curl_engine.py"
+    ],
+    "intelipath-service/app/scrapers/processor.py": [
+      "intelipath-service/app/config/config.py",
+      "intelipath-service/app/db/models.py",
+      "intelipath-service/app/services/llm_service.py"
+    ],
+    "intelipath-service/app/services/__init__.py": [],
+    "intelipath-service/app/services/llm_service.py": [
+      "intelipath-service/app/config/config.py"
+    ],
+    "intelipath-service/app/services/markitdown_service.py": [],
+    "intelipath-service/requirements-dev.txt": [],
+    "intelipath-service/requirements.txt": [],
+    "intelipath-service/scripts/migrate_roadmap.py": []
+  }
+}

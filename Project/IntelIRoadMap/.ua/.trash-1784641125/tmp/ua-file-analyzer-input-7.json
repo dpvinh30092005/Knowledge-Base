@@ -1,0 +1,303 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "language": "typescript",
+      "sizeLines": 346,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/badge.tsx",
+      "language": "typescript",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "language": "typescript",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/card.tsx",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "language": "typescript",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "language": "typescript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/select.tsx",
+      "language": "typescript",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx",
+      "language": "typescript",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "language": "typescript",
+      "sizeLines": 247,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "language": "typescript",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "language": "typescript",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapContainers.tsx",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapVectorGraph.tsx",
+      "language": "typescript",
+      "sizeLines": 575,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StageLegend.tsx",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentProfileSetupModal.tsx",
+      "language": "typescript",
+      "sizeLines": 442,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentRoadmapPageView.tsx",
+      "language": "typescript",
+      "sizeLines": 884,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentSkillSelectionModal.tsx",
+      "language": "typescript",
+      "sizeLines": 197,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/RoadmapProgressContext.tsx",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/useDashboardData.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/useStudentSetup.ts",
+      "language": "typescript",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts",
+      "language": "typescript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/studentDashboardService.ts",
+      "language": "typescript",
+      "sizeLines": 633,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/studentDashboard.types.ts",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "language": "typescript",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx": [],
+    "FrontEnd/intelipath-frontend/src/components/ui/Spinner.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/ui/badge.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/ui/button.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/ui/card.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/ui/field.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/ui/input.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/ui/select.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/components/ui/skeleton.tsx": [
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/auth/components/LoginDialog.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/ui/dialog.tsx",
+      "FrontEnd/intelipath-frontend/src/features/auth/components/ForgotPasswordForm.tsx",
+      "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/auth/components/LoginForm.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/ui/button.tsx",
+      "FrontEnd/intelipath-frontend/src/components/ui/field.tsx",
+      "FrontEnd/intelipath-frontend/src/components/ui/input.tsx",
+      "FrontEnd/intelipath-frontend/src/features/auth/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx": [],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx": [],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapContainers.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapVectorGraph.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/CustomRoadmapNode.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapContainers.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StageLegend.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentProfileSetupModal.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/ui/DatePicker.tsx",
+      "FrontEnd/intelipath-frontend/src/context/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts",
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentRoadmapPageView.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/modals/ConfirmModal.tsx",
+      "FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "FrontEnd/intelipath-frontend/src/context/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/FptCurriculumPanel.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/ResourceViewerModal.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapRecommendationsPanel.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/RoadmapVectorGraph.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StageLegend.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentHeader.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentProfileSetupModal.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentSkillSelectionModal.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts",
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts",
+      "FrontEnd/intelipath-frontend/src/shared/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/StudentSkillSelectionModal.tsx": [
+      "FrontEnd/intelipath-frontend/src/components/ui/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/OnboardingShell.tsx",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts",
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/RoadmapProgressContext.tsx": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/useDashboardData.ts": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/hooks/useStudentSetup.ts": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/studentDashboardService.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts",
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/lib/stageColors.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/index.ts": [],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/services/studentDashboardService.ts": [
+      "FrontEnd/intelipath-frontend/src/api/index.ts",
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts",
+      "FrontEnd/intelipath-frontend/src/lib/utils.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/index.ts": [
+      "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/studentDashboard.types.ts"
+    ],
+    "FrontEnd/intelipath-frontend/src/features/student-dashboard/types/studentDashboard.types.ts": [],
+    "FrontEnd/intelipath-frontend/src/lib/utils.ts": []
+  }
+}

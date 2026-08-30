@@ -1,0 +1,77 @@
+{
+  "files": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.env",
+      "language": "config",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.env.example",
+      "language": "config",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/CONTRIBUTING.md",
+      "language": "markdown",
+      "sizeLines": 22,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/README.md",
+      "language": "markdown",
+      "sizeLines": 73,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/components.json",
+      "language": "json",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/index.html",
+      "language": "html",
+      "sizeLines": 16,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/package.json",
+      "language": "json",
+      "sizeLines": 62,
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/skills-lock.json",
+      "language": "json",
+      "sizeLines": 83,
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/tsconfig.json",
+      "language": "json",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/tsconfig.node.json",
+      "language": "json",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.env": [],
+    "FrontEnd/intelipath-frontend/.env.example": [],
+    "FrontEnd/intelipath-frontend/CONTRIBUTING.md": [],
+    "FrontEnd/intelipath-frontend/README.md": [],
+    "FrontEnd/intelipath-frontend/components.json": [],
+    "FrontEnd/intelipath-frontend/index.html": [],
+    "FrontEnd/intelipath-frontend/package.json": [],
+    "FrontEnd/intelipath-frontend/skills-lock.json": [],
+    "FrontEnd/intelipath-frontend/tsconfig.json": [],
+    "FrontEnd/intelipath-frontend/tsconfig.node.json": []
+  },
+  "neighborMap": {}
+}

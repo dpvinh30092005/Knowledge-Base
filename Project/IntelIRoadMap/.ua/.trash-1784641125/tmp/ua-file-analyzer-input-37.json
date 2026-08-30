@@ -1,0 +1,77 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n9-edge-aligned-minimal.md",
+      "language": "markdown",
+      "sizeLines": 17,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s1-left-margin-numbered.md",
+      "language": "markdown",
+      "sizeLines": 15,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s2-hanging.md",
+      "language": "markdown",
+      "sizeLines": 13,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s3-sticky-pinned.md",
+      "language": "markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s4-inline-no-break.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s5-bottom-anchored.md",
+      "language": "markdown",
+      "sizeLines": 13,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t1-pull-quote-with-marginalia.md",
+      "language": "markdown",
+      "sizeLines": 12,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t2-logo-wall-hairline.md",
+      "language": "markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t3-single-huge-quote.md",
+      "language": "markdown",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t4-numbered-stat-strip.md",
+      "language": "markdown",
+      "sizeLines": 14,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/n9-edge-aligned-minimal.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s1-left-margin-numbered.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s2-hanging.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s3-sticky-pinned.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s4-inline-no-break.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/s5-bottom-anchored.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t1-pull-quote-with-marginalia.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t2-logo-wall-hairline.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t3-single-huge-quote.md": [],
+    "FrontEnd/intelipath-frontend/.agents/skills/hallmark/references/components/t4-numbered-stat-strip.md": []
+  }
+}

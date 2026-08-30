@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đưa đón sân bay - TourVista</title>
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <link rel="apple-touch-icon" th:href="@{/images/favicon.png}">
+
+    <link rel="stylesheet" th:href="@{/vendor/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap-icons/font/bootstrap-icons.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/tourvista-header.css}">
+    <link rel="stylesheet" th:href="@{/css/tourvista-auth.css}">
+    <link rel="stylesheet" th:href="@{/css/tourvista-airport-transfer.css}">
+</head>
+
+<body data-solid-nav="true">
+
+<div th:replace="~{fragments/header :: travelHeader('airport')}"></div>
+
+<main class="at-page-main">
+    <div class="at-wrap">
+
+
+        <div class="at-hero">
+            <div class="at-hero-img">
+                <div class="at-hero-panel">
+                    <h1>Đưa đón sân bay - Chuyến đi thoải mái, đúng giờ</h1>
+                    <p>Đặt xe đưa đón sân bay nhanh chóng, giá trọn gói, tài xế chuyên nghiệp đón tận nơi</p>
+                </div>
+            </div>
+
+
+            <div class="at-search-card" id="at-search">
+                <div class="btn-group at-toggle-group mb-3" role="group" aria-label="Loại chuyến đi">
+                    <input type="radio" class="btn-check" name="atTripType" id="atFromAirport" autocomplete="off" checked>
+                    <label class="btn btn-outline-secondary at-toggle-btn" for="atFromAirport">Đón từ sân bay</label>
+
+                    <input type="radio" class="btn-check" name="atTripType" id="atToAirport" autocomplete="off">
+                    <label class="btn btn-outline-secondary at-toggle-btn" for="atToAirport">Tiễn ra sân bay</label>
+                </div>
+
+                <div class="row g-3 align-items-end">
+                    <div class="col-12 col-lg-3">
+                        <div class="at-field-label">Điểm đón</div>
+                        <div class="at-field">
+                            <i class="bi bi-airplane-fill"></i>
+                            <input class="at-field-input" type="text" placeholder="Sân bay, ga đến...">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="at-field-label">Điểm trả</div>
+                        <div class="at-field">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <input class="at-field-input" type="text" placeholder="Khách sạn, địa chỉ...">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <div class="at-field-label">Ngày đón</div>
+                        <div class="at-field">
+                            <i class="bi bi-calendar3"></i>
+                            <input class="at-field-input" type="date">
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        <div class="at-field-label">Giờ đón</div>
+                        <div class="at-field">
+                            <i class="bi bi-clock"></i>
+                            <input class="at-field-input" type="time">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <div class="at-field-label">Số hành khách</div>
+                        <div class="at-field">
+                            <i class="bi bi-person-fill"></i>
+                            <select class="at-field-input">
+                                <option>1 khách</option>
+                                <option>2 khách</option>
+                                <option>3 khách</option>
+                                <option>4 khách</option>
+                                <option>5+ khách</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-12 col-lg-3 offset-lg-9">
+                        <button class="btn-at-search" type="button"><i class="bi bi-search me-2"></i>Tìm xe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="at-section">
+            <h2 class="at-section-title">Vì sao chọn TourVista Đưa đón sân bay</h2>
+            <p class="at-section-subtitle">Trải nghiệm di chuyển an tâm, minh bạch từ đầu đến cuối</p>
+
+            <div class="row g-4">
+                <div class="col-6 col-lg-3">
+                    <div class="at-perk-card">
+                        <div class="at-perk-icon"><i class="bi bi-tags-fill"></i></div>
+                        <div class="at-perk-title">Giá trọn gói</div>
+                        <div class="at-perk-desc">Giá hiển thị đã bao gồm phí cầu đường, gửi xe, không phát sinh thêm</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="at-perk-card">
+                        <div class="at-perk-icon"><i class="bi bi-shield-check"></i></div>
+                        <div class="at-perk-title">Không phí ẩn</div>
+                        <div class="at-perk-desc">Thanh toán đúng số tiền đã đặt, minh bạch trên từng chặng đi</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="at-perk-card">
+                        <div class="at-perk-icon"><i class="bi bi-headset"></i></div>
+                        <div class="at-perk-title">Hỗ trợ 24/7</div>
+                        <div class="at-perk-desc">Đội ngũ chăm sóc khách hàng luôn sẵn sàng hỗ trợ mọi lúc</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="at-perk-card">
+                        <div class="at-perk-icon"><i class="bi bi-car-front-fill"></i></div>
+                        <div class="at-perk-title">Đa dạng xe</div>
+                        <div class="at-perk-desc">Từ sedan 4 chỗ đến van 16 chỗ, phù hợp mọi nhu cầu di chuyển</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="at-section">
+            <h2 class="at-section-title">Lựa chọn xe phù hợp với bạn</h2>
+            <p class="at-section-subtitle">Danh sách xe mẫu, giá tham khảo cho chặng nội thành</p>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="at-vehicle-card">
+                        <div class="at-vehicle-thumb bg-at-sedan"></div>
+                        <div class="at-vehicle-body">
+                            <div class="at-vehicle-name">Sedan Tiêu Chuẩn</div>
+                            <div class="at-vehicle-seats">4 chỗ ngồi</div>
+                            <div class="at-vehicle-specs">
+                                <span><i class="bi bi-suitcase2-fill"></i> 2 vali</span>
+                                <span><i class="bi bi-snow2"></i> Điều hòa</span>
+                            </div>
+                            <div class="at-vehicle-price-row">
+                                <div class="at-vehicle-price">250.000₫</div>
+                                <small>trọn gói / chặng</small>
+                            </div>
+                            <button class="btn-at-select" type="button">Chọn xe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="at-vehicle-card">
+                        <div class="at-vehicle-thumb bg-at-suv">
+                            <span class="at-vehicle-badge">Phổ biến</span>
+                        </div>
+                        <div class="at-vehicle-body">
+                            <div class="at-vehicle-name">SUV Cao Cấp</div>
+                            <div class="at-vehicle-seats">7 chỗ ngồi</div>
+                            <div class="at-vehicle-specs">
+                                <span><i class="bi bi-suitcase2-fill"></i> 4 vali</span>
+                                <span><i class="bi bi-snow2"></i> Điều hòa</span>
+                            </div>
+                            <div class="at-vehicle-price-row">
+                                <div class="at-vehicle-price">450.000₫</div>
+                                <small>trọn gói / chặng</small>
+                            </div>
+                            <button class="btn-at-select" type="button">Chọn xe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="at-vehicle-card">
+                        <div class="at-vehicle-thumb bg-at-van"></div>
+                        <div class="at-vehicle-body">
+                            <div class="at-vehicle-name">Van Riêng Tư</div>
+                            <div class="at-vehicle-seats">16 chỗ ngồi</div>
+                            <div class="at-vehicle-specs">
+                                <span><i class="bi bi-suitcase2-fill"></i> 10 vali</span>
+                                <span><i class="bi bi-snow2"></i> Điều hòa</span>
+                            </div>
+                            <div class="at-vehicle-price-row">
+                                <div class="at-vehicle-price">850.000₫</div>
+                                <small>trọn gói / chặng</small>
+                            </div>
+                            <button class="btn-at-select" type="button">Chọn xe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="at-section">
+            <h2 class="at-section-title">Đặt xe dễ dàng chỉ với 4 bước</h2>
+            <p class="at-section-subtitle">Nhanh gọn từ lúc đặt chỗ đến khi tài xế đón bạn tận nơi</p>
+
+            <div class="at-steps">
+                <div class="at-step">
+                    <div class="at-step-icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span class="at-step-num">1</span>
+                    </div>
+                    <div class="at-step-title">Chọn điểm đón</div>
+                    <div class="at-step-desc">Nhập điểm đón và điểm trả, chọn ngày giờ</div>
+                </div>
+
+                <div class="at-step-arrow"><i class="bi bi-arrow-right"></i></div>
+
+                <div class="at-step">
+                    <div class="at-step-icon">
+                        <i class="bi bi-car-front-fill"></i>
+                        <span class="at-step-num">2</span>
+                    </div>
+                    <div class="at-step-title">Chọn xe</div>
+                    <div class="at-step-desc">Lựa chọn loại xe phù hợp với số hành khách và hành lý</div>
+                </div>
+
+                <div class="at-step-arrow"><i class="bi bi-arrow-right"></i></div>
+
+                <div class="at-step">
+                    <div class="at-step-icon">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span class="at-step-num">3</span>
+                    </div>
+                    <div class="at-step-title">Xác nhận</div>
+                    <div class="at-step-desc">Kiểm tra thông tin và xác nhận đặt chỗ, thanh toán</div>
+                </div>
+
+                <div class="at-step-arrow"><i class="bi bi-arrow-right"></i></div>
+
+                <div class="at-step">
+                    <div class="at-step-icon">
+                        <i class="bi bi-person-badge-fill"></i>
+                        <span class="at-step-num">4</span>
+                    </div>
+                    <div class="at-step-title">Tài xế đón</div>
+                    <div class="at-step-desc">Tài xế liên hệ và đón đúng giờ tại điểm hẹn</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <section class="at-cta-banner">
+        <div class="at-cta-inner">
+            <h2>Sẵn sàng cho chuyến đi tiếp theo?</h2>
+            <p>Đặt xe đưa đón sân bay ngay hôm nay - giá trọn gói, tài xế chuyên nghiệp</p>
+            <a class="btn-at-cta" href="#at-search"><i class="bi bi-search"></i>Đặt xe ngay</a>
+        </div>
+    </section>
+</main>
+
+<div th:replace="~{fragments/footer :: travelFooter}"></div>
+
+<script th:src="@{/vendor/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/tourvista.js}"></script>
+
+</body>
+</html>

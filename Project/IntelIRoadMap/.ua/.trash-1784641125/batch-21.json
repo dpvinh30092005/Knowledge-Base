@@ -1,0 +1,220 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx",
+      "type": "file",
+      "name": "ChartTooltip.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx",
+      "summary": "Small presentational atom that renders a custom tooltip for Recharts charts, showing a label and colored value when a data point is active.",
+      "tags": ["component", "atom", "chart", "tooltip", "presentational"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx",
+      "type": "file",
+      "name": "EmptyState.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx",
+      "summary": "Reusable atom that renders an icon plus label for empty-data states across counselor dashboard widgets.",
+      "tags": ["component", "atom", "empty-state", "presentational"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx",
+      "type": "file",
+      "name": "ErrorBanner.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx",
+      "summary": "Small atom that displays an error message banner used by counselor dashboard widgets when data fetching fails.",
+      "tags": ["component", "atom", "error-handling", "presentational"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx",
+      "type": "file",
+      "name": "FeedbackItem.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx",
+      "summary": "Molecule component rendering a single feedback entry with student initials avatar, comment text, and formatted creation date.",
+      "tags": ["component", "molecule", "feedback", "presentational"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx",
+      "type": "file",
+      "name": "StatPill.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx",
+      "summary": "Molecule that renders a small pill-shaped stat display combining an icon, label, and value, used in the counselor hero section.",
+      "tags": ["component", "molecule", "stat-display", "presentational"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx",
+      "type": "file",
+      "name": "CareerDistributionChart.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx",
+      "summary": "Organism component rendering a pie chart of career distribution among students, with custom labels, coloring, and click-to-filter behavior via the useCareerDistribution hook.",
+      "tags": ["component", "organism", "chart", "data-viz", "career-distribution"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx",
+      "type": "file",
+      "name": "CounselorHero.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx",
+      "summary": "Organism displaying the counselor dashboard hero section with summary stats rendered via StatPill components.",
+      "tags": ["component", "organism", "hero", "dashboard", "presentational"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx",
+      "type": "file",
+      "name": "FeedbackListWidget.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx",
+      "summary": "Organism widget that fetches and lists student feedback entries via useFeedbackList, showing loading, error, and empty states.",
+      "tags": ["component", "organism", "feedback", "widget", "data-fetching"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx",
+      "type": "file",
+      "name": "MissingSkillsChart.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx",
+      "summary": "Organism component rendering a searchable, filterable bar chart of missing skills among students, fetched via useMissingSkills.",
+      "tags": ["component", "organism", "chart", "data-viz", "skills-analysis"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx",
+      "type": "file",
+      "name": "CounselorDashboardTemplate.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx",
+      "summary": "Layout template that composes the counselor dashboard sections (hero, charts, feedback list) with GSAP entrance animations and logout handling.",
+      "tags": ["component", "template", "layout", "animation", "dashboard"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx",
+      "type": "file",
+      "name": "CounselorDashboardPage.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx",
+      "summary": "Page component assembling the counselor dashboard by composing hero, chart, and feedback organisms inside the dashboard template, with sparkle animation and career filter state.",
+      "tags": ["component", "page", "dashboard", "entry-point", "composition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/types/dashboard.ts",
+      "type": "file",
+      "name": "dashboard.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/types/dashboard.ts",
+      "summary": "Shared TypeScript type definitions for counselor dashboard stat and display props.",
+      "tags": ["type-definition", "types", "dashboard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx:CareerDistributionChart",
+      "type": "function",
+      "name": "CareerDistributionChart",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx",
+      "lineRange": [50, 161],
+      "summary": "Main component function that fetches career distribution data via useCareerDistribution, computes colors per segment, and renders an interactive pie chart with click handlers.",
+      "tags": ["component", "chart", "data-viz"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx:MissingSkillsChart",
+      "type": "function",
+      "name": "MissingSkillsChart",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx",
+      "lineRange": [18, 200],
+      "summary": "Main component function that fetches missing skills data via useMissingSkills, supports search filtering, and renders a bar chart with color-coded severity.",
+      "tags": ["component", "chart", "data-viz", "search"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx:CounselorDashboardTemplate",
+      "type": "function",
+      "name": "CounselorDashboardTemplate",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx",
+      "lineRange": [19, 175],
+      "summary": "Template function that lays out dashboard slots (hero, charts, feedback list), drives GSAP entrance animations, and handles user logout navigation.",
+      "tags": ["component", "template", "animation", "layout"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx:CounselorDashboardPage",
+      "type": "function",
+      "name": "CounselorDashboardPage",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx",
+      "lineRange": [11, 86],
+      "summary": "Top-level page function that manages career filter and total-count state, plays a sparkle GSAP animation, and composes the dashboard template with its child organisms.",
+      "tags": ["component", "page", "state-management", "composition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx:FeedbackListWidget",
+      "type": "function",
+      "name": "FeedbackListWidget",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx",
+      "lineRange": [8, 46],
+      "summary": "Component function that fetches feedback via useFeedbackList and renders the list of FeedbackItem entries with loading/error/empty handling.",
+      "tags": ["component", "feedback", "data-fetching"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx:FeedbackItem",
+      "type": "function",
+      "name": "FeedbackItem",
+      "filePath": "FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx",
+      "lineRange": [13, 67],
+      "summary": "Component function that derives student initials from the name and renders the feedback comment with a formatted date.",
+      "tags": ["component", "feedback", "presentational"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx", "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/api/counselorApi.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx", "target": "file:FrontEnd/intelipath-frontend/src/types/dashboard.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx", "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/StatPill.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx", "target": "file:FrontEnd/intelipath-frontend/src/types/dashboard.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx", "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ChartTooltip.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/EmptyState.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/atoms/ErrorBanner.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx", "target": "file:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/index.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx", "target": "file:FrontEnd/intelipath-frontend/src/context/index.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx", "target": "file:FrontEnd/intelipath-frontend/src/shared/index.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CounselorHero.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx", "target": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx", "target": "file:FrontEnd/intelipath-frontend/src/types/dashboard.ts", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx:CareerDistributionChart", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx:CareerDistributionChart", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx:MissingSkillsChart", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx:MissingSkillsChart", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx:CounselorDashboardTemplate", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx:CounselorDashboardTemplate", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx", "target": "function:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx:CounselorDashboardPage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx", "target": "function:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx:CounselorDashboardPage", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx:FeedbackListWidget", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx:FeedbackListWidget", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx:FeedbackItem", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx:FeedbackItem", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/CareerDistributionChart.tsx:CareerDistributionChart", "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useCareerDistribution", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/MissingSkillsChart.tsx:MissingSkillsChart", "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useMissingSkills", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx:FeedbackListWidget", "target": "function:FrontEnd/intelipath-frontend/src/features/counselor-dashboard/model/useCounselorDashboard.ts:useFeedbackList", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx:CounselorDashboardTemplate", "target": "function:FrontEnd/intelipath-frontend/src/context/index.ts:useAuth", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "function:FrontEnd/intelipath-frontend/src/pages/CounselorDashboardPage.tsx:CounselorDashboardPage", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/templates/CounselorDashboardTemplate.tsx:CounselorDashboardTemplate", "type": "calls", "direction": "forward", "weight": 0.8},
+    {"source": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/organisms/FeedbackListWidget.tsx:FeedbackListWidget", "target": "function:FrontEnd/intelipath-frontend/src/components/counselor-dashboard/molecules/FeedbackItem.tsx:FeedbackItem", "type": "calls", "direction": "forward", "weight": 0.8}
+  ]
+}

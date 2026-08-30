@@ -1,0 +1,2301 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/AiHistoryItemResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "AiHistoryItemResponse",
+          "startLine": 10,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "id",
+            "tag",
+            "title",
+            "preview"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AiHistoryItemResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/DashboardRoadmapProgressResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "DashboardRoadmapProgressResponse",
+          "startLine": 10,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "steps",
+            "aiTip"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DashboardRoadmapProgressResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MarketDemandResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "MarketDemandResponse",
+          "startLine": 10,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "growth",
+            "role",
+            "chart"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MarketDemandResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/MentorFeedbackItemResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "MentorFeedbackItemResponse",
+          "startLine": 10,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "id",
+            "name",
+            "time",
+            "text",
+            "read"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "MentorFeedbackItemResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RecommendationItemResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "RecommendationItemResponse",
+          "startLine": 10,
+          "endLine": 20,
+          "methods": [],
+          "properties": [
+            "id",
+            "type",
+            "icon",
+            "title",
+            "description"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RecommendationItemResponse",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/RoadmapStepResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "RoadmapStepResponse",
+          "startLine": 11,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "id",
+            "title",
+            "status"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RoadmapStepResponse",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/SkillGapItemResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 19,
+      "classes": [
+        {
+          "name": "SkillGapItemResponse",
+          "startLine": 11,
+          "endLine": 22,
+          "methods": [],
+          "properties": [
+            "id",
+            "type",
+            "title",
+            "description",
+            "severity",
+            "progress"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SkillGapItemResponse",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/StudentResponse.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 30,
+      "classes": [
+        {
+          "name": "StudentResponse",
+          "startLine": 12,
+          "endLine": 33,
+          "methods": [],
+          "properties": [
+            "id",
+            "fullName",
+            "email",
+            "yob",
+            "bio",
+            "university",
+            "universityName",
+            "accountType",
+            "admissionDate",
+            "major",
+            "githubProfile",
+            "transcriptUrl",
+            "role",
+            "careerId",
+            "careerName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentResponse",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRequiredSkill.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 40,
+      "classes": [
+        {
+          "name": "CareerRequiredSkill",
+          "startLine": 23,
+          "endLine": 47,
+          "methods": [],
+          "properties": [
+            "skillRequiredId",
+            "careerRole",
+            "skill",
+            "importanceLevel"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CareerRequiredSkill",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/CareerRole.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 36,
+      "classes": [
+        {
+          "name": "CareerRole",
+          "startLine": 20,
+          "endLine": 43,
+          "methods": [],
+          "properties": [
+            "careerId",
+            "careerName",
+            "prerequisite",
+            "description"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CareerRole",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Skill.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 33,
+      "classes": [
+        {
+          "name": "Skill",
+          "startLine": 19,
+          "endLine": 40,
+          "methods": [],
+          "properties": [
+            "skillId",
+            "category",
+            "careers",
+            "skillName"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Skill",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/SkillNode.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 82,
+      "classes": [
+        {
+          "name": "SkillNode",
+          "startLine": 23,
+          "endLine": 104,
+          "methods": [],
+          "properties": [
+            "nodeId",
+            "careerRole",
+            "skill",
+            "type",
+            "previousNode",
+            "parentNode",
+            "nodeName",
+            "nodeLevel",
+            "description",
+            "resource",
+            "completionPolicy",
+            "selection",
+            "chooseCount",
+            "nodeKind",
+            "axis",
+            "isOptional",
+            "isCheckpoint",
+            "requiredProficiency",
+            "evidenceKeywords"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SkillNode",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 53,
+      "classes": [
+        {
+          "name": "Student",
+          "startLine": 19,
+          "endLine": 66,
+          "methods": [],
+          "properties": [
+            "userId",
+            "careerRole",
+            "universityName",
+            "admissionDate",
+            "major",
+            "githubProfile",
+            "transcriptUrl",
+            "portfolioSlug",
+            "fptCurriculumId",
+            "fptComboCode"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Student",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentNodeSelection.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 61,
+      "functions": [
+        {
+          "name": "prePersist",
+          "startLine": 64,
+          "endLine": 69,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "StudentNodeSelection",
+          "startLine": 30,
+          "endLine": 70,
+          "methods": [
+            "prePersist"
+          ],
+          "properties": [
+            "selectionId",
+            "student",
+            "groupNode",
+            "chosenNode",
+            "createdAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "prePersist",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "StudentNodeSelection",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentProgress.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 53,
+      "functions": [
+        {
+          "name": "prePersist",
+          "startLine": 57,
+          "endLine": 62,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "StudentProgress",
+          "startLine": 25,
+          "endLine": 63,
+          "methods": [
+            "prePersist"
+          ],
+          "properties": [
+            "progressId",
+            "student",
+            "skillNode",
+            "status",
+            "createdAt",
+            "completedAt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "prePersist",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "StudentProgress",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "prePersist",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 60
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/StudentSkill.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 40,
+      "classes": [
+        {
+          "name": "StudentSkill",
+          "startLine": 21,
+          "endLine": 48,
+          "methods": [],
+          "properties": [
+            "studentSkillId",
+            "student",
+            "skill",
+            "customDescription",
+            "techStack"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StudentSkill",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/ImportanceLevel.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "fromString",
+          "startLine": 10,
+          "endLine": 13,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ImportanceLevel",
+          "startLine": 5,
+          "endLine": 14,
+          "methods": [
+            "fromString"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "fromString",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "ImportanceLevel",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fromString",
+          "callee": "ImportanceLevel.valueOf",
+          "lineNumber": 12
+        },
+        {
+          "caller": "fromString",
+          "callee": "value.toUpperCase",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/RoadmapStepStatus.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "toFrontendValue",
+          "startLine": 14,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RoadmapStepStatus",
+          "startLine": 8,
+          "endLine": 22,
+          "methods": [
+            "toFrontendValue"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "toFrontendValue",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "RoadmapStepStatus",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/exceptions/BadRequestException.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "functions": [
+        {
+          "name": "BadRequestException",
+          "startLine": 6,
+          "endLine": 8,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "BadRequestException",
+          "startLine": 10,
+          "endLine": 12,
+          "params": [
+            "message",
+            "cause"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BadRequestException",
+          "startLine": 4,
+          "endLine": 13,
+          "methods": [
+            "BadRequestException",
+            "BadRequestException"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BadRequestException",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "BadRequestException",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "BadRequestException",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/SkillMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "toSkillItemResponse",
+          "startLine": 23,
+          "endLine": 30,
+          "params": [
+            "skill"
+          ]
+        },
+        {
+          "name": "toSkillItemResponses",
+          "startLine": 32,
+          "endLine": 36,
+          "params": [
+            "skills"
+          ]
+        },
+        {
+          "name": "toSelectedSkillResponses",
+          "startLine": 38,
+          "endLine": 44,
+          "params": [
+            "studentSkills"
+          ]
+        },
+        {
+          "name": "toRequiredSkillResponses",
+          "startLine": 46,
+          "endLine": 56,
+          "params": [
+            "requiredSkills"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SkillMapper",
+          "startLine": 17,
+          "endLine": 57,
+          "methods": [
+            "toSkillItemResponse",
+            "toSkillItemResponses",
+            "toSelectedSkillResponses",
+            "toRequiredSkillResponses"
+          ],
+          "properties": [
+            "skillRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "toSkillItemResponse",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "toSkillItemResponses",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "toSelectedSkillResponses",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "toRequiredSkillResponses",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "SkillMapper",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "SkillItemResponse.builder()\n                .skillId(skill.getSkillId())\n                .skillName(skill.getSkillName())\n                .category(skill.getCategory())\n                .career(skill.getCareers() != null && !skill.getCareers().isEmpty() ? skill.getCareers().stream().map(CareerRole::getCareerName).collect(Collectors.joining(\", \")) : null).build",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "SkillItemResponse.builder()\n                .skillId(skill.getSkillId())\n                .skillName(skill.getSkillName())\n                .category(skill.getCategory()).career",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "SkillItemResponse.builder()\n                .skillId(skill.getSkillId())\n                .skillName(skill.getSkillName()).category",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "SkillItemResponse.builder()\n                .skillId(skill.getSkillId()).skillName",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "SkillItemResponse.builder().skillId",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "SkillItemResponse.builder",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getSkillId",
+          "lineNumber": 25
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getSkillName",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getCategory",
+          "lineNumber": 27
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getCareers",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getCareers().isEmpty",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getCareers",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getCareers().stream().map(CareerRole::getCareerName).collect",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getCareers().stream().map",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getCareers().stream",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "skill.getCareers",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toSkillItemResponse",
+          "callee": "Collectors.joining",
+          "lineNumber": 28
+        },
+        {
+          "caller": "toSkillItemResponses",
+          "callee": "skills.stream()\n                .map(this::toSkillItemResponse).toList",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toSkillItemResponses",
+          "callee": "skills.stream().map",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toSkillItemResponses",
+          "callee": "skills.stream",
+          "lineNumber": 33
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "studentSkills.stream()\n                .map(ss -> skillRepository.findById(ss.getSkill().getSkillId()).orElse(null))\n                .filter(Objects::nonNull)\n                .map(this::toSkillItemResponse).toList",
+          "lineNumber": 39
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "studentSkills.stream()\n                .map(ss -> skillRepository.findById(ss.getSkill().getSkillId()).orElse(null))\n                .filter(Objects::nonNull).map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "studentSkills.stream()\n                .map(ss -> skillRepository.findById(ss.getSkill().getSkillId()).orElse(null)).filter",
+          "lineNumber": 39
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "studentSkills.stream().map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "studentSkills.stream",
+          "lineNumber": 39
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "skillRepository.findById(ss.getSkill().getSkillId()).orElse",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "skillRepository.findById",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "ss.getSkill().getSkillId",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toSelectedSkillResponses",
+          "callee": "ss.getSkill",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "requiredSkills.stream()\n                .map(requiredSkill -> {\n                    Skill skill = skillRepository.findById(requiredSkill.getSkill().getSkillId()).orElse(null);\n                    return RequiredSkillResponse.builder()\n                            .skill(skill != null ? toSkillItemResponse(skill) : null)\n                            .importanceLevel(requiredSkill.getImportanceLevel())\n                            .build();\n                }).toList",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "requiredSkills.stream().map",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "requiredSkills.stream",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "skillRepository.findById(requiredSkill.getSkill().getSkillId()).orElse",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "skillRepository.findById",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "requiredSkill.getSkill().getSkillId",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "requiredSkill.getSkill",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "RequiredSkillResponse.builder()\n                            .skill(skill != null ? toSkillItemResponse(skill) : null)\n                            .importanceLevel(requiredSkill.getImportanceLevel()).build",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "RequiredSkillResponse.builder()\n                            .skill(skill != null ? toSkillItemResponse(skill) : null).importanceLevel",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "RequiredSkillResponse.builder().skill",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "RequiredSkillResponse.builder",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "toSkillItemResponse",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toRequiredSkillResponses",
+          "callee": "requiredSkill.getImportanceLevel",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentDashboardMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 170,
+      "nonEmptyLines": 147,
+      "functions": [
+        {
+          "name": "toRoadmapProgressResponse",
+          "startLine": 39,
+          "endLine": 43,
+          "params": [
+            "steps"
+          ]
+        },
+        {
+          "name": "toRoadmapStepResponse",
+          "startLine": 45,
+          "endLine": 51,
+          "params": [
+            "node",
+            "status"
+          ]
+        },
+        {
+          "name": "toSkillGapItemResponse",
+          "startLine": 53,
+          "endLine": 67,
+          "params": [
+            "requiredSkill",
+            "progress"
+          ]
+        },
+        {
+          "name": "toMentorFeedbackItemResponse",
+          "startLine": 69,
+          "endLine": 77,
+          "params": [
+            "feedback"
+          ]
+        },
+        {
+          "name": "toAiHistoryItemResponse",
+          "startLine": 79,
+          "endLine": 91,
+          "params": [
+            "session",
+            "message",
+            "content"
+          ]
+        },
+        {
+          "name": "toMarketDemandResponse",
+          "startLine": 93,
+          "endLine": 99,
+          "params": [
+            "careerRole",
+            "growth",
+            "chart"
+          ]
+        },
+        {
+          "name": "toEmptyMarketDemandResponse",
+          "startLine": 101,
+          "endLine": 106,
+          "params": [
+            "careerRole"
+          ]
+        },
+        {
+          "name": "toRecommendationItemResponse",
+          "startLine": 108,
+          "endLine": 121,
+          "params": [
+            "requiredSkill"
+          ]
+        },
+        {
+          "name": "importanceRank",
+          "startLine": 123,
+          "endLine": 132,
+          "params": [
+            "requiredSkill"
+          ]
+        },
+        {
+          "name": "skillGapType",
+          "startLine": 134,
+          "endLine": 139,
+          "params": [
+            "importanceLevel"
+          ]
+        },
+        {
+          "name": "skillDescription",
+          "startLine": 141,
+          "endLine": 149,
+          "params": [
+            "skill"
+          ]
+        },
+        {
+          "name": "formatRelativeTime",
+          "startLine": 151,
+          "endLine": 169,
+          "params": [
+            "time"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "StudentDashboardMapper",
+          "startLine": 28,
+          "endLine": 170,
+          "methods": [
+            "toRoadmapProgressResponse",
+            "toRoadmapStepResponse",
+            "toSkillGapItemResponse",
+            "toMentorFeedbackItemResponse",
+            "toAiHistoryItemResponse",
+            "toMarketDemandResponse",
+            "toEmptyMarketDemandResponse",
+            "toRecommendationItemResponse",
+            "importanceRank",
+            "skillGapType",
+            "skillDescription",
+            "formatRelativeTime"
+          ],
+          "properties": [
+            "skillRepository",
+            "CRITICAL_TYPE",
+            "MARKET_TYPE",
+            "RECOMMENDATION_TYPE",
+            "RECOMMENDATION_ICON"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "toRoadmapProgressResponse",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "toRoadmapStepResponse",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "toSkillGapItemResponse",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "toMentorFeedbackItemResponse",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "toAiHistoryItemResponse",
+          "line": 79,
+          "isDefault": false
+        },
+        {
+          "name": "toMarketDemandResponse",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "toEmptyMarketDemandResponse",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "toRecommendationItemResponse",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "importanceRank",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "StudentDashboardMapper",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toRoadmapProgressResponse",
+          "callee": "DashboardRoadmapProgressResponse.builder()\r\n                .steps(steps).build",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRoadmapProgressResponse",
+          "callee": "DashboardRoadmapProgressResponse.builder().steps",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRoadmapProgressResponse",
+          "callee": "DashboardRoadmapProgressResponse.builder",
+          "lineNumber": 40
+        },
+        {
+          "caller": "toRoadmapStepResponse",
+          "callee": "RoadmapStepResponse.builder()\r\n                .id(node.getNodeId())\r\n                .title(node.getNodeName())\r\n                .status(status).build",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toRoadmapStepResponse",
+          "callee": "RoadmapStepResponse.builder()\r\n                .id(node.getNodeId())\r\n                .title(node.getNodeName()).status",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toRoadmapStepResponse",
+          "callee": "RoadmapStepResponse.builder()\r\n                .id(node.getNodeId()).title",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toRoadmapStepResponse",
+          "callee": "RoadmapStepResponse.builder().id",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toRoadmapStepResponse",
+          "callee": "RoadmapStepResponse.builder",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toRoadmapStepResponse",
+          "callee": "node.getNodeId",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toRoadmapStepResponse",
+          "callee": "node.getNodeName",
+          "lineNumber": 48
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "requiredSkill.getSkill().getSkillId",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "requiredSkill.getSkill",
+          "lineNumber": 55
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "skillRepository.findById(requiredSkill.getSkill().getSkillId()).orElse",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "skillRepository.findById",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "requiredSkill.getSkill().getSkillId",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "requiredSkill.getSkill",
+          "lineNumber": 56
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "SkillGapItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(skillGapType(requiredSkill.getImportanceLevel()))\r\n                .title(skill != null ? skill.getSkillName() : \"Unknown Skill\")\r\n                .description(skill != null ? skillDescription(skill) : \"\")\r\n                .severity(requiredSkill.getImportanceLevel())\r\n                .progress(progress).build",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "SkillGapItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(skillGapType(requiredSkill.getImportanceLevel()))\r\n                .title(skill != null ? skill.getSkillName() : \"Unknown Skill\")\r\n                .description(skill != null ? skillDescription(skill) : \"\")\r\n                .severity(requiredSkill.getImportanceLevel()).progress",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "SkillGapItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(skillGapType(requiredSkill.getImportanceLevel()))\r\n                .title(skill != null ? skill.getSkillName() : \"Unknown Skill\")\r\n                .description(skill != null ? skillDescription(skill) : \"\").severity",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "SkillGapItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(skillGapType(requiredSkill.getImportanceLevel()))\r\n                .title(skill != null ? skill.getSkillName() : \"Unknown Skill\").description",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "SkillGapItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(skillGapType(requiredSkill.getImportanceLevel())).title",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "SkillGapItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId()).type",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "SkillGapItemResponse.builder().id",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "SkillGapItemResponse.builder",
+          "lineNumber": 59
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "requiredSkill.getSkill().getSkillId",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "requiredSkill.getSkill",
+          "lineNumber": 60
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "skillGapType",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "requiredSkill.getImportanceLevel",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "skill.getSkillName",
+          "lineNumber": 62
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "skillDescription",
+          "lineNumber": 63
+        },
+        {
+          "caller": "toSkillGapItemResponse",
+          "callee": "requiredSkill.getImportanceLevel",
+          "lineNumber": 64
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "MentorFeedbackItemResponse.builder()\r\n                .id(feedback.getFeedbackId())\r\n                .name(feedback.getSenderName())\r\n                .time(formatRelativeTime(feedback.getCreatedAt()))\r\n                .text(feedback.getContent())\r\n                .read(feedback.getStatus() == com.inteliroadmap.backend.domain.enums.FeedbackStatus.READ).build",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "MentorFeedbackItemResponse.builder()\r\n                .id(feedback.getFeedbackId())\r\n                .name(feedback.getSenderName())\r\n                .time(formatRelativeTime(feedback.getCreatedAt()))\r\n                .text(feedback.getContent()).read",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "MentorFeedbackItemResponse.builder()\r\n                .id(feedback.getFeedbackId())\r\n                .name(feedback.getSenderName())\r\n                .time(formatRelativeTime(feedback.getCreatedAt())).text",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "MentorFeedbackItemResponse.builder()\r\n                .id(feedback.getFeedbackId())\r\n                .name(feedback.getSenderName()).time",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "MentorFeedbackItemResponse.builder()\r\n                .id(feedback.getFeedbackId()).name",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "MentorFeedbackItemResponse.builder().id",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "MentorFeedbackItemResponse.builder",
+          "lineNumber": 70
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "feedback.getFeedbackId",
+          "lineNumber": 71
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "feedback.getSenderName",
+          "lineNumber": 72
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "formatRelativeTime",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "feedback.getCreatedAt",
+          "lineNumber": 73
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "feedback.getContent",
+          "lineNumber": 74
+        },
+        {
+          "caller": "toMentorFeedbackItemResponse",
+          "callee": "feedback.getStatus",
+          "lineNumber": 75
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "session.getSessionName",
+          "lineNumber": 80
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "tag.isBlank",
+          "lineNumber": 81
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "message.getRole",
+          "lineNumber": 82
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "AiHistoryItemResponse.builder()\r\n                .id(message.getMessageId())\r\n                .tag(tag)\r\n                .title(content)\r\n                .preview(content).build",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "AiHistoryItemResponse.builder()\r\n                .id(message.getMessageId())\r\n                .tag(tag)\r\n                .title(content).preview",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "AiHistoryItemResponse.builder()\r\n                .id(message.getMessageId())\r\n                .tag(tag).title",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "AiHistoryItemResponse.builder()\r\n                .id(message.getMessageId()).tag",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "AiHistoryItemResponse.builder().id",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "AiHistoryItemResponse.builder",
+          "lineNumber": 85
+        },
+        {
+          "caller": "toAiHistoryItemResponse",
+          "callee": "message.getMessageId",
+          "lineNumber": 86
+        },
+        {
+          "caller": "toMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder()\r\n                .growth(growth)\r\n                .role(careerRole.getCareerName())\r\n                .chart(chart).build",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder()\r\n                .growth(growth)\r\n                .role(careerRole.getCareerName()).chart",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder()\r\n                .growth(growth).role",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder().growth",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder",
+          "lineNumber": 94
+        },
+        {
+          "caller": "toMarketDemandResponse",
+          "callee": "careerRole.getCareerName",
+          "lineNumber": 96
+        },
+        {
+          "caller": "toEmptyMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder()\r\n                .growth(0)\r\n                .role(careerRole.getCareerName()).build",
+          "lineNumber": 102
+        },
+        {
+          "caller": "toEmptyMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder()\r\n                .growth(0).role",
+          "lineNumber": 102
+        },
+        {
+          "caller": "toEmptyMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder().growth",
+          "lineNumber": 102
+        },
+        {
+          "caller": "toEmptyMarketDemandResponse",
+          "callee": "MarketDemandResponse.builder",
+          "lineNumber": 102
+        },
+        {
+          "caller": "toEmptyMarketDemandResponse",
+          "callee": "careerRole.getCareerName",
+          "lineNumber": 104
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "requiredSkill.getSkill().getSkillId",
+          "lineNumber": 110
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "requiredSkill.getSkill",
+          "lineNumber": 110
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "skillRepository.findById(requiredSkill.getSkill().getSkillId()).orElse",
+          "lineNumber": 111
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "skillRepository.findById",
+          "lineNumber": 111
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "requiredSkill.getSkill().getSkillId",
+          "lineNumber": 111
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "requiredSkill.getSkill",
+          "lineNumber": 111
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "RecommendationItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(RECOMMENDATION_TYPE)\r\n                .icon(RECOMMENDATION_ICON)\r\n                .title(skill != null ? skill.getSkillName() : \"Unknown Skill\")\r\n                .description(skill != null ? skillDescription(skill) : \"\").build",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "RecommendationItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(RECOMMENDATION_TYPE)\r\n                .icon(RECOMMENDATION_ICON)\r\n                .title(skill != null ? skill.getSkillName() : \"Unknown Skill\").description",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "RecommendationItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(RECOMMENDATION_TYPE)\r\n                .icon(RECOMMENDATION_ICON).title",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "RecommendationItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId())\r\n                .type(RECOMMENDATION_TYPE).icon",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "RecommendationItemResponse.builder()\r\n                .id(requiredSkill.getSkill().getSkillId()).type",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "RecommendationItemResponse.builder().id",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "RecommendationItemResponse.builder",
+          "lineNumber": 114
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "requiredSkill.getSkill().getSkillId",
+          "lineNumber": 115
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "requiredSkill.getSkill",
+          "lineNumber": 115
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "skill.getSkillName",
+          "lineNumber": 118
+        },
+        {
+          "caller": "toRecommendationItemResponse",
+          "callee": "skillDescription",
+          "lineNumber": 119
+        },
+        {
+          "caller": "importanceRank",
+          "callee": "requiredSkill.getImportanceLevel",
+          "lineNumber": 124
+        },
+        {
+          "caller": "importanceRank",
+          "callee": "\"CRITICAL\".equalsIgnoreCase",
+          "lineNumber": 125
+        },
+        {
+          "caller": "importanceRank",
+          "callee": "importanceLevel.toString",
+          "lineNumber": 125
+        },
+        {
+          "caller": "importanceRank",
+          "callee": "\"HIGH\".equalsIgnoreCase",
+          "lineNumber": 128
+        },
+        {
+          "caller": "importanceRank",
+          "callee": "importanceLevel.toString",
+          "lineNumber": 128
+        },
+        {
+          "caller": "skillGapType",
+          "callee": "\"HIGH\".equalsIgnoreCase",
+          "lineNumber": 135
+        },
+        {
+          "caller": "skillGapType",
+          "callee": "importanceLevel.toString",
+          "lineNumber": 135
+        },
+        {
+          "caller": "skillGapType",
+          "callee": "\"CRITICAL\".equalsIgnoreCase",
+          "lineNumber": 135
+        },
+        {
+          "caller": "skillGapType",
+          "callee": "importanceLevel.toString",
+          "lineNumber": 135
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCategory",
+          "lineNumber": 142
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCategory().isBlank",
+          "lineNumber": 142
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCategory",
+          "lineNumber": 142
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCategory",
+          "lineNumber": 143
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCareers",
+          "lineNumber": 145
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCareers().isEmpty",
+          "lineNumber": 145
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCareers",
+          "lineNumber": 145
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCareers().stream().map(CareerRole::getCareerName).collect",
+          "lineNumber": 146
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCareers().stream().map",
+          "lineNumber": 146
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCareers().stream",
+          "lineNumber": 146
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "skill.getCareers",
+          "lineNumber": 146
+        },
+        {
+          "caller": "skillDescription",
+          "callee": "Collectors.joining",
+          "lineNumber": 146
+        },
+        {
+          "caller": "formatRelativeTime",
+          "callee": "Duration.between",
+          "lineNumber": 156
+        },
+        {
+          "caller": "formatRelativeTime",
+          "callee": "LocalDateTime.now",
+          "lineNumber": 156
+        },
+        {
+          "caller": "formatRelativeTime",
+          "callee": "Math.max",
+          "lineNumber": 157
+        },
+        {
+          "caller": "formatRelativeTime",
+          "callee": "duration.toMinutes",
+          "lineNumber": 157
+        },
+        {
+          "caller": "formatRelativeTime",
+          "callee": "duration.toHours",
+          "lineNumber": 162
+        },
+        {
+          "caller": "formatRelativeTime",
+          "callee": "duration.toDays",
+          "lineNumber": 167
+        }
+      ],
+      "metrics": {
+        "importCount": 17,
+        "exportCount": 10,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/mappers/StudentMapper.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "toSetupProfileResponse",
+          "startLine": 21,
+          "endLine": 29,
+          "params": [
+            "student"
+          ]
+        },
+        {
+          "name": "toProfileResponse",
+          "startLine": 31,
+          "endLine": 57,
+          "params": [
+            "student"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "StudentMapper",
+          "startLine": 14,
+          "endLine": 58,
+          "methods": [
+            "toSetupProfileResponse",
+            "toProfileResponse"
+          ],
+          "properties": [
+            "userRepository",
+            "careerRoleRepository"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "toSetupProfileResponse",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "toProfileResponse",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "StudentMapper",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "userRepository.findByUserId",
+          "lineNumber": 22
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "student.getUserId",
+          "lineNumber": 22
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(user.getUserId())\n                .fullName(user.getFullName())\n                .role(user.getRole().name())\n                .careerId(student.getCareerRole().getCareerId()).build",
+          "lineNumber": 23
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(user.getUserId())\n                .fullName(user.getFullName())\n                .role(user.getRole().name()).careerId",
+          "lineNumber": 23
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(user.getUserId())\n                .fullName(user.getFullName()).role",
+          "lineNumber": 23
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(user.getUserId()).fullName",
+          "lineNumber": 23
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "StudentResponse.builder().id",
+          "lineNumber": 23
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "StudentResponse.builder",
+          "lineNumber": 23
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "user.getUserId",
+          "lineNumber": 24
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "user.getFullName",
+          "lineNumber": 25
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "user.getRole().name",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "user.getRole",
+          "lineNumber": 26
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 27
+        },
+        {
+          "caller": "toSetupProfileResponse",
+          "callee": "student.getCareerRole",
+          "lineNumber": 27
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "userRepository.findByUserId",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getUserId",
+          "lineNumber": 32
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getCareerRole",
+          "lineNumber": 34
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 34
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getCareerRole",
+          "lineNumber": 34
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "careerRoleRepository.findById",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getCareerRole",
+          "lineNumber": 35
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "optCareer.isPresent",
+          "lineNumber": 36
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "optCareer.get().getCareerName",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "optCareer.get",
+          "lineNumber": 37
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName())\n                .universityName(student.getUniversityName())\n                .accountType(user.getAccountType())\n                .admissionDate(student.getAdmissionDate())\n                .major(student.getMajor())\n                .githubProfile(student.getGithubProfile())\n                .transcriptUrl(student.getTranscriptUrl())\n                .careerId(student.getCareerRole() != null ? student.getCareerRole().getCareerId() : null)\n                .careerName(careerName).build",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName())\n                .universityName(student.getUniversityName())\n                .accountType(user.getAccountType())\n                .admissionDate(student.getAdmissionDate())\n                .major(student.getMajor())\n                .githubProfile(student.getGithubProfile())\n                .transcriptUrl(student.getTranscriptUrl())\n                .careerId(student.getCareerRole() != null ? student.getCareerRole().getCareerId() : null).careerName",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName())\n                .universityName(student.getUniversityName())\n                .accountType(user.getAccountType())\n                .admissionDate(student.getAdmissionDate())\n                .major(student.getMajor())\n                .githubProfile(student.getGithubProfile())\n                .transcriptUrl(student.getTranscriptUrl()).careerId",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName())\n                .universityName(student.getUniversityName())\n                .accountType(user.getAccountType())\n                .admissionDate(student.getAdmissionDate())\n                .major(student.getMajor())\n                .githubProfile(student.getGithubProfile()).transcriptUrl",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName())\n                .universityName(student.getUniversityName())\n                .accountType(user.getAccountType())\n                .admissionDate(student.getAdmissionDate())\n                .major(student.getMajor()).githubProfile",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName())\n                .universityName(student.getUniversityName())\n                .accountType(user.getAccountType())\n                .admissionDate(student.getAdmissionDate()).major",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName())\n                .universityName(student.getUniversityName())\n                .accountType(user.getAccountType()).admissionDate",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName())\n                .universityName(student.getUniversityName()).accountType",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio())\n                .university(student.getUniversityName()).universityName",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob())\n                .bio(user.getBio()).university",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail())\n                .yob(user.getYob()).bio",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName())\n                .email(user.getEmail()).yob",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId())\n                .fullName(user.getFullName()).email",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder()\n                .id(student.getUserId()).fullName",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder().id",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "StudentResponse.builder",
+          "lineNumber": 41
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getUserId",
+          "lineNumber": 42
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "user.getFullName",
+          "lineNumber": 43
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "user.getEmail",
+          "lineNumber": 44
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "user.getYob",
+          "lineNumber": 45
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "user.getBio",
+          "lineNumber": 46
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getUniversityName",
+          "lineNumber": 47
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getUniversityName",
+          "lineNumber": 48
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "user.getAccountType",
+          "lineNumber": 49
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getAdmissionDate",
+          "lineNumber": 50
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getMajor",
+          "lineNumber": 51
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getGithubProfile",
+          "lineNumber": 52
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getTranscriptUrl",
+          "lineNumber": 53
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getCareerRole",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getCareerRole().getCareerId",
+          "lineNumber": 54
+        },
+        {
+          "caller": "toProfileResponse",
+          "callee": "student.getCareerRole",
+          "lineNumber": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRequiredSkillRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "CareerRequiredSkillRepository",
+          "startLine": 11,
+          "endLine": 16,
+          "methods": [
+            "findByCareerRole_CareerId",
+            "existsByCareerRole_CareerIdAndSkill_SkillId"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CareerRequiredSkillRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/CareerRoleRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "CareerRoleRepository",
+          "startLine": 11,
+          "endLine": 18,
+          "methods": [
+            "findByCareerId",
+            "findByCareerName",
+            "findByCareerNameContainingIgnoreCase"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CareerRoleRepository",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/repositories/SkillNodeRepository.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 24,
+      "classes": [
+        {
+          "name": "SkillNodeRepository",
+          "startLine": 12,
+          "endLine": 30,
+          "methods": [
+            "findByNodeId",
+            "findByNodeName",
+            "findByCareerRole_CareerId",
+            "findByCareerRole_CareerIdOrderByNodeLevelAscNodeNameAsc",
+            "findBySkill_SkillIdAndCareerRole_CareerId",
+            "existsByParentNode_NodeId",
+            "findByParentNode_NodeId",
+            "existsByPreviousNode_NodeId",
+            "findTotalNodeOfRoadmap",
+            "countDistinctCareersWithNodes"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SkillNodeRepository",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

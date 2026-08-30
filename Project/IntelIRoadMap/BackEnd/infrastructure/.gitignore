@@ -1,0 +1,5 @@
+
+# Agent/assistant working directories
+.claude/
+.ua/
+.understand-anything/

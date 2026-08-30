@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TourVista - App du lịch hàng đầu</title>
+    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <link rel="apple-touch-icon" th:href="@{/images/favicon.png}">
+
+    <link rel="stylesheet" th:href="@{/vendor/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap-icons/font/bootstrap-icons.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/tourvista-header.css}">
+    <link rel="stylesheet" th:href="@{/css/tourvista-auth.css}">
+</head>
+
+<body>
+
+<div th:replace="~{fragments/header :: travelHeader('home')}"></div>
+
+<div class="home-hero-section">
+    <div class="container search-container">
+        <h1 class="hero-title mb-1">App du lịch hàng đầu, một chạm đi bất cứ đâu</h1>
+
+        <div class="search-tabs-wrapper d-flex w-100">
+            <a href="#" class="search-tab-item active text-center flex-fill justify-content-center">
+                <i class="bi bi-building"></i> Khách sạn
+            </a>
+            <a href="#" class="search-tab-item text-center flex-fill justify-content-center">
+                <i class="bi bi-airplane"></i> Vé máy bay
+            </a>
+            <a href="#" class="search-tab-item text-center flex-fill justify-content-center">
+                <i class="bi bi-bus-front"></i> Vé xe khách
+            </a>
+            <a href="#" class="search-tab-item text-center flex-fill justify-content-center">
+                <i class="bi bi-car-front"></i> Đưa đón sân bay
+            </a>
+            <a href="#" class="search-tab-item text-center flex-fill justify-content-center">
+                <i class="bi bi-car-front-fill"></i> Cho thuê xe
+            </a>
+            <a href="#" class="search-tab-item text-center flex-fill justify-content-center">
+                <i class="bi bi-balloon"></i> Hoạt động & Vui chơi
+            </a>
+            <a href="#" class="search-tab-item text-center flex-fill justify-content-center">
+                <i class="bi bi-grid-3x3-gap"></i> Khác
+            </a>
+        </div>
+
+        <div class="search-subtabs-wrapper mt-3">
+            <button class="search-subtab"><i class="bi bi-search me-1"></i> Tất cả</button>
+            <button class="search-subtab active"><i class="bi bi-building me-1"></i> Khách sạn</button>
+            <button class="search-subtab"><i class="bi bi-house me-1"></i> Biệt thự</button>
+            <button class="search-subtab"><i class="bi bi-buildings me-1"></i> Căn hộ</button>
+        </div>
+
+        <div class="d-flex search-label-row">
+            <div class="flex-fill search-label-col">
+                <div class="search-field-label text-white">Thành phố, địa điểm hoặc tên khách sạn:</div>
+            </div>
+            <div class="flex-fill search-label-col">
+                <div class="search-field-label text-white">Ngày nhận phòng và trả phòng</div>
+            </div>
+            <div class="flex-fill search-label-col">
+                <div class="search-field-label text-white">Khách và Phòng</div>
+            </div>
+        </div>
+
+        <div class="search-input-bar">
+            <div class="search-field-group">
+                <i class="bi bi-geo-alt search-field-icon"></i>
+                <div class="search-field-content">
+                    <input type="text" class="search-field-input" value="Da Lat" placeholder="Nhập địa điểm...">
+                </div>
+            </div>
+
+            <div class="search-field-group">
+                <i class="bi bi-calendar3 search-field-icon"></i>
+                <div class="search-field-content">
+                    <input type="text" class="search-field-input" value="27 thg 6 - 28 thg 6 2026" placeholder="Chọn ngày...">
+                </div>
+            </div>
+
+            <div class="search-field-group border-end-0">
+                <i class="bi bi-person search-field-icon"></i>
+                <div class="search-field-content">
+                    <input type="text" class="search-field-input" value="1 người lớn, 1 Trẻ em, 1 phòng" placeholder="Số lượng khách...">
+                </div>
+            </div>
+
+            <button class="btn-search">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<section class="section-block">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="section-title mb-0">Đến 12% Phiếu giảm giá cho Người dùng mới</h2>
+            <a href="#" class="see-all-link">Xem tất cả <i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <p class="section-subtitle">Hiệu lực cho giao dịch đầu tiên trên ứng dụng TourVista</p>
+
+        <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="voucher-card">
+                    <div class="voucher-top">
+                        <div class="voucher-icon-sm bg-vou-blue"><i class="bi bi-airplane-fill"></i></div>
+                        <div class="voucher-info">
+                            <div class="voucher-title">Giảm đến 75.000₫ cho lần đặt vé máy bay</div>
+                            <div class="voucher-note">Áp dụng cho lần đặt đầu tiên trên ứng dụng</div>
+                        </div>
+                        <i class="bi bi-info-circle voucher-i"></i>
+                    </div>
+                    <div class="voucher-bottom">
+                        <span class="voucher-code-text"><i class="bi bi-ticket-perforated me-1"></i>TVLKBANMOI</span>
+                        <button class="voucher-copy" type="button">Sao chép</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="voucher-card">
+                    <div class="voucher-top">
+                        <div class="voucher-icon-sm bg-vou-green"><i class="bi bi-building-fill"></i></div>
+                        <div class="voucher-info">
+                            <div class="voucher-title">Giảm giá tới 250.000₫ cho lần đặt phòng</div>
+                            <div class="voucher-note">Áp dụng cho lần đặt đầu tiên trên ứng dụng</div>
+                        </div>
+                        <i class="bi bi-info-circle voucher-i"></i>
+                    </div>
+                    <div class="voucher-bottom">
+                        <span class="voucher-code-text"><i class="bi bi-ticket-perforated me-1"></i>TVLKBANMOI</span>
+                        <button class="voucher-copy" type="button">Sao chép</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="voucher-card">
+                    <div class="voucher-top">
+                        <div class="voucher-icon-sm bg-vou-orange"><i class="bi bi-balloon-fill"></i></div>
+                        <div class="voucher-info">
+                            <div class="voucher-title">Giảm đến 10% cho lần đặt vé tham quan</div>
+                            <div class="voucher-note">Áp dụng cho lần đặt đầu tiên trên ứng dụng</div>
+                        </div>
+                        <i class="bi bi-info-circle voucher-i"></i>
+                    </div>
+                    <div class="voucher-bottom">
+                        <span class="voucher-code-text"><i class="bi bi-ticket-perforated me-1"></i>TVLKBANMOI</span>
+                        <button class="voucher-copy" type="button">Sao chép</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="voucher-card">
+                    <div class="voucher-top">
+                        <div class="voucher-icon-sm bg-vou-purple"><i class="bi bi-car-front-fill"></i></div>
+                        <div class="voucher-info">
+                            <div class="voucher-title">Giảm đến 50.000₫ cho đưa đón & thuê xe</div>
+                            <div class="voucher-note">Áp dụng cho lần đặt đầu tiên trên ứng dụng</div>
+                        </div>
+                        <i class="bi bi-info-circle voucher-i"></i>
+                    </div>
+                    <div class="voucher-bottom">
+                        <span class="voucher-code-text"><i class="bi bi-ticket-perforated me-1"></i>TVLKBANMOI</span>
+                        <button class="voucher-copy" type="button">Sao chép</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-block pt-0">
+    <div class="container">
+        <div id="promoCarousel" class="carousel slide promo-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner rounded-4 overflow-hidden">
+                <div class="carousel-item">
+                    <a href="#"><img th:src="@{/images/welcome/banner-9.jpg}" class="d-block w-100 promo-img" alt="7.7 Epic Sale"></a>
+                </div>
+                <div class="carousel-item active">
+                    <a href="#"><img th:src="@{/images/welcome/banner-8.jpg}" class="d-block w-100 promo-img" alt="Du lịch Trung Quốc giảm đến 50%"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#"><img th:src="@{/images/welcome/banner-7.jpg}" class="d-block w-100 promo-img" alt="Korea Beauty Festival - Bay đến Hàn Quốc"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#"><img th:src="@{/images/welcome/banner-6.jpg}" class="d-block w-100 promo-img" alt="Formula 1 Singapore Grand Prix"></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Trước</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sau</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container">
+        <h2 class="section-title mb-3">Nâng tầm chuyến đi theo cách bạn muốn</h2>
+        <div class="row g-3">
+            <div class="col-6 col-lg-3">
+                <a href="#" class="photo-card">
+                    <div class="photo-card-img bg-service-tour"></div>
+                    <div class="photo-card-body">
+                        <div class="photo-card-title">Tour du lịch</div>
+                        <div class="photo-card-sub">Khám phá điểm đến hấp dẫn</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <a href="#" class="photo-card">
+                    <div class="photo-card-img bg-service-activity"></div>
+                    <div class="photo-card-body">
+                        <div class="photo-card-title">Hoạt động du lịch</div>
+                        <div class="photo-card-sub">Vé tham quan, vui chơi</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <a href="#" class="photo-card">
+                    <div class="photo-card-img bg-service-insurance"></div>
+                    <div class="photo-card-body">
+                        <div class="photo-card-title">Bảo hiểm du lịch</div>
+                        <div class="photo-card-sub">An tâm cho mọi hành trình</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-lg-3">
+                <a href="#" class="photo-card">
+                    <div class="photo-card-img bg-service-paylater"></div>
+                    <div class="photo-card-body">
+                        <div class="photo-card-title">Đặt trước, trả sau</div>
+                        <div class="photo-card-sub">Linh hoạt thanh toán</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="section-title mb-0">Khám phá Việt Nam</h2>
+            <a href="#" class="see-all-link">Xem tất cả <i class="bi bi-chevron-right"></i></a>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#" class="dest-card bg-dest-dalat">
+                    <div class="dest-overlay"><span class="dest-name">Đà Lạt</span><span class="dest-count">1.240 khách sạn</span></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#" class="dest-card bg-dest-danang">
+                    <div class="dest-overlay"><span class="dest-name">Đà Nẵng</span><span class="dest-count">2.010 khách sạn</span></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#" class="dest-card bg-dest-hanoi">
+                    <div class="dest-overlay"><span class="dest-name">Hà Nội</span><span class="dest-count">3.150 khách sạn</span></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#" class="dest-card bg-dest-hcm">
+                    <div class="dest-overlay"><span class="dest-name">TP. Hồ Chí Minh</span><span class="dest-count">4.320 khách sạn</span></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#" class="dest-card bg-dest-phuquoc">
+                    <div class="dest-overlay"><span class="dest-name">Phú Quốc</span><span class="dest-count">980 khách sạn</span></div>
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <a href="#" class="dest-card bg-dest-nhatrang">
+                    <div class="dest-overlay"><span class="dest-name">Nha Trang</span><span class="dest-count">1.560 khách sạn</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container">
+        <div class="d-flex align-items-center gap-2 mb-3">
+            <i class="bi bi-buildings-fill section-icon"></i>
+            <h2 class="section-title mb-0">Nhiều lựa chọn khách sạn</h2>
+        </div>
+
+        <div class="filter-pills mb-3">
+            <button class="filter-pill active">Đà Nẵng</button>
+            <button class="filter-pill">Nha Trang</button>
+            <button class="filter-pill">Phan Thiết</button>
+            <button class="filter-pill">TP. Hồ Chí Minh</button>
+            <button class="filter-pill">Vũng Tàu</button>
+            <button class="filter-pill">Hà Nội</button>
+            <button class="filter-pill">Huế</button>
+            <button class="filter-pill">Đà Lạt</button>
+            <button class="filter-pill">Sa Pa</button>
+            <button class="filter-pill">Hội An</button>
+            <button class="filter-pill">Phú Quốc</button>
+        </div>
+
+        <div class="hscroll">
+            <button class="hscroll-btn hscroll-prev" type="button" aria-label="Trước"><i class="bi bi-chevron-left"></i></button>
+            <div class="hscroll-track">
+                <div class="hscroll-item">
+                    <div class="deal-card">
+                        <div class="deal-thumb bg-hotel-1">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Nam Dương</span>
+                            <span class="deal-save">Tiết kiệm 51%</span>
+                        </div>
+                        <div class="deal-ribbon">EPIC SALE</div>
+                        <div class="deal-body">
+                            <div class="deal-name">Doha Central Bliss Danang Hotel by Haviland</div>
+                            <div class="deal-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="deal-rating">
+                                <span class="score-badge">9,3</span>
+                                <span class="reviews">447 đánh giá</span>
+                            </div>
+                            <div class="deal-price">
+                                <span class="old-price">1.160.173₫</span>
+                                <span class="new-price">568.485₫</span>
+                            </div>
+                            <div class="deal-tax">Chưa bao gồm thuế và phí</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="deal-card">
+                        <div class="deal-thumb bg-hotel-2">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Mỹ An</span>
+                            <span class="deal-save">Tiết kiệm 88%</span>
+                        </div>
+                        <div class="deal-ribbon">EPIC SALE</div>
+                        <div class="deal-body">
+                            <div class="deal-name">Khách sạn Davue Đà Nẵng</div>
+                            <div class="deal-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="deal-rating">
+                                <span class="score-badge">8,5</span>
+                                <span class="reviews">1,2k đánh giá</span>
+                            </div>
+                            <div class="deal-price">
+                                <span class="old-price">3.636.364₫</span>
+                                <span class="new-price">445.521₫</span>
+                            </div>
+                            <div class="deal-tax">Chưa bao gồm thuế và phí</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="deal-card">
+                        <div class="deal-thumb bg-hotel-3">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Phước Mỹ</span>
+                            <span class="deal-save">Tiết kiệm 86%</span>
+                        </div>
+                        <div class="deal-ribbon">EPIC SALE</div>
+                        <div class="deal-body">
+                            <div class="deal-name">Khách sạn La Beach</div>
+                            <div class="deal-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="deal-rating">
+                                <span class="score-badge">8,3</span>
+                                <span class="reviews">772 đánh giá</span>
+                            </div>
+                            <div class="deal-price">
+                                <span class="old-price">3.766.234₫</span>
+                                <span class="new-price">533.350₫</span>
+                            </div>
+                            <div class="deal-tax">Chưa bao gồm thuế và phí</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="deal-card">
+                        <div class="deal-thumb bg-hotel-4">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Hòa Thuận Đông</span>
+                            <span class="deal-save">Tiết kiệm 53%</span>
+                        </div>
+                        <div class="deal-ribbon">EPIC SALE</div>
+                        <div class="deal-body">
+                            <div class="deal-name">Gold Hotel Da Nang by Haviland</div>
+                            <div class="deal-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="deal-rating">
+                                <span class="score-badge">8,5</span>
+                                <span class="reviews">1,1k đánh giá</span>
+                            </div>
+                            <div class="deal-price">
+                                <span class="old-price">1.212.121₫</span>
+                                <span class="new-price">566.280₫</span>
+                            </div>
+                            <div class="deal-tax">Chưa bao gồm thuế và phí</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="deal-card">
+                        <div class="deal-thumb bg-hotel-2">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Hải Châu</span>
+                            <span class="deal-save">Tiết kiệm 58%</span>
+                        </div>
+                        <div class="deal-ribbon">EPIC SALE</div>
+                        <div class="deal-body">
+                            <div class="deal-name">Sanouva Da Nang Hotel</div>
+                            <div class="deal-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="deal-rating">
+                                <span class="score-badge">8,7</span>
+                                <span class="reviews">980 đánh giá</span>
+                            </div>
+                            <div class="deal-price">
+                                <span class="old-price">2.100.000₫</span>
+                                <span class="new-price">890.000₫</span>
+                            </div>
+                            <div class="deal-tax">Chưa bao gồm thuế và phí</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="deal-card">
+                        <div class="deal-thumb bg-hotel-3">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Mỹ Khê</span>
+                            <span class="deal-save">Tiết kiệm 45%</span>
+                        </div>
+                        <div class="deal-ribbon">EPIC SALE</div>
+                        <div class="deal-body">
+                            <div class="deal-name">Mường Thanh Luxury Đà Nẵng</div>
+                            <div class="deal-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="deal-rating">
+                                <span class="score-badge">8,9</span>
+                                <span class="reviews">2,3k đánh giá</span>
+                            </div>
+                            <div class="deal-price">
+                                <span class="old-price">1.800.000₫</span>
+                                <span class="new-price">990.000₫</span>
+                            </div>
+                            <div class="deal-tax">Chưa bao gồm thuế và phí</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="deal-card">
+                        <div class="deal-thumb bg-hotel-1">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Sơn Trà</span>
+                            <span class="deal-save">Tiết kiệm 50%</span>
+                        </div>
+                        <div class="deal-ribbon">EPIC SALE</div>
+                        <div class="deal-body">
+                            <div class="deal-name">Risemount Resort Đà Nẵng</div>
+                            <div class="deal-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <div class="deal-rating">
+                                <span class="score-badge">9,1</span>
+                                <span class="reviews">1,5k đánh giá</span>
+                            </div>
+                            <div class="deal-price">
+                                <span class="old-price">2.500.000₫</span>
+                                <span class="new-price">1.250.000₫</span>
+                            </div>
+                            <div class="deal-tax">Chưa bao gồm thuế và phí</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="hscroll-btn hscroll-next" type="button" aria-label="Sau"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="#" class="btn-see-more">Xem thêm ưu đãi khách sạn <i class="bi bi-chevron-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container">
+        <div class="d-flex align-items-center gap-2 mb-3">
+            <i class="bi bi-balloon-heart-fill section-icon text-danger"></i>
+            <h2 class="section-title mb-0">Hoạt động du lịch</h2>
+        </div>
+
+        <div class="filter-pills mb-3">
+            <button class="filter-pill active">TP. Hồ Chí Minh - Lân cận</button>
+            <button class="filter-pill">Nha Trang - Phú Quốc</button>
+            <button class="filter-pill">Đà Nẵng</button>
+            <button class="filter-pill">Đà Lạt - Phan Thiết</button>
+            <button class="filter-pill">Hà Nội - Lân cận</button>
+            <button class="filter-pill">Singapore</button>
+            <button class="filter-pill">Thái Lan</button>
+        </div>
+
+        <div class="hscroll">
+            <button class="hscroll-btn hscroll-prev" type="button" aria-label="Trước"><i class="bi bi-chevron-left"></i></button>
+            <div class="hscroll-track">
+                <div class="hscroll-item">
+                    <div class="act-card">
+                        <div class="act-thumb bg-act-1">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> An Hoà</span>
+                        </div>
+                        <div class="act-body">
+                            <div class="act-name">Vé Công viên nước The Amazing Bay</div>
+                            <div class="deal-price">
+                                <span class="old-price">300.000₫</span>
+                                <span class="new-price">270.750₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="act-card">
+                        <div class="act-thumb bg-act-2">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Tân Phú</span>
+                            <span class="deal-save">Tiết kiệm 20%</span>
+                        </div>
+                        <div class="act-body">
+                            <div class="act-name">Vé Công viên Văn hóa Suối Tiên</div>
+                            <div class="deal-price">
+                                <span class="old-price">100.000₫</span>
+                                <span class="new-price">95.000₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="act-card">
+                        <div class="act-thumb bg-act-3">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Xã Thạnh Tân</span>
+                        </div>
+                        <div class="act-body">
+                            <div class="act-name">Sun World Ba Den Mountain</div>
+                            <div class="deal-price">
+                                <span class="old-price">150.000₫</span>
+                                <span class="new-price">145.500₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="act-card">
+                        <div class="act-thumb bg-act-4">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Phường 11</span>
+                        </div>
+                        <div class="act-body">
+                            <div class="act-name">Sun World Vung Tau</div>
+                            <div class="deal-price">
+                                <span class="old-price">199.000₫</span>
+                                <span class="new-price">193.030₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="act-card">
+                        <div class="act-thumb bg-act-2">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Vĩnh Nguyên</span>
+                        </div>
+                        <div class="act-body">
+                            <div class="act-name">Vé VinWonders Nha Trang</div>
+                            <div class="deal-price">
+                                <span class="new-price">250.000₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hscroll-item">
+                    <div class="act-card">
+                        <div class="act-thumb bg-act-1">
+                            <span class="deal-badge"><i class="bi bi-geo-alt-fill"></i> Gành Dầu</span>
+                        </div>
+                        <div class="act-body">
+                            <div class="act-name">Vé VinWonders Phú Quốc</div>
+                            <div class="deal-price">
+                                <span class="new-price">250.156₫</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="hscroll-btn hscroll-next" type="button" aria-label="Sau"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="#" class="btn-see-more btn-see-more-pink">Xem tất cả ưu đãi vui chơi <i class="bi bi-chevron-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<section class="section-block">
+    <div class="container">
+        <div class="d-flex align-items-center gap-2 mb-3">
+            <i class="bi bi-binoculars-fill section-icon text-success"></i>
+            <h2 class="section-title mb-0">Cẩm nang du lịch</h2>
+        </div>
+
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3">
+            <div class="col">
+                <a href="#" class="guide-card bg-guide-bali">
+                    <div class="guide-overlay">
+                        <span class="guide-city">Bali</span>
+                        <span class="guide-country">Indonesia</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" class="guide-card bg-guide-bangkok">
+                    <div class="guide-overlay">
+                        <span class="guide-city">Bangkok</span>
+                        <span class="guide-country">Thái Lan</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" class="guide-card bg-guide-seoul">
+                    <div class="guide-overlay">
+                        <span class="guide-city">Seoul</span>
+                        <span class="guide-country">Hàn Quốc</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" class="guide-card bg-guide-istanbul">
+                    <div class="guide-overlay">
+                        <span class="guide-city">Istanbul</span>
+                        <span class="guide-country">Thổ Nhĩ Kỳ</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="#" class="guide-card bg-guide-liverpool">
+                    <div class="guide-overlay">
+                        <span class="guide-city">Liverpool</span>
+                        <span class="guide-country">Anh</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="#" class="see-all-link fs-6">Xem thêm <i class="bi bi-chevron-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<div th:replace="~{fragments/footer :: travelFooter}"></div>
+
+<script th:src="@{/vendor/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/tourvista.js}"></script>
+
+</body>
+</html>

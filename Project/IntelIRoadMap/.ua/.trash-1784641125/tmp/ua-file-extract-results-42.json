@@ -1,0 +1,22 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "FrontEnd/intelipath-frontend/src/styles/auth.css",
+    "FrontEnd/intelipath-frontend/src/styles/variables.css",
+    "FrontEnd/intelipath-frontend/src/styles/welcome-demo.css",
+    "FrontEnd/intelipath-frontend/src/styles/welcome.css"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 0,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": []
+}

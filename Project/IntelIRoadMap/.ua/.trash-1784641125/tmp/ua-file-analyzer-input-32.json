@@ -1,0 +1,42 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {
+      "path": "BackEnd/intelipath-service/.env",
+      "language": "config",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-service/.env.example",
+      "language": "config",
+      "sizeLines": 23,
+      "fileCategory": "config"
+    },
+    {
+      "path": "BackEnd/intelipath-service/README.md",
+      "language": "markdown",
+      "sizeLines": 1,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-service/requirements-dev.txt",
+      "language": "txt",
+      "sizeLines": 5,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BackEnd/intelipath-service/requirements.txt",
+      "language": "txt",
+      "sizeLines": 14,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    "BackEnd/intelipath-service/.env": [],
+    "BackEnd/intelipath-service/.env.example": [],
+    "BackEnd/intelipath-service/README.md": [],
+    "BackEnd/intelipath-service/requirements-dev.txt": [],
+    "BackEnd/intelipath-service/requirements.txt": []
+  }
+}

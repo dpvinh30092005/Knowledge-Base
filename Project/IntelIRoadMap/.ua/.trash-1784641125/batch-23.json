@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts",
+      "summary": "Barrel file re-exporting the mentor-dashboard feature's view and widget components (dashboard view, widgets, students view, feedback history view) for simplified imports.",
+      "tags": ["barrel", "entry-point", "component", "re-export"],
+      "complexity": "simple",
+      "languageNotes": "Pure re-export barrel using `export * from` with no local logic."
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/pages/MentorDashboardPage.tsx",
+      "type": "file",
+      "name": "MentorDashboardPage.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/MentorDashboardPage.tsx",
+      "summary": "Page-level React component that renders the mentor dashboard by delegating to the MentorDashboardView from the mentor-dashboard feature module.",
+      "tags": ["component", "page", "entry-point", "mentor-dashboard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/pages/MentorStudentsPage.tsx",
+      "type": "file",
+      "name": "MentorStudentsPage.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/MentorStudentsPage.tsx",
+      "summary": "Page-level React component that renders the mentor's student list by delegating to the MentorStudentsView from the mentor-dashboard feature module.",
+      "tags": ["component", "page", "entry-point", "mentor-dashboard"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/MentorDashboardPage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/MentorStudentsPage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/MentorDashboardPage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/MentorStudentsPage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/mentor-dashboard/components/index.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

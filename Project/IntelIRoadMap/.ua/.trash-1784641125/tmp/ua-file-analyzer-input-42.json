@@ -1,0 +1,10 @@
+{
+  "projectRoot": "D:/Project/IntelIRoadMap",
+  "batchFiles": [
+    {"path": "FrontEnd/intelipath-frontend/src/styles/auth.css", "language": "css", "sizeLines": 750, "fileCategory": "markup"},
+    {"path": "FrontEnd/intelipath-frontend/src/styles/variables.css", "language": "css", "sizeLines": 39, "fileCategory": "markup"},
+    {"path": "FrontEnd/intelipath-frontend/src/styles/welcome-demo.css", "language": "css", "sizeLines": 589, "fileCategory": "markup"},
+    {"path": "FrontEnd/intelipath-frontend/src/styles/welcome.css", "language": "css", "sizeLines": 74, "fileCategory": "markup"}
+  ],
+  "batchImportData": {"FrontEnd/intelipath-frontend/src/styles/auth.css":[],"FrontEnd/intelipath-frontend/src/styles/variables.css":[],"FrontEnd/intelipath-frontend/src/styles/welcome-demo.css":[],"FrontEnd/intelipath-frontend/src/styles/welcome.css":[]}
+}

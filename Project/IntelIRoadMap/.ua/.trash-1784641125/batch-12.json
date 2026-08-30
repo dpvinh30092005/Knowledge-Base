@@ -1,0 +1,941 @@
+{
+  "nodes": [
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "type": "file",
+      "name": "CounselorController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "summary": "REST controller exposing academic-counselor endpoints: career statistics, students missing skills, student search, profile management, feedback CRUD, curriculum listing, student email checks, and Excel-based student list export/import.",
+      "tags": ["api-handler", "controller", "counselor", "feedback"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:CounselorController",
+      "type": "class",
+      "name": "CounselorController",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [36, 344],
+      "summary": "Spring REST controller with 15 endpoints handling counselor dashboards, student feedback, profile updates, and bulk student import/export, delegating business logic to CounselorService and FeedbackService.",
+      "tags": ["api-handler", "controller", "counselor"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getCareerStatistics",
+      "type": "function",
+      "name": "getCareerStatistics",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [53, 62],
+      "summary": "Endpoint returning aggregated career statistics for the counselor dashboard.",
+      "tags": ["api-handler", "counselor", "statistics"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentsMissingSkills",
+      "type": "function",
+      "name": "getStudentsMissingSkills",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [71, 82],
+      "summary": "Endpoint listing students missing skills required for a given career path.",
+      "tags": ["api-handler", "counselor", "skills"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getFeedbackSentByMe",
+      "type": "function",
+      "name": "getFeedbackSentByMe",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [89, 99],
+      "summary": "Endpoint returning all feedback entries sent by the authenticated counselor.",
+      "tags": ["api-handler", "counselor", "feedback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentInfos",
+      "type": "function",
+      "name": "getStudentInfos",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [110, 122],
+      "summary": "Paginated endpoint searching and listing students assigned to the counselor.",
+      "tags": ["api-handler", "counselor", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentStatisticAndFeedback",
+      "type": "function",
+      "name": "getStudentStatisticAndFeedback",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [130, 139],
+      "summary": "Endpoint returning combined roadmap statistics and feedback history for a single student.",
+      "tags": ["api-handler", "counselor", "feedback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getProfile",
+      "type": "function",
+      "name": "getProfile",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [146, 155],
+      "summary": "Endpoint fetching the authenticated counselor's profile details.",
+      "tags": ["api-handler", "counselor", "profile"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:updateProfile",
+      "type": "function",
+      "name": "updateProfile",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [163, 181],
+      "summary": "Endpoint updating the counselor's own profile information.",
+      "tags": ["api-handler", "counselor", "profile"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:createFeedback",
+      "type": "function",
+      "name": "createFeedback",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [189, 207],
+      "summary": "Endpoint creating feedback for a student, optionally with file attachments.",
+      "tags": ["api-handler", "counselor", "feedback"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:modifyFeedback",
+      "type": "function",
+      "name": "modifyFeedback",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [215, 234],
+      "summary": "Endpoint modifying existing feedback content and attachments.",
+      "tags": ["api-handler", "counselor", "feedback"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:markReadFeedback",
+      "type": "function",
+      "name": "markReadFeedback",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [242, 252],
+      "summary": "Endpoint marking a feedback item as read.",
+      "tags": ["api-handler", "counselor", "feedback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:deleteFeedback",
+      "type": "function",
+      "name": "deleteFeedback",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [260, 272],
+      "summary": "Endpoint deleting a feedback entry created by the counselor.",
+      "tags": ["api-handler", "counselor", "feedback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:exportStudentList",
+      "type": "function",
+      "name": "exportStudentList",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [274, 296],
+      "summary": "Endpoint exporting a selected list of students to an Excel (.xlsx) attachment.",
+      "tags": ["api-handler", "counselor", "export"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getCurriculums",
+      "type": "function",
+      "name": "getCurriculums",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [298, 307],
+      "summary": "Endpoint listing available curriculums for counselor use.",
+      "tags": ["api-handler", "counselor", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:checkStudentEmail",
+      "type": "function",
+      "name": "checkStudentEmail",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [309, 319],
+      "summary": "Endpoint validating whether a student email already exists before import.",
+      "tags": ["api-handler", "counselor", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:importStudentAccounts",
+      "type": "function",
+      "name": "importStudentAccounts",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "lineRange": [321, 343],
+      "summary": "Endpoint bulk-importing student accounts and returning a result report as an Excel attachment.",
+      "tags": ["api-handler", "counselor", "import"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "type": "file",
+      "name": "MentorController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "summary": "REST controller exposing industry-mentor dashboard endpoints covering metrics, alerts, pending reviews, student progress, feedback submission, and mentor profile management.",
+      "tags": ["api-handler", "controller", "mentor"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java:MentorController",
+      "type": "class",
+      "name": "MentorController",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "lineRange": [38, 126],
+      "summary": "Spring REST controller with 11 thin endpoints that delegate all business logic to MentorService, covering dashboard metrics, pending reviews, feedback history, and profile updates for industry mentors.",
+      "tags": ["api-handler", "controller", "mentor"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "type": "file",
+      "name": "MentorDirectoryController.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "summary": "REST controller exposing a public/paginated directory listing of industry mentors.",
+      "tags": ["api-handler", "controller", "mentor", "directory"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java:MentorDirectoryController",
+      "type": "class",
+      "name": "MentorDirectoryController",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "lineRange": [34, 59],
+      "summary": "Small Spring REST controller with a single paginated endpoint that lists mentors via MentorService.",
+      "tags": ["api-handler", "controller", "mentor"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java:listMentors",
+      "type": "function",
+      "name": "listMentors",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "lineRange": [46, 58],
+      "summary": "Endpoint returning a paginated directory of mentors.",
+      "tags": ["api-handler", "mentor", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "type": "file",
+      "name": "CreateFeedbackRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "summary": "Request DTO carrying the receiver id, content, and feedback type used when creating a new feedback entry.",
+      "tags": ["data-model", "request-dto", "feedback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java",
+      "type": "file",
+      "name": "ExportStudentListRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ExportStudentListRequest.java",
+      "summary": "Request DTO holding the list of student ids to include in an Excel export.",
+      "tags": ["data-model", "request-dto", "export"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java",
+      "type": "file",
+      "name": "ImportStudentAccountsRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ImportStudentAccountsRequest.java",
+      "summary": "Request DTO wrapping a batch of student account entries submitted for bulk import.",
+      "tags": ["data-model", "request-dto", "import"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java",
+      "type": "file",
+      "name": "ModifyFeedbackRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java",
+      "summary": "Request DTO carrying the feedback id, updated content, and type used when modifying existing feedback.",
+      "tags": ["data-model", "request-dto", "feedback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "type": "file",
+      "name": "UpdateMentorProfileRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "summary": "Request DTO carrying company and industry focus fields for updating a mentor's profile.",
+      "tags": ["data-model", "request-dto", "mentor"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java",
+      "type": "file",
+      "name": "UpdateProfileRequest.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateProfileRequest.java",
+      "summary": "Request DTO carrying personal profile fields (name, admission date, year of birth, bio, department) used to update a counselor's profile.",
+      "tags": ["data-model", "request-dto", "profile"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "type": "file",
+      "name": "FeedbackAttachmentResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "summary": "Response DTO describing a feedback file attachment's id, name, type, and size.",
+      "tags": ["data-model", "response-dto", "feedback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "type": "file",
+      "name": "CounselorDashboardResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "summary": "Response DTO aggregating career statistics counts and feedback data for the counselor dashboard view.",
+      "tags": ["data-model", "response-dto", "counselor", "dashboard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "type": "file",
+      "name": "CounselorFeedbackResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "summary": "Response DTO combining student info, missing skills, feedback list, roadmap progress, and pagination metadata for counselor feedback views.",
+      "tags": ["data-model", "response-dto", "counselor", "feedback"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java:CounselorFeedbackResponse",
+      "type": "class",
+      "name": "CounselorFeedbackResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "lineRange": [15, 43],
+      "summary": "Composite response object nesting student, missing-skills, feedback, and roadmap-progress data along with pagination fields for a counselor's student feedback screen.",
+      "tags": ["data-model", "response-dto", "counselor"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "type": "file",
+      "name": "CurriculumResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "summary": "Response DTO wrapping a list of curriculums returned to counselors.",
+      "tags": ["data-model", "response-dto", "counselor", "curriculum"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "type": "file",
+      "name": "MentorCareerDistributionResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "summary": "Response DTO representing a single career distribution data point (name, value, color) for mentor dashboard charts.",
+      "tags": ["data-model", "response-dto", "mentor", "dashboard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "type": "file",
+      "name": "MentorDashboardMetricsResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "summary": "Response DTO summarizing mentor dashboard metrics: response time, mentee count, pending reviews, and feedback count.",
+      "tags": ["data-model", "response-dto", "mentor", "dashboard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "type": "file",
+      "name": "MentorDirectoryResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "summary": "Response DTO exposing public mentor directory fields: user id, name, email, avatar, company, and industry focus.",
+      "tags": ["data-model", "response-dto", "mentor", "directory"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "type": "file",
+      "name": "MentorFeedbackHistoryResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "summary": "Response DTO representing a single historical feedback entry with author initials, name, timestamp, tag, and content shown to mentors.",
+      "tags": ["data-model", "response-dto", "mentor", "feedback"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "type": "file",
+      "name": "MentorPendingReviewResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "summary": "Response DTO describing a student portfolio pending mentor review, including id, name, year of birth, target career, and university.",
+      "tags": ["data-model", "response-dto", "mentor", "review"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "type": "file",
+      "name": "MentorProfileResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "summary": "Response DTO exposing a mentor's own profile fields including role, company, industry focus, and bio.",
+      "tags": ["data-model", "response-dto", "mentor", "profile"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "type": "file",
+      "name": "MentorProgressReportResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "summary": "Response DTO aggregating mentee progress metrics, per-student progress details, students needing attention, and skill-gap summaries for the mentor progress report screen.",
+      "tags": ["data-model", "response-dto", "mentor", "progress-report"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java:MentorProgressReportResponse",
+      "type": "class",
+      "name": "MentorProgressReportResponse",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "lineRange": [10, 61],
+      "summary": "Nested response object combining overall metrics, per-student progress rows, attention flags, and skill gap data for the mentor's student progress report.",
+      "tags": ["data-model", "response-dto", "mentor"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "type": "file",
+      "name": "MentorResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "summary": "Composite response DTO bundling mentor dashboard metrics, pending reviews, students, feedback, insight, and welcome alert into a single payload.",
+      "tags": ["data-model", "response-dto", "mentor", "dashboard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java",
+      "type": "file",
+      "name": "MentorStudentResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java",
+      "summary": "Response DTO representing a mentee's basic profile fields (id, portfolio slug, name, email, career, university) shown to mentors.",
+      "tags": ["data-model", "response-dto", "mentor", "student"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "type": "file",
+      "name": "UpdateProfileResponse.java",
+      "filePath": "BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "summary": "Response DTO returning the updated user record along with role-specific profile data (academic counselor, industry mentor, or student) after a profile update.",
+      "tags": ["data-model", "response-dto", "profile"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:CounselorController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getCareerStatistics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentsMissingSkills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getFeedbackSentByMe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentInfos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentStatisticAndFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:updateProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:createFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:modifyFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:markReadFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:deleteFeedback",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:exportStudentList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getCurriculums",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:checkStudentEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:importStudentAccounts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:CounselorController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java:MentorController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java:MentorController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java:MentorDirectoryController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java:listMentors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java:MentorDirectoryController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java:listMentors",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java:CounselorFeedbackResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java:CounselorFeedbackResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java:MentorProgressReportResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "target": "class:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java:MentorProgressReportResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorDashboardResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CurriculumResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/CounselorService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/FeedbackService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/UpdateMentorProfileRequest.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorCareerDistributionResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorFeedbackHistoryResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorPendingReviewResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProfileResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorProgressReportResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorStudentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDirectoryResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/MentorService.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/CreateFeedbackRequest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/request/ModifyFeedbackRequest.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/FeedbackAttachmentResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackStatus.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/counselor/CounselorFeedbackResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/enums/FeedbackType.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorDashboardMetricsResponse.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Feedback.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/mentor/MentorResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/PortfolioReviewRequest.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/AcademicCounselor.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/IndustryMentor.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/Student.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/dto/response/student/UpdateProfileResponse.java",
+      "target": "file:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/domain/entity/User.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getCareerStatistics",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:getCareerStatistics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentsMissingSkills",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:getStudentsMissingSkills",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getFeedbackSentByMe",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:getAllFeedbacksSentByMe",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentInfos",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:getStudentInfos",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getStudentStatisticAndFeedback",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:getStudentStatisticAndFeedback",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getProfile",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:getProfile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:updateProfile",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:updateProfile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:createFeedback",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FeedbackServiceImpl.java:createFeedback",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:modifyFeedback",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FeedbackServiceImpl.java:modifyFeedback",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:markReadFeedback",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FeedbackServiceImpl.java:markReadFeedback",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:deleteFeedback",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/FeedbackServiceImpl.java:deleteFeedback",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:exportStudentList",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:exportStudentList",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:getCurriculums",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:getCurriculums",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:checkStudentEmail",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:checkStudentEmail",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/CounselorController.java:importStudentAccounts",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/CounselorServiceImpl.java:importStudentAccounts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/controllers/MentorDirectoryController.java:listMentors",
+      "target": "function:BackEnd/intelipath-backend/src/main/java/com/inteliroadmap/backend/services/impl/MentorServiceImpl.java:getMentorDirectory",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

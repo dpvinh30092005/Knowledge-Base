@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts",
+      "summary": "Barrel file re-exporting the student dashboard's view and modal components (dashboard view, roadmap page view, profile setup modal, skill selection modal, market pulse view) for simplified imports elsewhere.",
+      "tags": ["barrel", "entry-point", "re-export", "student-dashboard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/pages/StudentCoursesPage.tsx",
+      "type": "file",
+      "name": "StudentCoursesPage.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/StudentCoursesPage.tsx",
+      "summary": "Thin page-level wrapper component that renders the student roadmap/courses view from the student-dashboard feature module.",
+      "tags": ["page", "component", "student-dashboard", "wrapper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:FrontEnd/intelipath-frontend/src/pages/StudentMarketPulsePage.tsx",
+      "type": "file",
+      "name": "StudentMarketPulsePage.tsx",
+      "filePath": "FrontEnd/intelipath-frontend/src/pages/StudentMarketPulsePage.tsx",
+      "summary": "Thin page-level wrapper component that renders the Market Pulse view from the student-dashboard feature module.",
+      "tags": ["page", "component", "student-dashboard", "wrapper"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/StudentCoursesPage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:FrontEnd/intelipath-frontend/src/pages/StudentMarketPulsePage.tsx",
+      "target": "file:FrontEnd/intelipath-frontend/src/features/student-dashboard/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}
