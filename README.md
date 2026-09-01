@@ -6,8 +6,6 @@
 
 <br/>
 
-**Personal learning repository of [Zjt](https://github.com/dpvinh30092005)**
-Labs, notes and projects from my Software Engineering journey.
 
 </div>
 
