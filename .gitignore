@@ -110,3 +110,6 @@ $RECYCLE.BIN/
 .claude/
 *.rar
 *.zip
+
+# ---------- Git practice sandbox (nested repo) ----------
+Project/build-deploy-production-api/version-control/
