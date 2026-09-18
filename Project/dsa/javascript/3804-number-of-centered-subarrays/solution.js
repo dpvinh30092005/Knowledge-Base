@@ -1,0 +1,14 @@
+// 3804. Number of Centered Subarrays  [Medium]
+// https://leetcode.com/problems/number-of-centered-subarrays/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var centeredSubarrays = function(nums) {
+    
+};

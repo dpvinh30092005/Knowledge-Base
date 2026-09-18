@@ -1,0 +1,24 @@
+// 3319. K-th Largest Perfect Subtree Size in Binary Tree  [Medium]
+// https://leetcode.com/problems/k-th-largest-perfect-subtree-size-in-binary-tree/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int kthLargestPerfectSubtree(TreeNode* root, int k) {
+        
+    }
+};

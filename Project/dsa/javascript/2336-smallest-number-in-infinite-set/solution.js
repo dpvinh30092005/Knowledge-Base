@@ -1,0 +1,33 @@
+// 2336. Smallest Number in Infinite Set  [Medium]
+// https://leetcode.com/problems/smallest-number-in-infinite-set/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+
+var SmallestInfiniteSet = function() {
+    
+};
+
+/**
+ * @return {number}
+ */
+SmallestInfiniteSet.prototype.popSmallest = function() {
+    
+};
+
+/** 
+ * @param {number} num
+ * @return {void}
+ */
+SmallestInfiniteSet.prototype.addBack = function(num) {
+    
+};
+
+/** 
+ * Your SmallestInfiniteSet object will be instantiated and called as such:
+ * var obj = new SmallestInfiniteSet()
+ * var param_1 = obj.popSmallest()
+ * obj.addBack(num)
+ */

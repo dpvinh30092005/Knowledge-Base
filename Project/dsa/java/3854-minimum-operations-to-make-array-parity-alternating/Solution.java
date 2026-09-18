@@ -1,0 +1,19 @@
+// 3854. Minimum Operations to Make Array Parity Alternating  [Medium]
+// https://leetcode.com/problems/minimum-operations-to-make-array-parity-alternating/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+import java.util.*;
+
+class Solution {
+    public int[] makeParityAlternating(int[] nums) {
+        
+    }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        // System.out.println(s.method(...));
+    }
+}

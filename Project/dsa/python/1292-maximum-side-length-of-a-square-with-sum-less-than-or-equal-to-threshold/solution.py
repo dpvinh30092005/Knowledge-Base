@@ -1,0 +1,17 @@
+# 1292. Maximum Side Length of a Square with Sum Less than or Equal to Threshold  [Medium]
+# https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/
+#
+# Approach:
+#
+# Complexity: Time O(?)  Space O(?)
+
+from typing import *
+
+class Solution:
+    def maxSideLength(self, mat: list[list[int]], threshold: int) -> int:
+        pass
+
+
+if __name__ == "__main__":
+    s = Solution()
+    # print(s.method(...))

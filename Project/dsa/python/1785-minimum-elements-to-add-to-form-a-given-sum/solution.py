@@ -1,0 +1,17 @@
+# 1785. Minimum Elements to Add to Form a Given Sum  [Medium]
+# https://leetcode.com/problems/minimum-elements-to-add-to-form-a-given-sum/
+#
+# Approach:
+#
+# Complexity: Time O(?)  Space O(?)
+
+from typing import *
+
+class Solution:
+    def minElements(self, nums: list[int], limit: int, goal: int) -> int:
+        pass
+
+
+if __name__ == "__main__":
+    s = Solution()
+    # print(s.method(...))

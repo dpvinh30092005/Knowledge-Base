@@ -1,0 +1,13 @@
+// 3856. Trim Trailing Vowels  [Easy]
+// https://leetcode.com/problems/trim-trailing-vowels/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+class Solution {
+public:
+    string trimTrailingVowels(string s) {
+        
+    }
+};

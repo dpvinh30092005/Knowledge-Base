@@ -1,0 +1,15 @@
+// 4032. Longest Subarray With at Most K Distinct Prime Factors  [Medium]
+// https://leetcode.com/problems/longest-subarray-with-at-most-k-distinct-prime-factors/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var longestSubarray = function(nums, k) {
+    
+};

@@ -1,0 +1,13 @@
+// 2808. Minimum Seconds to Equalize a Circular Array  [Medium]
+// https://leetcode.com/problems/minimum-seconds-to-equalize-a-circular-array/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+class Solution {
+public:
+    int minimumSeconds(vector<int>& nums) {
+        
+    }
+};

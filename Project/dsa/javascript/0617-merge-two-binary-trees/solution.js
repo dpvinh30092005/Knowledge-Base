@@ -1,0 +1,23 @@
+// 617. Merge Two Binary Trees  [Easy]
+// https://leetcode.com/problems/merge-two-binary-trees/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root1
+ * @param {TreeNode} root2
+ * @return {TreeNode}
+ */
+var mergeTrees = function(root1, root2) {
+    
+};

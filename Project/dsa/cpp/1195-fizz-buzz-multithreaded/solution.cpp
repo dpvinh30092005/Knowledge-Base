@@ -1,0 +1,36 @@
+// 1195. Fizz Buzz Multithreaded  [Medium]
+// https://leetcode.com/problems/fizz-buzz-multithreaded/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+class FizzBuzz {
+private:
+    int n;
+
+public:
+    FizzBuzz(int n) {
+        this->n = n;
+    }
+
+    // printFizz() outputs "fizz".
+    void fizz(function<void()> printFizz) {
+        
+    }
+
+    // printBuzz() outputs "buzz".
+    void buzz(function<void()> printBuzz) {
+        
+    }
+
+    // printFizzBuzz() outputs "fizzbuzz".
+	void fizzbuzz(function<void()> printFizzBuzz) {
+        
+    }
+
+    // printNumber(x) outputs "x", where x is an integer.
+    void number(function<void(int)> printNumber) {
+        
+    }
+};

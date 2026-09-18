@@ -1,0 +1,8 @@
+# raw API cache
+tools/.cache/
+__pycache__/
+*.class
+
+# Problem descriptions are LeetCode's copyrighted content - keep them local, don't publish to GitHub.
+# (regenerate anytime with: python tools/lc.py crawl)
+/*/*/README.md

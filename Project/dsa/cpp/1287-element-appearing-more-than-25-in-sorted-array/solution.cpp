@@ -1,0 +1,13 @@
+// 1287. Element Appearing More Than 25% In Sorted Array  [Easy]
+// https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+class Solution {
+public:
+    int findSpecialInteger(vector<int>& arr) {
+        
+    }
+};

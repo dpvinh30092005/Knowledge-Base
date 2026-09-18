@@ -1,0 +1,28 @@
+// 677. Map Sum Pairs  [Medium]
+// https://leetcode.com/problems/map-sum-pairs/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+class MapSum {
+public:
+    MapSum() {
+        
+    }
+    
+    void insert(string key, int val) {
+        
+    }
+    
+    int sum(string prefix) {
+        
+    }
+};
+
+/**
+ * Your MapSum object will be instantiated and called as such:
+ * MapSum* obj = new MapSum();
+ * obj->insert(key,val);
+ * int param_2 = obj->sum(prefix);
+ */

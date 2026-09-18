@@ -1,0 +1,13 @@
+// 1744. Can You Eat Your Favorite Candy on Your Favorite Day?  [Medium]
+// https://leetcode.com/problems/can-you-eat-your-favorite-candy-on-your-favorite-day/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+class Solution {
+public:
+    vector<bool> canEat(vector<int>& candiesCount, vector<vector<int>>& queries) {
+        
+    }
+};

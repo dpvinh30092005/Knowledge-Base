@@ -1,0 +1,19 @@
+// 2716. Minimize String Length  [Easy]
+// https://leetcode.com/problems/minimize-string-length/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+import java.util.*;
+
+class Solution {
+    public int minimizedStringLength(String s) {
+        
+    }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        // System.out.println(s.method(...));
+    }
+}

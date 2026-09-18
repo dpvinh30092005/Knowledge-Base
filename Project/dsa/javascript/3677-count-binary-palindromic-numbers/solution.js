@@ -1,0 +1,14 @@
+// 3677. Count Binary Palindromic Numbers  [Hard]
+// https://leetcode.com/problems/count-binary-palindromic-numbers/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var countBinaryPalindromes = function(n) {
+    
+};

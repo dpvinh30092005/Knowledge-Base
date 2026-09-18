@@ -1,0 +1,19 @@
+// 2244. Minimum Rounds to Complete All Tasks  [Medium]
+// https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+import java.util.*;
+
+class Solution {
+    public int minimumRounds(int[] tasks) {
+        
+    }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        // System.out.println(s.method(...));
+    }
+}

@@ -1,0 +1,17 @@
+// 1297. Maximum Number of Occurrences of a Substring  [Medium]
+// https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+/**
+ * @param {string} s
+ * @param {number} maxLetters
+ * @param {number} minSize
+ * @param {number} maxSize
+ * @return {number}
+ */
+var maxFreq = function(s, maxLetters, minSize, maxSize) {
+    
+};

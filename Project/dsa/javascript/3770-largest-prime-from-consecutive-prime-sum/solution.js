@@ -1,0 +1,14 @@
+// 3770. Largest Prime from Consecutive Prime Sum  [Medium]
+// https://leetcode.com/problems/largest-prime-from-consecutive-prime-sum/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var largestPrime = function(n) {
+    
+};

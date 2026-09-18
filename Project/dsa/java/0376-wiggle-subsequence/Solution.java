@@ -1,0 +1,19 @@
+// 376. Wiggle Subsequence  [Medium]
+// https://leetcode.com/problems/wiggle-subsequence/
+//
+// Approach:
+//
+// Complexity: Time O(?)  Space O(?)
+
+import java.util.*;
+
+class Solution {
+    public int wiggleMaxLength(int[] nums) {
+        
+    }
+
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        // System.out.println(s.method(...));
+    }
+}
